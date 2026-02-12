@@ -1,0 +1,26 @@
+{
+  "meeting_id": "2435",
+  "meeting_date": "2022-11-01",
+  "videos": [
+    {
+      "video_id": "_hKmtK1vCBo",
+      "title": "TCC CHARTER WORKSHOP 11/1/22 PT. 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2022-11-02T08:59:53Z",
+      "duration": "PT3H23M44S",
+      "chapters": [],
+      "offset_seconds": 295
+    },
+    {
+      "video_id": "JhLSLEN6AUc",
+      "title": "TCC CHARTER WORKSHOP 11/1/22",
+      "part": 1,
+      "session": null,
+      "published_at": "2022-11-02T04:20:21Z",
+      "duration": "PT3H12M37S",
+      "chapters": [],
+      "offset_seconds": 284.0
+    }
+  ]
+}

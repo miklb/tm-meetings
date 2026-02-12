@@ -1,0 +1,31 @@
+{
+  "meetingId": "2790",
+  "meetingType": "special",
+  "agendaType": "FINAL",
+  "meetingDate": "January 13, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2790&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "20557",
+      "title": "E2025-8 CH 1 - Discussion on City Council’s questions and priorities they want to forward to the City of Tampa Charter Review Advisory Commission. (Original motion initiated by Clendenin-Maniscalco on December 18, 2025)",
+      "rawTitle": "E2025-8 CH 1 - Discussion on City Council’s questions and priorities they want to forward to the City of Tampa Charter Review Advisory Commission. (Original motion initiated by Clendenin-Maniscalco on December 18, 2025)",
+      "fileNumber": "E2025-8",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-01-13"
+}

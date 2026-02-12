@@ -1,0 +1,335 @@
+{
+  "source": "Library of Congress Subject Headings",
+  "url": "https://id.loc.gov/authorities/subjects.html",
+  "license": "CC0 1.0 (public domain)",
+  "verified": "2025-11-23",
+  "historical_events": [
+    {
+      "name": "World War I",
+      "lcsh_id": "sh85148236",
+      "alt_names": [
+        "First World War",
+        "WWI",
+        "Great War"
+      ]
+    },
+    {
+      "name": "World War II",
+      "lcsh_id": "sh85148273",
+      "alt_names": [
+        "Second World War",
+        "WWII"
+      ]
+    },
+    {
+      "name": "Vietnam War",
+      "lcsh_id": "sh85143277",
+      "period": "1961-1975"
+    },
+    {
+      "name": "Korean War",
+      "lcsh_id": "sh85073192",
+      "period": "1950-1953"
+    },
+    {
+      "name": "Civil War",
+      "lcsh_id": "sh85026421",
+      "period": "1861-1865",
+      "full_name": "United States--History--Civil War, 1861-1865"
+    },
+    {
+      "name": "Revolutionary War",
+      "alt_names": [
+        "American Revolution"
+      ],
+      "period": "1775-1783"
+    },
+    {
+      "name": "War of 1812",
+      "period": "1812-1815"
+    },
+    {
+      "name": "Spanish-American War",
+      "period": "1898"
+    },
+    {
+      "name": "Gulf War",
+      "period": "1991"
+    },
+    {
+      "name": "Iraq War",
+      "period": "2003-2011"
+    },
+    {
+      "name": "Afghanistan War",
+      "period": "2001-2021"
+    },
+    {
+      "name": "Cold War",
+      "lcsh_id": "sh85027805",
+      "period": "1945-1991"
+    },
+    {
+      "name": "Great Depression",
+      "lcsh_id": "sh85056352",
+      "period": "1929-1939"
+    },
+    {
+      "name": "Reconstruction",
+      "period": "1865-1877",
+      "full_name": "Reconstruction (1865-1877)"
+    },
+    {
+      "name": "Jim Crow",
+      "full_name": "Jim Crow laws"
+    },
+    {
+      "name": "Holocaust",
+      "lcsh_id": "sh85061515",
+      "period": "1933-1945"
+    },
+    {
+      "name": "Civil Rights Movement",
+      "period": "1954-1968"
+    },
+    {
+      "name": "Women's Suffrage",
+      "alt_names": [
+        "Suffrage Movement"
+      ]
+    },
+    {
+      "name": "Pearl Harbor",
+      "date": "December 7, 1941"
+    },
+    {
+      "name": "D-Day",
+      "date": "June 6, 1944"
+    },
+    {
+      "name": "9/11",
+      "alt_names": [
+        "September 11 attacks"
+      ],
+      "date": "September 11, 2001"
+    }
+  ],
+  "historical_figures": [
+    "Abraham Lincoln",
+    "Adolf Hitler",
+    "Barack Obama",
+    "Benito Mussolini",
+    "Donald Trump",
+    "Douglas MacArthur",
+    "Dwight D. Eisenhower",
+    "Fidel Castro",
+    "Franklin D. Roosevelt",
+    "Frederick Douglass",
+    "George S. Patton",
+    "George Washington",
+    "Harriet Tubman",
+    "Harry S. Truman",
+    "Joe Biden",
+    "John F. Kennedy",
+    "Joseph Stalin",
+    "Lyndon B. Johnson",
+    "Malcolm X",
+    "Mao Zedong",
+    "Martin Luther King Jr.",
+    "Richard Nixon",
+    "Robert E. Lee",
+    "Ronald Reagan",
+    "Rosa Parks",
+    "Susan B. Anthony",
+    "Theodore Roosevelt",
+    "Thomas Jefferson",
+    "Ulysses S. Grant",
+    "Winston Churchill"
+  ],
+  "historical_figure_last_names": {
+    "Washington": "George Washington",
+    "Jefferson": "Thomas Jefferson",
+    "Lincoln": "Abraham Lincoln",
+    "Roosevelt": "Franklin D. Roosevelt",
+    "Truman": "Harry S. Truman",
+    "Kennedy": "John F. Kennedy",
+    "Johnson": "Lyndon B. Johnson",
+    "Nixon": "Richard Nixon",
+    "Reagan": "Ronald Reagan",
+    "Obama": "Barack Obama",
+    "Trump": "Donald Trump",
+    "Biden": "Joe Biden",
+    "Churchill": "Winston Churchill",
+    "Hitler": "Adolf Hitler",
+    "Mussolini": "Benito Mussolini",
+    "Stalin": "Joseph Stalin",
+    "Zedong": "Mao Zedong",
+    "Castro": "Fidel Castro",
+    "Parks": "Rosa Parks",
+    "Douglass": "Frederick Douglass",
+    "Tubman": "Harriet Tubman",
+    "Anthony": "Susan B. Anthony",
+    "Eisenhower": "Dwight D. Eisenhower",
+    "MacArthur": "Douglas MacArthur",
+    "Patton": "George S. Patton",
+    "Lee": "Robert E. Lee",
+    "Grant": "Ulysses S. Grant"
+  },
+  "ethnic_racial_terms": [
+    "African American",
+    "Alaska Native",
+    "American Indian",
+    "Asian",
+    "Asian American",
+    "Black",
+    "Chicana",
+    "Chicano",
+    "Hispanic",
+    "Latina",
+    "Latino",
+    "Native American",
+    "Native Hawaiian",
+    "Pacific Islander",
+    "White"
+  ],
+  "event_names": [
+    "9/11",
+    "Afghanistan War",
+    "American Revolution",
+    "Civil Rights Movement",
+    "Civil War",
+    "Cold War",
+    "D-Day",
+    "First World War",
+    "Great Depression",
+    "Great War",
+    "Gulf War",
+    "Holocaust",
+    "Iraq War",
+    "Jim Crow",
+    "Jim Crow laws",
+    "Korean War",
+    "Pearl Harbor",
+    "Reconstruction",
+    "Reconstruction (1865-1877)",
+    "Revolutionary War",
+    "Second World War",
+    "September 11 attacks",
+    "Spanish-American War",
+    "Suffrage Movement",
+    "United States--History--Civil War, 1861-1865",
+    "Vietnam War",
+    "WWI",
+    "WWII",
+    "War of 1812",
+    "Women's Suffrage",
+    "World War I",
+    "World War II"
+  ],
+  "all_terms": [
+    "9/11",
+    "Abraham Lincoln",
+    "Adolf Hitler",
+    "Afghanistan War",
+    "African American",
+    "Alaska Native",
+    "American Indian",
+    "American Revolution",
+    "Anthony",
+    "Asian",
+    "Asian American",
+    "Barack Obama",
+    "Benito Mussolini",
+    "Biden",
+    "Black",
+    "Castro",
+    "Chicana",
+    "Chicano",
+    "Churchill",
+    "Civil Rights Movement",
+    "Civil War",
+    "Cold War",
+    "D-Day",
+    "Donald Trump",
+    "Douglas MacArthur",
+    "Douglass",
+    "Dwight D. Eisenhower",
+    "Eisenhower",
+    "Fidel Castro",
+    "First World War",
+    "Franklin D. Roosevelt",
+    "Frederick Douglass",
+    "George S. Patton",
+    "George Washington",
+    "Grant",
+    "Great Depression",
+    "Great War",
+    "Gulf War",
+    "Harriet Tubman",
+    "Harry S. Truman",
+    "Hispanic",
+    "Hitler",
+    "Holocaust",
+    "Iraq War",
+    "Jefferson",
+    "Jim Crow",
+    "Jim Crow laws",
+    "Joe Biden",
+    "John F. Kennedy",
+    "Johnson",
+    "Joseph Stalin",
+    "Kennedy",
+    "Korean War",
+    "Latina",
+    "Latino",
+    "Lee",
+    "Lincoln",
+    "Lyndon B. Johnson",
+    "MacArthur",
+    "Malcolm X",
+    "Mao Zedong",
+    "Martin Luther King Jr.",
+    "Mussolini",
+    "Native American",
+    "Native Hawaiian",
+    "Nixon",
+    "Obama",
+    "Pacific Islander",
+    "Parks",
+    "Patton",
+    "Pearl Harbor",
+    "Reagan",
+    "Reconstruction",
+    "Reconstruction (1865-1877)",
+    "Revolutionary War",
+    "Richard Nixon",
+    "Robert E. Lee",
+    "Ronald Reagan",
+    "Roosevelt",
+    "Rosa Parks",
+    "Second World War",
+    "September 11 attacks",
+    "Spanish-American War",
+    "Stalin",
+    "Suffrage Movement",
+    "Susan B. Anthony",
+    "Theodore Roosevelt",
+    "Thomas Jefferson",
+    "Truman",
+    "Trump",
+    "Tubman",
+    "Ulysses S. Grant",
+    "United States--History--Civil War, 1861-1865",
+    "Vietnam War",
+    "WWI",
+    "WWII",
+    "War of 1812",
+    "Washington",
+    "White",
+    "Winston Churchill",
+    "Women's Suffrage",
+    "World War I",
+    "World War II",
+    "Zedong"
+  ]
+}

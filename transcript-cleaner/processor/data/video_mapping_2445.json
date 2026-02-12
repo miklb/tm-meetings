@@ -1,0 +1,26 @@
+{
+  "meeting_id": "2445",
+  "meeting_date": "2023-01-05",
+  "videos": [
+    {
+      "video_id": "qsrhcMDkzcY",
+      "title": "TCC 1/5/23 Pt.2",
+      "part": 2,
+      "session": null,
+      "published_at": "2023-01-06T08:08:09Z",
+      "duration": "PT1H30M24S",
+      "chapters": [],
+      "offset_seconds": 65
+    },
+    {
+      "video_id": "b9151AjHj2M",
+      "title": "TCC 1/5/23",
+      "part": 1,
+      "session": null,
+      "published_at": "2023-01-06T05:53:47Z",
+      "duration": "PT3H39M32S",
+      "chapters": [],
+      "offset_seconds": 365
+    }
+  ]
+}

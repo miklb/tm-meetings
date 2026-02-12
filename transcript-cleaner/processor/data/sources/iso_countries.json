@@ -1,0 +1,2093 @@
+{
+  "source": "https://raw.githubusercontent.com/datasets/country-codes/master/data/country-codes.csv",
+  "license": "Open Data Commons PDDL",
+  "downloaded": "2025-11-23",
+  "count": 249,
+  "countries": [
+    {
+      "name": "United States of America",
+      "common_name": "A.S",
+      "iso_alpha2": "US",
+      "iso_alpha3": "USA",
+      "nationality": "A.S"
+    },
+    {
+      "name": "Afghanistan",
+      "common_name": "Afghanistan",
+      "iso_alpha2": "AF",
+      "iso_alpha3": "AFG",
+      "nationality": "Afghanistan"
+    },
+    {
+      "name": "South Africa",
+      "common_name": "Afrika Selatan",
+      "iso_alpha2": "ZA",
+      "iso_alpha3": "ZAF",
+      "nationality": "Afrika Selatan"
+    },
+    {
+      "name": "Albania",
+      "common_name": "Albania",
+      "iso_alpha2": "AL",
+      "iso_alpha3": "ALB",
+      "nationality": "Albania"
+    },
+    {
+      "name": "Algeria",
+      "common_name": "Algeria",
+      "iso_alpha2": "DZ",
+      "iso_alpha3": "DZA",
+      "nationality": "Algeria"
+    },
+    {
+      "name": "Andorra",
+      "common_name": "Andorra",
+      "iso_alpha2": "AD",
+      "iso_alpha3": "AND",
+      "nationality": "Andorra"
+    },
+    {
+      "name": "Angola",
+      "common_name": "Angola",
+      "iso_alpha2": "AO",
+      "iso_alpha3": "AGO",
+      "nationality": "Angola"
+    },
+    {
+      "name": "Anguilla",
+      "common_name": "Anguilla",
+      "iso_alpha2": "AI",
+      "iso_alpha3": "AIA",
+      "nationality": "Anguilla"
+    },
+    {
+      "name": "Antarctica",
+      "common_name": "Antartika",
+      "iso_alpha2": "AQ",
+      "iso_alpha3": "ATA",
+      "nationality": "Antartika"
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "common_name": "Antigua dan Barbuda",
+      "iso_alpha2": "AG",
+      "iso_alpha3": "ATG",
+      "nationality": "Antigua dan Barbuda"
+    },
+    {
+      "name": "Saudi Arabia",
+      "common_name": "Arab Saudi",
+      "iso_alpha2": "SA",
+      "iso_alpha3": "SAU",
+      "nationality": "Arab Saudi"
+    },
+    {
+      "name": "Argentina",
+      "common_name": "Argentina",
+      "iso_alpha2": "AR",
+      "iso_alpha3": "ARG",
+      "nationality": "Argentina"
+    },
+    {
+      "name": "Armenia",
+      "common_name": "Armenia",
+      "iso_alpha2": "AM",
+      "iso_alpha3": "ARM",
+      "nationality": "Armenia"
+    },
+    {
+      "name": "Aruba",
+      "common_name": "Aruba",
+      "iso_alpha2": "AW",
+      "iso_alpha3": "ABW",
+      "nationality": "Aruba"
+    },
+    {
+      "name": "Australia",
+      "common_name": "Australia",
+      "iso_alpha2": "AU",
+      "iso_alpha3": "AUS",
+      "nationality": "Australia"
+    },
+    {
+      "name": "Austria",
+      "common_name": "Austria",
+      "iso_alpha2": "AT",
+      "iso_alpha3": "AUT",
+      "nationality": "Austria"
+    },
+    {
+      "name": "Azerbaijan",
+      "common_name": "Azerbaijan",
+      "iso_alpha2": "AZ",
+      "iso_alpha3": "AZE",
+      "nationality": "Azerbaijan"
+    },
+    {
+      "name": "Bahamas",
+      "common_name": "Bahamas",
+      "iso_alpha2": "BS",
+      "iso_alpha3": "BHS",
+      "nationality": "Bahamas"
+    },
+    {
+      "name": "Bahrain",
+      "common_name": "Bahrain",
+      "iso_alpha2": "BH",
+      "iso_alpha3": "BHR",
+      "nationality": "Bahrain"
+    },
+    {
+      "name": "Bangladesh",
+      "common_name": "Bangladesh",
+      "iso_alpha2": "BD",
+      "iso_alpha3": "BGD",
+      "nationality": "Bangladesh"
+    },
+    {
+      "name": "Barbados",
+      "common_name": "Barbados",
+      "iso_alpha2": "BB",
+      "iso_alpha3": "BRB",
+      "nationality": "Barbados"
+    },
+    {
+      "name": "Netherlands",
+      "common_name": "Belanda",
+      "iso_alpha2": "NL",
+      "iso_alpha3": "NLD",
+      "nationality": "Belanda"
+    },
+    {
+      "name": "Bonaire, Sint Eustatius and Saba",
+      "common_name": "Belanda Caribbean",
+      "iso_alpha2": "BQ",
+      "iso_alpha3": "BES",
+      "nationality": "Belanda Caribbean"
+    },
+    {
+      "name": "Belarus",
+      "common_name": "Belarus",
+      "iso_alpha2": "BY",
+      "iso_alpha3": "BLR",
+      "nationality": "Belarus"
+    },
+    {
+      "name": "Belgium",
+      "common_name": "Belgium",
+      "iso_alpha2": "BE",
+      "iso_alpha3": "BEL",
+      "nationality": "Belgium"
+    },
+    {
+      "name": "Belize",
+      "common_name": "Belize",
+      "iso_alpha2": "BZ",
+      "iso_alpha3": "BLZ",
+      "nationality": "Belize"
+    },
+    {
+      "name": "Benin",
+      "common_name": "Benin",
+      "iso_alpha2": "BJ",
+      "iso_alpha3": "BEN",
+      "nationality": "Benin"
+    },
+    {
+      "name": "Bermuda",
+      "common_name": "Bermuda",
+      "iso_alpha2": "BM",
+      "iso_alpha3": "BMU",
+      "nationality": "Bermuda"
+    },
+    {
+      "name": "Bhutan",
+      "common_name": "Bhutan",
+      "iso_alpha2": "BT",
+      "iso_alpha3": "BTN",
+      "nationality": "Bhutan"
+    },
+    {
+      "name": "Bolivia (Plurinational State of)",
+      "common_name": "Bolivia",
+      "iso_alpha2": "BO",
+      "iso_alpha3": "BOL",
+      "nationality": "Bolivia"
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "common_name": "Bosnia dan Herzegovina",
+      "iso_alpha2": "BA",
+      "iso_alpha3": "BIH",
+      "nationality": "Bosnia dan Herzegovina"
+    },
+    {
+      "name": "Botswana",
+      "common_name": "Botswana",
+      "iso_alpha2": "BW",
+      "iso_alpha3": "BWA",
+      "nationality": "Botswana"
+    },
+    {
+      "name": "Brazil",
+      "common_name": "Brazil",
+      "iso_alpha2": "BR",
+      "iso_alpha3": "BRA",
+      "nationality": "Brazil"
+    },
+    {
+      "name": "Brunei Darussalam",
+      "common_name": "Brunei",
+      "iso_alpha2": "BN",
+      "iso_alpha3": "BRN",
+      "nationality": "Brunei"
+    },
+    {
+      "name": "Bulgaria",
+      "common_name": "Bulgaria",
+      "iso_alpha2": "BG",
+      "iso_alpha3": "BGR",
+      "nationality": "Bulgaria"
+    },
+    {
+      "name": "Burkina Faso",
+      "common_name": "Burkina Faso",
+      "iso_alpha2": "BF",
+      "iso_alpha3": "BFA",
+      "nationality": "Burkina Faso"
+    },
+    {
+      "name": "Burundi",
+      "common_name": "Burundi",
+      "iso_alpha2": "BI",
+      "iso_alpha3": "BDI",
+      "nationality": "Burundi"
+    },
+    {
+      "name": "Cameroon",
+      "common_name": "Cameroon",
+      "iso_alpha2": "CM",
+      "iso_alpha3": "CMR",
+      "nationality": "Cameroon"
+    },
+    {
+      "name": "Cabo Verde",
+      "common_name": "Cape Verde",
+      "iso_alpha2": "CV",
+      "iso_alpha3": "CPV",
+      "nationality": "Cape Verde"
+    },
+    {
+      "name": "Chad",
+      "common_name": "Chad",
+      "iso_alpha2": "TD",
+      "iso_alpha3": "TCD",
+      "nationality": "Chad"
+    },
+    {
+      "name": "Chile",
+      "common_name": "Chile",
+      "iso_alpha2": "CL",
+      "iso_alpha3": "CHL",
+      "nationality": "Chile"
+    },
+    {
+      "name": "China",
+      "common_name": "China",
+      "iso_alpha2": "CN",
+      "iso_alpha3": "CHN",
+      "nationality": "China"
+    },
+    {
+      "name": "Colombia",
+      "common_name": "Colombia",
+      "iso_alpha2": "CO",
+      "iso_alpha3": "COL",
+      "nationality": "Colombia"
+    },
+    {
+      "name": "Comoros",
+      "common_name": "Comoros",
+      "iso_alpha2": "KM",
+      "iso_alpha3": "COM",
+      "nationality": "Comoros"
+    },
+    {
+      "name": "Congo",
+      "common_name": "Congo - Brazzaville",
+      "iso_alpha2": "CG",
+      "iso_alpha3": "COG",
+      "nationality": "Congo - Brazzaville"
+    },
+    {
+      "name": "Democratic Republic of the Congo",
+      "common_name": "Congo - Kinshasa",
+      "iso_alpha2": "CD",
+      "iso_alpha3": "COD",
+      "nationality": "Congo - Kinshasa"
+    },
+    {
+      "name": "Costa Rica",
+      "common_name": "Costa Rica",
+      "iso_alpha2": "CR",
+      "iso_alpha3": "CRI",
+      "nationality": "Costa Rica"
+    },
+    {
+      "name": "Ivory Coast",
+      "common_name": "Cote d’Ivoire",
+      "iso_alpha2": "CI",
+      "iso_alpha3": "CIV",
+      "nationality": "Cote d’Ivoire"
+    },
+    {
+      "name": "Croatia",
+      "common_name": "Croatia",
+      "iso_alpha2": "HR",
+      "iso_alpha3": "HRV",
+      "nationality": "Croatia"
+    },
+    {
+      "name": "Cuba",
+      "common_name": "Cuba",
+      "iso_alpha2": "CU",
+      "iso_alpha3": "CUB",
+      "nationality": "Cuba"
+    },
+    {
+      "name": "Curaçao",
+      "common_name": "Curacao",
+      "iso_alpha2": "CW",
+      "iso_alpha3": "CUW",
+      "nationality": "Curacao"
+    },
+    {
+      "name": "Cyprus",
+      "common_name": "Cyprus",
+      "iso_alpha2": "CY",
+      "iso_alpha3": "CYP",
+      "nationality": "Cyprus"
+    },
+    {
+      "name": "Czechia",
+      "common_name": "Czechia",
+      "iso_alpha2": "CZ",
+      "iso_alpha3": "CZE",
+      "nationality": "Czechia"
+    },
+    {
+      "name": "Denmark",
+      "common_name": "Denmark",
+      "iso_alpha2": "DK",
+      "iso_alpha3": "DNK",
+      "nationality": "Denmark"
+    },
+    {
+      "name": "Djibouti",
+      "common_name": "Djibouti",
+      "iso_alpha2": "DJ",
+      "iso_alpha3": "DJI",
+      "nationality": "Djibouti"
+    },
+    {
+      "name": "Dominica",
+      "common_name": "Dominica",
+      "iso_alpha2": "DM",
+      "iso_alpha3": "DMA",
+      "nationality": "Dominica"
+    },
+    {
+      "name": "Ecuador",
+      "common_name": "Ecuador",
+      "iso_alpha2": "EC",
+      "iso_alpha3": "ECU",
+      "nationality": "Ecuador"
+    },
+    {
+      "name": "El Salvador",
+      "common_name": "El Salvador",
+      "iso_alpha2": "SV",
+      "iso_alpha3": "SLV",
+      "nationality": "El Salvador"
+    },
+    {
+      "name": "United Arab Emirates",
+      "common_name": "Emiriah Arab Bersatu",
+      "iso_alpha2": "AE",
+      "iso_alpha3": "ARE",
+      "nationality": "Emiriah Arab Bersatu"
+    },
+    {
+      "name": "Eritrea",
+      "common_name": "Eritrea",
+      "iso_alpha2": "ER",
+      "iso_alpha3": "ERI",
+      "nationality": "Eritrea"
+    },
+    {
+      "name": "Estonia",
+      "common_name": "Estonia",
+      "iso_alpha2": "EE",
+      "iso_alpha3": "EST",
+      "nationality": "Estonia"
+    },
+    {
+      "name": "Eswatini",
+      "common_name": "Eswatini",
+      "iso_alpha2": "SZ",
+      "iso_alpha3": "SWZ",
+      "nationality": "Eswatini"
+    },
+    {
+      "name": "Ethiopia",
+      "common_name": "Ethiopia",
+      "iso_alpha2": "ET",
+      "iso_alpha3": "ETH",
+      "nationality": "Ethiopia"
+    },
+    {
+      "name": "Fiji",
+      "common_name": "Fiji",
+      "iso_alpha2": "FJ",
+      "iso_alpha3": "FJI",
+      "nationality": "Fiji"
+    },
+    {
+      "name": "Philippines",
+      "common_name": "Filipina",
+      "iso_alpha2": "PH",
+      "iso_alpha3": "PHL",
+      "nationality": "Filipina"
+    },
+    {
+      "name": "Finland",
+      "common_name": "Finland",
+      "iso_alpha2": "FI",
+      "iso_alpha3": "FIN",
+      "nationality": "Finland"
+    },
+    {
+      "name": "Gabon",
+      "common_name": "Gabon",
+      "iso_alpha2": "GA",
+      "iso_alpha3": "GAB",
+      "nationality": "Gabon"
+    },
+    {
+      "name": "Gambia",
+      "common_name": "Gambia",
+      "iso_alpha2": "GM",
+      "iso_alpha3": "GMB",
+      "nationality": "Gambia"
+    },
+    {
+      "name": "Georgia",
+      "common_name": "Georgia",
+      "iso_alpha2": "GE",
+      "iso_alpha3": "GEO",
+      "nationality": "Georgia"
+    },
+    {
+      "name": "Ghana",
+      "common_name": "Ghana",
+      "iso_alpha2": "GH",
+      "iso_alpha3": "GHA",
+      "nationality": "Ghana"
+    },
+    {
+      "name": "Gibraltar",
+      "common_name": "Gibraltar",
+      "iso_alpha2": "GI",
+      "iso_alpha3": "GIB",
+      "nationality": "Gibraltar"
+    },
+    {
+      "name": "Greece",
+      "common_name": "Greece",
+      "iso_alpha2": "GR",
+      "iso_alpha3": "GRC",
+      "nationality": "Greece"
+    },
+    {
+      "name": "Greenland",
+      "common_name": "Greenland",
+      "iso_alpha2": "GL",
+      "iso_alpha3": "GRL",
+      "nationality": "Greenland"
+    },
+    {
+      "name": "Grenada",
+      "common_name": "Grenada",
+      "iso_alpha2": "GD",
+      "iso_alpha3": "GRD",
+      "nationality": "Grenada"
+    },
+    {
+      "name": "Guadeloupe",
+      "common_name": "Guadeloupe",
+      "iso_alpha2": "GP",
+      "iso_alpha3": "GLP",
+      "nationality": "Guadeloupe"
+    },
+    {
+      "name": "Guam",
+      "common_name": "Guam",
+      "iso_alpha2": "GU",
+      "iso_alpha3": "GUM",
+      "nationality": "Guam"
+    },
+    {
+      "name": "Guatemala",
+      "common_name": "Guatemala",
+      "iso_alpha2": "GT",
+      "iso_alpha3": "GTM",
+      "nationality": "Guatemala"
+    },
+    {
+      "name": "Guernsey",
+      "common_name": "Guernsey",
+      "iso_alpha2": "GG",
+      "iso_alpha3": "GGY",
+      "nationality": "Guernsey"
+    },
+    {
+      "name": "French Guiana",
+      "common_name": "Guiana Perancis",
+      "iso_alpha2": "GF",
+      "iso_alpha3": "GUF",
+      "nationality": "Guiana Perancis"
+    },
+    {
+      "name": "Guinea",
+      "common_name": "Guinea",
+      "iso_alpha2": "GN",
+      "iso_alpha3": "GIN",
+      "nationality": "Guinea"
+    },
+    {
+      "name": "Guinea-Bissau",
+      "common_name": "Guinea Bissau",
+      "iso_alpha2": "GW",
+      "iso_alpha3": "GNB",
+      "nationality": "Guinea Bissau"
+    },
+    {
+      "name": "Equatorial Guinea",
+      "common_name": "Guinea Khatulistiwa",
+      "iso_alpha2": "GQ",
+      "iso_alpha3": "GNQ",
+      "nationality": "Guinea Khatulistiwa"
+    },
+    {
+      "name": "Guyana",
+      "common_name": "Guyana",
+      "iso_alpha2": "GY",
+      "iso_alpha3": "GUY",
+      "nationality": "Guyana"
+    },
+    {
+      "name": "Haiti",
+      "common_name": "Haiti",
+      "iso_alpha2": "HT",
+      "iso_alpha3": "HTI",
+      "nationality": "Haiti"
+    },
+    {
+      "name": "Honduras",
+      "common_name": "Honduras",
+      "iso_alpha2": "HN",
+      "iso_alpha3": "HND",
+      "nationality": "Honduras"
+    },
+    {
+      "name": "China, Hong Kong Special Administrative Region",
+      "common_name": "Hong Kong",
+      "iso_alpha2": "HK",
+      "iso_alpha3": "HKG",
+      "nationality": "Hong Kong"
+    },
+    {
+      "name": "Hungary",
+      "common_name": "Hungary",
+      "iso_alpha2": "HU",
+      "iso_alpha3": "HUN",
+      "nationality": "Hungary"
+    },
+    {
+      "name": "Iceland",
+      "common_name": "Iceland",
+      "iso_alpha2": "IS",
+      "iso_alpha3": "ISL",
+      "nationality": "Iceland"
+    },
+    {
+      "name": "India",
+      "common_name": "India",
+      "iso_alpha2": "IN",
+      "iso_alpha3": "IND",
+      "nationality": "India"
+    },
+    {
+      "name": "Indonesia",
+      "common_name": "Indonesia",
+      "iso_alpha2": "ID",
+      "iso_alpha3": "IDN",
+      "nationality": "Indonesia"
+    },
+    {
+      "name": "Iran (Islamic Republic of)",
+      "common_name": "Iran",
+      "iso_alpha2": "IR",
+      "iso_alpha3": "IRN",
+      "nationality": "Iran"
+    },
+    {
+      "name": "Iraq",
+      "common_name": "Iraq",
+      "iso_alpha2": "IQ",
+      "iso_alpha3": "IRQ",
+      "nationality": "Iraq"
+    },
+    {
+      "name": "Ireland",
+      "common_name": "Ireland",
+      "iso_alpha2": "IE",
+      "iso_alpha3": "IRL",
+      "nationality": "Ireland"
+    },
+    {
+      "name": "Isle of Man",
+      "common_name": "Isle of Man",
+      "iso_alpha2": "IM",
+      "iso_alpha3": "IMN",
+      "nationality": "Isle of Man"
+    },
+    {
+      "name": "Israel",
+      "common_name": "Israel",
+      "iso_alpha2": "IL",
+      "iso_alpha3": "ISR",
+      "nationality": "Israel"
+    },
+    {
+      "name": "Italy",
+      "common_name": "Itali",
+      "iso_alpha2": "IT",
+      "iso_alpha3": "ITA",
+      "nationality": "Itali"
+    },
+    {
+      "name": "Jamaica",
+      "common_name": "Jamaica",
+      "iso_alpha2": "JM",
+      "iso_alpha3": "JAM",
+      "nationality": "Jamaica"
+    },
+    {
+      "name": "Japan",
+      "common_name": "Jepun",
+      "iso_alpha2": "JP",
+      "iso_alpha3": "JPN",
+      "nationality": "Jepun"
+    },
+    {
+      "name": "Germany",
+      "common_name": "Jerman",
+      "iso_alpha2": "DE",
+      "iso_alpha3": "DEU",
+      "nationality": "Jerman"
+    },
+    {
+      "name": "Jersey",
+      "common_name": "Jersey",
+      "iso_alpha2": "JE",
+      "iso_alpha3": "JEY",
+      "nationality": "Jersey"
+    },
+    {
+      "name": "Jordan",
+      "common_name": "Jordan",
+      "iso_alpha2": "JO",
+      "iso_alpha3": "JOR",
+      "nationality": "Jordan"
+    },
+    {
+      "name": "Canada",
+      "common_name": "Kanada",
+      "iso_alpha2": "CA",
+      "iso_alpha3": "CAN",
+      "nationality": "Kanada"
+    },
+    {
+      "name": "Kazakhstan",
+      "common_name": "Kazakhstan",
+      "iso_alpha2": "KZ",
+      "iso_alpha3": "KAZ",
+      "nationality": "Kazakhstan"
+    },
+    {
+      "name": "Cambodia",
+      "common_name": "Kemboja",
+      "iso_alpha2": "KH",
+      "iso_alpha3": "KHM",
+      "nationality": "Kemboja"
+    },
+    {
+      "name": "Kenya",
+      "common_name": "Kenya",
+      "iso_alpha2": "KE",
+      "iso_alpha3": "KEN",
+      "nationality": "Kenya"
+    },
+    {
+      "name": "Åland Islands",
+      "common_name": "Kepulauan Aland",
+      "iso_alpha2": "AX",
+      "iso_alpha3": "ALA",
+      "nationality": "Kepulauan Aland"
+    },
+    {
+      "name": "Cayman Islands",
+      "common_name": "Kepulauan Cayman",
+      "iso_alpha2": "KY",
+      "iso_alpha3": "CYM",
+      "nationality": "Kepulauan Cayman"
+    },
+    {
+      "name": "Cocos (Keeling) Islands",
+      "common_name": "Kepulauan Cocos (Keeling)",
+      "iso_alpha2": "CC",
+      "iso_alpha3": "CCK",
+      "nationality": "Kepulauan Cocos (Keeling)"
+    },
+    {
+      "name": "Cook Islands",
+      "common_name": "Kepulauan Cook",
+      "iso_alpha2": "CK",
+      "iso_alpha3": "COK",
+      "nationality": "Kepulauan Cook"
+    },
+    {
+      "name": "Falkland Islands",
+      "common_name": "Kepulauan Falkland",
+      "iso_alpha2": "FK",
+      "iso_alpha3": "FLK",
+      "nationality": "Kepulauan Falkland"
+    },
+    {
+      "name": "Faroe Islands",
+      "common_name": "Kepulauan Faroe",
+      "iso_alpha2": "FO",
+      "iso_alpha3": "FRO",
+      "nationality": "Kepulauan Faroe"
+    },
+    {
+      "name": "South Georgia and the South Sandwich Islands",
+      "common_name": "Kepulauan Georgia Selatan & Sandwich Selatan",
+      "iso_alpha2": "GS",
+      "iso_alpha3": "SGS",
+      "nationality": "Kepulauan Georgia Selatan & Sandwich Selatan"
+    },
+    {
+      "name": "Heard Island and McDonald Islands",
+      "common_name": "Kepulauan Heard & McDonald",
+      "iso_alpha2": "HM",
+      "iso_alpha3": "HMD",
+      "nationality": "Kepulauan Heard & McDonald"
+    },
+    {
+      "name": "Northern Mariana Islands",
+      "common_name": "Kepulauan Mariana Utara",
+      "iso_alpha2": "MP",
+      "iso_alpha3": "MNP",
+      "nationality": "Kepulauan Mariana Utara"
+    },
+    {
+      "name": "Marshall Islands",
+      "common_name": "Kepulauan Marshall",
+      "iso_alpha2": "MH",
+      "iso_alpha3": "MHL",
+      "nationality": "Kepulauan Marshall"
+    },
+    {
+      "name": "Pitcairn",
+      "common_name": "Kepulauan Pitcairn",
+      "iso_alpha2": "PN",
+      "iso_alpha3": "PCN",
+      "nationality": "Kepulauan Pitcairn"
+    },
+    {
+      "name": "Solomon Islands",
+      "common_name": "Kepulauan Solomon",
+      "iso_alpha2": "SB",
+      "iso_alpha3": "SLB",
+      "nationality": "Kepulauan Solomon"
+    },
+    {
+      "name": "United States Minor Outlying Islands",
+      "common_name": "Kepulauan Terpencil A.S.",
+      "iso_alpha2": "UM",
+      "iso_alpha3": "UMI",
+      "nationality": "Kepulauan Terpencil A.S."
+    },
+    {
+      "name": "Turks and Caicos Islands",
+      "common_name": "Kepulauan Turks dan Caicos",
+      "iso_alpha2": "TC",
+      "iso_alpha3": "TCA",
+      "nationality": "Kepulauan Turks dan Caicos"
+    },
+    {
+      "name": "United States Virgin Islands",
+      "common_name": "Kepulauan Virgin A.S.",
+      "iso_alpha2": "VI",
+      "iso_alpha3": "VIR",
+      "nationality": "Kepulauan Virgin A.S."
+    },
+    {
+      "name": "British Virgin Islands",
+      "common_name": "Kepulauan Virgin British",
+      "iso_alpha2": "VG",
+      "iso_alpha3": "VGB",
+      "nationality": "Kepulauan Virgin British"
+    },
+    {
+      "name": "Kiribati",
+      "common_name": "Kiribati",
+      "iso_alpha2": "KI",
+      "iso_alpha3": "KIR",
+      "nationality": "Kiribati"
+    },
+    {
+      "name": "Republic of Korea",
+      "common_name": "Korea Selatan",
+      "iso_alpha2": "KR",
+      "iso_alpha3": "KOR",
+      "nationality": "Korea Selatan"
+    },
+    {
+      "name": "Democratic People's Republic of Korea",
+      "common_name": "Korea Utara",
+      "iso_alpha2": "KP",
+      "iso_alpha3": "PRK",
+      "nationality": "Korea Utara"
+    },
+    {
+      "name": "Holy See",
+      "common_name": "Kota Vatican",
+      "iso_alpha2": "VA",
+      "iso_alpha3": "VAT",
+      "nationality": "Kota Vatican"
+    },
+    {
+      "name": "Kuwait",
+      "common_name": "Kuwait",
+      "iso_alpha2": "KW",
+      "iso_alpha3": "KWT",
+      "nationality": "Kuwait"
+    },
+    {
+      "name": "Kyrgyzstan",
+      "common_name": "Kyrgyzstan",
+      "iso_alpha2": "KG",
+      "iso_alpha3": "KGZ",
+      "nationality": "Kyrgyzstan"
+    },
+    {
+      "name": "Lao People's Democratic Republic",
+      "common_name": "Laos",
+      "iso_alpha2": "LA",
+      "iso_alpha3": "LAO",
+      "nationality": "Laos"
+    },
+    {
+      "name": "Latvia",
+      "common_name": "Latvia",
+      "iso_alpha2": "LV",
+      "iso_alpha3": "LVA",
+      "nationality": "Latvia"
+    },
+    {
+      "name": "Lesotho",
+      "common_name": "Lesotho",
+      "iso_alpha2": "LS",
+      "iso_alpha3": "LSO",
+      "nationality": "Lesotho"
+    },
+    {
+      "name": "Liberia",
+      "common_name": "Liberia",
+      "iso_alpha2": "LR",
+      "iso_alpha3": "LBR",
+      "nationality": "Liberia"
+    },
+    {
+      "name": "Libya",
+      "common_name": "Libya",
+      "iso_alpha2": "LY",
+      "iso_alpha3": "LBY",
+      "nationality": "Libya"
+    },
+    {
+      "name": "Liechtenstein",
+      "common_name": "Liechtenstein",
+      "iso_alpha2": "LI",
+      "iso_alpha3": "LIE",
+      "nationality": "Liechtenstein"
+    },
+    {
+      "name": "Lithuania",
+      "common_name": "Lithuania",
+      "iso_alpha2": "LT",
+      "iso_alpha3": "LTU",
+      "nationality": "Lithuania"
+    },
+    {
+      "name": "Lebanon",
+      "common_name": "Lubnan",
+      "iso_alpha2": "LB",
+      "iso_alpha3": "LBN",
+      "nationality": "Lubnan"
+    },
+    {
+      "name": "Luxembourg",
+      "common_name": "Luxembourg",
+      "iso_alpha2": "LU",
+      "iso_alpha3": "LUX",
+      "nationality": "Luxembourg"
+    },
+    {
+      "name": "China, Macao Special Administrative Region",
+      "common_name": "Macau",
+      "iso_alpha2": "MO",
+      "iso_alpha3": "MAC",
+      "nationality": "Macau"
+    },
+    {
+      "name": "North Macedonia",
+      "common_name": "Macedonia Utara",
+      "iso_alpha2": "MK",
+      "iso_alpha3": "MKD",
+      "nationality": "Macedonia Utara"
+    },
+    {
+      "name": "Madagascar",
+      "common_name": "Madagaskar",
+      "iso_alpha2": "MG",
+      "iso_alpha3": "MDG",
+      "nationality": "Madagaskar"
+    },
+    {
+      "name": "Morocco",
+      "common_name": "Maghribi",
+      "iso_alpha2": "MA",
+      "iso_alpha3": "MAR",
+      "nationality": "Maghribi"
+    },
+    {
+      "name": "Malawi",
+      "common_name": "Malawi",
+      "iso_alpha2": "MW",
+      "iso_alpha3": "MWI",
+      "nationality": "Malawi"
+    },
+    {
+      "name": "Malaysia",
+      "common_name": "Malaysia",
+      "iso_alpha2": "MY",
+      "iso_alpha3": "MYS",
+      "nationality": "Malaysia"
+    },
+    {
+      "name": "Maldives",
+      "common_name": "Maldives",
+      "iso_alpha2": "MV",
+      "iso_alpha3": "MDV",
+      "nationality": "Maldives"
+    },
+    {
+      "name": "Mali",
+      "common_name": "Mali",
+      "iso_alpha2": "ML",
+      "iso_alpha3": "MLI",
+      "nationality": "Mali"
+    },
+    {
+      "name": "Malta",
+      "common_name": "Malta",
+      "iso_alpha2": "MT",
+      "iso_alpha3": "MLT",
+      "nationality": "Malta"
+    },
+    {
+      "name": "Martinique",
+      "common_name": "Martinique",
+      "iso_alpha2": "MQ",
+      "iso_alpha3": "MTQ",
+      "nationality": "Martinique"
+    },
+    {
+      "name": "Mauritania",
+      "common_name": "Mauritania",
+      "iso_alpha2": "MR",
+      "iso_alpha3": "MRT",
+      "nationality": "Mauritania"
+    },
+    {
+      "name": "Mauritius",
+      "common_name": "Mauritius",
+      "iso_alpha2": "MU",
+      "iso_alpha3": "MUS",
+      "nationality": "Mauritius"
+    },
+    {
+      "name": "Mayotte",
+      "common_name": "Mayotte",
+      "iso_alpha2": "YT",
+      "iso_alpha3": "MYT",
+      "nationality": "Mayotte"
+    },
+    {
+      "name": "Egypt",
+      "common_name": "Mesir",
+      "iso_alpha2": "EG",
+      "iso_alpha3": "EGY",
+      "nationality": "Mesir"
+    },
+    {
+      "name": "Mexico",
+      "common_name": "Mexico",
+      "iso_alpha2": "MX",
+      "iso_alpha3": "MEX",
+      "nationality": "Mexico"
+    },
+    {
+      "name": "Micronesia (Federated States of)",
+      "common_name": "Micronesia",
+      "iso_alpha2": "FM",
+      "iso_alpha3": "FSM",
+      "nationality": "Micronesia"
+    },
+    {
+      "name": "Republic of Moldova",
+      "common_name": "Moldova",
+      "iso_alpha2": "MD",
+      "iso_alpha3": "MDA",
+      "nationality": "Moldova"
+    },
+    {
+      "name": "Monaco",
+      "common_name": "Monaco",
+      "iso_alpha2": "MC",
+      "iso_alpha3": "MCO",
+      "nationality": "Monaco"
+    },
+    {
+      "name": "Mongolia",
+      "common_name": "Mongolia",
+      "iso_alpha2": "MN",
+      "iso_alpha3": "MNG",
+      "nationality": "Mongolia"
+    },
+    {
+      "name": "Montenegro",
+      "common_name": "Montenegro",
+      "iso_alpha2": "ME",
+      "iso_alpha3": "MNE",
+      "nationality": "Montenegro"
+    },
+    {
+      "name": "Montserrat",
+      "common_name": "Montserrat",
+      "iso_alpha2": "MS",
+      "iso_alpha3": "MSR",
+      "nationality": "Montserrat"
+    },
+    {
+      "name": "Mozambique",
+      "common_name": "Mozambique",
+      "iso_alpha2": "MZ",
+      "iso_alpha3": "MOZ",
+      "nationality": "Mozambique"
+    },
+    {
+      "name": "Myanmar",
+      "common_name": "Myanmar (Burma)",
+      "iso_alpha2": "MM",
+      "iso_alpha3": "MMR",
+      "nationality": "Myanmar (Burma)"
+    },
+    {
+      "name": "Namibia",
+      "common_name": "Namibia",
+      "iso_alpha2": "NA",
+      "iso_alpha3": "NAM",
+      "nationality": "Namibia"
+    },
+    {
+      "name": "Nauru",
+      "common_name": "Nauru",
+      "iso_alpha2": "NR",
+      "iso_alpha3": "NRU",
+      "nationality": "Nauru"
+    },
+    {
+      "name": "Nepal",
+      "common_name": "Nepal",
+      "iso_alpha2": "NP",
+      "iso_alpha3": "NPL",
+      "nationality": "Nepal"
+    },
+    {
+      "name": "New Caledonia",
+      "common_name": "New Caledonia",
+      "iso_alpha2": "NC",
+      "iso_alpha3": "NCL",
+      "nationality": "New Caledonia"
+    },
+    {
+      "name": "New Zealand",
+      "common_name": "New Zealand",
+      "iso_alpha2": "NZ",
+      "iso_alpha3": "NZL",
+      "nationality": "New Zealand"
+    },
+    {
+      "name": "Nicaragua",
+      "common_name": "Nicaragua",
+      "iso_alpha2": "NI",
+      "iso_alpha3": "NIC",
+      "nationality": "Nicaragua"
+    },
+    {
+      "name": "Niger",
+      "common_name": "Niger",
+      "iso_alpha2": "NE",
+      "iso_alpha3": "NER",
+      "nationality": "Niger"
+    },
+    {
+      "name": "Nigeria",
+      "common_name": "Nigeria",
+      "iso_alpha2": "NG",
+      "iso_alpha3": "NGA",
+      "nationality": "Nigeria"
+    },
+    {
+      "name": "Niue",
+      "common_name": "Niue",
+      "iso_alpha2": "NU",
+      "iso_alpha3": "NIU",
+      "nationality": "Niue"
+    },
+    {
+      "name": "Norway",
+      "common_name": "Norway",
+      "iso_alpha2": "NO",
+      "iso_alpha3": "NOR",
+      "nationality": "Norway"
+    },
+    {
+      "name": "Oman",
+      "common_name": "Oman",
+      "iso_alpha2": "OM",
+      "iso_alpha3": "OMN",
+      "nationality": "Oman"
+    },
+    {
+      "name": "Pakistan",
+      "common_name": "Pakistan",
+      "iso_alpha2": "PK",
+      "iso_alpha3": "PAK",
+      "nationality": "Pakistan"
+    },
+    {
+      "name": "Palau",
+      "common_name": "Palau",
+      "iso_alpha2": "PW",
+      "iso_alpha3": "PLW",
+      "nationality": "Palau"
+    },
+    {
+      "name": "State of Palestine",
+      "common_name": "Palestin",
+      "iso_alpha2": "PS",
+      "iso_alpha3": "PSE",
+      "nationality": "Palestin"
+    },
+    {
+      "name": "Panama",
+      "common_name": "Panama",
+      "iso_alpha2": "PA",
+      "iso_alpha3": "PAN",
+      "nationality": "Panama"
+    },
+    {
+      "name": "Papua New Guinea",
+      "common_name": "Papua New Guinea",
+      "iso_alpha2": "PG",
+      "iso_alpha3": "PNG",
+      "nationality": "Papua New Guinea"
+    },
+    {
+      "name": "Paraguay",
+      "common_name": "Paraguay",
+      "iso_alpha2": "PY",
+      "iso_alpha3": "PRY",
+      "nationality": "Paraguay"
+    },
+    {
+      "name": "France",
+      "common_name": "Perancis",
+      "iso_alpha2": "FR",
+      "iso_alpha3": "FRA",
+      "nationality": "Perancis"
+    },
+    {
+      "name": "Peru",
+      "common_name": "Peru",
+      "iso_alpha2": "PE",
+      "iso_alpha3": "PER",
+      "nationality": "Peru"
+    },
+    {
+      "name": "Poland",
+      "common_name": "Poland",
+      "iso_alpha2": "PL",
+      "iso_alpha3": "POL",
+      "nationality": "Poland"
+    },
+    {
+      "name": "French Polynesia",
+      "common_name": "Polinesia Perancis",
+      "iso_alpha2": "PF",
+      "iso_alpha3": "PYF",
+      "nationality": "Polinesia Perancis"
+    },
+    {
+      "name": "Portugal",
+      "common_name": "Portugal",
+      "iso_alpha2": "PT",
+      "iso_alpha3": "PRT",
+      "nationality": "Portugal"
+    },
+    {
+      "name": "Puerto Rico",
+      "common_name": "Puerto Rico",
+      "iso_alpha2": "PR",
+      "iso_alpha3": "PRI",
+      "nationality": "Puerto Rico"
+    },
+    {
+      "name": "Bouvet Island",
+      "common_name": "Pulau Bouvet",
+      "iso_alpha2": "BV",
+      "iso_alpha3": "BVT",
+      "nationality": "Pulau Bouvet"
+    },
+    {
+      "name": "Christmas Island",
+      "common_name": "Pulau Krismas",
+      "iso_alpha2": "CX",
+      "iso_alpha3": "CXR",
+      "nationality": "Pulau Krismas"
+    },
+    {
+      "name": "Norfolk Island",
+      "common_name": "Pulau Norfolk",
+      "iso_alpha2": "NF",
+      "iso_alpha3": "NFK",
+      "nationality": "Pulau Norfolk"
+    },
+    {
+      "name": "Qatar",
+      "common_name": "Qatar",
+      "iso_alpha2": "QA",
+      "iso_alpha3": "QAT",
+      "nationality": "Qatar"
+    },
+    {
+      "name": "Central African Republic",
+      "common_name": "Republik Afrika Tengah",
+      "iso_alpha2": "CF",
+      "iso_alpha3": "CAF",
+      "nationality": "Republik Afrika Tengah"
+    },
+    {
+      "name": "Dominican Republic",
+      "common_name": "Republik Dominica",
+      "iso_alpha2": "DO",
+      "iso_alpha3": "DOM",
+      "nationality": "Republik Dominica"
+    },
+    {
+      "name": "Réunion",
+      "common_name": "Reunion",
+      "iso_alpha2": "RE",
+      "iso_alpha3": "REU",
+      "nationality": "Reunion"
+    },
+    {
+      "name": "Romania",
+      "common_name": "Romania",
+      "iso_alpha2": "RO",
+      "iso_alpha3": "ROU",
+      "nationality": "Romania"
+    },
+    {
+      "name": "Russian Federation",
+      "common_name": "Rusia",
+      "iso_alpha2": "RU",
+      "iso_alpha3": "RUS",
+      "nationality": "Rusia"
+    },
+    {
+      "name": "Rwanda",
+      "common_name": "Rwanda",
+      "iso_alpha2": "RW",
+      "iso_alpha3": "RWA",
+      "nationality": "Rwanda"
+    },
+    {
+      "name": "Western Sahara",
+      "common_name": "Sahara Barat",
+      "iso_alpha2": "EH",
+      "iso_alpha3": "ESH",
+      "nationality": "Sahara Barat"
+    },
+    {
+      "name": "Saint Helena",
+      "common_name": "Saint Helena",
+      "iso_alpha2": "SH",
+      "iso_alpha3": "SHN",
+      "nationality": "Saint Helena"
+    },
+    {
+      "name": "Saint Kitts and Nevis",
+      "common_name": "Saint Kitts dan Nevis",
+      "iso_alpha2": "KN",
+      "iso_alpha3": "KNA",
+      "nationality": "Saint Kitts dan Nevis"
+    },
+    {
+      "name": "Saint Lucia",
+      "common_name": "Saint Lucia",
+      "iso_alpha2": "LC",
+      "iso_alpha3": "LCA",
+      "nationality": "Saint Lucia"
+    },
+    {
+      "name": "Saint Martin (French Part)",
+      "common_name": "Saint Martin",
+      "iso_alpha2": "MF",
+      "iso_alpha3": "MAF",
+      "nationality": "Saint Martin"
+    },
+    {
+      "name": "Saint Pierre and Miquelon",
+      "common_name": "Saint Pierre dan Miquelon",
+      "iso_alpha2": "PM",
+      "iso_alpha3": "SPM",
+      "nationality": "Saint Pierre dan Miquelon"
+    },
+    {
+      "name": "Saint Vincent and the Grenadines",
+      "common_name": "Saint Vincent dan Grenadines",
+      "iso_alpha2": "VC",
+      "iso_alpha3": "VCT",
+      "nationality": "Saint Vincent dan Grenadines"
+    },
+    {
+      "name": "Samoa",
+      "common_name": "Samoa",
+      "iso_alpha2": "WS",
+      "iso_alpha3": "WSM",
+      "nationality": "Samoa"
+    },
+    {
+      "name": "American Samoa",
+      "common_name": "Samoa Amerika",
+      "iso_alpha2": "AS",
+      "iso_alpha3": "ASM",
+      "nationality": "Samoa Amerika"
+    },
+    {
+      "name": "San Marino",
+      "common_name": "San Marino",
+      "iso_alpha2": "SM",
+      "iso_alpha3": "SMR",
+      "nationality": "San Marino"
+    },
+    {
+      "name": "Sao Tome and Principe",
+      "common_name": "Sao Tome dan Principe",
+      "iso_alpha2": "ST",
+      "iso_alpha3": "STP",
+      "nationality": "Sao Tome dan Principe"
+    },
+    {
+      "name": "Senegal",
+      "common_name": "Senegal",
+      "iso_alpha2": "SN",
+      "iso_alpha3": "SEN",
+      "nationality": "Senegal"
+    },
+    {
+      "name": "Spain",
+      "common_name": "Sepanyol",
+      "iso_alpha2": "ES",
+      "iso_alpha3": "ESP",
+      "nationality": "Sepanyol"
+    },
+    {
+      "name": "Serbia",
+      "common_name": "Serbia",
+      "iso_alpha2": "RS",
+      "iso_alpha3": "SRB",
+      "nationality": "Serbia"
+    },
+    {
+      "name": "Seychelles",
+      "common_name": "Seychelles",
+      "iso_alpha2": "SC",
+      "iso_alpha3": "SYC",
+      "nationality": "Seychelles"
+    },
+    {
+      "name": "Sierra Leone",
+      "common_name": "Sierra Leone",
+      "iso_alpha2": "SL",
+      "iso_alpha3": "SLE",
+      "nationality": "Sierra Leone"
+    },
+    {
+      "name": "Singapore",
+      "common_name": "Singapura",
+      "iso_alpha2": "SG",
+      "iso_alpha3": "SGP",
+      "nationality": "Singapura"
+    },
+    {
+      "name": "Sint Maarten (Dutch part)",
+      "common_name": "Sint Maarten",
+      "iso_alpha2": "SX",
+      "iso_alpha3": "SXM",
+      "nationality": "Sint Maarten"
+    },
+    {
+      "name": "Slovakia",
+      "common_name": "Slovakia",
+      "iso_alpha2": "SK",
+      "iso_alpha3": "SVK",
+      "nationality": "Slovakia"
+    },
+    {
+      "name": "Slovenia",
+      "common_name": "Slovenia",
+      "iso_alpha2": "SI",
+      "iso_alpha3": "SVN",
+      "nationality": "Slovenia"
+    },
+    {
+      "name": "Somalia",
+      "common_name": "Somalia",
+      "iso_alpha2": "SO",
+      "iso_alpha3": "SOM",
+      "nationality": "Somalia"
+    },
+    {
+      "name": "Sri Lanka",
+      "common_name": "Sri Lanka",
+      "iso_alpha2": "LK",
+      "iso_alpha3": "LKA",
+      "nationality": "Sri Lanka"
+    },
+    {
+      "name": "Saint Barthélemy",
+      "common_name": "St. Barthelemy",
+      "iso_alpha2": "BL",
+      "iso_alpha3": "BLM",
+      "nationality": "St. Barthelemy"
+    },
+    {
+      "name": "Sudan",
+      "common_name": "Sudan",
+      "iso_alpha2": "SD",
+      "iso_alpha3": "SDN",
+      "nationality": "Sudan"
+    },
+    {
+      "name": "South Sudan",
+      "common_name": "Sudan Selatan",
+      "iso_alpha2": "SS",
+      "iso_alpha3": "SSD",
+      "nationality": "Sudan Selatan"
+    },
+    {
+      "name": "Suriname",
+      "common_name": "Surinam",
+      "iso_alpha2": "SR",
+      "iso_alpha3": "SUR",
+      "nationality": "Surinam"
+    },
+    {
+      "name": "Svalbard and Jan Mayen Islands",
+      "common_name": "Svalbard dan Jan Mayen",
+      "iso_alpha2": "SJ",
+      "iso_alpha3": "SJM",
+      "nationality": "Svalbard dan Jan Mayen"
+    },
+    {
+      "name": "Sweden",
+      "common_name": "Sweden",
+      "iso_alpha2": "SE",
+      "iso_alpha3": "SWE",
+      "nationality": "Sweden"
+    },
+    {
+      "name": "Switzerland",
+      "common_name": "Switzerland",
+      "iso_alpha2": "CH",
+      "iso_alpha3": "CHE",
+      "nationality": "Switzerland"
+    },
+    {
+      "name": "Syrian Arab Republic",
+      "common_name": "Syria",
+      "iso_alpha2": "SY",
+      "iso_alpha3": "SYR",
+      "nationality": "Syria"
+    },
+    {
+      "name": "Taiwan",
+      "common_name": "Taiwan",
+      "iso_alpha2": "TW",
+      "iso_alpha3": "TWN",
+      "nationality": "Taiwan"
+    },
+    {
+      "name": "Tajikistan",
+      "common_name": "Tajikistan",
+      "iso_alpha2": "TJ",
+      "iso_alpha3": "TJK",
+      "nationality": "Tajikistan"
+    },
+    {
+      "name": "United Republic of Tanzania",
+      "common_name": "Tanzania",
+      "iso_alpha2": "TZ",
+      "iso_alpha3": "TZA",
+      "nationality": "Tanzania"
+    },
+    {
+      "name": "Thailand",
+      "common_name": "Thailand",
+      "iso_alpha2": "TH",
+      "iso_alpha3": "THA",
+      "nationality": "Thailand"
+    },
+    {
+      "name": "Timor-Leste",
+      "common_name": "Timor-Leste",
+      "iso_alpha2": "TL",
+      "iso_alpha3": "TLS",
+      "nationality": "Timor-Leste"
+    },
+    {
+      "name": "Togo",
+      "common_name": "Togo",
+      "iso_alpha2": "TG",
+      "iso_alpha3": "TGO",
+      "nationality": "Togo"
+    },
+    {
+      "name": "Tokelau",
+      "common_name": "Tokelau",
+      "iso_alpha2": "TK",
+      "iso_alpha3": "TKL",
+      "nationality": "Tokelau"
+    },
+    {
+      "name": "Tonga",
+      "common_name": "Tonga",
+      "iso_alpha2": "TO",
+      "iso_alpha3": "TON",
+      "nationality": "Tonga"
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "common_name": "Trinidad dan Tobago",
+      "iso_alpha2": "TT",
+      "iso_alpha3": "TTO",
+      "nationality": "Trinidad dan Tobago"
+    },
+    {
+      "name": "Tunisia",
+      "common_name": "Tunisia",
+      "iso_alpha2": "TN",
+      "iso_alpha3": "TUN",
+      "nationality": "Tunisia"
+    },
+    {
+      "name": "Turkey",
+      "common_name": "Turkiye",
+      "iso_alpha2": "TR",
+      "iso_alpha3": "TUR",
+      "nationality": "Turkiye"
+    },
+    {
+      "name": "Turkmenistan",
+      "common_name": "Turkmenistan",
+      "iso_alpha2": "TM",
+      "iso_alpha3": "TKM",
+      "nationality": "Turkmenistan"
+    },
+    {
+      "name": "Tuvalu",
+      "common_name": "Tuvalu",
+      "iso_alpha2": "TV",
+      "iso_alpha3": "TUV",
+      "nationality": "Tuvalu"
+    },
+    {
+      "name": "United Kingdom of Great Britain and Northern Ireland",
+      "common_name": "UK",
+      "iso_alpha2": "GB",
+      "iso_alpha3": "GBR",
+      "nationality": "UK"
+    },
+    {
+      "name": "Uganda",
+      "common_name": "Uganda",
+      "iso_alpha2": "UG",
+      "iso_alpha3": "UGA",
+      "nationality": "Uganda"
+    },
+    {
+      "name": "Ukraine",
+      "common_name": "Ukraine",
+      "iso_alpha2": "UA",
+      "iso_alpha3": "UKR",
+      "nationality": "Ukraine"
+    },
+    {
+      "name": "Uruguay",
+      "common_name": "Uruguay",
+      "iso_alpha2": "UY",
+      "iso_alpha3": "URY",
+      "nationality": "Uruguay"
+    },
+    {
+      "name": "Uzbekistan",
+      "common_name": "Uzbekistan",
+      "iso_alpha2": "UZ",
+      "iso_alpha3": "UZB",
+      "nationality": "Uzbekistan"
+    },
+    {
+      "name": "Vanuatu",
+      "common_name": "Vanuatu",
+      "iso_alpha2": "VU",
+      "iso_alpha3": "VUT",
+      "nationality": "Vanuatu"
+    },
+    {
+      "name": "Venezuela (Bolivarian Republic of)",
+      "common_name": "Venezuela",
+      "iso_alpha2": "VE",
+      "iso_alpha3": "VEN",
+      "nationality": "Venezuela"
+    },
+    {
+      "name": "Viet Nam",
+      "common_name": "Vietnam",
+      "iso_alpha2": "VN",
+      "iso_alpha3": "VNM",
+      "nationality": "Vietnam"
+    },
+    {
+      "name": "Wallis and Futuna Islands",
+      "common_name": "Wallis dan Futuna",
+      "iso_alpha2": "WF",
+      "iso_alpha3": "WLF",
+      "nationality": "Wallis dan Futuna"
+    },
+    {
+      "name": "British Indian Ocean Territory",
+      "common_name": "Wilayah Lautan Hindi British",
+      "iso_alpha2": "IO",
+      "iso_alpha3": "IOT",
+      "nationality": "Wilayah Lautan Hindi British"
+    },
+    {
+      "name": "French Southern Territories",
+      "common_name": "Wilayah Selatan Perancis",
+      "iso_alpha2": "TF",
+      "iso_alpha3": "ATF",
+      "nationality": "Wilayah Selatan Perancis"
+    },
+    {
+      "name": "Yemen",
+      "common_name": "Yaman",
+      "iso_alpha2": "YE",
+      "iso_alpha3": "YEM",
+      "nationality": "Yaman"
+    },
+    {
+      "name": "Zambia",
+      "common_name": "Zambia",
+      "iso_alpha2": "ZM",
+      "iso_alpha3": "ZMB",
+      "nationality": "Zambia"
+    },
+    {
+      "name": "Zimbabwe",
+      "common_name": "Zimbabwe",
+      "iso_alpha2": "ZW",
+      "iso_alpha3": "ZWE",
+      "nationality": "Zimbabwe"
+    }
+  ],
+  "country_names": [
+    "A.S",
+    "Afghanistan",
+    "Afrika Selatan",
+    "Albania",
+    "Algeria",
+    "American Samoa",
+    "Andorra",
+    "Angola",
+    "Anguilla",
+    "Antarctica",
+    "Antartika",
+    "Antigua and Barbuda",
+    "Antigua dan Barbuda",
+    "Arab Saudi",
+    "Argentina",
+    "Armenia",
+    "Aruba",
+    "Australia",
+    "Austria",
+    "Azerbaijan",
+    "Bahamas",
+    "Bahrain",
+    "Bangladesh",
+    "Barbados",
+    "Belanda",
+    "Belanda Caribbean",
+    "Belarus",
+    "Belgium",
+    "Belize",
+    "Benin",
+    "Bermuda",
+    "Bhutan",
+    "Bolivia",
+    "Bolivia (Plurinational State of)",
+    "Bonaire, Sint Eustatius and Saba",
+    "Bosnia and Herzegovina",
+    "Bosnia dan Herzegovina",
+    "Botswana",
+    "Bouvet Island",
+    "Brazil",
+    "British Indian Ocean Territory",
+    "British Virgin Islands",
+    "Brunei",
+    "Brunei Darussalam",
+    "Bulgaria",
+    "Burkina Faso",
+    "Burundi",
+    "Cabo Verde",
+    "Cambodia",
+    "Cameroon",
+    "Canada",
+    "Cape Verde",
+    "Cayman Islands",
+    "Central African Republic",
+    "Chad",
+    "Chile",
+    "China",
+    "China, Hong Kong Special Administrative Region",
+    "China, Macao Special Administrative Region",
+    "Christmas Island",
+    "Cocos (Keeling) Islands",
+    "Colombia",
+    "Comoros",
+    "Congo",
+    "Congo - Brazzaville",
+    "Congo - Kinshasa",
+    "Cook Islands",
+    "Costa Rica",
+    "Cote d’Ivoire",
+    "Croatia",
+    "Cuba",
+    "Curacao",
+    "Curaçao",
+    "Cyprus",
+    "Czechia",
+    "Democratic People's Republic of Korea",
+    "Democratic Republic of the Congo",
+    "Denmark",
+    "Djibouti",
+    "Dominica",
+    "Dominican Republic",
+    "Ecuador",
+    "Egypt",
+    "El Salvador",
+    "Emiriah Arab Bersatu",
+    "Equatorial Guinea",
+    "Eritrea",
+    "Estonia",
+    "Eswatini",
+    "Ethiopia",
+    "Falkland Islands",
+    "Faroe Islands",
+    "Fiji",
+    "Filipina",
+    "Finland",
+    "France",
+    "French Guiana",
+    "French Polynesia",
+    "French Southern Territories",
+    "Gabon",
+    "Gambia",
+    "Georgia",
+    "Germany",
+    "Ghana",
+    "Gibraltar",
+    "Greece",
+    "Greenland",
+    "Grenada",
+    "Guadeloupe",
+    "Guam",
+    "Guatemala",
+    "Guernsey",
+    "Guiana Perancis",
+    "Guinea",
+    "Guinea Bissau",
+    "Guinea Khatulistiwa",
+    "Guinea-Bissau",
+    "Guyana",
+    "Haiti",
+    "Heard Island and McDonald Islands",
+    "Holy See",
+    "Honduras",
+    "Hong Kong",
+    "Hungary",
+    "Iceland",
+    "India",
+    "Indonesia",
+    "Iran",
+    "Iran (Islamic Republic of)",
+    "Iraq",
+    "Ireland",
+    "Isle of Man",
+    "Israel",
+    "Itali",
+    "Italy",
+    "Ivory Coast",
+    "Jamaica",
+    "Japan",
+    "Jepun",
+    "Jerman",
+    "Jersey",
+    "Jordan",
+    "Kanada",
+    "Kazakhstan",
+    "Kemboja",
+    "Kenya",
+    "Kepulauan Aland",
+    "Kepulauan Cayman",
+    "Kepulauan Cocos (Keeling)",
+    "Kepulauan Cook",
+    "Kepulauan Falkland",
+    "Kepulauan Faroe",
+    "Kepulauan Georgia Selatan & Sandwich Selatan",
+    "Kepulauan Heard & McDonald",
+    "Kepulauan Mariana Utara",
+    "Kepulauan Marshall",
+    "Kepulauan Pitcairn",
+    "Kepulauan Solomon",
+    "Kepulauan Terpencil A.S.",
+    "Kepulauan Turks dan Caicos",
+    "Kepulauan Virgin A.S.",
+    "Kepulauan Virgin British",
+    "Kiribati",
+    "Korea Selatan",
+    "Korea Utara",
+    "Kota Vatican",
+    "Kuwait",
+    "Kyrgyzstan",
+    "Lao People's Democratic Republic",
+    "Laos",
+    "Latvia",
+    "Lebanon",
+    "Lesotho",
+    "Liberia",
+    "Libya",
+    "Liechtenstein",
+    "Lithuania",
+    "Lubnan",
+    "Luxembourg",
+    "Macau",
+    "Macedonia Utara",
+    "Madagascar",
+    "Madagaskar",
+    "Maghribi",
+    "Malawi",
+    "Malaysia",
+    "Maldives",
+    "Mali",
+    "Malta",
+    "Marshall Islands",
+    "Martinique",
+    "Mauritania",
+    "Mauritius",
+    "Mayotte",
+    "Mesir",
+    "Mexico",
+    "Micronesia",
+    "Micronesia (Federated States of)",
+    "Moldova",
+    "Monaco",
+    "Mongolia",
+    "Montenegro",
+    "Montserrat",
+    "Morocco",
+    "Mozambique",
+    "Myanmar",
+    "Myanmar (Burma)",
+    "Namibia",
+    "Nauru",
+    "Nepal",
+    "Netherlands",
+    "New Caledonia",
+    "New Zealand",
+    "Nicaragua",
+    "Niger",
+    "Nigeria",
+    "Niue",
+    "Norfolk Island",
+    "North Macedonia",
+    "Northern Mariana Islands",
+    "Norway",
+    "Oman",
+    "Pakistan",
+    "Palau",
+    "Palestin",
+    "Panama",
+    "Papua New Guinea",
+    "Paraguay",
+    "Perancis",
+    "Peru",
+    "Philippines",
+    "Pitcairn",
+    "Poland",
+    "Polinesia Perancis",
+    "Portugal",
+    "Puerto Rico",
+    "Pulau Bouvet",
+    "Pulau Krismas",
+    "Pulau Norfolk",
+    "Qatar",
+    "Republic of Korea",
+    "Republic of Moldova",
+    "Republik Afrika Tengah",
+    "Republik Dominica",
+    "Reunion",
+    "Romania",
+    "Rusia",
+    "Russian Federation",
+    "Rwanda",
+    "Réunion",
+    "Sahara Barat",
+    "Saint Barthélemy",
+    "Saint Helena",
+    "Saint Kitts and Nevis",
+    "Saint Kitts dan Nevis",
+    "Saint Lucia",
+    "Saint Martin",
+    "Saint Martin (French Part)",
+    "Saint Pierre and Miquelon",
+    "Saint Pierre dan Miquelon",
+    "Saint Vincent and the Grenadines",
+    "Saint Vincent dan Grenadines",
+    "Samoa",
+    "Samoa Amerika",
+    "San Marino",
+    "Sao Tome and Principe",
+    "Sao Tome dan Principe",
+    "Saudi Arabia",
+    "Senegal",
+    "Sepanyol",
+    "Serbia",
+    "Seychelles",
+    "Sierra Leone",
+    "Singapore",
+    "Singapura",
+    "Sint Maarten",
+    "Sint Maarten (Dutch part)",
+    "Slovakia",
+    "Slovenia",
+    "Solomon Islands",
+    "Somalia",
+    "South Africa",
+    "South Georgia and the South Sandwich Islands",
+    "South Sudan",
+    "Spain",
+    "Sri Lanka",
+    "St. Barthelemy",
+    "State of Palestine",
+    "Sudan",
+    "Sudan Selatan",
+    "Surinam",
+    "Suriname",
+    "Svalbard and Jan Mayen Islands",
+    "Svalbard dan Jan Mayen",
+    "Sweden",
+    "Switzerland",
+    "Syria",
+    "Syrian Arab Republic",
+    "Taiwan",
+    "Tajikistan",
+    "Tanzania",
+    "Thailand",
+    "Timor-Leste",
+    "Togo",
+    "Tokelau",
+    "Tonga",
+    "Trinidad and Tobago",
+    "Trinidad dan Tobago",
+    "Tunisia",
+    "Turkey",
+    "Turkiye",
+    "Turkmenistan",
+    "Turks and Caicos Islands",
+    "Tuvalu",
+    "UK",
+    "Uganda",
+    "Ukraine",
+    "United Arab Emirates",
+    "United Kingdom of Great Britain and Northern Ireland",
+    "United Republic of Tanzania",
+    "United States Minor Outlying Islands",
+    "United States Virgin Islands",
+    "United States of America",
+    "Uruguay",
+    "Uzbekistan",
+    "Vanuatu",
+    "Venezuela",
+    "Venezuela (Bolivarian Republic of)",
+    "Viet Nam",
+    "Vietnam",
+    "Wallis and Futuna Islands",
+    "Wallis dan Futuna",
+    "Western Sahara",
+    "Wilayah Lautan Hindi British",
+    "Wilayah Selatan Perancis",
+    "Yaman",
+    "Yemen",
+    "Zambia",
+    "Zimbabwe",
+    "Åland Islands"
+  ]
+}

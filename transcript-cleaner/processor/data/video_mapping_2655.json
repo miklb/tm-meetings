@@ -1,0 +1,78 @@
+{
+  "meeting_id": 2655,
+  "meeting_date": "2026-01-29",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "vw20VoWkvTk",
+      "title": "Tampa City Council PM 01/29/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-01-30T05:57:41Z",
+      "duration": "PT7H36M31S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: INF26-20889 \u2013 South Howard Flood Relief Funds",
+          "timestamp": "00:11:30",
+          "seconds": 690
+        },
+        {
+          "title": "Item 2: TA/CPA25-06 \u2013 Citywide Comprehensive Plan Updates",
+          "timestamp": "01:52:53",
+          "seconds": 6773
+        },
+        {
+          "title": "Item 3: TA/CPA25-10 \u2013 2602, 2625, 2801 E 4th Ave; 2701, 2710 E 5th Ave; 2702 E 2nd Ave",
+          "timestamp": "01:55:54",
+          "seconds": 6954
+        },
+        {
+          "title": "Item 4: TA/CPA25-11 \u2013 2703, 2715, 2801 E Adamo Dr; 1101 N 26th St; 508, 1100, 1101, 1102, 1120 N 28th St",
+          "timestamp": "02:24:46",
+          "seconds": 8686
+        },
+        {
+          "title": "Item 6: TA/CPA25-15 \u2013 4304 N 26th St; 4205 N 25th St",
+          "timestamp": "03:19:58",
+          "seconds": 11998
+        },
+        {
+          "title": "Item 7: TA/CPA25-16 \u2013 1301 E Columbus Dr",
+          "timestamp": "03:53:20",
+          "seconds": 14000
+        },
+        {
+          "title": "Item 9: AB2-25-16 \u2013 1726 W Cypress St; 901 N Fremont Ave",
+          "timestamp": "04:18:27",
+          "seconds": 15507
+        },
+        {
+          "title": "Item 10: AB2-26-02 \u2013 4205 & 4230 S MacDill Ave",
+          "timestamp": "04:47:39",
+          "seconds": 17259
+        },
+        {
+          "title": "Item 11: AB2-25-12 \u2013 1625 E 7th Ave",
+          "timestamp": "04:59:16",
+          "seconds": 17956
+        },
+        {
+          "title": "Item 12: AB2-25-21 \u2013 218 & 220 E Davis Blvd",
+          "timestamp": "05:59:19",
+          "seconds": 21559
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "07:31:02",
+          "seconds": 27062
+        }
+      ],
+      "offset_seconds": 393
+    }
+  ]
+}

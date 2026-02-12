@@ -1,0 +1,328 @@
+{
+  "source": "USGS Geographic Names Information System",
+  "url": "https://geonames.usgs.gov/",
+  "license": "US Government work (public domain)",
+  "verified": "2025-11-23",
+  "area": "Tampa / Hillsborough County, Florida",
+  "categories": {
+    "military": [
+      {
+        "name": "MacDill Air Force Base",
+        "gnis_id": "294492",
+        "type": "military"
+      }
+    ],
+    "neighborhoods": [
+      {
+        "name": "Ybor City",
+        "type": "populated place"
+      },
+      {
+        "name": "Hyde Park",
+        "type": "populated place"
+      },
+      {
+        "name": "Seminole Heights",
+        "type": "populated place"
+      },
+      {
+        "name": "Westshore",
+        "type": "populated place"
+      },
+      {
+        "name": "Carver City",
+        "type": "populated place"
+      }
+    ],
+    "parks": [
+      {
+        "name": "Curtis Hixon Park",
+        "type": "park"
+      },
+      {
+        "name": "Lettuce Lake Park",
+        "type": "park"
+      },
+      {
+        "name": "Lowry Park",
+        "type": "park"
+      },
+      {
+        "name": "Al Lopez Park",
+        "type": "park"
+      }
+    ],
+    "waterways": [
+      {
+        "name": "Hillsborough River",
+        "gnis_id": "283806",
+        "type": "stream"
+      },
+      {
+        "name": "Tampa Bay",
+        "type": "bay"
+      },
+      {
+        "name": "Old Tampa Bay",
+        "type": "bay"
+      },
+      {
+        "name": "McKay Bay",
+        "type": "bay"
+      }
+    ],
+    "municipalities": [
+      {
+        "name": "Tampa",
+        "type": "city"
+      },
+      {
+        "name": "Temple Terrace",
+        "type": "city"
+      },
+      {
+        "name": "Plant City",
+        "type": "city"
+      }
+    ],
+    "bridges": [
+      {
+        "name": "Gandy Bridge",
+        "type": "bridge"
+      },
+      {
+        "name": "Howard Frankland Bridge",
+        "type": "bridge"
+      },
+      {
+        "name": "Courtney Campbell Causeway",
+        "type": "bridge"
+      }
+    ],
+    "institutions": [
+      {
+        "name": "University of South Florida",
+        "type": "school"
+      },
+      {
+        "name": "University of Tampa",
+        "type": "school"
+      },
+      {
+        "name": "Tampa General Hospital",
+        "type": "hospital"
+      }
+    ],
+    "streets": [
+      {
+        "name": "Dale Mabry Highway",
+        "type": "road"
+      },
+      {
+        "name": "Bayshore Boulevard",
+        "type": "road"
+      },
+      {
+        "name": "Nebraska Avenue",
+        "type": "road"
+      },
+      {
+        "name": "Florida Avenue",
+        "type": "road"
+      }
+    ]
+  },
+  "all_features": [
+    {
+      "name": "Al Lopez Park",
+      "category": "parks",
+      "type": "park",
+      "gnis_id": null
+    },
+    {
+      "name": "Bayshore Boulevard",
+      "category": "streets",
+      "type": "road",
+      "gnis_id": null
+    },
+    {
+      "name": "Carver City",
+      "category": "neighborhoods",
+      "type": "populated place",
+      "gnis_id": null
+    },
+    {
+      "name": "Courtney Campbell Causeway",
+      "category": "bridges",
+      "type": "bridge",
+      "gnis_id": null
+    },
+    {
+      "name": "Curtis Hixon Park",
+      "category": "parks",
+      "type": "park",
+      "gnis_id": null
+    },
+    {
+      "name": "Dale Mabry Highway",
+      "category": "streets",
+      "type": "road",
+      "gnis_id": null
+    },
+    {
+      "name": "Florida Avenue",
+      "category": "streets",
+      "type": "road",
+      "gnis_id": null
+    },
+    {
+      "name": "Gandy Bridge",
+      "category": "bridges",
+      "type": "bridge",
+      "gnis_id": null
+    },
+    {
+      "name": "Hillsborough River",
+      "category": "waterways",
+      "type": "stream",
+      "gnis_id": "283806"
+    },
+    {
+      "name": "Howard Frankland Bridge",
+      "category": "bridges",
+      "type": "bridge",
+      "gnis_id": null
+    },
+    {
+      "name": "Hyde Park",
+      "category": "neighborhoods",
+      "type": "populated place",
+      "gnis_id": null
+    },
+    {
+      "name": "Lettuce Lake Park",
+      "category": "parks",
+      "type": "park",
+      "gnis_id": null
+    },
+    {
+      "name": "Lowry Park",
+      "category": "parks",
+      "type": "park",
+      "gnis_id": null
+    },
+    {
+      "name": "MacDill Air Force Base",
+      "category": "military",
+      "type": "military",
+      "gnis_id": "294492"
+    },
+    {
+      "name": "McKay Bay",
+      "category": "waterways",
+      "type": "bay",
+      "gnis_id": null
+    },
+    {
+      "name": "Nebraska Avenue",
+      "category": "streets",
+      "type": "road",
+      "gnis_id": null
+    },
+    {
+      "name": "Old Tampa Bay",
+      "category": "waterways",
+      "type": "bay",
+      "gnis_id": null
+    },
+    {
+      "name": "Plant City",
+      "category": "municipalities",
+      "type": "city",
+      "gnis_id": null
+    },
+    {
+      "name": "Seminole Heights",
+      "category": "neighborhoods",
+      "type": "populated place",
+      "gnis_id": null
+    },
+    {
+      "name": "Tampa",
+      "category": "municipalities",
+      "type": "city",
+      "gnis_id": null
+    },
+    {
+      "name": "Tampa Bay",
+      "category": "waterways",
+      "type": "bay",
+      "gnis_id": null
+    },
+    {
+      "name": "Tampa General Hospital",
+      "category": "institutions",
+      "type": "hospital",
+      "gnis_id": null
+    },
+    {
+      "name": "Temple Terrace",
+      "category": "municipalities",
+      "type": "city",
+      "gnis_id": null
+    },
+    {
+      "name": "University of South Florida",
+      "category": "institutions",
+      "type": "school",
+      "gnis_id": null
+    },
+    {
+      "name": "University of Tampa",
+      "category": "institutions",
+      "type": "school",
+      "gnis_id": null
+    },
+    {
+      "name": "Westshore",
+      "category": "neighborhoods",
+      "type": "populated place",
+      "gnis_id": null
+    },
+    {
+      "name": "Ybor City",
+      "category": "neighborhoods",
+      "type": "populated place",
+      "gnis_id": null
+    }
+  ],
+  "feature_names": [
+    "Al Lopez Park",
+    "Bayshore Boulevard",
+    "Carver City",
+    "Courtney Campbell Causeway",
+    "Curtis Hixon Park",
+    "Dale Mabry Highway",
+    "Florida Avenue",
+    "Gandy Bridge",
+    "Hillsborough River",
+    "Howard Frankland Bridge",
+    "Hyde Park",
+    "Lettuce Lake Park",
+    "Lowry Park",
+    "MacDill Air Force Base",
+    "McKay Bay",
+    "Nebraska Avenue",
+    "Old Tampa Bay",
+    "Plant City",
+    "Seminole Heights",
+    "Tampa",
+    "Tampa Bay",
+    "Tampa General Hospital",
+    "Temple Terrace",
+    "University of South Florida",
+    "University of Tampa",
+    "Westshore",
+    "Ybor City"
+  ]
+}

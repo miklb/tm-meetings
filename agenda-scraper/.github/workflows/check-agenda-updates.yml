@@ -1,0 +1,60 @@
+name: Check Agenda Updates
+
+on:
+  schedule:
+    # Run at 11 PM UTC (6 PM EST / 7 PM EDT) every day
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+jobs:
+  check-updates:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scrape meetings
+        run: node json-scraper.js
+
+      - name: Convert to WordPress format
+        run: |
+          # Process current week (today + next 6 days)
+          for i in $(seq 0 6); do
+            CHECK_DATE=$(date -d "+$i days" +%Y-%m-%d 2>/dev/null || date -v+${i}d +%Y-%m-%d)
+            if find data -name "*${CHECK_DATE}*.json" 2>/dev/null | grep -q .; then
+              echo "📅 Converting $CHECK_DATE"
+              node json-to-wordpress.js --date "$CHECK_DATE" || true
+            fi
+          done
+
+      - name: Check for changes
+        id: git-check
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            git diff --staged --name-only
+          fi
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.has_changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "📋 Agenda updates $(date +%Y-%m-%d)"
+          git push

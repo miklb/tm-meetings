@@ -1,0 +1,30 @@
+{
+  "meetingId": "2725",
+  "meetingType": "special",
+  "meetingDate": "November 10, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2725&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "18677",
+      "title": "File No. E2025-8 CH 1\nDiscussion on the framework for a resolution to establish the goals and objectives/scope for the City of Tampa Charter Review Advisory Commission in recommending amendments to the City Charter, and guidelines for membership and the conduct of its meetings including a tentative timeline with steps necessary for Charter amendment language for voter consideration on the March 2, 2027, municipal election ballot. (Original motion initiated by Carlson-Maniscalco on October 23, 2025)",
+      "rawTitle": "File No. E2025-8 CH 1\nDiscussion on the framework for a resolution to establish the goals and objectives/scope for the City of Tampa Charter Review Advisory Commission in recommending amendments to the City Charter, and guidelines for membership and the conduct of its meetings including a tentative timeline with steps necessary for Charter amendment language for voter consideration on the March 2, 2027, municipal election ballot. (Original motion initiated by Carlson-Maniscalco on October 23, 2025)",
+      "fileNumber": "E2025-8",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2025-11-10"
+}

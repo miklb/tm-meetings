@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tampa City Council Meeting Transcripts">
+    <title>{% block title %}Tampa City Council Transcripts{% endblock %}</title>
+    <link rel="stylesheet" href="css/styles.css">
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <header>
+        <h1>Tampa City Council Transcripts</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="https://apps.tampagov.net/cttv_cc_webapp/" target="_blank">Official Transcripts</a>
+            <a href="https://github.com/miklb/tm-transcript-cleaner" target="_blank">About</a>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>Tampa City Council Transcripts | Processed with ML-enhanced accuracy</p>
+        <p>Data sourced from <a href="https://apps.tampagov.net/cttv_cc_webapp/" style="color: white;">Tampa Gov</a></p>
+    </footer>
+
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

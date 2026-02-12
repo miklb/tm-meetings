@@ -1,0 +1,10 @@
+1. Planning Commission to present "By 2050 81% of Tampa’s Population Outside Coastal High Hazard Area".  Memorandum from Melissa Zornitta, Executive Director of the Planning Commission, notifying City Council that staff will provide an in-person presentation.  Email from Jennifer Malone, Executive Planner, transmitting PowerPoint presentation for said agenda item.
+
+2. Staff to present a full presentation, with full transparency, regarding the Julian B Lane River Center’s catering contract.  Memorandum from Tony Mulkey, Director of Parks & Recreation, notifying City Council that staff will provide an in-person report.
+
+3. Council to discuss Sulphur Springs pool and Stepping Stones.  Memorandum from Tony Mulkey, Director of Parks and Recreation, transmitting a brief written report and notifying City Council that staff will provide a verbal update regarding the Community Stepping Stones portion of said agenda item.  Memorandum from Evan Johnson, Chief Planner, and Javier Marin, Economic Opportunity Director, requesting that the discussion on Sulphur Springs pool, be continued to October 30, 2025.
+
+4. Council to review the short list of priorities and risks that was provided from Dennis Rogero, Chief Financial Officer, and be prepared to make recommendations on how the $25.8M should be distributed. Aligning on the proposed distribution of the remaining balance will allow Revenue and Finance to better understand what will still need to be funded through the FY26 budget process.  5.  Staff to work with Hagar Kopesky, City Council Budget Analyst, to come up with a coalescence of Council’s ideas on moving forward with the parameters of the Social Action and Arts Funding.
+
+---
+*Source: [Original Agenda Document](https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2490&type=agenda&doctype=1)*

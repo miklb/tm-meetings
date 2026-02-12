@@ -1,0 +1,76 @@
+{
+  "meetingId": "2619",
+  "meetingType": "Council Special",
+  "meetingDate": "August 4, 2025",
+  "formattedDate": "2025-08-04",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2619&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": null,
+      "fileNumber": "B2026-2",
+      "title": "File No. B2026-2 Council to discuss the Recommended Fiscal Year 2026 Budget for the City of Tampa.",
+      "rawTitle": "File No. B2026-2\nCouncil to discuss the Recommended Fiscal Year 2026 Budget for the City of Tampa",
+      "background": "",
+      "supportingDocuments": [],
+      "dollarAmounts": []
+    },
+    {
+      "number": 2,
+      "agendaItemId": null,
+      "fileNumber": "CM25-14485",
+      "title": "File No. CM25-14485 Staff to identify any large non-profit organizations that need City funding for their grant matching. ",
+      "rawTitle": "File No. CM25-14485 \nStaff to identify any large non-profit organizations that need City funding for their grant matching. (Original motion initiated by Hurtak-Viera on April 24, 2025)",
+      "background": "",
+      "supportingDocuments": [],
+      "dollarAmounts": []
+    },
+    {
+      "number": 3,
+      "agendaItemId": "15213",
+      "fileNumber": "F25-14353",
+      "title": "File No. F25-14353 Resolution of the City of Tampa, Florida, amending and restating Resolution No. 2022-915 and Resolution No. 2014-139 regarding reimbursement of certain costs relating to the acquisition, construction and equipping of various capital improvements within the City; providing an effective date. ",
+      "rawTitle": "File No. F25-14353\nResolution of the City of Tampa, Florida, amending and restating Resolution No. 2022-915 and Resolution No. 2014-139 regarding reimbursement of certain costs relating to the acquisition, construction and equipping of various capital improvements within the City; providing an effective date. (Continued from May 15, 2025 and June 5, 2025)",
+      "background": "To date, City Council has approved two Reimbursement Resolutions allowing the City the flexibility of reimbursing the City for up to $130.0 million in costs for certain governmental capital projects within the City.\n\nOn October 22, 2022, City Council approved the first Reimbursement Resolution No. 2022- 915 to allow the City to reimburse various costs related to the acquisition, construction and equipping of certain governmental capital projects within the City for an amount not to exceed $80 million: • Tampa Convention Center Renovations, Phase II o Convention Center Electrical Upgrades o Convention Center Fire Suppression Repairs and Upgrades o Convention Center HVAC Repairs and Upgrades o Convention Center Facility Lighting Upgrades o Convention Center Structural Repairs and Improvements • Customer Service Center Management System • Dimensions Time Keeping and Analytics • East Tampa Recreational Complex • Fleet Maintenance Decentralization - 40th Street •Hanna Avenue Government Center • Lower Peninsula Watershed - Southeast Region • OnBase Agenda and Documents Management System • Public Safety Training Facilities • TPD Howard Avenue Annex Building (formerly “Relocation of TPD Impound Facility and Offices\") • Sulphur Springs Pool Improvements • Tampa Police Department Headquarters Improvements • TFR Maintenance/Supply Shop • TFR Burn Simulator & Skills Tower • TFR Fire Station No. 24 On February 15, 2024, City Council approved a second Reimbursement Resolution No. 2024- 139 to allow the City the flexibility to reimburse various costs related to the acquisition, construction and equipping of certain governmental capital projects within the City for an amount not to exceed $50.0 million: • Fire Station 24 • Fire Maintenance and Supply Facility Staff is requesting Council to approve an amended and restated Reimbursement Resolution that incorporates the projects previously approved plus the additional projects listed below.\n\nThe total amount authorized in the amended and restated reimbursement is $235.0 million, which includes the previously approved amount of $130.0 million plus an additional $105.0 million.\n\n• FS No 6 Expansion and Property Acquisition • Fire Station 9 • Fire Station 10 • K-Bar Ranch Park • Guida House Renovation • Safe Streets 2022 • Safe Streets 2023 • United Ashley • Palmetto Beach BRIC • Tampa Multi-Modal Network and Safety Improvements Neither the adoption of the Original Resolutions nor the adoption of this Resolution requires or commits the City to issue any debt.  No debt will be issued for any of the Projects without the prior approval of the Council.  Additionally, City Council will have to approve the budgets for each of the Projects and any contract for either land acquisition, design, and or construction.",
+      "supportingDocuments": [
+        {
+          "title": "Amended and Restated Reimbursement Resolution.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AMENDED%20AND%20RESTATED%20REIMBURSEMENT%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2619&itemId=15213&publishId=133089&isSection=False&isAttachment=True",
+          "originalText": "AMENDED AND RESTATED REIMBURSEMENT RESOLUTION.PDF",
+          "originalTitle": "Download AMENDED AND RESTATED REIMBURSEMENT RESOLUTION.PDF"
+        },
+        {
+          "title": "1st Reimbursement Resolution 2022-915.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1ST%20REIMBURSEMENT%20RESOLUTION%202022-915.PDF.pdf?documentType=1&meetingId=2619&itemId=15213&publishId=133090&isSection=False&isAttachment=True",
+          "originalText": "1ST REIMBURSEMENT RESOLUTION 2022-915.PDF",
+          "originalTitle": "Download 1ST REIMBURSEMENT RESOLUTION 2022-915.PDF"
+        },
+        {
+          "title": "2nd Reimbursement Resolution No. 2024-139.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2ND%20REIMBURSEMENT%20RESOLUTION%20NO.%202024-139.PDF.pdf?documentType=1&meetingId=2619&itemId=15213&publishId=133091&isSection=False&isAttachment=True",
+          "originalText": "2ND REIMBURSEMENT RESOLUTION NO. 2024-139.PDF",
+          "originalTitle": "Download 2ND REIMBURSEMENT RESOLUTION NO. 2024-139.PDF"
+        },
+        {
+          "title": "Memo.rogero -051525 Regular Council Session - Onbase Agenda Item No. 14353.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MEMO.ROGERO%20-051525%20REGULAR%20COUNCIL%20SESSION%20-%20ONBASE%20AGENDA%20ITEM%20NO.%2014353.PDF.pdf?documentType=1&meetingId=2619&itemId=15213&publishId=133092&isSection=False&isAttachment=True",
+          "originalText": "MEMO.ROGERO -051525 REGULAR COUNCIL SESSION - ONBASE AGENDA ITEM NO. 14353.PDF",
+          "originalTitle": "Download MEMO.ROGERO -051525 REGULAR COUNCIL SESSION - ONBASE AGENDA ITEM NO. 14353.PDF"
+        },
+        {
+          "title": "Summary Sheet- Cover Sheet",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2619&itemId=15213&publishId=133093&isSection=False&isAttachment=True",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "originalTitle": "Download Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "Memo.perry - 060525 Regular Council Session - Onbase Agenda Item No. 14353.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MEMO.PERRY%20-%20060525%20REGULAR%20COUNCIL%20SESSION%20-%20ONBASE%20AGENDA%20ITEM%20NO.%2014353.PDF.pdf?documentType=1&meetingId=2619&itemId=15213&publishId=133094&isSection=False&isAttachment=True",
+          "originalText": "MEMO.PERRY - 060525 REGULAR COUNCIL SESSION - ONBASE AGENDA ITEM NO. 14353.PDF",
+          "originalTitle": "Download MEMO.PERRY - 060525 REGULAR COUNCIL SESSION - ONBASE AGENDA ITEM NO. 14353.PDF"
+        }
+      ],
+      "dollarAmounts": []
+    }
+  ]
+}

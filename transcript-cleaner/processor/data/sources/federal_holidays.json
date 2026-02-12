@@ -1,0 +1,144 @@
+{
+  "source": "US Office of Personnel Management",
+  "url": "https://www.opm.gov/policy-data-oversight/pay-leave/federal-holidays/",
+  "license": "US Government work (public domain)",
+  "verified": "2025-11-23",
+  "federal_holidays": [
+    {
+      "name": "New Year's Day",
+      "date": "January 1",
+      "notes": "First day of the year"
+    },
+    {
+      "name": "Birthday of Martin Luther King, Jr.",
+      "common_names": [
+        "Martin Luther King Jr. Day",
+        "MLK Day"
+      ],
+      "date": "Third Monday in January",
+      "notes": "Honors civil rights leader Martin Luther King Jr."
+    },
+    {
+      "name": "Washington's Birthday",
+      "common_names": [
+        "Presidents' Day",
+        "Presidents Day"
+      ],
+      "date": "Third Monday in February",
+      "notes": "Honors all US presidents, especially George Washington"
+    },
+    {
+      "name": "Memorial Day",
+      "date": "Last Monday in May",
+      "notes": "Honors military personnel who died in service"
+    },
+    {
+      "name": "Juneteenth National Independence Day",
+      "common_names": [
+        "Juneteenth"
+      ],
+      "date": "June 19",
+      "notes": "Commemorates end of slavery in the United States"
+    },
+    {
+      "name": "Independence Day",
+      "common_names": [
+        "Fourth of July"
+      ],
+      "date": "July 4",
+      "notes": "Commemorates Declaration of Independence"
+    },
+    {
+      "name": "Labor Day",
+      "date": "First Monday in September",
+      "notes": "Honors American workers"
+    },
+    {
+      "name": "Columbus Day",
+      "common_names": [
+        "Indigenous Peoples' Day"
+      ],
+      "date": "Second Monday in October",
+      "notes": "Some jurisdictions observe as Indigenous Peoples' Day"
+    },
+    {
+      "name": "Veterans Day",
+      "date": "November 11",
+      "notes": "Honors military veterans"
+    },
+    {
+      "name": "Thanksgiving Day",
+      "common_names": [
+        "Thanksgiving"
+      ],
+      "date": "Fourth Thursday in November",
+      "notes": "Traditional harvest celebration"
+    },
+    {
+      "name": "Christmas Day",
+      "common_names": [
+        "Christmas"
+      ],
+      "date": "December 25",
+      "notes": "Christian holiday celebrating birth of Jesus"
+    }
+  ],
+  "common_holidays": [
+    "Easter",
+    "Easter Sunday",
+    "Good Friday",
+    "Halloween",
+    "Hanukkah",
+    "Kwanzaa",
+    "Passover",
+    "Ramadan",
+    "Rosh Hashanah",
+    "Yom Kippur",
+    "Diwali",
+    "Chinese New Year",
+    "Cinco de Mayo",
+    "St. Patrick's Day",
+    "Valentine's Day",
+    "Mother's Day",
+    "Father's Day"
+  ],
+  "all_holiday_names": [
+    "Birthday of Martin Luther King, Jr.",
+    "Chinese New Year",
+    "Christmas",
+    "Christmas Day",
+    "Cinco de Mayo",
+    "Columbus Day",
+    "Diwali",
+    "Easter",
+    "Easter Sunday",
+    "Father's Day",
+    "Fourth of July",
+    "Good Friday",
+    "Halloween",
+    "Hanukkah",
+    "Independence Day",
+    "Indigenous Peoples' Day",
+    "Juneteenth",
+    "Juneteenth National Independence Day",
+    "Kwanzaa",
+    "Labor Day",
+    "MLK Day",
+    "Martin Luther King Jr. Day",
+    "Memorial Day",
+    "Mother's Day",
+    "New Year's Day",
+    "Passover",
+    "Presidents Day",
+    "Presidents' Day",
+    "Ramadan",
+    "Rosh Hashanah",
+    "St. Patrick's Day",
+    "Thanksgiving",
+    "Thanksgiving Day",
+    "Valentine's Day",
+    "Veterans Day",
+    "Washington's Birthday",
+    "Yom Kippur"
+  ]
+}

@@ -1,0 +1,295 @@
+{% extends "base.html" %}
+
+{% block title %}{{ meeting_title }} - Tampa City Council Transcripts{% endblock %}
+
+{% block extra_head %}
+<script src="js/search.js" defer></script>
+{% endblock %}
+
+{% block content %}
+<div class="meeting-header">
+    <h2>{{ meeting_title }}</h2>
+    <div class="meeting-meta">
+        <span>📅 {{ meeting_date }}</span>
+        <span>⏱️ {{ total_duration }}</span>
+        {% if video_count > 1 %}
+        <span>📹 {{ video_count }} parts</span>
+        {% endif %}
+        <span>📝 {{ segment_count }} segments</span>
+    </div>
+
+    <!-- Search box -->
+    <div class="search-container">
+        <input type="text" id="transcript-search" class="search-input" placeholder="Search transcript..."
+            autocomplete="off">
+        <div id="search-results" class="search-results"></div>
+    </div>
+</div>
+
+<div class="transcript-container">
+    <!-- Video Section -->
+    <div class="video-section">
+        {% if videos|length > 1 %}
+        <div class="video-tabs" role="tablist">
+            {% for video in videos %}
+            <button class="video-tab {% if loop.index == 1 %}active{% endif %}" onclick="switchVideo({{ loop.index0 }})"
+                role="tab" aria-selected="{% if loop.index == 1 %}true{% else %}false{% endif %}"
+                aria-controls="video-{{ loop.index0 }}">
+                <div>Part {{ video.part }}</div>
+                <span class="video-tab-label">{{ video.duration_formatted }}</span>
+            </button>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <div class="video-players">
+            {% for video in videos %}
+            <div class="video-player {% if loop.index == 1 %}active{% endif %}" id="video-{{ loop.index0 }}"
+                role="tabpanel" data-video-id="{{ video.video_id }}" data-part="{{ video.part }}">
+                <div id="player-{{ loop.index0 }}"></div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Chapters Section -->
+        {% if videos and videos[0].chapters %}
+        <div class="chapters-section">
+            <h3>Chapters</h3>
+            {% for video in videos %}
+            {% if video.chapters %}
+            <div class="chapters-list {% if loop.index == 1 %}active{% endif %}" data-part="{{ loop.index0 }}">
+                {% if videos|length > 1 %}
+                <div class="chapters-part-label">Part {{ video.part }}</div>
+                {% endif %}
+                {% for chapter in video.chapters %}
+                <div class="chapter-item" onclick="seekToChapter({{ chapter.seconds }}, {{ video.part }})">
+                    <span class="chapter-timestamp">{{ chapter.timestamp }}</span>
+                    <span class="chapter-title">{{ chapter.title }}</span>
+                </div>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+
+    <!-- Transcript Section -->
+    <div class="transcript-section" role="main" aria-label="Transcript">
+        {% for segment in segments %}
+        <div class="segment" id="segment-{{ loop.index0 }}" data-timestamp="{{ segment.timestamp }}"
+            data-seconds="{{ segment.timestamp_seconds }}" data-video-part="{{ segment.video_part }}">
+            <div class="segment-header">
+                <span class="speaker-name">{{ segment.speaker }}</span>
+                <a href="#" class="timestamp"
+                    onclick="seekToTimestamp({{ segment.timestamp_seconds }}, {{ segment.video_part }}); return false;"
+                    aria-label="Seek to {{ segment.timestamp }}">
+                    {{ segment.timestamp }}
+                </a>
+            </div>
+            <div class="segment-text">{{ segment.text }}</div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script src="https://www.youtube.com/iframe_api"></script>
+<script>
+    // YouTube IFrame API
+    let players = [];
+    let currentVideoIndex = 0;
+    let trackingEnabled = true;
+
+    // Video part mapping (timestamp ranges)
+    const videoPartRanges = {{ video_part_ranges| tojson }};
+
+    function onYouTubeIframeAPIReady() {
+        console.log('YouTube IFrame API ready');
+        // Initialize all video players
+        const videoElements = document.querySelectorAll('.video-player');
+        console.log(`Found ${videoElements.length} video elements`);
+
+        videoElements.forEach((el, index) => {
+            const videoId = el.dataset.videoId;
+            console.log(`Initializing player ${index} with videoId: ${videoId}`);
+            players[index] = new YT.Player(`player-${index}`, {
+                videoId: videoId,
+                playerVars: {
+                    'rel': 0,
+                    'modestbranding': 1,
+                    'origin': window.location.origin
+                },
+                events: {
+                    'onReady': (event) => {
+                        console.log(`Player ${index} ready`);
+                    },
+                    'onStateChange': (event) => onPlayerStateChange(event, index),
+                    'onError': (event) => onPlayerError(event, index)
+                }
+            });
+        });
+    }
+
+    function onPlayerError(event, playerIndex) {
+        console.error(`Player ${playerIndex} error:`, event.data);
+        const errorMessages = {
+            2: 'Invalid video ID',
+            5: 'HTML5 player error',
+            100: 'Video not found or private',
+            101: 'Video owner does not allow embedding',
+            150: 'Video owner does not allow embedding'
+        };
+        const message = errorMessages[event.data] || 'Unknown error';
+        console.error(`Error ${event.data}: ${message}`);
+
+        // Show fallback link
+        const playerEl = document.getElementById(`player-${playerIndex}`);
+        if (playerEl) {
+            const videoId = document.querySelector(`#video-${playerIndex}`).dataset.videoId;
+            playerEl.innerHTML = `
+                <div style="padding: 2rem; text-align: center; background: #f8f9fa;">
+                    <p style="color: #dc3545; margin-bottom: 1rem;">⚠️ ${message}</p>
+                    <a href="https://www.youtube.com/watch?v=${videoId}" 
+                       target="_blank"
+                       style="color: #0066cc; text-decoration: underline;">
+                        Watch on YouTube →
+                    </a>
+                </div>
+            `;
+        }
+    }
+
+    function onPlayerStateChange(event, playerIndex) {
+        // DISABLED: Track playback and highlight active segment
+        // if (event.data == YT.PlayerState.PLAYING && trackingEnabled) {
+        //     startTracking(playerIndex);
+        // }
+    }
+
+    function startTracking(playerIndex) {
+        // Update active segment every second
+        const interval = setInterval(() => {
+            if (!players[playerIndex]) {
+                clearInterval(interval);
+                return;
+            }
+
+            const player = players[playerIndex];
+            if (player.getPlayerState() !== YT.PlayerState.PLAYING) {
+                clearInterval(interval);
+                return;
+            }
+
+            const currentTime = player.getCurrentTime();
+            const videoPart = playerIndex + 1;
+
+            highlightActiveSegment(currentTime, videoPart);
+        }, 100);
+    }
+
+    function seekToChapter(seconds, videoPart) {
+        // Chapters use the same logic as timestamp seeking
+        seekToTimestamp(seconds, videoPart);
+
+        // Update active chapters list if multiple videos
+        const chaptersLists = document.querySelectorAll('.chapters-list');
+        if (chaptersLists.length > 1) {
+            chaptersLists.forEach((list, index) => {
+                list.classList.toggle('active', index === (videoPart - 1));
+            });
+        }
+    }
+
+    function highlightActiveSegment(seconds, videoPart) {
+        const segments = document.querySelectorAll('.segment');
+        let activeSegment = null;
+
+        // Find the segment that matches current playback time
+        segments.forEach(segment => {
+            const segmentPart = parseInt(segment.dataset.videoPart);
+            const segmentSeconds = parseFloat(segment.dataset.seconds);
+
+            if (segmentPart === videoPart && segmentSeconds <= seconds) {
+                activeSegment = segment;
+            }
+        });
+
+        if (activeSegment) {
+            // Remove previous active class
+            segments.forEach(s => s.classList.remove('active'));
+
+            // Add active class
+            activeSegment.classList.add('active');
+
+            // Scroll into view if not visible
+            const rect = activeSegment.getBoundingClientRect();
+            if (rect.top < 0 || rect.bottom > window.innerHeight) {
+                activeSegment.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        }
+    }
+
+    function switchVideo(index) {
+        // Switch active video tab and player
+        currentVideoIndex = index;
+
+        // Update tabs
+        document.querySelectorAll('.video-tab').forEach((tab, i) => {
+            tab.classList.toggle('active', i === index);
+            tab.setAttribute('aria-selected', i === index);
+        });
+
+        // Update players
+        document.querySelectorAll('.video-player').forEach((player, i) => {
+            player.classList.toggle('active', i === index);
+        });
+
+        // Update chapters lists
+        document.querySelectorAll('.chapters-list').forEach((list, i) => {
+            list.classList.toggle('active', i === index);
+        });
+
+        // Pause other players
+        players.forEach((player, i) => {
+            if (i !== index && player && player.pauseVideo) {
+                player.pauseVideo();
+            }
+        });
+    }
+
+    function seekToTimestamp(seconds, videoPart) {
+        console.log(`seekToTimestamp called: seconds=${seconds}, videoPart=${videoPart}`);
+
+        // Switch to the correct video if needed
+        const videoIndex = videoPart - 1;
+        console.log(`videoIndex=${videoIndex}, currentVideoIndex=${currentVideoIndex}`);
+        console.log(`players array:`, players);
+
+        if (videoIndex !== currentVideoIndex) {
+            switchVideo(videoIndex);
+        }
+
+        // Wait for player to be ready, then seek
+        setTimeout(() => {
+            const player = players[videoIndex];
+            console.log(`Player at index ${videoIndex}:`, player);
+
+            if (player && player.seekTo) {
+                console.log(`Seeking to ${seconds} seconds`);
+                trackingEnabled = false;
+                player.seekTo(seconds, true);
+                player.playVideo();
+
+                // Re-enable tracking after seeking
+                setTimeout(() => {
+                    trackingEnabled = true;
+                }, 1000);
+            } else {
+                console.error(`Player not ready or seekTo not available. Player:`, player);
+            }
+        }, 300);
+    }
+</script>
+{% endblock %}

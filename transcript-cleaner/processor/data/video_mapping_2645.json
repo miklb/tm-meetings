@@ -1,0 +1,129 @@
+{
+  "meeting_id": 2645,
+  "meeting_date": "2025-11-13",
+  "videos": [
+    {
+      "video_id": "SocxtU6vTKc",
+      "title": "Community Redevelopment Agency - 11/13/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-11-14T05:21:32Z",
+      "duration": "PT3H7M21S",
+      "offset_seconds": 552,
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:24:54",
+          "seconds": 1494
+        },
+        {
+          "title": "Item 16: CRA25-18652 - Firefighters Museum Grant Approval",
+          "timestamp": "01:41:16",
+          "seconds": 6076
+        },
+        {
+          "title": "Item 1: CRA24-2242 - Tampa Heights CAC Report",
+          "timestamp": "02:04:34",
+          "seconds": 7474
+        },
+        {
+          "title": "Item 2: CRA24-2241 - CRA Director Monthly Report",
+          "timestamp": "02:09:48",
+          "seconds": 7788
+        },
+        {
+          "title": "Item 4: CRA25-15387 - Perry Park Amphitheater Feasibility",
+          "timestamp": "02:34:38",
+          "seconds": 9278
+        },
+        {
+          "title": "Item 13: CRA25-16847 - CRA Services Agreement Resolution",
+          "timestamp": "02:37:38",
+          "seconds": 9458
+        },
+        {
+          "title": "Item 15: CRA25-18650 - Channel District Stormwater Project",
+          "timestamp": "02:41:47",
+          "seconds": 9707
+        },
+        {
+          "title": "Item 12: CRA25-19132 - Domain Homes Housing Partnership",
+          "timestamp": "02:43:29",
+          "seconds": 9809
+        },
+        {
+          "title": "Item 5: CRA25-14619 - Grant Program Recommendations Report",
+          "timestamp": "02:52:25",
+          "seconds": 10345
+        },
+        {
+          "title": "Item 9: CRA25-18657 - Clonts Affordable Housing Request",
+          "timestamp": "02:55:35",
+          "seconds": 10535
+        },
+        {
+          "title": "Item 10: CRA25-18659 - Heritage Heights Funding Request",
+          "timestamp": "03:01:05",
+          "seconds": 10865
+        }
+      ]
+    },
+    {
+      "video_id": "oCSGYDZXHbk",
+      "title": "Community Redevelopment Agency - 11/13/25 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-11-14T09:35:21Z",
+      "duration": "PT2H55M48S",
+      "offset_seconds": 630,
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 9: CRA25-18657 - Clonts Affordable Housing Request",
+          "timestamp": "00:11:12",
+          "seconds": 672
+        },
+        {
+          "title": "Item 11: CRA25-18681 - 801 Whiting Housing Project Request",
+          "timestamp": "00:11:52",
+          "seconds": 712
+        },
+        {
+          "title": "Item 8: CRA25-18726 - Curtis Hixon Renovation Request",
+          "timestamp": "00:24:13",
+          "seconds": 1453
+        },
+        {
+          "title": "Item 6: CRA25-17612 - Commercial Grant Policy Update",
+          "timestamp": "01:06:03",
+          "seconds": 3963
+        },
+        {
+          "title": "Item 17: CRA25-18653 - East Tampa Grant Waiver",
+          "timestamp": "02:02:02",
+          "seconds": 7322
+        },
+        {
+          "title": "Item 7: CRA25-17610 - Application Cycle Concept Approval",
+          "timestamp": "02:10:48",
+          "seconds": 7848
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "02:33:23",
+          "seconds": 9203
+        }
+      ],
+      "transcript_start_time": "1:36:37PM"
+    }
+  ]
+}

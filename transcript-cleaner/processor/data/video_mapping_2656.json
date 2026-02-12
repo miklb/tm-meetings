@@ -1,0 +1,145 @@
+{
+  "meeting_id": 2656,
+  "meeting_date": "2026-02-05",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "28JkyQ0X-O4",
+      "title": "Tampa City Council - 02/05/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-02-06T05:42:10Z",
+      "duration": "PT3H2M56S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:35:13",
+          "seconds": 2113
+        },
+        {
+          "title": "Item 3: BA26-20844 - Appoint Richard Peterika to NRAC",
+          "timestamp": "01:26:05",
+          "seconds": 5165
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:50:25",
+          "seconds": 6625
+        },
+        {
+          "title": "Item 40: REZ-25-90 - 2539 W Cherry Street",
+          "timestamp": "01:59:55",
+          "seconds": 7195
+        },
+        {
+          "title": "Item 41: REZ-25-91 - 2704 W Palmetto Street",
+          "timestamp": "02:02:40",
+          "seconds": 7360
+        },
+        {
+          "title": "Item 42: REZ-25-100 - St Louis & Armenia",
+          "timestamp": "02:04:14",
+          "seconds": 7454
+        },
+        {
+          "title": "Item 43: REZ-25-107 - N Tampa Street Properties",
+          "timestamp": "02:06:18",
+          "seconds": 7578
+        },
+        {
+          "title": "Item 44: REZ-25-110 - 3219 W Arch Street",
+          "timestamp": "02:08:10",
+          "seconds": 7690
+        },
+        {
+          "title": "Item 45: REZ-25-111 - E Floribraska & Mitchell",
+          "timestamp": "02:10:50",
+          "seconds": 7850
+        },
+        {
+          "title": "Item 46: REZ-25-117 - 4202 W Spruce Street",
+          "timestamp": "02:12:50",
+          "seconds": 7970
+        },
+        {
+          "title": "Item 47: REZ-25-127 - 22nd St & Hillsborough Ave",
+          "timestamp": "02:58:10",
+          "seconds": 10690
+        }
+      ],
+      "offset_seconds": 1182
+    },
+    {
+      "video_id": "mjg1FO4rDes",
+      "title": "Tampa City Council 2/5/26 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-02-06T09:59:12Z",
+      "duration": "PT3H6M25S",
+      "chapters": [
+        {
+          "title": "Tampa City Council \u2013 February 5, 2026 (Meeting starts)",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 49 | DE1-25-160 | 401 East Hillsboro Avenue",
+          "timestamp": "00:06:51",
+          "seconds": 411
+        },
+        {
+          "title": "Staff Presentation - Item 49",
+          "timestamp": "00:10:04",
+          "seconds": 604
+        },
+        {
+          "title": "Petitioner Presentation - Item 49",
+          "timestamp": "00:13:33",
+          "seconds": 813
+        },
+        {
+          "title": "Council Deliberation - Item 49",
+          "timestamp": "00:30:19",
+          "seconds": 1819
+        },
+        {
+          "title": "Administrative Updates",
+          "timestamp": "00:40:04",
+          "seconds": 2404
+        },
+        {
+          "title": "Item 53 | Traffic Discussion",
+          "timestamp": "00:53:23",
+          "seconds": 3203
+        },
+        {
+          "title": "Item 55  | All Abilities Program Update",
+          "timestamp": "01:33:18",
+          "seconds": 5598
+        },
+        {
+          "title": "Item 58  |  FY25 Surplus Prioritization Discussion",
+          "timestamp": "01:43:53",
+          "seconds": 6233
+        },
+        {
+          "title": "Social Action & Arts Funding Discussion",
+          "timestamp": "02:31:31",
+          "seconds": 9091
+        },
+        {
+          "title": "New Business & Commendations",
+          "timestamp": "02:49:23",
+          "seconds": 10163
+        }
+      ],
+      "offset_seconds": -1157,
+      "transcript_start_time": "01:33:10PM"
+    }
+  ]
+}

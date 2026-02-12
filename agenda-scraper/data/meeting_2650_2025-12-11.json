@@ -1,0 +1,932 @@
+{
+  "meetingId": "2650",
+  "meetingType": "cra",
+  "agendaType": "DRAFT",
+  "meetingDate": "December 11, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2650&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "19527",
+      "title": "File No. CRA24-2242\nDrew Park CAC Chair, Maritza Astorquiza, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "rawTitle": "File No. CRA24-2242\nDrew Park CAC Chair, Maritza Astorquiza, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "fileNumber": "CRA24-2242",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "19528",
+      "title": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting December Project Tracking Report and Commercial Grants Tracking Report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting December Project Tracking Report and Commercial Grants Tracking Report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA24-2241",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DIRECTORSREPORT(ONBASENO.19528.FILENO.CRA24-2241).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DIRECTORSREPORT(ONBASENO.19528.FILENO.CRA24-2241).PDF.pdf?documentType=1&meetingId=2650&itemId=19528&publishId=161657&isSection=False&isAttachment=True",
+          "originalTitle": "Download DIRECTORSREPORT(ONBASENO.19528.FILENO.CRA24-2241).PDF",
+          "originalText": "DIRECTORSREPORT(ONBASENO.19528.FILENO.CRA24-2241).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19528/directorsreportonbaseno.19528.fileno.cra24-2241.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "19537",
+      "title": "File No. CRA25-19537 \nHCP consultant to present a 5-minute presentation on the Ybor Resident Survey. (Original motion initiated by Carlson-Maniscalco on November 13 , 2025)\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19537 \nHCP consultant to present a 5-minute presentation on the Ybor Resident Survey. (Original motion initiated by Carlson-Maniscalco on November 13 , 2025)\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19537",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "2025_YBOR RESIDENT AND WORKER_EXECUTIVE SUMMARY.PDF.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2025_YBOR%20RESIDENT%20AND%20WORKER_EXECUTIVE%20SUMMARY.PDF.PDF.pdf?documentType=1&meetingId=2650&itemId=19537&publishId=161658&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2025_YBOR RESIDENT AND WORKER_EXECUTIVE SUMMARY.PDF.PDF",
+          "originalText": "2025_YBOR RESIDENT AND WORKER_EXECUTIVE SUMMARY.PDF.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19537/2025_ybor-resident-and-worker_executive-summary.pdf"
+        },
+        {
+          "title": "6289AD93-C757-49C6-BF77-0519427A3928.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/6289AD93-C757-49C6-BF77-0519427A3928.DOCX.pdf?documentType=1&meetingId=2650&itemId=19537&publishId=161659&isSection=False&isAttachment=True",
+          "originalTitle": "Download 6289AD93-C757-49C6-BF77-0519427A3928.DOCX",
+          "originalText": "6289AD93-C757-49C6-BF77-0519427A3928.DOCX",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19537/6289ad93-c757-49c6-bf77-0519427a3928.docx"
+        },
+        {
+          "title": "TCRA_RESIDENT AND WORKER PRESENTATION_FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCRA_RESIDENT%20AND%20WORKER%20PRESENTATION_FINAL.PDF.pdf?documentType=1&meetingId=2650&itemId=19537&publishId=161660&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCRA_RESIDENT AND WORKER PRESENTATION_FINAL.PDF",
+          "originalText": "TCRA_RESIDENT AND WORKER PRESENTATION_FINAL.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19537/tcra_resident-and-worker-presentation_final.pdf"
+        },
+        {
+          "title": "HCPCONSULTANTYBORRESIDENTSURVEY(ONBASENO.19537.FILENO.CRA25-19537).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/HCPCONSULTANTYBORRESIDENTSURVEY(ONBASENO.19537.FILENO.CRA25-19537).PDF.pdf?documentType=1&meetingId=2650&itemId=19537&publishId=161661&isSection=False&isAttachment=True",
+          "originalTitle": "Download HCPCONSULTANTYBORRESIDENTSURVEY(ONBASENO.19537.FILENO.CRA25-19537).PDF",
+          "originalText": "HCPCONSULTANTYBORRESIDENTSURVEY(ONBASENO.19537.FILENO.CRA25-19537).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19537/hcpconsultantyborresidentsurveyonbaseno.19537.fileno.cra25-19537.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "19529",
+      "title": "File No. CRA25-19529\nCRA Staff to present Certificates of Appreciation to CAC members. (Original motion initiated by Clendenin-Maniscalco on November 13, 2025)",
+      "rawTitle": "File No. CRA25-19529\nCRA Staff to present Certificates of Appreciation to CAC members. (Original motion initiated by Clendenin-Maniscalco on November 13, 2025)",
+      "fileNumber": "CRA25-19529",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "15427",
+      "title": "File No. CRA24-8206\nStaff to provide a report on wheelchair accessible playground equipment at Water Works Park and Curtis Hixon Waterfront Park and what can be done to accommodate this. (Original motion initiated by Viera-Miranda on August 8, 2024)(Continued from December 12, 2024, March 13, 2025, April 10, 2025, May 8, 2025 and June 12, 2025)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA24-8206\nStaff to provide a report on wheelchair accessible playground equipment at Water Works Park and Curtis Hixon Waterfront Park and what can be done to accommodate this. (Original motion initiated by Viera-Miranda on August 8, 2024)(Continued from December 12, 2024, March 13, 2025, April 10, 2025, May 8, 2025 and June 12, 2025)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA24-8206",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "MEMO RE REPORT ON WHEELCHAIR ACCESSIBLE PLAYGROUND  - DEC. 12TH CRA SESSION - (FILE NO. CRA24-8206 &AMP;AMP; ONBASE NO. 8206).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MEMO%20RE%20REPORT%20ON%20WHEELCHAIR%20ACCESSIBLE%20PLAYGROUND%20%20-%20DEC.%2012TH%20CRA%20SESSION.pdf?documentType=1&meetingId=2650&itemId=15427&publishId=161662&isSection=False&isAttachment=True",
+          "originalTitle": "Download MEMO RE REPORT ON WHEELCHAIR ACCESSIBLE PLAYGROUND  - DEC. 12TH CRA SESSION - (FILE NO. CRA24-8206 &AMP;AMP; ONBASE NO. 8206).PDF",
+          "originalText": "MEMO RE REPORT ON WHEELCHAIR ACCESSIBLE PLAYGROUND  - DEC. 12TH CRA SESSION - (FILE NO. CRA24-8206 &AMP;AMP; ONBASE NO. 8206).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/15427/memo-re-report-on-wheelchair-accessible-playground-dec.-12th-cra-session-file-no.-cra24-8206-ampamp-onbase-no.-8206.pdf"
+        },
+        {
+          "title": "CM VIERA MARCH DISABILITY MEMO 2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CM%20VIERA%20MARCH%20DISABILITY%20MEMO%202025.PDF.pdf?documentType=1&meetingId=2650&itemId=15427&publishId=161663&isSection=False&isAttachment=True",
+          "originalTitle": "Download CM VIERA MARCH DISABILITY MEMO 2025.PDF",
+          "originalText": "CM VIERA MARCH DISABILITY MEMO 2025.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/15427/cm-viera-march-disability-memo-2025.pdf"
+        },
+        {
+          "title": "CM VIERA MEMO CRA ACCESSIBLE PLAYGROUND 3-27-25.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CM%20VIERA%20MEMO%20CRA%20ACCESSIBLE%20PLAYGROUND%203-27-25.PDF.pdf?documentType=1&meetingId=2650&itemId=15427&publishId=161664&isSection=False&isAttachment=True",
+          "originalTitle": "Download CM VIERA MEMO CRA ACCESSIBLE PLAYGROUND 3-27-25.PDF",
+          "originalText": "CM VIERA MEMO CRA ACCESSIBLE PLAYGROUND 3-27-25.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/15427/cm-viera-memo-cra-accessible-playground-3-27-25.pdf"
+        },
+        {
+          "title": "WATERWORKSPLAYGROUND (FILENO.CRA24-8206.ONBASENO.13673).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WATERWORKSPLAYGROUND%20(FILENO.CRA24-8206.ONBASENO.13673).PDF.pdf?documentType=1&meetingId=2650&itemId=15427&publishId=161665&isSection=False&isAttachment=True",
+          "originalTitle": "Download WATERWORKSPLAYGROUND (FILENO.CRA24-8206.ONBASENO.13673).PDF",
+          "originalText": "WATERWORKSPLAYGROUND (FILENO.CRA24-8206.ONBASENO.13673).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/15427/waterworksplayground-fileno.cra24-8206.onbaseno.13673.pdf"
+        },
+        {
+          "title": "WATERWORKS(ONBASENO.14626,FILENO.CRA24-8206).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WATERWORKS(ONBASENO.14626%2cFILENO.CRA24-8206).PDF.pdf?documentType=1&meetingId=2650&itemId=15427&publishId=161666&isSection=False&isAttachment=True",
+          "originalTitle": "Download WATERWORKS(ONBASENO.14626,FILENO.CRA24-8206).PDF",
+          "originalText": "WATERWORKS(ONBASENO.14626,FILENO.CRA24-8206).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/15427/waterworksonbaseno.14626fileno.cra24-8206.pdf"
+        },
+        {
+          "title": "WATERWORKSCURTISHIXONPARK(FILENO.CRA24-8206.ONBASENO.15427).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WATERWORKSCURTISHIXONPARK(FILENO.CRA24-8206.ONBASENO.15427).PDF.pdf?documentType=1&meetingId=2650&itemId=15427&publishId=161667&isSection=False&isAttachment=True",
+          "originalTitle": "Download WATERWORKSCURTISHIXONPARK(FILENO.CRA24-8206.ONBASENO.15427).PDF",
+          "originalText": "WATERWORKSCURTISHIXONPARK(FILENO.CRA24-8206.ONBASENO.15427).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/15427/waterworkscurtishixonparkfileno.cra24-8206.onbaseno.15427.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 6,
+      "agendaItemId": "19545",
+      "title": "File No. CRA25-16847\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the services agreement by and between said Community Redevelopment Agency and the City of Tampa for fiscal years 2026, subject to budget and appropriation; Providing an effective date. (Continued from September 11, 2025 and November 13, 2025)",
+      "rawTitle": "File No. CRA25-16847\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the services agreement by and between said Community Redevelopment Agency and the City of Tampa for fiscal years 2026, subject to budget and appropriation; Providing an effective date. (Continued from September 11, 2025 and November 13, 2025)",
+      "fileNumber": "CRA25-16847",
+      "background": "The CRA is requesting that the Services Agreement by and between the Community Redevelopment Agency of the City of Tampa, Florida, and the City of Tampa, Florida, a municipal corporation organized and existing under the laws of the State of Florida, for fiscal year 2026 commencing October 1, 2025, be approved in the form attached hereto or substantially similar form, subject to the proper budget and appropriation of the tax increment funds available for the Redevelopment Areas during the 2026 fiscal year.",
+      "supportingDocuments": [
+        {
+          "title": "CRA RESOLUTION - FY26 SERVICES AGREEMENT WITH CITY OF TAMPA.DOC-COMBINED.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20-%20FY26%20SERVICES%20AGREEMENT%20WITH%20CITY%20OF%20TAMPA.DOC-COMBINED.PDF.pdf?documentType=1&meetingId=2650&itemId=19545&publishId=161668&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRA RESOLUTION - FY26 SERVICES AGREEMENT WITH CITY OF TAMPA.DOC-COMBINED.PDF",
+          "originalText": "CRA RESOLUTION - FY26 SERVICES AGREEMENT WITH CITY OF TAMPA.DOC-COMBINED.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19545/cra-resolution-fy26-services-agreement-with-city-of-tampa.doc-combined.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=19545&publishId=161669&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19545/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "CRA SEPT 11 MEMO- CONTINUANCE.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20SEPT%2011%20MEMO-%20CONTINUANCE.DOCX.pdf?documentType=1&meetingId=2650&itemId=19545&publishId=161670&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRA SEPT 11 MEMO- CONTINUANCE.DOCX",
+          "originalText": "CRA SEPT 11 MEMO- CONTINUANCE.DOCX",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19545/cra-sept-11-memo-continuance.docx"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$4,254,558",
+        "$99,557",
+        "$664,897",
+        "$1,478,316",
+        "$178,471",
+        "$478,337",
+        "$722,363",
+        "$110,075",
+        "$210,837",
+        "$104,003",
+        "$177,702",
+        "$10,000",
+        "$20,000",
+        "$900,065",
+        "$230,837",
+        "$114,003"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$4,254,558",
+          "value": 4254558,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": "fiscal_impact",
+          "contexts": [
+            "This resolution provides for the services agreement in the amount of $4,254,558 between the FISCAL IMPACT STATEMENT:",
+            "FISCAL IMPACT STATEMENT: This resolution provides for the services agreement in the amount of $4,254,558 between the"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$99,557",
+          "value": 99557,
+          "signedValue": 99557,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "PROJECTED COSTS: 01100 213801 381618 $99,557 (Revenue) budget and appropriation within the CRA Funds.",
+            "61800 213801 591011 $99,557 (Expenditure) General Fund. Neighborhood Enhancement. Transfer from Ybor II CRA",
+            "budget and appropriation within the CRA Funds. PROJECTED COSTS: 01100 213801 381618 $99,557 (Revenue)",
+            "General Fund. Neighborhood Enhancement. Transfer from Ybor II CRA 61800 213801 591011 $99,557 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$664,897",
+          "value": 664897,
+          "signedValue": 664897,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 213801 381619 $664,897 (Revenue) General Fund. CRA Dept. Transfer from Central Park CRA",
+            "61900 213801 591011 $664,897 (Expenditure) Central Park CRA Fund. CRA Dept. Transfer to General Fund",
+            "General Fund. CRA Dept. Transfer from Central Park CRA 01100 213801 381619 $664,897 (Revenue)",
+            "Central Park CRA Fund. CRA Dept. Transfer to General Fund 61900 213801 591011 $664,897 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$1,478,316",
+          "value": 1478316,
+          "signedValue": 1478316,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 213801 381621 $1,478,316 (Revenue) General Fund. CRA Dept. Transfer from Channel District CRA",
+            "62100 213801 591011 $1,478,316 (Expenditure) Channel District CRA Fund. CRA Dept. Transfer to General Fund",
+            "General Fund. CRA Dept. Transfer from Channel District CRA 01100 213801 381621 $1,478,316 (Revenue)",
+            "Channel District CRA Fund. CRA Dept. Transfer to General Fund 62100 213801 591011 $1,478,316 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$178,471",
+          "value": 178471,
+          "signedValue": 178471,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 213801 381623 $178,471 (Revenue) General Fund. CRA Dept. Transfer from Downtown CRA",
+            "62300 213801 591011 $178,471 (Expenditure) Downtown CRA Fund. CRA Dept. Transfer to General Fund",
+            "General Fund. CRA Dept. Transfer from Downtown CRA 01100 213801 381623 $178,471 (Revenue)",
+            "Downtown CRA Fund. CRA Dept. Transfer to General Fund 62300 213801 591011 $178,471 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$478,337",
+          "value": 478337,
+          "signedValue": 478337,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 213801 381628 $478,337 (Revenue) General Fund. CRA Dept. Transfer from Drew Park CRA",
+            "62350 213801 591011 $478,337 (Expenditure) West Tampa CRA Fund. CRA Dept. Transfer to General Fund",
+            "General Fund. CRA Dept. Transfer from Drew Park CRA 01100 213801 381628 $478,337 (Revenue)",
+            "West Tampa CRA Fund. CRA Dept. Transfer to General Fund 62350 213801 591011 $478,337 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$722,363",
+          "value": 722363,
+          "signedValue": -722363,
+          "type": "revenue",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 213801 381624 $722,363 (Revenue) General Fund. CRA Dept. Transfer from West Tampa CRA",
+            "General Fund. CRA Dept. Transfer from West Tampa CRA 01100 213801 381624 $722,363 (Revenue)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$110,075",
+          "value": 110075,
+          "signedValue": 110075,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 213801 381625 $110,075 (Revenue) General Fund. CRA Dept. Transfer from East Tampa CRA",
+            "62500 213801 591011 $110,075 (Expenditure) East Tampa CRA Fund. CRA Dept. Transfer to General Fund",
+            "General Fund. CRA Dept. Transfer from East Tampa CRA 01100 213801 381625 $110,075 (Revenue)",
+            "East Tampa CRA Fund. CRA Dept. Transfer to General Fund 62500 213801 591011 $110,075 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$210,837",
+          "value": 210837,
+          "signedValue": -210837,
+          "type": "revenue",
+          "section": "projected_costs",
+          "contexts": [
+            "01110 213801 381626 $210,837 (Revenue) General Fund. CRA Dept. Transfer from Tampa Heights Riverfront CRA",
+            "General Fund. CRA Dept. Transfer from Tampa Heights Riverfront CRA 01110 213801 381626 $210,837 (Revenue)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$104,003",
+          "value": 104003,
+          "signedValue": -104003,
+          "type": "revenue",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 213801 381627 $104,003 (Revenue) General Fund. CRA Dept. Transfer from Ybor I CRA",
+            "General Fund. CRA Dept. Transfer from Ybor I CRA 01100 213801 381627 $104,003 (Revenue)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$177,702",
+          "value": 177702,
+          "signedValue": -177702,
+          "type": "revenue",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 230400 381624 $177,702 (Revenue) General Fund. CRA Dept. Transfer from Ybor II CRA",
+            "General Fund. CRA Dept. Transfer from Ybor II CRA 01100 230400 381624 $177,702 (Revenue)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$10,000",
+          "value": 10000,
+          "signedValue": -10000,
+          "type": "revenue",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 220700 381626 $10,000 (Revenue) General Fund. Police SSD. Transfer from East Tampa CRA",
+            "General Fund. Police SSD. Transfer from East Tampa CRA 01100 220700 381626 $10,000 (Revenue)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$20,000",
+          "value": 20000,
+          "signedValue": -20000,
+          "type": "revenue",
+          "section": "projected_costs",
+          "contexts": [
+            "01100 220700 381627 $20,000 (Revenue) General Fund. Neighborhood Enhancement. Transfer from Ybor I CRA",
+            "General Fund. Neighborhood Enhancement. Transfer from Ybor I CRA 01100 220700 381627 $20,000 (Revenue)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$900,065",
+          "value": 900065,
+          "signedValue": 900065,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "62400 213801 591011 $900,065 (Expenditure) West Tampa CRA Fund. CRA Dept. Transfer to General Fund",
+            "West Tampa CRA Fund. CRA Dept. Transfer to General Fund 62400 213801 591011 $900,065 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$230,837",
+          "value": 230837,
+          "signedValue": 230837,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "62600 213801 591011 $230,837 (Expenditure) Tampa Heights Riverfront CRA Fund. CRA Dept. Transfer to General Fund",
+            "Tampa Heights Riverfront CRA Fund. CRA Dept. Transfer to General Fund 62600 213801 591011 $230,837 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$114,003",
+          "value": 114003,
+          "signedValue": 114003,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "62700 213801 591011 $114,003 (Expenditure) Ybor I CRA Fund. CRA Dept. Transfer to General Fund",
+            "Ybor I CRA Fund. CRA Dept. Transfer to General Fund 62700 213801 591011 $114,003 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 4254558,
+        "decreases": 0,
+        "revenues": 1244905,
+        "other": 4254558,
+        "net": 3009653
+      }
+    },
+    {
+      "number": 7,
+      "agendaItemId": "19566",
+      "title": "File No. CRA25-19566\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Special Projects Grant Agreement by and between said Community Redevelopment Agency and Centro Asturiano De Tampa, Inc. to restore and renovate the building on property located at 1913 North Nebraska Avenue, Tampa, Florida within the boundaries of the Ybor City I Community Redevelopment Area; Authorizing execution of the Special Projects Grant Agreement by the Chair of the CRA and attestation by the CRA Secretary; Providing an effective date.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19566\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Special Projects Grant Agreement by and between said Community Redevelopment Agency and Centro Asturiano De Tampa, Inc. to restore and renovate the building on property located at 1913 North Nebraska Avenue, Tampa, Florida within the boundaries of the Ybor City I Community Redevelopment Area; Authorizing execution of the Special Projects Grant Agreement by the Chair of the CRA and attestation by the CRA Secretary; Providing an effective date.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19566",
+      "background": "Centro Asturiano De Tampa, Inc. is seeking funding to restore and renovate the building property located at 1913 North Nebraska Avenue. This building falls within the boundaries of the Ybor I Community Redevelopment Area of the Tampa CRA. CRA staff has reviewed Centro Asturiano De Tampa, Inc.'s application for funding and recommends the CRA Board approve the request for funding in the amount of fifty percent of eligible expenses not to exceed $396,995.",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=19566&publishId=161671&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19566/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "AWARD-MAKING PROCESS CHECKLIST_CRA ATTORNEY APPROVED.PDF.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AWARD-MAKING%20PROCESS%20CHECKLIST_CRA%20ATTORNEY%20APPROVED.PDF.PDF.pdf?documentType=1&meetingId=2650&itemId=19566&publishId=161672&isSection=False&isAttachment=True",
+          "originalTitle": "Download AWARD-MAKING PROCESS CHECKLIST_CRA ATTORNEY APPROVED.PDF.PDF",
+          "originalText": "AWARD-MAKING PROCESS CHECKLIST_CRA ATTORNEY APPROVED.PDF.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19566/award-making-process-checklist_cra-attorney-approved.pdf"
+        },
+        {
+          "title": "CENTRO ASTURIANO SP GRANT_PRESENTATION.PDF.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CENTRO%20ASTURIANO%20SP%20GRANT_PRESENTATION.PDF.PDF.pdf?documentType=1&meetingId=2650&itemId=19566&publishId=161673&isSection=False&isAttachment=True",
+          "originalTitle": "Download CENTRO ASTURIANO SP GRANT_PRESENTATION.PDF.PDF",
+          "originalText": "CENTRO ASTURIANO SP GRANT_PRESENTATION.PDF.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19566/centro-asturiano-sp-grant_presentation.pdf"
+        },
+        {
+          "title": "CENTRO ASTURIANO SP GRANT_RESO&AMP;AMP;AMP;AMP;AGGREEMT.PDF.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CENTRO%20ASTURIANO%20SP%20GRANT_RESO_AMP%3bAMP%3bAMP%3bAMP%3bAGGREEMT.PDF.PDF.pdf?documentType=1&meetingId=2650&itemId=19566&publishId=161674&isSection=False&isAttachment=True",
+          "originalTitle": "Download CENTRO ASTURIANO SP GRANT_RESO&AMP;AMP;AMP;AMP;AGGREEMT.PDF.PDF",
+          "originalText": "CENTRO ASTURIANO SP GRANT_RESO&AMP;AMP;AMP;AMP;AGGREEMT.PDF.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19566/centro-asturiano-sp-grant_resoampampampampaggreemt.pdf"
+        },
+        {
+          "title": "SPECIALPROJECTSGRANTMEMO(ONBASENO.19566.FILENO.CRA25-19566).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SPECIALPROJECTSGRANTMEMO(ONBASENO.19566.FILENO.CRA25-19566).PDF.pdf?documentType=1&meetingId=2650&itemId=19566&publishId=161675&isSection=False&isAttachment=True",
+          "originalTitle": "Download SPECIALPROJECTSGRANTMEMO(ONBASENO.19566.FILENO.CRA25-19566).PDF",
+          "originalText": "SPECIALPROJECTSGRANTMEMO(ONBASENO.19566.FILENO.CRA25-19566).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19566/specialprojectsgrantmemoonbaseno.19566.fileno.cra25-19566.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$396,995"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$396,995",
+          "value": 396995,
+          "signedValue": 396995,
+          "type": "expenditure",
+          "section": "fiscal_impact",
+          "contexts": [
+            "exceed $396,995. approve the request for funding in the amount of fifty percent of eligible expenses not to",
+            "Department (CRA) and Centro Asturiano De Tampa, Inc. not to exceed $396,995 for a This resolution provides for a grant between the City of Tampa, Community Redevelopment",
+            "PROJECTED COSTS: 62600 213826 531002 $396,995 (Expenditure) special project grant within the Ybor I CRA Fund.",
+            "approve the request for funding in the amount of fifty percent of eligible expenses not to exceed $396,995.",
+            "This resolution provides for a grant between the City of Tampa, Community Redevelopment Department (CRA) and Centro Asturiano De Tampa, Inc. not to exceed $396,995 for a",
+            "special project grant within the Ybor I CRA Fund. PROJECTED COSTS: 62600 213826 531002 $396,995 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 396995,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 396995
+      }
+    },
+    {
+      "number": 8,
+      "agendaItemId": "19568",
+      "title": "File No. CRA25-19568 \nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Ashley East Tampa LLC Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Ashley East Tampa, LLC. (“Grant Recipient”) to develop a portion of the property generally described as 3105 E. Columbus Drive, Tampa, Florida  (“The Ashley East Property”) as affordable housing on property located within the boundaries of the East Tampa Community Redevelopment Area; Authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; Providing an effective date.\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19568 \nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Ashley East Tampa LLC Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Ashley East Tampa, LLC. (“Grant Recipient”) to develop a portion of the property generally described as 3105 E. Columbus Drive, Tampa, Florida  (“The Ashley East Property”) as affordable housing on property located within the boundaries of the East Tampa Community Redevelopment Area; Authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; Providing an effective date.\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19568",
+      "background": "CRA Staff is seeking approval of the Resolution, Funding, and Construction Agreement between the CRA and Ashley East Tampa, LLC as the Grant Recipient to develop a portion of the property generally described as 3105 E. Columbus Drive, Tampa, Florida. This development will consist of 118 units designated as 100% affordable housing. A minimum of twenty percent of the units will serve households earning fifty percent of the AMI or below.\n\nThe remaining units will not exceed 80% of the AMI, ensuring that the entire project remains targeted towards affordable housing needs in the East Tampa area.",
+      "supportingDocuments": [
+        {
+          "title": "ASHLEYEASTRESO.AGREEMENT12.11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ASHLEYEASTRESO.AGREEMENT12.11.PDF.pdf?documentType=1&meetingId=2650&itemId=19568&publishId=161676&isSection=False&isAttachment=True",
+          "originalTitle": "Download ASHLEYEASTRESO.AGREEMENT12.11.PDF",
+          "originalText": "ASHLEYEASTRESO.AGREEMENT12.11.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19568/ashleyeastreso.agreement12.11.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=19568&publishId=161677&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19568/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "ASHLEYEASTMEMO(FILENO. CRA25-19568.ONBASENO.19568).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ASHLEYEASTMEMO(FILENO.%20CRA25-19568.ONBASENO.19568).PDF.pdf?documentType=1&meetingId=2650&itemId=19568&publishId=161678&isSection=False&isAttachment=True",
+          "originalTitle": "Download ASHLEYEASTMEMO(FILENO. CRA25-19568.ONBASENO.19568).PDF",
+          "originalText": "ASHLEYEASTMEMO(FILENO. CRA25-19568.ONBASENO.19568).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19568/ashleyeastmemofileno.-cra25-19568.onbaseno.19568.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$9,700,000",
+        "$2,125,000",
+        "$2,525,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$9,700,000",
+          "value": 9700000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": "fiscal_impact",
+          "contexts": [
+            "in the amount of $9,700,000 for the East Tampa CRA within the East Tampa CRA Fund. Agency and Ashley East Tampa LLC. to acquire and develop property for affordable housing",
+            "Agency and Ashley East Tampa LLC. to acquire and develop property for affordable housing in the amount of $9,700,000 for the East Tampa CRA within the East Tampa CRA Fund."
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$2,125,000",
+          "value": 2125000,
+          "signedValue": 2125000,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "PROJECTED COSTS: 62400 213800 561000 0000496 $2,125,000 (Expenditure) (FY2026)",
+            "in the amount of $9,700,000 for the East Tampa CRA within the East Tampa CRA Fund. PROJECTED COSTS: 62400 213800 561000 0000496 $2,125,000 (Expenditure) (FY2026)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$2,525,000",
+          "value": 2525000,
+          "signedValue": 2525000,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "62400 213829 561000 $2,525,000 (Expenditure) (FY2026 ) P-0000496, O-Economic Opportunity, E-CTPA Land, T-20, A-000166",
+            "62400 213829 561000 $2,525,000 (Expenditure) (FY2027) East Tampa CRA. CRA Department. Land Assemblage",
+            "62400 213800 561000 $2,525,000 (Expenditure) (FY2028) Subject to FY2027 Budget and Appropriation",
+            "P-0000496, O-Economic Opportunity, E-CTPA Land, T-20, A-000166 62400 213829 561000 $2,525,000 (Expenditure) (FY2026 )",
+            "East Tampa CRA. CRA Department. Land Assemblage 62400 213829 561000 $2,525,000 (Expenditure) (FY2027)",
+            "Subject to FY2027 Budget and Appropriation 62400 213800 561000 $2,525,000 (Expenditure) (FY2028)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 4650000,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 9700000,
+        "net": 4650000
+      }
+    },
+    {
+      "number": 9,
+      "agendaItemId": "18751",
+      "title": "File No. CRA25-18751\nCRA East Tampa - Community Advisory Committee (CAC) Appointments - Juawana Colbert and Janine Quarles\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18751\nCRA East Tampa - Community Advisory Committee (CAC) Appointments - Juawana Colbert and Janine Quarles\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-18751",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ET CAC APPLICATION FOR JUAWANA COLBERT.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ET%20CAC%20APPLICATION%20FOR%20JUAWANA%20COLBERT.PDF.pdf?documentType=1&meetingId=2650&itemId=18751&publishId=161679&isSection=False&isAttachment=True",
+          "originalTitle": "Download ET CAC APPLICATION FOR JUAWANA COLBERT.PDF",
+          "originalText": "ET CAC APPLICATION FOR JUAWANA COLBERT.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/18751/et-cac-application-for-juawana-colbert.pdf"
+        },
+        {
+          "title": "ET CAC APPLICATION FOR JANINE QUARLES.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ET%20CAC%20APPLICATION%20FOR%20JANINE%20QUARLES.PDF.pdf?documentType=1&meetingId=2650&itemId=18751&publishId=161680&isSection=False&isAttachment=True",
+          "originalTitle": "Download ET CAC APPLICATION FOR JANINE QUARLES.PDF",
+          "originalText": "ET CAC APPLICATION FOR JANINE QUARLES.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/18751/et-cac-application-for-janine-quarles.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=18751&publishId=161681&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/18751/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "ETCACAPPT(FILENO.CRA25-18751.ONBASENO.18751).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ETCACAPPT(FILENO.CRA25-18751.ONBASENO.18751).PDF.pdf?documentType=1&meetingId=2650&itemId=18751&publishId=161682&isSection=False&isAttachment=True",
+          "originalTitle": "Download ETCACAPPT(FILENO.CRA25-18751.ONBASENO.18751).PDF",
+          "originalText": "ETCACAPPT(FILENO.CRA25-18751.ONBASENO.18751).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/18751/etcacapptfileno.cra25-18751.onbaseno.18751.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 10,
+      "agendaItemId": "19439",
+      "title": "File No. CRA25-19439\nDrew Park Community Advisory Committee Appointment for Christopher Paynter\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19439\nDrew Park Community Advisory Committee Appointment for Christopher Paynter\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19439",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DP CAC  APPLICATION FOR CHRISTOPHER PAYNTER.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DP%20CAC%20%20APPLICATION%20FOR%20CHRISTOPHER%20PAYNTER.PDF.pdf?documentType=1&meetingId=2650&itemId=19439&publishId=161683&isSection=False&isAttachment=True",
+          "originalTitle": "Download DP CAC  APPLICATION FOR CHRISTOPHER PAYNTER.PDF",
+          "originalText": "DP CAC  APPLICATION FOR CHRISTOPHER PAYNTER.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19439/dp-cac-application-for-christopher-paynter.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=19439&publishId=161684&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19439/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "DREWPARKCAC(FILENO.CRA25-19439.ONBASENO.19439).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DREWPARKCAC(FILENO.CRA25-19439.ONBASENO.19439).PDF.pdf?documentType=1&meetingId=2650&itemId=19439&publishId=161685&isSection=False&isAttachment=True",
+          "originalTitle": "Download DREWPARKCAC(FILENO.CRA25-19439.ONBASENO.19439).PDF",
+          "originalText": "DREWPARKCAC(FILENO.CRA25-19439.ONBASENO.19439).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19439/drewparkcacfileno.cra25-19439.onbaseno.19439.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 11,
+      "agendaItemId": "19440",
+      "title": "File No. CRA25-19440 \nYbor City Community Advisory Committee Appointment for Carisa Erion\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19440 \nYbor City Community Advisory Committee Appointment for Carisa Erion\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19440",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=19440&publishId=161686&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19440/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "YC CAC APPLICATION - CARISA ERION 10.10.25.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/YC%20CAC%20APPLICATION%20-%20CARISA%20ERION%2010.10.25.PDF.pdf?documentType=1&meetingId=2650&itemId=19440&publishId=161687&isSection=False&isAttachment=True",
+          "originalTitle": "Download YC CAC APPLICATION - CARISA ERION 10.10.25.PDF",
+          "originalText": "YC CAC APPLICATION - CARISA ERION 10.10.25.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19440/yc-cac-application-carisa-erion-10.10.25.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 12,
+      "agendaItemId": "19441",
+      "title": "File No. CRA25-19441\nChannel District Community Advisory Committee Appointment for Christopher Lancaster\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19441\nChannel District Community Advisory Committee Appointment for Christopher Lancaster\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19441",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "CD CAC CHRISTOPHER LANCASTER_10112025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CD%20CAC%20CHRISTOPHER%20LANCASTER_10112025.PDF.pdf?documentType=1&meetingId=2650&itemId=19441&publishId=161688&isSection=False&isAttachment=True",
+          "originalTitle": "Download CD CAC CHRISTOPHER LANCASTER_10112025.PDF",
+          "originalText": "CD CAC CHRISTOPHER LANCASTER_10112025.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19441/cd-cac-christopher-lancaster_10112025.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=19441&publishId=161689&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19441/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "CHANNELDISTRICTCAC(ONBASENO.19441.FILENO.CRA25-19441).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CHANNELDISTRICTCAC(ONBASENO.19441.FILENO.CRA25-19441).PDF.pdf?documentType=1&meetingId=2650&itemId=19441&publishId=161690&isSection=False&isAttachment=True",
+          "originalTitle": "Download CHANNELDISTRICTCAC(ONBASENO.19441.FILENO.CRA25-19441).PDF",
+          "originalText": "CHANNELDISTRICTCAC(ONBASENO.19441.FILENO.CRA25-19441).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19441/channeldistrictcaconbaseno.19441.fileno.cra25-19441.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 13,
+      "agendaItemId": "19452",
+      "title": "File No. CRA25-19452\nEast Tampa Wayfinding Signage Project - The objective of this project is to develop a comprehensive wayfinding and gateway signage study that identifies visitor destinations and improves pedestrian, multi-modal, and vehicular wayfinding. Additionally, the goal of the project is to provide the Tampa CRA and City of Tampa with designs for gateway signage, new wayfinding signage, and other directional elements.\n\nMemorandum from Bryce Fehringer, Urban Planner II, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19452\nEast Tampa Wayfinding Signage Project - The objective of this project is to develop a comprehensive wayfinding and gateway signage study that identifies visitor destinations and improves pedestrian, multi-modal, and vehicular wayfinding. Additionally, the goal of the project is to provide the Tampa CRA and City of Tampa with designs for gateway signage, new wayfinding signage, and other directional elements.\n\nMemorandum from Bryce Fehringer, Urban Planner II, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19452",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "EAST TAMPA_CONCEPT EXPLORATION_CRA BOARD MEETING 12 11 25.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/EAST%20TAMPA_CONCEPT%20EXPLORATION_CRA%20BOARD%20MEETING%2012%2011%2025.PDF.pdf?documentType=1&meetingId=2650&itemId=19452&publishId=161691&isSection=False&isAttachment=True",
+          "originalTitle": "Download EAST TAMPA_CONCEPT EXPLORATION_CRA BOARD MEETING 12 11 25.PDF",
+          "originalText": "EAST TAMPA_CONCEPT EXPLORATION_CRA BOARD MEETING 12 11 25.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19452/east-tampa_concept-exploration_cra-board-meeting-12-11-25.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2650&itemId=19452&publishId=161692&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19452/summary-sheet-cover-sheet"
+        },
+        {
+          "title": "ETWAYFINDINGSIGNAGE(FILENO.CRA25-19452.ONBASENO.19452).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ETWAYFINDINGSIGNAGE(FILENO.CRA25-19452.ONBASENO.19452).PDF.pdf?documentType=1&meetingId=2650&itemId=19452&publishId=161693&isSection=False&isAttachment=True",
+          "originalTitle": "Download ETWAYFINDINGSIGNAGE(FILENO.CRA25-19452.ONBASENO.19452).PDF",
+          "originalText": "ETWAYFINDINGSIGNAGE(FILENO.CRA25-19452.ONBASENO.19452).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/agenda-documents/2025-12-11/meeting-2650/19452/etwayfindingsignagefileno.cra25-19452.onbaseno.19452.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "financialSummary": {
+    "expenditures": 9301553,
+    "decreases": 0,
+    "revenues": 1244905,
+    "other": 13954558,
+    "net": 8056648,
+    "formatted": {
+      "expenditures": "$9,301,553.00",
+      "decreases": "$0.00",
+      "revenues": "-$1,244,905.00",
+      "other": "$13,954,558.00",
+      "net": "$8,056,648.00"
+    },
+    "expenditureRange": {
+      "smallest": {
+        "number": 7,
+        "agendaItemId": "19566",
+        "fileNumber": "CRA25-19566",
+        "title": "File No. CRA25-19566\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Special Projects Grant Agreement by and between said Community Redevelopment Agency and Centro Asturiano De Tampa, Inc. to restore and renovate the building on property located at 1913 North Nebraska Avenue, Tampa, Florida within the boundaries of the Ybor City I Community Redevelopment Area; Authorizing execution of the Special Projects Grant Agreement by the Chair of the CRA and attestation by the CRA Secretary; Providing an effective date.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+        "amount": 396995,
+        "formatted": "$396,995.00"
+      },
+      "largest": {
+        "number": 8,
+        "agendaItemId": "19568",
+        "fileNumber": "CRA25-19568",
+        "title": "File No. CRA25-19568 \nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Ashley East Tampa LLC Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Ashley East Tampa, LLC. (“Grant Recipient”) to develop a portion of the property generally described as 3105 E. Columbus Drive, Tampa, Florida  (“The Ashley East Property”) as affordable housing on property located within the boundaries of the East Tampa Community Redevelopment Area; Authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; Providing an effective date.\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+        "amount": 4650000,
+        "formatted": "$4,650,000.00"
+      },
+      "count": 3
+    }
+  },
+  "formattedDate": "2025-12-11"
+}

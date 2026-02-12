@@ -1,0 +1,90 @@
+{
+  "2022-11-01": [
+    {
+      "meetingID": "2435",
+      "videoId": "_hKmtK1vCBo",
+      "title": "TCC CHARTER WORKSHOP 11/1/22 PT. 2",
+      "publishedAt": "2022-11-02T08:59:53Z"
+    },
+    {
+      "meetingID": "2435",
+      "videoId": "JhLSLEN6AUc",
+      "title": "TCC CHARTER WORKSHOP 11/1/22",
+      "publishedAt": "2022-11-02T04:20:21Z"
+    }
+  ],
+  "2022-11-03": [
+    {
+      "meetingID": "2436",
+      "videoId": "-Bf4zSEtjgA",
+      "title": "TCC 11/3/22 Pt.3",
+      "publishedAt": "2022-11-04T09:57:37Z"
+    },
+    {
+      "meetingID": "2436",
+      "videoId": "CJWUphmVWbk",
+      "title": "TCC 11/3/22 Pt.2",
+      "publishedAt": "2022-11-04T06:58:45Z"
+    },
+    {
+      "meetingID": "2436",
+      "videoId": "IYMsYZFCo8A",
+      "title": "TCC 11/3/22",
+      "publishedAt": "2022-11-04T04:12:26Z"
+    }
+  ],
+  "2022-12-01": [
+    {
+      "meetingID": "2440",
+      "videoId": "EgGgLDJUnoM",
+      "title": "TCC 12/1/22 PM",
+      "publishedAt": "2022-12-02T12:49:37Z"
+    },
+    {
+      "meetingID": "2439",
+      "videoId": "D1Ze4_ne-As",
+      "title": "TCC 12/1/22 Pt.2",
+      "publishedAt": "2022-12-02T10:46:01Z"
+    },
+    {
+      "meetingID": "2439",
+      "videoId": "8g_akPmFLYo",
+      "title": "TCC 12/1/22 part 1b",
+      "publishedAt": "2022-12-02T05:29:13Z"
+    },
+    {
+      "meetingID": "2439",
+      "videoId": "QhgkvfbrJ6Q",
+      "title": "TCC 12/1/22 part 1a",
+      "publishedAt": "2022-12-01T19:16:18Z"
+    }
+  ],
+  "2023-01-05": [
+    {
+      "meetingID": "2445",
+      "videoId": "qsrhcMDkzcY",
+      "title": "TCC 1/5/23 Pt.2",
+      "publishedAt": "2023-01-06T08:08:09Z"
+    },
+    {
+      "meetingID": "2445",
+      "videoId": "b9151AjHj2M",
+      "title": "TCC 1/5/23",
+      "publishedAt": "2023-01-06T05:53:47Z"
+    }
+  ],
+  "2023-01-19": [
+    {
+      "meetingID": "2450",
+      "videoId": "91B0s36873Q",
+      "title": "TCC AM 1/19/23 part 2 (Uploaded version)",
+      "publishedAt": "2023-01-20T16:52:11Z"
+    },
+    {
+      "meetingID": "2450",
+      "videoId": "Q_m2dw8iHUs",
+      "title": "TCC 1/19/23",
+      "publishedAt": "2023-01-19T18:50:28Z"
+    }
+  ]
+}

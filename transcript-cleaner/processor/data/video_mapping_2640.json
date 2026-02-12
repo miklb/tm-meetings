@@ -1,0 +1,48 @@
+{
+  "meeting_id": 2640,
+  "meeting_date": "2025-10-30",
+  "videos": [
+    {
+      "video_id": "z40gz2O-FHw",
+      "title": "Tampa City Council Workshop - 10/30/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-10-31T05:00:35Z",
+      "duration": "PT3H37M45S",
+      "offset_seconds": 30,
+      "transcript_start_time": "9:01:40AM",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "File No. CM25-15691 Veteran's Day Presentation",
+          "timestamp": "00:05:52",
+          "seconds": 352
+        },
+        {
+          "title": "File No. CM25-17656 Multi-Modal Transportation Impact fee",
+          "timestamp": "00:22:20",
+          "seconds": 1340
+        },
+        {
+          "title": "File No. CM24-4657 Sulphur Springs' Neighborhood Action Plan",
+          "timestamp": "01:43:17",
+          "seconds": 6197
+        },
+        {
+          "title": "File No. CM25-13045 Large Format Digital Media Signs",
+          "timestamp": "02:41:13",
+          "seconds": 9673
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:18:04",
+          "seconds": 11884
+        }
+      ]
+    }
+  ]
+}

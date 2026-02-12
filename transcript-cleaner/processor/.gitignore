@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+*.egg-info/
+.mypy_cache/
+
+# Environment
+.env
+
+# Data files (large, generated)
+data/models/
+data/whisper_cache/
+test_audio_samples/
+temp_audio/
+*.mp3
+*.wav
+*.srt
+
+# Test artifacts
+data/test_*.json
+data/*_NEW_*.json
+data/*_ALL_CAPS.json
+*_report.txt
+*_summary.txt
+whisper_*.json
+
+# Archived work (kept locally, not tracked)
+archived/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Docker (no longer used)
+container.log
+
+# Temporary files
+tmp/
+temp/

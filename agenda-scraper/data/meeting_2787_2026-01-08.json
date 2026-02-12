@@ -1,0 +1,181 @@
+{
+  "meetingId": "2787",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "meetingDate": "January 8, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2787&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 47,
+      "agendaItemId": "20306",
+      "title": "File No. DEO25-19569 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution approving the execution by the Mayor and attestation by the City Clerk of a First Amendment to Commercial Lease Agreement between City of Tampa and Hillsborough County allowing the continued use of City-owned property located at 102 E. 7th Avenue and 1717 Tampa Street as office space for library operations and parking; providing an effective date. (Continued from December 18, 2025) Memorandum from Geri Lopez, Deputy Administrator, Development and Economic Opportunity, requesting a continuance of said item to February 5, 2026. (To be R/F).",
+      "rawTitle": "File No. DEO25-19569 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution approving the execution by the Mayor and attestation by the City Clerk of a First Amendment to Commercial Lease Agreement between City of Tampa and Hillsborough County allowing the continued use of City-owned property located at 102 E. 7th Avenue and 1717 Tampa Street as office space for library operations and parking; providing an effective date. (Continued from December 18, 2025) Memorandum from Geri Lopez, Deputy Administrator, Development and Economic Opportunity, requesting a continuance of said item to February 5, 2026. (To be R/F).",
+      "fileNumber": "DEO25-19569",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 45,
+      "agendaItemId": "19456",
+      "title": "File No. NCA25-18998 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $1,100,000 from the Small Neighborhood Parks project within the Utilities Services Tax Capital Project Fund to the JBL Attenuator Dock Repairs project and the Gadsen Park Improvement projects; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+      "rawTitle": "File No. NCA25-18998 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $1,100,000 from the Small Neighborhood Parks project within the Utilities Services Tax Capital Project Fund to the JBL Attenuator Dock Repairs project and the Gadsen Park Improvement projects; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+      "fileNumber": "NCA25-18998",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$1,100,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$1,100,000",
+          "value": 1100000,
+          "signedValue": 1100000,
+          "type": "expenditure",
+          "section": null,
+          "contexts": [
+            "File No. NCA25-18998 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $1,100,000 from the Small Neighborhood Parks project within the Utilities Services Tax Capital Project Fund to the JBL Attenuator Dock Repairs project and the Gadsen Park Improvement projects; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+            "File No. NCA25-18998 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $1,100,000 from the Small Neighborhood Parks project within the Utilities Services Tax Capital Project Fund to the JBL Attenuator Dock Repairs project and the Gadsen Park Improvement projects; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F)."
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 1100000,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 1100000
+      }
+    },
+    {
+      "number": 46,
+      "agendaItemId": "19457",
+      "title": "File No. NCA25-19007Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $320,000 from the P & R Citywide Maintenance and Repair project to the Lowry Park Shoreline Improvements project within the CIT Program 6 FY22-FY26 Capital Projects Fund; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+      "rawTitle": "File No. NCA25-19007Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $320,000 from the P & R Citywide Maintenance and Repair project to the Lowry Park Shoreline Improvements project within the CIT Program 6 FY22-FY26 Capital Projects Fund; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+      "fileNumber": "NCA25-19007Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$320,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$320,000",
+          "value": 320000,
+          "signedValue": 320000,
+          "type": "expenditure",
+          "section": null,
+          "contexts": [
+            "File No. NCA25-19007Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $320,000 from the P & R Citywide Maintenance and Repair project to the Lowry Park Shoreline Improvements project within the CIT Program 6 FY22-FY26 Capital Projects Fund; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+            "File No. NCA25-19007Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $320,000 from the P & R Citywide Maintenance and Repair project to the Lowry Park Shoreline Improvements project within the CIT Program 6 FY22-FY26 Capital Projects Fund; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F)."
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 320000,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 320000
+      }
+    },
+    {
+      "number": 48,
+      "agendaItemId": "20309",
+      "title": "File No. F25-18616 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $334,748.48 for the Comprehensive Infrastructure for Tampa’s Neighborhoods Project for use by Infrastructure and Mobility Administration Department within the Central Tampa Tree Trust Fund, South Tampa Tree Trust Fund, and Citywide Capital Project Improvements Fund; providing an effective date. (Continued from November 6, 2025 and December 18, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+      "rawTitle": "File No. F25-18616 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $334,748.48 for the Comprehensive Infrastructure for Tampa’s Neighborhoods Project for use by Infrastructure and Mobility Administration Department within the Central Tampa Tree Trust Fund, South Tampa Tree Trust Fund, and Citywide Capital Project Improvements Fund; providing an effective date. (Continued from November 6, 2025 and December 18, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+      "fileNumber": "F25-18616",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$334,748.48"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$334,748.48",
+          "value": 334748.48,
+          "signedValue": 334748.48,
+          "type": "expenditure",
+          "section": null,
+          "contexts": [
+            "File No. F25-18616 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $334,748.48 for the Comprehensive Infrastructure for Tampa’s Neighborhoods Project for use by Infrastructure and Mobility Administration Department within the Central Tampa Tree Trust Fund, South Tampa Tree Trust Fund, and Citywide Capital Project Improvements Fund; providing an effective date. (Continued from November 6, 2025 and December 18, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+            "File No. F25-18616 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $334,748.48 for the Comprehensive Infrastructure for Tampa’s Neighborhoods Project for use by Infrastructure and Mobility Administration Department within the Central Tampa Tree Trust Fund, South Tampa Tree Trust Fund, and Citywide Capital Project Improvements Fund; providing an effective date. (Continued from November 6, 2025 and December 18, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F)."
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 334748.48,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 334748.48
+      }
+    }
+  ],
+  "financialSummary": {
+    "expenditures": 1754748.48,
+    "decreases": 0,
+    "revenues": 0,
+    "other": 0,
+    "net": 1754748.48,
+    "formatted": {
+      "expenditures": "$1,754,748.48",
+      "decreases": "$0.00",
+      "revenues": "$0.00",
+      "other": "$0.00",
+      "net": "$1,754,748.48"
+    },
+    "expenditureRange": {
+      "smallest": {
+        "number": 46,
+        "agendaItemId": "19457",
+        "fileNumber": "NCA25-19007Res",
+        "title": "File No. NCA25-19007Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $320,000 from the P & R Citywide Maintenance and Repair project to the Lowry Park Shoreline Improvements project within the CIT Program 6 FY22-FY26 Capital Projects Fund; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+        "amount": 320000,
+        "formatted": "$320,000.00"
+      },
+      "largest": {
+        "number": 45,
+        "agendaItemId": "19456",
+        "fileNumber": "NCA25-18998",
+        "title": "File No. NCA25-18998 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $1,100,000 from the Small Neighborhood Parks project within the Utilities Services Tax Capital Project Fund to the JBL Attenuator Dock Repairs project and the Gadsen Park Improvement projects; providing an effective date. (Continued from November 20, 2025) Memorandum from Councilmember Hurtak, requesting to hear said item after item 59. (To be R/F).",
+        "amount": 1100000,
+        "formatted": "$1,100,000.00"
+      },
+      "count": 3
+    }
+  },
+  "formattedDate": "2026-01-08"
+}

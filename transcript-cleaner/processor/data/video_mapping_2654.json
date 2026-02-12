@@ -1,0 +1,38 @@
+{
+  "meeting_id": 2654,
+  "meeting_date": "2026-01-29",
+  "meeting_type": "Workshop",
+  "videos": [
+    {
+      "video_id": "SZft5jY2gF4",
+      "title": "Tampa City Council 01/29/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-01-29T19:26:39Z",
+      "duration": "PT5H15M10S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM24-10252 - South Howard Flood Relief Update",
+          "timestamp": "00:18:24",
+          "seconds": 1104
+        },
+        {
+          "title": "Item 3: CM25-19742 - Code Violations Pause Discussion",
+          "timestamp": "04:09:37",
+          "seconds": 14977
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "04:36:46",
+          "seconds": 16606
+        }
+      ],
+      "offset_seconds": 246
+    }
+  ]
+}

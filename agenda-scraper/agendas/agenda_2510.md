@@ -1,0 +1,12 @@
+1. **File No. REZ-24-45** Public Hearing on application of Global Engineering request to rezone property generally located at 3807 & 3811 West Swann Avenue from PD to PD (Residential Single Family Attached).
+2. **File No. REZ-24-70** Public Hearing on application of ESI Properties LLC request to rezone property generally located at 3602 West Azeele Street from PD to PD (Business Professional & Medical Office).
+3. **File No. REZ-24-101** Public Hearing on application of Mark Bentley request to rezone property generally located at 8813 Brooks Street, 8901 N. 13th Street and 8814 N. 14th Street from IG and RS-50 to IG.
+4. **File No. REZ-24-102** Public Hearing on application of Robert G Ii And Procisa Lawry request to rezone property generally located at 3604 Temple Street from RM-16 to RM-18.
+5. **File No. REZ-24-104** Public Hearing on application of Stephen Michelini request to rezone property generally located at 402 S. Oregon Avenue from RM-12 to PD (Residential Single Family Detached).
+6. **File No. REZ-24-108** Public Hearing on application of Brahms Development LLC request to rezone property generally located at 2902 Melburne Blvd. from RM-16 and CI to CG.
+7. **File No. REZ-24-110** Public Hearing on application of Global Engineering request to rezone property generally located at 622 and 642 West Dr. Martin Luther King Jr. Blvd., 3912, 3915 and 3917 N. Boulevard from PD to CG and RS-50.
+8. **File No. REZ-25-13** Public Hearing on application of Alex Rios request to rezone property generally located at 4601 and 4611 West North A Street from RO-1 and PD to PD (Residential Single Family Attached).
+9. **File No. REZ-25-19** Public Hearing on application of Dolinsky Capital LLC request to rezone property generally located at 3502 North Lincoln Avenue from RS-50 to PD (Residential Single Family Detached).
+10. **File No. REZ-25-14** (Will not be heard; Mis-noticed) Public Hearing on application of Ali Mansour request to rezone property generally located at 8414 North 18th Street from RS-50 to PD (Residential Single Family Detached).
+
+REZ-24-0000045:1, REZ-24-0000070:2, REZ-24-0000101:3, REZ-24-0000102:4, REZ-24-0000104:5, REZ-24-0000108:6, REZ-24-0000110:7, REZ-25-0000013:8, REZ-25-0000019:9, REZ-25-0000014:10

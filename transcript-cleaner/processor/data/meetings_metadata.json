@@ -1,0 +1,260 @@
+{
+  "generated": "2025-11-01T17:46:46.685189",
+  "coverage": {
+    "totalMeetings": 23,
+    "dateRange": {
+      "start": "2025-07-31",
+      "end": "2025-11-06",
+      "totalDays": 98
+    },
+    "byMonth": {
+      "2025-07": 2,
+      "2025-08": 6,
+      "2025-09": 8,
+      "2025-10": 6,
+      "2025-11": 1
+    },
+    "meetingTypes": {
+      "evening": 2,
+      "Council Regular": 3,
+      "Council Special": 1,
+      "CRA Regular": 2,
+      "workshop": 1,
+      "Council Evening": 7,
+      "regular": 6,
+      "Council Workshop": 1
+    }
+  },
+  "meetings": [
+    {
+      "filename": "meeting_2516_2025-08-28.json",
+      "meetingId": "2516",
+      "date": "2025-08-28",
+      "meetingType": "Council Regular",
+      "meetingDateFull": "August 28, 2025",
+      "agendaItemCount": 83,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2516&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2516_2025-08-28.json"
+    },
+    {
+      "filename": "meeting_2589_2025-07-31.json",
+      "meetingId": "2589",
+      "date": "2025-07-31",
+      "meetingType": "regular",
+      "meetingDateFull": "July 31, 2025",
+      "agendaItemCount": 81,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2589&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2589_2025-07-31.json"
+    },
+    {
+      "filename": "meeting_2591_2025-09-25.json",
+      "meetingId": "2591",
+      "date": "2025-09-25",
+      "meetingType": "Council Workshop",
+      "meetingDateFull": "September 25, 2025",
+      "agendaItemCount": 9,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2591&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2591_2025-09-25.json"
+    },
+    {
+      "filename": "meeting_2608_2025-10-09.json",
+      "meetingId": "2608",
+      "date": "2025-10-09",
+      "meetingType": "regular",
+      "meetingDateFull": "October 9, 2025",
+      "agendaItemCount": 76,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2608&type=agenda&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2608_2025-10-09.json"
+    },
+    {
+      "filename": "meeting_2610_2025-08-07.json",
+      "meetingId": "2610",
+      "date": "2025-08-07",
+      "meetingType": "Council Regular",
+      "meetingDateFull": "August 7, 2025",
+      "agendaItemCount": 64,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2610&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2610_2025-08-07.json"
+    },
+    {
+      "filename": "meeting_2611_2025-09-04.json",
+      "meetingId": "2611",
+      "date": "2025-09-04",
+      "meetingType": "Council Regular",
+      "meetingDateFull": "September 4, 2025",
+      "agendaItemCount": 42,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2611&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2611_2025-09-04.json"
+    },
+    {
+      "filename": "meeting_2616_2025-08-21.json",
+      "meetingId": "2616",
+      "date": "2025-08-21",
+      "meetingType": "Council Evening",
+      "meetingDateFull": "August 21, 2025",
+      "agendaItemCount": 12,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2616&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2616_2025-08-21.json"
+    },
+    {
+      "filename": "meeting_2618_2025-10-30.json",
+      "meetingId": "2618",
+      "date": "2025-10-30",
+      "meetingType": "workshop",
+      "meetingDateFull": "October 30, 2025",
+      "agendaItemCount": 5,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2618&type=agenda&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2618_2025-10-30.json"
+    },
+    {
+      "filename": "meeting_2619_2025-08-04.json",
+      "meetingId": "2619",
+      "date": "2025-08-04",
+      "meetingType": "Council Special",
+      "meetingDateFull": "August 4, 2025",
+      "agendaItemCount": 3,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2619&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2619_2025-08-04.json"
+    },
+    {
+      "filename": "meeting_2630_2025-09-03.json",
+      "meetingId": "2630",
+      "date": "2025-09-03",
+      "meetingType": "Council Evening",
+      "meetingDateFull": "September 3, 2025",
+      "agendaItemCount": 2,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2630&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2630_2025-09-03.json"
+    },
+    {
+      "filename": "meeting_2631_2025-09-16.json",
+      "meetingId": "2631",
+      "date": "2025-09-16",
+      "meetingType": "Council Evening",
+      "meetingDateFull": "September 16, 2025",
+      "agendaItemCount": 10,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2631&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2631_2025-09-16.json"
+    },
+    {
+      "filename": "meeting_2634_2025-07-31.json",
+      "meetingId": "2634",
+      "date": "2025-07-31",
+      "meetingType": "Council Evening",
+      "meetingDateFull": "July 31, 2025",
+      "agendaItemCount": 5,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2634&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2634_2025-07-31.json"
+    },
+    {
+      "filename": "meeting_2637_2025-09-11.json",
+      "meetingId": "2637",
+      "date": "2025-09-11",
+      "meetingType": "CRA Regular",
+      "meetingDateFull": "September 11, 2025",
+      "agendaItemCount": 13,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2637&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2637_2025-09-11.json"
+    },
+    {
+      "filename": "meeting_2642_2025-08-28.json",
+      "meetingId": "2642",
+      "date": "2025-08-28",
+      "meetingType": "Council Evening",
+      "meetingDateFull": "August 28, 2025",
+      "agendaItemCount": 4,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2642&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2642_2025-08-28.json"
+    },
+    {
+      "filename": "meeting_2647_2025-08-21.json",
+      "meetingId": "2647",
+      "date": "2025-08-21",
+      "meetingType": "CRA Regular",
+      "meetingDateFull": "August 21, 2025",
+      "agendaItemCount": 11,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2647&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2647_2025-08-21.json"
+    },
+    {
+      "filename": "meeting_2653_2025-11-06.json",
+      "meetingId": "2653",
+      "date": "2025-11-06",
+      "meetingType": "regular",
+      "meetingDateFull": "November 6, 2025",
+      "agendaItemCount": 67,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2653&type=agenda&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2653_2025-11-06.json"
+    },
+    {
+      "filename": "meeting_2665_2025-10-23.json",
+      "meetingId": "2665",
+      "date": "2025-10-23",
+      "meetingType": "regular",
+      "meetingDateFull": "October 23, 2025",
+      "agendaItemCount": 79,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2665&type=agenda&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2665_2025-10-23.json"
+    },
+    {
+      "filename": "meeting_2666_2025-09-18.json",
+      "meetingId": "2666",
+      "date": "2025-09-18",
+      "meetingType": "regular",
+      "meetingDateFull": "September 18, 2025",
+      "agendaItemCount": 78,
+      "sourceUrl": null,
+      "filepath": "processor/data/agendas/meeting_2666_2025-09-18.json"
+    },
+    {
+      "filename": "meeting_2669_2025-09-11.json",
+      "meetingId": "2669",
+      "date": "2025-09-11",
+      "meetingType": "Council Evening",
+      "meetingDateFull": "September 11, 2025",
+      "agendaItemCount": 9,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2669&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2669_2025-09-11.json"
+    },
+    {
+      "filename": "meeting_2682_2025-09-25.json",
+      "meetingId": "2682",
+      "date": "2025-09-25",
+      "meetingType": "Council Evening",
+      "meetingDateFull": "September 25, 2025",
+      "agendaItemCount": 9,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2682&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2682_2025-09-25.json"
+    },
+    {
+      "filename": "meeting_2703_2025-10-30.json",
+      "meetingId": "2703",
+      "date": "2025-10-30",
+      "meetingType": "evening",
+      "meetingDateFull": "October 30, 2025",
+      "agendaItemCount": 8,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2703&type=agenda&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2703_2025-10-30.json"
+    },
+    {
+      "filename": "meeting_2704_2025-10-16.json",
+      "meetingId": "2704",
+      "date": "2025-10-16",
+      "meetingType": "evening",
+      "meetingDateFull": "October 16, 2025",
+      "agendaItemCount": 11,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2704&type=agenda&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2704_2025-10-16.json"
+    },
+    {
+      "filename": "meeting_2719_2025-10-09.json",
+      "meetingId": "2719",
+      "date": "2025-10-09",
+      "meetingType": "regular",
+      "meetingDateFull": "October 9, 2025",
+      "agendaItemCount": 1,
+      "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2719&type=agenda&doctype=1",
+      "filepath": "processor/data/agendas/meeting_2719_2025-10-09.json"
+    }
+  ]
+}

@@ -1,0 +1,150 @@
+{
+  "meeting_id": 2637,
+  "meeting_date": "2025-10-09",
+  "videos": [
+    {
+      "video_id": "6_IXF0u2RQY",
+      "title": "Tampa City Council - 10/09/25",
+      "part": 1,
+      "duration": "PT3H48M31S",
+      "offset_seconds": 614,
+      "transcript_start_time": "9:06:53AM",
+      "session": null,
+      "published_at": "2025-10-10T05:02:16Z",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2025-15 - Commendation For Police Officer of the month",
+          "timestamp": "00:18:19",
+          "seconds": 1099
+        },
+        {
+          "title": "Item 2: E2025-15 - Commendation For ATU Employee of the month",
+          "timestamp": "00:32:05",
+          "seconds": 1925
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:46:35",
+          "seconds": 2795
+        },
+        {
+          "title": "Item 3: BA25-17438 - Reappoint Valerie Chuchman To Board",
+          "timestamp": "02:09:31",
+          "seconds": 7771
+        },
+        {
+          "title": "Item 4: BA25-17439 - Reappoint Jamie Jenkins To Board",
+          "timestamp": "02:10:31",
+          "seconds": 7831
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:11:01",
+          "seconds": 7861
+        },
+        {
+          "title": "Item 50: VAC-25-18 - Alleyway near Twiggs/Jefferson/Nebraska",
+          "timestamp": "02:16:40",
+          "seconds": 8200
+        },
+        {
+          "title": "Item 51: HS25-17257 - Intersection of Himes Ave & Ohio Ave",
+          "timestamp": "02:20:30",
+          "seconds": 8430
+        },
+        {
+          "title": "Item 52: REZ-25-10 - 4202 North Seminole Avenue",
+          "timestamp": "02:23:02",
+          "seconds": 8582
+        },
+        {
+          "title": "Item 53: REZ-25-57 - 5101 N 34th St & 3404 E Wilder Ave",
+          "timestamp": "02:24:44",
+          "seconds": 8684
+        },
+        {
+          "title": "Item 54: REZ-25-59 - Sterling Ave & Himes Ave (multiple addresses)",
+          "timestamp": "02:26:04",
+          "seconds": 8764
+        },
+        {
+          "title": "Item 55: REZ-25-70 - 703 East Floribraska Avenue",
+          "timestamp": "02:29:44",
+          "seconds": 8984
+        },
+        {
+          "title": "Item 56: REZ-25-74 - 1318 West Arch Street",
+          "timestamp": "02:31:04",
+          "seconds": 9064
+        },
+        {
+          "title": "Item 57: REZ-25-78 - 801 East 26th Avenue",
+          "timestamp": "02:32:51",
+          "seconds": 9171
+        },
+        {
+          "title": "Item 65: CM25-17841 - Future Land Use Timeline Update",
+          "timestamp": "02:35:02",
+          "seconds": 9302
+        },
+        {
+          "title": "Item 58: DA25-18100 - 701 Channelside Drive",
+          "timestamp": "02:47:00",
+          "seconds": 10020
+        }
+      ]
+    },
+    {
+      "video_id": "JDkKcc-aFWY",
+      "title": "Tampa City Council Part 2  - 10/9/25",
+      "part": 2,
+      "duration": "PT1H23M15S",
+      "offset_seconds": 476,
+      "transcript_start_time": "01:49:58PM",
+      "session": null,
+      "published_at": "2025-10-10T07:12:21Z",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 66: CM25-16989 - Gabe Hassan Bench Plaque",
+          "timestamp": "00:08:26",
+          "seconds": 506
+        },
+        {
+          "title": "Item 62: INF25-17954 - Approve Bid For Tile Work",
+          "timestamp": "00:15:56",
+          "seconds": 956
+        },
+        {
+          "title": "Item 67: CM23-2097 - Provide Update On Pipes",
+          "timestamp": "00:21:08",
+          "seconds": 1268
+        },
+        {
+          "title": "Item 69: CM25-16441 - Pickleball Court Regulations Report",
+          "timestamp": "00:43:41",
+          "seconds": 2621
+        },
+        {
+          "title": "Item 70: CM24-4303 - Land Development Reform Update",
+          "timestamp": "01:02:29",
+          "seconds": 3749
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:10:22",
+          "seconds": 4222
+        }
+      ]
+    }
+  ]
+}

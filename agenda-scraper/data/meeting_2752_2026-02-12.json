@@ -1,0 +1,875 @@
+{
+  "meetingId": "2752",
+  "meetingType": "evening",
+  "agendaType": "FINAL",
+  "isAddendum": false,
+  "meetingDate": "February 12, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2752&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "19280",
+      "title": "File No. TA/CPA 24-11\nContinued public hearing from November 13, 2025, August 21, 2025, June 12, 2025, and January 30, 2025 for property located at 611 and 613 South Magnolia Avenue, 601 West Swann Avenue and 612 West Bay Street, from Residential-3 (R-35) to Community Mixed Use-35 (CMU-35).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 611 and 613 South Magnolia Avenue, 601 and 611 West Swann Avenue and 612 and 614 West Bay Street, from Residential-35 (R-35) to Community Mixed Use-35 (CMU-35); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA 24-11\nContinued public hearing from November 13, 2025, August 21, 2025, June 12, 2025, and January 30, 2025 for property located at 611 and 613 South Magnolia Avenue, 601 West Swann Avenue and 612 West Bay Street, from Residential-3 (R-35) to Community Mixed Use-35 (CMU-35).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 611 and 613 South Magnolia Avenue, 601 and 611 West Swann Avenue and 612 and 614 West Bay Street, from Residential-35 (R-35) to Community Mixed Use-35 (CMU-35); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "fileNumber": "TA/CPA",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TCC TRANSMITTAL_01302025 (009).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_01302025%20(009).PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175558&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_01302025 (009).PDF",
+          "originalText": "TCC TRANSMITTAL_01302025 (009).PDF"
+        },
+        {
+          "title": "TA CPA 24-11 LEGAL.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-11%20LEGAL.DOCX.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175559&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 24-11 LEGAL.DOCX",
+          "originalText": "TA CPA 24-11 LEGAL.DOCX"
+        },
+        {
+          "title": "TA CPA 24-11 TCC STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-11%20TCC%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175560&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 24-11 TCC STAFF REPORT.PDF",
+          "originalText": "TA CPA 24-11 TCC STAFF REPORT.PDF"
+        },
+        {
+          "title": "[EXTERNAL] TA_CPA 24-11 - CONTINUANCE REQUEST.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/%5BEXTERNAL%5D%20TA_CPA%2024-11%20-%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175561&isSection=False&isAttachment=True",
+          "originalTitle": "Download [EXTERNAL] TA_CPA 24-11 - CONTINUANCE REQUEST.PDF",
+          "originalText": "[EXTERNAL] TA_CPA 24-11 - CONTINUANCE REQUEST.PDF"
+        },
+        {
+          "title": "TACPA 24-11 CONTINUANCE REQUEST.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TACPA%2024-11%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175562&isSection=False&isAttachment=True",
+          "originalTitle": "Download TACPA 24-11 CONTINUANCE REQUEST.PDF",
+          "originalText": "TACPA 24-11 CONTINUANCE REQUEST.PDF"
+        },
+        {
+          "title": "[EXTERNAL] TA_CPA 24-11 - CONTINUANCE REQUEST FROM AUGUST 21, 2025 TO NOVEMBER 13, 2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/%5BEXTERNAL%5D%20TA_CPA%2024-11%20-%20CONTINUANCE%20REQUEST%20FROM%20AUGUST%2021%2c%202025%20TO%20NO.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175563&isSection=False&isAttachment=True",
+          "originalTitle": "Download [EXTERNAL] TA_CPA 24-11 - CONTINUANCE REQUEST FROM AUGUST 21, 2025 TO NOVEMBER 13, 2025.PDF",
+          "originalText": "[EXTERNAL] TA_CPA 24-11 - CONTINUANCE REQUEST FROM AUGUST 21, 2025 TO NOVEMBER 13, 2025.PDF"
+        },
+        {
+          "title": "FW_ TA_CPA 24-11 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FW_%20TA_CPA%2024-11%20-%20CONTINUANCE%20REQUEST%20FROM%20NOVEMBER%2013%2c%202025%20TO%20JANUARY%201.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175564&isSection=False&isAttachment=True",
+          "originalTitle": "Download FW_ TA_CPA 24-11 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF",
+          "originalText": "FW_ TA_CPA 24-11 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20TACPA%2024-11.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175565&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "originalText": "1-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20TACPA%2024-11.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175566&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "originalText": "2-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "title": "3-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENTS%20-%20TACPA%2024-11.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175567&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "originalText": "3-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "title": "4-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/4-WRITTEN%20COMMENTS%20-%20TACPA%2024-11.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175568&isSection=False&isAttachment=True",
+          "originalTitle": "Download 4-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "originalText": "4-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "title": "5-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/5-WRITTEN%20COMMENTS%20-%20TACPA%2024-11.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175569&isSection=False&isAttachment=True",
+          "originalTitle": "Download 5-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "originalText": "5-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "title": "6-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/6-WRITTEN%20COMMENTS%20-%20TACPA%2024-11.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175570&isSection=False&isAttachment=True",
+          "originalTitle": "Download 6-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "originalText": "6-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "title": "CPA24-11 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA24-11%20BIE.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175571&isSection=False&isAttachment=True",
+          "originalTitle": "Download CPA24-11 BIE.PDF",
+          "originalText": "CPA24-11 BIE.PDF"
+        },
+        {
+          "title": "CPA24-11 - ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA24-11%20-%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175572&isSection=False&isAttachment=True",
+          "originalTitle": "Download CPA24-11 - ORDINANCE.PDF",
+          "originalText": "CPA24-11 - ORDINANCE.PDF"
+        },
+        {
+          "title": "7-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/7-WRITTEN%20COMMENTS%20-%20TACPA%2024-11.PDF.pdf?documentType=1&meetingId=2752&itemId=19280&publishId=175573&isSection=False&isAttachment=True",
+          "originalTitle": "Download 7-WRITTEN COMMENTS - TACPA 24-11.PDF",
+          "originalText": "7-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        }
+      ],
+      "folioNumbers": [
+        "194380.0000",
+        "194381.0000",
+        "194383.0000",
+        "194384.0000",
+        "194385.0000",
+        "194388.0000"
+      ],
+      "location": "611 South Magnolia Avenue",
+      "coordinates": {
+        "lat": 27.93789,
+        "lng": -82.466291
+      },
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "19281",
+      "title": "File No. VAC-25-0000008\nContinued public hearing from November 13, 2025 on application by Hp Puffy LLC / Gardner Brewer Hudson, P.A. requesting to vacate a portion of alley lying North of Swann Avenue, South of Bay Street, East of Magnolia Avenue and West Brevard Avenue.\n\n(Ordinance being presented for first reading consideration) - An ordinance of the City of Tampa, Florida, vacating, closing, discontinuing and abandoning that alleyway located north of Swann Avenue, South of Bay Street, East of Brevard Avenue, and West of Magnolia Avenue, within the revised map of Packwoods subdivision, a subdivision in the city of Tampa, Hillsborough county, Florida, as more fully described in Section 2 hereof, subject to certain covenants, conditions and restrictions as more particularly set forth herein; providing for enforcement and penalties for violations; providing for definitions, interpretations and repealing conflicts; providing for severability; providing an effective date.",
+      "rawTitle": "File No. VAC-25-0000008\nContinued public hearing from November 13, 2025 on application by Hp Puffy LLC / Gardner Brewer Hudson, P.A. requesting to vacate a portion of alley lying North of Swann Avenue, South of Bay Street, East of Magnolia Avenue and West Brevard Avenue.\n\n(Ordinance being presented for first reading consideration) - An ordinance of the City of Tampa, Florida, vacating, closing, discontinuing and abandoning that alleyway located north of Swann Avenue, South of Bay Street, East of Brevard Avenue, and West of Magnolia Avenue, within the revised map of Packwoods subdivision, a subdivision in the city of Tampa, Hillsborough county, Florida, as more fully described in Section 2 hereof, subject to certain covenants, conditions and restrictions as more particularly set forth herein; providing for enforcement and penalties for violations; providing for definitions, interpretations and repealing conflicts; providing for severability; providing an effective date.",
+      "fileNumber": "VAC-25-0000008",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "AERIAL VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AERIAL%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175574&isSection=False&isAttachment=True",
+          "originalTitle": "Download AERIAL VAC-25-08.PDF",
+          "originalText": "AERIAL VAC-25-08.PDF"
+        },
+        {
+          "title": "APPLICATION VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/APPLICATION%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175575&isSection=False&isAttachment=True",
+          "originalTitle": "Download APPLICATION VAC-25-08.PDF",
+          "originalText": "APPLICATION VAC-25-08.PDF"
+        },
+        {
+          "title": "PB_1PG_60.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PB_1PG_60.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175576&isSection=False&isAttachment=True",
+          "originalTitle": "Download PB_1PG_60.PDF",
+          "originalText": "PB_1PG_60.PDF"
+        },
+        {
+          "title": "STAMPED LEGAL - VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/STAMPED%20LEGAL%20-%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175577&isSection=False&isAttachment=True",
+          "originalTitle": "Download STAMPED LEGAL - VAC-25-08.PDF",
+          "originalText": "STAMPED LEGAL - VAC-25-08.PDF"
+        },
+        {
+          "title": "STAFF REPORT VAC-25-0000008.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/STAFF%20REPORT%20VAC-25-0000008.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175578&isSection=False&isAttachment=True",
+          "originalTitle": "Download STAFF REPORT VAC-25-0000008.PDF",
+          "originalText": "STAFF REPORT VAC-25-0000008.PDF"
+        },
+        {
+          "title": "VAC-25-08 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/VAC-25-08%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175579&isSection=False&isAttachment=True",
+          "originalTitle": "Download VAC-25-08 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "VAC-25-08 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "FW_ REZ 25-48 AND VAC 25-08 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FW_%20REZ%2025-48%20AND%20VAC%2025-08%20-%20CONTINUANCE%20REQUEST%20FROM%20NOVEMBER%2013%2c%202025.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175580&isSection=False&isAttachment=True",
+          "originalTitle": "Download FW_ REZ 25-48 AND VAC 25-08 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF",
+          "originalText": "FW_ REZ 25-48 AND VAC 25-08 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF"
+        },
+        {
+          "title": "VAC 25-08 FINAL ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/VAC%2025-08%20FINAL%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175581&isSection=False&isAttachment=True",
+          "originalTitle": "Download VAC 25-08 FINAL ORDINANCE.PDF",
+          "originalText": "VAC 25-08 FINAL ORDINANCE.PDF"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS - VAC 25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20VAC%2025-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175582&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENTS - VAC 25-08.PDF",
+          "originalText": "1-WRITTEN COMMENTS - VAC 25-08.PDF"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS - VAC 25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20VAC%2025-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175583&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2-WRITTEN COMMENTS - VAC 25-08.PDF",
+          "originalText": "2-WRITTEN COMMENTS - VAC 25-08.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175584&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "VAC-25-0000008 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/VAC-25-0000008%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175585&isSection=False&isAttachment=True",
+          "originalTitle": "Download VAC-25-0000008 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "VAC-25-0000008 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "3-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENTS%20-%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175586&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "originalText": "3-WRITTEN COMMENTS - VAC-25-08.PDF"
+        },
+        {
+          "title": "4-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/4-WRITTEN%20COMMENTS%20-%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175587&isSection=False&isAttachment=True",
+          "originalTitle": "Download 4-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "originalText": "4-WRITTEN COMMENTS - VAC-25-08.PDF"
+        },
+        {
+          "title": "5-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/5-WRITTEN%20COMMENTS%20-%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175588&isSection=False&isAttachment=True",
+          "originalTitle": "Download 5-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "originalText": "5-WRITTEN COMMENTS - VAC-25-08.PDF"
+        },
+        {
+          "title": "6-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/6-WRITTEN%20COMMENTS%20-%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175589&isSection=False&isAttachment=True",
+          "originalTitle": "Download 6-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "originalText": "6-WRITTEN COMMENTS - VAC-25-08.PDF"
+        },
+        {
+          "title": "VAC_25-08_FINAL_ORDINANCE.PDF.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/VAC_25-08_FINAL_ORDINANCE.PDF.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175590&isSection=False&isAttachment=True",
+          "originalTitle": "Download VAC_25-08_FINAL_ORDINANCE.PDF.PDF",
+          "originalText": "VAC_25-08_FINAL_ORDINANCE.PDF.PDF"
+        },
+        {
+          "title": "7-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/7-WRITTEN%20COMMENTS%20-%20VAC-25-08.PDF.pdf?documentType=1&meetingId=2752&itemId=19281&publishId=175591&isSection=False&isAttachment=True",
+          "originalTitle": "Download 7-WRITTEN COMMENTS - VAC-25-08.PDF",
+          "originalText": "7-WRITTEN COMMENTS - VAC-25-08.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "21111",
+      "title": "File No. REZ-26-05\nPublic Hearing on application of Stephen Michael Seaton request to rezone property generally located at 4001 S. Lynwood Avenue from RS-60 to RS-50.\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 4001 South Lynwood Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification RS-60 (Residential, Single-Family Detached) to RS-50 (Residential, Single-Family Detached); providing an effective date.",
+      "rawTitle": "File No. REZ-26-05\nPublic Hearing on application of Stephen Michael Seaton request to rezone property generally located at 4001 S. Lynwood Avenue from RS-60 to RS-50.\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 4001 South Lynwood Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification RS-60 (Residential, Single-Family Detached) to RS-50 (Residential, Single-Family Detached); providing an effective date.",
+      "fileNumber": "REZ-26-05",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-05 CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-05%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21111&publishId=175592&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-05 CERTIFIED APP FINAL.PDF",
+          "originalText": "REZ-26-05 CERTIFIED APP FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=21111&publishId=175593&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ 26-05 AFFIDAVIT FEB 12 2026 501PM.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ%2026-05%20AFFIDAVIT%20FEB%2012%202026%20501PM.PDF.pdf?documentType=1&meetingId=2752&itemId=21111&publishId=175594&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ 26-05 AFFIDAVIT FEB 12 2026 501PM.PDF",
+          "originalText": "REZ 26-05 AFFIDAVIT FEB 12 2026 501PM.PDF"
+        },
+        {
+          "title": "REZ-26-05 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-05%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21111&publishId=175595&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-05 STAFF REPORT FINAL.PDF",
+          "originalText": "REZ-26-05 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "REZ-26-05 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-05%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=21111&publishId=175596&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-05 ORDINANCE.PDF",
+          "originalText": "REZ-26-05 ORDINANCE.PDF"
+        },
+        {
+          "title": "REZ-26-05 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-05%20BIE.PDF.pdf?documentType=1&meetingId=2752&itemId=21111&publishId=175597&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-05 BIE.PDF",
+          "originalText": "REZ-26-05 BIE.PDF"
+        },
+        {
+          "title": "REZ-26-05 CERTIFIED APP FINAL REVISED 02.09.26.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-05%20CERTIFIED%20APP%20FINAL%20REVISED%2002.09.26.PDF.pdf?documentType=1&meetingId=2752&itemId=21111&publishId=175598&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-05 CERTIFIED APP FINAL REVISED 02.09.26.PDF",
+          "originalText": "REZ-26-05 CERTIFIED APP FINAL REVISED 02.09.26.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": "R",
+        "requestedZoning": "R",
+        "futureLandUse": "R-  10",
+        "waivers": [],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the application and finds the request CONSISTENT with the City of Tampa Code of Ordinances."
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "21112",
+      "title": "File No. REZ-26-15\nPublic Hearing on application of Giselle Mota request to rezone property generally located at 312 N. Manhattan Avenue from RS-50 to RM-18.\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 312 North Manhattan Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification RS-50 (Residential, Single-Family) to RM-18 (Residential Multi-Family); providing an effective date.",
+      "rawTitle": "File No. REZ-26-15\nPublic Hearing on application of Giselle Mota request to rezone property generally located at 312 N. Manhattan Avenue from RS-50 to RM-18.\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 312 North Manhattan Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification RS-50 (Residential, Single-Family) to RM-18 (Residential Multi-Family); providing an effective date.",
+      "fileNumber": "REZ-26-15",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-15 CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-15%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175599&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-15 CERTIFIED APP FINAL.PDF",
+          "originalText": "REZ-26-15 CERTIFIED APP FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175600&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-15 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-15%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175601&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-15 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "REZ-26-15 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-15 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-15%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175602&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-15 STAFF REPORT FINAL.PDF",
+          "originalText": "REZ-26-15 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "REZ-26-15 CERTIFIED APP FINAL REVISED 02.09.26.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-15%20CERTIFIED%20APP%20FINAL%20REVISED%2002.09.26.PDF.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175603&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-15 CERTIFIED APP FINAL REVISED 02.09.26.PDF",
+          "originalText": "REZ-26-15 CERTIFIED APP FINAL REVISED 02.09.26.PDF"
+        },
+        {
+          "title": "REZ-26-15 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-15%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175604&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-15 ORDINANCE.PDF",
+          "originalText": "REZ-26-15 ORDINANCE.PDF"
+        },
+        {
+          "title": "REZ-26-15 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-15%20BIE.PDF.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175605&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-26-15 BIE.PDF",
+          "originalText": "REZ-26-15 BIE.PDF"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS - REZ-26-15.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-15.PDF.pdf?documentType=1&meetingId=2752&itemId=21112&publishId=175606&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENTS - REZ-26-15.PDF",
+          "originalText": "1-WRITTEN COMMENTS - REZ-26-15.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": "RS-50",
+        "requestedZoning": "RM-18",
+        "futureLandUse": "R-  20",
+        "waivers": [],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances."
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "19282",
+      "title": "File No. REZ-25-48\nContinued Public Hearing from November 13, 2025 on application of Hp Puffy LLC, Robert Schlesinger request to rezone property generally located at 601 & 611 W. Swann Ave., 611 & 613 S. Magnolia Ave., 612 & 614 West Bay St. from RO-1 to PD (Hotel, Residential Multi-Family & Business-Professional Office).\n\nAn ordinance rezoning property in the general vicinity of 601 and 611 West Swann Avenue, 611 and 613 South Magnolia Avenue and 612 and 614 West Bay Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RO-1 (Residential Office) to PD (Planned Development, Hotel, Residential, Multi-Family, Mid-Rise, and Office, Business and Professional); providing an effective date.\n\nMemorandum from Cate Wells, Deputy City Attorney, transmitting a substitute ordinance for said item. (To be R/F) (Title of said substitute resolution listed below) \n\nSubstitute Ordinance (Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 601 and 611 West Swann Avenue, 611 and 613 South Magnolia Avenue and 612 and 614 West Bay Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RO-1 (Residential Office) to PD (Planned Development, Hotel, Residential, Multi-Family,and Office, Business and Professional); providing an effective date.\n\nResolution approving a bonus provision agreement between HP Puffy LLC, Swann Building LLC, CLP HP2 LLC, 614 W. Bay Street LLC, 611 W. Swann Avenue LLC, Copperline Partners LLC, and the City of Tampa, in relation to REZ-25-48 for the property located at 613 S. Magnolia Avenue, 612 W. Bay Street, 601 W. Swann Avenue, 611 S. Magnolia Avenue, 614 W. Bay Street and 611 W. Swann Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; Directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the city; providing an effective date. (Said resolution to be adopted after second reading and adoption of the ordinance)",
+      "rawTitle": "File No. REZ-25-48\nContinued Public Hearing from November 13, 2025 on application of Hp Puffy LLC, Robert Schlesinger request to rezone property generally located at 601 & 611 W. Swann Ave., 611 & 613 S. Magnolia Ave., 612 & 614 West Bay St. from RO-1 to PD (Hotel, Residential Multi-Family & Business-Professional Office).\n\nAn ordinance rezoning property in the general vicinity of 601 and 611 West Swann Avenue, 611 and 613 South Magnolia Avenue and 612 and 614 West Bay Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RO-1 (Residential Office) to PD (Planned Development, Hotel, Residential, Multi-Family, Mid-Rise, and Office, Business and Professional); providing an effective date.\n\nMemorandum from Cate Wells, Deputy City Attorney, transmitting a substitute ordinance for said item. (To be R/F) (Title of said substitute resolution listed below) \n\nSubstitute Ordinance (Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 601 and 611 West Swann Avenue, 611 and 613 South Magnolia Avenue and 612 and 614 West Bay Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RO-1 (Residential Office) to PD (Planned Development, Hotel, Residential, Multi-Family,and Office, Business and Professional); providing an effective date.\n\nResolution approving a bonus provision agreement between HP Puffy LLC, Swann Building LLC, CLP HP2 LLC, 614 W. Bay Street LLC, 611 W. Swann Avenue LLC, Copperline Partners LLC, and the City of Tampa, in relation to REZ-25-48 for the property located at 613 S. Magnolia Avenue, 612 W. Bay Street, 601 W. Swann Avenue, 611 S. Magnolia Avenue, 614 W. Bay Street and 611 W. Swann Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; Directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the city; providing an effective date. (Said resolution to be adopted after second reading and adoption of the ordinance)",
+      "fileNumber": "REZ-25-48",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-25-48 CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-48%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175607&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-48 CERTIFIED APP FINAL.PDF",
+          "originalText": "REZ-25-48 CERTIFIED APP FINAL.PDF"
+        },
+        {
+          "title": "REZ-25-48 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-48%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175608&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-48 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "REZ-25-48 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "FW_ REZ 25-48 AND VAC 25-08 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FW_%20REZ%2025-48%20AND%20VAC%2025-08%20-%20CONTINUANCE%20REQUEST%20FROM%20NOVEMBER%2013%2c%202025.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175609&isSection=False&isAttachment=True",
+          "originalTitle": "Download FW_ REZ 25-48 AND VAC 25-08 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF",
+          "originalText": "FW_ REZ 25-48 AND VAC 25-08 - CONTINUANCE REQUEST FROM NOVEMBER 13, 2025 TO JANUARY 15, 2026.PDF"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175610&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "originalText": "1-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "title": "BUSINESS IMPACT ESTIMATE FORM - REZ25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/BUSINESS%20IMPACT%20ESTIMATE%20FORM%20-%20REZ25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175611&isSection=False&isAttachment=True",
+          "originalTitle": "Download BUSINESS IMPACT ESTIMATE FORM - REZ25-48.PDF",
+          "originalText": "BUSINESS IMPACT ESTIMATE FORM - REZ25-48.PDF"
+        },
+        {
+          "title": "REZ25-48 - PA ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-48%20-%20PA%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175612&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-48 - PA ORDINANCE.PDF",
+          "originalText": "REZ25-48 - PA ORDINANCE.PDF"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175613&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "originalText": "2-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175614&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-25-48 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-48%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175615&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-48 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "REZ-25-48 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ 25-48 BONUS PROVISION AGREEMENT (003).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ%2025-48%20BONUS%20PROVISION%20AGREEMENT%20(003).PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175616&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ 25-48 BONUS PROVISION AGREEMENT (003).PDF",
+          "originalText": "REZ 25-48 BONUS PROVISION AGREEMENT (003).PDF"
+        },
+        {
+          "title": "REZ 25-48 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ%2025-48%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175617&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ 25-48 SITE PLAN.PDF",
+          "originalText": "REZ 25-48 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-25-48 STAFF REPORT FINAL REVISION 2.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-48%20STAFF%20REPORT%20FINAL%20REVISION%202.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175618&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-48 STAFF REPORT FINAL REVISION 2.PDF",
+          "originalText": "REZ-25-48 STAFF REPORT FINAL REVISION 2.PDF"
+        },
+        {
+          "title": "3-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENTS%20-%20REZ-25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175619&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "originalText": "3-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "title": "4-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/4-WRITTEN%20COMMENTS%20-%20REZ-25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175620&isSection=False&isAttachment=True",
+          "originalTitle": "Download 4-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "originalText": "4-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "title": "5-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/5-WRITTEN%20COMMENTS%20-%20REZ-25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175621&isSection=False&isAttachment=True",
+          "originalTitle": "Download 5-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "originalText": "5-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "title": "6-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/6-WRITTEN%20COMMENTS%20-%20REZ-25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175622&isSection=False&isAttachment=True",
+          "originalTitle": "Download 6-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "originalText": "6-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "title": "REZ25-48 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-48%20BIE.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175623&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-48 BIE.PDF",
+          "originalText": "REZ25-48 BIE.PDF"
+        },
+        {
+          "title": "REZ25-48 - PA ORDINANCE SUB.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-48%20-%20PA%20ORDINANCE%20SUB.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175624&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-48 - PA ORDINANCE SUB.PDF",
+          "originalText": "REZ25-48 - PA ORDINANCE SUB.PDF"
+        },
+        {
+          "title": "7-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/7-WRITTEN%20COMMENTS%20-%20REZ-25-48.PDF.pdf?documentType=1&meetingId=2752&itemId=19282&publishId=175625&isSection=False&isAttachment=True",
+          "originalTitle": "Download 7-WRITTEN COMMENTS - REZ-25-48.PDF",
+          "originalText": "7-WRITTEN COMMENTS - REZ-25-48.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": "RO-1",
+        "requestedZoning": "PD",
+        "futureLandUse": "Community Mixed Use-35",
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-283.15 a. Request to reduce size of loading space from 12’ x 60’ to 12’ x 28’ and 12’ x 30’. b. Request to allow loading to occur in more than one continuous maneuver and allow maneuvering in the right of way. 2. Section  27-284.2.5(F)(1):  Request  to  remove  one  (1)  non-hazardous  grand  live  oak  (tree  #65,  A  38”  Laurel  Oak, Rated C-8) As shown on the two reasonable reconfiguration design alternatives. 3. Section 27-284.3.1: Request to reduce the required tree retention from 50% to 2% for a non-wooded lot over one acre. 4. Section 27-283.12(J): Request to allow access to W. Bay Street and S. Magnolia Avenue at a distance greater than 150’ from the intersection with an arterial or collector roadway. 5. Section 27-284.3.3(D): Request to reduce the required VUA landscape buffer from 8’ to 0’ along Magnolia Avenue."
+        ],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  See  findings  from  Development  Coordination,  Architectural Review  &  Historic  Preservation  and  Transportation  in  the report  below.  Should  it  be  the  pleasure  of  City  Council  to approve the application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation's inconsistent finding."
+      }
+    },
+    {
+      "number": 6,
+      "agendaItemId": "21110",
+      "title": "File No. REZ-25-125\nPublic Hearing on application of Elise Batsel request to rezone property generally located at 5215, 5301 and 5311 W. Tyson Avenue from PD to PD (Residential Multi-Family, Residential Single-Family Attached, Retail Sales (Specialty Goods, Convenience Goods, Shoppers Goods) and Marina).\n\n(Ordinance being presented for first reading consideration)  - An ordinance rezoning property in the general vicinity of 5215, 5301 and 5311 West Tyson Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) PD (Planned Development) to PD (Planned Development, Residential, Multi-Family, Single-Family Attached, Retail Sales, Specialty Goods, Convenience Goods, Shopper’s Goods, and Marina); providing an effective date.",
+      "rawTitle": "File No. REZ-25-125\nPublic Hearing on application of Elise Batsel request to rezone property generally located at 5215, 5301 and 5311 W. Tyson Avenue from PD to PD (Residential Multi-Family, Residential Single-Family Attached, Retail Sales (Specialty Goods, Convenience Goods, Shoppers Goods) and Marina).\n\n(Ordinance being presented for first reading consideration)  - An ordinance rezoning property in the general vicinity of 5215, 5301 and 5311 West Tyson Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) PD (Planned Development) to PD (Planned Development, Residential, Multi-Family, Single-Family Attached, Retail Sales, Specialty Goods, Convenience Goods, Shopper’s Goods, and Marina); providing an effective date.",
+      "fileNumber": "REZ-25-125",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-25-125 CERTIFIED APP_REVISED 2.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-125%20CERTIFIED%20APP_REVISED%202.PDF.pdf?documentType=1&meetingId=2752&itemId=21110&publishId=175626&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-125 CERTIFIED APP_REVISED 2.PDF",
+          "originalText": "REZ-25-125 CERTIFIED APP_REVISED 2.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=21110&publishId=175627&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-25-0000125 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-0000125%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=21110&publishId=175628&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-0000125 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "REZ-25-0000125 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-25-125 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-125%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2752&itemId=21110&publishId=175629&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-125 SITE PLAN.PDF",
+          "originalText": "REZ-25-125 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-25-125 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-125%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21110&publishId=175630&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-125 STAFF REPORT FINAL.PDF",
+          "originalText": "REZ-25-125 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "REZ-25-125 DRAFT ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-125%20DRAFT%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=21110&publishId=175631&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-125 DRAFT ORDINANCE.PDF",
+          "originalText": "REZ-25-125 DRAFT ORDINANCE.PDF"
+        },
+        {
+          "title": "REZ-25-125 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-125%20BIE.PDF.pdf?documentType=1&meetingId=2752&itemId=21110&publishId=175632&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-125 BIE.PDF",
+          "originalText": "REZ-25-125 BIE.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Community Mixed Use-35",
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-282.9(c)(1): Request to allow front doors of lots 1 through 20 to face the side yard along the north."
+        ],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  it  be  the  pleasure  of  City  Council  to  approve  the application, further modifications to the site plan must be completed by the applicant between 1st and 2nd Reading of Ordinance as stated on the revision sheet."
+      }
+    },
+    {
+      "number": 7,
+      "agendaItemId": "19883",
+      "title": "File No. REZ-25-97\nContinued Public Hearing fom December 11, 2025 on application of Kareem T. Brantley request to rezone property generally located 3105 East Columbus Drive; 3001, 3003, 3004, 3007 and 3010 East 15th Avenue from RM-16 and PD to PD (Residential, Multi-Family).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 3105 East Columbus Drive and 3001, 3003, 3004, 3007 and 3010 East 15th Avenue, in the City of Tampa, Florida, and more particularly described in Section 1, from zoning district classification(s) RM-16 (Residential, Multi-Family) and PD (Planned Development) to PD (Planned Development, Residential, Multi-Family); providing an effective date.\n\nResolution approving a bonus provision agreement between Ashley East Tampa, LLC and the City of Tampa, in relation to REZ-25-97 for the property located at 3105 East Columbus Drive  and 3001, 3003, 3004, 3007 and 3010 East 15th Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; Directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the City; providing an effective date. \n\n(Memorandum from Cate Wells, Deputy City Attorney, transmitting a substitute resolution for said item. (To be R/F) (Title of said substitute resolution listed below) \n\nSubstitute Resolution approving a bonus provision agreement between Ashley East Tampa, LLC and the City of Tampa, in relation to REZ-25-97 for the property located at 3105 East Columbus Drive and 3001, 3003, 3004, 3007 and 3010 East 15th Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; Directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the City; providing an effective date.  (Said resolution to be adopted after second reading and adoption of the ordinance)",
+      "rawTitle": "File No. REZ-25-97\nContinued Public Hearing fom December 11, 2025 on application of Kareem T. Brantley request to rezone property generally located 3105 East Columbus Drive; 3001, 3003, 3004, 3007 and 3010 East 15th Avenue from RM-16 and PD to PD (Residential, Multi-Family).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 3105 East Columbus Drive and 3001, 3003, 3004, 3007 and 3010 East 15th Avenue, in the City of Tampa, Florida, and more particularly described in Section 1, from zoning district classification(s) RM-16 (Residential, Multi-Family) and PD (Planned Development) to PD (Planned Development, Residential, Multi-Family); providing an effective date.\n\nResolution approving a bonus provision agreement between Ashley East Tampa, LLC and the City of Tampa, in relation to REZ-25-97 for the property located at 3105 East Columbus Drive  and 3001, 3003, 3004, 3007 and 3010 East 15th Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; Directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the City; providing an effective date. \n\n(Memorandum from Cate Wells, Deputy City Attorney, transmitting a substitute resolution for said item. (To be R/F) (Title of said substitute resolution listed below) \n\nSubstitute Resolution approving a bonus provision agreement between Ashley East Tampa, LLC and the City of Tampa, in relation to REZ-25-97 for the property located at 3105 East Columbus Drive and 3001, 3003, 3004, 3007 and 3010 East 15th Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; Directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the City; providing an effective date.  (Said resolution to be adopted after second reading and adoption of the ordinance)",
+      "fileNumber": "REZ-25-97",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-25-97 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-97%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175633&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-97 STAFF REPORT FINAL.PDF",
+          "originalText": "REZ-25-97 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "REZ-25-97 CERTIFIED APP_REVISED.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-97%20CERTIFIED%20APP_REVISED.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175634&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-97 CERTIFIED APP_REVISED.PDF",
+          "originalText": "REZ-25-97 CERTIFIED APP_REVISED.PDF"
+        },
+        {
+          "title": "RESO BPA - REZ25-97.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%20BPA%20-%20REZ25-97.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175635&isSection=False&isAttachment=True",
+          "originalTitle": "Download RESO BPA - REZ25-97.PDF",
+          "originalText": "RESO BPA - REZ25-97.PDF"
+        },
+        {
+          "title": "REZ-25-0000097 FINAL SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-0000097%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175636&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-0000097 FINAL SITE PLAN.PDF",
+          "originalText": "REZ-25-0000097 FINAL SITE PLAN.PDF"
+        },
+        {
+          "title": "BUSINESS IMPACT ESTIMATE FORM - REZ25-97.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/BUSINESS%20IMPACT%20ESTIMATE%20FORM%20-%20REZ25-97.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175637&isSection=False&isAttachment=True",
+          "originalTitle": "Download BUSINESS IMPACT ESTIMATE FORM - REZ25-97.PDF",
+          "originalText": "BUSINESS IMPACT ESTIMATE FORM - REZ25-97.PDF"
+        },
+        {
+          "title": "REZ25-97 - ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-97%20-%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175638&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-97 - ORDINANCE.PDF",
+          "originalText": "REZ25-97 - ORDINANCE.PDF"
+        },
+        {
+          "title": "1-WRITTEN COMMENT - REZ-25-97.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20-%20REZ-25-97.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175639&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENT - REZ-25-97.PDF",
+          "originalText": "1-WRITTEN COMMENT - REZ-25-97.PDF"
+        },
+        {
+          "title": "REZ-25-97 CERTIFIED APP.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-97%20CERTIFIED%20APP.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175640&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-97 CERTIFIED APP.PDF",
+          "originalText": "REZ-25-97 CERTIFIED APP.PDF"
+        },
+        {
+          "title": "REZ-25-97 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-97%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175641&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-97 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "REZ-25-97 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175642&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "ITEM #6 REVISION SHEET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_6%20REVISION%20SHEET.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175643&isSection=False&isAttachment=True",
+          "originalTitle": "Download ITEM #6 REVISION SHEET.PDF",
+          "originalText": "ITEM #6 REVISION SHEET.PDF"
+        },
+        {
+          "title": "REZ 25-97 BONUS PROVISION AGREEMENT (SUBSTITUTION).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ%2025-97%20BONUS%20PROVISION%20AGREEMENT%20(SUBSTITUTION).PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175644&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ 25-97 BONUS PROVISION AGREEMENT (SUBSTITUTION).PDF",
+          "originalText": "REZ 25-97 BONUS PROVISION AGREEMENT (SUBSTITUTION).PDF"
+        },
+        {
+          "title": "REZ-25-97 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-97%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175645&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-97 SITE PLAN.PDF",
+          "originalText": "REZ-25-97 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-25-97 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-97%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=19883&publishId=175646&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-97 STAFF REPORT FINAL.PDF",
+          "originalText": "REZ-25-97 STAFF REPORT FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "CC-35 and CMU-35",
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-283.15:  To allow a 19’ x 41’ loading space in lieu of a required 12’ x 60’ loading space. 2. Section 27-283.7: To reduce the required number of overall parking spaces from 198 required to 120 provided (39% reduction). 3. Section 27-284.4.1: To reduce the percentage of retention-quality trees preserved for a non-wooded site from 50% to 30%. 4. Section 27-284.2.5(F)(1): Request to remove four (4) non-hazardous grand trees (Tree # 7, a 54” Live Oak rated C-5; Tree # 10,  a 36” Live Oak rated C-5; Tree # 1, a 36” Live Oak rated C-5; and Tree # 12, a 33” Live Oak rated C-5) as shown on the two reasonable reconfiguration exhibits. 5. Section 27-284.3.3: Request to reduce minimum landscaped area for multi-family with VUA from 350 SF per unit to 194 SF per unit,  subject to landscape in lieu fees at the time of permitting."
+        ],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable   City   of   Tampa   Land   Development   Regulations.   See   findings   from   Natural   Resources,   Development Coordination and Transportation in report below. Should it be the pleasure of City Council to approve the application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation's inconsistent finding."
+      }
+    },
+    {
+      "number": 8,
+      "agendaItemId": "21106",
+      "title": "File No. REZ-25-118\nPublic Hearing on application of Azam Elsheikh request to rezone property generally located at 4714 E. Hillsborough Avenue from CI to PD (Business Professional Office & All CG Uses).\n\nEmail from Stephen Michelini, applicant's representative, requesting that said public hearing be continued to May 14, 2026. (To be R/F)",
+      "rawTitle": "File No. REZ-25-118\nPublic Hearing on application of Azam Elsheikh request to rezone property generally located at 4714 E. Hillsborough Avenue from CI to PD (Business Professional Office & All CG Uses).\n\nEmail from Stephen Michelini, applicant's representative, requesting that said public hearing be continued to May 14, 2026. (To be R/F)",
+      "fileNumber": "REZ-25-118",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-25-118 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-118%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21106&publishId=175647&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-118 CERTIFIED APPLICATION FINAL.PDF",
+          "originalText": "REZ-25-118 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=21106&publishId=175648&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-25-0000118 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-0000118%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=21106&publishId=175649&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-0000118 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "REZ-25-0000118 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ 25-118 (4714 E HILLSBOROUGH AVE.) CONTINUANCE REQUEST.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ%2025-118%20(4714%20E%20HILLSBOROUGH%20AVE.)%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2752&itemId=21106&publishId=175650&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ 25-118 (4714 E HILLSBOROUGH AVE.) CONTINUANCE REQUEST.PDF",
+          "originalText": "REZ 25-118 (4714 E HILLSBOROUGH AVE.) CONTINUANCE REQUEST.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 9,
+      "agendaItemId": "21105",
+      "title": "File No. REZ-25-86 (Will not be Heard; Mis-noticed)\nPublic hearing on application of Azam ElSheikh request to rezone property generally located at 3101 N. Nebraska Avenue from RS-50 & CG to PD (Storefront Residential, Commercial/Office (All CG Uses)).",
+      "rawTitle": "File No. REZ-25-86 (Will not be Heard; Mis-noticed)\nPublic hearing on application of Azam ElSheikh request to rezone property generally located at 3101 N. Nebraska Avenue from RS-50 & CG to PD (Storefront Residential, Commercial/Office (All CG Uses)).",
+      "fileNumber": "REZ-25-86",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=21105&publishId=175651&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-25-86 CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-86%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21105&publishId=175652&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-86 CERTIFIED APP FINAL.PDF",
+          "originalText": "REZ-25-86 CERTIFIED APP FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 10,
+      "agendaItemId": "21107",
+      "title": "File No. REZ-25-121 (Will not be heard; Withdrawn)\nPublic Hearing on application of Todd Pressman request to rezone property generally located at 7409 S. Manhattan Avenue & 4436 Richardson Avenue from RS-50 to RM-18. (File No. TA/CPA-25-14 was denied on 1/29/2026, this rezoning is deemed withdrawn.)",
+      "rawTitle": "File No. REZ-25-121 (Will not be heard; Withdrawn)\nPublic Hearing on application of Todd Pressman request to rezone property generally located at 7409 S. Manhattan Avenue & 4436 Richardson Avenue from RS-50 to RM-18. (File No. TA/CPA-25-14 was denied on 1/29/2026, this rezoning is deemed withdrawn.)",
+      "fileNumber": "REZ-25-121",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-25-121 CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-121%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2752&itemId=21107&publishId=175653&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-121 CERTIFIED APP FINAL.PDF",
+          "originalText": "REZ-25-121 CERTIFIED APP FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2752&itemId=21107&publishId=175654&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-25-0000121 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-0000121%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2752&itemId=21107&publishId=175655&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-0000121 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "REZ-25-0000121 AFFIDAVIT OF COMPLIANCE.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-02-12"
+}

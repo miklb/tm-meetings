@@ -1,0 +1,172 @@
+{
+  "meeting_id": 2639,
+  "meeting_date": "2025-10-23",
+  "videos": [
+    {
+      "video_id": "PlSqwMUFEXE",
+      "title": "Tampa City Council - 10/23/25",
+      "part": 1,
+      "duration": "PT2H54M15S",
+      "offset_seconds": 0,
+      "transcript_start_time": "9:01:09AM",
+      "session": null,
+      "published_at": "2025-10-24T04:08:58Z",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:41:22",
+          "seconds": 2482
+        },
+        {
+          "title": "Item 1: BA25-17034 - Re-Appointment To Housing Authority",
+          "timestamp": "01:36:31",
+          "seconds": 5791
+        },
+        {
+          "title": "Item 64: E2025-8 CH 2 - Ordinance Updating Ethics Code",
+          "timestamp": "01:37:00",
+          "seconds": 5820
+        },
+        {
+          "title": "Return from closed session",
+          "timestamp": "02:52:24",
+          "seconds": 10344
+        }
+      ]
+    },
+    {
+      "video_id": "zQoq0IaggRs",
+      "title": "Tampa City Council - 10/23/25 - Part 2",
+      "part": 2,
+      "duration": "PT2H26M51S",
+      "offset_seconds": 381,
+      "transcript_start_time": "01:02:10PM",
+      "session": null,
+      "published_at": "2025-10-24T07:38:39Z",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "00:06:47",
+          "seconds": 407
+        },
+        {
+          "title": "Item 55: TA/CPA25-03 - Channel District CRA Area",
+          "timestamp": "00:09:27",
+          "seconds": 567
+        },
+        {
+          "title": "Item 56: TA/CPA25-05 - 1300 E Harbor & Channelside",
+          "timestamp": "00:11:56",
+          "seconds": 716
+        },
+        {
+          "title": "Item 57: TA/CPA25-08 - 2306 North Boulevard",
+          "timestamp": "00:13:50",
+          "seconds": 830
+        },
+        {
+          "title": "Item 58: TA/CPA25-12 - 3618 West Euclid Avenue",
+          "timestamp": "00:14:50",
+          "seconds": 890
+        },
+        {
+          "title": "Item 59: AB2-25-06 - 1616 E 7th Ave, Unit 1624",
+          "timestamp": "00:16:13",
+          "seconds": 973
+        },
+        {
+          "title": "Item 60: AB2-25-18 - 4121 Henderson Boulevard",
+          "timestamp": "00:18:23",
+          "seconds": 1103
+        },
+        {
+          "title": "Item 61: DA25-18100 - 701 Channelside Drive",
+          "timestamp": "00:20:18",
+          "seconds": 1218
+        },
+        {
+          "title": "Item 73: CM24-9964 - Lower Peninsula Watershed Overview",
+          "timestamp": "01:05:00",
+          "seconds": 3900
+        },
+        {
+          "title": "Item 66: MAM25-18253 - SoHo Flood Relief Agreement",
+          "timestamp": "01:28:17",
+          "seconds": 5297
+        },
+        {
+          "title": "Item 75: E2025-8 CH 1 - Charter Review Commission Scope",
+          "timestamp": "02:16:41",
+          "seconds": 8201
+        }
+      ]
+    },
+    {
+      "video_id": "nrjFgoCsAsc",
+      "title": "Tampa City Council - 10/23/25 - Part 3",
+      "part": 3,
+      "duration": "PT1H43M5S",
+      "offset_seconds": 0,
+      "transcript_start_time": "03:22:53PM",
+      "session": null,
+      "published_at": "2025-10-24T09:17:58Z",
+      "chapters": [
+        {
+          "title": "Rejoin meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 75: E2025-8 CH 1 - Charter Review Commission Scope",
+          "timestamp": "00:00:01",
+          "seconds": 1
+        },
+        {
+          "title": "Item 68: PS25-18032 - Red Light Camera Program Update",
+          "timestamp": "00:25:19",
+          "seconds": 1519
+        },
+        {
+          "title": "Item 69: CM25-13759 - Returning Citizens Office Update",
+          "timestamp": "00:29:03",
+          "seconds": 1743
+        },
+        {
+          "title": "Item 70: CM24-3585 - Roads & Budget Quarterly Update",
+          "timestamp": "00:34:07",
+          "seconds": 2047
+        },
+        {
+          "title": "Item 72: CM25-12001 - Stormwater Maintenance Monthly Report",
+          "timestamp": "00:45:17",
+          "seconds": 2717
+        },
+        {
+          "title": "Item 74: CM25-16440 - Hurricane Recovery Assistance Report",
+          "timestamp": "00:45:57",
+          "seconds": 2757
+        },
+        {
+          "title": "Item 72: CM25-12001 - Stormwater Maintenance Monthly Report",
+          "timestamp": "00:01:47",
+          "seconds": 107
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:24:26",
+          "seconds": 5066
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,468 @@
+{
+  "meetingId": "2703",
+  "meetingType": "Council Evening",
+  "meetingDate": "October 30, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2703&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "17843",
+      "title": "File No. CIP-CIS FY26-30\nPublic hearing on the Tampa Comprehensive Plan, Capital Improvement Section to replace fiscal year 2025 through 2029 with Capital Improvement Section Schedule of Projects for fiscal year 2026 through 2030.",
+      "rawTitle": "File No. CIP-CIS FY26-30\nPublic hearing on the Tampa Comprehensive Plan, Capital Improvement Section to replace fiscal year 2025 through 2029 with Capital Improvement Section Schedule of Projects for fiscal year 2026 through 2030.",
+      "fileNumber": "CIP-CIS",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "CIS UPDATE FULL REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CIS%20UPDATE%20FULL%20REPORT.PDF.pdf?documentType=1&meetingId=2703&itemId=17843&publishId=151990&isSection=False&isAttachment=True",
+          "originalTitle": "Download CIS UPDATE FULL REPORT.PDF",
+          "originalText": "CIS UPDATE FULL REPORT.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "17842",
+      "title": "File No. TA/CPA25-09\nPublic hearing on a privately initiated map amendment for property located at 1703 North 24th Street, 1701 North 25th Street, 2602, 2622, 2624, 2702, 2706, 2615, 2703, 2707, 2705, 2709, 2805, 2901, 2915 and 2805 East 7th Avenue, Unit 1/2 and 2623 East 8th Avenue, from Light Industrial (LI) and General Mixed Use-24 (GMU-24) to Urban Mixed Use-60 (UMU-60) and Community Commercial-35 (CC-35).",
+      "rawTitle": "File No. TA/CPA25-09\nPublic hearing on a privately initiated map amendment for property located at 1703 North 24th Street, 1701 North 25th Street, 2602, 2622, 2624, 2702, 2706, 2615, 2703, 2707, 2705, 2709, 2805, 2901, 2915 and 2805 East 7th Avenue, Unit 1/2 and 2623 East 8th Avenue, from Light Industrial (LI) and General Mixed Use-24 (GMU-24) to Urban Mixed Use-60 (UMU-60) and Community Commercial-35 (CC-35).",
+      "fileNumber": "TA/CPA25-09",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TA CPA 25-09 LEGAL DESCRIPTIONS.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-09%20LEGAL%20DESCRIPTIONS.DOCX.pdf?documentType=1&meetingId=2703&itemId=17842&publishId=151991&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-09 LEGAL DESCRIPTIONS.DOCX",
+          "originalText": "TA CPA 25-09 LEGAL DESCRIPTIONS.DOCX"
+        },
+        {
+          "title": "TA CPA 25-09 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-09%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2703&itemId=17842&publishId=151992&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-09 TCC PACKET.PDF",
+          "originalText": "TA CPA 25-09 TCC PACKET.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025.PDF.pdf?documentType=1&meetingId=2703&itemId=17842&publishId=151993&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025.PDF",
+          "originalText": "TCC TRANSMITTAL_10302025.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025_REVISED.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025_REVISED.PDF.pdf?documentType=1&meetingId=2703&itemId=17842&publishId=151994&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025_REVISED.PDF",
+          "originalText": "TCC TRANSMITTAL_10302025_REVISED.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025_REVISED...PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025_REVISED...PDF.pdf?documentType=1&meetingId=2703&itemId=17842&publishId=151995&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025_REVISED...PDF",
+          "originalText": "TCC TRANSMITTAL_10302025_REVISED...PDF"
+        }
+      ],
+      "folioNumbers": [
+        "189020.0000",
+        "189021.0000",
+        "189022.0000",
+        "189023.0000",
+        "189025.0000",
+        "189026.0000",
+        "189027.0000",
+        "189028.0000",
+        "189029.0000",
+        "189030.0000",
+        "189037.0000",
+        "189038.0000",
+        "189039.0000",
+        "189040.0000",
+        "189041.0000",
+        "189048.0000",
+        "189253.0000",
+        "189260.0000"
+      ],
+      "location": "1703  North  24",
+      "coordinates": {
+        "lat": 27.959776,
+        "lng": -82.431906
+      },
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "18165",
+      "title": "File No. TA/CPA25-10\nContinued Public Hearing from September 25, 2025 on a privately initiated map amendment for property located at 2602, 2625 and 2801 East 4th Avenue, 2701, 2702 and 2710 East 5th Avenue and Folio Numbers 189483-0005, 189516-0010 and 189508-0100, from Heavy Industrial (HI) to Urban Mixed Use-60 (UMU-60).",
+      "rawTitle": "File No. TA/CPA25-10\nContinued Public Hearing from September 25, 2025 on a privately initiated map amendment for property located at 2602, 2625 and 2801 East 4th Avenue, 2701, 2702 and 2710 East 5th Avenue and Folio Numbers 189483-0005, 189516-0010 and 189508-0100, from Heavy Industrial (HI) to Urban Mixed Use-60 (UMU-60).",
+      "fileNumber": "TA/CPA25-10",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=151996&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
+          "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF"
+        },
+        {
+          "title": "TA CPA 25-10 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=151997&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-10 TCC PACKET.PDF",
+          "originalText": "TA CPA 25-10 TCC PACKET.PDF"
+        },
+        {
+          "title": "TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20-%20LEGAL%20DESCRIPTIONS.DOCX.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=151998&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX",
+          "originalText": "TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX"
+        },
+        {
+          "title": "CONTINUANCE REQUEST_ TA_CPA 25-10.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CONTINUANCE%20REQUEST_%20TA_CPA%2025-10.PDF.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=151999&isSection=False&isAttachment=True",
+          "originalTitle": "Download CONTINUANCE REQUEST_ TA_CPA 25-10.PDF",
+          "originalText": "CONTINUANCE REQUEST_ TA_CPA 25-10.PDF"
+        },
+        {
+          "title": "TA CPA 25-10 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=152000&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-10 TCC PACKET.PDF",
+          "originalText": "TA CPA 25-10 TCC PACKET.PDF"
+        },
+        {
+          "title": "TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20-%20LEGAL%20DESCRIPTIONS.DOCX.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=152001&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX",
+          "originalText": "TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025.PDF.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=152002&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025.PDF",
+          "originalText": "TCC TRANSMITTAL_10302025.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025_REVISED.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025_REVISED.PDF.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=152003&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025_REVISED.PDF",
+          "originalText": "TCC TRANSMITTAL_10302025_REVISED.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025_REVISED...PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025_REVISED...PDF.pdf?documentType=1&meetingId=2703&itemId=18165&publishId=152004&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025_REVISED...PDF",
+          "originalText": "TCC TRANSMITTAL_10302025_REVISED...PDF"
+        }
+      ],
+      "folioNumbers": [
+        "176067.0000",
+        "189478.0000",
+        "189482.0000",
+        "189483.0000",
+        "189483.0005",
+        "189497.0000",
+        "189498.0000",
+        "189507.0000",
+        "189508.0000",
+        "189508.0100",
+        "189516.0010"
+      ],
+      "location": "2801 East 4",
+      "coordinates": {
+        "lat": 27.9575,
+        "lng": -82.42885
+      },
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "17839",
+      "title": "File No. TA/CPA25-06\nTransmittal public hearing on a text amendment to update five (5) Sections of the Tampa Comprehensive Plan including Recreation and Open Space, Capital Improvements, Solid Waste, Intergovernmental Coordination and Definitions",
+      "rawTitle": "File No. TA/CPA25-06\nTransmittal public hearing on a text amendment to update five (5) Sections of the Tampa Comprehensive Plan including Recreation and Open Space, Capital Improvements, Solid Waste, Intergovernmental Coordination and Definitions",
+      "fileNumber": "TA/CPA25-06",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TA CPA 25-06 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-06%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2703&itemId=17839&publishId=152005&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-06 TCC PACKET.PDF",
+          "originalText": "TA CPA 25-06 TCC PACKET.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025.PDF.pdf?documentType=1&meetingId=2703&itemId=17839&publishId=152006&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025.PDF",
+          "originalText": "TCC TRANSMITTAL_10302025.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025_REVISED.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025_REVISED.PDF.pdf?documentType=1&meetingId=2703&itemId=17839&publishId=152007&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025_REVISED.PDF",
+          "originalText": "TCC TRANSMITTAL_10302025_REVISED.PDF"
+        },
+        {
+          "title": "TCC TRANSMITTAL_10302025_REVISED...PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_10302025_REVISED...PDF.pdf?documentType=1&meetingId=2703&itemId=17839&publishId=152008&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_10302025_REVISED...PDF",
+          "originalText": "TCC TRANSMITTAL_10302025_REVISED...PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "17632",
+      "title": "File No. AB2-25-15\nPublic Hearing on application of VBK Santoshi LLC requesting a Special Use 2 for a Restaurant; Beer, Wine and Liquor (Consumption on Premises Only) generally located at 2905 North 50th Street.",
+      "rawTitle": "File No. AB2-25-15\nPublic Hearing on application of VBK Santoshi LLC requesting a Special Use 2 for a Restaurant; Beer, Wine and Liquor (Consumption on Premises Only) generally located at 2905 North 50th Street.",
+      "fileNumber": "AB2-25-15",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "AB2-25-15 - CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-15%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2703&itemId=17632&publishId=152009&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-15 - CERTIFIED APPLICATION.PDF",
+          "originalText": "AB2-25-15 - CERTIFIED APPLICATION.PDF"
+        },
+        {
+          "title": "AB2-25-15 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-15%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2703&itemId=17632&publishId=152010&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-15 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "AB2-25-15 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "AB2-25-15 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-15%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2703&itemId=17632&publishId=152011&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-15 SITE PLAN.PDF",
+          "originalText": "AB2-25-15 SITE PLAN.PDF"
+        },
+        {
+          "title": "AB2-25-15 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-15%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2703&itemId=17632&publishId=152012&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-15 STAFF REPORT FINAL.PDF",
+          "originalText": "AB2-25-15 STAFF REPORT FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "OTHER",
+        "currentZoning": "C",
+        "requestedZoning": null,
+        "futureLandUse": "Community Commercial-35",
+        "waivers": [],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations due to distance separation waiver requested. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-25-0000015"
+      }
+    },
+    {
+      "number": 6,
+      "agendaItemId": "17633",
+      "title": "File No. AB2-25-20\nPublic Hearing on application of Ayon Realty LLC requesting a Special Use 2 for a Small Venue; Beer and Wine (Consumption on Premises Only) generally located at 340 East Davis Boulevard.",
+      "rawTitle": "File No. AB2-25-20\nPublic Hearing on application of Ayon Realty LLC requesting a Special Use 2 for a Small Venue; Beer and Wine (Consumption on Premises Only) generally located at 340 East Davis Boulevard.",
+      "fileNumber": "AB2-25-20",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "AB2-25-20 - CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-20%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2703&itemId=17633&publishId=152013&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-20 - CERTIFIED APPLICATION.PDF",
+          "originalText": "AB2-25-20 - CERTIFIED APPLICATION.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2703&itemId=17633&publishId=152014&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "AB2-25-20 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-20%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2703&itemId=17633&publishId=152015&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-20 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "AB2-25-20 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "AB2-25-20 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-20%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2703&itemId=17633&publishId=152016&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-20 STAFF REPORT FINAL.PDF",
+          "originalText": "AB2-25-20 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "AB2-25-20 - SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-20%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2703&itemId=17633&publishId=152017&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-20 - SITE PLAN.PDF",
+          "originalText": "AB2-25-20 - SITE PLAN.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "OTHER",
+        "currentZoning": "C",
+        "requestedZoning": null,
+        "futureLandUse": "Community Mixed-Use",
+        "waivers": [],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Minor  site  plan  modifications  are  required  to  be  made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-25-0000020"
+      }
+    },
+    {
+      "number": 7,
+      "agendaItemId": "17634",
+      "title": "File No. AB2-25-21\nPublic Hearing on application of Palori Equities Inc. requesting a Special Use 2 for a Restaurant; Beer, Wine and Liquor (Consumption on Premises Only) generally located at 218 and 220 East Davis Boulevard.",
+      "rawTitle": "File No. AB2-25-21\nPublic Hearing on application of Palori Equities Inc. requesting a Special Use 2 for a Restaurant; Beer, Wine and Liquor (Consumption on Premises Only) generally located at 218 and 220 East Davis Boulevard.",
+      "fileNumber": "AB2-25-21",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "AB2-25-21- CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-21-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2703&itemId=17634&publishId=152018&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-21- CERTIFIED APPLICATION.PDF",
+          "originalText": "AB2-25-21- CERTIFIED APPLICATION.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2703&itemId=17634&publishId=152019&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "AB2-25-21 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-21%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2703&itemId=17634&publishId=152020&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-21 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "AB2-25-21 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "AB2-25-21 - SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-21%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2703&itemId=17634&publishId=152021&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-21 - SITE PLAN.PDF",
+          "originalText": "AB2-25-21 - SITE PLAN.PDF"
+        },
+        {
+          "title": "AB2-25-21 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-21%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2703&itemId=17634&publishId=152022&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-21 STAFF REPORT FINAL.PDF",
+          "originalText": "AB2-25-21 STAFF REPORT FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "OTHER",
+        "currentZoning": "C",
+        "requestedZoning": null,
+        "futureLandUse": "Community Mixed Use",
+        "waivers": [],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Minor  site  plan  modifications  are  required  to  be  made between first and second reading should it be the pleasure of City Council to approve this application. LOCATION MAP: SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-25-0000021"
+      }
+    },
+    {
+      "number": 8,
+      "agendaItemId": "17631",
+      "title": "File No. AB2-25-13\nPublic hearing on application of Pointe Plaza Associates LLC requesting a Special Use 2 for a Large Venue; Beer, Wine and Liquor (Consumption on Premises Only) generally located at 4400 & 4410 West Boy Scout Boulevard.\n\nEmail from Leo Debardeleben, Urban Planner II, that the applicant has formally requested withdrawal of the application. (To be R/F)",
+      "rawTitle": "File No. AB2-25-13\nPublic hearing on application of Pointe Plaza Associates LLC requesting a Special Use 2 for a Large Venue; Beer, Wine and Liquor (Consumption on Premises Only) generally located at 4400 & 4410 West Boy Scout Boulevard.\n\nEmail from Leo Debardeleben, Urban Planner II, that the applicant has formally requested withdrawal of the application. (To be R/F)",
+      "fileNumber": "AB2-25-13",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "AB2-25-13 - CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-13%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2703&itemId=17631&publishId=152023&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-13 - CERTIFIED APPLICATION.PDF",
+          "originalText": "AB2-25-13 - CERTIFIED APPLICATION.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2703&itemId=17631&publishId=152024&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "AB2-25-13 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-13%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2703&itemId=17631&publishId=152025&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-13 AFFIDAVIT OF COMPLIANCE.PDF",
+          "originalText": "AB2-25-13 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "AB2-25-13 - 4400 &AMP;AMP; 4410 W BOY SCOUT BLVD - WITHDRAWAL .PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-13%20-%204400%20_AMP%3bAMP%3b%204410%20W%20BOY%20SCOUT%20BLVD%20-%20WITHDRAWAL%20.PDF.pdf?documentType=1&meetingId=2703&itemId=17631&publishId=152026&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-13 - 4400 &AMP;AMP; 4410 W BOY SCOUT BLVD - WITHDRAWAL .PDF",
+          "originalText": "AB2-25-13 - 4400 &AMP;AMP; 4410 W BOY SCOUT BLVD - WITHDRAWAL .PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2025-10-30"
+}

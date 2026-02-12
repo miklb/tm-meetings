@@ -1,0 +1,36 @@
+{
+  "meeting_id": "2436",
+  "meeting_date": "2022-11-03",
+  "videos": [
+    {
+      "video_id": "-Bf4zSEtjgA",
+      "title": "TCC 11/3/22 Pt.3",
+      "part": 3,
+      "session": null,
+      "published_at": "2022-11-04T09:57:37Z",
+      "duration": "PT2H21M57S",
+      "chapters": [],
+      "offset_seconds": 0
+    },
+    {
+      "video_id": "CJWUphmVWbk",
+      "title": "TCC 11/3/22 Pt.2",
+      "part": 2,
+      "session": null,
+      "published_at": "2022-11-04T06:58:45Z",
+      "duration": "PT1H21M47S",
+      "chapters": [],
+      "offset_seconds": 0
+    },
+    {
+      "video_id": "IYMsYZFCo8A",
+      "title": "TCC 11/3/22",
+      "part": 1,
+      "session": null,
+      "published_at": "2022-11-04T04:12:26Z",
+      "duration": "PT3H41S",
+      "chapters": [],
+      "offset_seconds": 14.0
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}Tampa City Council Transcripts{% endblock %}
+
+{% block content %}
+<div class="hero">
+    <h1>Tampa City Council Transcripts</h1>
+    <p>Searchable, video-synced transcripts of City Council meetings</p>
+</div>
+
+{% if meetings %}
+<div class="meetings-grid">
+    {% for meeting in meetings %}
+    <a href="{{ meeting.url }}" class="meeting-card">
+        <div class="meeting-thumbnail">
+            {% if meeting.thumbnail_url %}
+            <img src="{{ meeting.thumbnail_url }}" alt="Meeting thumbnail" loading="lazy">
+            {% else %}
+            <span class="placeholder-icon">🏛️</span>
+            {% endif %}
+        </div>
+        
+        <div class="meeting-card-body">
+            <div class="meeting-card-header">
+                <div class="meeting-date">{{ meeting.meeting_date }}</div>
+                <div class="meeting-id">#{{ meeting.meeting_id }}</div>
+            </div>
+
+            <div class="meeting-type">{{ meeting.meeting_title }}</div>
+
+            <div class="meeting-stats">
+                {% if meeting.video_count > 0 %}
+                <div class="stat-item">
+                    <span class="stat-icon">📹</span>
+                    <span>{{ meeting.video_count }} {% if meeting.video_count == 1 %}video{% else %}parts{% endif %}</span>
+                </div>
+                {% endif %}
+
+                {% if meeting.total_duration %}
+                <div class="stat-item">
+                    <span class="stat-icon">⏱️</span>
+                    <span>{{ meeting.total_duration }}</span>
+                </div>
+                {% endif %}
+
+                <div class="stat-item">
+                    <span class="stat-icon">📝</span>
+                    <span>{{ meeting.segment_count }} segments</span>
+                </div>
+            </div>
+        </div>
+    </a>
+    {% endfor %}
+</div>
+{% else %}
+<div class="no-meetings">
+    <h3>No meetings available</h3>
+    <p>Check back soon for new transcripts.</p>
+</div>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,7 @@
+1.  Channel District CAC Chair, Andy Scaglione, to appear and provide a verbal report outlining activities and/or concerns of said CAC.
+2.  CRA Director's Monthly Report Memorandum from Cedric McCray, Interim CRA Director, transmitting a written report for said agenda item.
+3.  CRA Staff to provide an update on the Community Redevelopment Plan for Central Park and Tampa Heights Riverfront.  Memorandum from Courtney Orr, CRA Development Manager, requesting that said agenda item be continued to March 13, 2025.
+4.  Resolution approving an interlocal agreement by, between and among the Gas Worx Community Development District, the City of Tampa, Florida and the Community Redevelopment Agency of the City of Tampa, Florida. Memorandum from Courtney Orr, CRA Development Manager, and Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item.
+5.  Commercial Grant Agreement Master Template Revision
+6.  Channel District Community Advisory Committee Appointment for Katherine Hardwick Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item.
+7.  Tampa Heights Community Advisory Committee appointment for Janna Davis Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item.

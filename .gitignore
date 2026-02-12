@@ -1,0 +1,103 @@
+# Archive (deprecated code, kept locally for reference)
+archive/
+**/archived/
+
+# Dependencies
+node_modules/
+package-lock.json
+.pnpm-store/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.venv/
+venv/
+ENV/
+env/
+
+# Build outputs
+site/_site/
+site/dist/
+site/.cache/
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+*.cover
+
+# Datasette
+*.db-shm
+*.db-wal
+.datasette/
+
+# Temporary files
+*.tmp
+*.bak
+*.orig
+.~*
+
+# OS
+Thumbs.db
+.Spotlight-V100
+.Trashes
+
+# Cloudflare
+.wrangler/
+
+# Sensitive data (keep these out even though data/ is tracked)
+data/credentials/
+*.key
+*.pem
+secrets.json
+
+# Large binary files (PDFs should go to R2, not git)
+*.pdf
+
+# Python virtual environments
+.python-version
+
+# Eleventy
+.eleventy-cache/
+
+# npm debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Audio/video files (downloaded for processing, not tracked)
+*.mp3
+*.wav
+*.srt
+temp_audio/
+test_audio_samples/
+
+# Whisper cache and model files (large, generated)
+**/data/whisper_cache/
+**/data/models/
+
+# Agenda scraper specific
+agenda-scraper/output/
+agenda-scraper/.document-cache/
+agenda-scraper/debug/
+agenda-scraper/legacy/
+
+# Transcript processor specific
+transcript-cleaner/processor/output/

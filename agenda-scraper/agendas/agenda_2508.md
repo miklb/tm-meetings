@@ -1,0 +1,12 @@
+1. **File No. VAC-24-19** Public hearing on application by Christopher Horocki requesting to vacate part of the alley lying North of E 7th Ave, South of E Oak Ave, East of I275, and West of N Taliaferro Ave.
+2. **File No. VAC-25-03** Public Hearing on Application by RMC Tampa Commons, LLC & Sherwood Properties, LLC requesting to vacate a portion of Marie Avenue lying North of Kennedy Boulevard, South of North B Street, East of Dale Mabry Highway, and West of Sterling Avenue.
+3. **File No. REZ-24-47** Public Hearing on the application of Marlon Colindres request to rezone the property generally located at 2010 East Powhatan Avenue from SH-RS to SH-RM.
+4. **File No. REZ-24-90** Public Hearing on the application of Ray Hajian request to rezone the property generally located at 3916 West Alva Street from CG to PD (Vehicle Sales & Leasing).
+5. **File No. REZ-24-96** Public Hearing on the application of Maria Cury request to rezone the property generally located at 3212 West Marlin Avenue from RS-60 to RS-50.
+6. **File No. REZ-25-03** Public Hearing on the application of Christopher Horocki request to rezone the property generally located at 614 East 7th Avenue from RM-24 to CN.
+7. **File No. REZ-25-04** Public Hearing on the application of Nic Judie request to rezone the property generally located at 2711 North MacDill Avenue from CG to PD (Air Conditioned Storage and Clinic).
+8. **File No. REZ-25-05** Public Hearing on the application of Todd Pressman request to rezone the property generally located at 201 North Dale Mabry Highway from PD to PD (Storefront Residential, All CG Uses; Office, Business and Professional; Retail Sales, Shoppers’ Goods; Restaurant; and Personal Services).
+9. **File No. REZ-25-08** Public Hearing on the application of Mac McCraw request to rezone the property generally located at 5200 South Manhattan Avenue from CI to PD (Residential, Single-family Attached).
+10. **File No. REZ-24-111** (Will not be heard; Mis-noticed) Public Hearing on the application of Mike Perez request to rezone the property generally located at 2403 West Fig Street from RM-16 to RM-18.
+
+VAC-24-0000019:1, VAC-25-0000003:2, REZ-24-0000047:3, REZ-24-0000090:4, REZ-24-0000096:5, REZ-25-0000003:6, REZ-25-0000004:7, REZ-25-0000005:8, REZ-25-0000008:9, REZ-24-0000111:10

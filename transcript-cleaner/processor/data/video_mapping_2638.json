@@ -1,0 +1,88 @@
+{
+  "meeting_id": 2638,
+  "meeting_date": "2025-10-16",
+  "videos": [
+    {
+      "video_id": "V3eMmvNM3ns",
+      "title": "Tampa City Council PM - 10/16/25",
+      "part": 1,
+      "duration": "PT3H42M50S",
+      "offset_seconds": 47,
+      "transcript_start_time": "05:01:48PM",
+      "session": null,
+      "published_at": "2025-10-17T12:54:00Z",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM25-18384 - Racial Reconciliation Committee Commendation",
+          "timestamp": "00:11:51",
+          "seconds": 711
+        },
+        {
+          "title": "Item 2: BF25-17961 - 1002 N Howard & Cypress St",
+          "timestamp": "00:21:50",
+          "seconds": 1310
+        },
+        {
+          "title": "Item 3: BF25-17962 - Hillsborough & Shadowlawn Ave",
+          "timestamp": "00:24:50",
+          "seconds": 1490
+        },
+        {
+          "title": "Item 6: REZ-25-30 - 2741\u20132747 W Green Street",
+          "timestamp": "00:26:20",
+          "seconds": 1580
+        },
+        {
+          "title": "Item 4: VAC-25-14 - Alley Near 29th & Lake Ave",
+          "timestamp": "00:55:27",
+          "seconds": 3327
+        },
+        {
+          "title": "Item 5: REZ-25-93 - 29th Street & 32nd Avenue",
+          "timestamp": "01:07:35",
+          "seconds": 4055
+        },
+        {
+          "title": "Item 7: REZ-25-82 - 6008 S 6th Street",
+          "timestamp": "02:23:55",
+          "seconds": 8635
+        },
+        {
+          "title": "Item 8: REZ-25-83 - 6307 S Main Avenue",
+          "timestamp": "02:36:00",
+          "seconds": 9360
+        },
+        {
+          "title": "Item 9: REZ-25-84 - 5802\u20135804 N Florida Avenue",
+          "timestamp": "02:46:15",
+          "seconds": 9975
+        },
+        {
+          "title": "Item 10: REZ-25-85 - 3802 S Dale Mabry Hwy",
+          "timestamp": "03:06:35",
+          "seconds": 11195
+        },
+        {
+          "title": "Item 11: REZ-25-95 - 2802 W Kennedy Blvd",
+          "timestamp": "03:22:00",
+          "seconds": 12120
+        },
+        {
+          "title": "Item 12: REZ-25-101 - 1501 W Grace Street",
+          "timestamp": "03:29:10",
+          "seconds": 12550
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:35:35",
+          "seconds": 12935
+        }
+      ]
+    }
+  ]
+}

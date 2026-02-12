@@ -1,0 +1,53 @@
+{
+  "meetingId": "2823",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "February 5, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2823&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 48,
+      "agendaItemId": "16560",
+      "title": "File No. VAC-25-10Public hearing on application by Rafael Crespo and Yunia Morales (Agent- Victor Molina) requesting to vacate the alley lying North of W Cordelia St, South of W Ivy St, East of N Lincoln Ave, and West of N Mantanzas Ave. (Motion to reconsider and set public hearing initiated by Carlson-Viera on July 31, 2025)(Previously heard on July 17, 2025, at which a motion initiated by Hurtak-Maniscalco to deny the application was adopted with Miranda voting no) Email from Stephen Michelini, applicant’s representative, notifying council that said public hearing was mis-noticed and requesting that it be rescheduled. (To be R/F)",
+      "rawTitle": "File No. VAC-25-10Public hearing on application by Rafael Crespo and Yunia Morales (Agent- Victor Molina) requesting to vacate the alley lying North of W Cordelia St, South of W Ivy St, East of N Lincoln Ave, and West of N Mantanzas Ave. (Motion to reconsider and set public hearing initiated by Carlson-Viera on July 31, 2025)(Previously heard on July 17, 2025, at which a motion initiated by Hurtak-Maniscalco to deny the application was adopted with Miranda voting no) Email from Stephen Michelini, applicant’s representative, notifying council that said public hearing was mis-noticed and requesting that it be rescheduled. (To be R/F)",
+      "fileNumber": "VAC-25-10Public",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 58,
+      "agendaItemId": "20936",
+      "title": "File No. CM26-20936City Council to discuss the FY25 budget surplus. (Original motion initiated by Hurtak-Viera on January 15, 2026) Memorandum from Councilmember Carlson, transmitting additional information for said item. (To be R/F).",
+      "rawTitle": "File No. CM26-20936City Council to discuss the FY25 budget surplus. (Original motion initiated by Hurtak-Viera on January 15, 2026) Memorandum from Councilmember Carlson, transmitting additional information for said item. (To be R/F).",
+      "fileNumber": "CM26-20936Cit",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-02-05"
+}

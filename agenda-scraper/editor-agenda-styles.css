@@ -1,0 +1,148 @@
+/* Editor styles for agenda pages - Tampa Monitor Theme */
+/* This file should be enqueued in the block editor for better preview accuracy */
+
+.editor-styles-wrapper .wp-block-details {
+  border: 1px solid #8a8a82; /* accent-4 */
+  border-radius: 8px;
+  margin: 2rem 0; /* approximate spacing-40 */
+  background: #f1f1e6; /* base */
+  overflow: hidden;
+}
+
+/* Ensure proper display order for agenda items in editor */
+.editor-styles-wrapper .wp-block-list-item {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.editor-styles-wrapper .wp-block-list-item .wp-block-details {
+  order: 1 !important;
+}
+
+.editor-styles-wrapper
+  .wp-block-list-item
+  .wp-block-group.agenda-supporting-docs {
+  order: 2 !important;
+}
+
+.editor-styles-wrapper .wp-block-details summary {
+  background: #f8f8f2; /* accent-5 */
+  padding: 1.5rem 2rem; /* approximate spacing-30 spacing-40 */
+  cursor: pointer;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+  color: #314a59; /* contrast */
+  border-bottom: 1px solid #8a8a82;
+  position: relative;
+  transition: background-color 0.2s ease;
+  -webkit-user-select: none;
+  user-select: none;
+  list-style: none;
+}
+
+.editor-styles-wrapper .wp-block-details summary:hover {
+  background: #e6b45e; /* accent-1 */
+}
+
+.editor-styles-wrapper .wp-block-details summary:focus {
+  outline: 2px solid #1d636b; /* accent-3 */
+  outline-offset: 2px;
+}
+
+.editor-styles-wrapper .wp-block-details summary::marker,
+.editor-styles-wrapper .wp-block-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.editor-styles-wrapper .wp-block-details summary::after {
+  content: "▼";
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  color: #1d636b; /* accent-3 */
+  transition: opacity 0.2s ease;
+}
+
+.editor-styles-wrapper .wp-block-details[open] summary::after {
+  content: "▲";
+}
+
+.editor-styles-wrapper .wp-block-details .wp-block-paragraph {
+  padding: 2rem;
+  margin: 0;
+  background: #f1f1e6; /* base */
+  font-family: "PT Serif", serif;
+  line-height: 1.6;
+  color: #314a59; /* contrast */
+}
+
+/* Ordered list styling inside details block for editor */
+.editor-styles-wrapper .wp-block-details .wp-block-list {
+  padding: 2rem;
+  margin: 0;
+  background: #f1f1e6; /* base */
+}
+
+.editor-styles-wrapper .wp-block-group.agenda-supporting-docs {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #8a8a82;
+}
+
+.editor-styles-wrapper
+  .wp-block-group.agenda-supporting-docs
+  .wp-block-heading {
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 600;
+  color: #314a59;
+  margin: 0 0 1rem 0;
+  font-size: 1.125rem;
+}
+
+.editor-styles-wrapper .wp-block-group.agenda-supporting-docs .wp-block-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.editor-styles-wrapper
+  .wp-block-group.agenda-supporting-docs
+  .wp-block-list
+  li {
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.editor-styles-wrapper
+  .wp-block-group.agenda-supporting-docs
+  .wp-block-list
+  li::before {
+  content: "📄";
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.1em;
+}
+
+.editor-styles-wrapper .wp-block-group.agenda-supporting-docs .wp-block-list a {
+  color: #1d636b; /* accent-3 */
+  text-decoration: underline;
+  text-decoration-color: #e6b45e; /* accent-1 */
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-family: "Libre Franklin", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem; /* small font size */
+}
+
+.editor-styles-wrapper
+  .wp-block-group.agenda-supporting-docs
+  .wp-block-list
+  a:hover {
+  color: #314a59; /* contrast */
+  text-decoration-color: #1d636b; /* accent-3 */
+  text-decoration-thickness: 3px;
+}
