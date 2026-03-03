@@ -1,0 +1,296 @@
+{
+  "meetingId": "2712",
+  "meetingType": "evening",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "February 26, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2712&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "21299",
+      "title": "File No. TA/CPA25-15\nContinued Public hearing from January 29, 2026 on a privately initiated map amendment for property located at 4304 North 26th Street, 4205 North 25th Street and Folio Number 156781-0000, from Residential-10 (R-10) to Residential-20 (R-20).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 4304 North 26th Street, 4205 North 25th Street and Folio Number 156781-0000, from Residential-10 (R-10) to Residential-20 (R-20); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA25-15\nContinued Public hearing from January 29, 2026 on a privately initiated map amendment for property located at 4304 North 26th Street, 4205 North 25th Street and Folio Number 156781-0000, from Residential-10 (R-10) to Residential-20 (R-20).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 4304 North 26th Street, 4205 North 25th Street and Folio Number 156781-0000, from Residential-10 (R-10) to Residential-20 (R-20); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "fileNumber": "TA/CPA25-15",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TCC TRANSMITTAL_012926.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=179283&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_012926.PDF",
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
+        },
+        {
+          "title": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=179284&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-15 LEGAL DESCRIPTION.DOCX",
+          "originalText": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX"
+        },
+        {
+          "title": "TA CPA 25-15 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=179285&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-15 TCC PACKET.PDF",
+          "originalText": "TA CPA 25-15 TCC PACKET.PDF"
+        },
+        {
+          "title": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA25-15%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=179286&isSection=False&isAttachment=True",
+          "originalTitle": "Download CPA25-15 - ORDINANCE AND EXHIBIT A.PDF",
+          "originalText": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF"
+        }
+      ],
+      "folioNumbers": [
+        "154981.0000",
+        "154983.0000",
+        "156781.0000"
+      ],
+      "location": "4304 North 26",
+      "coordinates": {
+        "lat": 27.98453,
+        "lng": -82.43081
+      },
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "21300",
+      "title": "File No. TA/CPA25-16\nContinued Public hearing from January 29, 2026 on a privately initiated map amendment for property located at 1301 East Columbus Drive, from Residential-20 (R-20 to Residential-35 (R-35).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 1301 East Columbus Avenue, from Residential-20 (R-20) to Residential-35 (R-35); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA25-16\nContinued Public hearing from January 29, 2026 on a privately initiated map amendment for property located at 1301 East Columbus Drive, from Residential-20 (R-20 to Residential-35 (R-35).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 1301 East Columbus Avenue, from Residential-20 (R-20) to Residential-35 (R-35); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "fileNumber": "TA/CPA25-16",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TCC TRANSMITTAL_012926.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=179287&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_012926.PDF",
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
+        },
+        {
+          "title": "TA CPA 25-16 LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-16%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=179288&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-16 LEGAL DESCRIPTION.DOCX",
+          "originalText": "TA CPA 25-16 LEGAL DESCRIPTION.DOCX"
+        },
+        {
+          "title": "TA CPA 25-16 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-16%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=179289&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-16 TCC PACKET.PDF",
+          "originalText": "TA CPA 25-16 TCC PACKET.PDF"
+        },
+        {
+          "title": "CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA25-16%20-%20ORDINANCE%20AND%20EXHIBIT%20A%20-%20FINAL.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=179290&isSection=False&isAttachment=True",
+          "originalTitle": "Download CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF",
+          "originalText": "CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [
+        "197975.0000"
+      ],
+      "location": "1301 East Columbus Drive",
+      "coordinates": {
+        "lat": 27.96665,
+        "lng": -82.44534
+      },
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "21301",
+      "title": "File No. TA/CPA25-17\nContinued Public hearing from January 29, 2026 on a publicly initiated map amendment for property located at 4216 North 26th Street, from Residential-10 (R-10 to Residential-20 (R-20).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 4216 North 26th Street, from Residential-10 (R-10) to Residential-20 (R-20); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.\n\nEmail from Planning Commission staff, requesting that said public hearing be continued to April 23, 2026. (To be R/F)",
+      "rawTitle": "File No. TA/CPA25-17\nContinued Public hearing from January 29, 2026 on a publicly initiated map amendment for property located at 4216 North 26th Street, from Residential-10 (R-10 to Residential-20 (R-20).\n\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 4216 North 26th Street, from Residential-10 (R-10) to Residential-20 (R-20); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.\n\nEmail from Planning Commission staff, requesting that said public hearing be continued to April 23, 2026. (To be R/F)",
+      "fileNumber": "TA/CPA25-17",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TCC TRANSMITTAL_012926.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=179291&isSection=False&isAttachment=True",
+          "originalTitle": "Download TCC TRANSMITTAL_012926.PDF",
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
+        },
+        {
+          "title": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=179292&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-17 LEGAL DESCRIPTION.DOCX",
+          "originalText": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX"
+        },
+        {
+          "title": "TA CPA 25-17 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=179293&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-17 TCC PACKET.PDF",
+          "originalText": "TA CPA 25-17 TCC PACKET.PDF"
+        },
+        {
+          "title": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA25-17%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=179294&isSection=False&isAttachment=True",
+          "originalTitle": "Download CPA25-17 - ORDINANCE AND EXHIBIT A.PDF",
+          "originalText": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF"
+        },
+        {
+          "title": "TA CPA 25-17 CONTINUANCE REQUEST.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=179295&isSection=False&isAttachment=True",
+          "originalTitle": "Download TA CPA 25-17 CONTINUANCE REQUEST.PDF",
+          "originalText": "TA CPA 25-17 CONTINUANCE REQUEST.PDF"
+        }
+      ],
+      "folioNumbers": [
+        "156780.0000"
+      ],
+      "location": "4216 North 26",
+      "coordinates": {
+        "lat": 27.98411,
+        "lng": -82.43087
+      },
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "18048",
+      "title": "File No. E2025-8 CH 27\nPublic hearing by the City Council of the City of Tampa for consideration of suspension of alcoholic beverage permit for Urban Air, for failure of said establishment to comply with the requirements of Section 27-319 of the City of Tampa Code of Ordinances. (Motion adopting resolution to schedule said public hearing initiated by Maniscalco-Viera on July 31, 2025)(Continued from September 4, 2025)",
+      "rawTitle": "File No. E2025-8 CH 27\nPublic hearing by the City Council of the City of Tampa for consideration of suspension of alcoholic beverage permit for Urban Air, for failure of said establishment to comply with the requirements of Section 27-319 of the City of Tampa Code of Ordinances. (Motion adopting resolution to schedule said public hearing initiated by Maniscalco-Viera on July 31, 2025)(Continued from September 4, 2025)",
+      "fileNumber": "E2025-8",
+      "background": "The City has previously granted an “R” or “Special Restaurant” alcoholic beverage approval to the establishments listed on Exhibit “A”, attached hereto and pursuant to Section 27-319 (a)(2), of the City of Tampa Code of Ordinances (“City Code”), the property owner or holder of such AB license is required to submit certain specified information to the City on or before the thirty-first (31st) day of January of each year.\n\nThe establishments listed on Exhibit “A” have failed to comply with said requirements and non-compliance with any part of Section 27-319 is a violation of the section and subject to the provisions of the City Code Section 27-318, including revocation or suspension for cause.\n\nPursuant to City Code Section 27-318(d), the City Council shall set a public hearing to consider the revocation or suspension of any approval to sell alcoholic beverages for cause, and the City Clerk shall notify the owner of the property and the holder of the alcoholic beverage license of the set location, date, and time of the public hearing, by certified mail, not less than thirty (30) days from the date of the notice.",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=179296&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "COMBINED AB FILES.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/COMBINED%20AB%20FILES.PDF.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=179297&isSection=False&isAttachment=True",
+          "originalTitle": "Download COMBINED AB FILES.PDF",
+          "originalText": "COMBINED AB FILES.PDF"
+        },
+        {
+          "title": "09052025144311.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/09052025144311.PDF.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=179298&isSection=False&isAttachment=True",
+          "originalTitle": "Download 09052025144311.PDF",
+          "originalText": "09052025144311.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "21302",
+      "title": "File No. AB2-25-12 (Will not be heard; Request to Withdraw)\nContinued Public Hearing from January 29, 2026, September 25, 2025 on application of Ehlers Enterprises LLP requesting a Special Use 2 for a Bar/Lounge/Nightclub Beer, Wine & Liquor (Consumption on Premises Only) generally located at 1625 East 7th Avenue.\n\n(Ordinance being presented for first reading consideration) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – bar/lounge (Consumption On Premises Only) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 1625 East 7th Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance No. 2012-89; providing an effective date.\n\nEmail from Stephen Michelini, applicant's representative, that due to the the petitioners wish to take no further action, requesting that said public hearing be removed from agenda  (To Be R/F)",
+      "rawTitle": "File No. AB2-25-12 (Will not be heard; Request to Withdraw)\nContinued Public Hearing from January 29, 2026, September 25, 2025 on application of Ehlers Enterprises LLP requesting a Special Use 2 for a Bar/Lounge/Nightclub Beer, Wine & Liquor (Consumption on Premises Only) generally located at 1625 East 7th Avenue.\n\n(Ordinance being presented for first reading consideration) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – bar/lounge (Consumption On Premises Only) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 1625 East 7th Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance No. 2012-89; providing an effective date.\n\nEmail from Stephen Michelini, applicant's representative, that due to the the petitioners wish to take no further action, requesting that said public hearing be removed from agenda  (To Be R/F)",
+      "fileNumber": "AB2-25-12",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-1625%20E%207TH%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179299&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF",
+          "originalText": "AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF"
+        },
+        {
+          "title": "AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20AFFIDAVIT%20%20SEPT%2025%202025%20%20501PM%20(002).PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179300&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF",
+          "originalText": "AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF"
+        },
+        {
+          "title": "(AB2-25-0000012) CONTINUANCE REQUEST.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/(AB2-25-0000012)%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179301&isSection=False&isAttachment=True",
+          "originalTitle": "Download (AB2-25-0000012) CONTINUANCE REQUEST.PDF",
+          "originalText": "(AB2-25-0000012) CONTINUANCE REQUEST.PDF"
+        },
+        {
+          "title": "AB2-25-12 - SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179302&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-12 - SITE PLAN.PDF",
+          "originalText": "AB2-25-12 - SITE PLAN.PDF"
+        },
+        {
+          "title": "AB2-25-12 STAFF REPORT.DOCX.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20STAFF%20REPORT.DOCX.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179303&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-12 STAFF REPORT.DOCX.PDF",
+          "originalText": "AB2-25-12 STAFF REPORT.DOCX.PDF"
+        },
+        {
+          "title": "1-WRITTEN COMMENT AB2-25-12.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20AB2-25-12.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179304&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENT AB2-25-12.PDF",
+          "originalText": "1-WRITTEN COMMENT AB2-25-12.PDF"
+        },
+        {
+          "title": "AB2-25-12 - SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179305&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-12 - SITE PLAN.PDF",
+          "originalText": "AB2-25-12 - SITE PLAN.PDF"
+        },
+        {
+          "title": "AB2-25-12 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179306&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-12 STAFF REPORT FINAL.PDF",
+          "originalText": "AB2-25-12 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "AB2-25-12 - ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=179307&isSection=False&isAttachment=True",
+          "originalTitle": "Download AB2-25-12 - ORDINANCE.PDF",
+          "originalText": "AB2-25-12 - ORDINANCE.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "staffReport": {
+        "landUseType": "OTHER",
+        "currentZoning": "Y",
+        "requestedZoning": null,
+        "futureLandUse": "Urban Mixed Use-60",
+        "waivers": [],
+        "findings": "FINDINGS: The  Development  Review  and  Compliance  staff  has  reviewed  the  petition  and  Development  Coordination  finds  the request INCONSISTENT with the applicable City of Tampa Land Development Regulations due to the distance separation waiver requested. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-25-0000012"
+      }
+    }
+  ],
+  "formattedDate": "2026-02-26"
+}

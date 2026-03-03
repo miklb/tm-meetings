@@ -1,0 +1,32 @@
+{
+  "meetingId": "2830",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "February 19, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2830&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 10,
+      "agendaItemId": "21127",
+      "title": "File No. PS26-21127Resolution approving the Piggyback Agreement for Automated School Zone Enforcement Program between the City of Tampa and RedSpeed Florida, LLC for implementation of a School Zone Speed Photo Enforcement Program (\"Program\"); authorizing execution thereof by the Mayor of the City of Tampa and attestation by the City Clerk; providing an effective date. Memorandum from Chief Lee Bercaw, Tampa Police Department, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. PS26-21127Resolution approving the Piggyback Agreement for Automated School Zone Enforcement Program between the City of Tampa and RedSpeed Florida, LLC for implementation of a School Zone Speed Photo Enforcement Program (\"Program\"); authorizing execution thereof by the Mayor of the City of Tampa and attestation by the City Clerk; providing an effective date. Memorandum from Chief Lee Bercaw, Tampa Police Department, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "PS26-21127Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-02-19"
+}

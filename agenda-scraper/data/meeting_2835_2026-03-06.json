@@ -1,0 +1,60 @@
+{
+  "meetingId": "2835",
+  "meetingType": "workshop",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "March 6, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2835&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "21912",
+      "title": "File No. CRA26-21912\nBoard to have a discussion on housing and commercial grants. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-21912\nBoard to have a discussion on housing and commercial grants. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-21912",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "FINAL MEMO-CRA BOARD WORKSHOP 3.6.26.DOCX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FINAL%20MEMO-CRA%20BOARD%20WORKSHOP%203.6.26.DOCX.pdf?documentType=1&meetingId=2835&itemId=21912&publishId=180907&isSection=False&isAttachment=True",
+          "originalTitle": "Download FINAL MEMO-CRA BOARD WORKSHOP 3.6.26.DOCX",
+          "originalText": "FINAL MEMO-CRA BOARD WORKSHOP 3.6.26.DOCX"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "21913",
+      "title": "File No. CRA26-21913\nBoard to have discussion on the services agreement and the performance and accountability goals. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting an update for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-21913\nBoard to have discussion on the services agreement and the performance and accountability goals. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting an update for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-21913",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-03-06"
+}

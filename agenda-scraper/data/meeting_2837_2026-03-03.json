@@ -1,0 +1,74 @@
+{
+  "meetingId": "2837",
+  "meetingType": "special",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "March 3, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2837&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "21998",
+      "title": "File No. B2026-2\nCouncil joined with the Mayor, declaring the month of March 2026 as procurement month in the City of Tampa, to expand on the awareness of the procurement professional’s role to government officials, the general public, business, and corporate leaders. (Original motion initiated by Miranda-Maniscalco on February 19, 2026)",
+      "rawTitle": "File No. B2026-2\nCouncil joined with the Mayor, declaring the month of March 2026 as procurement month in the City of Tampa, to expand on the awareness of the procurement professional’s role to government officials, the general public, business, and corporate leaders. (Original motion initiated by Miranda-Maniscalco on February 19, 2026)",
+      "fileNumber": "B2026-2",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "21999",
+      "title": "File No. B2026-2\nCitizens Budget Advisory Committee representative to speak for 5 minutes. (Original motion initiated by Hurtak-Miranda on February 19, 2026)",
+      "rawTitle": "File No. B2026-2\nCitizens Budget Advisory Committee representative to speak for 5 minutes. (Original motion initiated by Hurtak-Miranda on February 19, 2026)",
+      "fileNumber": "B2026-2",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "21995",
+      "title": "Council to discuss the FY27 Budget and budget priorities. (Original motion initiated by Hurtak-Young on January 22, 2026)",
+      "rawTitle": "Council to discuss the FY27 Budget and budget priorities. (Original motion initiated by Hurtak-Young on January 22, 2026)",
+      "fileNumber": "B2027-2Council",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-03-03"
+}
