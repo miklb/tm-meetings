@@ -199,7 +199,9 @@ function parseAgendaTable(html, extractFileNumber) {
   const $ = cheerio.load(html);
   const agendaItems = [];
 
-  $('table[style*="margin-left:30.6pt"]').each((_, table) => {
+  // Select tables structurally: two-column rows containing a loadAgendaItem link
+  // with a numbered first cell (e.g. "1."). Avoids brittle CSS value matching.
+  $('table').each((_, table) => {
     const $table = $(table);
     const $firstRow = $table.find('tbody > tr').first();
     const $cells = $firstRow.find('td');
@@ -211,24 +213,24 @@ function parseAgendaTable(html, extractFileNumber) {
     if (!numberMatch) return;
 
     const contentCell = $cells.eq(1);
-    const contentText = contentCell.text().trim();
-
-    let agendaItemId = null;
-    let hrefId = null;
 
     const link = contentCell.find('a').filter((_, el) => {
       const href = $(el).attr('href') || '';
       return href.includes('loadAgendaItem');
     }).first();
 
-    if (link.length > 0) {
-      const href = link.attr('href') || '';
-      const loadCall = href.match(/loadAgendaItem\((\d+)/);
-      if (loadCall) {
-        agendaItemId = loadCall[1];
-      }
-      hrefId = link.attr('id');
+    if (link.length === 0) return;
+
+    const contentText = contentCell.text().trim();
+    let agendaItemId = null;
+    let hrefId = null;
+
+    const href = link.attr('href') || '';
+    const loadCall = href.match(/loadAgendaItem\((\d+)/);
+    if (loadCall) {
+      agendaItemId = loadCall[1];
     }
+    hrefId = link.attr('id');
 
     agendaItems.push({
       number: parseInt(numberMatch[1], 10),
