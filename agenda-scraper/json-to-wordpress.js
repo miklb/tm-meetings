@@ -538,7 +538,7 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
     
     if (!isEveningAgenda) {
         wpHtml = `<!-- wp:paragraph -->
-<p>This is a reimagined version of the Tampa City Council agenda. It removes legalese from the description, parses the Background details from the Summary Sheet when available and provides links to supporting documents. Also included is a zoning map with current applications. A note about document links, Onbase links can change, and you can always refer to the official ${agendaTypeLower} agenda from the clerk in Onbase.</p>
+<p>This is a reimagined version of the Tampa City Council agenda. It removes legalese from the description, parses the Background details from the Summary Sheet when available and provides links to supporting documents. Also included is a zoning map with current applications. Document links point to our mirrored copies for long-term stability. For original documents, refer to the official ${agendaTypeLower} agenda from the clerk in Onbase.</p>
 <!-- /wp:paragraph -->
 
 `;
