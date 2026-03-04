@@ -1,0 +1,742 @@
+/* ==========================================================================
+   Tampa Meetings — Stylesheet
+   ========================================================================== */
+
+/* ---------- Custom Properties ---------- */
+
+:root {
+  --color-bg: #fafafa;
+  --color-surface: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #555;
+  --color-primary: #1a5f7a;
+  --color-primary-dark: #134a5f;
+  --color-link: #1a5f7a;
+  --color-link-visited: #5b2c6f;
+  --color-border: #ddd;
+  --color-badge-cc: #1a5f7a;
+  --color-badge-eve: #6c3483;
+  --color-badge-cra: #1e8449;
+  --color-badge-ws: #b9770e;
+  --color-badge-sp: #c0392b;
+  --color-badge-transcript: #374151;
+  --color-badge-video: #7c3aed;
+
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2.5rem;
+
+  --radius: 4px;
+  --max-width: 65ch;
+}
+
+/* ---------- Reset ---------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1.25;
+  margin-block: 0 var(--spacing-sm);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.15em;
+}
+
+a:visited {
+  color: var(--color-link-visited);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-primary-dark);
+}
+
+/* ---------- Skip Link ---------- */
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: -9999px;
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--spacing-sm) var(--spacing-md);
+  z-index: 100;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  inset-inline-start: var(--spacing-md);
+  inset-block-start: var(--spacing-md);
+}
+
+/* ---------- Layout ---------- */
+
+.site-header {
+  background: var(--color-primary);
+  color: #fff;
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.site-header nav {
+  max-width: var(--max-width);
+  margin-inline: auto;
+}
+
+.site-title {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-title:visited {
+  color: #fff;
+}
+
+main {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.site-footer {
+  max-width: var(--max-width);
+  margin-inline: auto;
+  padding: var(--spacing-lg);
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  border-block-start: 1px solid var(--color-border);
+}
+
+/* ---------- Homepage ---------- */
+
+.page-title {
+  font-size: clamp(1.5rem, 1.2rem + 1vw, 2rem);
+  margin-block-end: var(--spacing-xl);
+}
+
+.date-group {
+  margin-block-end: var(--spacing-xl);
+}
+
+.date-heading {
+  font-size: 1.125rem;
+  color: var(--color-text-muted);
+  border-block-end: 1px solid var(--color-border);
+  padding-block-end: var(--spacing-xs);
+  margin-block-end: var(--spacing-sm);
+}
+
+.meeting-list {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.meeting-card {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) 0;
+}
+
+.meeting-card + .meeting-card {
+  border-block-start: 1px solid var(--color-border);
+}
+
+.meeting-card a {
+  font-weight: 600;
+}
+
+.item-count {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+/* ---------- Badges ---------- */
+
+.badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 0.1em 0.5em;
+  border-radius: var(--radius);
+  color: #fff;
+  white-space: nowrap;
+  vertical-align: baseline;
+}
+
+.badge--regular {
+  background: var(--color-badge-cc);
+}
+.badge--evening {
+  background: var(--color-badge-eve);
+}
+.badge--cra {
+  background: var(--color-badge-cra);
+}
+.badge--workshop {
+  background: var(--color-badge-ws);
+}
+.badge--special {
+  background: var(--color-badge-sp);
+}
+.badge--transcript {
+  background: var(--color-badge-transcript);
+}
+.badge--video {
+  background: var(--color-badge-video);
+}
+
+/* ---------- Meeting Detail ---------- */
+
+.meeting-meta {
+  color: var(--color-text-muted);
+  margin-block-end: var(--spacing-lg);
+}
+
+.meeting-meta a {
+  font-size: 0.9rem;
+}
+
+.agenda-list {
+  list-style: none;
+  padding-inline-start: 0;
+  counter-reset: agenda-item;
+}
+
+.agenda-item {
+  padding: var(--spacing-md) 0;
+  border-block-end: 1px solid var(--color-border);
+}
+
+.agenda-item:last-child {
+  border-block-end: none;
+}
+
+.item-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.item-number {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  min-width: 2em;
+}
+
+.file-number {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.file-number a {
+  text-decoration: none;
+}
+
+.file-number a:hover {
+  text-decoration: underline;
+}
+
+.item-title {
+  margin-block: var(--spacing-xs) var(--spacing-sm);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* ---------- Background Details ---------- */
+
+.item-background {
+  margin-block: var(--spacing-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 0;
+}
+
+.item-background summary {
+  cursor: pointer;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.item-background summary:hover {
+  color: var(--color-text);
+}
+
+.item-background .background-text {
+  padding: 0 var(--spacing-md) var(--spacing-md);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* ---------- Supporting Documents ---------- */
+
+.doc-list-heading {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-block: var(--spacing-sm) var(--spacing-xs);
+}
+
+.doc-list {
+  list-style: disc;
+  padding-inline-start: 1.25em;
+  margin: 0;
+}
+
+.doc-list li {
+  font-size: 0.9rem;
+  padding-block: 0.15em;
+}
+
+.doc-list a {
+  word-break: break-word;
+}
+
+/* ---------- Agenda Type Badge ---------- */
+
+.agenda-type {
+  display: inline-block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  padding: 0.1em 0.4em;
+  border-radius: var(--radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Two-Panel Meeting Layout
+   ========================================================================== */
+
+/*
+ * On meeting detail pages the main element needs to be wider than the
+ * default 65ch so the two-panel grid has room.  The class is applied
+ * via the .meeting-layout wrapper; we use :has() where supported and
+ * also set an explicit max-width on .meeting-layout as a fallback.
+ */
+main:has(.meeting-layout) {
+  max-width: 100%;
+  padding-inline: var(--spacing-lg);
+}
+
+.meeting-layout {
+  display: grid;
+  grid-template-columns: 1fr minmax(380px, 560px);
+  gap: var(--spacing-xl);
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+/* ---------- Agenda Panel (left — sticky, scrolls as one unit) ---------- */
+
+.agenda-panel {
+  min-width: 0; /* prevent grid blowout */
+  max-height: calc(100vh - 2 * var(--spacing-md));
+  position: sticky;
+  top: var(--spacing-md);
+  align-self: start;
+  overflow-y: auto;
+}
+
+.agenda-panel__heading {
+  font-size: 1.1rem;
+  margin-block-end: var(--spacing-lg);
+}
+
+/* ---------- Media Panel (right — sticky transcript) ---------- */
+
+.media-panel {
+  position: sticky;
+  top: var(--spacing-md);
+  align-self: start;
+  max-height: calc(100vh - 2 * var(--spacing-md));
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  overflow: hidden;
+}
+
+/* ---------- Video Player ---------- */
+
+.video-player-section {
+  flex-shrink: 0;
+}
+
+/* Tabs */
+.video-tabs {
+  display: flex;
+  gap: 2px;
+  background: var(--color-border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+}
+
+.video-tab {
+  flex: 1;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  background: var(--color-surface);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-align: center;
+  transition:
+    background 0.15s,
+    color 0.15s;
+}
+
+.video-tab.active {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.video-tab__label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 400;
+  margin-block-start: 0.15em;
+}
+
+/* Player containers */
+.video-players {
+  position: relative;
+}
+
+.video-player {
+  display: none;
+}
+
+.video-player.active {
+  display: block;
+}
+
+.video-embed-wrap {
+  position: relative;
+  width: 100%;
+  padding-block-end: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 0 0 var(--radius) var(--radius);
+  background: #000;
+}
+
+.video-embed-wrap iframe,
+.video-embed-wrap > div {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-embed {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-error {
+  padding: var(--spacing-lg);
+  text-align: center;
+  background: var(--color-surface);
+}
+
+.video-error a {
+  color: var(--color-link);
+}
+
+.video-plain-link {
+  margin-block: var(--spacing-sm);
+  font-size: 0.9rem;
+}
+
+/* Chapters */
+.chapters-section {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  flex-shrink: 0;
+}
+
+.chapters-heading {
+  font-size: 0.85rem;
+  margin: 0 0 var(--spacing-sm);
+}
+
+.chapters-list {
+  display: none;
+}
+
+.chapters-list.active {
+  display: block;
+}
+
+.chapters-part-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 var(--spacing-xs);
+}
+
+.chapter-item {
+  display: flex;
+  gap: 0.75em;
+  width: 100%;
+  padding: 0.2em 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.8rem;
+  text-align: start;
+  color: var(--color-text);
+}
+
+.chapter-item:hover {
+  color: var(--color-link);
+}
+
+.chapter-timestamp {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.chapter-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------- Transcript Search ---------- */
+
+.search-container {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.search-input {
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+.search-input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -1px;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  inset-inline: 0;
+  top: 100%;
+  z-index: 10;
+  max-height: 20rem;
+  overflow-y: auto;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.search-results.active {
+  display: block;
+}
+
+.search-stats {
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.search-result-item {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: none;
+  border-block-end: 1px solid var(--color-border);
+  background: none;
+  cursor: pointer;
+  font: inherit;
+  text-align: start;
+  color: var(--color-text);
+}
+
+.search-result-item:hover {
+  background: #f0f4f8;
+}
+
+.search-result-speaker {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-block-end: 0.15em;
+}
+
+.search-result-text {
+  display: block;
+  font-size: 0.85rem;
+  line-height: 1.4;
+}
+
+.search-result-text mark {
+  background: #fef08a;
+  color: inherit;
+  border-radius: 2px;
+  padding-inline: 1px;
+}
+
+/* ---------- Transcript Panel ---------- */
+
+.transcript-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* allow flex child to shrink */
+  overflow: hidden;
+}
+
+.transcript-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.transcript-turn {
+  margin-block-end: var(--spacing-lg);
+}
+
+.transcript-turn:last-child {
+  margin-block-end: 0;
+}
+
+.transcript-speaker {
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-primary);
+  margin-block: 0 var(--spacing-xs);
+}
+
+.transcript-line {
+  margin-block: 0 var(--spacing-xs);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.transcript-timestamp {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-inline-end: 0.4em;
+  white-space: nowrap;
+}
+
+a.transcript-timestamp {
+  color: var(--color-link);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.transcript-timestamp:hover {
+  text-decoration: underline;
+}
+
+/* Search highlight on scroll-to segment */
+.segment.search-highlight {
+  background: #fef3c7;
+  border-radius: var(--radius);
+  transition: background 0.3s ease;
+}
+
+/* ---------- Back Link ---------- */
+
+.back-link {
+  display: inline-block;
+  margin-block-end: var(--spacing-md);
+  font-size: 0.9rem;
+}
+
+/* ---------- Responsive: collapse to single column ---------- */
+
+@media (max-width: 768px) {
+  .meeting-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .media-panel {
+    position: static;
+    max-height: none;
+  }
+
+  .transcript-body {
+    max-height: 60vh;
+  }
+}
+
+/* ---------- Visually Hidden (for labels) ---------- */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}

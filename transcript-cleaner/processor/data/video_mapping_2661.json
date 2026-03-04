@@ -1,0 +1,37 @@
+{
+  "meeting_id": 2661,
+  "meeting_date": "2026-02-26",
+  "meeting_type": "Workshop",
+  "videos": [
+    {
+      "video_id": "J4T5E0lUEsg",
+      "title": "Tampa City Council Workshop - 02/26/26",
+      "part": 1,
+      "session": "morning",
+      "published_at": "2026-02-26T18:16:07Z",
+      "duration": "PT4H8M56S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: File No. CM25-18025 Pension Health and Debt Report",
+          "timestamp": "00:16:13",
+          "seconds": 973
+        },
+        {
+          "title": "Item 2: File No. CM25-19839 CIT Renewal Revenue Discussion",
+          "timestamp": "01:08:23",
+          "seconds": 4103
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:45:06",
+          "seconds": 13506
+        }
+      ]
+    }
+  ]
+}

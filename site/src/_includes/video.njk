@@ -1,0 +1,79 @@
+{#
+  video.njk — Tabbed YouTube IFrame API player with chapter navigation
+  Expects: detail.videos (from meetings.details)
+  Each video: { video_id, title, part, offset_seconds, transcript_start_time,
+                chapters: [{ title, timestamp, seconds }] }
+#}
+{% if detail.videos and detail.videos.length > 0 %}
+  <div class="video-player-section" aria-label="Meeting video recordings">
+
+    {# ── Part tabs (only when multi-part) ── #}
+    {% if detail.videos.length > 1 %}
+      <div class="video-tabs" role="tablist" aria-label="Video parts">
+        {% for video in detail.videos %}
+          <button class="video-tab{% if loop.first %} active{% endif %}" role="tab" id="tab-{{ loop.index0 }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="video-{{ loop.index0 }}" onclick="switchVideo({{ loop.index0 }})">
+            Part
+            {{ video.part }}
+            {% if video.title %}
+              <span class="video-tab__label">{{ video.title }}</span>{% endif %}
+          </button>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# ── Player containers (IFrame API targets) ── #}
+    <div class="video-players">
+      {% for video in detail.videos %}
+        <div class="video-player{% if loop.first %} active{% endif %}" id="video-{{ loop.index0 }}" role="tabpanel" {% if detail.videos.length > 1 %} aria-labelledby="tab-{{ loop.index0 }}" {% endif %} data-video-id="{{ video.video_id }}" data-part="{{ video.part }}">
+          <div class="video-embed-wrap">
+            <div id="player-{{ loop.index0 }}"></div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {# ── Chapters ── #}
+    {% set hasChapters = false %}
+    {% for video in detail.videos %}
+      {% if video.chapters and video.chapters.length > 0 %}
+        {% set hasChapters = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if hasChapters %}
+      <div class="chapters-section">
+        <h3 class="chapters-heading">Chapters</h3>
+        {% for video in detail.videos %}
+          {% if video.chapters and video.chapters.length > 0 %}
+            <div class="chapters-list{% if loop.first %} active{% endif %}" data-part="{{ loop.index0 }}">
+              {% if detail.videos.length > 1 %}
+                <p class="chapters-part-label">Part
+                  {{ video.part }}</p>
+              {% endif %}
+              {% for ch in video.chapters %}
+                <button class="chapter-item" type="button" onclick="seekToChapter({{ ch.seconds }}, {{ video.part }})" aria-label="Jump to chapter: {{ ch.title }}">
+                  <span class="chapter-timestamp">{{ ch.timestamp }}</span>
+                  <span class="chapter-title">{{ ch.title }}</span>
+                </button>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {# ── <noscript> fallback: static embeds ── #}
+    <noscript>
+      {% for video in detail.videos %}
+        <div class="video-embed-wrap">
+          <iframe class="video-embed" src="https://www.youtube-nocookie.com/embed/{{ video.video_id }}" title="{{ video.title or meeting.title }}" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" loading="lazy"></iframe>
+        </div>
+        <p class="video-plain-link">
+          <a href="https://youtu.be/{{ video.video_id }}" target="_blank" rel="noopener noreferrer">
+            Watch on YouTube &nearr;
+          </a>
+        </p>
+      {% endfor %}
+    </noscript>
+  </div>
+{% endif %}

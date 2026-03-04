@@ -1,548 +1,413 @@
 # Tampa Meetings — Implementation Plan
 
-A unified platform for Tampa City Council meeting agendas, transcripts, documents, and video—searchable, accessible, and interconnected.
+A civic transparency platform for Tampa City Council meeting agendas, transcripts, documents, and video — searchable, accessible, and interconnected.
 
 ---
 
-## Current State
-
-The project consists of two independent, working tools that have **not yet been unified**:
+## What's Built
 
 ### Agenda Scraper (`agenda-scraper/`)
 
-**Status:** Active, maintained, deployed to GitHub (`miklb/agenda-scraper`)
+Fetches structured agenda data from Hyland OnBase. Outputs JSON data files + WordPress block HTML. GitHub Actions nightly cron. ~48 meetings scraped (July 2025 – March 2026).
 
-| Capability     | Details                                                                              |
-| -------------- | ------------------------------------------------------------------------------------ |
-| Scraping       | Fetches structured agenda data from Hyland OnBase via HTTP                           |
-| Output         | JSON data files + WordPress block markup                                             |
-| Data extracted | File numbers, titles, backgrounds, documents, locations, coordinates, dollar amounts |
-| Meeting types  | Regular, Evening, CRA, Special, Workshop                                             |
-| Automation     | GitHub Actions nightly cron scrapes + auto-commits                                   |
-| Publishing     | WordPress block HTML (current publication method)                                    |
-| Coverage       | ~48 meetings scraped (July 2025 – February 2026)                                     |
+Capabilities: file numbers, titles, backgrounds, documents (with R2 mirroring), locations, coordinates, dollar amounts. Meeting types: Regular, Evening, CRA, Special, Workshop.
 
 ### Transcript Processor (`transcript-cleaner/processor/`)
 
-**Status:** Functional, backed up to private GitHub repo
+Converts ALL CAPS realtime captioning transcripts from tampagov.net to sentence-case JSON using GLiNER zero-shot NER. Matches YouTube videos via Data API, calculates playback offsets with Whisper. Generates standalone HTML pages with video-synced timestamps.
 
-| Capability      | Details                                                        |
-| --------------- | -------------------------------------------------------------- |
-| Input           | ALL CAPS transcripts from tampagov.net                         |
-| Output          | Sentence-case JSON + static HTML with video sync               |
-| Processing      | GLiNER zero-shot NER for entity recognition                    |
-| Entity database | Built from multiple sources (holidays, states, Tampa features) |
-| Video sync      | YouTube timestamp alignment via Whisper                        |
-| Coverage        | 11 meetings processed with HTML output                         |
-| Site output     | Standalone HTML pages with search, styles, video links         |
+14 processed transcripts, 12 video mappings, 11 meetings with HTML output.
 
-### What Does NOT Exist Yet
+### SQLite Database (`data/meetings.db`)
 
-- Unified `tampa-meetings` GitHub repository
-- Eleventy static site (`site/`)
-- Unified data pipeline (`pipeline/`)
-- SQLite database (`meetings.db`)
-- Document mirroring to Cloudflare R2 (code exists but not deployed)
-- Pagefind or FTS5 search
-- Meeting ID mapping between systems
-- YouTube chapter extraction pipeline
-- Document change tracking / versioning
-- Entity resolution across both systems
+`scripts/build-db.js` imports agenda JSON → 3 tables (meetings, agenda_items, documents). Idempotent, ~0.2s rebuild. Currently agenda-only — 21 meetings (2026), 414 items, 1721 documents.
+
+### Eleventy Static Site (`site/`)
+
+Eleventy 3.x with Nunjucks templates. Reads SQLite via `better-sqlite3` at build time. Semantic HTML, accessible skip links, responsive CSS with custom properties. Homepage with date-grouped meeting list + individual meeting detail pages with full agenda items and mirrored document links.
+
+### Document Mirroring
+
+Cloudflare R2 (`pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev`). Integrated into `process-agenda.sh` with `--skip-mirror` flag. Links carry `data-original-url` attribute for provenance.
+
+### Build Pipeline
+
+```
+Hyland OnBase ─▶ agenda-scraper (JSON) ─▶ build-db.js (SQLite) ─▶ Eleventy (HTML)
+                        │
+                        └─▶ mirror-documents.js (R2)
+```
+
+**Local workflow:**
+
+```
+./pipeline/discover.py --process        # scrape + capitalize + video + DB + site
+./pipeline/build-site.sh                # DB rebuild + Eleventy only
+./pipeline/process-meeting.sh 2653 2026-01-22   # single meeting
+```
+
+Run: `node scripts/build-db.js && cd site && npx eleventy`
 
 ---
 
-## Integration Vision
+## Architecture
 
-Each meeting becomes a single source of truth connecting:
+| Component   | Technology              | Status               |
+| ----------- | ----------------------- | -------------------- |
+| Static Site | Eleventy 3.x            | Running locally      |
+| Database    | SQLite + better-sqlite3 | Agenda data imported |
+| Documents   | Cloudflare R2           | Operational          |
+| Hosting     | Cloudflare Pages        | Not yet configured   |
+| Search      | Pagefind                | Not yet added        |
+| API         | Datasette               | Future               |
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        MEETING RECORD                           │
-├─────────────────────────────────────────────────────────────────┤
-│                                                                 │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────┐ │
-│  │   AGENDA    │───▶│ TRANSCRIPT  │───▶│   VIDEO SEGMENTS    │ │
-│  │   (JSON)    │    │   (JSON)    │    │   (YouTube + sync)  │ │
-│  └─────────────┘    └─────────────┘    └─────────────────────┘ │
-│         │                  │                      │             │
-│         ▼                  ▼                      ▼             │
-│  ┌─────────────┐    ┌─────────────┐    ┌─────────────────────┐ │
-│  │  DOCUMENTS  │    │  SPEAKERS   │    │  TIMESTAMP LINKS    │ │
-│  │   (PDFs)    │    │  ENTITIES   │    │  (per agenda item)  │ │
-│  └─────────────┘    └─────────────┘    └─────────────────────┘ │
-│                                                                 │
-│  ┌──────────────────────────────────────────────────────────┐  │
-│  │                    SEARCH INDEX                           │  │
-│  │  Full-text • Entities • Documents • Timestamps           │  │
-│  └──────────────────────────────────────────────────────────┘  │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### Cross-Linking Capabilities (Stretch Goal)
-
-These are desirable but not required for launch:
-
-| From               | To                      | Method                                     |
-| ------------------ | ----------------------- | ------------------------------------------ |
-| Agenda Item        | Transcript Discussion   | File number matching + timestamp detection |
-| Transcript Segment | Video Moment            | Calculated offsets per video               |
-| Agenda Item        | Supporting Documents    | Direct PDF links                           |
-| Speaker Name       | All Their Contributions | Entity recognition across transcripts      |
-| File Number        | All Related Meetings    | Cross-meeting search                       |
-
----
-
-## Technical Architecture
-
-### Stack (MVP)
-
-| Component   | Technology       | Why                                             |
-| ----------- | ---------------- | ----------------------------------------------- |
-| Static Site | Eleventy         | Simple, fast, template flexibility              |
-| Search      | Pagefind         | Zero-cost client-side, works with static output |
-| Database    | SQLite           | Single file, portable, read at build time       |
-| Hosting     | Cloudflare Pages | Free, global CDN                                |
-
-### Future Stack (Post-Launch)
-
-| Component   | Technology    | Why                                 |
-| ----------- | ------------- | ----------------------------------- |
-| API         | Datasette     | Auto-generated JSON API from SQLite |
-| Full-text   | FTS5          | SQL-level full-text search          |
-| Documents   | Cloudflare R2 | S3-compatible, free egress          |
-| API Hosting | Vultr VPS     | Full control, SSH access            |
-
-Datasette and R2 become necessary when document mirroring and text extraction are implemented. For MVP, Eleventy reads SQLite directly via `better-sqlite3` at build time.
-
-### Architecture (MVP)
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    STATIC SITE (Eleventy)                        │
-│               meetings.tampamonitor.com                          │
-│      Pre-rendered meeting pages + Pagefind search               │
-└─────────────────────────────────────────────────────────────────┘
-                              │
-                    Cloudflare Pages (free)
-                              │
-┌─────────────────────────────────────────────────────────────────┐
-│                      SQLite Database                             │
-│              Read at build time via better-sqlite3              │
-│        Agenda data + transcript data + FTS5 search              │
-└─────────────────────────────────────────────────────────────────┘
-```
-
-### Data Flow
+### Data Flow (Target)
 
 ```
 Hyland OnBase ─▶ Agenda Scraper (Node.js) ──┐
-                                              ├──▶ SQLite DB ──▶ Eleventy Build ──▶ Cloudflare Pages
+                                              ├──▶ SQLite DB ──▶ Eleventy Build ──▶ Static HTML
 tampagov.net ──▶ Transcript Processor (Py) ──┘
 ```
 
 ---
 
-## Data Schema
+## Database Schema
 
-### SQLite Tables
+### Current (implemented in `scripts/build-db.js`)
 
 ```sql
 CREATE TABLE meetings (
-  id INTEGER PRIMARY KEY,
+  id INTEGER PRIMARY KEY,          -- OnBase meeting ID
   date TEXT NOT NULL,
-  meeting_type TEXT NOT NULL,  -- 'cc', 'cra', 'eve', 'ws', 'sp'
+  meeting_type TEXT NOT NULL,      -- 'regular', 'evening', 'cra', 'workshop', 'special'
   title TEXT,
-  agenda_source_id TEXT,       -- Hyland OnBase ID
-  transcript_source_id TEXT,   -- tampagov.net ID
-  video_ids TEXT               -- JSON array of YouTube IDs
+  agenda_type TEXT,                -- 'DRAFT' or 'FINAL'
+  source_url TEXT,
+  item_count INTEGER DEFAULT 0
 );
 
 CREATE TABLE agenda_items (
-  id INTEGER PRIMARY KEY,
-  meeting_id INTEGER REFERENCES meetings(id),
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  meeting_id INTEGER NOT NULL REFERENCES meetings(id),
   item_number INTEGER,
-  file_number TEXT,            -- e.g. 'CRA24-2242'
+  agenda_item_id TEXT,
+  file_number TEXT,
   title TEXT,
   background TEXT,
-  fiscal_impact TEXT,
   location TEXT,
-  coordinates TEXT,
-  recommendation TEXT
-);
-
-CREATE TABLE transcript_segments (
-  id INTEGER PRIMARY KEY,
-  meeting_id INTEGER REFERENCES meetings(id),
-  timestamp TEXT,
-  speaker TEXT,
-  text TEXT,
-  video_offset_seconds INTEGER
+  coordinates TEXT,                -- JSON string
+  dollar_amounts TEXT,             -- JSON array string
+  fiscal_expenditures REAL DEFAULT 0,
+  fiscal_revenues REAL DEFAULT 0,
+  fiscal_net REAL DEFAULT 0
 );
 
 CREATE TABLE documents (
-  id INTEGER PRIMARY KEY,
-  agenda_item_id INTEGER REFERENCES agenda_items(id),
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  agenda_item_id INTEGER NOT NULL REFERENCES agenda_items(id),
   title TEXT,
   source_url TEXT,
-  r2_url TEXT,
-  file_hash TEXT,
-  file_size INTEGER,
-  ocr_text TEXT
+  mirrored_url TEXT,
+  original_text TEXT
 );
+```
 
-CREATE TABLE entities (
-  id INTEGER PRIMARY KEY,
-  name TEXT,
-  entity_type TEXT,            -- 'person', 'organization', 'location', 'file_number'
-  canonical_form TEXT
+### Planned additions (for transcript + video integration)
+
+```sql
+CREATE TABLE transcript_segments (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  meeting_id INTEGER NOT NULL REFERENCES meetings(id),
+  segment_index INTEGER NOT NULL,
+  timestamp TEXT,                  -- wall-clock time e.g. "9:06:03AM"
+  speaker TEXT,
+  text TEXT
 );
 
 CREATE TABLE videos (
-  id INTEGER PRIMARY KEY,
-  meeting_id INTEGER REFERENCES meetings(id),
-  youtube_id TEXT,
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  meeting_id INTEGER NOT NULL REFERENCES meetings(id),
+  youtube_id TEXT NOT NULL,
   title TEXT,
-  duration_seconds INTEGER,
-  offset_seconds INTEGER
+  part INTEGER DEFAULT 1,
+  duration TEXT,                   -- ISO 8601 e.g. "PT3H7M21S"
+  offset_seconds INTEGER DEFAULT 0,
+  transcript_start_time TEXT       -- wall-clock resume for part 2+
 );
 
--- Full-text search
-CREATE VIRTUAL TABLE agenda_items_fts USING fts5(title, background, content=agenda_items);
-CREATE VIRTUAL TABLE transcript_segments_fts USING fts5(speaker, text, content=transcript_segments);
-CREATE VIRTUAL TABLE documents_fts USING fts5(title, ocr_text, content=documents);
-
--- Change tracking
-CREATE TABLE document_versions (
-  id INTEGER PRIMARY KEY,
-  document_id INTEGER REFERENCES documents(id),
-  version INTEGER,
-  scraped_at DATETIME,
-  file_hash TEXT,
-  change_type TEXT             -- 'added', 'modified', 'removed'
+CREATE TABLE video_chapters (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  video_id INTEGER NOT NULL REFERENCES videos(id),
+  title TEXT,
+  timestamp TEXT,                  -- "HH:MM:SS"
+  seconds INTEGER
 );
 ```
 
+### Future tables (not immediate priority)
+
+- **`entities`** — canonical entity names from NER (person, org, location, file_number)
+- **`document_versions`** — change tracking with SHA256 hashing
+- **FTS5 virtual tables** — full-text search on agenda items, transcripts, documents
+
 ---
 
-## Target Directory Structure
+## Next Up: Transcript + Video Integration
 
-```
-tampa-meetings/
-├── .github/
-│   ├── workflows/
-│   │   └── nightly-scrape.yml
-│   └── copilot-instructions.md
-│
-├── pipeline/
-│   ├── scrapers/
-│   │   ├── agenda-scraper.js
-│   │   ├── transcript-scraper.py
-│   │   └── document-mirror.js
-│   ├── processors/
-│   │   ├── transcript-processor.py
-│   │   └── entity-resolver.py
-│   ├── scripts/
-│   │   ├── build-database.py
-│   │   └── deploy-datasette.sh
-│   ├── package.json
-│   └── requirements.txt
-│
-├── site/
-│   ├── src/
-│   │   ├── index.njk
-│   │   ├── meetings/
-│   │   ├── _includes/
-│   │   └── _data/
-│   ├── public/
-│   ├── eleventy.config.js
-│   └── package.json
-│
-├── data/
-│   ├── agendas/
-│   ├── transcripts/
-│   └── meetings.db
-│
-├── docs/
-│   └── IMPLEMENTATION_PLAN.md
-│
-├── README.md
-├── LICENSE
-└── .gitignore
+The immediate goal is importing existing transcript and video data into SQLite so the Eleventy site renders them alongside agendas. Everything runs locally — no deployment, no repo changes.
+
+### Data available
+
+| Source                | Files         | Location                                                 |
+| --------------------- | ------------- | -------------------------------------------------------- |
+| Processed transcripts | 14 JSON files | `transcript-cleaner/processor/data/processed/`           |
+| Video mappings        | 12 JSON files | `transcript-cleaner/processor/data/video_mapping_*.json` |
+
+### Transcript JSON shape
+
+```json
+{
+  "meeting_id": "2645",
+  "meeting_date_time": "THURSDAY, NOVEMBER 13, 2025, 9:00 A.M.",
+  "segments": [
+    {
+      "timestamp": "9:06:03AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Good morning..."
+    }
+  ],
+  "segment_count": 651
+}
 ```
 
+### Video mapping JSON shape
+
+```json
+{
+  "meeting_id": 2645,
+  "meeting_date": "2025-11-13",
+  "meeting_type": "CRA",
+  "videos": [
+    {
+      "video_id": "SocxtU6vTKc",
+      "part": 1,
+      "offset_seconds": 552,
+      "transcript_start_time": null,
+      "chapters": [
+        { "title": "Start of Meeting", "timestamp": "00:00:00", "seconds": 0 }
+      ]
+    }
+  ]
+}
+```
+
+### Step 1: Meeting ID alignment ✅
+
+The agenda system (OnBase) and transcript system (tampagov.net) use **different meeting IDs**. The `meetings` table uses OnBase IDs as the primary key.
+
+- [x] Add `transcript_source_id TEXT` column to `meetings` table
+- [x] Infer meeting type from: video mapping `meeting_type` (priority) → transcript title text → time-of-day in `meeting_date_time` → default `'regular'`
+- [x] Type mapping: video mapping `"City Council"` → `'regular'`, `"CRA"` → `'cra'`, `"Workshop"` → `'workshop'`, `"Evening"` → `'evening'`
+- [x] Date extracted from filename (`processed_transcript_{id}_{YYYY-MM-DD}.json`) — more reliable than parsing `meeting_date_time`
+- [x] 8 transcripts matched to agenda meetings (Oct 2025 – Feb 2026)
+- [x] 5 stub rows created for 2022–2023 transcripts with no agenda data (synthetic IDs: `1_000_000 + transcript_id`)
+- [x] Rebuilt DB with all years: 57 meetings, 1378 items, 5321 documents
+
+**Known gap resolved in Step 2:** Transcript 2645 (2025-11-13 CRA meeting) had no type indicators — fixed with `TRANSCRIPT_TYPE_OVERRIDES = { '2645': 'cra' }` in `build-db.js`. Now correctly matches meeting 2648 (CRA, 2025-11-13).
+
+### Step 2: Add tables + import logic to `build-db.js` ✅
+
+- [x] Add `transcript_segments`, `videos`, `video_chapters` table creation to schema
+- [x] Add `TRANSCRIPT_TYPE_OVERRIDES = { '2645': 'cra' }` to fix CRA meeting type inference
+- [x] Read processed transcripts from `transcript-cleaner/processor/data/processed/processed_transcript_*.json`
+- [x] For each transcript: resolve meeting ID via `transcript_source_id`, insert segments with `segment_index` for ordering
+- [x] Read video mappings from `transcript-cleaner/processor/data/video_mapping_*.json`
+- [x] For each video: insert into `videos`, then insert each chapter into `video_chapters`
+
+**Results:** 10,883 segments across 14 meetings · 23 videos · 129 chapters
+
+### Step 3: Update Eleventy data layer ✅
+
+- [x] Expand `all` query to include all meetings with content (agenda items or transcript), not just 2026+
+- [x] Add `has_transcript` and `has_video` flags (0/1) to `all` via subqueries
+- [x] Add `stmtSegments` prepared statement: `SELECT segment_index, timestamp, speaker, text FROM transcript_segments WHERE meeting_id = ? ORDER BY segment_index`
+- [x] Add `stmtVideos` + `stmtChapters` prepared statements; nest chapters as `video.chapters[]`
+- [x] Attach `transcript_segments` and `videos` arrays to each `details[id]` object
+- [x] Add `badge--transcript` and `badge--video` CSS classes to `style.css`
+- [x] Show Transcript/Video badges on homepage `index.njk`
+- [x] Fixed front matter in `index.njk` and `meeting.njk` (was collapsed to single line)
+
+**Results:** Homepage now shows 57 meetings (2022–2026); transcript/video badges visible; `detail.videos[i].chapters` available in templates
+
+### Step 4: Transcript template ✅
+
+- [x] Create `site/src/_includes/transcript.njk`
+  - Collapsible `<details>` / `<summary>` with segment count
+  - Speaker-grouped turns: each new speaker opens a `.transcript-turn` div with `.transcript-speaker` heading
+  - Segment timestamps shown as `<span>` (no video) or `<a href="https://youtu.be/{id}?t={sec}">` (with video)
+  - `aria-label="Watch at {timestamp}"` on timestamp links
+  - Full text works without JavaScript (progressive enhancement)
+- [x] Add `youtubeUrl` filter to `eleventy.config.js`
+  - Parses wall-clock timestamps (`9:15:50AM` → seconds since midnight)
+  - Selects correct video part by matching `transcript_start_time ≤ segment time`
+  - Applies `offset_seconds + (segSec − startSec)` to get YouTube position
+- [x] Include `transcript.njk` in `meeting.njk` after agenda items
+- [x] Add transcript/video badges to meeting detail page `<header>`
+- [x] Add transcript CSS: collapsible panel, speaker names, monospace timestamps, scrollable body (`max-height: 60vh`)
+- [x] Fixed `index.njk` and `meeting.njk` front matter (single-line YAML → multi-line)
+
+**Verified:** Meeting 2608 generates 914 transcript lines; YouTube links correctly open at offset (e.g., `?t=614` for 9:06:53AM in part 1)
+
+### Step 5: Video section ✅
+
+- [x] Create `site/src/_includes/video.njk`
+  - Privacy-friendly `<iframe src="youtube-nocookie.com/embed/{id}">` with `loading="lazy"`
+  - Plain `Watch on YouTube ↗` link always visible as fallback
+  - Multi-part support: each video gets its own `<div class="video-part">` with "Part N" heading
+  - Collapsible chapter list (`<details>`) with timestamp links (`https://youtu.be/{id}?t={seconds}`)
+  - Section omitted entirely when `detail.videos` is empty
+- [x] Include `video.njk` in `meeting.njk` between agenda items and transcript
+- [x] Add video CSS: responsive 16:9 embed wrapper, chapter list with monospace timestamps
+- [x] Fixed `index.njk` front matter permanently by moving layout/title to `index.11tydata.json` sidecar (formatter was collapsing multi-line YAML back to single line on every save)
+
+**Verified:** Meeting 2608 outputs 30 video/chapter elements; youtube-nocookie embed + chapter links with `?t=` offsets; meeting 2785 (no video) has zero `.video-section` elements
+
+### Verification ✅
+
+- [x] `meetings.db` contains transcript segments for all matched meetings (10,883 segments)
+- [x] Meeting detail pages show transcript below agenda (collapsible, with speaker turns)
+- [x] Video timestamps link to correct YouTube positions (wall-clock → offset calculation)
+- [x] Homepage badges distinguish meetings with/without transcripts and video
+- [x] Unmatched historical transcripts accessible as standalone pages (stub IDs 1002435–1002450)
+
 ---
 
-## Implementation Phases
+## Later: Launch Preparation
 
-Phases are ordered by priority and dependency. The primary goal is launching `meetings.tampamonitor.com` with integrated agenda and transcript data.
+These are needed to go live at `meetings.tampamonitor.com` but are not blocking local development.
 
-### Phase 1: Transcript Processor Stabilization
+### Repository + Deployment
 
-**Goal:** Get the transcript processor fully functional, reliable, and backed up.
-
-**Prerequisites:** None — this is independent work
-
-- [x] Push transcript-cleaner to GitHub (private or public) for backup
-- [x] Audit and update `requirements.txt` for Python 3.12+ compatibility
-- [x] Verify end-to-end pipeline: scrape → process → generate HTML
-- [ ] Process backlog of unprocessed meetings
-- [x] Document the workflow (inputs, commands, outputs)
-- [ ] Stabilize video sync offset calculation
-- [ ] Test NER entity recognition accuracy on recent transcripts
-
-**Deliverable:** Reliable transcript processor with GitHub backup and clear workflow docs
-
----
-
-### Phase 2: Repository Setup + DNS
-
-**Goal:** Create the unified repository and configure DNS for the meetings subdomain.
-
-**Prerequisites:** Phase 1 (transcript processor stable enough to port)
-
-- [ ] Create `miklb/tampa-meetings` repository on GitHub (public)
-- [ ] Initialize with README, LICENSE (MIT), .gitignore
-- [ ] Create directory structure (`pipeline/`, `site/`, `data/`, `docs/`)
-- [ ] Set up copilot-instructions.md
+- [ ] Create `miklb/tampa-meetings` GitHub repo (public)
+- [x] Consolidate code into unified directory structure — `pipeline/` orchestration scripts
 - [ ] Configure `meetings.tampamonitor.com` DNS in Cloudflare
-- [ ] Set up Cloudflare Pages project (even if empty)
+- [ ] Set up Cloudflare Pages auto-deploy on push
+- [ ] Keep WordPress output in parallel until subdomain replaces it
 
-**Deliverable:** Repository and DNS ready for site deployment
+### Pipeline (`pipeline/`)
 
----
+Consolidated orchestration tier that bridges the three codebases (agenda-scraper, transcript-processor, Eleventy site) into reproducible local workflows.
 
-### Phase 3: Port Code to Unified Repo
+- [x] `transcript_lookup.py` — Scrapes tampagov index, resolves `(date, meeting_type) → transcript pkey`, matches against OnBase IDs in SQLite
+- [x] `discover.py` — Compares transcript index against processed data, reports ready-to-process meetings, optionally auto-processes them
+- [x] `process-meeting.sh` — End-to-end per-meeting pipeline: scrape → capitalize → video → DB rebuild → site rebuild (idempotent steps)
+- [x] `build-site.sh` — Quick DB rebuild + Eleventy
+- [x] `rebuild-entities.sh` — Regenerate NER entity databases from agenda data
+- [x] `README.md` — Full usage docs with data flow diagram
 
-**Goal:** Move both tools into the unified repository.
+### Automation
 
-**Prerequisites:** Phase 2
+- [ ] GitHub Actions nightly scrape → rebuild DB → trigger CF Pages deploy
+- [ ] Manual `workflow_dispatch` trigger
+- [ ] Error notifications on failure
+- [ ] Incremental builds (only changed meetings)
 
-- [ ] Port agenda scraper to `pipeline/scrapers/`
-  - `lib/http-meeting-scraper.js` → `pipeline/scrapers/agenda-scraper.js`
-  - `lib/http-utils.js` → `pipeline/scrapers/http-utils.js`
-  - `format-helpers.js` → `pipeline/scrapers/format-helpers.js`
-- [ ] **Keep WordPress output code** — still needed for current publication
-- [ ] Port transcript processor to `pipeline/processors/`
-- [ ] Create `pipeline/package.json` and `pipeline/requirements.txt`
-- [ ] Move existing JSON data files to `data/agendas/`
-- [ ] Move processed transcript data to `data/transcripts/`
-- [ ] Verify both tools run correctly from new locations
-- [ ] Update `.env.example`
+### Search
 
-**Deliverable:** Both tools functional in unified repo, WordPress output preserved
+- [ ] Pagefind integration with Eleventy build
+- [ ] Accessible search results page with filtering by meeting type and date
+- [ ] Keyboard-navigable, mobile-friendly UI
 
----
+### Site Polish
 
-### Phase 4: SQLite Database
-
-**Goal:** Create a unified database from existing agenda and transcript data.
-
-**Prerequisites:** Phase 3
-
-- [ ] Write `pipeline/scripts/build-database.py` to create schema
-- [ ] Write JSON-to-SQLite import for agenda data (~48 meetings)
-- [ ] Write JSON-to-SQLite import for transcript data (~10 meetings)
-- [ ] Create FTS5 virtual tables for full-text search
-- [ ] Verify data integrity and query performance
-- [ ] Add database rebuild script to workflow
-
-**Deliverable:** `data/meetings.db` with agenda + transcript data
-
----
-
-### Phase 5: Eleventy Static Site (MVP)
-
-**Goal:** Launch the meetings subdomain with agenda and transcript pages.
-
-**Prerequisites:** Phase 4, DNS configured (Phase 2)
-
-- [ ] Initialize Eleventy project in `site/`
-- [ ] Create `site/src/_data/meetings.js` reading SQLite via `better-sqlite3`
-- [ ] Design and build templates:
-  - `base.njk` layout (semantic HTML, skip links, ARIA)
-  - `index.njk` homepage with meeting list
-  - `meeting.njk` individual meeting page with agenda
-  - `agenda-item.njk` partial
-  - Transcript section (collapsible, per meeting)
-- [ ] Implement responsive CSS (custom properties, logical properties, fluid widths)
-- [ ] Add navigation, footer, meta tags
-- [ ] Configure Cloudflare Pages auto-deploy on push
-- [ ] Accessibility audit (keyboard nav, contrast, headings, screen reader)
+- [ ] Meta tags (OpenGraph, description)
+- [ ] Accessibility audit (WCAG 2.1 AA)
 - [ ] Cross-browser and mobile testing
-- [ ] Performance optimization (Lighthouse > 90)
+- [ ] Lighthouse > 90
 
-**Deliverable:** Live site at `meetings.tampamonitor.com`
+### Retire WordPress Output
 
----
-
-### Phase 6: Automation
-
-**Goal:** Automated scraping, processing, and site rebuilds.
-
-**Prerequisites:** Phase 5
-
-- [ ] Create `.github/workflows/nightly-scrape.yml`
-  - Cron at 11 PM EST (4 AM UTC)
-  - Manual trigger via `workflow_dispatch`
-  - Scrape → update DB → commit → trigger Cloudflare Pages rebuild
-- [ ] WordPress output continues in parallel (until subdomain replaces it)
-- [ ] Set up error notifications on workflow failure
-- [ ] Implement incremental builds (only changed meetings)
-
-**Deliverable:** Self-updating site with nightly scraping
-
----
-
-### Phase 7: Search
-
-**Goal:** Client-side search across all content.
-
-**Prerequisites:** Phase 5
-
-- [ ] Install and configure Pagefind for Eleventy build
-- [ ] Create accessible search results page
-- [ ] Style search UI (mobile-friendly, keyboard navigable)
-- [ ] Add filtering by meeting type and date
-
-**Deliverable:** Working search across meetings and transcripts
-
----
-
-### Phase 8: Retire WordPress Output
-
-**Goal:** Once the meetings subdomain is stable, stop generating WordPress markup.
-
-**Prerequisites:** Phase 6 (automation running reliably)
-
-- [ ] Verify meetings subdomain is fully replacing WordPress for agenda publication
 - [ ] Remove WordPress-specific code from agenda scraper
-- [ ] Update any links/redirects from WordPress to subdomain
+- [ ] Redirect links from WordPress to subdomain
 - [ ] Archive `miklb/agenda-scraper` repo
 
-**Deliverable:** Single publication path via meetings subdomain
-
 ---
 
-## Future Phases (Post-Launch)
+## Someday
 
-These are desirable features that depend on a working meetings subdomain.
+Features that depend on a stable, launched site.
 
-### Document Mirroring + Datasette API
+### Datasette API
 
-**Goal:** Mirror PDFs to R2 and serve data via Datasette for third-party consumers.
+Serve meeting data as JSON for third-party consumers. Requires Vultr VPS (~$7/mo).
 
-- [ ] Deploy document mirroring code to production (R2)
-- [ ] Provision Vultr VPS for Datasette
-- [ ] Configure Nginx, SSL, systemd for `meetings-api.tampamonitor.com`
-- [ ] Implement PDF text extraction (`pdf-parse`)
-- [ ] Add Tesseract OCR fallback for scanned documents
-- [ ] Index document text in FTS5
+### Document Text Extraction
 
-This becomes necessary when document mirroring and full-text extraction are priorities.
+Extract text from mirrored PDFs (`pdf-parse` + Tesseract OCR fallback). Index in FTS5.
 
-### YouTube Chapters + Video Sync
+### Cross-Linking
 
-**Goal:** Link agenda items to video timestamps.
+- YouTube chapter → agenda item mapping by file number
+- File number mentions in transcripts → agenda item links
+- Speaker attribution across meetings via entity resolution
 
-- [ ] Set up YouTube Data API credentials
-- [ ] Build chapter extraction script
-- [ ] Map chapters to agenda items by file number
-- [ ] Add "jump to discussion" links from agenda items
-- [ ] Handle multi-part videos (morning/evening sessions)
+### Entity Resolution
 
-### Cross-Linking + Entity Resolution
-
-**Goal:** Cross-reference entities across meetings.
-
-- [ ] Unify entity databases from both systems
-- [ ] Implement cross-meeting entity linking (people, organizations)
-- [ ] Add "related meetings" suggestions
-- [ ] Export search results (CSV/JSON)
+Unify entity databases from agenda and transcript systems. Track canonical names for people, organizations, locations.
 
 ### Document Change Tracking
 
-**Goal:** Track when agenda documents are added or modified.
+SHA256 hashing to detect when agenda documents are added or modified between scrapes.
 
-- [ ] Implement document change detection (SHA256 hashing)
-- [ ] Create `document_versions` table
-- [ ] Build "What's Changed" display on agenda pages
+### Historical Backfill
 
-### Historical Backfill (Optional / Sponsored)
-
-**Goal:** Extend coverage to 2023–2024 meetings.
-
-- [ ] Modify scraper for historical date ranges
-- [ ] Batch scrape and process historical meetings
-- [ ] Verify data quality
-
-**Estimates:** ~100-150 meetings, ~25-37 GB documents, ~$7/year R2 storage
+Extend coverage to 2023–2024 meetings. ~100-150 meetings, ~25-37 GB documents, ~$7/year R2 storage.
 
 ---
 
-## Key Technical Considerations
-
-### Meeting ID Alignment
-
-The agenda system and transcript system use different IDs. Use **date + meeting type** as the canonical identifier with a lookup table mapping both systems.
-
-### Agenda → Transcript Linking (Priority Order)
-
-1. **YouTube Chapters** — City staff creates chapter markers that map to agenda items
-2. **File Number Detection** — Search transcript for file number mentions
-3. **Chapter-to-Transcript Mapping** — Use chapter timestamps to find segments
-4. **Speaker Context** — Track when Chair announces items
+## Reference
 
 ### Processing Timeline
 
-| Event                  | Day               | Action                            |
-| ---------------------- | ----------------- | --------------------------------- |
-| Draft agenda published | Friday            | Initial scrape, create draft page |
-| Daily monitoring       | Sat–Wed           | Nightly scrape for changes        |
-| Meeting occurs         | Thursday          | —                                 |
-| Transcript available   | Following Tuesday | Scrape, process, publish          |
-| Full record published  | Wednesday         | Complete page with transcript     |
+| Event                  | Day               | Action                        |
+| ---------------------- | ----------------- | ----------------------------- |
+| Draft agenda published | Friday            | Scrape, create draft page     |
+| Daily monitoring       | Sat–Wed           | Nightly scrape for changes    |
+| Meeting occurs         | Thursday          | —                             |
+| Transcript available   | Following Tuesday | Scrape, process, publish      |
+| Full record published  | Wednesday         | Complete page with transcript |
 
----
+### Meeting ID Systems
 
-## Infrastructure Costs
+| System                | ID Example | Source                              |
+| --------------------- | ---------- | ----------------------------------- |
+| Agenda (OnBase)       | `2785`     | Hyland OnBase `meetingId` parameter |
+| Transcript (tampagov) | `2645`     | tampagov.net `pkey` parameter       |
 
-### MVP (Launch)
+Canonical match key: `(date, meeting_type)`. Both systems cover the same meetings but with independent IDs.
 
-| Service          | Cost   | Purpose             |
-| ---------------- | ------ | ------------------- |
-| Cloudflare Pages | $0     | Static site hosting |
-| **Total**        | **$0** |                     |
+### Infrastructure Costs
 
-### Post-Launch (with document mirroring + API)
+| Service             | Cost      | Purpose                        |
+| ------------------- | --------- | ------------------------------ |
+| Cloudflare Pages    | $0        | Static site hosting            |
+| Cloudflare R2       | ~$0.50/mo | Document storage (operational) |
+| Vultr VPS + backups | $7/mo     | Datasette API (future)         |
 
-| Service             | Cost          | Purpose             |
-| ------------------- | ------------- | ------------------- |
-| Cloudflare Pages    | $0            | Static site hosting |
-| Cloudflare R2       | ~$0.50/mo     | Document storage    |
-| Vultr VPS + backups | $7/mo         | Datasette API       |
-| **Total**           | **~$7.50/mo** |                     |
+### Decisions Log
 
----
+| Decision              | Choice                        | Rationale                                         |
+| --------------------- | ----------------------------- | ------------------------------------------------- |
+| Static site generator | Eleventy                      | Simple, fast, template flexibility                |
+| Data at build time    | SQLite via better-sqlite3     | No runtime API dependency                         |
+| Search                | Pagefind                      | Zero cost, client-side, static-compatible         |
+| Documents             | Cloudflare R2                 | Operational, R2 dev URL with future custom domain |
+| Hosting               | Cloudflare Pages              | Free, global CDN                                  |
+| WordPress output      | Keep until subdomain launches | Current publication method                        |
+| Video archiving       | Not needed                    | Tampa TV retains videos on YouTube                |
+| Accessibility         | WCAG 2.1 AA minimum           | Non-negotiable first priority                     |
 
-## Decisions Log
-
-| Decision              | Choice                        | Rationale                                          |
-| --------------------- | ----------------------------- | -------------------------------------------------- |
-| Static site generator | Eleventy                      | Simple, fast, template flexibility                 |
-| Data at build time    | SQLite via `better-sqlite3`   | No runtime API dependency for MVP                  |
-| Search                | Pagefind                      | Zero cost, client-side, static-compatible          |
-| API (future)          | Datasette                     | Auto-generated JSON from SQLite, when needed       |
-| Hosting               | Cloudflare Pages              | Free, global CDN                                   |
-| Documents (future)    | Cloudflare R2                 | Free egress with CF Pages, when mirroring is built |
-| WordPress output      | Keep until subdomain launches | Current publication method for agendas             |
-| Video archiving       | Not needed                    | Tampa TV retains videos on YouTube                 |
-| Accessibility         | WCAG 2.1 AA minimum           | Non-negotiable first priority                      |
-| Repository            | New unified public repo       | Clean start, civic transparency                    |
-
----
-
-## Success Metrics
+### Success Metrics
 
 | Metric                  | Target                   |
 | ----------------------- | ------------------------ |
@@ -555,4 +420,4 @@ The agenda system and transcript system use different IDs. Use **date + meeting 
 
 ---
 
-_Last updated: February 11, 2026_
+_Last updated: March 3, 2026_

@@ -1,0 +1,15 @@
+{
+  "name": "tampa-meetings-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Tampa City Council meetings — Eleventy static site",
+  "scripts": {
+    "build": "npx @11ty/eleventy",
+    "serve": "npx @11ty/eleventy --serve",
+    "build:db": "node ../scripts/build-db.js"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "better-sqlite3": "^11.0.0"
+  }
+}

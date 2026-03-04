@@ -1,0 +1,68 @@
+<a href="/" class="back-link">&larr; All meetings</a>
+
+<h1>{{ meeting.title }}
+  {% if meeting.agenda_type %}
+    <span class="agenda-type">{{ meeting.agenda_type }}</span>
+  {% endif %}
+</h1>
+
+<div class="meeting-meta">
+  <p>
+    <span class="badge badge--{{ meeting.meeting_type }}">{{ meeting.meeting_type | meetingTypeLabel }}</span>
+    {% if meeting.has_transcript %}
+      <span class="badge badge--transcript">Transcript</span>{% endif %}
+    {% if meeting.has_video %}
+      <span class="badge badge--video">Video</span>{% endif %}
+    {{ meeting.date | readableDate }}
+    {% if meeting.item_count > 0 %}
+      &middot;
+      {{ meeting.item_count }}
+      agenda item{{ "s" if meeting.item_count != 1 }}
+    {% endif %}
+  </p>
+  {% if meeting.source_url %}
+    <p>
+      <a href="{{ meeting.source_url }}" target="_blank" rel="noopener noreferrer">View official agenda in OnBase</a>
+    </p>
+  {% endif %}
+</div>
+
+{% set detail = meetings.details[meeting.id] %}
+{% set hasMedia = detail and(detail.has_video or detail.has_transcript) %}
+
+{% if hasMedia %}
+  {# ── Two-panel layout: agenda left, transcript right ── #}
+  <div class="meeting-layout">
+
+    <div class="agenda-panel">
+      {% include "video.njk" %}
+      {% if detail.items.length > 0 %}
+        <h2 class="agenda-panel__heading">Agenda</h2>
+        <ol class="agenda-list">
+          {% for item in detail.items %}
+            {% include "agenda-item.njk" %}
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p>No agenda items available for this meeting.</p>
+      {% endif %}
+    </div>
+
+    <div class="media-panel">
+      {% include "transcript.njk" %}
+    </div>
+
+  </div>
+
+{% else %}
+  {# ── Single column: agenda only ── #}
+  {% if detail and detail.items.length > 0 %}
+    <ol class="agenda-list">
+      {% for item in detail.items %}
+        {% include "agenda-item.njk" %}
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p>No agenda items available for this meeting.</p>
+  {% endif %}
+{% endif %}

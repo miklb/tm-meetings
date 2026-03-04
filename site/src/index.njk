@@ -1,0 +1,23 @@
+<h1 class="page-title">Tampa City Council Meetings</h1>
+
+{% for date in meetings.dates %}
+  <section class="date-group">
+    <h2 class="date-heading">{{ date | readableDate }}</h2>
+    <ul class="meeting-list">
+      {% for meeting in meetings.byDate[date] %}
+        <li class="meeting-card">
+          <span class="badge badge--{{ meeting.meeting_type }}">{{ meeting.meeting_type | meetingTypeLabel }}</span>
+          {% if meeting.has_transcript %}
+            <span class="badge badge--transcript">Transcript</span>{% endif %}
+          {% if meeting.has_video %}
+            <span class="badge badge--video">Video</span>{% endif %}
+          <a href="/meetings/{{ meeting.id }}/">{{ meeting.title }}</a>
+          {% if meeting.item_count > 0 %}
+            <span class="item-count">{{ meeting.item_count }}
+              item{{ "s" if meeting.item_count != 1 }}</span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
+{% endfor %}

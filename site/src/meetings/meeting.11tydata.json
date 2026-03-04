@@ -1,0 +1,12 @@
+{
+  "layout": "base.njk",
+  "pagination": {
+    "data": "meetings.all",
+    "size": 1,
+    "alias": "meeting"
+  },
+  "permalink": "meetings/{{ meeting.id }}/",
+  "eleventyComputed": {
+    "title": "{{ meeting.title }} — Tampa Meetings"
+  }
+}
