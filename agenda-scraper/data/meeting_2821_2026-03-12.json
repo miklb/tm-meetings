@@ -1,0 +1,898 @@
+{
+  "meetingId": "2821",
+  "meetingType": "cra",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "March 12, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2821&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "22050",
+      "title": "File No. CRA24-2242\nEast Tampa CAC Chair, Jeffrey Johnson, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "rawTitle": "File No. CRA24-2242\nEast Tampa CAC Chair, Jeffrey Johnson, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "fileNumber": "CRA24-2242",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "22051",
+      "title": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting March Project Tracking Report, Commercial Grants Tracking Report, and the Residential Tracking Report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting March Project Tracking Report, Commercial Grants Tracking Report, and the Residential Tracking Report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA24-2241",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241;ONBASENO.22051).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241%3bONBASENO.22051).PDF.pdf?documentType=1&meetingId=2821&itemId=22051&publishId=181967&isSection=False&isAttachment=True",
+          "originalTitle": "Download DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241;ONBASENO.22051).PDF",
+          "originalText": "DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241;ONBASENO.22051).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22051/directorsmonthlyreportfileno.cra24-2241onbaseno.22051.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "22055",
+      "title": "File No. CRA26-22055\nChannel District CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Florida Aquarium, Inc. Grant Funding and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and the Florida Aquarium, Inc. (“awardee”) to repair and renovate property generally described as 701 Channelside Drive Tampa, Florida 33602  (“the Florida Aquarium Property”) including major improvements to and renovations of the existing facilities, creating new exhibits, a multi-space gallery and a large-scale outdoor exhibit on property located within the boundaries of the Channel District Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "rawTitle": "File No. CRA26-22055\nChannel District CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Florida Aquarium, Inc. Grant Funding and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and the Florida Aquarium, Inc. (“awardee”) to repair and renovate property generally described as 701 Channelside Drive Tampa, Florida 33602  (“the Florida Aquarium Property”) including major improvements to and renovations of the existing facilities, creating new exhibits, a multi-space gallery and a large-scale outdoor exhibit on property located within the boundaries of the Channel District Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "fileNumber": "CRA26-22055",
+      "background": "The Awardee has proposed to redevelop the Florida Aquarium Property through major improvements to and renovations of the existing facilities, creating new exhibits, a multi-space gallery and a large-scale outdoor exhibit.",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22055&publishId=181968&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22055/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20AND%20FUNDING%20AGREEMENT%20-%20FLORIDA%20AQUARIUM%20RENNOVATIONS.PDF.pdf?documentType=1&meetingId=2821&itemId=22055&publishId=181969&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF",
+          "originalText": "CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22055/cra-resolution-and-funding-agreement-florida-aquarium-rennovations.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$15,000,000",
+        "$5,000,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$15,000,000",
+          "value": 15000000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": "fiscal_impact",
+          "contexts": [
+            "exceed $15,000,000 within the Channel District CRA Fund. of the City of Tampa and The Florida Aquarium. Inc. for the Channel District CRA not to",
+            "of the City of Tampa and The Florida Aquarium. Inc. for the Channel District CRA not to exceed $15,000,000 within the Channel District CRA Fund."
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$5,000,000",
+          "value": 5000000,
+          "signedValue": 5000000,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "PROJECTED COSTS: 61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2026)",
+            "61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2027) P-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165",
+            "61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2028) Subject to FY2027 Budget and Appropriation",
+            "exceed $15,000,000 within the Channel District CRA Fund. PROJECTED COSTS: 61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2026)",
+            "P-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165 61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2027)",
+            "Subject to FY2027 Budget and Appropriation 61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2028)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 5000000,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 15000000,
+        "net": 5000000
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "22056",
+      "title": "File No. CRA26-22056\nDowntown CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the 801 Whiting LLC Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and 801 Whiting LLC (“Grant Recipient”) to develop a portion of the property generally described as 801 E. Whiting St, Tampa, Florida (“the 801 Whiting Property”) as workforce housing on property located within the boundaries of the Downtown Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "rawTitle": "File No. CRA26-22056\nDowntown CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the 801 Whiting LLC Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and 801 Whiting LLC (“Grant Recipient”) to develop a portion of the property generally described as 801 E. Whiting St, Tampa, Florida (“the 801 Whiting Property”) as workforce housing on property located within the boundaries of the Downtown Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "fileNumber": "CRA26-22056",
+      "background": "Section 163.387(6)(c)(7), Florida Statutes, authorizes the Community Redevelopment Agency of the City of Tampa (“CRA”) to expend monies from the redevelopment trust fund for the development of affordable housing in a designated community redevelopment area, in this case, the Downtown CRA.",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22056&publishId=181970&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22056/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DT%20RESO%20AND%20AGREEMENT%20FOR%20701%20WHITING%20FINAL.PDF.pdf?documentType=1&meetingId=2821&itemId=22056&publishId=181971&isSection=False&isAttachment=True",
+          "originalTitle": "Download DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF",
+          "originalText": "DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22056/dt-reso-and-agreement-for-701-whiting-final.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$4,000,000",
+        "$1,333,333",
+        "$1,333,334"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$4,000,000",
+          "value": 4000000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": "fiscal_impact",
+          "contexts": [
+            "$4,000,000 within the Downtown CRA fund. Redevelopment Agency (CRA) and 801 Whiting LLC for the Downtown CRA not to exceed",
+            "Redevelopment Agency (CRA) and 801 Whiting LLC for the Downtown CRA not to exceed $4,000,000 within the Downtown CRA fund."
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$1,333,333",
+          "value": 1333333,
+          "signedValue": 1333333,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "PROJECTED COSTS: 62100 213829 561000 $1,333,333 (Expenditure) (FY2026)",
+            "62100 213829 561000 $1,333,333 (Expenditure) (FY2027) Downtown CRA Fund. CRA Dept. CTPA Land",
+            "$4,000,000 within the Downtown CRA fund. PROJECTED COSTS: 62100 213829 561000 $1,333,333 (Expenditure) (FY2026)",
+            "Downtown CRA Fund. CRA Dept. CTPA Land 62100 213829 561000 $1,333,333 (Expenditure) (FY2027)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$1,333,334",
+          "value": 1333334,
+          "signedValue": 1333334,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "62100 213829 561000 $1,333,334 (Expenditure) (FY2028) Subject to FY2027 Budget and Appropriation",
+            "Subject to FY2027 Budget and Appropriation 62100 213829 561000 $1,333,334 (Expenditure) (FY2028)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 2666667,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 4000000,
+        "net": 2666667
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "22058",
+      "title": "File No. CRA26-22058\nA Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the East Tampa Affordable Housing Development Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Clonts Properties, Inc (“Grant Recipient”) to develop the property generally described as 3812-3816 Temple St Tampa, Florida  (“the Grant Park Property”) as affordable housing on property located within the boundaries of the East Tampa Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "rawTitle": "File No. CRA26-22058\nA Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the East Tampa Affordable Housing Development Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Clonts Properties, Inc (“Grant Recipient”) to develop the property generally described as 3812-3816 Temple St Tampa, Florida  (“the Grant Park Property”) as affordable housing on property located within the boundaries of the East Tampa Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "fileNumber": "CRA26-22058",
+      "background": "Clonts Properties, Inc. has proposed the development of a rental residential project consisting of fourteen (14) units, all of which will be designated as one hundred percent (100%) affordable housing. The Proposed Project will be located within the boundaries of the East Tampa Community Redevelopment Area",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22058&publishId=181972&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22058/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%20AND%20AGREEMENT%20FOR%203812-3816%20TEMPLE%20ST.%20TAMPA%20FL%2033619%20-%20CLONTS%20PROPERTI.pdf?documentType=1&meetingId=2821&itemId=22058&publishId=181973&isSection=False&isAttachment=True",
+          "originalTitle": "Download RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF",
+          "originalText": "RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22058/reso-and-agreement-for-3812-3816-temple-st.-tampa-fl-33619-clonts-properties-llc.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$1,750,000",
+        "$583,333",
+        "$583,334"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$1,750,000",
+          "value": 1750000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": "fiscal_impact",
+          "contexts": [
+            "exceed $1,750,000 within the East Tampa CRA fund. Redevelopment Agency (CRA) and Clonts Properties, LLC for the East Tampa CRA not to",
+            "Redevelopment Agency (CRA) and Clonts Properties, LLC for the East Tampa CRA not to exceed $1,750,000 within the East Tampa CRA fund."
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$583,333",
+          "value": 583333,
+          "signedValue": 583333,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "PROJECTED COSTS: 62400 213829 561000 $583,333 (Expenditure) (FY2026)",
+            "62400 213829 561000 $583,333 (Expenditure) (FY2027) East Tampa CRA Fund. CRA Dept. CTPA Land",
+            "exceed $1,750,000 within the East Tampa CRA fund. PROJECTED COSTS: 62400 213829 561000 $583,333 (Expenditure) (FY2026)",
+            "East Tampa CRA Fund. CRA Dept. CTPA Land 62400 213829 561000 $583,333 (Expenditure) (FY2027)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$583,334",
+          "value": 583334,
+          "signedValue": 583334,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "62400 213829 561000 $583,334 (Expenditure) (FY2028) Subject to FY2027 Budget and Appropriation",
+            "Subject to FY2027 Budget and Appropriation 62400 213829 561000 $583,334 (Expenditure) (FY2028)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 1166667,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 1750000,
+        "net": 1166667
+      }
+    },
+    {
+      "number": 6,
+      "agendaItemId": "22054",
+      "title": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)(Said agenda item continued from January 15, 2026 due to meeting cancellation)\n\nMemorandum from Adriana Colina, Director of Logistics and Asset Management, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)(Said agenda item continued from January 15, 2026 due to meeting cancellation)\n\nMemorandum from Adriana Colina, Director of Logistics and Asset Management, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19842",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TAMPAUNIONSTATION(FILENO.CRA25-19842%3bONBASENO.22054).PDF.pdf?documentType=1&meetingId=2821&itemId=22054&publishId=181974&isSection=False&isAttachment=True",
+          "originalTitle": "Download TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
+          "originalText": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22054/tampaunionstationfileno.cra25-19842onbaseno.22054.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 7,
+      "agendaItemId": "22047",
+      "title": "File No. CRA26-22047\nCentral Park CRA - CAC Appointment for Casey Bauer\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22047\nCentral Park CRA - CAC Appointment for Casey Bauer\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22047",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "CP CAC APPLICATION FOR CASEY_BAUER.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CP%20CAC%20APPLICATION%20FOR%20CASEY_BAUER.PDF.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=181975&isSection=False&isAttachment=True",
+          "originalTitle": "Download CP CAC APPLICATION FOR CASEY_BAUER.PDF",
+          "originalText": "CP CAC APPLICATION FOR CASEY_BAUER.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22047/cp-cac-application-for-casey_bauer.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=181976&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22047/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=181977&isSection=False&isAttachment=True",
+          "originalTitle": "Download CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF",
+          "originalText": "CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22047/centralparkcacappointmentfileno.cra26-22047.onbaseno.22047.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 8,
+      "agendaItemId": "22048",
+      "title": "File No. CRA26-22048\nWest Tampa CRA CAC Appointments for Janice Williams and Allen Berrebbi\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22048\nWest Tampa CRA CAC Appointments for Janice Williams and Allen Berrebbi\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22048",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "WT CAC APPLICATION FOR ALLEN BERREBBI.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WT%20CAC%20APPLICATION%20FOR%20ALLEN%20BERREBBI.PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=181978&isSection=False&isAttachment=True",
+          "originalTitle": "Download WT CAC APPLICATION FOR ALLEN BERREBBI.PDF",
+          "originalText": "WT CAC APPLICATION FOR ALLEN BERREBBI.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22048/wt-cac-application-for-allen-berrebbi.pdf"
+        },
+        {
+          "title": "WT CAC APPLICATION FOR JANICE WILLIAMS.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WT%20CAC%20APPLICATION%20FOR%20JANICE%20WILLIAMS.PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=181979&isSection=False&isAttachment=True",
+          "originalTitle": "Download WT CAC APPLICATION FOR JANICE WILLIAMS.PDF",
+          "originalText": "WT CAC APPLICATION FOR JANICE WILLIAMS.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22048/wt-cac-application-for-janice-williams.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=181980&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22048/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048%3bONBASENO.22048).PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=181981&isSection=False&isAttachment=True",
+          "originalTitle": "Download WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF",
+          "originalText": "WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22048/westtampacracacappointmentsfileno.cra26-22048onbaseno.22048.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 9,
+      "agendaItemId": "22049",
+      "title": "File No. CRA26-22049 \nDowntown Arts Center Funding Request - CRA staff reviewed the application packet on November 21, 2025, and found this project consistent with the Downtown Tampa Community Redevelopment Plan Land Use and Economic Development Goal 2, which is to promote economic growth in the Downtown CRA community.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22049 \nDowntown Arts Center Funding Request - CRA staff reviewed the application packet on November 21, 2025, and found this project consistent with the Downtown Tampa Community Redevelopment Plan Land Use and Economic Development Goal 2, which is to promote economic growth in the Downtown CRA community.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22049",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20AWARD-MAKING%20PROCESS%20CHECKLIST%20-DOWNTOWN%20ARTS%20CENTER.PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=181982&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF",
+          "originalText": "CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22049/cra-award-making-process-checklist-downtown-arts-center.pdf"
+        },
+        {
+          "title": "DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWN%20ARTS%20CENTER%20-%20TAMPA%20CRA_MARCH%2012_TAMPA%20ARTS%20ALLIANCE.PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=181983&isSection=False&isAttachment=True",
+          "originalTitle": "Download DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF",
+          "originalText": "DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22049/downtown-arts-center-tampa-cra_march-12_tampa-arts-alliance.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=181984&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22049/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049%3bONBASENO.22049).PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=181985&isSection=False&isAttachment=True",
+          "originalTitle": "Download DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF",
+          "originalText": "DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22049/downtownartscenterfundingfileno.cra26-22049onbaseno.22049.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$700,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$700,000",
+          "value": 700000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "SubjectThe Downtown CAC motioned to recommend awarding $700,000 special ContactMia Dorton 813-274-8643",
+            "ContactMia Dorton 813-274-8643 SubjectThe Downtown CAC motioned to recommend awarding $700,000 special"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 700000,
+        "net": 0
+      }
+    },
+    {
+      "number": 10,
+      "agendaItemId": "22052",
+      "title": "File No. CRA26-22052\nDowntown CRA- Kid Mason Program Change - CRA staff requests the approval of a program change of $21,888.08 in the Downtown CRA budget to account for the final project closeout change order of the Kid Mason Community Center renovations. The funding will provide 10 weeks of general conditions from July 21, 2024, to September 30, 2024, including increased bond costs stemming from Interim Change Order 1, dated March 28, 2024, and Interim Change Order 2, dated October 3, 2024. Interim Change Orders 1 and 2 did not account for additional general conditions related to the contract time extension and additional bond costs resulting from the increased contract value.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22052\nDowntown CRA- Kid Mason Program Change - CRA staff requests the approval of a program change of $21,888.08 in the Downtown CRA budget to account for the final project closeout change order of the Kid Mason Community Center renovations. The funding will provide 10 weeks of general conditions from July 21, 2024, to September 30, 2024, including increased bond costs stemming from Interim Change Order 1, dated March 28, 2024, and Interim Change Order 2, dated October 3, 2024. Interim Change Orders 1 and 2 did not account for additional general conditions related to the contract time extension and additional bond costs resulting from the increased contract value.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22052",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWN-REALIGN%20JACKSON%20STREET%20PARKING%20LOT%20FUNDS_FUND%20KID%20MASON%20MARCH%202026.PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=181986&isSection=False&isAttachment=True",
+          "originalTitle": "Download DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF",
+          "originalText": "DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22052/downtown-realign-jackson-street-parking-lot-funds_fund-kid-mason-march-2026.pdf"
+        },
+        {
+          "title": "20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/20-C-00023%20WDC%2032%20-%20ICO%2012%20-%20GENERAL%20CONDITIONS.BOND%20-%20COT%20EXECUTED%20WDC.PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=181987&isSection=False&isAttachment=True",
+          "originalTitle": "Download 20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF",
+          "originalText": "20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22052/20-c-00023-wdc-32-ico-12-general-conditions.bond-cot-executed-wdc.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=181988&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22052/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052%3bONBASENO.22052).PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=181989&isSection=False&isAttachment=True",
+          "originalTitle": "Download DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF",
+          "originalText": "DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22052/downtowncrakidmasonprogramchangefileno.cra26-22052onbaseno.22052.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$21,888.08"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$21,888.08",
+          "value": 21888.08,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "SubjectFunds of $21,888.08 will be reprogrammed from the completed Jackson ContactMia Dorton 813-274-8643",
+            "Street Parking Lot Remediation Project. After reappropriating $21,888.08 to",
+            "approval of a program change of $21,888.08 in the Downtown CRA budget to Downtown CRA- Kid Mason Program Change - CRA staff requests the",
+            "File No. CRA26-22052 Downtown CRA- Kid Mason Program Change - CRA staff requests the approval of a program change of $21,888.08 in the Downtown CRA budget to account for the final project closeout change order of the Kid Mason Community Center renovations. The funding will provide 10 weeks of general conditions from July 21, 2024, to September 30, 2024, including increased bond costs stemming from Interim Change Order 1, dated March 28, 2024, and Interim Change Order 2, dated October 3, 2024. Interim Change Orders 1 and 2 did not account for additional general conditions related to the contract time extension and additional bond costs resulting from the increased contract value.",
+            "File No. CRA26-22052Kid Mason Program Change - CRA staff requests the approval of a program change of $21,888.08 in the Downtown CRA budget to account for the final project closeout change order of the Kid Mason Community Center renovations. The funding will provide 10 weeks of general conditions from July 21, 2024, to September 30, 2024, including increased bond costs stemming from Interim Change Order 1, dated March 28, 2024, and Interim Change Order 2, dated October 3, 2024. Interim Change Orders 1 and 2 did not account for additional general conditions related to the contract time extension and additional bond costs resulting from the increased contract value. Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "ContactMia Dorton 813-274-8643 SubjectFunds of $21,888.08 will be reprogrammed from the completed Jackson",
+            "SubjectFunds of $21,888.08 will be reprogrammed from the completed Jackson Street Parking Lot Remediation Project. After reappropriating $21,888.08 to",
+            "Downtown CRA- Kid Mason Program Change - CRA staff requests the approval of a program change of $21,888.08 in the Downtown CRA budget to"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 21888.08,
+        "net": 0
+      }
+    },
+    {
+      "number": 11,
+      "agendaItemId": "22053",
+      "title": "File No. CRA26-22053\nDowntown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026.\n\nCRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project. \n\nThe remaining $2.5 million will be budgeted in FY27.\n\nFrom Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489)\n\nTo Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22053\nDowntown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026.\n\nCRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project. \n\nThe remaining $2.5 million will be budgeted in FY27.\n\nFrom Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489)\n\nTo Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22053",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DT%20PROGRAM%20CHANGE%20-%20CURTIS%20HIXON%20WATERFRONT%20PARK%20-%20FEB%202025.PDF.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=181990&isSection=False&isAttachment=True",
+          "originalTitle": "Download DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF",
+          "originalText": "DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22053/dt-program-change-curtis-hixon-waterfront-park-feb-2025.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=181991&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22053/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053%3bONBASENO.22053).PDF.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=181992&isSection=False&isAttachment=True",
+          "originalTitle": "Download DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF",
+          "originalText": "DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22053/downtowncracurtishixonprogramchangefileno.cra26-22053onbaseno.22053.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$5",
+        "$3,000,000",
+        "$2"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$5",
+          "value": 5,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "approval of a program change in the amount of $5.5 million in the Downtown Downtown CRA - Curtis Hixon Program Change - CRA staff requests the",
+            "File No. CRA26-22053 Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026.",
+            "File No. CRA26-22053Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026. CRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project.  The remaining $2.5 million will be budgeted in FY27. From Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489) To Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920) Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$3,000,000",
+          "value": 3000000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "CRA staff requests reprogramming $3,000,000 from Neighborhood by the Parks and Recreation Department on February 12, 2026.",
+            "From Neighborhood Infrastructure - $3,000,000",
+            "$3,000,000 (62200.213800.563001.1002920) To Downtown Non-core Curtis Hixon Waterfront Park Enhancements -",
+            "Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026. CRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project.",
+            "The remaining $2.5 million will be budgeted in FY27. From Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489)",
+            "From Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489) To Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920)",
+            "File No. CRA26-22053Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026. CRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project.  The remaining $2.5 million will be budgeted in FY27. From Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489) To Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920) Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "File No. CRA26-22053Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026. CRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project.  The remaining $2.5 million will be budgeted in FY27. From Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489) To Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920) Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "File No. CRA26-22053Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026. CRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project.  The remaining $2.5 million will be budgeted in FY27. From Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489) To Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920) Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "by the Parks and Recreation Department on February 12, 2026. CRA staff requests reprogramming $3,000,000 from Neighborhood",
+            "The remaining $2.5 million will be budgeted in FY27. From Neighborhood Infrastructure - $3,000,000",
+            "To Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920)"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$2",
+          "value": 2,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "The remaining $2.5 million will be budgeted in FY27. Infrastructure to a new budget line for this project.",
+            "CRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project. The remaining $2.5 million will be budgeted in FY27.",
+            "File No. CRA26-22053Downtown CRA - Curtis Hixon Program Change - CRA staff requests the approval of a program change in the amount of $5.5 million in the Downtown CRA budget to fund Curtis Hixon Waterfront Park enhancements as requested by the Parks and Recreation Department on February 12, 2026. CRA staff requests reprogramming $3,000,000 from Neighborhood Infrastructure to a new budget line for this project.  The remaining $2.5 million will be budgeted in FY27. From Neighborhood Infrastructure - $3,000,000 (62200.213800.563001.0000489) To Downtown Non-core Curtis Hixon Waterfront Park Enhancements - $3,000,000 (62200.213800.563001.1002920) Memorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "Infrastructure to a new budget line for this project. The remaining $2.5 million will be budgeted in FY27."
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 3000007,
+        "net": 0
+      }
+    },
+    {
+      "number": 12,
+      "agendaItemId": "22083",
+      "title": "File No. CRA26-22083\nEast Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the East Tampa Community Redevelopment Area located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for sale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the East Tampa Community Redevelopment Agency Fund; providing an effective date.\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22083\nEast Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the East Tampa Community Redevelopment Area located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for sale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the East Tampa Community Redevelopment Agency Fund; providing an effective date.\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22083",
+      "background": "The City desires to purchase the Property for community redevelopment purposes consistent with the East Tampa Community Redevelopment Plan",
+      "supportingDocuments": [
+        {
+          "title": "CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESO%20_AMP%3bAMP%3b%20SALE%20CONTRACT%204539%20N%2019TH%20ST_.PDF.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=181993&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF",
+          "originalText": "CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22083/cra-reso-ampamp-sale-contract-4539-n-19th-st_.pdf"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=181994&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22083/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/4539N.19THST.(FILENO.CRA26-22083%3bONBASENO.22083).PDF.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=181995&isSection=False&isAttachment=True",
+          "originalTitle": "Download 4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF",
+          "originalText": "4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22083/4539n.19thst.fileno.cra26-22083onbaseno.22083.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$290,000",
+        "$10,000",
+        "$300,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$290,000",
+          "value": 290000,
+          "signedValue": 290000,
+          "type": "expenditure",
+          "section": "fiscal_impact",
+          "contexts": [
+            "of $290,000 together with closing costs in the approximate amount of $10,000, Tampa, Florida, for Community Redevelopment purposes at a purchase price",
+            "Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 This resolution provides for the purchase of real property located at 4539 N. 19th Street,",
+            "File No. CRA26-22083 East Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the East Tampa Community Redevelopment Area located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for sale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the East Tampa Community Redevelopment Agency Fund; providing an effective date.",
+            "File No. CRA26-22083Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the East Tampa Community Redevelopment Area located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for sale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the East Tampa Community Redevelopment Agency Fund; providing an effective date. Memorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000,",
+            "This resolution provides for the purchase of real property located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$10,000",
+          "value": 10000,
+          "signedValue": 10000,
+          "type": "expenditure",
+          "section": "fiscal_impact",
+          "contexts": [
+            "of $290,000 together with closing costs in the approximate amount of $10,000, Tampa, Florida, for Community Redevelopment purposes at a purchase price",
+            "together with closing costs in the approximate amount of $10,000, pursuant to a contract for",
+            "File No. CRA26-22083 East Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the East Tampa Community Redevelopment Area located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for sale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the East Tampa Community Redevelopment Agency Fund; providing an effective date.",
+            "File No. CRA26-22083Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the East Tampa Community Redevelopment Area located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for sale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the East Tampa Community Redevelopment Agency Fund; providing an effective date. Memorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+            "Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000,",
+            "Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$300,000",
+          "value": 300000,
+          "signedValue": 300000,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "PROJECTED COSTS: 62400.213800.561000.0000.0000496.0000000 $300,000 proceeds from the East Tampa Community Redevelopment Agency Land Assemblage Fund.",
+            "proceeds from the East Tampa Community Redevelopment Agency Land Assemblage Fund. PROJECTED COSTS: 62400.213800.561000.0000.0000496.0000000 $300,000"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 600000,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 600000
+      }
+    },
+    {
+      "number": 13,
+      "agendaItemId": "22118",
+      "title": "File No. CRA26-22118\nWest Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Domain Homes Affordable Housing Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Domain Homes, Inc. (“Grant Recipient”) to construct single-family homes on property located at 1948 W. Spruce Street (four [4] lots), and 2324 W. St. Conrad Street (one [1] lot),Tampa, Florida, within the boundaries of the applicable Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "rawTitle": "File No. CRA26-22118\nWest Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Domain Homes Affordable Housing Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Domain Homes, Inc. (“Grant Recipient”) to construct single-family homes on property located at 1948 W. Spruce Street (four [4] lots), and 2324 W. St. Conrad Street (one [1] lot),Tampa, Florida, within the boundaries of the applicable Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "fileNumber": "CRA26-22118",
+      "background": "Domain Homes, Inc. has proposed the construction of five (5) single-family homes designed as a scattered-site residential development to support affordable homeownership opportunities in the West Tampa CRA.  The Grant Recipient has requested financial assistance from the CRA in connection with the construction of the affordable single-family homes and subject to the terms and conditions of this Agreement, the CRA is willing to provide financial assistance to the Grant Recipient in connection with the construction of the single-family homes.",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22118&publishId=181996&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22118/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ONBASE-DOMAIN%20HOMES%20FUNDING%20RESO%20AND%20AGREEMENT%20-%20CBS%20REV-UPDATED-1.PDF.pdf?documentType=1&meetingId=2821&itemId=22118&publishId=181997&isSection=False&isAttachment=True",
+          "originalTitle": "Download ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF",
+          "originalText": "ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF",
+          "mirroredUrl": "https://pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev/2026-03-12/meeting-2821/22118/onbase-domain-homes-funding-reso-and-agreement-cbs-rev-updated-1.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$375,000.00",
+        "$375,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$375,000.00",
+          "value": 375000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": "fiscal_impact",
+          "contexts": [
+            "a total amount not to exceed Three Hundred Thousand Dollars ($375,000.00), for the West This Resolution provides for an agreement between Domain Homes and the Tampa CRA for",
+            "This Resolution provides for an agreement between Domain Homes and the Tampa CRA for a total amount not to exceed Three Hundred Thousand Dollars ($375,000.00), for the West"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$375,000",
+          "value": 375000,
+          "signedValue": 375000,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "PROJECTED COSTS: 62350.213829.561000 $375,000 (Expenditure) (FY26) Tampa CRA within the West Tampa CRA Fund.",
+            "Tampa CRA within the West Tampa CRA Fund. PROJECTED COSTS: 62350.213829.561000 $375,000 (Expenditure) (FY26)"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 375000,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 375000,
+        "net": 375000
+      }
+    }
+  ],
+  "financialSummary": {
+    "expenditures": 9808334,
+    "decreases": 0,
+    "revenues": 0,
+    "other": 24846895.08,
+    "net": 9808334,
+    "formatted": {
+      "expenditures": "$9,808,334.00",
+      "decreases": "$0.00",
+      "revenues": "$0.00",
+      "other": "$24,846,895.08",
+      "net": "$9,808,334.00"
+    },
+    "expenditureRange": {
+      "smallest": {
+        "number": 13,
+        "agendaItemId": "22118",
+        "fileNumber": "CRA26-22118",
+        "title": "File No. CRA26-22118\nWest Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Domain Homes Affordable Housing Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Domain Homes, Inc. (“Grant Recipient”) to construct single-family homes on property located at 1948 W. Spruce Street (four [4] lots), and 2324 W. St. Conrad Street (one [1] lot),Tampa, Florida, within the boundaries of the applicable Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+        "amount": 375000,
+        "formatted": "$375,000.00"
+      },
+      "largest": {
+        "number": 3,
+        "agendaItemId": "22055",
+        "fileNumber": "CRA26-22055",
+        "title": "File No. CRA26-22055\nChannel District CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Florida Aquarium, Inc. Grant Funding and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and the Florida Aquarium, Inc. (“awardee”) to repair and renovate property generally described as 701 Channelside Drive Tampa, Florida 33602  (“the Florida Aquarium Property”) including major improvements to and renovations of the existing facilities, creating new exhibits, a multi-space gallery and a large-scale outdoor exhibit on property located within the boundaries of the Channel District Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+        "amount": 5000000,
+        "formatted": "$5,000,000.00"
+      },
+      "count": 5
+    }
+  },
+  "formattedDate": "2026-03-12"
+}
