@@ -1,8 +1,10 @@
 #!/bin/bash
 
 # Tampa City Council Agenda Processing Script
-# Usage: ./process-agenda.sh [date]
+# Usage: ./process-agenda.sh [date] [--skip-mirror]
 # If no date provided, uses today's date
+
+SKIP_MIRROR=false
 
 # Set the date - use provided argument or today's date
 if [ -z "$1" ]; then
@@ -12,6 +14,13 @@ else
     DATE="$1"
     echo "Processing date: $DATE"
 fi
+
+# Check for --skip-mirror flag
+for arg in "$@"; do
+    if [ "$arg" = "--skip-mirror" ]; then
+        SKIP_MIRROR=true
+    fi
+done
 
 echo "Step 1: Running JSON scraper..."
 echo "⏳ This may take several minutes for agendas with many supporting documents..."
@@ -34,6 +43,21 @@ if [ $? -eq 0 ]; then
         
         if [ $? -eq 0 ]; then
             echo "✓ WordPress conversion completed successfully"
+            echo ""
+
+            # Step 3: Mirror documents to R2 (unless --skip-mirror)
+            if [ "$SKIP_MIRROR" = "true" ]; then
+                echo "⏭  Skipping document mirroring (--skip-mirror)"
+            else
+                echo "Step 3: Mirroring documents to R2..."
+                node mirror-documents.js --date "$DATE"
+                if [ $? -eq 0 ]; then
+                    echo "✓ Document mirroring completed"
+                else
+                    echo "⚠️  Document mirroring had errors (non-fatal)"
+                fi
+            fi
+
             echo ""
             echo "🎉 Agenda processing complete!"
             echo "Check the agendas/ directory for your wp.html file(s)"

@@ -1260,6 +1260,42 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
         }
         
         const outputFileName = path.join(outputDir, `${fileName}.json`);
+
+        // Preserve mirroredUrl values from existing JSON so re-scrapes
+        // don't wipe out R2 links (OnBase publishId URLs change but R2 is permanent)
+        if (fs.existsSync(outputFileName)) {
+            try {
+                const existing = JSON.parse(fs.readFileSync(outputFileName, 'utf8'));
+                const mirrorMap = new Map();
+                for (const item of existing.agendaItems || []) {
+                    for (const doc of item.supportingDocuments || []) {
+                        if (doc.mirroredUrl && item.agendaItemId) {
+                            const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
+                            mirrorMap.set(key, doc.mirroredUrl);
+                        }
+                    }
+                }
+                if (mirrorMap.size > 0) {
+                    let restored = 0;
+                    for (const item of meetingData.agendaItems) {
+                        for (const doc of item.supportingDocuments || []) {
+                            const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
+                            const existing = mirrorMap.get(key);
+                            if (existing) {
+                                doc.mirroredUrl = existing;
+                                restored++;
+                            }
+                        }
+                    }
+                    if (restored > 0) {
+                        console.log(`Preserved ${restored} mirrored document URLs from previous scrape`);
+                    }
+                }
+            } catch (e) {
+                // Existing file unreadable — proceed without merge
+            }
+        }
+
         fs.writeFileSync(outputFileName, JSON.stringify(meetingData, null, 2));
         
         console.log(`Successfully created JSON: ${outputFileName}`);
