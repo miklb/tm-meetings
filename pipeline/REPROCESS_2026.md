@@ -1,10 +1,16 @@
 # Reprocessing All 2026 Meetings
 
-Step-by-step runbook for a full refresh of all 2026 meeting data: agendas, documents, transcripts, and site rebuild.
+Step-by-step runbook for a full refresh of all 2026 meeting data: agendas, documents, transcripts, video sync, and site rebuild.
 
 **Estimated time:** 45–90 minutes (most is transcript capitalization at ~3 min per meeting)
 
 > **Note:** The agenda scraper (`json-scraper.js`) only fetches meetings for the current week by default. To re-scrape all 2026 meetings, you must pass each OnBase meeting ID individually. The `reprocess-2026.sh` script automates this by pulling IDs from the SQLite database.
+
+### DRAFT → FINAL Lifecycle
+
+Agendas are published as DRAFT on Friday. Before Thursday's meeting they switch to FINAL with the complete item list and supporting documents. The scraper stores `agendaType` ("DRAFT" or "FINAL") in each JSON file. **Re-scraping an ID that was previously DRAFT will overwrite it with the current (FINAL) version**, and the `mirroredUrl` preservation logic ensures existing R2 links are kept.
+
+If two OnBase IDs exist for the same date and meeting type (one DRAFT, one FINAL), `build-db.js` deduplicates automatically — keeping the version with the most agenda items.
 
 ## Scripted Full Run
 
@@ -90,7 +96,7 @@ done
 
 ## Phase 2: Mirror Documents to R2
 
-Upload all supporting documents (PDFs, etc.) to Cloudflare R2. Skips files already uploaded unless `--force` is used.
+Upload supporting documents (PDFs, etc.) to Cloudflare R2. **Skips files already in R2** by checking with `HeadObject` before uploading — only new documents from freshly-scraped FINAL agendas get uploaded. Existing `mirroredUrl` references are preserved across re-scrapes.
 
 ```bash
 cd agenda-scraper
@@ -157,14 +163,13 @@ python3 pipeline/transcript_lookup.py --match-db
 
 ### Option C: Reprocess ALL 2026 transcripts (force re-capitalize)
 
-To force reprocessing of meetings that were already done, remove their processed files first:
+To force reprocessing of meetings that were already done, remove their capitalized output files first. Raw transcripts are preserved — only the capitalized output is regenerated.
 
 ```bash
 # List what exists
-ls transcript-cleaner/processor/data/processed/
+ls transcript-cleaner/processor/data/processed/processed_transcript_26*.json
 
-# Remove processed files to force re-capitalize
-# (raw transcripts are preserved — only the capitalized output is removed)
+# Remove capitalized output to force re-capitalize
 rm transcript-cleaner/processor/data/processed/processed_transcript_26*.json
 
 # Now discover.py will see them as unprocessed
@@ -199,11 +204,11 @@ If you used `discover.py --process`, the site is rebuilt automatically at the en
 The script automates all five phases in sequence:
 
 1. **Collects IDs** — Queries `meetings.db` for all 2026 OnBase meeting IDs (or reads from JSON filenames with `--from-json`)
-2. **Scrapes each** — Runs `node json-scraper.js <id>` for every meeting individually
-3. **Mirrors docs** — Runs `node mirror-documents.js` with all IDs at once
-4. **Rebuilds entities** — Runs `rebuild-entities.sh` to update NER databases
-5. **Processes transcripts** — Runs `discover.py --process` to find and capitalize new transcripts
-6. **Builds site** — Runs `build-site.sh` to rebuild DB + Eleventy
+2. **Scrapes each** — Runs `node json-scraper.js <id>` for every meeting individually. DRAFTs that are now FINAL get overwritten with the complete agenda. `mirroredUrl` values are preserved from existing JSON.
+3. **Mirrors docs** — Runs `node mirror-documents.js` with all IDs. Only uploads new documents — existing R2 objects are skipped via `HeadObject` check.
+4. **Rebuilds entities** — Runs `rebuild-entities.sh` to update NER databases with any new names/orgs from refreshed agendas
+5. **Processes transcripts** — Runs `discover.py --process --skip-video` to find and capitalize new transcripts
+6. **Builds site** — Runs `build-site.sh` to rebuild DB + Eleventy. `build-db.js` deduplicates meetings with the same (date, type), keeping the version with the most items.
 
 ---
 
