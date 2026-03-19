@@ -8,9 +8,9 @@ A civic transparency platform for Tampa City Council meeting agendas, transcript
 
 ### Agenda Scraper (`agenda-scraper/`)
 
-Fetches structured agenda data from Hyland OnBase. Outputs JSON data files + WordPress block HTML. GitHub Actions nightly cron. ~48 meetings scraped (July 2025 – March 2026).
+Fetches structured agenda data from Hyland OnBase. Outputs JSON data files + WordPress block HTML. ~48 meetings scraped (July 2025 – March 2026).
 
-Capabilities: file numbers, titles, backgrounds, documents (with R2 mirroring), locations, coordinates, dollar amounts. Meeting types: Regular, Evening, CRA, Special, Workshop.
+Capabilities: file numbers, titles, backgrounds, documents (with R2 mirroring), locations, coordinates, dollar amounts. Meeting types: Regular, Evening, CRA, Special, Workshop. Preserves `mirroredUrl` across re-scrapes via existing-JSON lookup.
 
 ### Transcript Processor (`transcript-cleaner/processor/`)
 
@@ -20,11 +20,11 @@ Converts ALL CAPS realtime captioning transcripts from tampagov.net to sentence-
 
 ### SQLite Database (`data/meetings.db`)
 
-`scripts/build-db.js` imports agenda JSON → 3 tables (meetings, agenda_items, documents). Idempotent, ~0.2s rebuild. Currently agenda-only — 21 meetings (2026), 414 items, 1721 documents.
+`scripts/build-db.js` imports agenda JSON + transcript/video data → 6 tables (meetings, agenda_items, documents, transcript_segments, videos, video_chapters). Idempotent, ~0.2s rebuild. 64 meetings (Nov 2022 – Mar 2026), 1,400 items, 5,391 documents (5,389 mirrored), 11,413 transcript segments, 24 videos, 133 chapters.
 
 ### Eleventy Static Site (`site/`)
 
-Eleventy 3.x with Nunjucks templates. Reads SQLite via `better-sqlite3` at build time. Semantic HTML, accessible skip links, responsive CSS with custom properties. Homepage with date-grouped meeting list + individual meeting detail pages with full agenda items and mirrored document links.
+Eleventy 3.x with Nunjucks templates. Reads SQLite via `better-sqlite3` at build time. Semantic HTML, accessible skip links, responsive CSS with custom properties. Homepage with date-grouped meeting list + individual meeting detail pages with agenda items, mirrored document links, transcript with speaker turns, and embedded YouTube video with chapter navigation. Agenda drawer slide-out panel with focus trapping. 60 pages generated in ~0.5s.
 
 ### Document Mirroring
 
@@ -52,14 +52,14 @@ Run: `node scripts/build-db.js && cd site && npx eleventy`
 
 ## Architecture
 
-| Component   | Technology              | Status               |
-| ----------- | ----------------------- | -------------------- |
-| Static Site | Eleventy 3.x            | Running locally      |
-| Database    | SQLite + better-sqlite3 | Agenda data imported |
-| Documents   | Cloudflare R2           | Operational          |
-| Hosting     | Cloudflare Pages        | Not yet configured   |
-| Search      | Pagefind                | Not yet added        |
-| API         | D1 + Workers            | Post-launch          |
+| Component   | Technology              | Status                    |
+| ----------- | ----------------------- | ------------------------- |
+| Static Site | Eleventy 3.x            | Running locally, 60 pages |
+| Database    | SQLite + better-sqlite3 | Full data (64 meetings)   |
+| Documents   | Cloudflare R2           | Operational (5,389 docs)  |
+| Hosting     | Cloudflare Pages        | Not yet configured        |
+| Search      | Pagefind                | Not yet added             |
+| API         | D1 + Workers            | Post-launch               |
 
 ### Data Flow (Target)
 
@@ -288,9 +288,9 @@ These are needed to go live at `meetings.tampamonitor.com` but are not blocking 
 
 ### Repository + Deployment
 
-- [ ] Create `miklb/tampa-meetings` GitHub repo (public)
+- [x] Create GitHub repo — `miklb/tm-meetings` (private)
 - [x] Consolidate code into unified directory structure — `pipeline/` orchestration scripts
-- [ ] Configure `meetings.tampamonitor.com` DNS in Cloudflare
+- [x] Configure `meetings.tampamonitor.com` DNS in Cloudflare
 - [ ] Set up Cloudflare Pages auto-deploy on push
 - [ ] Keep WordPress output in parallel until subdomain replaces it
 
@@ -424,4 +424,4 @@ Canonical match key: `(date, meeting_type)`. Both systems cover the same meeting
 
 ---
 
-_Last updated: March 4, 2026_
+_Last updated: March 14, 2026_
