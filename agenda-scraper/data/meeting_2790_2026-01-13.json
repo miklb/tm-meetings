@@ -1,7 +1,8 @@
 {
   "meetingId": "2790",
-  "meetingType": "special",
+  "meetingType": "regular",
   "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "January 13, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2790&type=agenda&doctype=1",
   "agendaItems": [

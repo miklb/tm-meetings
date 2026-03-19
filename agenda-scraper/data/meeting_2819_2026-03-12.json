@@ -1,7 +1,7 @@
 {
   "meetingId": "2819",
-  "meetingType": "evening",
-  "agendaType": "DRAFT",
+  "meetingType": "regular",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "March 12, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2819&type=agenda&doctype=1",
@@ -30,17 +30,31 @@
     {
       "number": 2,
       "agendaItemId": "22306",
-      "title": "File No. F26-22306 (Resolution Pending Final Vote)\nResolution approving, ratifying, and confirming the Collective Bargaining Agreement between the City of Tampa and Local Union No. 754 International Association of Firefighters, AFL-CIO, effective through September 30, 2028; providing an effective date.",
-      "rawTitle": "File No. F26-22306 (Resolution Pending Final Vote)\nResolution approving, ratifying, and confirming the Collective Bargaining Agreement between the City of Tampa and Local Union No. 754 International Association of Firefighters, AFL-CIO, effective through September 30, 2028; providing an effective date.",
+      "title": "File No. F26-22306 \nResolution approving, ratifying, and confirming the Collective Bargaining Agreement between the City of Tampa and Local Union No. 754 International Association of Firefighters, AFL-CIO, effective through September 30, 2028; providing an effective date.",
+      "rawTitle": "File No. F26-22306 \nResolution approving, ratifying, and confirming the Collective Bargaining Agreement between the City of Tampa and Local Union No. 754 International Association of Firefighters, AFL-CIO, effective through September 30, 2028; providing an effective date.",
       "fileNumber": "F26-22306",
       "background": "",
       "supportingDocuments": [
         {
           "title": "RESO CBA IAFF.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%20CBA%20IAFF.DOCX.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182263&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%20CBA%20IAFF.DOCX.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182627&isSection=False&isAttachment=True",
           "originalTitle": "Download RESO CBA IAFF.DOCX",
           "originalText": "RESO CBA IAFF.DOCX",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22306/reso-cba-iaff.docx"
+        },
+        {
+          "title": "IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/IAFF%202025-2028%20RATIFIED%20WITH%20PAY%20TABLES%20AND%20LETTER.PDF.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182628&isSection=False&isAttachment=True",
+          "originalTitle": "Download IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF",
+          "originalText": "IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22306/iaff-2025-2028-ratified-with-pay-tables-and-letter.pdf"
+        },
+        {
+          "title": "IAFF 2025-2028 EXECUTIVE SUMMARY.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/IAFF%202025-2028%20EXECUTIVE%20SUMMARY.PDF.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182629&isSection=False&isAttachment=True",
+          "originalTitle": "Download IAFF 2025-2028 EXECUTIVE SUMMARY.PDF",
+          "originalText": "IAFF 2025-2028 EXECUTIVE SUMMARY.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22306/iaff-2025-2028-executive-summary.pdf"
         }
       ],
       "folioNumbers": [],
@@ -59,38 +73,66 @@
     {
       "number": 3,
       "agendaItemId": "22289",
-      "title": "File No. REZ-25-112\nPublic Hearing on application of Jeffrey W Jones request to rezone property generally located at 2907 W Euclid Avenue from RS-60 to RS-50 (Residential, Single Family Detached).",
-      "rawTitle": "File No. REZ-25-112\nPublic Hearing on application of Jeffrey W Jones request to rezone property generally located at 2907 W Euclid Avenue from RS-60 to RS-50 (Residential, Single Family Detached).",
+      "title": "File No. REZ-25-112\nPublic Hearing on application of Jeffrey W Jones request to rezone property generally located at 2907 W Euclid Avenue from RS-60 to RS-50 (Residential, Single Family Detached).\n\n(Ordinance being presented for first reading consideration) -An ordinance rezoning property in the general vicinity of 2907 West Euclid Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-60 (Residential, Single-Family) to RS-50 (Residential, Single-Family); providing an effective date.",
+      "rawTitle": "File No. REZ-25-112\nPublic Hearing on application of Jeffrey W Jones request to rezone property generally located at 2907 W Euclid Avenue from RS-60 to RS-50 (Residential, Single Family Detached).\n\n(Ordinance being presented for first reading consideration) -An ordinance rezoning property in the general vicinity of 2907 West Euclid Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-60 (Residential, Single-Family) to RS-50 (Residential, Single-Family); providing an effective date.",
       "fileNumber": "REZ-25-112",
       "background": "",
       "supportingDocuments": [
         {
           "title": "REZ-25-112 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182264&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182630&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-112 CERTIFIED APP FINAL.PDF",
           "originalText": "REZ-25-112 CERTIFIED APP FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez-25-112-certified-app-final.pdf"
         },
         {
-          "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182265&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/summary-sheet-cover-sheet.pdf"
-        },
-        {
           "title": "REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182266&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182631&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF",
           "originalText": "REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez-25-112-affidavit-of-compliance.pdf"
         },
         {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182632&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/summary-sheet-cover-sheet.pdf"
+        },
+        {
           "title": "REZ-25-112 STAFF REPORT_FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20STAFF%20REPORT_FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182267&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20STAFF%20REPORT_FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182633&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-112 STAFF REPORT_FINAL.PDF",
           "originalText": "REZ-25-112 STAFF REPORT_FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez-25-112-staff-report_final.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS -  REZ-25-112.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20%20REZ-25-112.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182634&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENTS -  REZ-25-112.PDF",
+          "originalText": "1-WRITTEN COMMENTS -  REZ-25-112.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/1-written-comments-rez-25-112.pdf"
+        },
+        {
+          "title": "REZ25-112 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-112%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182635&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-112 ORDINANCE.PDF",
+          "originalText": "REZ25-112 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez25-112-ordinance.pdf"
+        },
+        {
+          "title": "REZ25-112 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-112%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182636&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-112 BIE.PDF",
+          "originalText": "REZ25-112 BIE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez25-112-bie.pdf"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS -  REZ-25-112.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20%20REZ-25-112.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182637&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2-WRITTEN COMMENTS -  REZ-25-112.PDF",
+          "originalText": "2-WRITTEN COMMENTS -  REZ-25-112.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/2-written-comments-rez-25-112.pdf"
         }
       ],
       "folioNumbers": [],
@@ -109,45 +151,59 @@
     {
       "number": 4,
       "agendaItemId": "22174",
-      "title": "File No. REZ-25-126\nPublic Hearing on application of Mario Espaillat request to rezone property generally located at 4102 N. 22nd Street from CG to PD (Residential, Single-Family Attached).",
-      "rawTitle": "File No. REZ-25-126\nPublic Hearing on application of Mario Espaillat request to rezone property generally located at 4102 N. 22nd Street from CG to PD (Residential, Single-Family Attached).",
+      "title": "File No. REZ-25-126\nPublic Hearing on application of Mario Espaillat request to rezone property generally located at 4102 N. 22nd Street from CG to PD (Residential, Single-Family Attached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 4102 North 22nd Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) CG (Commercial General) to PD (Planned Development, Residential, Single-Family, Attached); providing an effective date.",
+      "rawTitle": "File No. REZ-25-126\nPublic Hearing on application of Mario Espaillat request to rezone property generally located at 4102 N. 22nd Street from CG to PD (Residential, Single-Family Attached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 4102 North 22nd Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) CG (Commercial General) to PD (Planned Development, Residential, Single-Family, Attached); providing an effective date.",
       "fileNumber": "REZ-25-126",
       "background": "",
       "supportingDocuments": [
         {
           "title": "REZ-25-126 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182268&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182638&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-126 CERTIFIED APP FINAL.PDF",
           "originalText": "REZ-25-126 CERTIFIED APP FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-certified-app-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182269&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182639&isSection=False&isAttachment=True",
           "originalTitle": "Download Summary Sheet- COVER SHEET",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182270&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182640&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF",
           "originalText": "REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-affidavit-of-compliance.pdf"
         },
         {
           "title": "REZ-25-126 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182271&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182641&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-126 FINAL SITE PLAN.PDF",
           "originalText": "REZ-25-126 FINAL SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-final-site-plan.pdf"
         },
         {
           "title": "REZ-25-126 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182272&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182642&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-126 STAFF REPORT FINAL.PDF",
           "originalText": "REZ-25-126 STAFF REPORT FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-staff-report-final.pdf"
+        },
+        {
+          "title": "REZ25-126 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-126%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182643&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-126 ORDINANCE.PDF",
+          "originalText": "REZ25-126 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez25-126-ordinance.pdf"
+        },
+        {
+          "title": "REZ25-126 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-126%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182644&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-126 BIE.PDF",
+          "originalText": "REZ25-126 BIE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez25-126-bie.pdf"
         }
       ],
       "folioNumbers": [],
@@ -176,52 +232,66 @@
     {
       "number": 5,
       "agendaItemId": "22166",
-      "title": "File No. REZ-25-129\nPublic Hearing on application of Miguel Aquino request to rezone property generally located at 2707 E. 22nd Avenue from RM-16 to PD (Residential, Single-Family Semi-Detached).\n\nResolution approving a bonus provision agreement between Aquino Property Management, LLC and the City of Tampa, in relation to REZ-25-129 for the property located at 2707 East 22nd Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
-      "rawTitle": "File No. REZ-25-129\nPublic Hearing on application of Miguel Aquino request to rezone property generally located at 2707 E. 22nd Avenue from RM-16 to PD (Residential, Single-Family Semi-Detached).\n\nResolution approving a bonus provision agreement between Aquino Property Management, LLC and the City of Tampa, in relation to REZ-25-129 for the property located at 2707 East 22nd Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "title": "File No. REZ-25-129\nPublic Hearing on application of Miguel Aquino request to rezone property generally located at 2707 E. 22nd Avenue from RM-16 to PD (Residential, Single-Family Semi-Detached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 2707 East 22nd Avenue unit 1, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RM-16 (Residential, Multi-Family) to PD (Planned Development, Residential, Single-Family, Semi-Detached); providing an effective date.\n\nResolution approving a bonus provision agreement between Aquino Property Management, LLC and the City of Tampa, in relation to REZ-25-129 for the property located at 2707 East 22nd Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "rawTitle": "File No. REZ-25-129\nPublic Hearing on application of Miguel Aquino request to rezone property generally located at 2707 E. 22nd Avenue from RM-16 to PD (Residential, Single-Family Semi-Detached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 2707 East 22nd Avenue unit 1, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RM-16 (Residential, Multi-Family) to PD (Planned Development, Residential, Single-Family, Semi-Detached); providing an effective date.\n\nResolution approving a bonus provision agreement between Aquino Property Management, LLC and the City of Tampa, in relation to REZ-25-129 for the property located at 2707 East 22nd Avenue; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
       "fileNumber": "REZ-25-129",
       "background": "",
       "supportingDocuments": [
         {
           "title": "REZ-25-129 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182273&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182645&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-129 CERTIFIED APP FINAL.PDF",
           "originalText": "REZ-25-129 CERTIFIED APP FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-certified-app-final.pdf"
         },
         {
           "title": "REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182274&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182646&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF",
           "originalText": "REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-affidavit-of-compliance.pdf"
         },
         {
           "title": "REZ-25-129 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182275&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182647&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-129 FINAL SITE PLAN.PDF",
           "originalText": "REZ-25-129 FINAL SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-final-site-plan.pdf"
         },
         {
           "title": "REZ-25-129 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182276&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182648&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-25-129 STAFF REPORT FINAL.PDF",
           "originalText": "REZ-25-129 STAFF REPORT FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-staff-report-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182277&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182649&isSection=False&isAttachment=True",
           "originalTitle": "Download Summary Sheet- COVER SHEET",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "REZ25-129 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-129%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182278&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-129%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182650&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ25-129 BPA.PDF",
           "originalText": "REZ25-129 BPA.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez25-129-bpa.pdf"
+        },
+        {
+          "title": "REZ-25-129 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182651&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ-25-129 ORDINANCE.PDF",
+          "originalText": "REZ-25-129 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-ordinance.pdf"
+        },
+        {
+          "title": "REZ25-129 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-129%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182652&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ25-129 BIE.PDF",
+          "originalText": "REZ25-129 BIE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez25-129-bie.pdf"
         }
       ],
       "folioNumbers": [],
@@ -250,52 +320,87 @@
     {
       "number": 6,
       "agendaItemId": "22167",
-      "title": "File No. REZ-26-02\nPublic Hearing on application of James Lascara request to rezone property generally located at 1008 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\nResolution approving a bonus provision agreement between Poseidon25 Developments, LLC and the City of Tampa, in relation to REZ-26-02 for the property located at 1008 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
-      "rawTitle": "File No. REZ-26-02\nPublic Hearing on application of James Lascara request to rezone property generally located at 1008 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\nResolution approving a bonus provision agreement between Poseidon25 Developments, LLC and the City of Tampa, in relation to REZ-26-02 for the property located at 1008 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "title": "File No. REZ-26-02\nPublic Hearing on application of James Lascara request to rezone property generally located at 1008 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 1008 West LaSalle Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) to PD (Planned Development, Residential, Single-Family, Semi-Detached); providing an effective date.\n\nResolution approving a bonus provision agreement between Poseidon25 Developments, LLC and the City of Tampa, in relation to REZ-26-02 for the property located at 1008 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "rawTitle": "File No. REZ-26-02\nPublic Hearing on application of James Lascara request to rezone property generally located at 1008 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 1008 West LaSalle Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) to PD (Planned Development, Residential, Single-Family, Semi-Detached); providing an effective date.\n\nResolution approving a bonus provision agreement between Poseidon25 Developments, LLC and the City of Tampa, in relation to REZ-26-02 for the property located at 1008 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
       "fileNumber": "REZ-26-02",
       "background": "",
       "supportingDocuments": [
         {
           "title": "REZ-26-02 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182279&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182653&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-02 CERTIFIED APP FINAL.PDF",
           "originalText": "REZ-26-02 CERTIFIED APP FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-certified-app-final.pdf"
         },
         {
           "title": "REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182280&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182654&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF",
           "originalText": "REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-affidavit-of-compliance.pdf"
         },
         {
           "title": "REZ-26-02 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182281&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182655&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-02 FINAL SITE PLAN.PDF",
           "originalText": "REZ-26-02 FINAL SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-final-site-plan.pdf"
         },
         {
           "title": "REZ-26-02 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182282&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182656&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-02 STAFF REPORT FINAL.PDF",
           "originalText": "REZ-26-02 STAFF REPORT FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-staff-report-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182283&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182657&isSection=False&isAttachment=True",
           "originalTitle": "Download Summary Sheet- COVER SHEET",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "REZ26-02 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-02%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182284&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-02%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182658&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ26-02 BPA.PDF",
           "originalText": "REZ26-02 BPA.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez26-02-bpa.pdf"
+        },
+        {
+          "title": "REZ26-02 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-02%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182659&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-02 ORDINANCE.PDF",
+          "originalText": "REZ26-02 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez26-02-ordinance.pdf"
+        },
+        {
+          "title": "REZ26-02 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-02%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182660&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-02 BIE.PDF",
+          "originalText": "REZ26-02 BIE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez26-02-bie.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS - REZ-26-02.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182661&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENTS - REZ-26-02.PDF",
+          "originalText": "1-WRITTEN COMMENTS - REZ-26-02.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/1-written-comments-rez-26-02.pdf"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS - REZ-26-02.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182662&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2-WRITTEN COMMENTS - REZ-26-02.PDF",
+          "originalText": "2-WRITTEN COMMENTS - REZ-26-02.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/2-written-comments-rez-26-02.pdf"
+        },
+        {
+          "title": "3-WRITTEN COMMENT - REZ-26-02.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENT%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182663&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3-WRITTEN COMMENT - REZ-26-02.PDF",
+          "originalText": "3-WRITTEN COMMENT - REZ-26-02.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/3-written-comment-rez-26-02.pdf"
         }
       ],
       "folioNumbers": [],
@@ -324,52 +429,87 @@
     {
       "number": 7,
       "agendaItemId": "22168",
-      "title": "File No. REZ-26-03\nPublic Hearing on application of James Lascara request to rezone property generally located at 1307 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\nA resolution approving a bonus provision agreement between Trident Rental Group, LLC and the City of Tampa, in relation to REZ-26-03 for the property located at 1307 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
-      "rawTitle": "File No. REZ-26-03\nPublic Hearing on application of James Lascara request to rezone property generally located at 1307 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\nA resolution approving a bonus provision agreement between Trident Rental Group, LLC and the City of Tampa, in relation to REZ-26-03 for the property located at 1307 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "title": "File No. REZ-26-03\nPublic Hearing on application of James Lascara request to rezone property generally located at 1307 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\n(Ordinance being presented for first reading consideration)  - An ordinance rezoning property in the general vicinity of 1307 West LaSalle Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) to PD (Planned Development, Residential, Single-Family, Semi-Detached); providing an effective date.\n\nA resolution approving a bonus provision agreement between Trident Rental Group, LLC and the City of Tampa, in relation to REZ-26-03 for the property located at 1307 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "rawTitle": "File No. REZ-26-03\nPublic Hearing on application of James Lascara request to rezone property generally located at 1307 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-Detached).\n\n(Ordinance being presented for first reading consideration)  - An ordinance rezoning property in the general vicinity of 1307 West LaSalle Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) to PD (Planned Development, Residential, Single-Family, Semi-Detached); providing an effective date.\n\nA resolution approving a bonus provision agreement between Trident Rental Group, LLC and the City of Tampa, in relation to REZ-26-03 for the property located at 1307 West La Salle Street; authorizing the execution thereof by the Mayor of the City of Tampa; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
       "fileNumber": "REZ-26-03",
       "background": "",
       "supportingDocuments": [
         {
           "title": "REZ-26-03 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182285&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182664&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-03 CERTIFIED APP FINAL.PDF",
           "originalText": "REZ-26-03 CERTIFIED APP FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-certified-app-final.pdf"
         },
         {
           "title": "REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182286&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182665&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF",
           "originalText": "REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-affidavit-of-compliance.pdf"
         },
         {
           "title": "REZ-26-03 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182287&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182666&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-03 FINAL SITE PLAN.PDF",
           "originalText": "REZ-26-03 FINAL SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-final-site-plan.pdf"
         },
         {
           "title": "REZ-26-03 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182288&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182667&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-03 STAFF REPORT FINAL.PDF",
           "originalText": "REZ-26-03 STAFF REPORT FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-staff-report-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182289&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182668&isSection=False&isAttachment=True",
           "originalTitle": "Download Summary Sheet- COVER SHEET",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "REZ26-03 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-03%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182290&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-03%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182669&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ26-03 BPA.PDF",
           "originalText": "REZ26-03 BPA.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez26-03-bpa.pdf"
+        },
+        {
+          "title": "REZ26-03 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-03%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182670&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-03 ORDINANCE.PDF",
+          "originalText": "REZ26-03 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez26-03-ordinance.pdf"
+        },
+        {
+          "title": "REZ26-03 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-03%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182671&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-03 BIE.PDF",
+          "originalText": "REZ26-03 BIE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez26-03-bie.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS - REZ-26-03.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182672&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENTS - REZ-26-03.PDF",
+          "originalText": "1-WRITTEN COMMENTS - REZ-26-03.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/1-written-comments-rez-26-03.pdf"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS - REZ-26-03.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182673&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2-WRITTEN COMMENTS - REZ-26-03.PDF",
+          "originalText": "2-WRITTEN COMMENTS - REZ-26-03.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/2-written-comments-rez-26-03.pdf"
+        },
+        {
+          "title": "3-WRITTEN COMMENT - REZ-26-03.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENT%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182674&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3-WRITTEN COMMENT - REZ-26-03.PDF",
+          "originalText": "3-WRITTEN COMMENT - REZ-26-03.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/3-written-comment-rez-26-03.pdf"
         }
       ],
       "folioNumbers": [],
@@ -398,45 +538,59 @@
     {
       "number": 8,
       "agendaItemId": "22169",
-      "title": "File No. REZ-26-06\nPublic Hearing on application of Global Engineering request to rezone property generally located at 4420 W. Carmen Street from RS-50 to Pd (Residential, Single-Family Attached).",
-      "rawTitle": "File No. REZ-26-06\nPublic Hearing on application of Global Engineering request to rezone property generally located at 4420 W. Carmen Street from RS-50 to Pd (Residential, Single-Family Attached).",
+      "title": "File No. REZ-26-06\nPublic Hearing on application of Global Engineering request to rezone property generally located at 4420 W. Carmen Street from RS-50 to Pd (Residential, Single-Family Attached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 4420 West Carmen Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) to PD (Planned Development, Residential, Single-Family, Attached); providing an effective date.",
+      "rawTitle": "File No. REZ-26-06\nPublic Hearing on application of Global Engineering request to rezone property generally located at 4420 W. Carmen Street from RS-50 to Pd (Residential, Single-Family Attached).\n\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 4420 West Carmen Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) to PD (Planned Development, Residential, Single-Family, Attached); providing an effective date.",
       "fileNumber": "REZ-26-06",
       "background": "",
       "supportingDocuments": [
         {
           "title": "REZ-26-06 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182291&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182675&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-06 CERTIFIED APP FINAL.PDF",
           "originalText": "REZ-26-06 CERTIFIED APP FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-certified-app-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182292&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182676&isSection=False&isAttachment=True",
           "originalTitle": "Download Summary Sheet- COVER SHEET",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182293&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182677&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF",
           "originalText": "REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-affidavit-of-compliance.pdf"
         },
         {
           "title": "REZ-26-06 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182294&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182678&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-06 FINAL SITE PLAN.PDF",
           "originalText": "REZ-26-06 FINAL SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-final-site-plan.pdf"
         },
         {
           "title": "REZ-26-06 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182295&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182679&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-06 STAFF REPORT FINAL.PDF",
           "originalText": "REZ-26-06 STAFF REPORT FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-staff-report-final.pdf"
+        },
+        {
+          "title": "REZ26-06 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-06%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182680&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-06 ORDINANCE.PDF",
+          "originalText": "REZ26-06 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez26-06-ordinance.pdf"
+        },
+        {
+          "title": "REZ26-06 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-06%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182681&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-06 BIE.PDF",
+          "originalText": "REZ26-06 BIE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez26-06-bie.pdf"
         }
       ],
       "folioNumbers": [],
@@ -465,52 +619,80 @@
     {
       "number": 9,
       "agendaItemId": "22170",
-      "title": "File No. REZ-26-32\nPublic Hearing on application of Thomas Lafferty request to rezone property generally located at 110 South Boulevard from PD to PD (Residential, Multiple-Family & Parking Off Street Commercial).\n\nResolution approving a bonus provision agreement between the University of Tampa, inc., and the City of Tampa, in relation to REZ 26-32 for the property located at 110 South Boulevard;  authorizing the execution thereof by the Mayor of the City of Tampa; directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the city; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
-      "rawTitle": "File No. REZ-26-32\nPublic Hearing on application of Thomas Lafferty request to rezone property generally located at 110 South Boulevard from PD to PD (Residential, Multiple-Family & Parking Off Street Commercial).\n\nResolution approving a bonus provision agreement between the University of Tampa, inc., and the City of Tampa, in relation to REZ 26-32 for the property located at 110 South Boulevard;  authorizing the execution thereof by the Mayor of the City of Tampa; directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the city; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "title": "File No. REZ-26-32\nPublic Hearing on application of Thomas Lafferty request to rezone property generally located at 110 South Boulevard from PD to PD (Residential, Multiple-Family & Parking Off Street Commercial).\n\n(Ordinance being presented for first reading consideration) -  An ordinance rezoning property in the general vicinity of  110 South Boulevard, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) PD (Planned Development) to PD (Planned Development, Residential, Multi-Family, Parking Off-Street Commercial ); providing an effective date.\n\nResolution approving a bonus provision agreement between the University of Tampa, inc., and the City of Tampa, in relation to REZ 26-32 for the property located at 110 South Boulevard;  authorizing the execution thereof by the Mayor of the City of Tampa; directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the city; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
+      "rawTitle": "File No. REZ-26-32\nPublic Hearing on application of Thomas Lafferty request to rezone property generally located at 110 South Boulevard from PD to PD (Residential, Multiple-Family & Parking Off Street Commercial).\n\n(Ordinance being presented for first reading consideration) -  An ordinance rezoning property in the general vicinity of  110 South Boulevard, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) PD (Planned Development) to PD (Planned Development, Residential, Multi-Family, Parking Off-Street Commercial ); providing an effective date.\n\nResolution approving a bonus provision agreement between the University of Tampa, inc., and the City of Tampa, in relation to REZ 26-32 for the property located at 110 South Boulevard;  authorizing the execution thereof by the Mayor of the City of Tampa; directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the city; providing an effective date. (Said resolution to be adopted after second reading and adoption of ordinance)",
       "fileNumber": "REZ-26-32",
       "background": "",
       "supportingDocuments": [
         {
           "title": "REZ-26-32 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182296&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182682&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-32 CERTIFIED APP FINAL.PDF",
           "originalText": "REZ-26-32 CERTIFIED APP FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-certified-app-final.pdf"
         },
         {
           "title": "REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182297&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182683&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF",
           "originalText": "REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-affidavit-of-compliance.pdf"
         },
         {
           "title": "REZ-26-32 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182298&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182684&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-32 FINAL SITE PLAN.PDF",
           "originalText": "REZ-26-32 FINAL SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-final-site-plan.pdf"
         },
         {
           "title": "REZ-26-32 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182299&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182685&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ-26-32 STAFF REPORT FINAL.PDF",
           "originalText": "REZ-26-32 STAFF REPORT FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-staff-report-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182300&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182686&isSection=False&isAttachment=True",
           "originalTitle": "Download Summary Sheet- COVER SHEET",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "REZ26-32 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-32%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182301&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-32%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182687&isSection=False&isAttachment=True",
           "originalTitle": "Download REZ26-32 BPA.PDF",
           "originalText": "REZ26-32 BPA.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez26-32-bpa.pdf"
+        },
+        {
+          "title": "REZ26-32 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-32%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182688&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-32 ORDINANCE.PDF",
+          "originalText": "REZ26-32 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez26-32-ordinance.pdf"
+        },
+        {
+          "title": "REZ26-32 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-32%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182689&isSection=False&isAttachment=True",
+          "originalTitle": "Download REZ26-32 BIE.PDF",
+          "originalText": "REZ26-32 BIE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez26-32-bie.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENT - REZ-26-32.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20-%20REZ-26-32.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182690&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1-WRITTEN COMMENT - REZ-26-32.PDF",
+          "originalText": "1-WRITTEN COMMENT - REZ-26-32.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/1-written-comment-rez-26-32.pdf"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS - REZ-26-32.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-32.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182691&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2-WRITTEN COMMENTS - REZ-26-32.PDF",
+          "originalText": "2-WRITTEN COMMENTS - REZ-26-32.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/2-written-comments-rez-26-32.pdf"
         }
       ],
       "folioNumbers": [],

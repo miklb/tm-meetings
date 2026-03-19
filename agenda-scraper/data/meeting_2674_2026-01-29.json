@@ -1,7 +1,8 @@
 {
   "meetingId": "2674",
-  "meetingType": "workshop",
+  "meetingType": "regular",
   "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "January 29, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2674&type=agenda&doctype=1",
   "agendaItems": [

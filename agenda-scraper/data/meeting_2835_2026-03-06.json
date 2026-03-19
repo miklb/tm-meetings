@@ -1,7 +1,7 @@
 {
   "meetingId": "2835",
-  "meetingType": "workshop",
-  "agendaType": "DRAFT",
+  "meetingType": "regular",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "March 6, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2835&type=agenda&doctype=1",
@@ -16,7 +16,7 @@
       "supportingDocuments": [
         {
           "title": "FINAL MEMO-CRA BOARD WORKSHOP 3.6.26.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FINAL%20MEMO-CRA%20BOARD%20WORKSHOP%203.6.26.DOCX.pdf?documentType=1&meetingId=2835&itemId=21912&publishId=180907&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FINAL%20MEMO-CRA%20BOARD%20WORKSHOP%203.6.26.DOCX.pdf?documentType=1&meetingId=2835&itemId=21912&publishId=181165&isSection=False&isAttachment=True",
           "originalTitle": "Download FINAL MEMO-CRA BOARD WORKSHOP 3.6.26.DOCX",
           "originalText": "FINAL MEMO-CRA BOARD WORKSHOP 3.6.26.DOCX",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-06/meeting-2835/21912/final-memo-cra-board-workshop-3.6.26.docx"
@@ -38,11 +38,19 @@
     {
       "number": 2,
       "agendaItemId": "21913",
-      "title": "File No. CRA26-21913\nBoard to have discussion on the services agreement and the performance and accountability goals. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting an update for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA26-21913\nBoard to have discussion on the services agreement and the performance and accountability goals. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting an update for said agenda item. (To be R/F)",
+      "title": "File No. CRA26-21913\nBoard to have discussion on the services agreement and the performance and accountability goals. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, requesting said item be removed from the agenda and that a discussion will take place at a future workshop. (To be R/F)",
+      "rawTitle": "File No. CRA26-21913\nBoard to have discussion on the services agreement and the performance and accountability goals. (Original motion initiated by Hurtak-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, requesting said item be removed from the agenda and that a discussion will take place at a future workshop. (To be R/F)",
       "fileNumber": "CRA26-21913",
       "background": "",
-      "supportingDocuments": [],
+      "supportingDocuments": [
+        {
+          "title": "SERVICESAGREEMENT(ONBASENO.21913;FILENO.CRA26-21913).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SERVICESAGREEMENT(ONBASENO.21913%3bFILENO.CRA26-21913).PDF.pdf?documentType=1&meetingId=2835&itemId=21913&publishId=181166&isSection=False&isAttachment=True",
+          "originalTitle": "Download SERVICESAGREEMENT(ONBASENO.21913;FILENO.CRA26-21913).PDF",
+          "originalText": "SERVICESAGREEMENT(ONBASENO.21913;FILENO.CRA26-21913).PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-06/meeting-2835/21913/servicesagreementonbaseno.21913fileno.cra26-21913.pdf"
+        }
+      ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,

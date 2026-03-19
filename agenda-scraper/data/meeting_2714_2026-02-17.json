@@ -1,6 +1,6 @@
 {
   "meetingId": "2714",
-  "meetingType": "evening",
+  "meetingType": "regular",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "February 17, 2026",
@@ -16,178 +16,199 @@
       "supportingDocuments": [
         {
           "title": "TA CPA 24-04 TCC STAFF PACKET...PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-04%20TCC%20STAFF%20PACKET...PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176552&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-04%20TCC%20STAFF%20PACKET...PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178026&isSection=False&isAttachment=True",
           "originalTitle": "Download TA CPA 24-04 TCC STAFF PACKET...PDF",
           "originalText": "TA CPA 24-04 TCC STAFF PACKET...PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/ta-cpa-24-04-tcc-staff-packet...pdf"
         },
         {
           "title": "TCC TRANSMITTAL_0522025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176553&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178027&isSection=False&isAttachment=True",
           "originalTitle": "Download TCC TRANSMITTAL_0522025.PDF",
           "originalText": "TCC TRANSMITTAL_0522025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/tcc-transmittal_0522025.pdf"
         },
         {
           "title": "CPA 24-04 PC BRIEFING.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176554&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178028&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-04 PC BRIEFING.PDF",
           "originalText": "CPA 24-04 PC BRIEFING.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/cpa-24-04-pc-briefing.pdf"
         },
         {
           "title": "CPA 24-04 PC RESOLUTION.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176555&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178029&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-04 PC RESOLUTION.PDF",
           "originalText": "CPA 24-04 PC RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/cpa-24-04-pc-resolution.pdf"
         },
         {
           "title": "CPA 24-04 STAFF REPORT...PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20STAFF%20REPORT...PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176556&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20STAFF%20REPORT...PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178030&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-04 STAFF REPORT...PDF",
           "originalText": "CPA 24-04 STAFF REPORT...PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/cpa-24-04-staff-report...pdf"
         },
         {
           "title": "ITEM #1 JAKE CREMER DOCUMENT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20JAKE%20CREMER%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176557&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20JAKE%20CREMER%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178031&isSection=False&isAttachment=True",
           "originalTitle": "Download ITEM #1 JAKE CREMER DOCUMENT.PDF",
           "originalText": "ITEM #1 JAKE CREMER DOCUMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/item-1-jake-cremer-document.pdf"
         },
         {
           "title": "ITEM #1 SANDRA SANCHEZ DOCUMENTS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SANDRA%20SANCHEZ%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176558&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SANDRA%20SANCHEZ%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178032&isSection=False&isAttachment=True",
           "originalTitle": "Download ITEM #1 SANDRA SANCHEZ DOCUMENTS.PDF",
           "originalText": "ITEM #1 SANDRA SANCHEZ DOCUMENTS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/item-1-sandra-sanchez-documents.pdf"
         },
         {
           "title": "ITEM #1 STEPHANIE POYNOR DOCUMENT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20STEPHANIE%20POYNOR%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176559&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20STEPHANIE%20POYNOR%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178033&isSection=False&isAttachment=True",
           "originalTitle": "Download ITEM #1 STEPHANIE POYNOR DOCUMENT.PDF",
           "originalText": "ITEM #1 STEPHANIE POYNOR DOCUMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/item-1-stephanie-poynor-document.pdf"
         },
         {
           "title": "ITEM #1 SUSAN SWIFT DOCUMENTS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SUSAN%20SWIFT%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176560&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SUSAN%20SWIFT%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178034&isSection=False&isAttachment=True",
           "originalTitle": "Download ITEM #1 SUSAN SWIFT DOCUMENTS.PDF",
           "originalText": "ITEM #1 SUSAN SWIFT DOCUMENTS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/item-1-susan-swift-documents.pdf"
         },
         {
           "title": "AUGUST 28 TRANSMITTAL MEMO.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AUGUST%2028%20TRANSMITTAL%20MEMO.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176561&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AUGUST%2028%20TRANSMITTAL%20MEMO.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178035&isSection=False&isAttachment=True",
           "originalTitle": "Download AUGUST 28 TRANSMITTAL MEMO.PDF",
           "originalText": "AUGUST 28 TRANSMITTAL MEMO.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/august-28-transmittal-memo.pdf"
         },
         {
           "title": "ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20A_FUTURE%20LAND%20USE%20SECTION%20OUTREACH%20SUMMARY%202022-2025.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176562&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20A_FUTURE%20LAND%20USE%20SECTION%20OUTREACH%20SUMMARY%202022-2025.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178036&isSection=False&isAttachment=True",
           "originalTitle": "Download ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
           "originalText": "ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/attachment-a_future-land-use-section-outreach-summary-2022-2025.pdf"
         },
         {
           "title": "ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20B_AUGUST%202025%20FUTURE%20LAND%20USE%20SECTION%20DRAFT.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176563&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20B_AUGUST%202025%20FUTURE%20LAND%20USE%20SECTION%20DRAFT.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178037&isSection=False&isAttachment=True",
           "originalTitle": "Download ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
           "originalText": "ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/attachment-b_august-2025-future-land-use-section-draft.pdf"
         },
         {
           "title": "PLACE TYPES.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PLACE%20TYPES.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176564&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PLACE%20TYPES.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178038&isSection=False&isAttachment=True",
           "originalTitle": "Download PLACE TYPES.PDF",
           "originalText": "PLACE TYPES.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/place-types.pdf"
         },
         {
           "title": "SINGLE-FAMILY ATTACHED IN R-10.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SINGLE-FAMILY%20ATTACHED%20IN%20R-10.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176565&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SINGLE-FAMILY%20ATTACHED%20IN%20R-10.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178039&isSection=False&isAttachment=True",
           "originalTitle": "Download SINGLE-FAMILY ATTACHED IN R-10.PDF",
           "originalText": "SINGLE-FAMILY ATTACHED IN R-10.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/single-family-attached-in-r-10.pdf"
         },
         {
           "title": "TRANSIT-READY CORRIDORS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TRANSIT-READY%20CORRIDORS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176566&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TRANSIT-READY%20CORRIDORS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178040&isSection=False&isAttachment=True",
           "originalTitle": "Download TRANSIT-READY CORRIDORS.PDF",
           "originalText": "TRANSIT-READY CORRIDORS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/transit-ready-corridors.pdf"
         },
         {
           "title": "08.28.25 EVENING SIGN-IN-SHEETS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/08.28.25%20EVENING%20SIGN-IN-SHEETS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176567&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/08.28.25%20EVENING%20SIGN-IN-SHEETS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178041&isSection=False&isAttachment=True",
           "originalTitle": "Download 08.28.25 EVENING SIGN-IN-SHEETS.PDF",
           "originalText": "08.28.25 EVENING SIGN-IN-SHEETS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/08.28.25-evening-sign-in-sheets.pdf"
         },
         {
           "title": "8.28.25 EVENING SPEAKER WAIVER FORMS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/8.28.25%20EVENING%20SPEAKER%20WAIVER%20FORMS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176568&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/8.28.25%20EVENING%20SPEAKER%20WAIVER%20FORMS.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178042&isSection=False&isAttachment=True",
           "originalTitle": "Download 8.28.25 EVENING SPEAKER WAIVER FORMS.PDF",
           "originalText": "8.28.25 EVENING SPEAKER WAIVER FORMS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/8.28.25-evening-speaker-waiver-forms.pdf"
         },
         {
           "title": "CARROLL ANN BENNETT DOCUMENTS 8.28.25 SC.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CARROLL%20ANN%20BENNETT%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176569&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CARROLL%20ANN%20BENNETT%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178043&isSection=False&isAttachment=True",
           "originalTitle": "Download CARROLL ANN BENNETT DOCUMENTS 8.28.25 SC.PDF",
           "originalText": "CARROLL ANN BENNETT DOCUMENTS 8.28.25 SC.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/carroll-ann-bennett-documents-8.28.25-sc.pdf"
         },
         {
           "title": "DANA JASPER DOCUMENTS 8.28.25 SC.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DANA%20JASPER%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176570&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DANA%20JASPER%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178044&isSection=False&isAttachment=True",
           "originalTitle": "Download DANA JASPER DOCUMENTS 8.28.25 SC.PDF",
           "originalText": "DANA JASPER DOCUMENTS 8.28.25 SC.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/dana-jasper-documents-8.28.25-sc.pdf"
         },
         {
           "title": "MICHAEL SHEA DOCUMENTS 8.28.25 SC.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MICHAEL%20SHEA%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176571&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MICHAEL%20SHEA%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178045&isSection=False&isAttachment=True",
           "originalTitle": "Download MICHAEL SHEA DOCUMENTS 8.28.25 SC.PDF",
           "originalText": "MICHAEL SHEA DOCUMENTS 8.28.25 SC.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/michael-shea-documents-8.28.25-sc.pdf"
         },
         {
           "title": "SANDY SANCHEZ DOCUMENT 8.28.25 SC.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SANDY%20SANCHEZ%20DOCUMENT%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176572&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SANDY%20SANCHEZ%20DOCUMENT%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178046&isSection=False&isAttachment=True",
           "originalTitle": "Download SANDY SANCHEZ DOCUMENT 8.28.25 SC.PDF",
           "originalText": "SANDY SANCHEZ DOCUMENT 8.28.25 SC.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/sandy-sanchez-document-8.28.25-sc.pdf"
         },
         {
           "title": "TOM CONNELLY DOCUMENTS 8.28.25 SC.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TOM%20CONNELLY%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176573&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TOM%20CONNELLY%20DOCUMENTS%208.28.25%20SC.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178047&isSection=False&isAttachment=True",
           "originalTitle": "Download TOM CONNELLY DOCUMENTS 8.28.25 SC.PDF",
           "originalText": "TOM CONNELLY DOCUMENTS 8.28.25 SC.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/tom-connelly-documents-8.28.25-sc.pdf"
         },
         {
           "title": "STEPHANIE POYNOR DOCUMENTS 8.28.25 SC...PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/STEPHANIE%20POYNOR%20DOCUMENTS%208.28.25%20SC...PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176574&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/STEPHANIE%20POYNOR%20DOCUMENTS%208.28.25%20SC...PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178048&isSection=False&isAttachment=True",
           "originalTitle": "Download STEPHANIE POYNOR DOCUMENTS 8.28.25 SC...PDF",
           "originalText": "STEPHANIE POYNOR DOCUMENTS 8.28.25 SC...PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/stephanie-poynor-documents-8.28.25-sc...pdf"
         },
         {
           "title": "TA CPA 24-04 TCC PACKET_021726.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-04%20TCC%20PACKET_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176575&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-04%20TCC%20PACKET_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178049&isSection=False&isAttachment=True",
           "originalTitle": "Download TA CPA 24-04 TCC PACKET_021726.PDF",
           "originalText": "TA CPA 24-04 TCC PACKET_021726.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/ta-cpa-24-04-tcc-packet_021726.pdf"
         },
         {
           "title": "TCC TRANSMITTAL_021726.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=176576&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178050&isSection=False&isAttachment=True",
           "originalTitle": "Download TCC TRANSMITTAL_021726.PDF",
           "originalText": "TCC TRANSMITTAL_021726.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/tcc-transmittal_021726.pdf"
+        },
+        {
+          "title": "1. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1.%20WRITTEN%20COMMENTS%20-%20TACPA24-04.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178051&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "originalText": "1. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/1.-written-comments-tacpa24-04.pdf"
+        },
+        {
+          "title": "2. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2.%20WRITTEN%20COMMENTS%20-%20TACPA24-04.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178052&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "originalText": "2. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/2.-written-comments-tacpa24-04.pdf"
+        },
+        {
+          "title": "3. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3.%20WRITTEN%20COMMENTS%20-%20TACPA24-04.PDF.pdf?documentType=1&meetingId=2714&itemId=18158&publishId=178053&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "originalText": "3. WRITTEN COMMENTS - TACPA24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18158/3.-written-comments-tacpa24-04.pdf"
         }
       ],
       "folioNumbers": [],
@@ -213,52 +234,73 @@
       "supportingDocuments": [
         {
           "title": "TA CPA 24-05 TCC STAFF PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-05%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=176577&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-05%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178054&isSection=False&isAttachment=True",
           "originalTitle": "Download TA CPA 24-05 TCC STAFF PACKET.PDF",
           "originalText": "TA CPA 24-05 TCC STAFF PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/ta-cpa-24-05-tcc-staff-packet.pdf"
         },
         {
           "title": "TCC TRANSMITTAL_0522025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=176578&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178055&isSection=False&isAttachment=True",
           "originalTitle": "Download TCC TRANSMITTAL_0522025.PDF",
           "originalText": "TCC TRANSMITTAL_0522025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/tcc-transmittal_0522025.pdf"
         },
         {
           "title": "CPA 24-05 PC BRIEFING.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=176579&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178056&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-05 PC BRIEFING.PDF",
           "originalText": "CPA 24-05 PC BRIEFING.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/cpa-24-05-pc-briefing.pdf"
         },
         {
           "title": "CPA 24-05 PC RESOLUTION.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=176580&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178057&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-05 PC RESOLUTION.PDF",
           "originalText": "CPA 24-05 PC RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/cpa-24-05-pc-resolution.pdf"
         },
         {
           "title": "CPA 24-05 STAFF REPORT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=176581&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178058&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-05 STAFF REPORT.PDF",
           "originalText": "CPA 24-05 STAFF REPORT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/cpa-24-05-staff-report.pdf"
         },
         {
           "title": "TA CPA 24-05 TCC PACKET_021726.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-05%20TCC%20PACKET_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=176582&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-05%20TCC%20PACKET_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178059&isSection=False&isAttachment=True",
           "originalTitle": "Download TA CPA 24-05 TCC PACKET_021726.PDF",
           "originalText": "TA CPA 24-05 TCC PACKET_021726.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/ta-cpa-24-05-tcc-packet_021726.pdf"
         },
         {
           "title": "TCC TRANSMITTAL_021726.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=176583&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178060&isSection=False&isAttachment=True",
           "originalTitle": "Download TCC TRANSMITTAL_021726.PDF",
           "originalText": "TCC TRANSMITTAL_021726.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/tcc-transmittal_021726.pdf"
+        },
+        {
+          "title": "1. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1.%20WRITTEN%20COMMENTS%20-%20TACPA24-05.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178061&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "originalText": "1. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/1.-written-comments-tacpa24-05.pdf"
+        },
+        {
+          "title": "2. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2.%20WRITTEN%20COMMENTS%20-%20TACPA24-05.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178062&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "originalText": "2. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/2.-written-comments-tacpa24-05.pdf"
+        },
+        {
+          "title": "3. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3.%20WRITTEN%20COMMENTS%20-%20TACPA24-05.PDF.pdf?documentType=1&meetingId=2714&itemId=18159&publishId=178063&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "originalText": "3. WRITTEN COMMENTS - TACPA24-05.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18159/3.-written-comments-tacpa24-05.pdf"
         }
       ],
       "folioNumbers": [],
@@ -284,52 +326,73 @@
       "supportingDocuments": [
         {
           "title": "TA CPA 24-06 TCC STAFF PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-06%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=176584&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-06%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178064&isSection=False&isAttachment=True",
           "originalTitle": "Download TA CPA 24-06 TCC STAFF PACKET.PDF",
           "originalText": "TA CPA 24-06 TCC STAFF PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/ta-cpa-24-06-tcc-staff-packet.pdf"
         },
         {
           "title": "TCC TRANSMITTAL_0522025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=176585&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178065&isSection=False&isAttachment=True",
           "originalTitle": "Download TCC TRANSMITTAL_0522025.PDF",
           "originalText": "TCC TRANSMITTAL_0522025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/tcc-transmittal_0522025.pdf"
         },
         {
           "title": "CPA 24-06 PC BRIEFING.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=176586&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178066&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-06 PC BRIEFING.PDF",
           "originalText": "CPA 24-06 PC BRIEFING.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/cpa-24-06-pc-briefing.pdf"
         },
         {
           "title": "CPA 24-06 PC RESOLUTION.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=176587&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178067&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-06 PC RESOLUTION.PDF",
           "originalText": "CPA 24-06 PC RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/cpa-24-06-pc-resolution.pdf"
         },
         {
           "title": "CPA 24-06 STAFF REPORT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=176588&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178068&isSection=False&isAttachment=True",
           "originalTitle": "Download CPA 24-06 STAFF REPORT.PDF",
           "originalText": "CPA 24-06 STAFF REPORT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/cpa-24-06-staff-report.pdf"
         },
         {
           "title": "TA CPA 24-06 TCC STAFF PACKET_021726.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-06%20TCC%20STAFF%20PACKET_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=176589&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-06%20TCC%20STAFF%20PACKET_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178069&isSection=False&isAttachment=True",
           "originalTitle": "Download TA CPA 24-06 TCC STAFF PACKET_021726.PDF",
           "originalText": "TA CPA 24-06 TCC STAFF PACKET_021726.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/ta-cpa-24-06-tcc-staff-packet_021726.pdf"
         },
         {
           "title": "TCC TRANSMITTAL_021726.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=176590&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_021726.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178070&isSection=False&isAttachment=True",
           "originalTitle": "Download TCC TRANSMITTAL_021726.PDF",
           "originalText": "TCC TRANSMITTAL_021726.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/tcc-transmittal_021726.pdf"
+        },
+        {
+          "title": "1. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1.%20WRITTEN%20COMMENTS%20-%20TACPA24-06.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178071&isSection=False&isAttachment=True",
+          "originalTitle": "Download 1. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "originalText": "1. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/1.-written-comments-tacpa24-06.pdf"
+        },
+        {
+          "title": "2. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2.%20WRITTEN%20COMMENTS%20-%20TACPA24-06.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178072&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "originalText": "2. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/2.-written-comments-tacpa24-06.pdf"
+        },
+        {
+          "title": "3. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3.%20WRITTEN%20COMMENTS%20-%20TACPA24-06.PDF.pdf?documentType=1&meetingId=2714&itemId=18160&publishId=178073&isSection=False&isAttachment=True",
+          "originalTitle": "Download 3. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "originalText": "3. WRITTEN COMMENTS - TACPA24-06.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-17/meeting-2714/18160/3.-written-comments-tacpa24-06.pdf"
         }
       ],
       "folioNumbers": [],

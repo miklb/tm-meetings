@@ -1,7 +1,8 @@
 {
   "meetingId": "2649",
-  "meetingType": "cra",
+  "meetingType": "regular",
   "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "January 15, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2649&type=agenda&doctype=1",
   "agendaItems": [
@@ -33,15 +34,7 @@
       "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting January Project Tracking Report, Commercial Grants Tracking Report, Residential Tracking Report and the Performance Standards Report for said agenda item. (To be R/F)",
       "fileNumber": "CRA24-2241",
       "background": "",
-      "supportingDocuments": [
-        {
-          "title": "DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF.pdf?documentType=1&meetingId=2649&itemId=20297&publishId=169807&isSection=False&isAttachment=True",
-          "originalTitle": "Download DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF",
-          "originalText": "DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-01-15/meeting-2649/20297/directorsreportfileno.cra24-2241.onbaseno20297.pdf"
-        }
-      ],
+      "supportingDocuments": [],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
@@ -62,15 +55,7 @@
       "rawTitle": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-19842",
       "background": "",
-      "supportingDocuments": [
-        {
-          "title": "UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF.pdf?documentType=1&meetingId=2649&itemId=19842&publishId=169808&isSection=False&isAttachment=True",
-          "originalTitle": "Download UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF",
-          "originalText": "UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-01-15/meeting-2649/19842/unionstationupdatefileno.cra25-19842.onbaseno.19842.pdf"
-        }
-      ],
+      "supportingDocuments": [],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,

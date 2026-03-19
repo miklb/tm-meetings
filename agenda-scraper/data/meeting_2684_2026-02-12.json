@@ -1,6 +1,6 @@
 {
   "meetingId": "2684",
-  "meetingType": "cra",
+  "meetingType": "regular",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "February 12, 2026",
@@ -34,22 +34,7 @@
       "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting January Project Tracking Report, Commercial Grants Tracking Report, and the Residential Tracking Report for said agenda item. (To be R/F)",
       "fileNumber": "CRA24-2241",
       "background": "",
-      "supportingDocuments": [
-        {
-          "title": "DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF.pdf?documentType=1&meetingId=2684&itemId=21153&publishId=175657&isSection=False&isAttachment=True",
-          "originalTitle": "Download DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF",
-          "originalText": "DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO20297).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-12/meeting-2684/21153/directorsreportfileno.cra24-2241.onbaseno20297.pdf"
-        },
-        {
-          "title": "CRADIRECTORREPORT(ONBASENO.21153.FILENO.CRA24-2241).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRADIRECTORREPORT(ONBASENO.21153.FILENO.CRA24-2241).PDF.pdf?documentType=1&meetingId=2684&itemId=21153&publishId=175658&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRADIRECTORREPORT(ONBASENO.21153.FILENO.CRA24-2241).PDF",
-          "originalText": "CRADIRECTORREPORT(ONBASENO.21153.FILENO.CRA24-2241).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-12/meeting-2684/21153/cradirectorreportonbaseno.21153.fileno.cra24-2241.pdf"
-        }
-      ],
+      "supportingDocuments": [],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
@@ -113,22 +98,7 @@
       "rawTitle": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)(Said agenda item continued from January 15, 2026 due to meeting cancellation)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-19842",
       "background": "",
-      "supportingDocuments": [
-        {
-          "title": "UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF.pdf?documentType=1&meetingId=2684&itemId=21154&publishId=175662&isSection=False&isAttachment=True",
-          "originalTitle": "Download UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF",
-          "originalText": "UNIONSTATIONUPDATE(FILENO.CRA25-19842.ONBASENO.19842).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-12/meeting-2684/21154/unionstationupdatefileno.cra25-19842.onbaseno.19842.pdf"
-        },
-        {
-          "title": "UNIONSTATIONUPDATE(ONBASENO.21154;FILENO.CRA25-19842).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/UNIONSTATIONUPDATE(ONBASENO.21154%3bFILENO.CRA25-19842).PDF.pdf?documentType=1&meetingId=2684&itemId=21154&publishId=175663&isSection=False&isAttachment=True",
-          "originalTitle": "Download UNIONSTATIONUPDATE(ONBASENO.21154;FILENO.CRA25-19842).PDF",
-          "originalText": "UNIONSTATIONUPDATE(ONBASENO.21154;FILENO.CRA25-19842).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-12/meeting-2684/21154/unionstationupdateonbaseno.21154fileno.cra25-19842.pdf"
-        }
-      ],
+      "supportingDocuments": [],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
