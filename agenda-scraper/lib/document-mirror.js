@@ -72,7 +72,7 @@ class DocumentMirror {
   sanitizeFilename(filename) {
     if (!filename) return 'document.pdf';
     
-    return filename
+    let sanitized = filename
       .toLowerCase()
       .replace(/\s+/g, '-')           // Replace spaces with hyphens
       .replace(/[()]/g, '')           // Remove parentheses
@@ -82,6 +82,13 @@ class DocumentMirror {
       .replace(/-+/g, '-')            // Collapse multiple hyphens
       .replace(/^-|-$/g, '')          // Remove leading/trailing hyphens
       .substring(0, 200);             // Limit length
+
+    // If no file extension, default to .pdf (most OnBase documents are PDFs)
+    if (!path.extname(sanitized)) {
+      sanitized += '.pdf';
+    }
+
+    return sanitized;
   }
 
   /**
@@ -208,8 +215,8 @@ class DocumentMirror {
     // Calculate content hash for logging/deduplication
     const hash = crypto.createHash('sha256').update(content).digest('hex').substring(0, 12);
 
-    // Upload to S3
-    const contentType = this.getContentType(filename);
+    // Upload to S3 — derive content type from the sanitized key (which has a guaranteed extension)
+    const contentType = this.getContentType(key);
     await this.uploadDocument(key, content, contentType);
 
     return {

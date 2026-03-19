@@ -66,14 +66,13 @@ S3_ACCESS_KEY_ID=<r2_access_key>
 S3_SECRET_ACCESS_KEY=<r2_secret_key>
 S3_BUCKET=agenda-documents
 
-# URL Configuration - choose one:
+# URL Configuration:
+S3_PUBLIC_URL=https://docs.meetings.tampamonitor.com
+S3_CUSTOM_DOMAIN=true
 
-# Option 1: R2 dev URL (default, no custom domain needed)
-S3_PUBLIC_URL=https://pub-XXXX.r2.dev
-
-# Option 2: Custom domain (requires Cloudflare DNS)
-# S3_PUBLIC_URL=https://docs.yoursite.com
-# S3_CUSTOM_DOMAIN=true
+# Or use R2 dev URL if custom domain is not configured:
+# S3_PUBLIC_URL=https://pub-XXXX.r2.dev
+# (leave S3_CUSTOM_DOMAIN unset or false)
 ```
 
 **Setup Steps:**
@@ -84,20 +83,20 @@ S3_PUBLIC_URL=https://pub-XXXX.r2.dev
 4. R2 API Tokens → Create token with Object Read & Write
 5. Copy Account ID, Access Key ID, and Secret Access Key to `.env`
 
-**Custom Domain Setup (Optional):**
+**Custom Domain Setup:**
 
-To use a custom domain like `docs.yoursite.com`:
+The project uses `docs.meetings.tampamonitor.com` as the custom domain for R2:
 
-1. **Move DNS to Cloudflare**: Your domain must use Cloudflare DNS
+1. **DNS via Cloudflare**: Domain must use Cloudflare DNS
 2. Go to R2 → Your bucket → Settings → Custom Domains
-3. Add your subdomain (e.g., `docs.yoursite.com`)
-4. Cloudflare will automatically configure the DNS CNAME
-5. Update `.env`:
+3. Add `docs.meetings.tampamonitor.com`
+4. Cloudflare automatically configures the DNS CNAME
+5. `.env` should have:
    ```env
-   S3_PUBLIC_URL=https://docs.yoursite.com
+   S3_PUBLIC_URL=https://docs.meetings.tampamonitor.com
    S3_CUSTOM_DOMAIN=true
    ```
-6. Re-run `mirror-documents.js` to update URLs in JSON files
+6. Re-run `mirror-documents.js --force` to update URLs in JSON files
 
 ### Alternative Options
 
@@ -143,7 +142,7 @@ s3://agenda-docs/
 **Public URL pattern:**
 
 ```
-https://docs.yoursite.com/{date}/meeting-{meetingId}/{itemId}/{sanitized-filename}.pdf
+https://docs.meetings.tampamonitor.com/{date}/meeting-{meetingId}/{itemId}/{sanitized-filename}.pdf
 ```
 
 ---
@@ -211,7 +210,7 @@ class DocumentMirror {
         new HeadObjectCommand({
           Bucket: this.bucket,
           Key: key,
-        })
+        }),
       );
       return true;
     } catch (err) {
@@ -251,7 +250,7 @@ class DocumentMirror {
         Body: response.data,
         ContentType: this.getContentType(filename),
         CacheControl: "public, max-age=31536000", // 1 year cache
-      })
+      }),
     );
 
     return this.getPublicUrl(key);
@@ -310,7 +309,7 @@ class DocumentMirror {
             meetingDate,
             meetingId,
             item.agendaItemId,
-            doc.title || doc.originalText
+            doc.title || doc.originalText,
           );
 
           // Store the mirrored URL alongside the original
@@ -361,7 +360,7 @@ async function main() {
   const jsonFiles = fs
     .readdirSync(dataDir)
     .filter(
-      (f) => f.startsWith(`meeting_${meetingId}_`) && f.endsWith(".json")
+      (f) => f.startsWith(`meeting_${meetingId}_`) && f.endsWith(".json"),
     );
 
   if (jsonFiles.length === 0) {
