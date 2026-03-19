@@ -16,18 +16,18 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROCESSOR_DIR="$(cd "$SCRIPT_DIR/../.." && pwd)"
 
 # Default agenda directory (sibling repo)
-AGENDA_DIR="${1:-$PROCESSOR_DIR/../../agenda-scraper/data}"
-AGENDA_DIR="$(cd "$AGENDA_DIR" 2>/dev/null && pwd)" || {
-    echo "ERROR: Agenda directory not found: $1"
-    echo "Usage: $0 [--agenda-dir /path/to/agendas]"
-    exit 1
-}
+AGENDA_DIR="$PROCESSOR_DIR/../../agenda-scraper/data"
 
 # Handle --agenda-dir flag
 if [[ "${1:-}" == "--agenda-dir" ]]; then
     AGENDA_DIR="${2:?Missing path after --agenda-dir}"
-    AGENDA_DIR="$(cd "$AGENDA_DIR" && pwd)"
 fi
+
+AGENDA_DIR="$(cd "$AGENDA_DIR" 2>/dev/null && pwd)" || {
+    echo "ERROR: Agenda directory not found: $AGENDA_DIR"
+    echo "Usage: $0 [--agenda-dir /path/to/agendas]"
+    exit 1
+}
 
 DATA_DIR="$PROCESSOR_DIR/data"
 VENV_PYTHON="$PROCESSOR_DIR/venv/bin/python"
