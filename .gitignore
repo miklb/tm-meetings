@@ -4,7 +4,6 @@ archive/
 
 # Dependencies
 node_modules/
-package-lock.json
 .pnpm-store/
 __pycache__/
 *.pyc
@@ -70,9 +69,6 @@ secrets.json
 
 # Large binary files (PDFs should go to R2, not git)
 *.pdf
-
-# Python virtual environments
-.python-version
 
 # Eleventy
 .eleventy-cache/
