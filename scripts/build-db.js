@@ -193,7 +193,7 @@ function matchTranscripts(db) {
     'UPDATE meetings SET transcript_source_id = ? WHERE id = ?'
   );
   const findMeeting = db.prepare(
-    'SELECT id FROM meetings WHERE date = ? AND meeting_type = ? LIMIT 1'
+    'SELECT id FROM meetings WHERE date = ? AND meeting_type = ? ORDER BY item_count DESC LIMIT 1'
   );
   // Stub rows use a synthetic ID outside the OnBase ID range (OnBase IDs ~2400-2900)
   const insertStub = db.prepare(`
@@ -544,6 +544,41 @@ function main() {
   });
 
   importAll();
+
+  // Deduplicate meetings: when multiple IDs share the same (date, meeting_type),
+  // keep only the one with the most agenda items (FINAL > DRAFT).
+  const dupes = db.prepare(`
+    SELECT id, date, meeting_type, item_count FROM meetings
+    WHERE (date, meeting_type) IN (
+      SELECT date, meeting_type FROM meetings
+      GROUP BY date, meeting_type HAVING COUNT(*) > 1
+    )
+    ORDER BY date, meeting_type, item_count DESC
+  `).all();
+
+  if (dupes.length > 0) {
+    const seen = new Set();
+    const toDelete = [];
+    for (const row of dupes) {
+      const key = `${row.date}|${row.meeting_type}`;
+      if (seen.has(key)) {
+        toDelete.push(row);
+      } else {
+        seen.add(key);
+      }
+    }
+    if (toDelete.length > 0) {
+      const delItems = db.prepare('DELETE FROM agenda_items WHERE meeting_id = ?');
+      const delMeeting = db.prepare('DELETE FROM meetings WHERE id = ?');
+      for (const row of toDelete) {
+        delItems.run(row.id);
+        delMeeting.run(row.id);
+        meetingCount--;
+        console.log(`  Dedup: removed meeting ${row.id} (${row.date} ${row.meeting_type}, ${row.item_count} items) — superseded`);
+      }
+    }
+  }
+
   matchTranscripts(db);
   importTranscriptSegments(db);
   importVideos(db);
