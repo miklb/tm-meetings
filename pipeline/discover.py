@@ -56,7 +56,7 @@ PROCESSED_DIR = PROJECT_ROOT / "transcript-cleaner" / "processor" / "data" / "pr
 
 def main():
     parser = argparse.ArgumentParser(description="Discover unprocessed meeting transcripts")
-    parser.add_argument("--pages", type=int, default=1, help="Transcript index pages to scrape (default: 1)")
+    parser.add_argument("--pages", type=int, default=2, help="Transcript index pages to scrape (default: 2)")
     parser.add_argument("--date", help="Filter to specific date (YYYY-MM-DD)")
     parser.add_argument("--process", action="store_true", help="Auto-process all discovered meetings")
     parser.add_argument("--skip-video", action="store_true", help="Pass --skip-video to process-meeting.sh")

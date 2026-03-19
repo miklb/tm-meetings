@@ -201,7 +201,7 @@ def match_with_db(transcript_meetings: list[dict]) -> list[dict]:
 
     for m in transcript_meetings:
         row = conn.execute(
-            "SELECT id, transcript_source_id FROM meetings WHERE date = ? AND meeting_type = ? LIMIT 1",
+            "SELECT id, transcript_source_id FROM meetings WHERE date = ? AND meeting_type = ? ORDER BY item_count DESC LIMIT 1",
             (m["date"], m["meeting_type"]),
         ).fetchone()
 

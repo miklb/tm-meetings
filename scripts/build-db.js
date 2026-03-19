@@ -126,6 +126,39 @@ const TYPE_LABELS = {
   special: 'Special Meeting',
 };
 
+// File number prefixes that indicate evening sessions (zoning/public hearings)
+const EVENING_PREFIXES = new Set(['REZ', 'TA', 'VAC', 'AB']);
+
+/**
+ * Infer meeting_type from agenda item file number prefixes.
+ * OnBase labels everything "regular"; the actual type is revealed by
+ * what kind of business appears on the agenda.
+ */
+function inferTypeFromItems(items) {
+  if (!items || items.length === 0) return 'regular';
+
+  const prefixes = {};
+  for (const item of items) {
+    const fn = item.fileNumber || '';
+    const m = fn.match(/^([A-Z]+)/);
+    if (m) prefixes[m[1]] = (prefixes[m[1]] || 0) + 1;
+  }
+
+  const total = Object.values(prefixes).reduce((a, b) => a + b, 0);
+  if (total === 0) return 'regular';
+
+  // All CRA → cra
+  if (prefixes.CRA && prefixes.CRA === total) return 'cra';
+  // Majority CRA → cra
+  if (prefixes.CRA && prefixes.CRA / total > 0.6) return 'cra';
+
+  // Evening: dominated by zoning prefixes (REZ, TA, VAC, AB)
+  const eveningCount = ['REZ', 'TA', 'VAC', 'AB'].reduce((s, p) => s + (prefixes[p] || 0), 0);
+  if (eveningCount / total > 0.6) return 'evening';
+
+  return 'regular';
+}
+
 /**
  * Derive a formatted YYYY-MM-DD date from the JSON.
  * Prefers formattedDate, falls back to parsing meetingDate string,
@@ -496,12 +529,13 @@ function main() {
       }
 
       const items = data.agendaItems || [];
+      const meetingType = inferTypeFromItems(items);
 
       insertMeeting.run({
         id: meetingId,
         date,
-        meeting_type: data.meetingType || 'regular',
-        title: buildTitle(data.meetingType || 'regular', date),
+        meeting_type: meetingType,
+        title: buildTitle(meetingType, date),
         agenda_type: data.agendaType || null,
         source_url: data.sourceUrl || null,
         item_count: items.length,
@@ -568,10 +602,18 @@ function main() {
       }
     }
     if (toDelete.length > 0) {
+      const delDocs = db.prepare('DELETE FROM documents WHERE agenda_item_id IN (SELECT id FROM agenda_items WHERE meeting_id = ?)');
       const delItems = db.prepare('DELETE FROM agenda_items WHERE meeting_id = ?');
+      const delSegments = db.prepare('DELETE FROM transcript_segments WHERE meeting_id = ?');
+      const delChapters = db.prepare('DELETE FROM video_chapters WHERE video_db_id IN (SELECT id FROM videos WHERE meeting_id = ?)');
+      const delVideos = db.prepare('DELETE FROM videos WHERE meeting_id = ?');
       const delMeeting = db.prepare('DELETE FROM meetings WHERE id = ?');
       for (const row of toDelete) {
+        delDocs.run(row.id);
         delItems.run(row.id);
+        delSegments.run(row.id);
+        delChapters.run(row.id);
+        delVideos.run(row.id);
         delMeeting.run(row.id);
         meetingCount--;
         console.log(`  Dedup: removed meeting ${row.id} (${row.date} ${row.meeting_type}, ${row.item_count} items) — superseded`);
