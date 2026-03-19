@@ -72,7 +72,22 @@ module.exports = function (eleventyConfig) {
    * return a YouTube URL (https://youtu.be/{id}?t={sec}) pointing to the
    * correct position in the correct video part. Returns null if no match.
    */
-  eleventyConfig.addFilter('youtubeUrl', (segTimestamp, videos) => {
+  /**
+   * Resolve the baseline for a video: its transcript_start_time if present,
+   * otherwise the meeting's first transcript timestamp ("meeting baseline").
+   */
+  function resolveBaselineSec(video, meetingBaseline) {
+    const tst = parseTimestampToSec(video.transcript_start_time);
+    if (tst !== null) return tst;
+    if (meetingBaseline !== undefined && meetingBaseline !== null) {
+      return typeof meetingBaseline === 'number'
+        ? meetingBaseline
+        : (parseTimestampToSec(meetingBaseline) ?? 0);
+    }
+    return 0;
+  }
+
+  eleventyConfig.addFilter('youtubeUrl', (segTimestamp, videos, meetingBaseline) => {
     if (!videos || !videos.length || !segTimestamp) return null;
     const segSec = parseTimestampToSec(segTimestamp);
     if (segSec === null) return null;
@@ -82,18 +97,17 @@ module.exports = function (eleventyConfig) {
     let bestVideo = null;
     let bestStartSec = -Infinity;
     for (const v of videos) {
-      const startSec = parseTimestampToSec(v.transcript_start_time);
-      if (startSec === null) continue;
+      const startSec = resolveBaselineSec(v, meetingBaseline);
       if (startSec <= segSec && startSec > bestStartSec) {
         bestStartSec = startSec;
         bestVideo = v;
       }
     }
-    // Fall back to part 1 if none matched (e.g., missing transcript_start_time)
+    // Fall back to part 1 if none matched
     if (!bestVideo) bestVideo = videos[0];
     if (!bestVideo) return null;
 
-    const startSec = parseTimestampToSec(bestVideo.transcript_start_time) ?? 0;
+    const startSec = resolveBaselineSec(bestVideo, meetingBaseline);
     const videoSec = Math.max(0, bestVideo.offset_seconds + (segSec - startSec));
     return `https://youtu.be/${bestVideo.video_id}?t=${videoSec}`;
   });
@@ -103,7 +117,7 @@ module.exports = function (eleventyConfig) {
    * { seconds, videoPart } for in-page YouTube IFrame API seeking.
    * Used to set data- attributes on transcript segments.
    */
-  eleventyConfig.addFilter('videoSeekData', (segTimestamp, videos) => {
+  eleventyConfig.addFilter('videoSeekData', (segTimestamp, videos, meetingBaseline) => {
     if (!videos || !videos.length || !segTimestamp) return null;
     const segSec = parseTimestampToSec(segTimestamp);
     if (segSec === null) return null;
@@ -111,8 +125,7 @@ module.exports = function (eleventyConfig) {
     let bestVideo = null;
     let bestStartSec = -Infinity;
     for (const v of videos) {
-      const startSec = parseTimestampToSec(v.transcript_start_time);
-      if (startSec === null) continue;
+      const startSec = resolveBaselineSec(v, meetingBaseline);
       if (startSec <= segSec && startSec > bestStartSec) {
         bestStartSec = startSec;
         bestVideo = v;
@@ -121,7 +134,7 @@ module.exports = function (eleventyConfig) {
     if (!bestVideo) bestVideo = videos[0];
     if (!bestVideo) return null;
 
-    const startSec = parseTimestampToSec(bestVideo.transcript_start_time) ?? 0;
+    const startSec = resolveBaselineSec(bestVideo, meetingBaseline);
     const videoSec = Math.max(0, bestVideo.offset_seconds + (segSec - startSec));
     return { seconds: videoSec, videoPart: bestVideo.part };
   });

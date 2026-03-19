@@ -31,7 +31,8 @@
           "timestamp": "03:45:06",
           "seconds": 13506
         }
-      ]
+      ],
+      "offset_seconds": 455
     }
   ]
 }

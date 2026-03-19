@@ -46,7 +46,13 @@ from scripts.build.match_whisper_to_transcript import (
 YTDLP_DELAY_SECONDS = 7
 
 # Subprocess environment: ensure child processes can resolve 'from src.*'
-_SUBPROCESS_ENV = {**os.environ, "PYTHONPATH": str(PROJECT_ROOT)}
+# and can find venv binaries (yt-dlp) on PATH
+_VENV_BIN = str(Path(sys.executable).parent)
+_SUBPROCESS_ENV = {
+    **os.environ,
+    "PYTHONPATH": str(PROJECT_ROOT),
+    "PATH": f"{_VENV_BIN}:{os.environ.get('PATH', '')}",
+}
 
 
 def find_transcript(meeting_id: int, meeting_date: str) -> Path | None:
@@ -247,7 +253,7 @@ def run_pipeline(
     min_gap_minutes: int = 60,
     dry_run: bool = False,
     skip_fetch: bool = False,
-):
+) -> bool:
     """
     Run the full video processing pipeline for a single meeting.
 
@@ -259,6 +265,9 @@ def run_pipeline(
         min_gap_minutes: Gap threshold for transcript gap detection (default: 60)
         dry_run: If True, show what would happen without making changes
         skip_fetch: If True, skip YouTube API call (use existing mapping only)
+
+    Returns:
+        True if all offsets were calculated (or dry-run), False on failure.
     """
     mapping_path = Path(f"data/video_mapping_{meeting_id}.json")
     prefix = "[dry-run] " if dry_run else ""
@@ -275,7 +284,7 @@ def run_pipeline(
         print(f"  ❌ No transcript found for meeting {meeting_id} ({meeting_date})")
         print(f"     Expected: data/processed/processed_transcript_{meeting_id}_{meeting_date}.json")
         print(f"     Run scraping + capitalization first (see WORKFLOW.md steps 1-2)")
-        return
+        return False
 
     print(f"  ✓ Transcript: {transcript_path}")
 
@@ -295,14 +304,14 @@ def run_pipeline(
 
     if skip_fetch and not mapping_path.exists():
         print(f"  ❌ --skip-fetch but no existing mapping at {mapping_path}")
-        return
+        return False
 
     mapping = fetch_videos(
         meeting_id, meeting_date, meeting_type, transcript_path, mapping_path, dry_run
     )
     if mapping is None and not dry_run:
         print("  ❌ Could not obtain video mapping — aborting")
-        return
+        return False
 
     if mapping:
         videos = sorted(mapping.get("videos", []), key=lambda v: v.get("part", 1))
@@ -361,6 +370,7 @@ def run_pipeline(
     print(f"  Transcript:    {transcript_path}")
     print(f"  Video mapping: {mapping_path}")
 
+    all_ok = False
     if videos:
         # Reload mapping to get final state
         if mapping_path.exists() and not dry_run:
@@ -390,6 +400,7 @@ def run_pipeline(
         print(f"\n  ℹ️  No videos processed")
 
     print()
+    return all_ok if videos and not dry_run else True
 
 
 def _whisper_cache_exists(video_id: str, model: str) -> bool:
@@ -452,7 +463,7 @@ Prerequisite:
 
     args = parser.parse_args()
 
-    run_pipeline(
+    success = run_pipeline(
         meeting_id=args.meeting_id,
         meeting_date=args.meeting_date,
         meeting_type=args.meeting_type,
@@ -461,6 +472,8 @@ Prerequisite:
         dry_run=args.dry_run,
         skip_fetch=args.skip_fetch,
     )
+    if not success:
+        sys.exit(1)
 
 
 if __name__ == "__main__":

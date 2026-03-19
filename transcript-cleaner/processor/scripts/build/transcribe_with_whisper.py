@@ -9,9 +9,26 @@ Just downloads audio, transcribes it, and saves the result.
 import whisper
 import sys
 import json
+import shutil
 import subprocess
 import tempfile
 import os
+from pathlib import Path
+
+
+def _find_ytdlp() -> str:
+    """Resolve yt-dlp, checking the venv bin directory as a fallback."""
+    found = shutil.which("yt-dlp")
+    if found:
+        return found
+    # Check next to the running Python executable (venv bin)
+    venv_candidate = Path(sys.executable).parent / "yt-dlp"
+    if venv_candidate.exists():
+        return str(venv_candidate)
+    raise FileNotFoundError(
+        "yt-dlp not found on PATH or in the venv bin directory. "
+        "Install with: venv/bin/pip install yt-dlp"
+    )
 
 
 def download_audio_sample(video_id, duration=300, start=0):
@@ -24,8 +41,9 @@ def download_audio_sample(video_id, duration=300, start=0):
     url = f"https://www.youtube.com/watch?v={video_id}"
 
     end = start + duration
+    ytdlp = _find_ytdlp()
     cmd = [
-        'yt-dlp',
+        ytdlp,
         '--extract-audio',
         '--audio-format', 'mp3',
         '--audio-quality', '5',

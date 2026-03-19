@@ -35,7 +35,7 @@
 
         {# Compute seek data when video available #}
         {% if seg.timestamp and detail.has_video %}
-          {% set seek = seg.timestamp | videoSeekData(detail.videos) %}
+          {% set seek = seg.timestamp | videoSeekData(detail.videos, detail.transcript_baseline) %}
         {% else %}
           {% set seek = null %}
         {% endif %}

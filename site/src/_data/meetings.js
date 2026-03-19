@@ -84,7 +84,12 @@ module.exports = function () {
         })
       : [];
 
-    details[m.id] = { ...m, items, transcript_segments, videos };
+    // Compute transcript baseline: first segment's wall-clock timestamp
+    const transcript_baseline = transcript_segments.length > 0
+      ? (transcript_segments[0].timestamp || null)
+      : null;
+
+    details[m.id] = { ...m, items, transcript_segments, videos, transcript_baseline };
   }
 
   db.close();
