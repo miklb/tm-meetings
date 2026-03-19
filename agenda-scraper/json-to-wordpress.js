@@ -949,15 +949,13 @@ async function main(meetingIds = [], date = null) {
         return;
     }
     
-    // Sort meetings by meeting type and ID for consistent output
+    // Sort meetings: morning types first (cra, workshop, special), evening last
     meetings.sort((a, b) => {
-        // Council Evening meetings always go last (highest priority number)
-        // All other meeting types go before Evening meetings
         const getTypePriority = (meetingType) => {
-            if (meetingType === 'Council Evening') {
-                return 999; // Highest priority - always goes last
+            const type = (meetingType || '').toLowerCase();
+            if (type === 'evening' || type === 'council evening') {
+                return 999;
             }
-            // All other meeting types get lower priority numbers (go first)
             return 1;
         };
         
@@ -968,7 +966,6 @@ async function main(meetingIds = [], date = null) {
             return aType - bType;
         }
         
-        // Then sort by meeting ID for consistent ordering within same type
         return parseInt(a.meetingId) - parseInt(b.meetingId);
     });
     
