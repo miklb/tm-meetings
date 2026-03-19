@@ -1,0 +1,45 @@
+{#
+  agenda-drawer.njk — Slide-out agenda panel for meetings with media
+  Expects: detail.items (array of agenda items)
+  Desktop: slides in from right edge as overlay
+  Mobile: bottom sheet sliding up
+#}
+
+{# Trigger button — fixed on the right edge of the viewport #}
+<button class="agenda-trigger" type="button" aria-expanded="false" aria-controls="agenda-drawer" aria-label="Open agenda ({{ detail.items.length }} items)">
+  <span class="agenda-trigger__text">Agenda</span>
+  <span class="agenda-trigger__count">{{ detail.items.length }}</span>
+</button>
+
+{# Backdrop — overlay behind the drawer #}
+<div class="agenda-backdrop" aria-hidden="true"></div>
+
+{# Drawer panel #}
+<aside id="agenda-drawer" class="agenda-drawer" role="dialog" aria-modal="true" aria-labelledby="agenda-drawer-title" aria-hidden="true">
+
+  <div class="agenda-drawer__header">
+    <h2 id="agenda-drawer-title" class="agenda-drawer__title">
+      Agenda
+      <span class="agenda-drawer__item-count">{{ detail.items.length }}
+        item{{ "s" if detail.items.length != 1 }}</span>
+    </h2>
+    <button class="agenda-drawer__close" type="button" aria-label="Close agenda">
+      <svg aria-hidden="true" width="20" height="20" viewbox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+        <line x1="4" y1="4" x2="16" y2="16"/>
+        <line x1="16" y1="4" x2="4" y2="16"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="agenda-drawer__body">
+    {% if detail.items.length > 0 %}
+      <ol class="agenda-list">
+        {% for item in detail.items %}
+          {% include "agenda-item.njk" %}
+        {% endfor %}
+      </ol>
+    {% else %}
+      <p>No agenda items available for this meeting.</p>
+    {% endif %}
+  </div>
+</aside>

@@ -29,23 +29,15 @@
 
 {% set detail = meetings.details[meeting.id] %}
 {% set hasMedia = detail and(detail.has_video or detail.has_transcript) %}
+{% set hasItems = detail and detail.items.length > 0 %}
 
 {% if hasMedia %}
-  {# ── Two-panel layout: agenda left, transcript right ── #}
+  {# ── Two-panel layout: video left, transcript right ── #}
+  {# ── Agenda lives in a slide-out drawer ── #}
   <div class="meeting-layout">
 
-    <div class="agenda-panel">
+    <div class="video-panel">
       {% include "video.njk" %}
-      {% if detail.items.length > 0 %}
-        <h2 class="agenda-panel__heading">Agenda</h2>
-        <ol class="agenda-list">
-          {% for item in detail.items %}
-            {% include "agenda-item.njk" %}
-          {% endfor %}
-        </ol>
-      {% else %}
-        <p>No agenda items available for this meeting.</p>
-      {% endif %}
     </div>
 
     <div class="media-panel">
@@ -54,9 +46,31 @@
 
   </div>
 
+  {# ── Agenda drawer (overlay) — only when items exist ── #}
+  {% if hasItems %}
+    {% include "agenda-drawer.njk" %}
+  {% endif %}
+
+  {# ── No-JS fallback: render agenda inline below the media grid ── #}
+  <noscript>
+    <section class="agenda-fallback">
+      <h2>Agenda</h2>
+      {% if hasItems %}
+        <ol class="agenda-list">
+          {% for item in detail.items %}
+            {% include "agenda-item.njk" %}
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p>No agenda items available for this meeting.</p>
+      {% endif %}
+    </section>
+  </noscript>
+
 {% else %}
-  {# ── Single column: agenda only ── #}
-  {% if detail and detail.items.length > 0 %}
+  {# ── Single column: agenda only (no media) ── #}
+  {% if hasItems %}
+    <h2>Agenda</h2>
     <ol class="agenda-list">
       {% for item in detail.items %}
         {% include "agenda-item.njk" %}
