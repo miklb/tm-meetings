@@ -80,7 +80,7 @@ try {
   "background": "...",          // From PDF staff report
   "supportingDocuments": [{
     "url": "https://tampagov.hylandcloud.com/...",
-    "mirroredUrl": "https://pub-XXX.r2.dev/...",
+    "mirroredUrl": "https://docs.meetings.tampamonitor.com/...",
     "title": "Staff Report Final"
   }]
 }
@@ -112,8 +112,8 @@ S3_ENDPOINT=https://xxx.r2.cloudflarestorage.com
 S3_ACCESS_KEY_ID=xxx
 S3_SECRET_ACCESS_KEY=xxx
 S3_BUCKET=agenda-docs
-S3_PUBLIC_URL=https://pub-XXX.r2.dev
-S3_CUSTOM_DOMAIN=true  # If using custom domain
+S3_PUBLIC_URL=https://docs.meetings.tampamonitor.com
+S3_CUSTOM_DOMAIN=true
 MAPBOX_API_TOKEN=xxx   # For geocoding
 ```
 

@@ -248,12 +248,12 @@ npx pa11y-ci ./site/_site/**/*.html
 
 ## External Services
 
-| Service          | Purpose            | Credentials Location      |
-| ---------------- | ------------------ | ------------------------- |
-| Cloudflare Pages | Static hosting     | Managed in CF dashboard   |
-| Cloudflare R2    | Document storage   | `R2_*` env vars           |
-| Vultr VPS        | Datasette hosting  | SSH key                   |
-| YouTube Data API | Chapter extraction | `YOUTUBE_API_KEY` env var |
+| Service          | Purpose            | Credentials Location                              |
+| ---------------- | ------------------ | ------------------------------------------------- |
+| Cloudflare Pages | Static hosting     | Managed in CF dashboard                           |
+| Cloudflare R2    | Document storage   | `S3_*` env vars, `docs.meetings.tampamonitor.com` |
+| Vultr VPS        | Datasette hosting  | SSH key                                           |
+| YouTube Data API | Chapter extraction | `YOUTUBE_API_KEY` env var                         |
 
 ---
 
@@ -302,7 +302,7 @@ The transcript processor includes a video pipeline that matches YouTube recordin
 
 ### Pipeline plan
 
-See `processor/docs/VIDEO_PIPELINE.md` for the full phased plan (Steps 1-2 done, Steps 3-5 planned).
+See `transcript-cleaner/processor/docs/VIDEO_PIPELINE.md` for the full phased plan (all 5 steps complete).
 
 ---
 
@@ -328,4 +328,4 @@ Before making significant changes, consider:
 
 ---
 
-_Last updated: December 19, 2025_
+_Last updated: March 8, 2026_

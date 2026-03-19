@@ -10,24 +10,25 @@ A civic transparency tool that scrapes, processes, and publishes Tampa City Coun
 
 ### What Works Today
 
-| Component                       | Status            | Location                                                              |
-| ------------------------------- | ----------------- | --------------------------------------------------------------------- |
-| Agenda Scraper                  | Active, automated | `agenda-scraper/` ([GitHub](https://github.com/miklb/agenda-scraper)) |
-| Transcript Processor            | Functional, local | `transcript-cleaner/processor/`                                       |
-| WordPress Publication           | Active            | Agendas published via WordPress block markup                          |
-| Nightly Scrape (GitHub Actions) | Running           | `agenda-scraper/.github/workflows/`                                   |
+| Component                       | Status   | Location                                |
+| ------------------------------- | -------- | --------------------------------------- |
+| Agenda Scraper (HTTP-first v3)  | Active   | `agenda-scraper/`                       |
+| Transcript Processor            | Active   | `transcript-cleaner/processor/`         |
+| WordPress Publication           | Active   | Agendas published via block markup      |
+| Nightly Scrape (GitHub Actions) | Running  | `agenda-scraper/.github/workflows/`     |
+| Eleventy Static Site            | Built    | `site/`                                 |
+| SQLite Database                 | Built    | 57+ meetings, FTS5 search               |
+| R2 Document Mirroring           | Active   | Cloudflare R2 via `mirror-documents.js` |
+| Pipeline Orchestration          | Active   | `pipeline/`                             |
+| Video/Transcript Sync           | Complete | 5-step pipeline, 23 videos integrated   |
 
 ### What's Planned
 
-| Component                      | Status      |
-| ------------------------------ | ----------- |
-| Transcript processor hardening | In progress |
-| Unified `tampa-meetings` repo  | Not started |
-| Eleventy static site           | Not started |
-| SQLite database                | Not started |
-| Pagefind search                | Not started |
-| R2 document mirroring          | Not started |
-| Datasette API                  | Future      |
+| Component                   | Status      |
+| --------------------------- | ----------- |
+| Pagefind search             | Not started |
+| Datasette API               | Future      |
+| GitHub Actions for pipeline | Planned     |
 
 ---
 
@@ -68,32 +69,24 @@ python src/transcript_processor.py --meeting-id 2640
 
 ---
 
-## Architecture (Current)
+## Architecture
 
 ```
-agenda-scraper/          ──▶  JSON data + WordPress HTML
-  └── GitHub Actions         (nightly scrape, auto-commit)
+Hyland OnBase ──▶ agenda-scraper/     ──▶ JSON data + WordPress HTML
+                    ├── json-scraper.js      (scrape meetings)
+                    ├── mirror-documents.js   (upload docs to R2)
+                    └── json-to-wordpress.js  (generate WP markup)
 
-transcript-cleaner/      ──▶  Processed JSON + static HTML
-  └── Manual runs            (sentence case, NER, video sync)
-```
+tampagov.net  ──▶ transcript-cleaner/ ──▶ Processed JSON + HTML
+                    └── processor/           (NER, case, video sync)
 
-## Architecture (Planned)
+pipeline/     ──▶ Orchestration       ──▶ SQLite DB + Eleventy site
+                    ├── discover.py          (find new meetings)
+                    ├── process-meeting.sh   (end-to-end per meeting)
+                    └── build-site.sh        (rebuild DB + site)
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                    STATIC SITE (Eleventy)                        │
-│               meetings.tampamonitor.com                          │
-│      Pre-rendered meeting pages + Pagefind search               │
-└─────────────────────────────────────────────────────────────────┘
-                              │
-                    Cloudflare Pages (free)
-                              │
-┌─────────────────────────────────────────────────────────────────┐
-│                      SQLite Database                             │
-│              Read at build time via better-sqlite3              │
-│        Agenda data + transcript data + FTS5 search              │
-└─────────────────────────────────────────────────────────────────┘
+site/         ──▶ Eleventy            ──▶ Static HTML pages
+                    └── meetings.db          (SQLite with FTS5)
 ```
 
 ---
@@ -140,9 +133,28 @@ This project prioritizes accessibility (WCAG 2.1 AA minimum):
 
 ---
 
+## Documentation
+
+| Document                                                                                                   | Purpose                                        |
+| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)                                                           | Full roadmap, database schema, decisions log   |
+| [BUGS.md](BUGS.md)                                                                                         | Known issues                                   |
+| [pipeline/README.md](pipeline/README.md)                                                                   | Pipeline scripts, data flow, typical workflows |
+| [pipeline/REPROCESS_2026.md](pipeline/REPROCESS_2026.md)                                                   | Runbook for full 2026 data refresh             |
+| [agenda-scraper/README.md](agenda-scraper/README.md)                                                       | Scraper v3.0 usage, options, output format     |
+| [agenda-scraper/lib/README.md](agenda-scraper/lib/README.md)                                               | HTTP scraper library API reference             |
+| [agenda-scraper/docs/DOCUMENT-MIRRORING.md](agenda-scraper/docs/DOCUMENT-MIRRORING.md)                     | R2 mirroring strategy and setup                |
+| [transcript-cleaner/processor/README.md](transcript-cleaner/processor/README.md)                           | Transcript processor setup and usage           |
+| [transcript-cleaner/processor/docs/VIDEO_PIPELINE.md](transcript-cleaner/processor/docs/VIDEO_PIPELINE.md) | Video sync pipeline (5-step, all complete)     |
+| [transcript-cleaner/processor/docs/YOUTUBE_SETUP.md](transcript-cleaner/processor/docs/YOUTUBE_SETUP.md)   | YouTube API key setup                          |
+
+Historical docs (completed work logs, previous plans) are in `archive/`.
+
+---
+
 ## Related Projects
 
-- [miklb/agenda-scraper](https://github.com/miklb/agenda-scraper) — Agenda scraping (will be archived when unified repo is created)
+- [miklb/agenda-scraper](https://github.com/miklb/agenda-scraper) — Original agenda scraper repo
 
 ---
 

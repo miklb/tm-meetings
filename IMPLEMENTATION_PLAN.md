@@ -28,7 +28,7 @@ Eleventy 3.x with Nunjucks templates. Reads SQLite via `better-sqlite3` at build
 
 ### Document Mirroring
 
-Cloudflare R2 (`pub-c033063fb78d41deb87cf99d8cce78f6.r2.dev`). Integrated into `process-agenda.sh` with `--skip-mirror` flag. Links carry `data-original-url` attribute for provenance.
+Cloudflare R2 via custom domain (`docs.meetings.tampamonitor.com`). Integrated into `process-agenda.sh` with `--skip-mirror` flag. Links carry `data-original-url` attribute for provenance.
 
 ### Build Pipeline
 
@@ -59,7 +59,7 @@ Run: `node scripts/build-db.js && cd site && npx eleventy`
 | Documents   | Cloudflare R2           | Operational          |
 | Hosting     | Cloudflare Pages        | Not yet configured   |
 | Search      | Pagefind                | Not yet added        |
-| API         | Datasette               | Future               |
+| API         | D1 + Workers            | Post-launch          |
 
 ### Data Flow (Target)
 
@@ -148,7 +148,7 @@ CREATE TABLE video_chapters (
 
 - **`entities`** — canonical entity names from NER (person, org, location, file_number)
 - **`document_versions`** — change tracking with SHA256 hashing
-- **FTS5 virtual tables** — full-text search on agenda items, transcripts, documents
+- **FTS5 virtual tables** — full-text search on agenda items, transcripts, documents (local SQLite only — D1 does not support FTS5; user-facing search handled by Pagefind)
 
 ---
 
@@ -337,13 +337,15 @@ Consolidated orchestration tier that bridges the three codebases (agenda-scraper
 
 Features that depend on a stable, launched site.
 
-### Datasette API
+### D1 + Workers API
 
-Serve meeting data as JSON for third-party consumers. Requires Vultr VPS (~$7/mo).
+Serve meeting data as JSON for external consumers (journalists, civic hackers). Cloudflare D1 as a read-only edge replica of local SQLite, synced after each `build-db.js` run via Wrangler CLI. Workers API at `api.tampamonitor.com` (or `meetings.tampamonitor.com/api/`) with endpoints for meetings, agenda items, documents, transcripts, and text search (`LIKE` queries). $0 on free tier (25B reads/month, 10GB max DB). Replaces earlier Datasette plan — eliminates $7/mo VPS and server maintenance.
+
+**D1 limitation:** No FTS5 support. User-facing full-text search is handled by Pagefind (client-side, indexes static HTML at build time). D1 provides structured queries + basic text matching for API consumers. If `LIKE` search becomes inadequate at scale, evaluate Cloudflare Vectorize + Workers AI for semantic search over document embeddings.
 
 ### Document Text Extraction
 
-Extract text from mirrored PDFs (`pdf-parse` + Tesseract OCR fallback). Index in FTS5.
+Extract text from mirrored PDFs (`pdf-parse` + Tesseract OCR fallback). Add `document_text` column to `documents` table in both local SQLite and D1. Render extracted text into meeting detail pages so Pagefind indexes it automatically. API consumers query via D1 `LIKE` on `document_text`.
 
 ### Cross-Linking
 
@@ -388,24 +390,26 @@ Canonical match key: `(date, meeting_type)`. Both systems cover the same meeting
 
 ### Infrastructure Costs
 
-| Service             | Cost      | Purpose                        |
-| ------------------- | --------- | ------------------------------ |
-| Cloudflare Pages    | $0        | Static site hosting            |
-| Cloudflare R2       | ~$0.50/mo | Document storage (operational) |
-| Vultr VPS + backups | $7/mo     | Datasette API (future)         |
+| Service          | Cost      | Purpose                        |
+| ---------------- | --------- | ------------------------------ |
+| Cloudflare Pages | $0        | Static site hosting            |
+| Cloudflare R2    | ~$0.50/mo | Document storage (operational) |
+| Cloudflare D1    | $0        | API database (post-launch)     |
+| Workers          | $0        | API endpoints (post-launch)    |
 
 ### Decisions Log
 
-| Decision              | Choice                        | Rationale                                         |
-| --------------------- | ----------------------------- | ------------------------------------------------- |
-| Static site generator | Eleventy                      | Simple, fast, template flexibility                |
-| Data at build time    | SQLite via better-sqlite3     | No runtime API dependency                         |
-| Search                | Pagefind                      | Zero cost, client-side, static-compatible         |
-| Documents             | Cloudflare R2                 | Operational, R2 dev URL with future custom domain |
-| Hosting               | Cloudflare Pages              | Free, global CDN                                  |
-| WordPress output      | Keep until subdomain launches | Current publication method                        |
-| Video archiving       | Not needed                    | Tampa TV retains videos on YouTube                |
-| Accessibility         | WCAG 2.1 AA minimum           | Non-negotiable first priority                     |
+| Decision              | Choice                        | Rationale                                                                 |
+| --------------------- | ----------------------------- | ------------------------------------------------------------------------- |
+| Static site generator | Eleventy                      | Simple, fast, template flexibility                                        |
+| Data at build time    | SQLite via better-sqlite3     | No runtime API dependency                                                 |
+| Search                | Pagefind                      | Zero cost, client-side, static-compatible                                 |
+| API                   | D1 + Workers over Datasette   | $0, serverless, no VPS ops; D1 lacks FTS5 but Pagefind covers user search |
+| Documents             | Cloudflare R2                 | Operational, custom domain `docs.meetings.tampamonitor.com`               |
+| Hosting               | Cloudflare Pages              | Free, global CDN                                                          |
+| WordPress output      | Keep until subdomain launches | Current publication method                                                |
+| Video archiving       | Not needed                    | Tampa TV retains videos on YouTube                                        |
+| Accessibility         | WCAG 2.1 AA minimum           | Non-negotiable first priority                                             |
 
 ### Success Metrics
 
@@ -420,4 +424,4 @@ Canonical match key: `(date, meeting_type)`. Both systems cover the same meeting
 
 ---
 
-_Last updated: March 3, 2026_
+_Last updated: March 4, 2026_
