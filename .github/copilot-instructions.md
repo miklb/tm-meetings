@@ -246,6 +246,20 @@ npx pa11y-ci ./site/_site/**/*.html
 
 ---
 
+## Python Environment
+
+All Python code runs from a single virtualenv at `transcript-cleaner/processor/venv/`.
+
+**Always activate before running any Python command:**
+
+```bash
+source pipeline/activate.sh
+```
+
+This applies to transcript processing, video pipeline, entity rebuilds, and any `pip install`. Scripts like `process-meeting.sh` and `discover.py` auto-activate, but running Python scripts directly (e.g., `python3 src/youtube_fetcher.py` or `python3 scripts/build/process_video.py`) requires manual activation first.
+
+---
+
 ## External Services
 
 | Service          | Purpose            | Credentials Location                              |

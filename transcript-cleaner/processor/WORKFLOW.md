@@ -21,6 +21,22 @@ The workflow consists of 6 main steps:
 - OpenAI Whisper installed
 - yt-dlp and FFmpeg available
 
+## Environment Setup
+
+**Activate the venv before running any command below.** All commands in this document assume the venv is active and working directory is `transcript-cleaner/processor/`.
+
+```bash
+# From project root
+source pipeline/activate.sh
+cd transcript-cleaner/processor
+
+# Or directly
+cd transcript-cleaner/processor
+source venv/bin/activate
+```
+
+Verify: `python3 -c "import dotenv, gliner; print('ok')"`
+
 ## Step-by-Step Process
 
 ### 1. Scrape Transcript
