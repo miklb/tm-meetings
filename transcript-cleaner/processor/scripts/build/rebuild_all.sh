@@ -54,7 +54,9 @@ echo ""
 
 # Step 2: Clean the entity database
 echo "2/4  Cleaning entity database..."
-"$VENV_PYTHON" "$SCRIPT_DIR/clean_entity_database.py"
+"$VENV_PYTHON" "$SCRIPT_DIR/clean_entity_database.py" \
+    --input "$DATA_DIR/hybrid_entity_database.json" \
+    --output "$DATA_DIR/hybrid_entity_database.json"
 echo ""
 
 # Step 3: Auto-extract acronyms from agendas into config
