@@ -199,6 +199,11 @@ class YouTubeFetcher:
                         # Parse part number and session from title
                         part_info = self._parse_video_title(title)
                         
+                        # Skip very short clips (< 10 min) — invocations, test uploads, etc.
+                        if duration and self._duration_seconds(duration) < 600:
+                            logger.info(f"Skipping short video ({duration}): {title}")
+                            continue
+
                         videos.append({
                             'video_id': video_id,
                             'title': title,
@@ -273,8 +278,8 @@ class YouTubeFetcher:
         """
         title_lower = title.lower()
         
-        # Check for explicit part numbers
-        part_match = re.search(r'part\s+(\d+)', title_lower)
+        # Check for explicit part numbers ("Part 2", "Pt 2", "Pt2")
+        part_match = re.search(r'(?:part|pt)\s*(\d+)', title_lower)
         if part_match:
             return {
                 'part': int(part_match.group(1)),
@@ -341,6 +346,15 @@ class YouTubeFetcher:
 
         # Fallback: if filter removed everything, keep all (avoid empty result)
         return filtered if filtered else videos
+
+    @staticmethod
+    def _duration_seconds(iso_duration: str) -> int:
+        """Convert ISO 8601 duration (e.g. 'PT2H30M15S') to seconds."""
+        m = re.match(r'PT(?:(\d+)H)?(?:(\d+)M)?(?:(\d+)S)?', iso_duration)
+        if not m:
+            return 0
+        h, mn, s = (int(g) if g else 0 for g in m.groups())
+        return h * 3600 + mn * 60 + s
 
     def _sort_video_parts(self, videos: List[Dict[str, str]]) -> List[Dict[str, str]]:
         """Sort videos by part number and session."""
