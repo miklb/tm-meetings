@@ -1,0 +1,16 @@
+</main>
+
+<footer class="site-footer">
+<p>Data sourced from the
+    <a href="https://tampagov.hylandcloud.com/221agendaonline/">Tampa City Clerk — Hyland OnBase</a>. This is an unofficial resource.</p>
+</footer>
+
+{# Load video + search scripts only on meeting pages with media #}
+{% if meeting and(meeting.has_video or meeting.has_transcript) %}
+<script src="https://www.youtube.com/iframe_api"></script>
+<script src="/js/video-player.js" defer="defer"></script>
+<script src="/js/search.js" defer="defer"></script>
+<script src="/js/agenda-drawer.js" defer="defer"></script>
+{% endif %}
+</body>
+</html>

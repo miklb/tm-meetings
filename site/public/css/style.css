@@ -5,24 +5,20 @@
 /* ---------- Custom Properties ---------- */
 
 :root {
-  --color-bg: #fafafa;
-  --color-surface: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-muted: #555;
-  --color-primary: #1a5f7a;
-  --color-primary-dark: #134a5f;
-  --color-link: #1a5f7a;
-  --color-link-visited: #5b2c6f;
-  --color-border: #ddd;
-  --color-badge-cc: #1a5f7a;
-  --color-badge-eve: #6c3483;
-  --color-badge-cra: #1e8449;
-  --color-badge-ws: #b9770e;
-  --color-badge-sp: #c0392b;
-  --color-badge-transcript: #374151;
-  --color-badge-video: #7c3aed;
+  --color-bg: #f1f1e6;
+  --color-surface: #f8f8f2;
+  --color-text: #314a59;
+  --color-text-muted: #8a8a82;
+  --color-primary: #1d636b;
+  --color-primary-dark: #164f56;
+  --color-link: #1d636b;
+  --color-link-visited: #8a5a58;
+  --color-border: #d4d4ca;
+  --color-accent-gold: #e6b45e;
+  --color-accent-rose: #e6a4a1;
 
-  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
 
   --spacing-xs: 0.25rem;
@@ -41,6 +37,16 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+body {
+  font: -apple-system-body;
+  /* other styles, including font-family */
+}
+@supports (font: -apple-system-body) and (not (-webkit-touch-callout: default)) {
+  :root {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -321,33 +327,6 @@ main {
   margin-block-start: 2px;
 }
 
-/* ---------- Meeting-Type Placeholder Thumbnails ---------- */
-
-.thumb-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #e5e7eb;
-  color: #6b7280;
-}
-
-.thumb-placeholder--regular {
-  background: #dbeafe;
-  color: var(--color-primary);
-}
-.thumb-placeholder--evening {
-  background: #ede9fe;
-  color: #5b2c6f;
-}
-.thumb-placeholder--cra {
-  background: #d1fae5;
-  color: #1e8449;
-}
-.thumb-placeholder--workshop {
-  background: #fef3c7;
-  color: #92400e;
-}
-
 /* ---------- Pagination / Show More ---------- */
 
 .archive-hidden {
@@ -375,42 +354,6 @@ main {
 .show-more-btn:hover {
   background: #f0f4f8;
   border-color: var(--color-primary);
-}
-
-/* ---------- Badges (meeting detail pages only) ---------- */
-
-.badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 0.1em 0.5em;
-  border-radius: var(--radius);
-  color: #fff;
-  white-space: nowrap;
-  vertical-align: baseline;
-}
-
-.badge--regular {
-  background: var(--color-badge-cc);
-}
-.badge--evening {
-  background: var(--color-badge-eve);
-}
-.badge--cra {
-  background: var(--color-badge-cra);
-}
-.badge--workshop {
-  background: var(--color-badge-ws);
-}
-.badge--special {
-  background: var(--color-badge-sp);
-}
-.badge--transcript {
-  background: var(--color-badge-transcript);
-}
-.badge--video {
-  background: var(--color-badge-video);
 }
 
 /* ---------- Meeting Detail ---------- */
