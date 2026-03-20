@@ -167,17 +167,19 @@ class YouTubeFetcher:
             search_response = search_request.execute()
             
             videos = []
-            # Multiple date formats used in video titles
-            date_str = date_obj.strftime('%m/%d/%Y')  # 10/23/2025
-            date_str_alt = date_obj.strftime('%-m/%-d/%Y')  # 10/23/2025 without leading zeros
-            date_str_short = date_obj.strftime('%m/%d/%y')  # 10/23/25 (SHORT YEAR)
-            date_str_short_alt = date_obj.strftime('%-m/%-d/%y')  # 10/23/25 without leading zeros
+            # Multiple date formats used in video titles (slashes and dashes)
+            date_formats = []
+            for sep in ['/', '-']:
+                date_formats.append(date_obj.strftime(f'%m{sep}%d{sep}%Y'))       # 03/03/2026
+                date_formats.append(date_obj.strftime(f'%-m{sep}%-d{sep}%Y'))     # 3/3/2026
+                date_formats.append(date_obj.strftime(f'%m{sep}%d{sep}%y'))       # 03/03/26
+                date_formats.append(date_obj.strftime(f'%-m{sep}%-d{sep}%y'))     # 3/3/26
             
             for item in search_response.get('items', []):
                 title = item['snippet']['title']
                 
                 # Check if title matches this meeting date (try all formats)
-                if any(d in title for d in [date_str, date_str_alt, date_str_short, date_str_short_alt]):
+                if any(d in title for d in date_formats):
                     if meeting_type.lower() in title.lower():
                         video_id = item['id']['videoId']
                         
