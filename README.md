@@ -133,7 +133,7 @@ This project prioritizes accessibility (WCAG 2.1 AA minimum):
 
 - Semantic HTML throughout
 - Full keyboard navigation
-- Screen reader tested (VoiceOver)
+- ARIA landmarks and roles for assistive technology
 - Transcripts provide accessible alternative to video
 - High contrast, readable typography
 
