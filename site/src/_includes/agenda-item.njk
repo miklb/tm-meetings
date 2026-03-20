@@ -1,33 +1,35 @@
 {# Render a single agenda item #}
 <li class="agenda-item" id="item-{{ item.agenda_item_id }}">
-  <div class="item-header">
-    <span class="item-number">{{ item.item_number }}.</span>
-    {% if item.file_number %}
-      <span class="file-number">
-        <a href="#item-{{ item.agenda_item_id }}">{{ item.file_number }}</a>
-      </span>
+    <div class="item-header">
+        <span class="item-number">{{ item.item_number }}.</span>
+        {% if item.file_number %}
+            <span class="file-number">
+                <a href="#item-{{ item.agenda_item_id }}">{{ item.file_number }}</a>
+            </span>
+        {% endif %}
+    </div>
+
+    <p class="item-title">{{ item.title | cleanTitle }}</p>
+
+    {% if item.background | hasContent %}
+        <details class="item-background">
+            <summary>Background Details</summary>
+            <div class="background-text">{{ item.background }}</div>
+        </details>
     {% endif %}
-  </div>
 
-  <p class="item-title">{{ item.title | cleanTitle }}</p>
-
-  {% if item.background | hasContent %}
-    <details class="item-background">
-      <summary>Background Details</summary>
-      <div class="background-text">{{ item.background }}</div>
-    </details>
-  {% endif %}
-
-  {% if item.documents.length > 0 %}
-    <p class="doc-list-heading">Supporting Documents:</p>
-    <ul class="doc-list">
-      {% for doc in item.documents %}
-        <li>
-          <a href="{{ doc.mirrored_url or doc.source_url }}" target="_blank" rel="noopener noreferrer" {% if doc.mirrored_url %} data-original-url="{{ doc.source_url }}" {% endif %}>
-            {{- doc.title -}}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  {% endif %}
+    {% if item.documents.length > 0 %}
+        <p class="doc-list-heading">Supporting Documents:</p>
+        <ul class="doc-list">
+            {% for doc in item.documents %}
+                <li>
+                    <a href="{{ doc.mirrored_url or doc.source_url }}" target="_blank" rel="noopener noreferrer" {% if doc.mirrored_url %} data-original-url="{{ doc.source_url }}" {% endif %}>
+                        {{- doc.title -}}
+                        <span class="visually-hidden">
+                            (opens in new tab)</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 </li>

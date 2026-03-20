@@ -1,6 +1,7 @@
 ---
 layout: base.njk
 title: About — Tampa Meetings
+description: About Tampa Meetings — a civic transparency project making Tampa City Council meeting records accessible.
 ---
 
 # About Tampa Meetings

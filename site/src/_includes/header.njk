@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="text-scale" content="scale">
         <title>{{ title or "Tampa City Council Meetings" }}</title>
+        {% if description %}<meta name="description" content="{{ description }}">{% endif %}
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>

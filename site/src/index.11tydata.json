@@ -1,4 +1,5 @@
 {
   "layout": "base.njk",
-  "title": "Tampa City Council Meetings"
+  "title": "Tampa City Council Meetings",
+  "description": "Agendas, transcripts, and video from Tampa City Council meetings — a civic transparency project."
 }

@@ -4,57 +4,57 @@
   Uses videoSeekData filter to compute data-seconds / data-video-part
 #}
 {% if detail.transcript_segments and detail.transcript_segments.length > 0 %}
-  <div class="transcript-panel" aria-label="Meeting transcript">
+    <section class="transcript-panel" aria-label="Meeting transcript">
 
-    {# ── Search bar ── #}
-    <div class="search-container">
-      <label for="transcript-search" class="visually-hidden">Search transcript</label>
-      <input type="search" id="transcript-search" class="search-input" placeholder="Search transcript…" autocomplete="off">
-      <div id="search-results" class="search-results" role="region" aria-live="polite"></div>
-    </div>
-
-    {# ── Segment list ── #}
-    <div class="transcript-body">
-      {% set currentSpeaker = "" %}
-      {% for seg in detail.transcript_segments %}
-
-        {% if seg.speaker and seg.speaker != currentSpeaker %}
-          {% if not loop.first %}
-          </div>
-        {% endif %}
-        <div class="transcript-turn">
-          <p class="transcript-speaker">{{ seg.speaker }}</p>
-          {% set currentSpeaker = seg.speaker %}
-        {% elif not seg.speaker and currentSpeaker != "" %}
-          {% if not loop.first %}
-          </div>
-        {% endif %}
-        <div class="transcript-turn">
-          {% set currentSpeaker = "" %}
-        {% endif %}
-
-        {# Compute seek data when video available #}
-        {% if seg.timestamp and detail.has_video %}
-          {% set seek = seg.timestamp | videoSeekData(detail.videos, detail.transcript_baseline) %}
-        {% else %}
-          {% set seek = null %}
-        {% endif %}
-
-        <p class="transcript-line segment" {% if seek %} data-seconds="{{ seek.seconds }}" data-video-part="{{ seek.videoPart }}" {% endif %}>
-          {% if seg.timestamp %}
-            {% if seek %}
-              <a class="transcript-timestamp" href="https://youtu.be/{{ detail.videos[seek.videoPart - 1].video_id }}?t={{ seek.seconds | round }}" onclick="seekToTimestamp({{ seek.seconds }}, {{ seek.videoPart }}); return false;" aria-label="Seek to {{ seg.timestamp }}">{{ seg.timestamp }}</a>
-            {% else %}
-              <span class="transcript-timestamp">{{ seg.timestamp }}</span>
-            {% endif %}
-          {% endif %}
-          <span class="segment-text">{{ seg.text }}</span>
-        </p>
-
-        {% if loop.last %}
+        {# ── Search bar ── #}
+        <div class="search-container">
+            <label for="transcript-search" class="visually-hidden">Search transcript</label>
+            <input type="search" id="transcript-search" class="search-input" placeholder="Search transcript…" autocomplete="off">
+            <div id="search-results" class="search-results" role="region" aria-live="polite"></div>
         </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</div>
+
+        {# ── Segment list ── #}
+        <div class="transcript-body" tabindex="0" role="region" aria-label="Transcript text">
+            {% set currentSpeaker = "" %}
+            {% for seg in detail.transcript_segments %}
+
+                {% if seg.speaker and seg.speaker != currentSpeaker %}
+                    {% if not loop.first %}
+                    </div>
+                {% endif %}
+                <div class="transcript-turn">
+                    <p class="transcript-speaker">{{ seg.speaker }}</p>
+                    {% set currentSpeaker = seg.speaker %}
+                {% elif not seg.speaker and currentSpeaker != "" %}
+                    {% if not loop.first %}
+                    </div>
+                {% endif %}
+                <div class="transcript-turn">
+                    {% set currentSpeaker = "" %}
+                {% endif %}
+
+                {# Compute seek data when video available #}
+                {% if seg.timestamp and detail.has_video %}
+                    {% set seek = seg.timestamp | videoSeekData(detail.videos, detail.transcript_baseline) %}
+                {% else %}
+                    {% set seek = null %}
+                {% endif %}
+
+                <p class="transcript-line segment" {% if seek %} data-seconds="{{ seek.seconds }}" data-video-part="{{ seek.videoPart }}" {% endif %}>
+                    {% if seg.timestamp %}
+                        {% if seek %}
+                            <a class="transcript-timestamp" href="https://youtu.be/{{ detail.videos[seek.videoPart - 1].video_id }}?t={{ seek.seconds | round }}" onclick="seekToTimestamp({{ seek.seconds }}, {{ seek.videoPart }}); return false;" aria-label="Seek to {{ seg.timestamp }}">{{ seg.timestamp }}</a>
+                        {% else %}
+                            <span class="transcript-timestamp">{{ seg.timestamp }}</span>
+                        {% endif %}
+                    {% endif %}
+                    <span class="segment-text">{{ seg.text }}</span>
+                </p>
+
+                {% if loop.last %}
+                </div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
 {% endif %}

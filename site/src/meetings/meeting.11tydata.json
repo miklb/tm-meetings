@@ -7,6 +7,7 @@
   },
   "permalink": "meetings/{{ meeting.id }}/",
   "eleventyComputed": {
-    "title": "{{ meeting.title }} — Tampa Meetings"
+    "title": "{{ meeting.title }} — Tampa Meetings",
+    "description": "Agenda, transcript, and video for {{ meeting.title }} — Tampa City Council."
   }
 }
