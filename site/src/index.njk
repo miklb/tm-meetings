@@ -1,23 +1,109 @@
-<h1 class="page-title">Tampa City Council Meetings</h1>
+{# ── Latest Week (featured) ── #}
+{% set latestDate = meetings.publicDates[0] %}
+{% set latestMeetings = meetings.publicByDate[latestDate] %}
 
-{% for date in meetings.dates %}
-  <section class="date-group">
-    <h2 class="date-heading">{{ date | readableDate }}</h2>
-    <ul class="meeting-list">
-      {% for meeting in meetings.byDate[date] %}
-        <li class="meeting-card">
-          <span class="badge badge--{{ meeting.meeting_type }}">{{ meeting.meeting_type | meetingTypeLabel }}</span>
-          {% if meeting.has_transcript %}
-            <span class="badge badge--transcript">Transcript</span>{% endif %}
-          {% if meeting.has_video %}
-            <span class="badge badge--video">Video</span>{% endif %}
-          <a href="/meetings/{{ meeting.id }}/">{{ meeting.title }}</a>
-          {% if meeting.item_count > 0 %}
-            <span class="item-count">{{ meeting.item_count }}
-              item{{ "s" if meeting.item_count != 1 }}</span>
+{% if latestDate %}
+<section class="latest-week" aria-label="Latest meetings">
+  <h2 class="section-heading">Latest</h2>
+  <div class="featured-grid">
+    {% for meeting in latestMeetings %}
+    <article class="featured-card">
+      <a href="/meetings/{{ meeting.id }}/" class="featured-link">
+        <div class="featured-thumb">
+          {% if meeting.video_id %}
+          <img src="{{ meeting.video_id | ytThumb }}"
+               alt=""
+               loading="lazy"
+               width="320" height="180">
+          {% else %}
+          <div class="thumb-placeholder thumb-placeholder--{{ meeting.meeting_type }}" aria-hidden="true">
+            <svg viewBox="0 0 320 180" xmlns="http://www.w3.org/2000/svg">
+              <text x="160" y="90" text-anchor="middle" dominant-baseline="central"
+                    fill="currentColor" font-size="14" font-weight="600">
+                {{ meeting.meeting_type | meetingTypeLabel }}
+              </text>
+            </svg>
+          </div>
           {% endif %}
+        </div>
+        <div class="featured-body">
+          <span class="meeting-type-label">{{ meeting.meeting_type | meetingTypeLabel }}</span>
+          <h3 class="featured-title">{{ meeting.title }}</h3>
+          <time class="featured-date" datetime="{{ meeting.date }}">{{ meeting.date | readableDate }}</time>
+          {% if meeting.item_count > 0 %}
+          <span class="featured-meta">{{ meeting.item_count }} agenda item{{ "s" if meeting.item_count != 1 }}</span>
+          {% endif %}
+        </div>
+      </a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{# ── Previous Meetings ── #}
+{% if meetings.publicDates.length > 1 %}
+<section class="previous-meetings" aria-label="Previous meetings">
+  <h2 class="section-heading">Previous Meetings</h2>
+
+  <div class="meetings-archive" id="meetings-archive">
+    {% for date in meetings.publicDates %}
+    {% if loop.index0 > 0 %}
+    <div class="date-group{% if loop.index0 > 10 %} archive-hidden{% endif %}">
+      <h3 class="date-heading">
+        <time datetime="{{ date }}">{{ date | readableDate }}</time>
+      </h3>
+      <ul class="meeting-list" role="list">
+        {% for meeting in meetings.publicByDate[date] %}
+        <li class="meeting-row">
+          <a href="/meetings/{{ meeting.id }}/" class="meeting-row-link">
+            {% if meeting.video_id %}
+            <img class="meeting-row-thumb"
+                 src="{{ meeting.video_id | ytThumb }}"
+                 alt="" loading="lazy" width="120" height="68">
+            {% else %}
+            <div class="meeting-row-thumb thumb-placeholder thumb-placeholder--{{ meeting.meeting_type }}" aria-hidden="true">
+              <svg viewBox="0 0 120 68" xmlns="http://www.w3.org/2000/svg">
+                <text x="60" y="34" text-anchor="middle" dominant-baseline="central"
+                      fill="currentColor" font-size="9" font-weight="600">
+                  {{ meeting.meeting_type | meetingTypeLabel }}
+                </text>
+              </svg>
+            </div>
+            {% endif %}
+            <div class="meeting-row-body">
+              <span class="meeting-type-label">{{ meeting.meeting_type | meetingTypeLabel }}</span>
+              <span class="meeting-row-title">{{ meeting.title }}</span>
+              {% if meeting.item_count > 0 %}
+              <span class="meeting-row-meta">{{ meeting.item_count }} item{{ "s" if meeting.item_count != 1 }}</span>
+              {% endif %}
+            </div>
+          </a>
         </li>
-      {% endfor %}
-    </ul>
-  </section>
-{% endfor %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+
+  {% if meetings.publicDates.length > 11 %}
+  <button class="show-more-btn" id="show-more-btn" type="button">
+    Show More Meetings
+  </button>
+  <script>
+    (function() {
+      var btn = document.getElementById('show-more-btn');
+      var archive = document.getElementById('meetings-archive');
+      btn.addEventListener('click', function() {
+        var hidden = archive.querySelectorAll('.archive-hidden');
+        for (var i = 0; i < hidden.length; i++) {
+          hidden[i].classList.remove('archive-hidden');
+        }
+        btn.remove();
+      });
+    })();
+  </script>
+  {% endif %}
+</section>
+{% endif %}

@@ -38,6 +38,12 @@ module.exports = function (eleventyConfig) {
     });
   });
 
+  /** YouTube thumbnail URL from video ID */
+  eleventyConfig.addFilter('ytThumb', (videoId) => {
+    if (!videoId) return null;
+    return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+  });
+
   /** Strip "File No. XX-XXXX\n" prefix from item titles */
   eleventyConfig.addFilter('cleanTitle', (title) => {
     if (!title) return '';

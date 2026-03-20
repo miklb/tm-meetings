@@ -22,6 +22,17 @@ module.exports = function () {
   `).all();
 
   // ------------------------------------------------------------------
+  // First video_id per meeting (for YouTube thumbnail on homepage)
+  // ------------------------------------------------------------------
+  const stmtFirstVideo = db.prepare(`
+    SELECT video_id FROM videos WHERE meeting_id = ? ORDER BY part LIMIT 1
+  `);
+  for (const m of all) {
+    const row = stmtFirstVideo.get(m.id);
+    m.video_id = row ? row.video_id : null;
+  }
+
+  // ------------------------------------------------------------------
   // Group by date for homepage
   // ------------------------------------------------------------------
   const byDate = {};
@@ -32,6 +43,17 @@ module.exports = function () {
       dates.push(m.date);
     }
     byDate[m.date].push(m);
+  }
+
+  // ------------------------------------------------------------------
+  // Public meetings: 2026+ only, for the homepage listing
+  // (older meetings still exist as detail pages, just hidden from index)
+  // ------------------------------------------------------------------
+  const PUBLIC_CUTOFF = '2026-01-01';
+  const publicDates = dates.filter((d) => d >= PUBLIC_CUTOFF);
+  const publicByDate = {};
+  for (const d of publicDates) {
+    publicByDate[d] = byDate[d];
   }
 
   // ------------------------------------------------------------------
@@ -94,6 +116,6 @@ module.exports = function () {
 
   db.close();
 
-  return { all, byDate, dates, details };
+  return { all, byDate, dates, publicDates, publicByDate, details };
 };
 

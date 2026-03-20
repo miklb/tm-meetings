@@ -8,11 +8,6 @@
 
 <div class="meeting-meta">
   <p>
-    <span class="badge badge--{{ meeting.meeting_type }}">{{ meeting.meeting_type | meetingTypeLabel }}</span>
-    {% if meeting.has_transcript %}
-      <span class="badge badge--transcript">Transcript</span>{% endif %}
-    {% if meeting.has_video %}
-      <span class="badge badge--video">Video</span>{% endif %}
     {{ meeting.date | readableDate }}
     {% if meeting.item_count > 0 %}
       &middot;
