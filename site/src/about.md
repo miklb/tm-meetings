@@ -27,6 +27,10 @@ All data is sourced from official City of Tampa records. This is an unofficial r
 
 Document links point to mirrored copies for long-term stability. For original documents, refer to the [official agenda in OnBase](https://tampagov.hylandcloud.com/221agendaonline/).
 
+## Support
+
+If you would like to support this work or sponsor backfilling meetings, your investment would benefit the entire community. [Support the Tampa Monitor](https://tampamonitor.com/support/).
+
 ## Contact
 
 Questions or corrections? [Get in touch](https://tampamonitor.com/contact/).
