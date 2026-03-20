@@ -1,6 +1,6 @@
 ---
-applyTo: '**/*.py'
-description: 'Python environment setup — venv activation, correct python binary, environment variables. USE WHEN: running any Python script, installing packages, debugging import errors, or suggesting Python commands.'
+applyTo: "**/*.py"
+description: "Python environment setup — venv activation, correct python binary, environment variables. USE WHEN: running any Python script, installing packages, debugging import errors, or suggesting Python commands."
 ---
 
 ## Python Virtual Environment
@@ -55,13 +55,13 @@ The video pipeline requires `YOUTUBE_API_KEY`. The `youtube_fetcher.py` script l
 
 ### Key paths
 
-| Item | Path |
-|------|------|
-| venv | `transcript-cleaner/processor/venv/` |
-| requirements | `transcript-cleaner/processor/requirements.txt` |
-| lockfile | `transcript-cleaner/processor/requirements.lock` |
-| activate helper | `pipeline/activate.sh` |
-| .python-version | `.python-version` (3.13) |
+| Item            | Path                                             |
+| --------------- | ------------------------------------------------ |
+| venv            | `transcript-cleaner/processor/venv/`             |
+| requirements    | `transcript-cleaner/processor/requirements.txt`  |
+| lockfile        | `transcript-cleaner/processor/requirements.lock` |
+| activate helper | `pipeline/activate.sh`                           |
+| .python-version | `.python-version` (3.13)                         |
 
 ### Common mistakes
 

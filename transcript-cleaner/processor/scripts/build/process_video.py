@@ -232,7 +232,11 @@ def process_single_video(
             return result
 
     # 3c: Match to official transcript
-    offset = calculate_offset(str(cache_file), str(transcript_path))
+    # For Part 2+ videos, pass transcript_start_time so the matcher only
+    # searches the correct portion of the transcript.
+    transcript_start_time = video.get("transcript_start_time")
+    offset = calculate_offset(str(cache_file), str(transcript_path),
+                              transcript_start_time=transcript_start_time)
 
     if offset is not None:
         save_offset_to_mapping(str(mapping_path), video_id, offset)
@@ -325,9 +329,33 @@ def run_pipeline(
     else:
         videos = []
 
-    # ── Step 3: Process each video part ──────────────────────────────────
+    # ── Step 3: Detect transcript gaps (before offset matching) ────────
+    # For multi-part meetings, detect gaps first so transcript_start_time
+    # is available for Part 2+ offset matching.
+    if videos and len(videos) > 1:
+        print(f"\nStep 3: Detect transcript gaps (multi-part meeting)")
+
+        if dry_run:
+            print(f"  [dry-run] Would scan for gaps ≥ {min_gap_minutes} min")
+        else:
+            gap_result = detect_gaps(str(transcript_path), min_gap_minutes)
+            if gap_result.gaps:
+                print(f"  ✓ Found {len(gap_result.gaps)} gap(s):")
+                for g in gap_result.gaps:
+                    print(f"     {g.end_timestamp} → {g.resume_timestamp} ({g.gap_minutes} min)")
+                save_gaps_to_mapping(str(mapping_path), gap_result.gaps)
+                # Reload the mapping so video dicts have transcript_start_time
+                with open(mapping_path) as f:
+                    mapping = json.load(f)
+                videos = sorted(mapping.get("videos", []), key=lambda v: v.get("part", 1))
+            else:
+                print(f"  ℹ️  No gaps ≥ {min_gap_minutes} min — transcript appears to be single-session")
+    elif videos and len(videos) == 1:
+        print(f"\nStep 3: Gap detection — skipped (single video)")
+
+    # ── Step 4: Calculate offsets (Whisper → transcript matching) ─────
     if videos:
-        print(f"\nStep 3: Calculate offsets (Whisper → transcript matching)")
+        print(f"\nStep 4: Calculate offsets (Whisper → transcript matching)")
 
         results = []
         for i, video in enumerate(videos):
@@ -341,26 +369,6 @@ def run_pipeline(
 
             r = process_single_video(video, transcript_path, mapping_path, model, dry_run)
             results.append(r)
-
-    # ── Step 4: Detect transcript gaps ───────────────────────────────────
-    if videos and len(videos) > 1:
-        print(f"\nStep 4: Detect transcript gaps (multi-part meeting)")
-
-        if dry_run:
-            print(f"  [dry-run] Would scan for gaps ≥ {min_gap_minutes} min")
-        else:
-            gap_result = detect_gaps(str(transcript_path), min_gap_minutes)
-            if gap_result.gaps:
-                print(f"  ✓ Found {len(gap_result.gaps)} gap(s):")
-                for g in gap_result.gaps:
-                    print(f"     {g.end_timestamp} → {g.resume_timestamp} ({g.gap_minutes} min)")
-                save_gaps_to_mapping(str(mapping_path), gap_result.gaps)
-            else:
-                print(f"  ℹ️  No gaps ≥ {min_gap_minutes} min — transcript appears to be single-session")
-    elif videos and len(videos) == 1:
-        print(f"\nStep 4: Gap detection — skipped (single video)")
-    else:
-        print(f"\nStep 4: Gap detection — skipped (no videos)")
 
     # ── Summary ──────────────────────────────────────────────────────────
     print(f"\n{'=' * 70}")

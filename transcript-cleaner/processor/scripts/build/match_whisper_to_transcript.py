@@ -258,17 +258,25 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
             reason = "Part 1 — no transcript timestamp, using default"
 
     elif len(chapters) > 1:
-        # Part 2+: use first real content chapter (index 1, since index 0 is
-        # typically the "Start of Meeting" placeholder at 0:00)
+        # Part 2+: chapter[0] is always 00:00 (pre-roll/countdown).
+        # Speech starts 1-2 minutes BEFORE chapter[1] (the first real
+        # content marker). Pre-roll can be very long (8-10+ min of
+        # countdown music), so skip close to the chapter marker.
+        PART2_PRE_CHAPTER_MARGIN = 120    # 2 min before second chapter
         first_content_secs = chapters[1].get('seconds', 0)
-        if first_content_secs > DEFAULT_DURATION:
-            duration = first_content_secs + CHAPTER_BUFFER
-            reason = (f"Part {part} — first content chapter at "
-                      f"{first_content_secs}s + {CHAPTER_BUFFER}s buffer")
+        if first_content_secs > PART2_PRE_CHAPTER_MARGIN:
+            start = first_content_secs - PART2_PRE_CHAPTER_MARGIN
+            duration = PART2_PRE_CHAPTER_MARGIN + MATCH_BUFFER
+            reason = (f"Part {part} — skip to {start}s "
+                      f"({PART2_PRE_CHAPTER_MARGIN // 60}m before "
+                      f"chapter at {first_content_secs}s), "
+                      f"capture {duration}s")
         else:
-            duration = DEFAULT_DURATION
-            reason = (f"Part {part} — first content chapter at "
-                      f"{first_content_secs}s fits within {DEFAULT_DURATION}s default")
+            # Chapter is very early — just capture from the start
+            duration = max(DEFAULT_DURATION,
+                           first_content_secs + CHAPTER_BUFFER)
+            reason = (f"Part {part} — chapter at {first_content_secs}s "
+                      f"is early, starting from 0")
     else:
         duration = PART2_NO_CHAPTERS_DURATION
         reason = f"Part {part} — no chapter data, conservative {PART2_NO_CHAPTERS_DURATION}s"
@@ -410,7 +418,7 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
     # Collect ALL candidate Whisper segments with meaningful text
     candidates = []
     for w_seg in whisper_segments:
-        if w_seg.get('no_speech_prob', 0) > 0.3:
+        if w_seg.get('no_speech_prob', 0) > 0.5:
             continue
 
         w_text = w_seg['text'].strip()
@@ -589,10 +597,20 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
     return best
 
 
-def calculate_offset(whisper_json_file, official_transcript_file):
+def calculate_offset(whisper_json_file, official_transcript_file,
+                     transcript_start_time=None):
     """
     Calculate video offset.
-    
+
+    Args:
+        whisper_json_file: Path to cached Whisper JSON
+        official_transcript_file: Path to official transcript JSON
+        transcript_start_time: For Part 2+ videos, the timestamp (e.g.
+            '02:03:39PM') where this video's portion of the transcript
+            begins.  When set, only official segments at or after this
+            time are searched, and the baseline is set to this time
+            instead of the first segment.
+
     Returns:
         offset in seconds, or None if can't calculate
     """
@@ -610,7 +628,20 @@ def calculate_offset(whisper_json_file, official_transcript_file):
     official_segments = official_data['segments']
     print(f"✓ Loaded official transcript: {len(official_segments)} segments")
     
-    # Get first official timestamp as baseline
+    # For Part 2+ videos, filter to segments at/after transcript_start_time
+    if transcript_start_time:
+        start_secs = parse_timestamp_to_seconds(transcript_start_time)
+        filtered = [s for s in official_segments
+                    if s.get('timestamp') and
+                    parse_timestamp_to_seconds(s['timestamp']) >= start_secs]
+        if not filtered:
+            print(f"❌ No segments found at or after {transcript_start_time}")
+            return None
+        print(f"  Filtered to {len(filtered)} segments at/after {transcript_start_time} "
+              f"(from {len(official_segments)} total)")
+        official_segments = filtered
+
+    # Get baseline timestamp
     first_timestamp = official_segments[0].get('timestamp')
     if not first_timestamp:
         print("❌ First official segment has no timestamp")
@@ -790,7 +821,21 @@ def main():
     print(f"MATCHING WHISPER TO OFFICIAL TRANSCRIPT")
     print(f"{'='*70}\n")
     
-    offset = calculate_offset(whisper_file, transcript_file)
+    # For Part 2+ videos, look up transcript_start_time from video mapping
+    transcript_start_time = None
+    if video_mapping_file and video_id:
+        try:
+            with open(video_mapping_file, 'r') as f:
+                mapping = json.load(f)
+            for video in mapping.get('videos', []):
+                if video.get('video_id') == video_id:
+                    transcript_start_time = video.get('transcript_start_time')
+                    break
+        except (json.JSONDecodeError, IOError):
+            pass
+
+    offset = calculate_offset(whisper_file, transcript_file,
+                              transcript_start_time=transcript_start_time)
     
     # If no good match and we didn't use smart duration, try 10 minutes
     if offset is None and not input_arg.endswith('.json') and not video_mapping_file:
@@ -811,7 +856,8 @@ def main():
         ])
         
         if result.returncode == 0:
-            offset = calculate_offset(longer_cache, transcript_file)
+            offset = calculate_offset(longer_cache, transcript_file,
+                                      transcript_start_time=transcript_start_time)
     
     if offset is not None:
         print(f"\nAdd to video_mapping JSON: \"offset_seconds\": {int(round(offset))}")
