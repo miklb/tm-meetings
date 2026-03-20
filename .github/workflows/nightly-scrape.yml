@@ -1,0 +1,57 @@
+name: Nightly Agenda Scrape
+
+on:
+  schedule:
+    # 11 PM UTC (6 PM EST / 7 PM EDT) every day
+    - cron: '0 23 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: agenda-scraper
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: agenda-scraper/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Scrape meetings
+        run: node json-scraper.js
+
+      - name: Check for changes
+        id: git-check
+        working-directory: .
+        run: |
+          git add -A
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+            git diff --staged --name-only
+          fi
+
+      - name: Commit and push changes
+        if: steps.git-check.outputs.has_changes == 'true'
+        working-directory: .
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git commit -m "📋 Agenda data update $(date +%Y-%m-%d)"
+          git push

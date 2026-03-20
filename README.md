@@ -21,7 +21,7 @@ The pipeline is unified and actively processing 2026 meetings end-to-end — scr
 | Agenda Scraper (HTTP-first v3)  | Active   | `agenda-scraper/`                       |
 | Transcript Processor            | Active   | `transcript-cleaner/processor/`         |
 | WordPress Publication           | Active   | Agendas published via block markup      |
-| Nightly Scrape (GitHub Actions) | Running  | `agenda-scraper/.github/workflows/`     |
+| Nightly Scrape (GitHub Actions) | Active   | `.github/workflows/nightly-scrape.yml`  |
 | Eleventy Static Site            | Built    | `site/`                                 |
 | SQLite Database                 | Built    | 57+ meetings, FTS5 search               |
 | R2 Document Mirroring           | Active   | Cloudflare R2 via `mirror-documents.js` |
