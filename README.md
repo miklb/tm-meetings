@@ -20,7 +20,7 @@ A civic transparency tool that scrapes, processes, and publishes Tampa City Coun
 | SQLite Database                 | Built    | 57+ meetings, FTS5 search               |
 | R2 Document Mirroring           | Active   | Cloudflare R2 via `mirror-documents.js` |
 | Pipeline Orchestration          | Active   | `pipeline/`                             |
-| Video/Transcript Sync           | Complete | 5-step pipeline, 23 videos integrated   |
+| Video/Transcript Sync           | Complete | 5-step pipeline, 30+ videos integrated  |
 
 ### What's Planned
 
@@ -135,20 +135,17 @@ This project prioritizes accessibility (WCAG 2.1 AA minimum):
 
 ## Documentation
 
-| Document                                                                                                   | Purpose                                        |
-| ---------------------------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)                                                           | Full roadmap, database schema, decisions log   |
-| [BUGS.md](BUGS.md)                                                                                         | Known issues                                   |
-| [pipeline/README.md](pipeline/README.md)                                                                   | Pipeline scripts, data flow, typical workflows |
-| [pipeline/REPROCESS_2026.md](pipeline/REPROCESS_2026.md)                                                   | Runbook for full 2026 data refresh             |
-| [agenda-scraper/README.md](agenda-scraper/README.md)                                                       | Scraper v3.0 usage, options, output format     |
-| [agenda-scraper/lib/README.md](agenda-scraper/lib/README.md)                                               | HTTP scraper library API reference             |
-| [agenda-scraper/docs/DOCUMENT-MIRRORING.md](agenda-scraper/docs/DOCUMENT-MIRRORING.md)                     | R2 mirroring strategy and setup                |
-| [transcript-cleaner/processor/README.md](transcript-cleaner/processor/README.md)                           | Transcript processor setup and usage           |
-| [transcript-cleaner/processor/docs/VIDEO_PIPELINE.md](transcript-cleaner/processor/docs/VIDEO_PIPELINE.md) | Video sync pipeline (5-step, all complete)     |
-| [transcript-cleaner/processor/docs/YOUTUBE_SETUP.md](transcript-cleaner/processor/docs/YOUTUBE_SETUP.md)   | YouTube API key setup                          |
+| Document                                                                             | Purpose                                        |
+| ------------------------------------------------------------------------------------ | ---------------------------------------------- |
+| [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)                                     | Full roadmap, database schema, decisions log   |
+| [BUGS.md](BUGS.md)                                                                   | Known issues                                   |
+| [pipeline/README.md](pipeline/README.md)                                             | Pipeline scripts, data flow, typical workflows |
+| [pipeline/REPROCESS_2026.md](pipeline/REPROCESS_2026.md)                             | Runbook for full 2026 data refresh             |
+| [agenda-scraper/README.md](agenda-scraper/README.md)                                 | Scraper v3.0 usage, options, output format     |
+| [transcript-cleaner/processor/README.md](transcript-cleaner/processor/README.md)     | Transcript processor setup and usage           |
+| [transcript-cleaner/processor/WORKFLOW.md](transcript-cleaner/processor/WORKFLOW.md) | Manual processing steps and video offset guide |
 
-Historical docs (completed work logs, previous plans) are in `archive/`.
+Component-specific docs (library API, R2 mirroring, YouTube setup, video pipeline design) live in their respective directories. Historical docs are in `archive/`.
 
 ---
 

@@ -105,6 +105,23 @@ python3 scripts/build/process_video.py <pkey> <date>
 
 **Output:** `data/video_mapping_<id>.json` with `offset_seconds` and (for multi-part) `transcript_start_time` populated.
 
+### 4. Rebuild Database and Site
+
+After processing transcripts and/or video mappings, rebuild the SQLite database and Eleventy site so changes appear on the published site. This is automatic when using `process-meeting.sh`, but must be run manually when you've processed videos individually or fixed data by hand.
+
+```bash
+# From project root
+./pipeline/build-site.sh              # Rebuild DB + site
+./pipeline/build-site.sh --db-only    # Rebuild DB only
+./pipeline/build-site.sh --year 2026  # Only import 2026 meetings
+
+# Or run each step directly
+node scripts/build-db.js              # Rebuild SQLite from JSON + video mappings
+cd site && npx @11ty/eleventy         # Regenerate HTML pages
+```
+
+`build-db.js` reads processed transcripts and `video_mapping_*.json` files, imports them into `data/meetings.db`, and links videos to meetings via `transcript_source_id`. The Eleventy build then reads from the database to generate meeting pages with embedded video players.
+
 ## How Offset Matching Works
 
 ### Smart audio sampling
