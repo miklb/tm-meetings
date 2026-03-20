@@ -1,12 +1,18 @@
 # Tampa Meetings
 
-A civic transparency tool that scrapes, processes, and publishes Tampa City Council meeting records. Combines structured agenda data with processed transcripts and YouTube video sync.
+_A civic transparency tool that scrapes, processes, and publishes Tampa City Council meeting records. Combines structured agenda data with processed transcripts and YouTube video sync._
+
+This project was born out of a manual process and a lot of experimenting with cobbled together scripts and going back to the drawing board. Over the course of late 2025 to the spring of 2026 I leveraged GitHub Copilot and Claude to expidite the process of making the idea a reality. Beating a bunch of machines into submission to produce an end result. This project and the code that executes all of it relies heavily on the work of dedicated public servants and open source developers.
+
+It was developed specifically for the City of Tampa and the various public data sources available. It's intended to be run once a week to do one job. It's not critical infrastructure, it's just an automated process at the end of the day.
+
+The code is public for transparency and posterity.
 
 ---
 
 ## Project Status
 
-**This project is in active development.** The two core tools work independently and are being unified into a single platform. See [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for the full roadmap.
+The pipeline is unified and actively processing 2026 meetings end-to-end — scraping agendas, processing transcripts, syncing YouTube video, and publishing to the static site. Current work focuses on backfilling meetings, UI/UX improvements, and edge-case fixes. See [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md) for architecture decisions and remaining work items.
 
 ### What Works Today
 

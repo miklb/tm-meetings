@@ -116,6 +116,7 @@ Quick rebuild without re-processing transcripts. Use after manual edits to agend
 ./pipeline/build-site.sh              # Full rebuild
 ./pipeline/build-site.sh --db-only    # Database only
 ./pipeline/build-site.sh --year 2026  # Filter to year
+./pipeline/build-site.sh --deploy     # Rebuild + deploy to Cloudflare Pages
 ```
 
 ### `rebuild-entities.sh` — Update entity databases
@@ -170,7 +171,13 @@ tampagov.net         OnBase (Hyland)
       ┌──────────┐
       │ Eleventy │
       │ → _site/ │
-      └──────────┘
+      └────┬─────┘
+           │
+           ▼
+    ┌──────────────┐
+    │ wrangler     │
+    │ pages deploy │
+    └──────────────┘
 ```
 
 ## Meeting ID Systems
@@ -192,6 +199,9 @@ cd agenda-scraper && node json-scraper.js
 
 # 2. Discover and process new transcript
 python pipeline/discover.py --process
+
+# 3. Deploy to Cloudflare Pages
+wrangler pages deploy site/_site --project-name tampa-meetings
 ```
 
 ### Historical backfill
@@ -205,4 +215,7 @@ python pipeline/discover.py --pages 10 --process --skip-video
 
 ```bash
 ./pipeline/build-site.sh
+
+# Rebuild and deploy in one step
+./pipeline/build-site.sh --deploy
 ```

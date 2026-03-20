@@ -17,11 +17,13 @@ PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 SITE_DIR="$PROJECT_ROOT/site"
 
 DB_ONLY=false
+DEPLOY=false
 DB_ARGS=()
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --db-only) DB_ONLY=true; shift ;;
+        --deploy)  DEPLOY=true; shift ;;
         --year)    DB_ARGS+=("--year" "$2"); shift 2 ;;
         *)
             echo "Unknown option: $1"
@@ -50,3 +52,12 @@ echo "=== Rebuild Site ==="
 
 echo ""
 echo "Done. Output: $SITE_DIR/_site/"
+
+if $DEPLOY; then
+    echo ""
+    echo "=== Deploy to Cloudflare Pages ==="
+    (
+        cd "$PROJECT_ROOT"
+        wrangler pages deploy site/_site --project-name tampa-meetings
+    )
+fi

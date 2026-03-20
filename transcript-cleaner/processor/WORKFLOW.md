@@ -112,12 +112,14 @@ After processing transcripts and/or video mappings, rebuild the SQLite database 
 ```bash
 # From project root
 ./pipeline/build-site.sh              # Rebuild DB + site
+./pipeline/build-site.sh --deploy     # Rebuild + deploy to Cloudflare Pages
 ./pipeline/build-site.sh --db-only    # Rebuild DB only
 ./pipeline/build-site.sh --year 2026  # Only import 2026 meetings
 
 # Or run each step directly
 node scripts/build-db.js              # Rebuild SQLite from JSON + video mappings
 cd site && npx @11ty/eleventy         # Regenerate HTML pages
+wrangler pages deploy site/_site --project-name tampa-meetings  # Deploy
 ```
 
 `build-db.js` reads processed transcripts and `video_mapping_*.json` files, imports them into `data/meetings.db`, and links videos to meetings via `transcript_source_id`. The Eleventy build then reads from the database to generate meeting pages with embedded video players.

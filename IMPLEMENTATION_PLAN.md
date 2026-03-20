@@ -16,11 +16,11 @@ Capabilities: file numbers, titles, backgrounds, documents (with R2 mirroring), 
 
 Converts ALL CAPS realtime captioning transcripts from tampagov.net to sentence-case JSON using GLiNER zero-shot NER. Matches YouTube videos via Data API, calculates playback offsets with Whisper. Generates standalone HTML pages with video-synced timestamps.
 
-14 processed transcripts, 12 video mappings, 11 meetings with HTML output.
+27 processed transcripts, 27 video mappings, 27 meetings with HTML output.
 
 ### SQLite Database (`data/meetings.db`)
 
-`scripts/build-db.js` imports agenda JSON + transcript/video data → 6 tables (meetings, agenda_items, documents, transcript_segments, videos, video_chapters). Idempotent, ~0.2s rebuild. 64 meetings (Nov 2022 – Mar 2026), 1,400 items, 5,391 documents (5,389 mirrored), 11,413 transcript segments, 24 videos, 133 chapters.
+`scripts/build-db.js` imports agenda JSON + transcript/video data → 6 tables (meetings, agenda_items, documents, transcript_segments, videos, video_chapters). Idempotent, ~0.2s rebuild. 63 meetings (Nov 2022 – Mar 2026), 1,385 items, 5,482 documents (5,426 mirrored), 18,117 transcript segments, 42 videos, 302 chapters.
 
 ### Eleventy Static Site (`site/`)
 
@@ -52,14 +52,14 @@ Run: `node scripts/build-db.js && cd site && npx eleventy`
 
 ## Architecture
 
-| Component   | Technology              | Status                    |
-| ----------- | ----------------------- | ------------------------- |
-| Static Site | Eleventy 3.x            | Running locally, 60 pages |
-| Database    | SQLite + better-sqlite3 | Full data (64 meetings)   |
-| Documents   | Cloudflare R2           | Operational (5,389 docs)  |
-| Hosting     | Cloudflare Pages        | Not yet configured        |
-| Search      | Pagefind                | Not yet added             |
-| API         | D1 + Workers            | Post-launch               |
+| Component   | Technology              | Status                      |
+| ----------- | ----------------------- | --------------------------- |
+| Static Site | Eleventy 3.x            | Running locally, 61 pages   |
+| Database    | SQLite + better-sqlite3 | Full data (63 meetings)     |
+| Documents   | Cloudflare R2           | Operational (5,389 docs)    |
+| Hosting     | Cloudflare Pages        | Deployed (`tampa-meetings`) |
+| Search      | Pagefind                | Not yet added               |
+| API         | D1 + Workers            | Post-launch                 |
 
 ### Data Flow (Target)
 
@@ -112,7 +112,7 @@ CREATE TABLE documents (
 );
 ```
 
-### Planned additions (for transcript + video integration)
+### Transcript + video tables (implemented)
 
 ```sql
 CREATE TABLE transcript_segments (
@@ -152,9 +152,9 @@ CREATE TABLE video_chapters (
 
 ---
 
-## Next Up: Transcript + Video Integration
+## Completed: Transcript + Video Integration
 
-The immediate goal is importing existing transcript and video data into SQLite so the Eleventy site renders them alongside agendas. Everything runs locally — no deployment, no repo changes.
+Imported transcript and video data into SQLite; the Eleventy site renders them alongside agendas with speaker turns, clickable YouTube timestamps, and chapter navigation.
 
 ### Data available
 
@@ -224,7 +224,7 @@ The agenda system (OnBase) and transcript system (tampagov.net) use **different 
 - [x] Read video mappings from `transcript-cleaner/processor/data/video_mapping_*.json`
 - [x] For each video: insert into `videos`, then insert each chapter into `video_chapters`
 
-**Results:** 10,883 segments across 14 meetings · 23 videos · 129 chapters
+**Results:** 18,117 segments across 27 meetings · 42 videos · 302 chapters
 
 ### Step 3: Update Eleventy data layer ✅
 
@@ -291,7 +291,7 @@ These are needed to go live at `meetings.tampamonitor.com` but are not blocking 
 - [x] Create GitHub repo — `miklb/tm-meetings` (private)
 - [x] Consolidate code into unified directory structure — `pipeline/` orchestration scripts
 - [x] Configure `meetings.tampamonitor.com` DNS in Cloudflare
-- [ ] Set up Cloudflare Pages auto-deploy on push
+- [x] Set up Cloudflare Pages project and first deploy — `wrangler pages deploy site/_site --project-name tampa-meetings`
 - [ ] Keep WordPress output in parallel until subdomain replaces it
 
 ### Pipeline (`pipeline/`)
@@ -424,4 +424,4 @@ Canonical match key: `(date, meeting_type)`. Both systems cover the same meeting
 
 ---
 
-_Last updated: March 14, 2026_
+_Last updated: March 20, 2026_
