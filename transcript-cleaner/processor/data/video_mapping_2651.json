@@ -1,0 +1,155 @@
+{
+  "meeting_id": 2651,
+  "meeting_date": "2026-01-08",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "40uC--jlK7s",
+      "title": "Tampa City Council 01/08/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-01-10T03:00:00Z",
+      "duration": "PT3H22M56S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-15 - Commendation For Police Officer",
+          "timestamp": "00:24:27",
+          "seconds": 1467
+        },
+        {
+          "title": "Item 2: CM25-16437 - Commendation For Betty Coleman",
+          "timestamp": "00:42:53",
+          "seconds": 2573
+        },
+        {
+          "title": "Item 3: CM25-19259 - Clerk Recognition Presentation",
+          "timestamp": "01:09:17",
+          "seconds": 4157
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:43:47",
+          "seconds": 6227
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:55:52",
+          "seconds": 10552
+        },
+        {
+          "title": "Item 36: VAC-25-19 - North of 7th Ave, South of 9th Ave, East of 42nd St, West of 43rd St",
+          "timestamp": "03:05:13",
+          "seconds": 11113
+        },
+        {
+          "title": "Item 37: VAC-25-15 - North of I-4, South of Columbus Dr, East of CSX Railroad, West of Yale St",
+          "timestamp": "03:07:03",
+          "seconds": 11223
+        },
+        {
+          "title": "Item 38: E2025-8 CH 27 - Parking Requirements",
+          "timestamp": "03:08:49",
+          "seconds": 11329
+        },
+        {
+          "title": "Item 39: VAC-20-06 - South of 26th Ave, North of Plymouth St, East of Taliaferro Ave, West of Nebraska Ave",
+          "timestamp": "03:11:09",
+          "seconds": 11469
+        },
+        {
+          "title": "Item 40: REZ-25-104 - 4311 West Gray Street",
+          "timestamp": "03:12:59",
+          "seconds": 11579
+        },
+        {
+          "title": "Item 41: REZ-25-105 - 1112 West La Salle Street",
+          "timestamp": "03:15:09",
+          "seconds": 11709
+        },
+        {
+          "title": "Item 42: REZ-25-128 - 3812 Pinewood Street",
+          "timestamp": "03:17:29",
+          "seconds": 11849
+        },
+        {
+          "title": "Item 43: REZ-26-01 - 1942, 1946, 1948 West Spruce Street",
+          "timestamp": "03:19:35",
+          "seconds": 11975
+        }
+      ],
+      "offset_seconds": 487
+    },
+    {
+      "video_id": "TpyOqsIuVOc",
+      "title": "Tampa City Council 01/08/26 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-01-09T13:33:37Z",
+      "duration": "PT3H55M41S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 57: CM25-17928 - Inclusive Playground Equipment Plan",
+          "timestamp": "00:08:54",
+          "seconds": 534
+        },
+        {
+          "title": "Item 59: CM25-18612 - FY25 Financial Overview Report",
+          "timestamp": "01:16:25",
+          "seconds": 4585
+        },
+        {
+          "title": "Item 45: NCA25-18998 - Budget Change For Parks",
+          "timestamp": "02:23:57",
+          "seconds": 8637
+        },
+        {
+          "title": "Recognition of City Attorney",
+          "timestamp": "02:40:07",
+          "seconds": 9607
+        },
+        {
+          "title": "Item 46: NCA25-19007 - Budget Shift To Shoreline Project",
+          "timestamp": "02:56:50",
+          "seconds": 10610
+        },
+        {
+          "title": "Item 48: F25-18616 - Tree Trust Fund Allocation",
+          "timestamp": "02:59:21",
+          "seconds": 10761
+        },
+        {
+          "title": "Item 55: CM25-18385 - Summer Youth Program Report",
+          "timestamp": "03:11:00",
+          "seconds": 11460
+        },
+        {
+          "title": "Item 56: CM25-17351 - Venue Caterer Report",
+          "timestamp": "03:21:50",
+          "seconds": 12110
+        },
+        {
+          "title": "Item 60: CM24-4303 - Land Code Reform Report",
+          "timestamp": "03:30:30",
+          "seconds": 12630
+        },
+        {
+          "title": "Information Reports & New Business",
+          "timestamp": "03:37:14",
+          "seconds": 13034
+        }
+      ],
+      "transcript_start_time": "02:03:39PM",
+      "offset_seconds": 505
+    }
+  ]
+}

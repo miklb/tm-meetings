@@ -1,0 +1,155 @@
+{
+  "meeting_id": 2660,
+  "meeting_date": "2026-02-19",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "iFaW7Z2SSSM",
+      "title": "Tampa City Council - 02/19/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-02-20T05:45:54Z",
+      "duration": "PT3H29M45S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-21080 - Commendation For Shakur McCrone And Carnell Barton",
+          "timestamp": "00:26:31",
+          "seconds": 1591
+        },
+        {
+          "title": "Item 2: CM25-19739 - Presentation By Donald Gordon",
+          "timestamp": "00:48:25",
+          "seconds": 2905
+        },
+        {
+          "title": "Item 3: CM25-17884 - THEA South Selmon Capacity Presentation",
+          "timestamp": "00:56:40",
+          "seconds": 3400
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:15:19",
+          "seconds": 4519
+        },
+        {
+          "title": "Item 4: BA26-21548 - Code Enforcement Board Appointments",
+          "timestamp": "02:30:18",
+          "seconds": 9018
+        },
+        {
+          "title": "Item 60: CM26-20934 - Retail Display Community Concerns",
+          "timestamp": "02:43:14",
+          "seconds": 9794
+        }
+      ],
+      "offset_seconds": 777
+    },
+    {
+      "video_id": "MX841CT2Fhc",
+      "title": "Tampa City Council - 02/19/26  Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-02-20T00:06:51Z",
+      "duration": "PT5H9M51S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Request for Reconsideration",
+          "timestamp": "00:08:02",
+          "seconds": 482
+        },
+        {
+          "title": "Item 47: REZ-25-117 - 4202 West Spruce Street",
+          "timestamp": "00:47:15",
+          "seconds": 2835
+        },
+        {
+          "title": "Item 56: CM25-20204 - Fire Response And Budget Report",
+          "timestamp": "02:24:24",
+          "seconds": 8664
+        },
+        {
+          "title": "Item 10: File No. PS26-21127 School Zone Speed Enforcement",
+          "timestamp": "03:03:26",
+          "seconds": 11006
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "03:29:00",
+          "seconds": 12540
+        },
+        {
+          "title": "Item 40: HL25-18468 - 2708 North 18th Street",
+          "timestamp": "03:36:20",
+          "seconds": 12980
+        },
+        {
+          "title": "Item 41: TA/CPA25-06 - Citywide Comprehensive Plan",
+          "timestamp": "03:37:57",
+          "seconds": 13077
+        },
+        {
+          "title": "Item 42: TA/CPA25-10 - 2602 2625 2801 East 4th Avenue",
+          "timestamp": "03:39:36",
+          "seconds": 13176
+        },
+        {
+          "title": "Item 43: TA/CPA25-11 - 2703 2715 2801 East Adamo Drive",
+          "timestamp": "03:31:41",
+          "seconds": 12701
+        },
+        {
+          "title": "Item 44: AB2-25-16 - 1726 West Cypress Street",
+          "timestamp": "03:44:21",
+          "seconds": 13461
+        },
+        {
+          "title": "Item 45: AB2-26-02 - 4205 South MacDill Avenue",
+          "timestamp": "03:46:41",
+          "seconds": 13601
+        },
+        {
+          "title": "Item 59: CM25-16988 - Sidewalk Code Amendment Draft",
+          "timestamp": "03:55:41",
+          "seconds": 14141
+        },
+        {
+          "title": "Item 57: CM26-20529 - Summer Youth Program Funding",
+          "timestamp": "04:07:15",
+          "seconds": 14835
+        },
+        {
+          "title": "Item 61: CM26-21546 - Land Development Code Discussion",
+          "timestamp": "04:09:59",
+          "seconds": 14999
+        },
+        {
+          "title": "Item 55: CM25-19257 - Ybor City Safety Initiatives",
+          "timestamp": "04:12:36",
+          "seconds": 15156
+        },
+        {
+          "title": "Item 54: CM25-12212 - Stormwater Master Plan Update",
+          "timestamp": "04:27:00",
+          "seconds": 16020
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "04:35:45",
+          "seconds": 16545
+        }
+      ],
+      "transcript_start_time": "01:49:02PM",
+      "offset_seconds": 450
+    }
+  ]
+}

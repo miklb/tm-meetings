@@ -1,0 +1,73 @@
+{
+  "meeting_id": 2666,
+  "meeting_date": "2026-03-12",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "6-KIC3VpWiM",
+      "title": "Tampa City Council PM - 03/12/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-03-13T14:04:54Z",
+      "duration": "PT3H41M10S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-21103 - Commendation For USS Tampa Oratorical Winners",
+          "timestamp": "00:10:41",
+          "seconds": 641
+        },
+        {
+          "title": "Item 2: F26-22306 - Firefighters Union Collective Bargaining Agreement",
+          "timestamp": "00:31:45",
+          "seconds": 1905
+        },
+        {
+          "title": "Item 3: REZ-25-112 - 2907 W Euclid Avenue",
+          "timestamp": "00:35:57",
+          "seconds": 2157
+        },
+        {
+          "title": "Item 4: REZ-25-126 - 4102 N 22nd Street",
+          "timestamp": "00:54:40",
+          "seconds": 3280
+        },
+        {
+          "title": "Item 5: REZ-25-129 - 2707 E 22nd Avenue",
+          "timestamp": "01:02:15",
+          "seconds": 3735
+        },
+        {
+          "title": "Item 6: REZ-26-02 - 1008 W La Salle Street",
+          "timestamp": "01:09:30",
+          "seconds": 4170
+        },
+        {
+          "title": "Item 7: REZ-26-03 - 1307 W La Salle Street",
+          "timestamp": "01:41:30",
+          "seconds": 6090
+        },
+        {
+          "title": "Item 8: REZ-26-06 - 4420 W Carmen Street",
+          "timestamp": "02:07:19",
+          "seconds": 7639
+        },
+        {
+          "title": "Item 9: REZ-26-32 - 110 South Boulevard",
+          "timestamp": "02:20:15",
+          "seconds": 8415
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:06:05",
+          "seconds": 11165
+        }
+      ],
+      "offset_seconds": 537
+    }
+  ]
+}

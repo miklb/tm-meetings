@@ -1,0 +1,68 @@
+{
+  "meeting_id": 2665,
+  "meeting_date": "2026-03-12",
+  "meeting_type": "Cra",
+  "videos": [
+    {
+      "video_id": "NZFstyeBdG0",
+      "title": "Community Redevelopment Agency - 03/12/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-03-13T03:52:23Z",
+      "duration": "PT1H37M20S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:20:04",
+          "seconds": 1204
+        },
+        {
+          "title": "Item 1: CRA24-2242 - East Tampa CAC Monthly Report",
+          "timestamp": "00:40:37",
+          "seconds": 2437
+        },
+        {
+          "title": "Item 2: CRA24-2241 - CRA Director Monthly Report",
+          "timestamp": "01:03:54",
+          "seconds": 3834
+        },
+        {
+          "title": "Item 3: CRA26-22055 - Florida Aquarium Renovation Grant Agreement",
+          "timestamp": "01:13:27",
+          "seconds": 4407
+        },
+        {
+          "title": "Item 4: CRA26-22056 - 801 Whiting Workforce Housing Grant",
+          "timestamp": "01:14:07",
+          "seconds": 4447
+        },
+        {
+          "title": "Item 5: CRA26-22058 - Grant Park Affordable Housing Agreement",
+          "timestamp": "01:14:27",
+          "seconds": 4467
+        },
+        {
+          "title": "Item 6: CRA25-19842 - Tampa Union Station Monthly Update",
+          "timestamp": "01:16:37",
+          "seconds": 4597
+        },
+        {
+          "title": "Item 9: CRA26-22049 - Downtown Arts Center Funding Request",
+          "timestamp": "01:17:17",
+          "seconds": 4637
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:32:27",
+          "seconds": 5547
+        }
+      ],
+      "offset_seconds": 798
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "meeting_id": 2653,
+  "meeting_date": "2026-01-22",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "l98G4_-zie8",
+      "title": "Tampa City Council 01/22/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-01-23T05:27:04Z",
+      "duration": "PT3H6M9S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-20487 - Black History Celebration Invitation",
+          "timestamp": "00:29:54",
+          "seconds": 1794
+        },
+        {
+          "title": "Item 2: CM25-19737 - Commendation For Longshoremen",
+          "timestamp": "00:36:21",
+          "seconds": 2181
+        },
+        {
+          "title": "Item 3: CM25-19444 - Holocaust Remembrance Presentation",
+          "timestamp": "00:50:02",
+          "seconds": 3002
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:14:40",
+          "seconds": 4480
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:12:40",
+          "seconds": 7960
+        },
+        {
+          "title": "Item 30: HL25-18468 - Historic Landmark Designation (Nieto-Fuente)",
+          "timestamp": "02:18:12",
+          "seconds": 8292
+        },
+        {
+          "title": "Item 34: NCA25-18998 - Budget Transfer For Park Repairs",
+          "timestamp": "02:34:29",
+          "seconds": 9269
+        },
+        {
+          "title": "Item 38: CM25-17928 - Inclusive Playground Equipment Report",
+          "timestamp": "02:46:55",
+          "seconds": 10015
+        },
+        {
+          "title": "Item 44: CM24-3585 - Road Repair Update Report",
+          "timestamp": "02:56:55",
+          "seconds": 10615
+        }
+      ],
+      "offset_seconds": 875
+    },
+    {
+      "video_id": "IgpZkuwuusY",
+      "title": "Tampa City Council 1/22/26 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-01-23T09:35:21Z",
+      "duration": "PT2H10M51S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 31: SU1-25-77-C - Zoning Review - 2924 E Dr MLK",
+          "timestamp": "00:10:56",
+          "seconds": 656
+        },
+        {
+          "title": "Item 42: CM25-19443 - Tony Garcia Jr. Street Renaming",
+          "timestamp": "00:58:56",
+          "seconds": 3536
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:23:22",
+          "seconds": 5002
+        }
+      ],
+      "transcript_start_time": "01:30:02PM",
+      "offset_seconds": 584
+    }
+  ]
+}

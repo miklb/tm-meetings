@@ -1,0 +1,143 @@
+{
+  "meeting_id": 2650,
+  "meeting_date": "2025-12-18",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "f45CN9UpnLs",
+      "title": "Tampa City Council - 12/18/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-12-19T06:00:43Z",
+      "duration": "PT3H8M33S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM25-17931 \u2013 Tampa Bay Water Presentation",
+          "timestamp": "00:30:14",
+          "seconds": 1814
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:42:12",
+          "seconds": 2532
+        },
+        {
+          "title": "Item 4: BA25-19546 \u2013 Code Board Reappointments",
+          "timestamp": "01:31:57",
+          "seconds": 5517
+        },
+        {
+          "title": "Item 5: BA25-19748 \u2013 Appoint Scott Steady City Attorney",
+          "timestamp": "01:40:14",
+          "seconds": 6014
+        },
+        {
+          "title": "Item 41: E2025-8 CH 16 & 23.5 \u2013 Trail Vehicle Regulation Ordinance",
+          "timestamp": "01:52:08",
+          "seconds": 6728
+        }
+      ]
+    },
+    {
+      "video_id": "k6bK2rIh6WI",
+      "title": "Tampa City Council 12/18/25 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-12-19T10:31:44Z",
+      "duration": "PT3H49M25S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "00:11:24",
+          "seconds": 684
+        },
+        {
+          "title": "Item 42: E2025-8 CH 25 \u2013 Transportation Impact Fee Increase",
+          "timestamp": "00:21:14",
+          "seconds": 1274
+        },
+        {
+          "title": "Item 43: E2025-8 CH 27 \u2013 Parking Text Amendment",
+          "timestamp": "00:27:07",
+          "seconds": 1627
+        },
+        {
+          "title": "Item 44: DA25-19011 \u2013 USF Campus Agreement Amendment",
+          "timestamp": "00:39:45",
+          "seconds": 2385
+        },
+        {
+          "title": "Item 45: VAC-20-06 \u2013 Right-of-Way Reverter Extension",
+          "timestamp": "00:46:03",
+          "seconds": 2763
+        },
+        {
+          "title": "Item 46: SU1-25-54-C \u2013 2901 Albany Ave",
+          "timestamp": "00:53:34",
+          "seconds": 3214
+        },
+        {
+          "title": "Item 47: FDN 25-87-C \u2013 58 Albermarle Avenue",
+          "timestamp": "01:22:22",
+          "seconds": 4942
+        },
+        {
+          "title": "Item 42: E2025-8 CH 25 \u2013 Transportation Impact Fee Increase",
+          "timestamp": "01:46:37",
+          "seconds": 6397
+        },
+        {
+          "title": "Item 49: CM24-5717 \u2013 Fire Station 24 Update",
+          "timestamp": "01:55:37",
+          "seconds": 6937
+        },
+        {
+          "title": "Item 55: INF25-19549 \u2013 Citywide Watermain Improvements Contract",
+          "timestamp": "02:30:52",
+          "seconds": 9052
+        },
+        {
+          "title": "Item 18: File No. NCA25-19614 Fair Oaks Center Artwork",
+          "timestamp": "02:34:54",
+          "seconds": 9294
+        },
+        {
+          "title": "Item 53: DEO25-19736 \u2013 Tampa Museum Community Agreement",
+          "timestamp": "02:53:16",
+          "seconds": 10396
+        },
+        {
+          "title": "Item 62: CM25-17928 \u2013 Inclusive Playground Equipment Plan",
+          "timestamp": "02:58:21",
+          "seconds": 10701
+        },
+        {
+          "title": "Item 64: CM25-16988 \u2013 Sidewalk Rate Grandfathering Draft",
+          "timestamp": "03:01:01",
+          "seconds": 10861
+        },
+        {
+          "title": "Item 66: CM25-19738 \u2013 Resolution Against \u201cR\u201d Word",
+          "timestamp": "03:07:21",
+          "seconds": 11241
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:12:49",
+          "seconds": 11569
+        }
+      ],
+      "transcript_start_time": "01:35:26PM"
+    }
+  ]
+}

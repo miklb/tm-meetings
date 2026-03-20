@@ -1,0 +1,78 @@
+{
+  "meeting_id": 2652,
+  "meeting_date": "2026-01-15",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "QsXC_3wOViE",
+      "title": "Tampa City Council 01/15/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-01-16T08:33:31Z",
+      "duration": "PT10H9M40S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: TA/CPA24-18 - 84 Davis Boulevard",
+          "timestamp": "00:20:36",
+          "seconds": 1236
+        },
+        {
+          "title": "Item 3: REZ-25-90 - 2539 West Cherry Street",
+          "timestamp": "07:01:24",
+          "seconds": 25284
+        },
+        {
+          "title": "Item 4: REZ-25-91 - 2704 West Palmetto Street",
+          "timestamp": "07:16:55",
+          "seconds": 26215
+        },
+        {
+          "title": "Item 5: REZ-25-99 - 5250 & 5242 E. Broadway Ave.",
+          "timestamp": "07:27:13",
+          "seconds": 26833
+        },
+        {
+          "title": "Item 6: REZ-25-100 - 2334 W. St. Louis & 2707 N. Armenia",
+          "timestamp": "08:02:55",
+          "seconds": 28975
+        },
+        {
+          "title": "Item 7: REZ-25-107 - 3208 & 3210 N. Tampa Street",
+          "timestamp": "08:28:59",
+          "seconds": 30539
+        },
+        {
+          "title": "Item 8: REZ-25-110 - 3219 West Arch Street",
+          "timestamp": "08:48:43",
+          "seconds": 31723
+        },
+        {
+          "title": "Item 9: REZ-25-111 - 802, 804 E. Floribraska & 3003 N. Mitchell",
+          "timestamp": "08:55:03",
+          "seconds": 32103
+        },
+        {
+          "title": "Item 10: REZ-25-117 - 4202 West Spruce Street",
+          "timestamp": "09:11:57",
+          "seconds": 33117
+        },
+        {
+          "title": "Item 11: REZ-25-127 - 5501\u20135571 N. 22nd St. & 2302\u20132236 E. Hillsborough Ave.",
+          "timestamp": "09:50:50",
+          "seconds": 35450
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "10:03:30",
+          "seconds": 36210
+        }
+      ],
+      "offset_seconds": 607
+    }
+  ]
+}

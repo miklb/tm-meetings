@@ -1,0 +1,43 @@
+{
+  "meeting_id": 2659,
+  "meeting_date": "2026-02-17",
+  "meeting_type": "Special",
+  "videos": [
+    {
+      "video_id": "I90fha2c1DM",
+      "title": "Tampa City Council PM - 02/17/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-02-18T02:25:37Z",
+      "duration": "PT4H18M45S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: TA/CPA24-04 - Comprehensive Plan Text Amendment",
+          "timestamp": "00:42:26",
+          "seconds": 2546
+        },
+        {
+          "title": "Item 2: TA/CPA24-05 - Housing Section Text Amendment",
+          "timestamp": "01:35:57",
+          "seconds": 5757
+        },
+        {
+          "title": "Item 3: TA/CPA24-06 - Coastal Management Text Amendment",
+          "timestamp": "01:37:55",
+          "seconds": 5875
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:40:41",
+          "seconds": 13241
+        }
+      ],
+      "offset_seconds": 1767
+    }
+  ]
+}

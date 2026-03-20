@@ -1,0 +1,130 @@
+{
+  "meeting_id": 2664,
+  "meeting_date": "2026-03-05",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "BbYOr59g9Fk",
+      "title": "Tampa City Council 3-5-2026",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-03-06T05:18:53Z",
+      "duration": "PT2H41M55S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-15 - Police Officer Of The Month Commendation",
+          "timestamp": "00:03:58",
+          "seconds": 238
+        },
+        {
+          "title": "Item 3: E2026-15 - Firefighter Of The Quarter Commendation",
+          "timestamp": "00:21:50",
+          "seconds": 1310
+        },
+        {
+          "title": "Item 4: CM25-20245 - Zeta Phi Beta 80th Anniversary",
+          "timestamp": "00:40:15",
+          "seconds": 2415
+        },
+        {
+          "title": "Item 5: CM24-4303 (CM26-20935) - Land Development Code Reform Update",
+          "timestamp": "00:46:07",
+          "seconds": 2767
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:15:57",
+          "seconds": 4557
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:59:39",
+          "seconds": 7179
+        },
+        {
+          "title": "Item 57: VAC-25-08 - Alley Vacation Packwoods Subdivision",
+          "timestamp": "02:02:43",
+          "seconds": 7363
+        },
+        {
+          "title": "Item 58: REZ-26-05 - 4001 South Lynwood Avenue",
+          "timestamp": "02:12:03",
+          "seconds": 7923
+        },
+        {
+          "title": "Item 59: REZ-26-15 - 312 North Manhattan Avenue",
+          "timestamp": "02:14:54",
+          "seconds": 8094
+        },
+        {
+          "title": "Item 60: REZ-25-125 - West Tyson Avenue Properties",
+          "timestamp": "02:17:05",
+          "seconds": 8225
+        },
+        {
+          "title": "Item 61: REZ-25-97 - East Columbus Drive Properties",
+          "timestamp": "02:18:51",
+          "seconds": 8331
+        },
+        {
+          "title": "Administration Update",
+          "timestamp": "02:20:51",
+          "seconds": 8451
+        },
+        {
+          "title": "Item 71: CM26-20932 - Veterans Affairs Committee Ordinance",
+          "timestamp": "02:37:33",
+          "seconds": 9453
+        }
+      ],
+      "offset_seconds": -305
+    },
+    {
+      "video_id": "Ieyn77CVi9c",
+      "title": "Tampa City Council 3-5-2026 Pt 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-03-06T09:51:06Z",
+      "duration": "PT1H52M19S",
+      "chapters": [
+        {
+          "title": "Start  of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 62: FDN-25-156-C - 4312 West Laurel Street",
+          "timestamp": "00:07:50",
+          "seconds": 470
+        },
+        {
+          "title": "Item 66: MAM26-20882 - Fleet Maintenance 40th Street Design Build",
+          "timestamp": "00:33:11",
+          "seconds": 1991
+        },
+        {
+          "title": "Item 67: MAM26-20885 - Fleet Maintenance Budget Transfer",
+          "timestamp": "00:45:58",
+          "seconds": 2758
+        },
+        {
+          "title": "Item 69: CM26-21479 - Howard Avenue Evidence Facility Update",
+          "timestamp": "00:56:21",
+          "seconds": 3381
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:20:26",
+          "seconds": 4826
+        }
+      ],
+      "transcript_start_time": "01:31:17PM",
+      "offset_seconds": 367
+    }
+  ]
+}

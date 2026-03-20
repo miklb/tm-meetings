@@ -1,0 +1,58 @@
+{
+  "meeting_id": 2658,
+  "meeting_date": "2026-02-12",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "zUWGTNldlnk",
+      "title": "Tampa City Council PM - 02/12/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-02-13T05:03:02Z",
+      "duration": "PT6H50M10S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 3: REZ-26-05 \u2013 4001 S. Lynwood Ave",
+          "timestamp": "00:18:43",
+          "seconds": 1123
+        },
+        {
+          "title": "Item 4: REZ-26-15 \u2013 312 N. Manhattan Ave",
+          "timestamp": "00:27:02",
+          "seconds": 1622
+        },
+        {
+          "title": "Item 6: REZ-25-125 \u2013 5215, 5301 & 5311 W. Tyson Ave",
+          "timestamp": "00:35:15",
+          "seconds": 2115
+        },
+        {
+          "title": "Item 7: REZ-25-97 \u2013 3105 E. Columbus Dr; 3001\u20133010 E. 15th Ave",
+          "timestamp": "00:46:43",
+          "seconds": 2803
+        },
+        {
+          "title": "Item 1: TA/CPA 24-11 \u2013 611 & 613 S. Magnolia Ave",
+          "timestamp": "01:23:16",
+          "seconds": 4996
+        },
+        {
+          "title": "Item 2: VAC-25-0000008 \u2013 Alley N of Swann, S of Bay",
+          "timestamp": "06:28:11",
+          "seconds": 23291
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "06:38:17",
+          "seconds": 23897
+        }
+      ],
+      "offset_seconds": 430
+    }
+  ]
+}

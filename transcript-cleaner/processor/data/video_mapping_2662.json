@@ -1,0 +1,38 @@
+{
+  "meeting_id": 2662,
+  "meeting_date": "2026-02-26",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "w6CpimEkDe4",
+      "title": "Tampa City Council PM - 02/26/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-02-27T10:42:50Z",
+      "duration": "PT35M10S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 2: File No. TA/CPA25-16 1301 East Columbus Drive",
+          "timestamp": "00:13:59",
+          "seconds": 839
+        },
+        {
+          "title": "Item 4: File No. E2025-8 CH 27 Suspension of alcoholic beverage permit for Urban Air",
+          "timestamp": "00:22:16",
+          "seconds": 1336
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "00:26:55",
+          "seconds": 1615
+        }
+      ],
+      "offset_seconds": 583
+    }
+  ]
+}

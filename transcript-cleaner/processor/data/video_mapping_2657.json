@@ -1,0 +1,78 @@
+{
+  "meeting_id": 2657,
+  "meeting_date": "2026-02-12",
+  "meeting_type": "Cra",
+  "videos": [
+    {
+      "video_id": "OGe3WKBVwoM",
+      "title": "Community Redevelopment Agency - 02/12/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-02-13T06:06:22Z",
+      "duration": "PT3H42M51S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:28:15",
+          "seconds": 1695
+        },
+        {
+          "title": "Item 1: CRA24-2242 - Channel District CAC Report",
+          "timestamp": "01:20:20",
+          "seconds": 4820
+        },
+        {
+          "title": "Item 2: CRA24-2241 - CRA Director Monthly Report",
+          "timestamp": "01:30:40",
+          "seconds": 5440
+        },
+        {
+          "title": "Item 3: CRA25-19535 - Franklin Street Improvements Update",
+          "timestamp": "01:53:13",
+          "seconds": 6793
+        },
+        {
+          "title": "Item 8: CRA25-18726 - Curtis Hixon Park Renovations",
+          "timestamp": "02:03:08",
+          "seconds": 7388
+        },
+        {
+          "title": "Item 11: CRA25-12421 - Downtown Fire Station Budget Plan",
+          "timestamp": "02:28:05",
+          "seconds": 8885
+        },
+        {
+          "title": "Item 13: CRA25-16847 - CRA Services Agreement Approval",
+          "timestamp": "02:37:35",
+          "seconds": 9455
+        },
+        {
+          "title": "Item 15: CRA26-19874 - East Tampa CAC Appointment",
+          "timestamp": "02:56:44",
+          "seconds": 10604
+        },
+        {
+          "title": "Item 18: CRA26-21189 - East Tampa Wayfinding Concept",
+          "timestamp": "02:58:34",
+          "seconds": 10714
+        },
+        {
+          "title": "Item 19: CRA26-21194 - Multi-District Wayfinding Update",
+          "timestamp": "03:27:08",
+          "seconds": 12428
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:34:39",
+          "seconds": 12879
+        }
+      ],
+      "offset_seconds": 423
+    }
+  ]
+}
