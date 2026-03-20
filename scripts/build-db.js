@@ -110,11 +110,11 @@ CREATE INDEX IF NOT EXISTS idx_videos_meeting ON videos(meeting_id);
  * The video mapping uses display names; the DB uses slug form.
  */
 const VIDEO_MEETING_TYPE_MAP = {
-  'City Council': 'regular',
-  'Workshop': 'workshop',
-  'Evening': 'evening',
-  'CRA': 'cra',
-  'Special': 'special',
+  'city council': 'regular',
+  'workshop': 'workshop',
+  'evening': 'evening',
+  'cra': 'cra',
+  'special': 'special',
 };
 
 /** Map meetingType from JSON to a human-readable title. */
@@ -205,7 +205,8 @@ function inferMeetingType(transcriptData, videoMapping) {
     return TRANSCRIPT_TYPE_OVERRIDES[transcriptId];
   }
   if (videoMapping?.meeting_type) {
-    return VIDEO_MEETING_TYPE_MAP[videoMapping.meeting_type] ?? 'regular';
+    const key = videoMapping.meeting_type.toLowerCase();
+    return VIDEO_MEETING_TYPE_MAP[key] ?? 'regular';
   }
   const title = (transcriptData.meeting_title ?? '').toUpperCase();
   if (title.includes('WORKSHOP')) return 'workshop';
