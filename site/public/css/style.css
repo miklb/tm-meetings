@@ -44,6 +44,15 @@
 }
 
 body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: clamp(1.2rem, 1.14rem + 0.25vw, 1.35rem);
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+body {
   font: -apple-system-body;
   /* other styles, including font-family */
 }
@@ -51,15 +60,6 @@ body {
   :root {
     font-size: 100%;
   }
-}
-
-body {
-  margin: 0;
-  font-family: var(--font-body);
-  font-size: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  line-height: 1.6;
-  color: var(--color-text);
-  background: var(--color-bg);
 }
 
 h1,
