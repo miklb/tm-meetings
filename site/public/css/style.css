@@ -39,6 +39,10 @@
   box-sizing: border-box;
 }
 
+@view-transition {
+  navigation: auto;
+}
+
 body {
   font: -apple-system-body;
   /* other styles, including font-family */
