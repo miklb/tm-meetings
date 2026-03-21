@@ -156,8 +156,8 @@ class DocumentMirror {
   async downloadDocument(url) {
     const response = await axios.get(url, {
       responseType: 'arraybuffer',
-      timeout: 120000, // 2 minute timeout for large documents
-      maxContentLength: 100 * 1024 * 1024, // 100MB max
+      timeout: 300000, // 5 minute timeout for large documents
+      maxContentLength: 500 * 1024 * 1024, // 500MB max
       headers: {
         'User-Agent': 'agenda-scraper-mirror/1.0',
         'Accept': '*/*',
