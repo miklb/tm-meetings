@@ -371,6 +371,12 @@ main {
   font-size: 0.9rem;
 }
 
+.media-hint {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-block-end: var(--spacing-lg);
+}
+
 .agenda-list {
   list-style: none;
   padding-inline-start: 0;

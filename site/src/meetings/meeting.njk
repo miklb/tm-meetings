@@ -1,26 +1,26 @@
 <a href="/" class="back-link">&larr; All meetings</a>
 
 <h1>{{ meeting.title }}
-    {% if meeting.agenda_type %}
-        <span class="agenda-type">{{ meeting.agenda_type }}</span>
-    {% endif %}
+  {% if meeting.agenda_type %}
+    <span class="agenda-type">{{ meeting.agenda_type }}</span>
+  {% endif %}
 </h1>
 
 <div class="meeting-meta">
-    <p>
-        {{ meeting.date | readableDate }}
-        {% if meeting.item_count > 0 %}
-            &middot;
-            {{ meeting.item_count }}
-            agenda item{{ "s" if meeting.item_count != 1 }}
-        {% endif %}
-    </p>
-    {% if meeting.source_url %}
-        <p>
-            <a href="{{ meeting.source_url }}" target="_blank" rel="noopener noreferrer">View official agenda in OnBase<span class="visually-hidden">
-                    (opens in new tab)</span></a>
-        </p>
+  <p>
+    {{ meeting.date | readableDate }}
+    {% if meeting.item_count > 0 %}
+      &middot;
+      {{ meeting.item_count }}
+      agenda item{{ "s" if meeting.item_count != 1 }}
     {% endif %}
+  </p>
+  {% if meeting.source_url %}
+    <p>
+      <a href="{{ meeting.source_url }}" target="_blank" rel="noopener noreferrer">View official agenda in OnBase<span class="visually-hidden">
+          (opens in new tab)</span></a>
+    </p>
+  {% endif %}
 </div>
 
 {% set detail = meetings.details[meeting.id] %}
@@ -28,51 +28,55 @@
 {% set hasItems = detail and detail.items.length > 0 %}
 
 {% if hasMedia %}
-    {# ── Two-panel layout: video left, transcript right ── #}
-    {# ── Agenda lives in a slide-out drawer ── #}
-    <div class="meeting-layout">
+  <p class="media-hint">Transcript timestamps are synced to the video &mdash; click any timestamp to jump to that point.</p>
+{% endif %}
 
-        <div class="video-panel">
-            {% include "video.njk" %}
-        </div>
+{% if hasMedia %}
+  {# ── Two-panel layout: video left, transcript right ── #}
+  {# ── Agenda lives in a slide-out drawer ── #}
+  <div class="meeting-layout">
 
-        <div class="media-panel">
-            {% include "transcript.njk" %}
-        </div>
-
+    <div class="video-panel">
+      {% include "video.njk" %}
     </div>
 
-    {# ── Agenda drawer (overlay) — only when items exist ── #}
-    {% if hasItems %}
-        {% include "agenda-drawer.njk" %}
-    {% endif %}
+    <div class="media-panel">
+      {% include "transcript.njk" %}
+    </div>
 
-    {# ── No-JS fallback: render agenda inline below the media grid ── #}
-    <noscript>
-        <section class="agenda-fallback">
-            <h2>Agenda</h2>
-            {% if hasItems %}
-                <ol class="agenda-list">
-                    {% for item in detail.items %}
-                        {% include "agenda-item.njk" %}
-                    {% endfor %}
-                </ol>
-            {% else %}
-                <p>No agenda items available for this meeting.</p>
-            {% endif %}
-        </section>
-    </noscript>
+  </div>
+
+  {# ── Agenda drawer (overlay) — only when items exist ── #}
+  {% if hasItems %}
+    {% include "agenda-drawer.njk" %}
+  {% endif %}
+
+  {# ── No-JS fallback: render agenda inline below the media grid ── #}
+  <noscript>
+    <section class="agenda-fallback">
+      <h2>Agenda</h2>
+      {% if hasItems %}
+        <ol class="agenda-list">
+          {% for item in detail.items %}
+            {% include "agenda-item.njk" %}
+          {% endfor %}
+        </ol>
+      {% else %}
+        <p>No agenda items available for this meeting.</p>
+      {% endif %}
+    </section>
+  </noscript>
 
 {% else %}
-    {# ── Single column: agenda only (no media) ── #}
-    {% if hasItems %}
-        <h2>Agenda</h2>
-        <ol class="agenda-list">
-            {% for item in detail.items %}
-                {% include "agenda-item.njk" %}
-            {% endfor %}
-        </ol>
-    {% else %}
-        <p>No agenda items available for this meeting.</p>
-    {% endif %}
+  {# ── Single column: agenda only (no media) ── #}
+  {% if hasItems %}
+    <h2>Agenda</h2>
+    <ol class="agenda-list">
+      {% for item in detail.items %}
+        {% include "agenda-item.njk" %}
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p>No agenda items available for this meeting.</p>
+  {% endif %}
 {% endif %}
