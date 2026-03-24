@@ -512,70 +512,124 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     agendaItems: processedItems
   };
 
-  // Calculate financial summary if items have financial data
-  const hasFinancialDetails = processedItems.some(
-    item => Array.isArray(item.financialDetails) && item.financialDetails.length > 0
+  // Build simplified financial summary: total money discussed + range
+  const itemsWithDollarAmounts = processedItems.filter(item =>
+    Array.isArray(item.dollarAmounts) && item.dollarAmounts.length > 0
   );
 
-  if (hasFinancialDetails) {
-    const aggregate = { expenditures: 0, decreases: 0, revenues: 0, other: 0, net: 0 };
+  if (itemsWithDollarAmounts.length > 0) {
+    // Skip Part 2 items to avoid double-counting (Part 1 has the contract, Part 2 is the appropriation)
+    const part2Pattern = /\bPart\s+2\b.*\bSee\s+Item\s+\d+\b/i;
 
-    processedItems.forEach(item => {
-      const totals = item.financialTotals || { expenditures: 0, decreases: 0, revenues: 0, other: 0, net: 0 };
-      aggregate.expenditures += totals.expenditures || 0;
-      aggregate.decreases += totals.decreases || 0;
-      aggregate.revenues += totals.revenues || 0;
-      aggregate.other += totals.other || 0;
-      aggregate.net += totals.net || 0;
-    });
+    // For each item, use its largest dollar amount as the representative figure
+    const itemFinancials = itemsWithDollarAmounts
+      .filter(item => !part2Pattern.test(item.title || ''))
+      .map(item => {
+        const values = item.dollarAmounts.map(
+          a => parseFloat(a.replace(/[$,]/g, '')) || 0
+        );
+        const maxAmount = Math.max(...values);
+        return {
+          number: item.number,
+          fileNumber: item.fileNumber,
+          amount: maxAmount
+        };
+      })
+      .filter(item => item.amount > 0)
+      .sort((a, b) => a.amount - b.amount);
 
-    // Find smallest and largest expenditure items
-    const itemsWithExpenditures = processedItems
-      .filter(item => item.financialTotals && item.financialTotals.expenditures > 0)
-      .map(item => ({
-        number: item.number,
-        agendaItemId: item.agendaItemId,
-        fileNumber: item.fileNumber,
-        title: item.title,
-        expenditure: item.financialTotals.expenditures
-      }))
-      .sort((a, b) => a.expenditure - b.expenditure);
+    const totalAmountDiscussed = itemFinancials.reduce((sum, item) => sum + item.amount, 0);
 
-    let expenditureRange = null;
-    if (itemsWithExpenditures.length > 0) {
-      const smallest = itemsWithExpenditures[0];
-      const largest = itemsWithExpenditures[itemsWithExpenditures.length - 1];
-      expenditureRange = {
+    let range = null;
+    if (itemFinancials.length > 0) {
+      const smallest = itemFinancials[0];
+      const largest = itemFinancials[itemFinancials.length - 1];
+      range = {
         smallest: {
           number: smallest.number,
-          agendaItemId: smallest.agendaItemId,
           fileNumber: smallest.fileNumber,
-          title: smallest.title,
-          amount: smallest.expenditure,
-          formatted: formatCurrency(smallest.expenditure)
+          amount: smallest.amount,
+          formatted: formatCurrency(smallest.amount)
         },
         largest: {
           number: largest.number,
-          agendaItemId: largest.agendaItemId,
           fileNumber: largest.fileNumber,
-          title: largest.title,
-          amount: largest.expenditure,
-          formatted: formatCurrency(largest.expenditure)
+          amount: largest.amount,
+          formatted: formatCurrency(largest.amount)
+        }
+      };
+    }
+
+    // Expenditure-specific totals with section-aware deduplication.
+    // Summary sheets have a fiscal_impact total and projected_costs broken out by year.
+    // Projected costs are a breakdown of the fiscal impact — not additional money.
+    const expenditureItems = itemsWithDollarAmounts
+      .filter(item => !part2Pattern.test(item.title || ''))
+      .map(item => {
+        const expDetails = (item.financialDetails || []).filter(d => d.type === 'expenditure');
+        if (expDetails.length === 0) return null;
+
+        const fiscalImpact = expDetails.filter(d => d.section === 'fiscal_impact');
+        const projectedCosts = expDetails.filter(d => d.section === 'projected_costs');
+
+        let amount;
+        if (fiscalImpact.length > 0) {
+          // Fiscal impact has the authoritative total
+          amount = Math.max(...fiscalImpact.map(d => d.value));
+        } else if (projectedCosts.length > 0) {
+          // No fiscal impact total — sum projected costs across fiscal years
+          amount = projectedCosts.reduce((sum, d) => sum + d.value, 0);
+        } else {
+          // No section info — use max expenditure amount
+          amount = Math.max(...expDetails.map(d => d.value));
+        }
+
+        return {
+          number: item.number,
+          fileNumber: item.fileNumber,
+          amount
+        };
+      })
+      .filter(item => item && item.amount > 0)
+      .sort((a, b) => a.amount - b.amount);
+
+    const totalExpenditures = expenditureItems.reduce((sum, item) => sum + item.amount, 0);
+
+    let expenditureRange = null;
+    if (expenditureItems.length > 0) {
+      const smallest = expenditureItems[0];
+      const largest = expenditureItems[expenditureItems.length - 1];
+      expenditureRange = {
+        smallest: {
+          number: smallest.number,
+          fileNumber: smallest.fileNumber,
+          amount: smallest.amount,
+          formatted: formatCurrency(smallest.amount)
         },
-        count: itemsWithExpenditures.length
+        largest: {
+          number: largest.number,
+          fileNumber: largest.fileNumber,
+          amount: largest.amount,
+          formatted: formatCurrency(largest.amount)
+        },
+        count: expenditureItems.length
       };
     }
 
     meetingData.financialSummary = {
-      ...aggregate,
-      formatted: {
-        expenditures: formatCurrency(aggregate.expenditures),
-        decreases: formatCurrency(-aggregate.decreases),
-        revenues: formatCurrency(-aggregate.revenues),
-        other: formatCurrency(aggregate.other),
-        net: formatCurrency(aggregate.net)
-      },
-      expenditureRange
+      totalAmountDiscussed,
+      formattedTotalAmountDiscussed: formatCurrency(totalAmountDiscussed),
+      itemCount: itemFinancials.length,
+      range,
+      totalExpenditures,
+      formattedTotalExpenditures: formatCurrency(totalExpenditures),
+      expenditureRange,
+      expenditureItems: expenditureItems.map(item => ({
+        number: item.number,
+        fileNumber: item.fileNumber,
+        amount: item.amount,
+        formatted: formatCurrency(item.amount)
+      }))
     };
   }
 

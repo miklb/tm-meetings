@@ -6645,37 +6645,258 @@
     }
   ],
   "financialSummary": {
-    "expenditures": 169662438.33,
-    "decreases": 124483946.33999999,
-    "revenues": 28292454.93,
-    "other": 300858508.15,
-    "net": 16886037.059999995,
-    "formatted": {
-      "expenditures": "$169,662,438.33",
-      "decreases": "-$124,483,946.34",
-      "revenues": "-$28,292,454.93",
-      "other": "$300,858,508.15",
-      "net": "$16,886,037.06"
+    "totalAmountDiscussed": 249667972.33999997,
+    "formattedTotalAmountDiscussed": "$249,667,972.34",
+    "itemCount": 41,
+    "range": {
+      "smallest": {
+        "number": 38,
+        "fileNumber": "F26-22315",
+        "amount": 9,
+        "formatted": "$9.00"
+      },
+      "largest": {
+        "number": 35,
+        "fileNumber": "INF26-22328",
+        "amount": 83692007.82,
+        "formatted": "$83,692,007.82"
+      }
     },
+    "totalExpenditures": 104600924.1,
+    "formattedTotalExpenditures": "$104,600,924.10",
     "expenditureRange": {
       "smallest": {
-        "number": 9,
-        "agendaItemId": "21929",
-        "fileNumber": "NCA26-21929",
-        "title": "File No. NCA26-21929 (Part 1 of 2)(See Item 10)\nResolution approving an award/contract between the city of Tampa and united states equal employment opportunity commission; providing an amount not to exceed eleven thousand dollars ($11,000) for services provided through the Tampa office of human rights for processing and resolving equal employment opportunity complaints, providing intake for equal employment opportunity complaints, and providing enforcement, outreach and training activity; authorizing the execution thereof by the mayor of the city of Tampa; providing an effective date.",
-        "amount": 11000,
-        "formatted": "$11,000.00"
+        "number": 35,
+        "fileNumber": "INF26-22328",
+        "amount": 10000,
+        "formatted": "$10,000.00"
       },
       "largest": {
         "number": 72,
-        "agendaItemId": "22316",
         "fileNumber": "INF26-22316",
-        "title": "File No. INF26-22316 (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.)\nResolution accepting the proposals of Ajax Paving Industries of Florida, LLC Burgess Civil, LLC and Preferred Materials, Inc. pertaining to Contract 26-C-00006  Citywide Resurfacing Contracts in the adjusted amount of $16,900,000 for each contract; authorizing the Mayor of the City of Tampa to execute said contract on behalf of the City of Tampa; providing an effective date.\n\nMemorandum from Richard Mutterback, Director of Contract Administration, transmitting additional information for said agenda item. (To be R/F)",
-        "amount": 101416900,
-        "formatted": "$101,416,900.00"
+        "amount": 50700000,
+        "formatted": "$50,700,000.00"
       },
-      "count": 41
-    }
+      "count": 36
+    },
+    "expenditureItems": [
+      {
+        "number": 35,
+        "fileNumber": "INF26-22328",
+        "amount": 10000,
+        "formatted": "$10,000.00"
+      },
+      {
+        "number": 9,
+        "fileNumber": "NCA26-21929",
+        "amount": 11000,
+        "formatted": "$11,000.00"
+      },
+      {
+        "number": 16,
+        "fileNumber": "NCA26-22335",
+        "amount": 15249,
+        "formatted": "$15,249.00"
+      },
+      {
+        "number": 11,
+        "fileNumber": "NCA26-22124",
+        "amount": 67497,
+        "formatted": "$67,497.00"
+      },
+      {
+        "number": 12,
+        "fileNumber": "NCA26-22143",
+        "amount": 120000,
+        "formatted": "$120,000.00"
+      },
+      {
+        "number": 31,
+        "fileNumber": "INF26-22152",
+        "amount": 135000,
+        "formatted": "$135,000.00"
+      },
+      {
+        "number": 28,
+        "fileNumber": "INF26-22147",
+        "amount": 175000,
+        "formatted": "$175,000.00"
+      },
+      {
+        "number": 36,
+        "fileNumber": "INF26-22379",
+        "amount": 200000,
+        "formatted": "$200,000.00"
+      },
+      {
+        "number": 30,
+        "fileNumber": "INF26-22151",
+        "amount": 207914,
+        "formatted": "$207,914.00"
+      },
+      {
+        "number": 8,
+        "fileNumber": "PS26-22320",
+        "amount": 213257.14,
+        "formatted": "$213,257.14"
+      },
+      {
+        "number": 29,
+        "fileNumber": "INF26-22148",
+        "amount": 221666,
+        "formatted": "$221,666.00"
+      },
+      {
+        "number": 13,
+        "fileNumber": "NCA26-22150",
+        "amount": 256746,
+        "formatted": "$256,746.00"
+      },
+      {
+        "number": 7,
+        "fileNumber": "PS26-22146",
+        "amount": 268000,
+        "formatted": "$268,000.00"
+      },
+      {
+        "number": 57,
+        "fileNumber": "MAM26-21641",
+        "amount": 291787.2,
+        "formatted": "$291,787.20"
+      },
+      {
+        "number": 58,
+        "fileNumber": "MAM26-21898",
+        "amount": 292542.37,
+        "formatted": "$292,542.37"
+      },
+      {
+        "number": 69,
+        "fileNumber": "DEO26-22336",
+        "amount": 300000,
+        "formatted": "$300,000.00"
+      },
+      {
+        "number": 41,
+        "fileNumber": "F26-22378",
+        "amount": 483000,
+        "formatted": "$483,000.00"
+      },
+      {
+        "number": 27,
+        "fileNumber": "INF26-22145",
+        "amount": 500000,
+        "formatted": "$500,000.00"
+      },
+      {
+        "number": 56,
+        "fileNumber": "MAM26-21625",
+        "amount": 558513.3,
+        "formatted": "$558,513.30"
+      },
+      {
+        "number": 32,
+        "fileNumber": "INF26-22172",
+        "amount": 589044.67,
+        "formatted": "$589,044.67"
+      },
+      {
+        "number": 24,
+        "fileNumber": "INF26-21626",
+        "amount": 600000,
+        "formatted": "$600,000.00"
+      },
+      {
+        "number": 55,
+        "fileNumber": "MAM26-22123",
+        "amount": 600000,
+        "formatted": "$600,000.00"
+      },
+      {
+        "number": 14,
+        "fileNumber": "NCA26-22288",
+        "amount": 750000,
+        "formatted": "$750,000.00"
+      },
+      {
+        "number": 33,
+        "fileNumber": "INF26-22314",
+        "amount": 877114.5,
+        "formatted": "$877,114.50"
+      },
+      {
+        "number": 26,
+        "fileNumber": "INF26-22125",
+        "amount": 1100000,
+        "formatted": "$1,100,000.00"
+      },
+      {
+        "number": 25,
+        "fileNumber": "INF26-21813",
+        "amount": 1167190,
+        "formatted": "$1,167,190.00"
+      },
+      {
+        "number": 5,
+        "fileNumber": "PS26-22114",
+        "amount": 1766884,
+        "formatted": "$1,766,884.00"
+      },
+      {
+        "number": 34,
+        "fileNumber": "INF26-22326",
+        "amount": 1841429.37,
+        "formatted": "$1,841,429.37"
+      },
+      {
+        "number": 39,
+        "fileNumber": "F26-22365",
+        "amount": 2771146.5300000003,
+        "formatted": "$2,771,146.53"
+      },
+      {
+        "number": 51,
+        "fileNumber": "DEO26-22367",
+        "amount": 3091837,
+        "formatted": "$3,091,837.00"
+      },
+      {
+        "number": 77,
+        "fileNumber": "NCA26-22173",
+        "amount": 3280201.9,
+        "formatted": "$3,280,201.90"
+      },
+      {
+        "number": 70,
+        "fileNumber": "INF26-21413",
+        "amount": 3959881.12,
+        "formatted": "$3,959,881.12"
+      },
+      {
+        "number": 54,
+        "fileNumber": "DEO26-22402",
+        "amount": 4254558,
+        "formatted": "$4,254,558.00"
+      },
+      {
+        "number": 71,
+        "fileNumber": "INF26-22307",
+        "amount": 6068935,
+        "formatted": "$6,068,935.00"
+      },
+      {
+        "number": 73,
+        "fileNumber": "MAM26-20327",
+        "amount": 16855530,
+        "formatted": "$16,855,530.00"
+      },
+      {
+        "number": 72,
+        "fileNumber": "INF26-22316",
+        "amount": 50700000,
+        "formatted": "$50,700,000.00"
+      }
+    ]
   },
   "formattedDate": "2026-03-26"
 }

@@ -322,6 +322,28 @@ async function extractMeetingDateFromFirstPDF(supportingDocs) {
 
 /**
  * Determine the financial entry type based on contextual text
+/**
+ * Convert informal dollar notation ($9.4 million) to a normalized amount string and numeric value
+ */
+const DOLLAR_MAGNITUDES = { million: 1e6, billion: 1e9, trillion: 1e12 };
+function normalizeDollarMatch(match) {
+    const lower = match.toLowerCase();
+    for (const [word, mult] of Object.entries(DOLLAR_MAGNITUDES)) {
+        if (lower.includes(word)) {
+            const num = parseFloat(match.replace(/[$,]/g, '')) || 0;
+            const value = num * mult;
+            const formatted = '$' + value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            return { amount: formatted, value };
+        }
+    }
+    const value = parseFloat(match.replace(/[$,]/g, '')) || 0;
+    return { amount: match, value };
+}
+
+/** Dollar regex: matches informal notation ($9.4 million) first, then standard amounts ($1,234.56) */
+const DOLLAR_REGEX = /\$\d+(?:\.\d+)?\s*(?:million|billion|trillion)|\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/gi;
+
+/**
  * @param {string[]} contexts - Array of contextual strings containing the amount
  * @param {string} section - Logical section name (e.g., projected_costs)
  * @returns {string} - Normalized type identifier
@@ -382,7 +404,7 @@ function parseSummaryFinancialEntries(summaryText) {
             currentSection = 'fiscal_impact';
         }
 
-        const amountMatches = normalizedLine.match(/\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g);
+        const amountMatches = normalizedLine.match(DOLLAR_REGEX);
         if (amountMatches) {
             const contextParts = [normalizedLine];
             if (previousLine && !/\$\d/.test(previousLine)) {
@@ -391,11 +413,11 @@ function parseSummaryFinancialEntries(summaryText) {
             const context = contextParts.join(' ').trim();
             const type = inferFinancialEntryType([context], currentSection);
 
-            amountMatches.forEach(amount => {
-                const numericValue = parseFloat(amount.replace(/[$,]/g, ''));
+            amountMatches.forEach(rawMatch => {
+                const { amount, value } = normalizeDollarMatch(rawMatch);
                 entries.push({
                     amount,
-                    value: Number.isFinite(numericValue) ? numericValue : 0,
+                    value: Number.isFinite(value) ? value : 0,
                     type,
                     section: currentSection,
                     line: normalizedLine,
@@ -424,7 +446,8 @@ function extractDollarAmounts(text, options = {}) {
         summaryEntries = []
     } = options || {};
 
-    const dollarRegex = /\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/g;
+    // Match both standard amounts ($1,234,567.89) and informal notation ($9.4 million)
+    const dollarRegex = DOLLAR_REGEX;
     const amountMap = new Map();
 
     const ensureEntry = (amount) => {
@@ -484,8 +507,10 @@ function extractDollarAmounts(text, options = {}) {
             if (matches) {
                 const context = `${previousLine} ${line}`.trim();
                 const inferredType = inferFinancialEntryType([context]);
-                matches.forEach(amount => {
+                matches.forEach(rawMatch => {
+                    const { amount, value } = normalizeDollarMatch(rawMatch);
                     appendDetail(amount, {
+                        value,
                         type: inferredType,
                         context,
                         source: sourceLabel
@@ -1139,90 +1164,133 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
             agendaItems: processedItems
         };
         
-        const hasFinancialDetails = meetingData.agendaItems.some(item => {
-            return Array.isArray(item.financialDetails) && item.financialDetails.length > 0;
-        });
+        // Build simplified financial summary: total money discussed + range
+        const itemsWithDollarAmounts = processedItems.filter(item =>
+            Array.isArray(item.dollarAmounts) && item.dollarAmounts.length > 0
+        );
 
-        if (hasFinancialDetails) {
-            const aggregate = { expenditures: 0, decreases: 0, revenues: 0, other: 0, net: 0 };
-
-            meetingData.agendaItems.forEach(item => {
-                const totals = item.financialTotals || { expenditures: 0, decreases: 0, revenues: 0, other: 0, net: 0 };
-                aggregate.expenditures += totals.expenditures || 0;
-                aggregate.decreases += totals.decreases || 0;
-                aggregate.revenues += totals.revenues || 0;
-                aggregate.other += totals.other || 0;
-                aggregate.net += totals.net || 0;
-            });
-
+        if (itemsWithDollarAmounts.length > 0) {
             const formatCurrency = (value) => {
                 if (!Number.isFinite(value)) {
                     return null;
                 }
                 const abs = Math.abs(value);
                 const formatted = abs.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                return `${value < 0 ? '-' : ''}$${formatted}`;
+                return `$${formatted}`;
             };
 
-            meetingData.totalExpenditureAmount = aggregate.expenditures;
-            meetingData.totalExpenditureDecreaseAmount = aggregate.decreases;
-            meetingData.totalRevenueAmount = aggregate.revenues;
-            meetingData.totalOtherFinancialAmount = aggregate.other;
-            meetingData.totalDollarAmount = aggregate.net;
+            // Skip Part 2 items to avoid double-counting (Part 1 has the contract, Part 2 is the appropriation)
+            const part2Pattern = /\bPart\s+2\b.*\bSee\s+Item\s+\d+\b/i;
 
-            meetingData.formattedTotalExpenditureAmount = formatCurrency(aggregate.expenditures);
-            meetingData.formattedTotalExpenditureDecreaseAmount = formatCurrency(-aggregate.decreases);
-            meetingData.formattedTotalRevenueAmount = formatCurrency(-aggregate.revenues);
-            meetingData.formattedTotalOtherFinancialAmount = formatCurrency(aggregate.other);
-            meetingData.formattedTotalDollarAmount = formatCurrency(aggregate.net);
+            // For each item, use its largest dollar amount as the representative figure
+            const itemFinancials = itemsWithDollarAmounts
+                .filter(item => !part2Pattern.test(item.title || ''))
+                .map(item => {
+                    const values = item.dollarAmounts.map(
+                        a => parseFloat(a.replace(/[$,]/g, '')) || 0
+                    );
+                    const maxAmount = Math.max(...values);
+                    return {
+                        number: item.number,
+                        fileNumber: item.fileNumber,
+                        amount: maxAmount
+                    };
+                })
+                .filter(item => item.amount > 0)
+                .sort((a, b) => a.amount - b.amount);
 
-            // Find smallest and largest expenditure items
-            const itemsWithExpenditures = processedItems
-                .filter(item => item.financialTotals && item.financialTotals.expenditures > 0)
-                .map(item => ({
-                    number: item.number,
-                    agendaItemId: item.agendaItemId,
-                    fileNumber: item.fileNumber,
-                    title: item.title,
-                    expenditure: item.financialTotals.expenditures
-                }))
-                .sort((a, b) => a.expenditure - b.expenditure);
+            const totalAmountDiscussed = itemFinancials.reduce((sum, item) => sum + item.amount, 0);
 
-            let expenditureRange = null;
-            if (itemsWithExpenditures.length > 0) {
-                const smallest = itemsWithExpenditures[0];
-                const largest = itemsWithExpenditures[itemsWithExpenditures.length - 1];
-                expenditureRange = {
+            let range = null;
+            if (itemFinancials.length > 0) {
+                const smallest = itemFinancials[0];
+                const largest = itemFinancials[itemFinancials.length - 1];
+                range = {
                     smallest: {
                         number: smallest.number,
-                        agendaItemId: smallest.agendaItemId,
                         fileNumber: smallest.fileNumber,
-                        title: smallest.title,
-                        amount: smallest.expenditure,
-                        formatted: formatCurrency(smallest.expenditure)
+                        amount: smallest.amount,
+                        formatted: formatCurrency(smallest.amount)
                     },
                     largest: {
                         number: largest.number,
-                        agendaItemId: largest.agendaItemId,
                         fileNumber: largest.fileNumber,
-                        title: largest.title,
-                        amount: largest.expenditure,
-                        formatted: formatCurrency(largest.expenditure)
+                        amount: largest.amount,
+                        formatted: formatCurrency(largest.amount)
+                    }
+                };
+            }
+
+            // Expenditure-specific totals with section-aware deduplication.
+            // Summary sheets have a fiscal_impact total and projected_costs broken out by year.
+            // Projected costs are a breakdown of the fiscal impact — not additional money.
+            const expenditureItems = itemsWithDollarAmounts
+                .filter(item => !part2Pattern.test(item.title || ''))
+                .map(item => {
+                    const expDetails = (item.financialDetails || []).filter(d => d.type === 'expenditure');
+                    if (expDetails.length === 0) return null;
+
+                    const fiscalImpact = expDetails.filter(d => d.section === 'fiscal_impact');
+                    const projectedCosts = expDetails.filter(d => d.section === 'projected_costs');
+
+                    let amount;
+                    if (fiscalImpact.length > 0) {
+                        // Fiscal impact has the authoritative total
+                        amount = Math.max(...fiscalImpact.map(d => d.value));
+                    } else if (projectedCosts.length > 0) {
+                        // No fiscal impact total — sum projected costs across fiscal years
+                        amount = projectedCosts.reduce((sum, d) => sum + d.value, 0);
+                    } else {
+                        // No section info — use max expenditure amount
+                        amount = Math.max(...expDetails.map(d => d.value));
+                    }
+
+                    return {
+                        number: item.number,
+                        fileNumber: item.fileNumber,
+                        amount
+                    };
+                })
+                .filter(item => item && item.amount > 0)
+                .sort((a, b) => a.amount - b.amount);
+
+            const totalExpenditures = expenditureItems.reduce((sum, item) => sum + item.amount, 0);
+
+            let expenditureRange = null;
+            if (expenditureItems.length > 0) {
+                const smallest = expenditureItems[0];
+                const largest = expenditureItems[expenditureItems.length - 1];
+                expenditureRange = {
+                    smallest: {
+                        number: smallest.number,
+                        fileNumber: smallest.fileNumber,
+                        amount: smallest.amount,
+                        formatted: formatCurrency(smallest.amount)
                     },
-                    count: itemsWithExpenditures.length
+                    largest: {
+                        number: largest.number,
+                        fileNumber: largest.fileNumber,
+                        amount: largest.amount,
+                        formatted: formatCurrency(largest.amount)
+                    },
+                    count: expenditureItems.length
                 };
             }
 
             meetingData.financialSummary = {
-                ...aggregate,
-                formatted: {
-                    expenditures: meetingData.formattedTotalExpenditureAmount,
-                    decreases: meetingData.formattedTotalExpenditureDecreaseAmount,
-                    revenues: meetingData.formattedTotalRevenueAmount,
-                    other: meetingData.formattedTotalOtherFinancialAmount,
-                    net: meetingData.formattedTotalDollarAmount
-                },
-                expenditureRange
+                totalAmountDiscussed,
+                formattedTotalAmountDiscussed: formatCurrency(totalAmountDiscussed),
+                itemCount: itemFinancials.length,
+                range,
+                totalExpenditures,
+                formattedTotalExpenditures: formatCurrency(totalExpenditures),
+                expenditureRange,
+                expenditureItems: expenditureItems.map(item => ({
+                    number: item.number,
+                    fileNumber: item.fileNumber,
+                    amount: item.amount,
+                    formatted: formatCurrency(item.amount)
+                }))
             };
         }
         
@@ -1460,7 +1528,7 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
         // Print summary
         console.log(`[HTTP] Summary: ${meetingData.agendaItems.length} items, date: ${meetingData.meetingDate}`);
         if (meetingData.financialSummary) {
-            console.log(`[HTTP] Financial net: ${meetingData.financialSummary.formatted.net}`);
+            console.log(`[HTTP] Total discussed: ${meetingData.financialSummary.formattedTotalAmountDiscussed} across ${meetingData.financialSummary.itemCount} items (expenditures: ${meetingData.financialSummary.formattedTotalExpenditures})`);
         }
     } catch (error) {
         console.error(`[HTTP] ❌ Failed to scrape meeting ${meetingId}:`, error.message);
