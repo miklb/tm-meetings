@@ -3,14 +3,23 @@
 Re-process all raw transcripts with the new three-layer capitalizer.
 Input: data/transcripts/*.json (ALL CAPS)
 Output: data/processed/*.json (properly capitalized)
+
+Usage:
+    python3 reprocess_all_transcripts.py              # all transcripts
+    python3 reprocess_all_transcripts.py --year 2026  # 2026 only
 """
 
+import argparse
 import json
 import os
 from pathlib import Path
 from src.capitalize_transcript import TranscriptCapitalizer
 
 def main():
+    parser = argparse.ArgumentParser(description='Re-capitalise transcripts')
+    parser.add_argument('--year', help='Only process transcripts for this year (e.g. 2026)')
+    args = parser.parse_args()
+
     # Initialize capitalizer
     print("Loading capitalizer (this will load GLiNER model)...")
     capitalizer = TranscriptCapitalizer(use_gliner=True)
@@ -22,7 +31,12 @@ def main():
     output_dir = Path('data/processed')
     output_dir.mkdir(exist_ok=True)
     
-    transcript_files = sorted(transcript_dir.glob('transcript_*.json'))
+    all_files = sorted(transcript_dir.glob('transcript_*.json'))
+    if args.year:
+        transcript_files = [f for f in all_files if f'_{args.year}-' in f.name]
+        print(f"Filtering for year {args.year}: {len(transcript_files)} of {len(all_files)} files")
+    else:
+        transcript_files = all_files
     
     if not transcript_files:
         print("No transcript files found in data/transcripts/")
@@ -41,7 +55,7 @@ def main():
             skipped_count += 1
             continue
             
-        output_file = output_dir / transcript_file.name
+        output_file = output_dir / f"processed_{transcript_file.name}"
         
         print(f"[{idx}/{len(transcript_files)}] Processing {transcript_file.name}...")
         

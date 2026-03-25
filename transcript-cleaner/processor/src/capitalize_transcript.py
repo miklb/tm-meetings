@@ -17,6 +17,24 @@ import re
 from pathlib import Path
 from typing import Dict, List, Set, Tuple
 
+# Words that are both common English words AND acronyms in city council context.
+# These need context to determine whether to uppercase.
+_CONTEXT_SENSITIVE = frozenset({'it', 'us'})
+
+# Next-word signals that 'it' is the IT acronym (Information Technology).
+# In council speech, IT as an acronym is almost always followed by a noun
+# describing a technical department or system.  Everything else defaults to
+# the pronoun 'it', matching the user preference for lowercase bias.
+_IT_ACRONYM_NEXT = frozenset({
+    'department', 'dept', 'staff', 'team', 'director', 'manager',
+    'systems', 'system', 'infrastructure', 'services', 'service',
+    'support', 'budget', 'office', 'division', 'personnel',
+})
+
+# Determiners that signal "us" is the country abbreviation US, not the pronoun.
+# In council speech, country references almost exclusively appear as "the US".
+_US_COUNTRY_PREV = frozenset({'the'})
+
 
 def _load_config(config_file: str = "data/capitalization_config.json") -> dict:
     """Load acronyms, neighborhoods, and street suffixes from config file."""
@@ -116,6 +134,28 @@ class TranscriptCapitalizer:
         
         print(f"✓ Total entities: {len(self.standard_entities) + len(self.agenda_entities)}")
     
+    def _is_common_word_context(self, word: str, idx: int, words: list) -> bool:
+        """Return True when a context-sensitive word (it/us) is a pronoun, not an acronym."""
+        def _clean(w: str) -> str:
+            m = re.match(r"^[^\w]*([\w']+)[^\w]*$", w)
+            return m.group(1).lower() if m else ''
+
+        prev_word = _clean(words[idx - 1]) if idx > 0 else ''
+        next_word = _clean(words[idx + 1]) if idx + 1 < len(words) else ''
+
+        if word == 'it':
+            # Only treat as IT acronym when followed by a tech/department noun.
+            # Default to pronoun — matches preference for lowercase bias.
+            if next_word not in _IT_ACRONYM_NEXT:
+                return True
+        elif word == 'us':
+            # Treat as the pronoun unless preceded by a determiner like "the".
+            # In council transcripts, bare "us" is almost always the pronoun;
+            # the country abbreviation almost always appears as "the US".
+            if prev_word not in _US_COUNTRY_PREV:
+                return True
+        return False
+
     @staticmethod
     def _fix_hyphenated_name(name: str) -> str:
         """Capitalize each part of a hyphenated name: Johnson-velez → Johnson-Velez."""
@@ -286,7 +326,20 @@ class TranscriptCapitalizer:
             
             # Clean word for lookup (just alphanumeric and hyphens)
             word_clean = re.sub(r'[^\w-]', '', word_core).lower()
-            
+
+            # Context-sensitive disambiguation: 'it'/'us' are both common pronouns
+            # and acronyms. Only uppercase when context rules out the pronoun reading.
+            if word_clean in _CONTEXT_SENSITIVE:
+                if self._is_common_word_context(word_clean, i, words):
+                    # Treat as pronoun; still respect sentence-start capitalisation
+                    if i == 0 or (i > 0 and any(p in words[i - 1] for p in ['.', '!', '?'])):
+                        result = word_clean[0].upper() + word_clean[1:]
+                    else:
+                        result = word_clean
+                    capitalized_words.append(leading_punct + result + trailing_punct)
+                    continue
+                # Not pronoun context — fall through to normal acronym/entity rules
+
             # Check if this should be an acronym (override other capitalizations)
             if word_clean in self.acronyms:
                 capitalized_words.append(leading_punct + word_clean.upper() + trailing_punct)
