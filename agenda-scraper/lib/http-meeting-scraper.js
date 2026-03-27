@@ -280,7 +280,9 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   const html = meetingResponse.data;
 
   if (saveDebugFiles) {
-    const debugMeetingPath = path.join(process.cwd(), 'output', `http_meeting_${meetingId}.html`);
+    const outputDir = path.join(process.cwd(), 'output');
+    fs.mkdirSync(outputDir, { recursive: true });
+    const debugMeetingPath = path.join(outputDir, `http_meeting_${meetingId}.html`);
     fs.writeFileSync(debugMeetingPath, html);
     console.log(`[HTTP] Saved meeting HTML: output/http_meeting_${meetingId}.html`);
   }
@@ -297,7 +299,9 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   const agendaHtml = await fetchAgendaDocument(client, meetingId);
   
   if (saveDebugFiles) {
-    const agendaPath = path.join(process.cwd(), 'output', `http_agenda_${meetingId}.html`);
+    const outputDir = path.join(process.cwd(), 'output');
+    fs.mkdirSync(outputDir, { recursive: true });
+    const agendaPath = path.join(outputDir, `http_agenda_${meetingId}.html`);
     fs.writeFileSync(agendaPath, agendaHtml);
     console.log(`[HTTP] Saved agenda HTML: output/http_agenda_${meetingId}.html`);
   }
