@@ -2,12 +2,12 @@
 
 The documentation is a bit verbose as there are a lot of moving parts and edge cases to handle, especially during development and debugging. This document is for distilling some of it down for standard workflow reference and to shape future documentation.
 
-On Friday's
+## On Friday's
 
 After `git pull`, run:
 
 ```bash
-npm run process -- YYYY-MM-DD            # convert + mirror using existing JSON (no re-scrape)
+npm run process -- YYYY-MM-DD            # convert + mirror using existing JSON (no re-scrape) note the space between flag and date
 npm run process -- YYYY-MM-DD --force    # re-scrape, then convert + mirror
 npm run process -- YYYY-MM-DD --skip-mirror  # skip R2 mirroring
 ```
@@ -21,3 +21,6 @@ This grabs the agendas for the date passed (YYYY-MM-DD), generates the file meet
 `node scripts/build-db.js` rebuilds the db
 
 `cd site && npx @11ty/eleventy` rebuild the static site
+`wrangler pages deploy site/_site --project-name tampa-meetings`
+
+## On Tuesday:
