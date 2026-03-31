@@ -24,3 +24,7 @@ This grabs the agendas for the date passed (YYYY-MM-DD), generates the file meet
 `wrangler pages deploy site/_site --project-name tampa-meetings`
 
 ## On Tuesday:
+
+```bash
+./pipeline/process-meeting.sh 2026-03-26
+```
