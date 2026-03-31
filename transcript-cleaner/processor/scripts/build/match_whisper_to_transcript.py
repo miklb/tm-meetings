@@ -352,6 +352,41 @@ def ngram_match_score(whisper_words, official_words, n=4):
     return matched / len(whisper_ngrams)
 
 
+def estimate_char_position(whisper_text, official_text):
+    """Estimate where whisper_text falls within official_text using character positions.
+
+    Character position correlates better with speech duration than content-word
+    position (which compresses stop-word-heavy regions like conversational
+    openings).  Falls back to None if no substring match is found, so the
+    caller can use the content-word sliding window instead.
+
+    Returns:
+        Float 0.0–1.0 representing the fractional start position, or None.
+    """
+    w_norm = normalize_text(whisper_text)
+    o_norm = normalize_text(official_text)
+
+    if not w_norm or not o_norm:
+        return None
+
+    # Try full normalized text as substring
+    idx = o_norm.find(w_norm)
+    if idx >= 0:
+        return idx / len(o_norm)
+
+    # Try progressively shorter substrings (trim noisy edges)
+    w_words = w_norm.split()
+    for trim in range(1, len(w_words) // 2):
+        substr = ' '.join(w_words[trim:-trim])
+        if len(substr.split()) < 3:
+            break
+        idx = o_norm.find(substr)
+        if idx >= 0:
+            return idx / len(o_norm)
+
+    return None
+
+
 def find_match_position(whisper_content_words, official_content_words):
     """Find where in the official content words the Whisper text best matches.
 
@@ -495,8 +530,14 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
             score = ngram_match_score(whisper_cw, o_content_words, n=3)
 
             if score >= MIN_SCORE:
-                # Find WHERE in the official segment the match appears
-                position_frac, _ = find_match_position(whisper_cw, o_content_words)
+                # Find WHERE in the official segment the match appears.
+                # Prefer character-based position (correlates better with
+                # speech duration); fall back to content-word sliding window.
+                char_frac = estimate_char_position(w_text, o_text)
+                if char_frac is not None:
+                    position_frac = char_frac
+                else:
+                    position_frac, _ = find_match_position(whisper_cw, o_content_words)
 
                 # Compute position-adjusted offset
                 implied_offset = None
@@ -527,6 +568,78 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
         return None
 
     print(f"  {len(all_matches)} matches above threshold")
+
+    # --- Early-segment fuzzy match ---
+    # The earliest Whisper segments give the most accurate offset (minimal
+    # interpolation), but Whisper base model often garbles proper nouns and
+    # opening words, breaking n-gram chains. Try harder on the first few
+    # candidates using bigrams + word overlap as a combined score.
+    EARLY_CANDIDATES = 5
+    EARLY_FUZZY_THRESHOLD = 0.35  # Combined score threshold
+    early_fuzzy_matches = []
+
+    for c_idx, candidate in enumerate(candidates[:EARLY_CANDIDATES]):
+        whisper_cw = candidate['content_words']
+        w_start = candidate['start']
+        w_text = candidate['text']
+
+        for o_idx in range(min(max_official, 15)):  # first 15 official segments
+            o_seg = official_segments[o_idx]
+            o_text = o_seg.get('text', '')
+            o_timestamp = o_seg.get('timestamp')
+            if not o_text or not o_timestamp:
+                continue
+
+            o_content_words = extract_content_words(o_text)
+
+            # Already have a normal match for this pair? Skip.
+            if any(m['candidate_idx'] == c_idx and m['official_index'] == o_idx
+                   for m in all_matches):
+                continue
+
+            # Bigram score (more tolerant of single garbled words)
+            bigram_score = ngram_match_score(whisper_cw, o_content_words, n=2)
+            # Individual word overlap
+            if whisper_cw:
+                o_set = set(o_content_words)
+                word_score = sum(1 for w in whisper_cw if w in o_set) / len(whisper_cw)
+            else:
+                word_score = 0.0
+
+            # Combined: weight bigrams more (they still require consecutive pairs)
+            combined = 0.6 * bigram_score + 0.4 * word_score
+
+            if combined >= EARLY_FUZZY_THRESHOLD:
+                char_frac = estimate_char_position(w_text, o_text)
+                if char_frac is not None:
+                    position_frac = char_frac
+                else:
+                    position_frac, _ = find_match_position(whisper_cw, o_content_words)
+
+                implied_offset = None
+                if first_seconds is not None:
+                    o_seconds = parse_timestamp_to_seconds(o_timestamp)
+                    secs_from_start = o_seconds - first_seconds
+                    seg_dur = seg_durations.get(o_idx, 30)
+                    adjusted_secs = secs_from_start + position_frac * seg_dur
+                    implied_offset = w_start - adjusted_secs
+
+                early_fuzzy_matches.append({
+                    'whisper_start': w_start,
+                    'whisper_text': w_text,
+                    'official_index': o_idx,
+                    'official_timestamp': o_timestamp,
+                    'official_text': o_text,
+                    'score': combined,
+                    'candidate_idx': c_idx,
+                    'implied_offset': implied_offset,
+                    'position_frac': position_frac,
+                    'seg_duration': seg_durations.get(o_idx, 30),
+                    'fuzzy': True,
+                })
+
+    if early_fuzzy_matches:
+        print(f"  {len(early_fuzzy_matches)} early fuzzy match(es) found (bigram + word overlap)")
 
     # --- Cross-validation: cluster matches by implied offset ---
     clusters = []  # initialized for runner-up logging below
@@ -567,11 +680,60 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
         best_cluster.sort(key=lambda m: m['score'], reverse=True)
         best = best_cluster[0]
 
+        # Use cluster median offset for robustness — individual matches may
+        # have intra-segment interpolation error, but the median across many
+        # independent matches averages it out.
+        if len(best_cluster) >= 3:
+            cluster_offsets = sorted(m['implied_offset'] for m in best_cluster)
+            median_offset = cluster_offsets[len(cluster_offsets) // 2]
+            best['implied_offset'] = median_offset
+            best['cluster_median'] = True
+
         print(f"\n✓ MATCHED Whisper candidate {best['candidate_idx']} at {best['whisper_start']:.1f}s "
               f"to official segment {best['official_index']} "
               f"at {best['official_timestamp']} (score: {best['score']:.2f}, "
               f"offset: {best['implied_offset']:.0f}s, "
               f"cluster support: {unique_candidates(best_cluster)} candidates)")
+
+        # --- Early-segment preference ---
+        # If an early fuzzy match has an implied offset within OFFSET_TOLERANCE
+        # of the winning cluster median AND matches a short segment (≤60s),
+        # prefer it — the offset is computed from the segment start with
+        # minimal interpolation, so it's more precise.
+        # Also check the normal matches for a candidate that matched official
+        # segment 0 — that gives the most direct offset possible.
+        early_preferred = None
+
+        # First, check normal matches for a segment-0 match within cluster range
+        cluster_median = best['implied_offset']
+        for m in all_matches:
+            if m['official_index'] == 0 and m['candidate_idx'] < EARLY_CANDIDATES:
+                # Direct offset: whisper_start - 0 (first segment = meeting start)
+                direct_offset = m['whisper_start']  # secs_from_start is 0 for segment 0
+                if abs(direct_offset - cluster_median) <= OFFSET_TOLERANCE:
+                    early_preferred = m
+                    early_preferred['implied_offset'] = direct_offset
+                    early_preferred['early_match'] = True
+                    break
+
+        # If no segment-0 match, try early fuzzy matches
+        if not early_preferred and early_fuzzy_matches:
+            for efm in sorted(early_fuzzy_matches, key=lambda m: m['candidate_idx']):
+                if efm['implied_offset'] is None:
+                    continue
+                if abs(efm['implied_offset'] - cluster_median) <= OFFSET_TOLERANCE:
+                    early_preferred = efm
+                    early_preferred['early_match'] = True
+                    break
+
+        if early_preferred:
+            print(f"\n  ⚡ Early segment match (candidate {early_preferred['candidate_idx']}) "
+                  f"at {early_preferred['whisper_start']:.1f}s → segment {early_preferred['official_index']} "
+                  f"at {early_preferred['official_timestamp']} "
+                  f"(offset: {early_preferred['implied_offset']:.0f}s)")
+            print(f"     Whisper: \"{early_preferred['whisper_text'][:80]}\"")
+            print(f"     Using early segment offset (more precise, less interpolation)")
+            best = early_preferred
     else:
         # Only one match or no baseline — just pick highest score
         all_matches.sort(key=lambda m: m['score'], reverse=True)
@@ -687,13 +849,29 @@ def calculate_offset(whisper_json_file, official_transcript_file,
     print(f"\nOffset Calculation:")
     print(f"  Meeting baseline: {first_timestamp} (0 seconds)")
     print(f"  Official segment: {match['official_timestamp']} ({seconds_from_meeting_start}s from start)")
-    if position_adjustment > 1:
+    if match.get('early_match') and match.get('official_index') == 0:
+        print(f"  Whisper video time: {whisper_video_time:.1f}s")
+        print(f"  ")
+        print(f"  Offset = whisper_time (direct, first segment)")
+        print(f"  Offset = {offset:.1f}s")
+    elif position_adjustment > 1:
         print(f"  Position within segment: {position_frac:.0%} of {seg_dur:.0f}s = +{position_adjustment:.1f}s")
         print(f"  Adjusted transcript time: {seconds_from_meeting_start + position_adjustment:.1f}s from start")
-    print(f"  Whisper video time: {whisper_video_time:.1f}s")
-    print(f"  ")
-    print(f"  Offset = whisper_time - adjusted_transcript_time")
-    print(f"  Offset = {whisper_video_time:.1f}s - {seconds_from_meeting_start + position_adjustment:.1f}s = {offset:.1f}s")
+        print(f"  Whisper video time: {whisper_video_time:.1f}s")
+        if match.get('cluster_median'):
+            individual = whisper_video_time - (seconds_from_meeting_start + position_adjustment)
+            print(f"  ")
+            print(f"  Best match offset: {individual:.1f}s")
+            print(f"  Cluster median offset: {offset:.1f}s (used — averages out interpolation error)")
+        else:
+            print(f"  ")
+            print(f"  Offset = whisper_time - adjusted_transcript_time")
+            print(f"  Offset = {whisper_video_time:.1f}s - {seconds_from_meeting_start + position_adjustment:.1f}s = {offset:.1f}s")
+    else:
+        print(f"  Whisper video time: {whisper_video_time:.1f}s")
+        print(f"  ")
+        print(f"  Offset = whisper_time - transcript_time")
+        print(f"  Offset = {whisper_video_time:.1f}s - {seconds_from_meeting_start:.1f}s = {offset:.1f}s")
     print(f"\n✅ OFFSET: {offset:.1f} seconds ({int(offset//60)}:{int(offset%60):02d})")
     print("="*70)
     
@@ -704,7 +882,7 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python match_whisper_to_transcript.py <video_id_or_whisper_json> <transcript_json> [options]")
         print("\nOptions:")
-        print("  --model <name>         Whisper model (tiny/base/small/medium, default: base)")
+        print("  --model <name>         Whisper model (tiny/base/small/medium, default: small)")
         print("  --no-cache             Don't use or save cached Whisper JSON")
         print("  --video-mapping <file> Video mapping JSON for smart duration and auto-save")
         print("  --no-save              Don't write offset back to video mapping file")
@@ -715,7 +893,7 @@ def main():
     
     input_arg = sys.argv[1]
     transcript_file = sys.argv[2]
-    model = 'base'  # Default to base for speed; n-gram matching compensates
+    model = 'small'  # Default to small for better proper noun accuracy
     use_cache = True
     video_mapping_file = None
     auto_save = True  # Save offset to video mapping by default

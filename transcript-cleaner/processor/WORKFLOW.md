@@ -40,6 +40,12 @@ Verify: `python3 -c "import dotenv, gliner; print('ok')"`
 
 ```bash
 # From project root, with venv activated
+./pipeline/process-meeting.sh <date>
+```
+
+The script auto-discovers the transcript pkey from tampagov.net. If multiple transcripts exist for that date (e.g., CRA + regular), it will list them and ask you to specify:
+
+```bash
 ./pipeline/process-meeting.sh <pkey> <date>
 ```
 

@@ -4,23 +4,27 @@
 # meeting transcript: scrape → capitalize → video → rebuild DB → rebuild site.
 #
 # Usage:
+#   ./pipeline/process-meeting.sh <date> [options]
 #   ./pipeline/process-meeting.sh <transcript_pkey> <date> [options]
 #
 # Examples:
-#   # Process a known transcript
+#   # Process by date (auto-discovers pkey from tampagov)
+#   ./pipeline/process-meeting.sh 2025-11-13
+#
+#   # Process a known transcript pkey
 #   ./pipeline/process-meeting.sh 2645 2025-11-13
 #
 #   # Skip video processing (no YouTube key, or no video yet)
-#   ./pipeline/process-meeting.sh 2645 2025-11-13 --skip-video
+#   ./pipeline/process-meeting.sh 2025-11-13 --skip-video
 #
 #   # Override meeting type detection
-#   ./pipeline/process-meeting.sh 2645 2025-11-13 --meeting-type CRA
+#   ./pipeline/process-meeting.sh 2025-11-13 --meeting-type CRA
 #
 #   # Skip the site rebuild step
-#   ./pipeline/process-meeting.sh 2645 2025-11-13 --skip-site
+#   ./pipeline/process-meeting.sh 2025-11-13 --skip-site
 #
 #   # Dry run — show what would be done without executing
-#   ./pipeline/process-meeting.sh 2645 2025-11-13 --dry-run
+#   ./pipeline/process-meeting.sh 2025-11-13 --dry-run
 #
 # Prerequisites:
 #   - Python venv at transcript-cleaner/processor/venv/ with deps installed
@@ -48,8 +52,9 @@ DRY_RUN=false
 MEETING_TYPE=""
 
 # ── Parse args ─────────────────────────────────────────────────────────────────
-if [[ $# -lt 2 ]]; then
-    echo "Usage: $0 <transcript_pkey> <date> [options]"
+if [[ $# -lt 1 ]]; then
+    echo "Usage: $0 <date> [options]"
+    echo "       $0 <transcript_pkey> <date> [options]"
     echo ""
     echo "Options:"
     echo "  --skip-video       Skip YouTube video matching / Whisper offset"
@@ -59,9 +64,23 @@ if [[ $# -lt 2 ]]; then
     exit 1
 fi
 
-PKEY="$1"
-DATE="$2"
-shift 2
+# Detect whether first arg is a date (YYYY-MM-DD) or a numeric pkey
+if [[ "$1" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+    # Date-only mode — look up the pkey automatically
+    DATE="$1"
+    PKEY=""
+    shift
+else
+    # Legacy mode — explicit pkey + date
+    PKEY="$1"
+    if [[ $# -lt 2 ]]; then
+        echo "ERROR: When passing a pkey, you must also specify a date."
+        echo "Usage: $0 <date> [options]"
+        exit 1
+    fi
+    DATE="$2"
+    shift 2
+fi
 
 while [[ $# -gt 0 ]]; do
     case "$1" in
@@ -86,6 +105,29 @@ fi
 if ! command -v node &>/dev/null; then
     echo "ERROR: node not found. Install Node.js first."
     exit 1
+fi
+
+# ── Resolve pkey from date if needed ───────────────────────────────────────────
+if [[ -z "$PKEY" ]]; then
+    echo "Looking up transcript pkey for $DATE..."
+    PKEYS=$("$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" --pkey-only 2>/dev/null)
+    PKEY_COUNT=$(echo "$PKEYS" | grep -c . || true)
+
+    if [[ "$PKEY_COUNT" -eq 0 ]] || [[ -z "$PKEYS" ]]; then
+        echo "ERROR: No transcript found for date $DATE on tampagov.net."
+        echo "Try: python3 pipeline/transcript_lookup.py --date $DATE"
+        exit 1
+    elif [[ "$PKEY_COUNT" -eq 1 ]]; then
+        PKEY="$PKEYS"
+        echo "  Found pkey: $PKEY"
+    else
+        echo "Multiple transcripts found for $DATE:"
+        # Show full info so user can pick
+        "$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" 2>/dev/null
+        echo ""
+        echo "Specify which one: $0 <pkey> $DATE [options]"
+        exit 1
+    fi
 fi
 
 # ── File paths ─────────────────────────────────────────────────────────────────

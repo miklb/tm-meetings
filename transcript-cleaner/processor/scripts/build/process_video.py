@@ -253,7 +253,7 @@ def run_pipeline(
     meeting_id: int,
     meeting_date: str,
     meeting_type: str | None = None,
-    model: str = "base",
+    model: str = "small",
     min_gap_minutes: int = 60,
     dry_run: bool = False,
     skip_fetch: bool = False,
@@ -265,7 +265,7 @@ def run_pipeline(
         meeting_id: Meeting pkey (e.g., 2645)
         meeting_date: Date string YYYY-MM-DD (e.g., "2025-11-13")
         meeting_type: Optional override (e.g., "CRA"). Auto-detected if omitted.
-        model: Whisper model name (default: "base")
+        model: Whisper model name (default: "small")
         min_gap_minutes: Gap threshold for transcript gap detection (default: 60)
         dry_run: If True, show what would happen without making changes
         skip_fetch: If True, skip YouTube API call (use existing mapping only)
@@ -449,8 +449,8 @@ Prerequisite:
     )
     parser.add_argument(
         "--model",
-        default="base",
-        help="Whisper model: tiny, base, small, medium (default: base)",
+        default="small",
+        help="Whisper model: tiny, base, small, medium (default: small)",
     )
     parser.add_argument(
         "--min-gap",

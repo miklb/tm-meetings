@@ -251,6 +251,7 @@ def main():
     parser.add_argument("--date", help="Filter to specific date (YYYY-MM-DD)")
     parser.add_argument("--pages", type=int, default=1, help="Number of index pages to fetch (default: 1)")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
+    parser.add_argument("--pkey-only", action="store_true", help="Print only the pkey(s), one per line (for scripting)")
     parser.add_argument("--match-db", action="store_true", help="Match against OnBase meetings in SQLite DB")
     parser.add_argument("--unprocessed", action="store_true", help="Show only unprocessed meetings (implies --match-db)")
     args = parser.parse_args()
@@ -265,6 +266,11 @@ def main():
 
     if args.unprocessed:
         meetings = find_unprocessed(meetings)
+
+    if args.pkey_only:
+        for m in meetings:
+            print(m["pkey"])
+        return
 
     if args.json:
         print(json.dumps(meetings, indent=2))
