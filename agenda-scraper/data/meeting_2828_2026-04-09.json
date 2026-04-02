@@ -1,0 +1,406 @@
+{
+  "meetingId": "2828",
+  "meetingType": "cra",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "April 9, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2828&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "22384",
+      "title": "File No. CRA26-22384\n5-minute presentation by the Sindaco (Mayor) of Cianciana, Sicily. (Original motion initiated by Maniscalco-Clendenin on March 12, 2026)",
+      "rawTitle": "File No. CRA26-22384\n5-minute presentation by the Sindaco (Mayor) of Cianciana, Sicily. (Original motion initiated by Maniscalco-Clendenin on March 12, 2026)",
+      "fileNumber": "CRA26-22384",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 2,
+      "agendaItemId": "22448",
+      "title": "File No. CRA24-2242\nCentral Park CAC Chair, Thomas Murphy, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "rawTitle": "File No. CRA24-2242\nCentral Park CAC Chair, Thomas Murphy, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "fileNumber": "CRA24-2242",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "22449",
+      "title": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting April Project Tracking Report, Commercial Grants Tracking Report, Residential Grants Tracking Report, and the Annual Report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting April Project Tracking Report, Commercial Grants Tracking Report, Residential Grants Tracking Report, and the Annual Report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA24-2241",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "APRIL CRA DIRECTORS REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/APRIL%20CRA%20DIRECTORS%20REPORT.PDF.pdf?documentType=1&meetingId=2828&itemId=22449&publishId=184762&isSection=False&isAttachment=True",
+          "originalTitle": "Download APRIL CRA DIRECTORS REPORT.PDF",
+          "originalText": "APRIL CRA DIRECTORS REPORT.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "22460",
+      "title": "File No. CRA26-22460 \nEast Tampa CRA/Tampa CRA Housing Division - Ybor Heights Village Homeownership Project - Domain Homes\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22460 \nEast Tampa CRA/Tampa CRA Housing Division - Ybor Heights Village Homeownership Project - Domain Homes\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22460",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DOMAIN HOMES - EAST TAMPA CAC PRESENTATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOMAIN%20HOMES%20-%20EAST%20TAMPA%20CAC%20PRESENTATION.PDF.pdf?documentType=1&meetingId=2828&itemId=22460&publishId=184763&isSection=False&isAttachment=True",
+          "originalTitle": "Download DOMAIN HOMES - EAST TAMPA CAC PRESENTATION.PDF",
+          "originalText": "DOMAIN HOMES - EAST TAMPA CAC PRESENTATION.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2828&itemId=22460&publishId=184764&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "EAST TAMPA DOMAIN HOMES-YBOR HEIGHTS MEMO.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/EAST%20TAMPA%20DOMAIN%20HOMES-YBOR%20HEIGHTS%20MEMO.PDF.pdf?documentType=1&meetingId=2828&itemId=22460&publishId=184765&isSection=False&isAttachment=True",
+          "originalTitle": "Download EAST TAMPA DOMAIN HOMES-YBOR HEIGHTS MEMO.PDF",
+          "originalText": "EAST TAMPA DOMAIN HOMES-YBOR HEIGHTS MEMO.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$75,000",
+        "$1,200,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$75,000",
+          "value": 75000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "outcomes, CRA staff recommended support in the amount of $75,000 per unit SubjectFollowing review of the development proposal, and anticipated affordability",
+            "SubjectFollowing review of the development proposal, and anticipated affordability outcomes, CRA staff recommended support in the amount of $75,000 per unit"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$1,200,000",
+          "value": 1200000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "up to $1,200,000. to support the development of these homes with total CRA funding support of",
+            "to support the development of these homes with total CRA funding support of up to $1,200,000."
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 1275000,
+        "net": 0
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "22462",
+      "title": "File No. CRA26-22462\nDowntown CRA - Historic Jackson House Restoration Update - The Community Redevelopment Agency (CRA) in 2022 approved funding of $1M from the Downtown CRA to assist The Jackson House Foundation Board of Directors in the restoration of The Jackson House located at 851 E. Zack St., Tampa, FL 33602. The Foundation’s goal over the next two years is to restore, rebuild, and preserve the historic Jackson House and open a museum to showcase stories of the house, neighborhood, city, African American and other minorities experiences in Tampa through the lens of the Jacksons and their descendants.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22462\nDowntown CRA - Historic Jackson House Restoration Update - The Community Redevelopment Agency (CRA) in 2022 approved funding of $1M from the Downtown CRA to assist The Jackson House Foundation Board of Directors in the restoration of The Jackson House located at 851 E. Zack St., Tampa, FL 33602. The Foundation’s goal over the next two years is to restore, rebuild, and preserve the historic Jackson House and open a museum to showcase stories of the house, neighborhood, city, African American and other minorities experiences in Tampa through the lens of the Jacksons and their descendants.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22462",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ADA JHF MODIFIED 2026 COT CRA II PRESENTATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ADA%20JHF%20MODIFIED%202026%20COT%20CRA%20II%20PRESENTATION.PDF.pdf?documentType=1&meetingId=2828&itemId=22462&publishId=184766&isSection=False&isAttachment=True",
+          "originalTitle": "Download ADA JHF MODIFIED 2026 COT CRA II PRESENTATION.PDF",
+          "originalText": "ADA JHF MODIFIED 2026 COT CRA II PRESENTATION.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2828&itemId=22462&publishId=184767&isSection=False&isAttachment=True",
+          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "DTJACKSONHOUSERESTORATIONPPT(CRA26-22462;ONBASENO.22462).PPTX",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DTJACKSONHOUSERESTORATIONPPT(CRA26-22462%3bONBASENO.22462).PPTX.pdf?documentType=1&meetingId=2828&itemId=22462&publishId=184768&isSection=False&isAttachment=True",
+          "originalTitle": "Download DTJACKSONHOUSERESTORATIONPPT(CRA26-22462;ONBASENO.22462).PPTX",
+          "originalText": "DTJACKSONHOUSERESTORATIONPPT(CRA26-22462;ONBASENO.22462).PPTX"
+        },
+        {
+          "title": "DTCRAJACKSONHOUSERESTORATIONMEMO(FILENO.CRA26-22462;ONBASENO.22462).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DTCRAJACKSONHOUSERESTORATIONMEMO(FILENO.CRA26-22462%3bONBASENO.22462).PDF.pdf?documentType=1&meetingId=2828&itemId=22462&publishId=184769&isSection=False&isAttachment=True",
+          "originalTitle": "Download DTCRAJACKSONHOUSERESTORATIONMEMO(FILENO.CRA26-22462;ONBASENO.22462).PDF",
+          "originalText": "DTCRAJACKSONHOUSERESTORATIONMEMO(FILENO.CRA26-22462;ONBASENO.22462).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$1"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$1",
+          "value": 1,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "Community Redevelopment Agency (CRA) in 2022 approved funding of $1M Downtown CRA - Historic Jackson House Restoration Update - The",
+            "File No. CRA26-22462 Downtown CRA - Historic Jackson House Restoration Update - The Community Redevelopment Agency (CRA) in 2022 approved funding of $1M from the Downtown CRA to assist The Jackson House Foundation Board of Directors in the restoration of The Jackson House located at 851 E. Zack St., Tampa, FL 33602. The Foundation’s goal over the next two years is to restore, rebuild, and preserve the historic Jackson House and open a museum to showcase stories of the house, neighborhood, city, African American and other minorities experiences in Tampa through the lens of the Jacksons and their descendants.",
+            "File No. CRA26-22462Historic Jackson House Restoration Update - The Community Redevelopment Agency (CRA) in 2022 approved funding of $1M from the Downtown CRA to assist The Jackson House Foundation Board of Directors in the restoration of The Jackson House located at 851 E. Zack St., Tampa, FL 33602. The Foundation’s goal over the next two years is to restore, rebuild, and preserve the historic Jackson House and open a museum to showcase stories of the house, neighborhood, city, African American and other minorities experiences in Tampa through the lens of the Jacksons and their descendants. Memorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+            "Downtown CRA - Historic Jackson House Restoration Update - The Community Redevelopment Agency (CRA) in 2022 approved funding of $1M"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 1,
+        "net": 0
+      }
+    },
+    {
+      "number": 6,
+      "agendaItemId": "22450",
+      "title": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)(Said agenda item continued from January 15, 2026 due to meeting cancellation)\n\nMemorandum from Adriana Colina, Director of Logistics and Asset Management, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)(Said agenda item continued from January 15, 2026 due to meeting cancellation)\n\nMemorandum from Adriana Colina, Director of Logistics and Asset Management, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19842",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TAMPAUNIONSTATION(FILENO.CRA25-19842%3bONBASENO.22054).PDF.pdf?documentType=1&meetingId=2828&itemId=22450&publishId=184770&isSection=False&isAttachment=True",
+          "originalTitle": "Download TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
+          "originalText": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF"
+        },
+        {
+          "title": "TAMPA UNION STATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TAMPA%20UNION%20STATION.PDF.pdf?documentType=1&meetingId=2828&itemId=22450&publishId=184771&isSection=False&isAttachment=True",
+          "originalTitle": "Download TAMPA UNION STATION.PDF",
+          "originalText": "TAMPA UNION STATION.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 7,
+      "agendaItemId": "21609",
+      "title": "File No. CRA26-21609 \nCIO’s office to work on a plan to create a TampaCRA.org website or landing page, a TampaCRA.org email address, and signatures for CRA staff; also, for a electronic Tampa CRA letterhead to be used by CRA Staff. (Original motion initiated by Carlson-Hurtak on February 12, 2026)\n\nMemorandum from Eric Hayden, Director of Technology & Innovation, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-21609 \nCIO’s office to work on a plan to create a TampaCRA.org website or landing page, a TampaCRA.org email address, and signatures for CRA staff; also, for a electronic Tampa CRA letterhead to be used by CRA Staff. (Original motion initiated by Carlson-Hurtak on February 12, 2026)\n\nMemorandum from Eric Hayden, Director of Technology & Innovation, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-21609",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "CRAWEBSITEORLANDINGPAGE(FILENO.CRA26-21609;ONBASENO.21609).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRAWEBSITEORLANDINGPAGE(FILENO.CRA26-21609%3bONBASENO.21609).PDF.pdf?documentType=1&meetingId=2828&itemId=21609&publishId=184772&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRAWEBSITEORLANDINGPAGE(FILENO.CRA26-21609;ONBASENO.21609).PDF",
+          "originalText": "CRAWEBSITEORLANDINGPAGE(FILENO.CRA26-21609;ONBASENO.21609).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    },
+    {
+      "number": 8,
+      "agendaItemId": "22463",
+      "title": "File No. CRA26-22463\nEast Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750.\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22463\nEast Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750.\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22463",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2025.030.00%20COT%20-EAST%20TAMPA%20CRA%20WAYFINDING%20AS1.PDF.pdf?documentType=1&meetingId=2828&itemId=22463&publishId=184773&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1.PDF",
+          "originalText": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1.PDF"
+        },
+        {
+          "title": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1 REV1.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2025.030.00%20COT%20-EAST%20TAMPA%20CRA%20WAYFINDING%20AS1%20REV1.PDF.pdf?documentType=1&meetingId=2828&itemId=22463&publishId=184774&isSection=False&isAttachment=True",
+          "originalTitle": "Download 2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1 REV1.PDF",
+          "originalText": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1 REV1.PDF"
+        },
+        {
+          "title": "ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463;ONBASENO.22463).PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463%3bONBASENO.22463).PDF.pdf?documentType=1&meetingId=2828&itemId=22463&publishId=184775&isSection=False&isAttachment=True",
+          "originalTitle": "Download ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463;ONBASENO.22463).PDF",
+          "originalText": "ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463;ONBASENO.22463).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$83,750"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$83,750",
+          "value": 83750,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "File No. CRA26-22463 East Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750.",
+            "File No. CRA26-22463East Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750. Memorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)"
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 83750,
+        "net": 0
+      }
+    },
+    {
+      "number": 9,
+      "agendaItemId": "22851",
+      "title": "File No. CRA26-22851 \nDrew Park CRA - Safety and Speed Management Study- Scope of Work Expansion - Staff respectfully requests that the CRA Board approve the expanded scope of work for the Drew Park Safety & Speed Management Study, including the corridor improvement tiers recommended by the Drew Park Community Advisory Committee, and authorize advancement of the associated design work.\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22851 \nDrew Park CRA - Safety and Speed Management Study- Scope of Work Expansion - Staff respectfully requests that the CRA Board approve the expanded scope of work for the Drew Park Safety & Speed Management Study, including the corridor improvement tiers recommended by the Drew Park Community Advisory Committee, and authorize advancement of the associated design work.\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22851",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DREW PARK CRA CAC PRESENTATION_11-19-25_FINAL ADA.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DREW%20PARK%20CRA%20CAC%20PRESENTATION_11-19-25_FINAL%20ADA.PDF.pdf?documentType=1&meetingId=2828&itemId=22851&publishId=184776&isSection=False&isAttachment=True",
+          "originalTitle": "Download DREW PARK CRA CAC PRESENTATION_11-19-25_FINAL ADA.PDF",
+          "originalText": "DREW PARK CRA CAC PRESENTATION_11-19-25_FINAL ADA.PDF"
+        },
+        {
+          "title": "TERRA TECHTONIC ATTACHMENT ADA.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TERRA%20TECHTONIC%20ATTACHMENT%20ADA.PDF.pdf?documentType=1&meetingId=2828&itemId=22851&publishId=184777&isSection=False&isAttachment=True",
+          "originalTitle": "Download TERRA TECHTONIC ATTACHMENT ADA.PDF",
+          "originalText": "TERRA TECHTONIC ATTACHMENT ADA.PDF"
+        },
+        {
+          "title": "SIGNED DP MOBILITY SCOPE OF WORK.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SIGNED%20DP%20MOBILITY%20SCOPE%20OF%20WORK.PDF.pdf?documentType=1&meetingId=2828&itemId=22851&publishId=184778&isSection=False&isAttachment=True",
+          "originalTitle": "Download SIGNED DP MOBILITY SCOPE OF WORK.PDF",
+          "originalText": "SIGNED DP MOBILITY SCOPE OF WORK.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "financialSummary": {
+    "totalAmountDiscussed": 1283751,
+    "formattedTotalAmountDiscussed": "$1,283,751.00",
+    "itemCount": 3,
+    "range": {
+      "smallest": {
+        "number": 5,
+        "fileNumber": "CRA26-22462",
+        "amount": 1,
+        "formatted": "$1.00"
+      },
+      "largest": {
+        "number": 4,
+        "fileNumber": "CRA26-22460",
+        "amount": 1200000,
+        "formatted": "$1,200,000.00"
+      }
+    },
+    "totalExpenditures": 0,
+    "formattedTotalExpenditures": "$0.00",
+    "expenditureRange": null,
+    "expenditureItems": []
+  },
+  "formattedDate": "2026-04-09"
+}
