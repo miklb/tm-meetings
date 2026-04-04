@@ -260,13 +260,7 @@ try {
     } else {
       console.log(`\n🔍 Found ${diffs.length} meaningful changes:\n`);
       console.log(formatDiff(diffs));
-    }newData);
-  
-  if (diffs.length === 0) {
-    console.log('✅ No meaningful changes (URL-only changes ignored)');
-  } else {
-    console.log(`\n🔍 Found ${diffs.length} meaningful changes:\n`);
-    console.log(formatDiff(diffs));
+    }
   }
   
 } catch (error) {
