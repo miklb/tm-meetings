@@ -64,26 +64,26 @@ fi
 
 if [ "$EXISTING_JSON" -gt 0 ]; then
     echo "Found $EXISTING_JSON JSON file(s) for date $DATE"
-    echo "Step 2: Converting to WordPress markup..."
+
+    # Step 2: Mirror documents to R2 (unless --skip-mirror)
+    if [ "$SKIP_MIRROR" = "true" ]; then
+        echo "⏭  Skipping document mirroring (--skip-mirror)"
+    else
+        echo "Step 2: Mirroring documents to R2..."
+        node mirror-documents.js --date "$DATE"
+        if [ $? -eq 0 ]; then
+            echo "✓ Document mirroring completed"
+        else
+            echo "⚠️  Document mirroring had errors (non-fatal)"
+        fi
+        echo ""
+    fi
+
+    echo "Step 3: Converting to WordPress markup..."
     node json-to-wordpress.js --date "$DATE"
 
     if [ $? -eq 0 ]; then
         echo "✓ WordPress conversion completed successfully"
-        echo ""
-
-        # Step 3: Mirror documents to R2 (unless --skip-mirror)
-        if [ "$SKIP_MIRROR" = "true" ]; then
-            echo "⏭  Skipping document mirroring (--skip-mirror)"
-        else
-            echo "Step 3: Mirroring documents to R2..."
-            node mirror-documents.js --date "$DATE"
-            if [ $? -eq 0 ]; then
-                echo "✓ Document mirroring completed"
-            else
-                echo "⚠️  Document mirroring had errors (non-fatal)"
-            fi
-        fi
-
         echo ""
         echo "🎉 Agenda processing complete!"
         echo "Check the agendas/ directory for your wp.html file(s)"
