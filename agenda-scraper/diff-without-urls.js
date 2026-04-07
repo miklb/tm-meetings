@@ -225,9 +225,9 @@ function formatSummary(diffs) {
 // Main
 const args = process.argv.slice(2);
 
-// Check for flags
+// Check for flags (preserve '-' as stdin indicator)
 const summaryMode = args.includes('--summary') || args.includes('-s');
-const filteredArgs = args.filter(arg => !arg.startsWith('-'));
+const filteredArgs = args.filter(arg => arg === '-' || !arg.startsWith('-'));
 
 if (filteredArgs.length < 2) {
   console.error('Usage: node diff-without-urls.js [--summary|-s] <old-file> <new-file>');
