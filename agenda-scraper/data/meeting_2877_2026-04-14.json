@@ -1,0 +1,51 @@
+{
+  "meetingId": "2877",
+  "meetingType": "special",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "April 14, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2877&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "23124",
+      "title": "File No. CRA26-23124\nCRA Board to discuss the CRA Service Agreement, the Annual Performance Measures, and the Community Benefits Agreements. (Original motion initiated by Maniscalco-Young on April 9, 2026)",
+      "rawTitle": "File No. CRA26-23124\nCRA Board to discuss the CRA Service Agreement, the Annual Performance Measures, and the Community Benefits Agreements. (Original motion initiated by Maniscalco-Young on April 9, 2026)",
+      "fileNumber": "CRA26-23124",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "CRA RESOLUTION AND FY26 SERVICES AGREEMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20AND%20FY26%20SERVICES%20AGREEMENT.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185620&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRA RESOLUTION AND FY26 SERVICES AGREEMENT.PDF",
+          "originalText": "CRA RESOLUTION AND FY26 SERVICES AGREEMENT.PDF"
+        },
+        {
+          "title": "CRA-COT SERVICES AGREEMENT-CARLSON.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA-COT%20SERVICES%20AGREEMENT-CARLSON.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185621&isSection=False&isAttachment=True",
+          "originalTitle": "Download CRA-COT SERVICES AGREEMENT-CARLSON.PDF",
+          "originalText": "CRA-COT SERVICES AGREEMENT-CARLSON.PDF"
+        },
+        {
+          "title": "TAMPA CRA PERFORMANCE AND STANDARDS REPORT_2025 DRAFT2.PDF",
+          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TAMPA%20CRA%20PERFORMANCE%20AND%20STANDARDS%20REPORT_2025%20DRAFT2.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185622&isSection=False&isAttachment=True",
+          "originalTitle": "Download TAMPA CRA PERFORMANCE AND STANDARDS REPORT_2025 DRAFT2.PDF",
+          "originalText": "TAMPA CRA PERFORMANCE AND STANDARDS REPORT_2025 DRAFT2.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-04-14"
+}
