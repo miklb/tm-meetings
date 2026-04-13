@@ -11,6 +11,7 @@ const path = require('path');
 
 const {
   BASE_URL,
+  AGENDA_BASE,
   absoluteUrl,
   extractMeetingDate,
   extractLoadAgendaConfig,
@@ -49,7 +50,7 @@ async function createSession() {
  * @returns {Promise<string>} - Agenda HTML
  */
 async function fetchAgendaDocument(client, meetingId) {
-  const agendaUrl = `${BASE_URL}/221agendaonline/Documents/ViewAgenda?meetingId=${meetingId}&type=agenda&doctype=1`;
+  const agendaUrl = `${AGENDA_BASE}/Documents/ViewAgenda?meetingId=${meetingId}&type=agenda&doctype=1`;
   const response = await client.get(agendaUrl, { timeout: 30000 });
   return response.data;
 }
@@ -271,7 +272,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   }
 
   const client = session || await createSession();
-  const meetingUrl = `${BASE_URL}/221agendaonline/Meetings/ViewMeeting?id=${meetingId}&doctype=1`;
+  const meetingUrl = `${AGENDA_BASE}/Meetings/ViewMeeting?id=${meetingId}&doctype=1`;
 
   console.log(`[HTTP] Fetching meeting ${meetingId}...`);
   
@@ -512,7 +513,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     agendaType,
     isAddendum,
     meetingDate,
-    sourceUrl: `${BASE_URL}/221agendaonline/Documents/ViewAgenda?meetingId=${meetingId}&type=agenda&doctype=1`,
+    sourceUrl: `${AGENDA_BASE}/Documents/ViewAgenda?meetingId=${meetingId}&type=agenda&doctype=1`,
     agendaItems: processedItems
   };
 
@@ -644,6 +645,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
 
 /**
  * Fetch meeting list from main agenda page
+ * v251 embeds meeting data as JSON in an inline script call to showSearchResults()
  * @param {Object} options - Options
  * @param {Object} options.session - Existing axios session (optional)
  * @returns {Promise<Array>} - Array of meeting objects with id, type, href
@@ -651,13 +653,64 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
 async function fetchMeetingList(options = {}) {
   const { session } = options;
   const client = session || await createSession();
-  const url = `${BASE_URL}/221agendaonline/`;
+  const url = `${AGENDA_BASE}/`;
 
   console.log('[HTTP] Fetching meeting list...');
   
   const response = await client.get(url, { timeout: 30000 });
   const html = response.data;
   
+  // v251: meetings are embedded as JSON in showSearchResults(new SearchResults({...}))
+  const jsonMatch = html.match(/showSearchResults\(new\s+SearchResults\((\{[\s\S]*?\})\)\)/);
+  if (!jsonMatch) {
+    console.log('[HTTP] Warning: Could not find embedded meeting JSON, falling back to HTML parsing');
+    return fetchMeetingListFromHTML(html);
+  }
+
+  let data;
+  try {
+    data = JSON.parse(jsonMatch[1]);
+  } catch (e) {
+    console.log(`[HTTP] Warning: Failed to parse embedded JSON: ${e.message}`);
+    return fetchMeetingListFromHTML(html);
+  }
+
+  const meetings = [];
+  for (const m of (data.Meetings || [])) {
+    // Only include meetings that have an agenda available
+    if (!m.IsAgendaAvailable) continue;
+
+    const name = (m.Name || '').toLowerCase();
+    const typeName = (m.MeetingTypeName || '').toLowerCase();
+    let meetingType = 'regular';
+
+    if (typeName.includes('evening') || name.includes('evening')) {
+      meetingType = 'evening';
+    } else if (typeName.includes('workshop') || name.includes('workshop')) {
+      meetingType = 'workshop';
+    } else if (typeName.includes('special') || name.includes('special')) {
+      meetingType = 'special';
+    } else if (typeName.includes('cra') || name.includes('cra') || name.includes('community redevelopment')) {
+      meetingType = 'cra';
+    }
+
+    meetings.push({
+      id: String(m.ID),
+      type: meetingType,
+      href: `${AGENDA_BASE}/Meetings/ViewMeeting?id=${m.ID}&doctype=1`
+    });
+  }
+
+  console.log(`[HTTP] Found ${meetings.length} meetings`);
+  return meetings;
+}
+
+/**
+ * Fallback: parse meeting list from HTML tables (v221 format)
+ * @param {string} html - Page HTML
+ * @returns {Array} - Array of meeting objects
+ */
+function fetchMeetingListFromHTML(html) {
   const cheerio = require('cheerio');
   const $ = cheerio.load(html);
   const meetings = [];
@@ -671,7 +724,6 @@ async function fetchMeetingList(options = {}) {
     const lastTd = $tr.find('td').last();
     const links = lastTd.find('a[href]');
     
-    // Check if row has an agenda link (not just summary)
     let hasAgendaLink = false;
     links.each((j, link) => {
       const linkText = $(link).text().trim().toLowerCase();
@@ -685,7 +737,6 @@ async function fetchMeetingList(options = {}) {
 
     if (!hasAgendaLink) return;
 
-    // Determine meeting type from row content
     const rowText = $tr.text().toLowerCase();
     let meetingType = 'regular';
     
@@ -711,8 +762,7 @@ async function fetchMeetingList(options = {}) {
     });
   });
 
-  console.log(`[HTTP] Found ${meetings.length} meetings`);
-  
+  console.log(`[HTTP] Found ${meetings.length} meetings (HTML fallback)`);
   return meetings;
 }
 

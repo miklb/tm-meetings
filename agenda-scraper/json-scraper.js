@@ -9,6 +9,7 @@ const { integrateStaffReportsIntoAgendaItems } = require('./staff-report-parser'
 
 // HTTP scraper module (default)
 const { createSession, fetchMeeting, fetchMeetingList } = require('./lib/http-meeting-scraper');
+const { AGENDA_BASE } = require('./lib/http-utils');
 
 /**
  * Format a date string for use in filenames (converts to YYYY-MM-DD format)
@@ -1552,7 +1553,7 @@ async function main() {
     console.log(`Engine: ${useSelenium ? 'Selenium (legacy)' : 'HTTP (default)'}\n`);
     
     // URL of the page to scrape for meeting IDs
-    let url = 'https://tampagov.hylandcloud.com/221agendaonline/';
+    let url = `${AGENDA_BASE}/`;
     
     if (useSelenium) {
         // Legacy Selenium path
@@ -1563,7 +1564,7 @@ async function main() {
             const meetingType = meetingInfo ? meetingInfo.type : 'regular';
             
             // Process single meeting with its type
-            const meetingUrl = `https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=${specificMeetingId}&doctype=1`;
+            const meetingUrl = `${AGENDA_BASE}/Meetings/ViewMeeting?id=${specificMeetingId}&doctype=1`;
             await scrapeWithSelenium(meetingUrl, specificMeetingId, meetingType);
             return;
         }
@@ -1574,7 +1575,7 @@ async function main() {
         // Scrape each meeting ID sequentially
         for (let meeting of meetingsData) {
             // Use the correct rendered agenda URL
-            let meetingUrl = `https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=${meeting.id}&doctype=1`;
+            let meetingUrl = `${AGENDA_BASE}/Meetings/ViewMeeting?id=${meeting.id}&doctype=1`;
             await scrapeWithSelenium(meetingUrl, meeting.id, meeting.type);
         }
     } else {

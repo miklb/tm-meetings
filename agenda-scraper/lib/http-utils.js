@@ -4,6 +4,8 @@
  */
 
 const BASE_URL = 'https://tampagov.hylandcloud.com';
+const ONBASE_PATH = '251agendaonline';
+const AGENDA_BASE = `${BASE_URL}/${ONBASE_PATH}`;
 
 /**
  * Convert relative or absolute URL to absolute URL
@@ -287,6 +289,8 @@ function formatCurrency(value) {
 
 module.exports = {
   BASE_URL,
+  ONBASE_PATH,
+  AGENDA_BASE,
   absoluteUrl,
   convertToDirectPDFUrl,
   extractMeetingDate,
