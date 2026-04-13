@@ -1,0 +1,98 @@
+{
+  "meeting_id": 2668,
+  "meeting_date": "2026-04-02",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "k5qHbEdGQz8",
+      "title": "Tampa City Council - 04/02/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-04-03T05:08:21Z",
+      "duration": "PT3H41M16S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-15 - Police Officer of the Month",
+          "timestamp": "00:17:26",
+          "seconds": 1046
+        },
+        {
+          "title": "Item 3: CM26-21460 - Accounting Staff Recognition",
+          "timestamp": "00:34:19",
+          "seconds": 2059
+        },
+        {
+          "title": "Item 4: CM26-22311 - Water and Wastewater Fees",
+          "timestamp": "00:39:05",
+          "seconds": 2345
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:08:01",
+          "seconds": 4081
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:58:08",
+          "seconds": 7088
+        },
+        {
+          "title": "Item 19: REZ-25-126 - 4102 North 22nd Street",
+          "timestamp": "02:01:24",
+          "seconds": 7284
+        },
+        {
+          "title": "Item 20: REZ-25-129 - 2707 East 22nd Avenue",
+          "timestamp": "02:11:18",
+          "seconds": 7878
+        },
+        {
+          "title": "Item 21: REZ-26-32 - 110 South Boulevard",
+          "timestamp": "02:14:58",
+          "seconds": 8098
+        },
+        {
+          "title": "Item 22: E2026-8 CH 2 - Veterans Advisory Committee Creation",
+          "timestamp": "02:17:18",
+          "seconds": 8238
+        },
+        {
+          "title": "Item 23: E2026-8 CH 26 - Water and Wastewater Fee Increase",
+          "timestamp": "02:41:44",
+          "seconds": 9704
+        },
+        {
+          "title": "Items 14 & 15",
+          "timestamp": "02:49:59",
+          "seconds": 10199
+        },
+        {
+          "title": "Item 26: PS26-21298 - Howard Annex Contract",
+          "timestamp": "03:11:45",
+          "seconds": 11505
+        },
+        {
+          "title": "Item 31: CM24-5717 - Station 24 Update",
+          "timestamp": "03:20:35",
+          "seconds": 12035
+        },
+        {
+          "title": "Item 32: CM25-17927 - Disability Internship Update",
+          "timestamp": "03:28:35",
+          "seconds": 12515
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:31:05",
+          "seconds": 12665
+        }
+      ],
+      "offset_seconds": 459
+    }
+  ]
+}
