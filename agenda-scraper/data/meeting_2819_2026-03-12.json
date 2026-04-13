@@ -1,10 +1,10 @@
 {
   "meetingId": "2819",
-  "meetingType": "regular",
+  "meetingType": "evening",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "March 12, 2026",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2819&type=agenda&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2819&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
@@ -37,24 +37,21 @@
       "supportingDocuments": [
         {
           "title": "RESO CBA IAFF.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%20CBA%20IAFF.DOCX.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182627&isSection=False&isAttachment=True",
-          "originalTitle": "Download RESO CBA IAFF.DOCX",
-          "originalText": "RESO CBA IAFF.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22306/reso-cba-iaff.docx"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RESO%20CBA%20IAFF.DOCX.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182627&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RESO CBA IAFF.DOCX in a new tab",
+          "originalText": "RESO CBA IAFF.DOCX"
         },
         {
           "title": "IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/IAFF%202025-2028%20RATIFIED%20WITH%20PAY%20TABLES%20AND%20LETTER.PDF.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182628&isSection=False&isAttachment=True",
-          "originalTitle": "Download IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF",
-          "originalText": "IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22306/iaff-2025-2028-ratified-with-pay-tables-and-letter.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/IAFF%202025-2028%20RATIFIED%20WITH%20PAY%20TABLES%20AND%20LETTER.PDF.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182628&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF in a new tab",
+          "originalText": "IAFF 2025-2028 RATIFIED WITH PAY TABLES AND LETTER.PDF"
         },
         {
           "title": "IAFF 2025-2028 EXECUTIVE SUMMARY.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/IAFF%202025-2028%20EXECUTIVE%20SUMMARY.PDF.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182629&isSection=False&isAttachment=True",
-          "originalTitle": "Download IAFF 2025-2028 EXECUTIVE SUMMARY.PDF",
-          "originalText": "IAFF 2025-2028 EXECUTIVE SUMMARY.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22306/iaff-2025-2028-executive-summary.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/IAFF%202025-2028%20EXECUTIVE%20SUMMARY.PDF.pdf?documentType=1&meetingId=2819&itemId=22306&publishId=182629&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of IAFF 2025-2028 EXECUTIVE SUMMARY.PDF in a new tab",
+          "originalText": "IAFF 2025-2028 EXECUTIVE SUMMARY.PDF"
         }
       ],
       "folioNumbers": [],
@@ -80,59 +77,51 @@
       "supportingDocuments": [
         {
           "title": "REZ-25-112 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182630&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-112 CERTIFIED APP FINAL.PDF",
-          "originalText": "REZ-25-112 CERTIFIED APP FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez-25-112-certified-app-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-112%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182630&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-112 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-25-112 CERTIFIED APP FINAL.PDF"
         },
         {
           "title": "REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182631&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF",
-          "originalText": "REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez-25-112-affidavit-of-compliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-112%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182631&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-25-112 AFFIDAVIT OF COMPLIANCE.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182632&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182632&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "REZ-25-112 STAFF REPORT_FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-112%20STAFF%20REPORT_FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182633&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-112 STAFF REPORT_FINAL.PDF",
-          "originalText": "REZ-25-112 STAFF REPORT_FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez-25-112-staff-report_final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-112%20STAFF%20REPORT_FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182633&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-112 STAFF REPORT_FINAL.PDF in a new tab",
+          "originalText": "REZ-25-112 STAFF REPORT_FINAL.PDF"
         },
         {
           "title": "1-WRITTEN COMMENTS -  REZ-25-112.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20%20REZ-25-112.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182634&isSection=False&isAttachment=True",
-          "originalTitle": "Download 1-WRITTEN COMMENTS -  REZ-25-112.PDF",
-          "originalText": "1-WRITTEN COMMENTS -  REZ-25-112.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/1-written-comments-rez-25-112.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20%20REZ-25-112.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182634&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENTS -  REZ-25-112.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENTS -  REZ-25-112.PDF"
         },
         {
           "title": "REZ25-112 ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-112%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182635&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ25-112 ORDINANCE.PDF",
-          "originalText": "REZ25-112 ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez25-112-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ25-112%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182635&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ25-112 ORDINANCE.PDF in a new tab",
+          "originalText": "REZ25-112 ORDINANCE.PDF"
         },
         {
           "title": "REZ25-112 BIE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-112%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182636&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ25-112 BIE.PDF",
-          "originalText": "REZ25-112 BIE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/rez25-112-bie.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ25-112%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182636&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ25-112 BIE.PDF in a new tab",
+          "originalText": "REZ25-112 BIE.PDF"
         },
         {
           "title": "2-WRITTEN COMMENTS -  REZ-25-112.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20%20REZ-25-112.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182637&isSection=False&isAttachment=True",
-          "originalTitle": "Download 2-WRITTEN COMMENTS -  REZ-25-112.PDF",
-          "originalText": "2-WRITTEN COMMENTS -  REZ-25-112.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22289/2-written-comments-rez-25-112.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20%20REZ-25-112.PDF.pdf?documentType=1&meetingId=2819&itemId=22289&publishId=182637&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2-WRITTEN COMMENTS -  REZ-25-112.PDF in a new tab",
+          "originalText": "2-WRITTEN COMMENTS -  REZ-25-112.PDF"
         }
       ],
       "folioNumbers": [],
@@ -158,52 +147,45 @@
       "supportingDocuments": [
         {
           "title": "REZ-25-126 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182638&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-126 CERTIFIED APP FINAL.PDF",
-          "originalText": "REZ-25-126 CERTIFIED APP FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-certified-app-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-126%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182638&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-126 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-25-126 CERTIFIED APP FINAL.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182639&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182639&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182640&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF",
-          "originalText": "REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-affidavit-of-compliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-126%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182640&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-25-126 AFFIDAVIT OF COMPLIANCE.PDF"
         },
         {
           "title": "REZ-25-126 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182641&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-126 FINAL SITE PLAN.PDF",
-          "originalText": "REZ-25-126 FINAL SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-final-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-126%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182641&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-126 FINAL SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-25-126 FINAL SITE PLAN.PDF"
         },
         {
           "title": "REZ-25-126 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-126%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182642&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-126 STAFF REPORT FINAL.PDF",
-          "originalText": "REZ-25-126 STAFF REPORT FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez-25-126-staff-report-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-126%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182642&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-126 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-25-126 STAFF REPORT FINAL.PDF"
         },
         {
           "title": "REZ25-126 ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-126%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182643&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ25-126 ORDINANCE.PDF",
-          "originalText": "REZ25-126 ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez25-126-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ25-126%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182643&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ25-126 ORDINANCE.PDF in a new tab",
+          "originalText": "REZ25-126 ORDINANCE.PDF"
         },
         {
           "title": "REZ25-126 BIE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-126%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182644&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ25-126 BIE.PDF",
-          "originalText": "REZ25-126 BIE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22174/rez25-126-bie.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ25-126%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22174&publishId=182644&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ25-126 BIE.PDF in a new tab",
+          "originalText": "REZ25-126 BIE.PDF"
         }
       ],
       "folioNumbers": [],
@@ -239,59 +221,51 @@
       "supportingDocuments": [
         {
           "title": "REZ-25-129 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182645&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-129 CERTIFIED APP FINAL.PDF",
-          "originalText": "REZ-25-129 CERTIFIED APP FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-certified-app-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-129%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182645&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-129 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-25-129 CERTIFIED APP FINAL.PDF"
         },
         {
           "title": "REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182646&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF",
-          "originalText": "REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-affidavit-of-compliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-129%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182646&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-25-129 AFFIDAVIT OF COMPLIANCE.PDF"
         },
         {
           "title": "REZ-25-129 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182647&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-129 FINAL SITE PLAN.PDF",
-          "originalText": "REZ-25-129 FINAL SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-final-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-129%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182647&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-129 FINAL SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-25-129 FINAL SITE PLAN.PDF"
         },
         {
           "title": "REZ-25-129 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182648&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-129 STAFF REPORT FINAL.PDF",
-          "originalText": "REZ-25-129 STAFF REPORT FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-staff-report-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-129%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182648&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-129 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-25-129 STAFF REPORT FINAL.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182649&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182649&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "REZ25-129 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-129%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182650&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ25-129 BPA.PDF",
-          "originalText": "REZ25-129 BPA.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez25-129-bpa.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ25-129%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182650&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ25-129 BPA.PDF in a new tab",
+          "originalText": "REZ25-129 BPA.PDF"
         },
         {
           "title": "REZ-25-129 ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-25-129%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182651&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-25-129 ORDINANCE.PDF",
-          "originalText": "REZ-25-129 ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez-25-129-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-129%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182651&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-25-129 ORDINANCE.PDF in a new tab",
+          "originalText": "REZ-25-129 ORDINANCE.PDF"
         },
         {
           "title": "REZ25-129 BIE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ25-129%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182652&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ25-129 BIE.PDF",
-          "originalText": "REZ25-129 BIE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22166/rez25-129-bie.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ25-129%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22166&publishId=182652&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ25-129 BIE.PDF in a new tab",
+          "originalText": "REZ25-129 BIE.PDF"
         }
       ],
       "folioNumbers": [],
@@ -327,80 +301,69 @@
       "supportingDocuments": [
         {
           "title": "REZ-26-02 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182653&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-02 CERTIFIED APP FINAL.PDF",
-          "originalText": "REZ-26-02 CERTIFIED APP FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-certified-app-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-02%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182653&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-02 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-26-02 CERTIFIED APP FINAL.PDF"
         },
         {
           "title": "REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182654&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF",
-          "originalText": "REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-affidavit-of-compliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-02%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182654&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-02 AFFIDAVIT OF COMPLIANCE.PDF"
         },
         {
           "title": "REZ-26-02 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182655&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-02 FINAL SITE PLAN.PDF",
-          "originalText": "REZ-26-02 FINAL SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-final-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-02%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182655&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-02 FINAL SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-02 FINAL SITE PLAN.PDF"
         },
         {
           "title": "REZ-26-02 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-02%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182656&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-02 STAFF REPORT FINAL.PDF",
-          "originalText": "REZ-26-02 STAFF REPORT FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez-26-02-staff-report-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-02%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182656&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-02 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-02 STAFF REPORT FINAL.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182657&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182657&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "REZ26-02 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-02%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182658&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-02 BPA.PDF",
-          "originalText": "REZ26-02 BPA.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez26-02-bpa.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-02%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182658&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-02 BPA.PDF in a new tab",
+          "originalText": "REZ26-02 BPA.PDF"
         },
         {
           "title": "REZ26-02 ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-02%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182659&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-02 ORDINANCE.PDF",
-          "originalText": "REZ26-02 ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez26-02-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-02%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182659&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-02 ORDINANCE.PDF in a new tab",
+          "originalText": "REZ26-02 ORDINANCE.PDF"
         },
         {
           "title": "REZ26-02 BIE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-02%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182660&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-02 BIE.PDF",
-          "originalText": "REZ26-02 BIE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/rez26-02-bie.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-02%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182660&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-02 BIE.PDF in a new tab",
+          "originalText": "REZ26-02 BIE.PDF"
         },
         {
           "title": "1-WRITTEN COMMENTS - REZ-26-02.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182661&isSection=False&isAttachment=True",
-          "originalTitle": "Download 1-WRITTEN COMMENTS - REZ-26-02.PDF",
-          "originalText": "1-WRITTEN COMMENTS - REZ-26-02.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/1-written-comments-rez-26-02.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182661&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENTS - REZ-26-02.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENTS - REZ-26-02.PDF"
         },
         {
           "title": "2-WRITTEN COMMENTS - REZ-26-02.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182662&isSection=False&isAttachment=True",
-          "originalTitle": "Download 2-WRITTEN COMMENTS - REZ-26-02.PDF",
-          "originalText": "2-WRITTEN COMMENTS - REZ-26-02.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/2-written-comments-rez-26-02.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182662&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2-WRITTEN COMMENTS - REZ-26-02.PDF in a new tab",
+          "originalText": "2-WRITTEN COMMENTS - REZ-26-02.PDF"
         },
         {
           "title": "3-WRITTEN COMMENT - REZ-26-02.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENT%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182663&isSection=False&isAttachment=True",
-          "originalTitle": "Download 3-WRITTEN COMMENT - REZ-26-02.PDF",
-          "originalText": "3-WRITTEN COMMENT - REZ-26-02.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22167/3-written-comment-rez-26-02.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENT%20-%20REZ-26-02.PDF.pdf?documentType=1&meetingId=2819&itemId=22167&publishId=182663&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 3-WRITTEN COMMENT - REZ-26-02.PDF in a new tab",
+          "originalText": "3-WRITTEN COMMENT - REZ-26-02.PDF"
         }
       ],
       "folioNumbers": [],
@@ -436,80 +399,69 @@
       "supportingDocuments": [
         {
           "title": "REZ-26-03 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182664&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-03 CERTIFIED APP FINAL.PDF",
-          "originalText": "REZ-26-03 CERTIFIED APP FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-certified-app-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-03%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182664&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-03 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-26-03 CERTIFIED APP FINAL.PDF"
         },
         {
           "title": "REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182665&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF",
-          "originalText": "REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-affidavit-of-compliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-03%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182665&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-03 AFFIDAVIT OF COMPLIANCE.PDF"
         },
         {
           "title": "REZ-26-03 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182666&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-03 FINAL SITE PLAN.PDF",
-          "originalText": "REZ-26-03 FINAL SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-final-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-03%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182666&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-03 FINAL SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-03 FINAL SITE PLAN.PDF"
         },
         {
           "title": "REZ-26-03 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-03%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182667&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-03 STAFF REPORT FINAL.PDF",
-          "originalText": "REZ-26-03 STAFF REPORT FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez-26-03-staff-report-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-03%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182667&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-03 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-03 STAFF REPORT FINAL.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182668&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182668&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "REZ26-03 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-03%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182669&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-03 BPA.PDF",
-          "originalText": "REZ26-03 BPA.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez26-03-bpa.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-03%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182669&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-03 BPA.PDF in a new tab",
+          "originalText": "REZ26-03 BPA.PDF"
         },
         {
           "title": "REZ26-03 ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-03%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182670&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-03 ORDINANCE.PDF",
-          "originalText": "REZ26-03 ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez26-03-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-03%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182670&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-03 ORDINANCE.PDF in a new tab",
+          "originalText": "REZ26-03 ORDINANCE.PDF"
         },
         {
           "title": "REZ26-03 BIE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-03%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182671&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-03 BIE.PDF",
-          "originalText": "REZ26-03 BIE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/rez26-03-bie.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-03%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182671&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-03 BIE.PDF in a new tab",
+          "originalText": "REZ26-03 BIE.PDF"
         },
         {
           "title": "1-WRITTEN COMMENTS - REZ-26-03.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182672&isSection=False&isAttachment=True",
-          "originalTitle": "Download 1-WRITTEN COMMENTS - REZ-26-03.PDF",
-          "originalText": "1-WRITTEN COMMENTS - REZ-26-03.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/1-written-comments-rez-26-03.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182672&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENTS - REZ-26-03.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENTS - REZ-26-03.PDF"
         },
         {
           "title": "2-WRITTEN COMMENTS - REZ-26-03.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182673&isSection=False&isAttachment=True",
-          "originalTitle": "Download 2-WRITTEN COMMENTS - REZ-26-03.PDF",
-          "originalText": "2-WRITTEN COMMENTS - REZ-26-03.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/2-written-comments-rez-26-03.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182673&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2-WRITTEN COMMENTS - REZ-26-03.PDF in a new tab",
+          "originalText": "2-WRITTEN COMMENTS - REZ-26-03.PDF"
         },
         {
           "title": "3-WRITTEN COMMENT - REZ-26-03.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENT%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182674&isSection=False&isAttachment=True",
-          "originalTitle": "Download 3-WRITTEN COMMENT - REZ-26-03.PDF",
-          "originalText": "3-WRITTEN COMMENT - REZ-26-03.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22168/3-written-comment-rez-26-03.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENT%20-%20REZ-26-03.PDF.pdf?documentType=1&meetingId=2819&itemId=22168&publishId=182674&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 3-WRITTEN COMMENT - REZ-26-03.PDF in a new tab",
+          "originalText": "3-WRITTEN COMMENT - REZ-26-03.PDF"
         }
       ],
       "folioNumbers": [],
@@ -545,52 +497,45 @@
       "supportingDocuments": [
         {
           "title": "REZ-26-06 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182675&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-06 CERTIFIED APP FINAL.PDF",
-          "originalText": "REZ-26-06 CERTIFIED APP FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-certified-app-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-06%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182675&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-06 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-26-06 CERTIFIED APP FINAL.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182676&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182676&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182677&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF",
-          "originalText": "REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-affidavit-of-compliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-06%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182677&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-06 AFFIDAVIT OF COMPLIANCE.PDF"
         },
         {
           "title": "REZ-26-06 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182678&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-06 FINAL SITE PLAN.PDF",
-          "originalText": "REZ-26-06 FINAL SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-final-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-06%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182678&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-06 FINAL SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-06 FINAL SITE PLAN.PDF"
         },
         {
           "title": "REZ-26-06 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-06%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182679&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-06 STAFF REPORT FINAL.PDF",
-          "originalText": "REZ-26-06 STAFF REPORT FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez-26-06-staff-report-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-06%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182679&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-06 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-06 STAFF REPORT FINAL.PDF"
         },
         {
           "title": "REZ26-06 ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-06%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182680&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-06 ORDINANCE.PDF",
-          "originalText": "REZ26-06 ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez26-06-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-06%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182680&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-06 ORDINANCE.PDF in a new tab",
+          "originalText": "REZ26-06 ORDINANCE.PDF"
         },
         {
           "title": "REZ26-06 BIE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-06%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182681&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-06 BIE.PDF",
-          "originalText": "REZ26-06 BIE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22169/rez26-06-bie.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-06%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22169&publishId=182681&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-06 BIE.PDF in a new tab",
+          "originalText": "REZ26-06 BIE.PDF"
         }
       ],
       "folioNumbers": [],
@@ -626,73 +571,63 @@
       "supportingDocuments": [
         {
           "title": "REZ-26-32 CERTIFIED APP FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182682&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-32 CERTIFIED APP FINAL.PDF",
-          "originalText": "REZ-26-32 CERTIFIED APP FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-certified-app-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-32%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182682&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-32 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-26-32 CERTIFIED APP FINAL.PDF"
         },
         {
           "title": "REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182683&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF",
-          "originalText": "REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-affidavit-of-compliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-32%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182683&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-32 AFFIDAVIT OF COMPLIANCE.PDF"
         },
         {
           "title": "REZ-26-32 FINAL SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182684&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-32 FINAL SITE PLAN.PDF",
-          "originalText": "REZ-26-32 FINAL SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-final-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-32%20FINAL%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182684&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-32 FINAL SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-32 FINAL SITE PLAN.PDF"
         },
         {
           "title": "REZ-26-32 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ-26-32%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182685&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ-26-32 STAFF REPORT FINAL.PDF",
-          "originalText": "REZ-26-32 STAFF REPORT FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez-26-32-staff-report-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-32%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182685&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-32 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-32 STAFF REPORT FINAL.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182686&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182686&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "REZ26-32 BPA.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-32%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182687&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-32 BPA.PDF",
-          "originalText": "REZ26-32 BPA.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez26-32-bpa.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-32%20BPA.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182687&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-32 BPA.PDF in a new tab",
+          "originalText": "REZ26-32 BPA.PDF"
         },
         {
           "title": "REZ26-32 ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-32%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182688&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-32 ORDINANCE.PDF",
-          "originalText": "REZ26-32 ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez26-32-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-32%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182688&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-32 ORDINANCE.PDF in a new tab",
+          "originalText": "REZ26-32 ORDINANCE.PDF"
         },
         {
           "title": "REZ26-32 BIE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/REZ26-32%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182689&isSection=False&isAttachment=True",
-          "originalTitle": "Download REZ26-32 BIE.PDF",
-          "originalText": "REZ26-32 BIE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/rez26-32-bie.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ26-32%20BIE.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182689&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ26-32 BIE.PDF in a new tab",
+          "originalText": "REZ26-32 BIE.PDF"
         },
         {
           "title": "1-WRITTEN COMMENT - REZ-26-32.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20-%20REZ-26-32.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182690&isSection=False&isAttachment=True",
-          "originalTitle": "Download 1-WRITTEN COMMENT - REZ-26-32.PDF",
-          "originalText": "1-WRITTEN COMMENT - REZ-26-32.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/1-written-comment-rez-26-32.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20-%20REZ-26-32.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182690&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENT - REZ-26-32.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENT - REZ-26-32.PDF"
         },
         {
           "title": "2-WRITTEN COMMENTS - REZ-26-32.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-32.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182691&isSection=False&isAttachment=True",
-          "originalTitle": "Download 2-WRITTEN COMMENTS - REZ-26-32.PDF",
-          "originalText": "2-WRITTEN COMMENTS - REZ-26-32.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2819/22170/2-written-comments-rez-26-32.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20-%20REZ-26-32.PDF.pdf?documentType=1&meetingId=2819&itemId=22170&publishId=182691&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2-WRITTEN COMMENTS - REZ-26-32.PDF in a new tab",
+          "originalText": "2-WRITTEN COMMENTS - REZ-26-32.PDF"
         }
       ],
       "folioNumbers": [],

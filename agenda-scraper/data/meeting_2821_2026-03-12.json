@@ -1,10 +1,10 @@
 {
   "meetingId": "2821",
-  "meetingType": "regular",
+  "meetingType": "cra",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "March 12, 2026",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2821&type=agenda&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2821&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
@@ -34,15 +34,7 @@
       "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting March Project Tracking Report, Commercial Grants Tracking Report, and the Residential Tracking Report for said agenda item. (To be R/F)",
       "fileNumber": "CRA24-2241",
       "background": "",
-      "supportingDocuments": [
-        {
-          "title": "DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241;ONBASENO.22051).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241%3bONBASENO.22051).PDF.pdf?documentType=1&meetingId=2821&itemId=22051&publishId=182409&isSection=False&isAttachment=True",
-          "originalTitle": "Download DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241;ONBASENO.22051).PDF",
-          "originalText": "DIRECTORSMONTHLYREPORT(FILENO.CRA24-2241;ONBASENO.22051).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22051/directorsmonthlyreportfileno.cra24-2241onbaseno.22051.pdf"
-        }
-      ],
+      "supportingDocuments": [],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
@@ -66,17 +58,15 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22055&publishId=182410&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22055/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22055&publishId=182410&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20AND%20FUNDING%20AGREEMENT%20-%20FLORIDA%20AQUARIUM%20RENNOVATIONS.PDF.pdf?documentType=1&meetingId=2821&itemId=22055&publishId=182411&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF",
-          "originalText": "CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22055/cra-resolution-and-funding-agreement-florida-aquarium-rennovations.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20AND%20FUNDING%20AGREEMENT%20-%20FLORIDA%20AQUARIUM%20RENNOVATIONS.PDF.pdf?documentType=1&meetingId=2821&itemId=22055&publishId=182411&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF in a new tab",
+          "originalText": "CRA RESOLUTION AND FUNDING AGREEMENT - FLORIDA AQUARIUM RENNOVATIONS.PDF"
         }
       ],
       "folioNumbers": [],
@@ -140,17 +130,15 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22056&publishId=182412&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22056/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22056&publishId=182412&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DT%20RESO%20AND%20AGREEMENT%20FOR%20701%20WHITING%20FINAL.PDF.pdf?documentType=1&meetingId=2821&itemId=22056&publishId=182413&isSection=False&isAttachment=True",
-          "originalTitle": "Download DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF",
-          "originalText": "DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22056/dt-reso-and-agreement-for-701-whiting-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DT%20RESO%20AND%20AGREEMENT%20FOR%20701%20WHITING%20FINAL.PDF.pdf?documentType=1&meetingId=2821&itemId=22056&publishId=182413&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF in a new tab",
+          "originalText": "DT RESO AND AGREEMENT FOR 701 WHITING FINAL.PDF"
         }
       ],
       "folioNumbers": [],
@@ -228,17 +216,15 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22058&publishId=182414&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22058/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22058&publishId=182414&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%20AND%20AGREEMENT%20FOR%203812-3816%20TEMPLE%20ST.%20TAMPA%20FL%2033619%20-%20CLONTS%20PROPERTI.pdf?documentType=1&meetingId=2821&itemId=22058&publishId=182415&isSection=False&isAttachment=True",
-          "originalTitle": "Download RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF",
-          "originalText": "RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22058/reso-and-agreement-for-3812-3816-temple-st.-tampa-fl-33619-clonts-properties-llc.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RESO%20AND%20AGREEMENT%20FOR%203812-3816%20TEMPLE%20ST.%20TAMPA%20FL%2033619%20-%20CLONTS%20PROPERTI.pdf?documentType=1&meetingId=2821&itemId=22058&publishId=182415&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF in a new tab",
+          "originalText": "RESO AND AGREEMENT FOR 3812-3816 TEMPLE ST. TAMPA FL 33619 - CLONTS PROPERTIES LLC.PDF"
         }
       ],
       "folioNumbers": [],
@@ -316,10 +302,9 @@
       "supportingDocuments": [
         {
           "title": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TAMPAUNIONSTATION(FILENO.CRA25-19842%3bONBASENO.22054).PDF.pdf?documentType=1&meetingId=2821&itemId=22054&publishId=182416&isSection=False&isAttachment=True",
-          "originalTitle": "Download TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
-          "originalText": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22054/tampaunionstationfileno.cra25-19842onbaseno.22054.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TAMPAUNIONSTATION(FILENO.CRA25-19842%3bONBASENO.22054).PDF.pdf?documentType=1&meetingId=2821&itemId=22054&publishId=182416&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF in a new tab",
+          "originalText": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF"
         }
       ],
       "folioNumbers": [],
@@ -345,24 +330,21 @@
       "supportingDocuments": [
         {
           "title": "CP CAC APPLICATION FOR CASEY_BAUER.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CP%20CAC%20APPLICATION%20FOR%20CASEY_BAUER.PDF.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=182417&isSection=False&isAttachment=True",
-          "originalTitle": "Download CP CAC APPLICATION FOR CASEY_BAUER.PDF",
-          "originalText": "CP CAC APPLICATION FOR CASEY_BAUER.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22047/cp-cac-application-for-casey_bauer.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CP%20CAC%20APPLICATION%20FOR%20CASEY_BAUER.PDF.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=182417&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CP CAC APPLICATION FOR CASEY_BAUER.PDF in a new tab",
+          "originalText": "CP CAC APPLICATION FOR CASEY_BAUER.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=182418&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22047/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=182418&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=182419&isSection=False&isAttachment=True",
-          "originalTitle": "Download CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF",
-          "originalText": "CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22047/centralparkcacappointmentfileno.cra26-22047.onbaseno.22047.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF.pdf?documentType=1&meetingId=2821&itemId=22047&publishId=182419&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF in a new tab",
+          "originalText": "CENTRALPARKCACAPPOINTMENT(FILENO.CRA26-22047.ONBASENO.22047.PDF"
         }
       ],
       "folioNumbers": [],
@@ -388,31 +370,27 @@
       "supportingDocuments": [
         {
           "title": "WT CAC APPLICATION FOR ALLEN BERREBBI.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WT%20CAC%20APPLICATION%20FOR%20ALLEN%20BERREBBI.PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182420&isSection=False&isAttachment=True",
-          "originalTitle": "Download WT CAC APPLICATION FOR ALLEN BERREBBI.PDF",
-          "originalText": "WT CAC APPLICATION FOR ALLEN BERREBBI.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22048/wt-cac-application-for-allen-berrebbi.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WT%20CAC%20APPLICATION%20FOR%20ALLEN%20BERREBBI.PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182420&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WT CAC APPLICATION FOR ALLEN BERREBBI.PDF in a new tab",
+          "originalText": "WT CAC APPLICATION FOR ALLEN BERREBBI.PDF"
         },
         {
           "title": "WT CAC APPLICATION FOR JANICE WILLIAMS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WT%20CAC%20APPLICATION%20FOR%20JANICE%20WILLIAMS.PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182421&isSection=False&isAttachment=True",
-          "originalTitle": "Download WT CAC APPLICATION FOR JANICE WILLIAMS.PDF",
-          "originalText": "WT CAC APPLICATION FOR JANICE WILLIAMS.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22048/wt-cac-application-for-janice-williams.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WT%20CAC%20APPLICATION%20FOR%20JANICE%20WILLIAMS.PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182421&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WT CAC APPLICATION FOR JANICE WILLIAMS.PDF in a new tab",
+          "originalText": "WT CAC APPLICATION FOR JANICE WILLIAMS.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182422&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22048/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182422&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048%3bONBASENO.22048).PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182423&isSection=False&isAttachment=True",
-          "originalTitle": "Download WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF",
-          "originalText": "WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22048/westtampacracacappointmentsfileno.cra26-22048onbaseno.22048.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048%3bONBASENO.22048).PDF.pdf?documentType=1&meetingId=2821&itemId=22048&publishId=182423&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF in a new tab",
+          "originalText": "WESTTAMPACRACACAPPOINTMENTS(FILENO.CRA26-22048;ONBASENO.22048).PDF"
         }
       ],
       "folioNumbers": [],
@@ -438,31 +416,27 @@
       "supportingDocuments": [
         {
           "title": "CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20AWARD-MAKING%20PROCESS%20CHECKLIST%20-DOWNTOWN%20ARTS%20CENTER.PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182424&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF",
-          "originalText": "CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22049/cra-award-making-process-checklist-downtown-arts-center.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20AWARD-MAKING%20PROCESS%20CHECKLIST%20-DOWNTOWN%20ARTS%20CENTER.PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182424&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF in a new tab",
+          "originalText": "CRA AWARD-MAKING PROCESS CHECKLIST -DOWNTOWN ARTS CENTER.PDF"
         },
         {
           "title": "DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWN%20ARTS%20CENTER%20-%20TAMPA%20CRA_MARCH%2012_TAMPA%20ARTS%20ALLIANCE.PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182425&isSection=False&isAttachment=True",
-          "originalTitle": "Download DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF",
-          "originalText": "DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22049/downtown-arts-center-tampa-cra_march-12_tampa-arts-alliance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWN%20ARTS%20CENTER%20-%20TAMPA%20CRA_MARCH%2012_TAMPA%20ARTS%20ALLIANCE.PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182425&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF in a new tab",
+          "originalText": "DOWNTOWN ARTS CENTER - TAMPA CRA_MARCH 12_TAMPA ARTS ALLIANCE.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182426&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22049/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182426&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049%3bONBASENO.22049).PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182427&isSection=False&isAttachment=True",
-          "originalTitle": "Download DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF",
-          "originalText": "DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22049/downtownartscenterfundingfileno.cra26-22049onbaseno.22049.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049%3bONBASENO.22049).PDF.pdf?documentType=1&meetingId=2821&itemId=22049&publishId=182427&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF in a new tab",
+          "originalText": "DOWNTOWNARTSCENTERFUNDING(FILENO.CRA26-22049;ONBASENO.22049).PDF"
         }
       ],
       "folioNumbers": [],
@@ -506,31 +480,27 @@
       "supportingDocuments": [
         {
           "title": "DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWN-REALIGN%20JACKSON%20STREET%20PARKING%20LOT%20FUNDS_FUND%20KID%20MASON%20MARCH%202026.PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182428&isSection=False&isAttachment=True",
-          "originalTitle": "Download DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF",
-          "originalText": "DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22052/downtown-realign-jackson-street-parking-lot-funds_fund-kid-mason-march-2026.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWN-REALIGN%20JACKSON%20STREET%20PARKING%20LOT%20FUNDS_FUND%20KID%20MASON%20MARCH%202026.PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182428&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF in a new tab",
+          "originalText": "DOWNTOWN-REALIGN JACKSON STREET PARKING LOT FUNDS_FUND KID MASON MARCH 2026.PDF"
         },
         {
           "title": "20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/20-C-00023%20WDC%2032%20-%20ICO%2012%20-%20GENERAL%20CONDITIONS.BOND%20-%20COT%20EXECUTED%20WDC.PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182429&isSection=False&isAttachment=True",
-          "originalTitle": "Download 20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF",
-          "originalText": "20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22052/20-c-00023-wdc-32-ico-12-general-conditions.bond-cot-executed-wdc.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/20-C-00023%20WDC%2032%20-%20ICO%2012%20-%20GENERAL%20CONDITIONS.BOND%20-%20COT%20EXECUTED%20WDC.PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182429&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF in a new tab",
+          "originalText": "20-C-00023 WDC 32 - ICO 12 - GENERAL CONDITIONS.BOND - COT EXECUTED WDC.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182430&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22052/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182430&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052%3bONBASENO.22052).PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182431&isSection=False&isAttachment=True",
-          "originalTitle": "Download DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF",
-          "originalText": "DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22052/downtowncrakidmasonprogramchangefileno.cra26-22052onbaseno.22052.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052%3bONBASENO.22052).PDF.pdf?documentType=1&meetingId=2821&itemId=22052&publishId=182431&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF in a new tab",
+          "originalText": "DOWNTOWNCRAKIDMASONPROGRAMCHANGE(FILENO.CRA26-22052;ONBASENO.22052).PDF"
         }
       ],
       "folioNumbers": [],
@@ -582,38 +552,35 @@
       "supportingDocuments": [
         {
           "title": "DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DT%20PROGRAM%20CHANGE%20-%20CURTIS%20HIXON%20WATERFRONT%20PARK%20-%20FEB%202025.PDF.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=182432&isSection=False&isAttachment=True",
-          "originalTitle": "Download DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF",
-          "originalText": "DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22053/dt-program-change-curtis-hixon-waterfront-park-feb-2025.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DT%20PROGRAM%20CHANGE%20-%20CURTIS%20HIXON%20WATERFRONT%20PARK%20-%20FEB%202025.PDF.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=182432&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF in a new tab",
+          "originalText": "DT PROGRAM CHANGE - CURTIS HIXON WATERFRONT PARK - FEB 2025.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=182433&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22053/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=182433&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053%3bONBASENO.22053).PDF.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=182434&isSection=False&isAttachment=True",
-          "originalTitle": "Download DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF",
-          "originalText": "DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22053/downtowncracurtishixonprogramchangefileno.cra26-22053onbaseno.22053.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053%3bONBASENO.22053).PDF.pdf?documentType=1&meetingId=2821&itemId=22053&publishId=182434&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF in a new tab",
+          "originalText": "DOWNTOWNCRACURTISHIXONPROGRAMCHANGE(FILENO.CRA26-22053;ONBASENO.22053).PDF"
         }
       ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
       "dollarAmounts": [
-        "$5",
+        "$5,500,000.00",
         "$3,000,000",
-        "$2"
+        "$2,500,000.00"
       ],
       "financialDetails": [
         {
-          "amount": "$5",
-          "value": 5,
+          "amount": "$5,500,000.00",
+          "value": 5500000,
           "signedValue": 0,
           "type": "unspecified",
           "section": null,
@@ -658,8 +625,8 @@
           ]
         },
         {
-          "amount": "$2",
-          "value": 2,
+          "amount": "$2,500,000.00",
+          "value": 2500000,
           "signedValue": 0,
           "type": "unspecified",
           "section": null,
@@ -681,7 +648,7 @@
         "expenditures": 0,
         "decreases": 0,
         "revenues": 0,
-        "other": 3000007,
+        "other": 11000000,
         "net": 0
       }
     },
@@ -695,24 +662,21 @@
       "supportingDocuments": [
         {
           "title": "CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESO%20_AMP%3bAMP%3b%20SALE%20CONTRACT%204539%20N%2019TH%20ST_.PDF.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=182435&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF",
-          "originalText": "CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22083/cra-reso-ampamp-sale-contract-4539-n-19th-st_.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20RESO%20_AMP%3bAMP%3b%20SALE%20CONTRACT%204539%20N%2019TH%20ST_.PDF.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=182435&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF in a new tab",
+          "originalText": "CRA RESO &AMP;AMP; SALE CONTRACT 4539 N 19TH ST_.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=182436&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22083/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=182436&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/4539N.19THST.(FILENO.CRA26-22083%3bONBASENO.22083).PDF.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=182437&isSection=False&isAttachment=True",
-          "originalTitle": "Download 4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF",
-          "originalText": "4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22083/4539n.19thst.fileno.cra26-22083onbaseno.22083.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/4539N.19THST.(FILENO.CRA26-22083%3bONBASENO.22083).PDF.pdf?documentType=1&meetingId=2821&itemId=22083&publishId=182437&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF in a new tab",
+          "originalText": "4539N.19THST.(FILENO.CRA26-22083;ONBASENO.22083).PDF"
         }
       ],
       "folioNumbers": [],
@@ -800,17 +764,15 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22118&publishId=182438&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22118/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2821&itemId=22118&publishId=182438&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ONBASE-DOMAIN%20HOMES%20FUNDING%20RESO%20AND%20AGREEMENT%20-%20CBS%20REV-UPDATED-1.PDF.pdf?documentType=1&meetingId=2821&itemId=22118&publishId=182439&isSection=False&isAttachment=True",
-          "originalTitle": "Download ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF",
-          "originalText": "ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-03-12/meeting-2821/22118/onbase-domain-homes-funding-reso-and-agreement-cbs-rev-updated-1.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ONBASE-DOMAIN%20HOMES%20FUNDING%20RESO%20AND%20AGREEMENT%20-%20CBS%20REV-UPDATED-1.PDF.pdf?documentType=1&meetingId=2821&itemId=22118&publishId=182439&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF in a new tab",
+          "originalText": "ONBASE-DOMAIN HOMES FUNDING RESO AND AGREEMENT - CBS REV-UPDATED-1.PDF"
         }
       ],
       "folioNumbers": [],
@@ -862,37 +824,72 @@
     }
   ],
   "financialSummary": {
-    "expenditures": 9808334,
-    "decreases": 0,
-    "revenues": 0,
-    "other": 24846895.08,
-    "net": 9808334,
-    "formatted": {
-      "expenditures": "$9,808,334.00",
-      "decreases": "$0.00",
-      "revenues": "$0.00",
-      "other": "$24,846,895.08",
-      "net": "$9,808,334.00"
-    },
-    "expenditureRange": {
+    "totalAmountDiscussed": 27646888.08,
+    "formattedTotalAmountDiscussed": "$27,646,888.08",
+    "itemCount": 8,
+    "range": {
       "smallest": {
-        "number": 13,
-        "agendaItemId": "22118",
-        "fileNumber": "CRA26-22118",
-        "title": "File No. CRA26-22118\nWest Tampa CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Domain Homes Affordable Housing Grant Funding Agreement and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Domain Homes, Inc. (“Grant Recipient”) to construct single-family homes on property located at 1948 W. Spruce Street (four [4] lots), and 2324 W. St. Conrad Street (one [1] lot),Tampa, Florida, within the boundaries of the applicable Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
-        "amount": 375000,
-        "formatted": "$375,000.00"
+        "number": 10,
+        "fileNumber": "CRA26-22052",
+        "amount": 21888.08,
+        "formatted": "$21,888.08"
       },
       "largest": {
         "number": 3,
-        "agendaItemId": "22055",
         "fileNumber": "CRA26-22055",
-        "title": "File No. CRA26-22055\nChannel District CRA - A Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Florida Aquarium, Inc. Grant Funding and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and the Florida Aquarium, Inc. (“awardee”) to repair and renovate property generally described as 701 Channelside Drive Tampa, Florida 33602  (“the Florida Aquarium Property”) including major improvements to and renovations of the existing facilities, creating new exhibits, a multi-space gallery and a large-scale outdoor exhibit on property located within the boundaries of the Channel District Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+        "amount": 15000000,
+        "formatted": "$15,000,000.00"
+      }
+    },
+    "totalExpenditures": 9498334,
+    "formattedTotalExpenditures": "$9,498,334.00",
+    "expenditureRange": {
+      "smallest": {
+        "number": 12,
+        "fileNumber": "CRA26-22083",
+        "amount": 290000,
+        "formatted": "$290,000.00"
+      },
+      "largest": {
+        "number": 3,
+        "fileNumber": "CRA26-22055",
         "amount": 5000000,
         "formatted": "$5,000,000.00"
       },
       "count": 5
-    }
+    },
+    "expenditureItems": [
+      {
+        "number": 12,
+        "fileNumber": "CRA26-22083",
+        "amount": 290000,
+        "formatted": "$290,000.00"
+      },
+      {
+        "number": 13,
+        "fileNumber": "CRA26-22118",
+        "amount": 375000,
+        "formatted": "$375,000.00"
+      },
+      {
+        "number": 5,
+        "fileNumber": "CRA26-22058",
+        "amount": 1166667,
+        "formatted": "$1,166,667.00"
+      },
+      {
+        "number": 4,
+        "fileNumber": "CRA26-22056",
+        "amount": 2666667,
+        "formatted": "$2,666,667.00"
+      },
+      {
+        "number": 3,
+        "fileNumber": "CRA26-22055",
+        "amount": 5000000,
+        "formatted": "$5,000,000.00"
+      }
+    ]
   },
   "formattedDate": "2026-03-12"
 }

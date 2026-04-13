@@ -1,10 +1,10 @@
 {
   "meetingId": "2712",
-  "meetingType": "regular",
+  "meetingType": "evening",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "February 26, 2026",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2712&type=agenda&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2712&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
@@ -16,31 +16,27 @@
       "supportingDocuments": [
         {
           "title": "TCC TRANSMITTAL_012926.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180000&isSection=False&isAttachment=True",
-          "originalTitle": "Download TCC TRANSMITTAL_012926.PDF",
-          "originalText": "TCC TRANSMITTAL_012926.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21299/tcc-transmittal_012926.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180000&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL_012926.PDF in a new tab",
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
         },
         {
           "title": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180001&isSection=False&isAttachment=True",
-          "originalTitle": "Download TA CPA 25-15 LEGAL DESCRIPTION.DOCX",
-          "originalText": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21299/ta-cpa-25-15-legal-description.docx"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180001&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-15 LEGAL DESCRIPTION.DOCX in a new tab",
+          "originalText": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX"
         },
         {
           "title": "TA CPA 25-15 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180002&isSection=False&isAttachment=True",
-          "originalTitle": "Download TA CPA 25-15 TCC PACKET.PDF",
-          "originalText": "TA CPA 25-15 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21299/ta-cpa-25-15-tcc-packet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180002&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-15 TCC PACKET.PDF in a new tab",
+          "originalText": "TA CPA 25-15 TCC PACKET.PDF"
         },
         {
           "title": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA25-15%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180003&isSection=False&isAttachment=True",
-          "originalTitle": "Download CPA25-15 - ORDINANCE AND EXHIBIT A.PDF",
-          "originalText": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21299/cpa25-15-ordinance-and-exhibit-a.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-15%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2712&itemId=21299&publishId=180003&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-15 - ORDINANCE AND EXHIBIT A.PDF in a new tab",
+          "originalText": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF"
         }
       ],
       "folioNumbers": [
@@ -49,10 +45,7 @@
         "156781.0000"
       ],
       "location": "4304 North 26",
-      "coordinates": {
-        "lat": 27.98453,
-        "lng": -82.43081
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -73,41 +66,34 @@
       "supportingDocuments": [
         {
           "title": "TCC TRANSMITTAL_012926.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180004&isSection=False&isAttachment=True",
-          "originalTitle": "Download TCC TRANSMITTAL_012926.PDF",
-          "originalText": "TCC TRANSMITTAL_012926.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21300/tcc-transmittal_012926.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180004&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL_012926.PDF in a new tab",
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
         },
         {
           "title": "TA CPA 25-16 LEGAL DESCRIPTION.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-16%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180005&isSection=False&isAttachment=True",
-          "originalTitle": "Download TA CPA 25-16 LEGAL DESCRIPTION.DOCX",
-          "originalText": "TA CPA 25-16 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21300/ta-cpa-25-16-legal-description.docx"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-16%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180005&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-16 LEGAL DESCRIPTION.DOCX in a new tab",
+          "originalText": "TA CPA 25-16 LEGAL DESCRIPTION.DOCX"
         },
         {
           "title": "TA CPA 25-16 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-16%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180006&isSection=False&isAttachment=True",
-          "originalTitle": "Download TA CPA 25-16 TCC PACKET.PDF",
-          "originalText": "TA CPA 25-16 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21300/ta-cpa-25-16-tcc-packet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-16%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180006&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-16 TCC PACKET.PDF in a new tab",
+          "originalText": "TA CPA 25-16 TCC PACKET.PDF"
         },
         {
           "title": "CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA25-16%20-%20ORDINANCE%20AND%20EXHIBIT%20A%20-%20FINAL.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180007&isSection=False&isAttachment=True",
-          "originalTitle": "Download CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF",
-          "originalText": "CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21300/cpa25-16-ordinance-and-exhibit-a-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-16%20-%20ORDINANCE%20AND%20EXHIBIT%20A%20-%20FINAL.PDF.pdf?documentType=1&meetingId=2712&itemId=21300&publishId=180007&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF in a new tab",
+          "originalText": "CPA25-16 - ORDINANCE AND EXHIBIT A - FINAL.PDF"
         }
       ],
       "folioNumbers": [
         "197975.0000"
       ],
       "location": "1301 East Columbus Drive",
-      "coordinates": {
-        "lat": 27.96665,
-        "lng": -82.44534
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -128,48 +114,40 @@
       "supportingDocuments": [
         {
           "title": "TCC TRANSMITTAL_012926.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180008&isSection=False&isAttachment=True",
-          "originalTitle": "Download TCC TRANSMITTAL_012926.PDF",
-          "originalText": "TCC TRANSMITTAL_012926.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21301/tcc-transmittal_012926.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180008&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL_012926.PDF in a new tab",
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
         },
         {
           "title": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180009&isSection=False&isAttachment=True",
-          "originalTitle": "Download TA CPA 25-17 LEGAL DESCRIPTION.DOCX",
-          "originalText": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21301/ta-cpa-25-17-legal-description.docx"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180009&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-17 LEGAL DESCRIPTION.DOCX in a new tab",
+          "originalText": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX"
         },
         {
           "title": "TA CPA 25-17 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180010&isSection=False&isAttachment=True",
-          "originalTitle": "Download TA CPA 25-17 TCC PACKET.PDF",
-          "originalText": "TA CPA 25-17 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21301/ta-cpa-25-17-tcc-packet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180010&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-17 TCC PACKET.PDF in a new tab",
+          "originalText": "TA CPA 25-17 TCC PACKET.PDF"
         },
         {
           "title": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA25-17%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180011&isSection=False&isAttachment=True",
-          "originalTitle": "Download CPA25-17 - ORDINANCE AND EXHIBIT A.PDF",
-          "originalText": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21301/cpa25-17-ordinance-and-exhibit-a.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-17%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180011&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-17 - ORDINANCE AND EXHIBIT A.PDF in a new tab",
+          "originalText": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF"
         },
         {
           "title": "TA CPA 25-17 CONTINUANCE REQUEST.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180012&isSection=False&isAttachment=True",
-          "originalTitle": "Download TA CPA 25-17 CONTINUANCE REQUEST.PDF",
-          "originalText": "TA CPA 25-17 CONTINUANCE REQUEST.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21301/ta-cpa-25-17-continuance-request.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21301&publishId=180012&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-17 CONTINUANCE REQUEST.PDF in a new tab",
+          "originalText": "TA CPA 25-17 CONTINUANCE REQUEST.PDF"
         }
       ],
       "folioNumbers": [
         "156780.0000"
       ],
       "location": "4216 North 26",
-      "coordinates": {
-        "lat": 27.98411,
-        "lng": -82.43087
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -190,24 +168,21 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=180013&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/18048/summary-sheet-cover-sheet.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=180013&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "COMBINED AB FILES.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/COMBINED%20AB%20FILES.PDF.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=180014&isSection=False&isAttachment=True",
-          "originalTitle": "Download COMBINED AB FILES.PDF",
-          "originalText": "COMBINED AB FILES.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/18048/combined-ab-files.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/COMBINED%20AB%20FILES.PDF.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=180014&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of COMBINED AB FILES.PDF in a new tab",
+          "originalText": "COMBINED AB FILES.PDF"
         },
         {
           "title": "09052025144311.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/09052025144311.PDF.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=180015&isSection=False&isAttachment=True",
-          "originalTitle": "Download 09052025144311.PDF",
-          "originalText": "09052025144311.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/18048/09052025144311.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/09052025144311.PDF.pdf?documentType=1&meetingId=2712&itemId=18048&publishId=180015&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 09052025144311.PDF in a new tab",
+          "originalText": "09052025144311.PDF"
         }
       ],
       "folioNumbers": [],
@@ -233,73 +208,63 @@
       "supportingDocuments": [
         {
           "title": "AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-1625%20E%207TH%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180016&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF",
-          "originalText": "AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-1625-e-7th-ave-certified-application.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-1625%20E%207TH%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180016&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF in a new tab",
+          "originalText": "AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF"
         },
         {
           "title": "AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20AFFIDAVIT%20%20SEPT%2025%202025%20%20501PM%20(002).PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180017&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF",
-          "originalText": "AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-affidavit-sept-25-2025-501pm-002.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20AFFIDAVIT%20%20SEPT%2025%202025%20%20501PM%20(002).PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180017&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF in a new tab",
+          "originalText": "AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF"
         },
         {
           "title": "(AB2-25-0000012) CONTINUANCE REQUEST.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/(AB2-25-0000012)%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180018&isSection=False&isAttachment=True",
-          "originalTitle": "Download (AB2-25-0000012) CONTINUANCE REQUEST.PDF",
-          "originalText": "(AB2-25-0000012) CONTINUANCE REQUEST.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-0000012-continuance-request.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/(AB2-25-0000012)%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180018&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of (AB2-25-0000012) CONTINUANCE REQUEST.PDF in a new tab",
+          "originalText": "(AB2-25-0000012) CONTINUANCE REQUEST.PDF"
         },
         {
           "title": "AB2-25-12 - SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180019&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2-25-12 - SITE PLAN.PDF",
-          "originalText": "AB2-25-12 - SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180019&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 - SITE PLAN.PDF in a new tab",
+          "originalText": "AB2-25-12 - SITE PLAN.PDF"
         },
         {
           "title": "AB2-25-12 STAFF REPORT.DOCX.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20STAFF%20REPORT.DOCX.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180020&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2-25-12 STAFF REPORT.DOCX.PDF",
-          "originalText": "AB2-25-12 STAFF REPORT.DOCX.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-staff-report.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20STAFF%20REPORT.DOCX.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180020&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 STAFF REPORT.DOCX.PDF in a new tab",
+          "originalText": "AB2-25-12 STAFF REPORT.DOCX.PDF"
         },
         {
           "title": "1-WRITTEN COMMENT AB2-25-12.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20AB2-25-12.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180021&isSection=False&isAttachment=True",
-          "originalTitle": "Download 1-WRITTEN COMMENT AB2-25-12.PDF",
-          "originalText": "1-WRITTEN COMMENT AB2-25-12.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/1-written-comment-ab2-25-12.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20AB2-25-12.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180021&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENT AB2-25-12.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENT AB2-25-12.PDF"
         },
         {
           "title": "AB2-25-12 - SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180022&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2-25-12 - SITE PLAN.PDF",
-          "originalText": "AB2-25-12 - SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-site-plan.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180022&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 - SITE PLAN.PDF in a new tab",
+          "originalText": "AB2-25-12 - SITE PLAN.PDF"
         },
         {
           "title": "AB2-25-12 STAFF REPORT FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180023&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2-25-12 STAFF REPORT FINAL.PDF",
-          "originalText": "AB2-25-12 STAFF REPORT FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-staff-report-final.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180023&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "AB2-25-12 STAFF REPORT FINAL.PDF"
         },
         {
           "title": "AB2-25-12 - ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180024&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2-25-12 - ORDINANCE.PDF",
-          "originalText": "AB2-25-12 - ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-ordinance.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180024&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 - ORDINANCE.PDF in a new tab",
+          "originalText": "AB2-25-12 - ORDINANCE.PDF"
         },
         {
           "title": "AB2- 25-12 WITHDRAW REQUEST.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-%2025-12%20WITHDRAW%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180025&isSection=False&isAttachment=True",
-          "originalTitle": "Download AB2- 25-12 WITHDRAW REQUEST.PDF",
-          "originalText": "AB2- 25-12 WITHDRAW REQUEST.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-02-26/meeting-2712/21302/ab2-25-12-withdraw-request.pdf"
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-%2025-12%20WITHDRAW%20REQUEST.PDF.pdf?documentType=1&meetingId=2712&itemId=21302&publishId=180025&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2- 25-12 WITHDRAW REQUEST.PDF in a new tab",
+          "originalText": "AB2- 25-12 WITHDRAW REQUEST.PDF"
         }
       ],
       "folioNumbers": [],

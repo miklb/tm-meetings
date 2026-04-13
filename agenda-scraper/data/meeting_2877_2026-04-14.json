@@ -1,10 +1,10 @@
 {
   "meetingId": "2877",
   "meetingType": "special",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "April 14, 2026",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2877&type=agenda&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2877&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
@@ -16,20 +16,20 @@
       "supportingDocuments": [
         {
           "title": "CRA RESOLUTION AND FY26 SERVICES AGREEMENT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20AND%20FY26%20SERVICES%20AGREEMENT.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185620&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA RESOLUTION AND FY26 SERVICES AGREEMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20AND%20FY26%20SERVICES%20AGREEMENT.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185842&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA RESOLUTION AND FY26 SERVICES AGREEMENT.PDF in a new tab",
           "originalText": "CRA RESOLUTION AND FY26 SERVICES AGREEMENT.PDF"
         },
         {
           "title": "CRA-COT SERVICES AGREEMENT-CARLSON.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA-COT%20SERVICES%20AGREEMENT-CARLSON.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185621&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA-COT SERVICES AGREEMENT-CARLSON.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA-COT%20SERVICES%20AGREEMENT-CARLSON.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185843&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA-COT SERVICES AGREEMENT-CARLSON.PDF in a new tab",
           "originalText": "CRA-COT SERVICES AGREEMENT-CARLSON.PDF"
         },
         {
           "title": "TAMPA CRA PERFORMANCE AND STANDARDS REPORT_2025 DRAFT2.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TAMPA%20CRA%20PERFORMANCE%20AND%20STANDARDS%20REPORT_2025%20DRAFT2.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185622&isSection=False&isAttachment=True",
-          "originalTitle": "Download TAMPA CRA PERFORMANCE AND STANDARDS REPORT_2025 DRAFT2.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TAMPA%20CRA%20PERFORMANCE%20AND%20STANDARDS%20REPORT_2025%20DRAFT2.PDF.pdf?documentType=1&meetingId=2877&itemId=23124&publishId=185844&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TAMPA CRA PERFORMANCE AND STANDARDS REPORT_2025 DRAFT2.PDF in a new tab",
           "originalText": "TAMPA CRA PERFORMANCE AND STANDARDS REPORT_2025 DRAFT2.PDF"
         }
       ],

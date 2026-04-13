@@ -1,10 +1,10 @@
 {
   "meetingId": "2837",
-  "meetingType": "regular",
+  "meetingType": "special",
   "agendaType": "DRAFT",
   "isAddendum": false,
   "meetingDate": "March 3, 2026",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2837&type=agenda&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2837&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
