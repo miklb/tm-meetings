@@ -682,6 +682,10 @@ async function fetchMeetingList(options = {}) {
 
     const name = (m.Name || '').toLowerCase();
     const typeName = (m.MeetingTypeName || '').toLowerCase();
+
+    // Skip non-council meetings (code enforcement boards, etc.)
+    if (typeName.includes('code enforcement') || name.includes('code enforcement')) continue;
+
     let meetingType = 'regular';
 
     if (typeName.includes('evening') || name.includes('evening')) {
@@ -738,6 +742,10 @@ function fetchMeetingListFromHTML(html) {
     if (!hasAgendaLink) return;
 
     const rowText = $tr.text().toLowerCase();
+
+    // Skip non-council meetings (code enforcement boards, etc.)
+    if (rowText.includes('code enforcement')) return;
+
     let meetingType = 'regular';
     
     if (rowText.includes('evening')) {
