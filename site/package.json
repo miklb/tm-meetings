@@ -1,6 +1,6 @@
 {
   "name": "tampa-meetings-site",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "description": "Tampa City Council meetings — Eleventy static site",
   "scripts": {

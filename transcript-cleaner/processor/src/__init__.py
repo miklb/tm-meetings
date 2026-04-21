@@ -5,4 +5,4 @@ This package provides tools for processing Tampa City Council transcripts
 with ML-enhanced entity recognition and automated formatting.
 """
 
-__version__ = "2.0.0-dev"
+__version__ = "1.0.0"
