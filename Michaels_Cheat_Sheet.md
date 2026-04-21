@@ -26,6 +26,7 @@ Output: `agenda-scraper/agendas/agenda_YYYY-MM-DD.wp.html` plus mirrored PDFs on
 
 ```bash
 npm run archive -- YYYY-MM-DD
+npm run deploy
 ```
 
 Options:
