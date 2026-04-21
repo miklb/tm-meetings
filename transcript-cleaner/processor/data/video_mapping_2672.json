@@ -1,0 +1,115 @@
+{
+  "meeting_id": 2672,
+  "meeting_date": "2026-04-16",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "EKjXThd3H9Q",
+      "title": "Tampa City Council - 04/16/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-04-17T04:33:02Z",
+      "duration": "PT3H16M",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-22099 - Drinking Water Week Commendation",
+          "timestamp": "00:20:38",
+          "seconds": 1238
+        },
+        {
+          "title": "Item 2: CM26-22116 - Lucy Legacy Resolution",
+          "timestamp": "00:29:58",
+          "seconds": 1798
+        },
+        {
+          "title": "Item 3: CM26-22115 - Post-Disaster Plan Presentation",
+          "timestamp": "00:35:14",
+          "seconds": 2114
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:52:08",
+          "seconds": 3128
+        },
+        {
+          "title": "Item 4: BA26-22913 - Jon Epps AHAC Appointment",
+          "timestamp": "01:42:13",
+          "seconds": 6133
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:43:58",
+          "seconds": 6238
+        },
+        {
+          "title": "Item 51: VAC-26-05 - Ross Ave Right-Of-Way",
+          "timestamp": "01:45:13",
+          "seconds": 6313
+        },
+        {
+          "title": "Item 52: HS26-22332 - Howard And Cherry",
+          "timestamp": "01:48:08",
+          "seconds": 6488
+        },
+        {
+          "title": "Item 53: REZ-26-02 - 1008 West LaSalle Street",
+          "timestamp": "01:50:19",
+          "seconds": 6619
+        },
+        {
+          "title": "Item 54: REZ-26-03 - 1307 West LaSalle Street",
+          "timestamp": "01:53:48",
+          "seconds": 6828
+        },
+        {
+          "title": "Item 55: REZ-26-29 - 2414 West State Street",
+          "timestamp": "02:25:09",
+          "seconds": 8709
+        },
+        {
+          "title": "Item 64: CM26-21834 / CM26-21835 - Store Violations Report",
+          "timestamp": "03:01:53",
+          "seconds": 10913
+        },
+        {
+          "title": "Item 65: CM26-23032 - Park Reallocation Report",
+          "timestamp": "03:11:46",
+          "seconds": 11506
+        }
+      ],
+      "offset_seconds": 738
+    },
+    {
+      "video_id": "l59DoyYoEVM",
+      "title": "Tampa City Council - 04/16/26 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-04-17T06:22:45Z",
+      "duration": "PT49M40S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 56: SU1-25-59-C - 2312 West Grace Street",
+          "timestamp": "00:05:54",
+          "seconds": 354
+        },
+        {
+          "title": "Information Reports & New Business",
+          "timestamp": "00:21:09",
+          "seconds": 1269
+        }
+      ],
+      "transcript_start_time": "01:31:00PM",
+      "offset_seconds": 347
+    }
+  ]
+}
