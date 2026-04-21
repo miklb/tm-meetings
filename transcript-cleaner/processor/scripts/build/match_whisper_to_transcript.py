@@ -224,8 +224,14 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
                 speech_delay = first_speech_seconds - schedule_start
                 estimated_speech = PRE_ROLL + speech_delay
 
-                # If chapters exist, use the first content chapter as a floor
-                # (e.g., "Item 1" at 690s tells us speech is at least that far)
+                # Chapter semantics:
+                #   chapter[0] is always 0:00 = video start (NOT speech start)
+                #     — always ignored.
+                #   chapter[1] is the first real agenda-item marker
+                #     — a ceiling/upper bound, since speech has started by then.
+                # Use chapter[1] to raise the estimate if our schedule-based
+                # estimate is too low (rare, but protects us when the video
+                # has long pre-roll).
                 if len(chapters) > 1:
                     first_chapter_secs = chapters[1].get('seconds', 0)
                     if first_chapter_secs > estimated_speech:
@@ -258,25 +264,34 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
             reason = "Part 1 — no transcript timestamp, using default"
 
     elif len(chapters) > 1:
-        # Part 2+: chapter[0] is always 00:00 (pre-roll/countdown).
-        # Speech starts 1-2 minutes BEFORE chapter[1] (the first real
-        # content marker). Pre-roll can be very long (8-10+ min of
-        # countdown music), so skip close to the chapter marker.
-        PART2_PRE_CHAPTER_MARGIN = 120    # 2 min before second chapter
+        # Part 2+ chapter semantics:
+        #   chapter[0] — always 00:00, labeled "Start of Meeting" but actually
+        #     the start of the *video*. USELESS as a speech anchor; ignore it.
+        #   chapter[1] — first real agenda-item marker. Speech has started
+        #     *by* this timestamp; it's an upper bound / ceiling, not the
+        #     actual start. Speech typically begins shortly before this marker
+        #     (often within 30–60s), after countdown/slate fades.
+        #
+        # Strategy: center the sample window on chapter[1] — capture a little
+        # before (to catch the opening remarks) and continuing past it so
+        # Whisper has several minutes of real speech to latch onto.
+        PART2_PRE_CHAPTER_MARGIN = 60     # 1 min before chapter[1] (tight)
+        PART2_POST_CHAPTER_MARGIN = 300   # 5 min after chapter[1]
         first_content_secs = chapters[1].get('seconds', 0)
         if first_content_secs > PART2_PRE_CHAPTER_MARGIN:
             start = first_content_secs - PART2_PRE_CHAPTER_MARGIN
-            duration = PART2_PRE_CHAPTER_MARGIN + MATCH_BUFFER
-            reason = (f"Part {part} — skip to {start}s "
-                      f"({PART2_PRE_CHAPTER_MARGIN // 60}m before "
-                      f"chapter at {first_content_secs}s), "
-                      f"capture {duration}s")
+            duration = PART2_PRE_CHAPTER_MARGIN + PART2_POST_CHAPTER_MARGIN
+            reason = (f"Part {part} — center on chapter[1]={first_content_secs}s "
+                      f"(speech starts shortly before it); "
+                      f"skip to {start}s, capture {duration}s "
+                      f"({PART2_PRE_CHAPTER_MARGIN}s pre + "
+                      f"{PART2_POST_CHAPTER_MARGIN}s post)")
         else:
             # Chapter is very early — just capture from the start
             duration = max(DEFAULT_DURATION,
                            first_content_secs + CHAPTER_BUFFER)
-            reason = (f"Part {part} — chapter at {first_content_secs}s "
-                      f"is early, starting from 0")
+            reason = (f"Part {part} — chapter[1] at {first_content_secs}s "
+                      f"is too early for pre-margin, starting from 0")
     else:
         duration = PART2_NO_CHAPTERS_DURATION
         reason = f"Part {part} — no chapter data, conservative {PART2_NO_CHAPTERS_DURATION}s"
@@ -450,28 +465,39 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
     MIN_SCORE = 0.3        # At least 30% of n-grams must match
     OFFSET_TOLERANCE = 30  # Seconds — matches within this range cluster together
 
-    # Collect ALL candidate Whisper segments with meaningful text
-    candidates = []
-    for w_seg in whisper_segments:
-        if w_seg.get('no_speech_prob', 0) > 0.5:
-            continue
+    def collect_candidates(min_content_words):
+        found = []
+        for w_seg in whisper_segments:
+            if w_seg.get('no_speech_prob', 0) > 0.5:
+                continue
 
-        w_text = w_seg['text'].strip()
+            w_text = w_seg['text'].strip()
 
-        # Must be mostly ASCII
-        ascii_chars = sum(1 for c in w_text if ord(c) < 128)
-        if len(w_text) > 0 and ascii_chars / len(w_text) < 0.85:
-            continue
+            # Must be mostly ASCII
+            ascii_chars = sum(1 for c in w_text if ord(c) < 128)
+            if len(w_text) > 0 and ascii_chars / len(w_text) < 0.85:
+                continue
 
-        content_words = extract_content_words(w_text)
+            content_words = extract_content_words(w_text)
 
-        # Need at least 4 content words (stop words removed)
-        if len(content_words) >= 4:
-            candidates.append({
-                'text': w_text,
-                'start': w_seg['start'],
-                'content_words': content_words,
-            })
+            # Avoid numeric/symbolic junk like "2. 1." that can survive no_speech filtering.
+            alpha_chars = sum(1 for c in w_text if c.isalpha())
+            if alpha_chars < 6:
+                continue
+
+            if len(content_words) >= min_content_words:
+                found.append({
+                    'text': w_text,
+                    'start': w_seg['start'],
+                    'content_words': content_words,
+                })
+        return found
+
+    # First pass: strict filter. Second pass: allow shorter procedural speech.
+    candidates = collect_candidates(4)
+    if not candidates:
+        print("  ⚠️  No candidates with >=4 content words; retrying with >=3")
+        candidates = collect_candidates(3)
 
     if not candidates:
         print("ERROR: No meaningful speech found in Whisper output")
@@ -1036,6 +1062,47 @@ def main():
         if result.returncode == 0:
             offset = calculate_offset(longer_cache, transcript_file,
                                       transcript_start_time=transcript_start_time)
+
+    # For mapped videos (especially Part 2+), a chapter marker can still land inside
+    # countdown music / slate. If initial match fails, sweep later windows.
+    if offset is None and not input_arg.endswith('.json') and video_mapping_file and video_id:
+        print(f"\n{'='*70}")
+        print("NO MATCH FOUND - RETRYING WITH LATER WINDOWS")
+        print(f"{'='*70}\n")
+
+        # 2-minute step, up to +8 minutes from the original start.
+        # This handles meetings where speech begins later than chapter[1].
+        RETRY_OFFSETS = [120, 240, 360, 480]
+
+        retry_duration = max(duration, 420)  # 7 min minimum for retries
+        for delta in RETRY_OFFSETS:
+            retry_start = audio_start + delta
+            retry_label = f"retry_skip{retry_start}s_{retry_duration}s"
+            retry_cache = f"data/whisper_cache/{video_id}_{model}_{retry_label}.json"
+
+            print(f"  ▶ Retry window: start={retry_start}s ({retry_start//60}:{retry_start%60:02d}), "
+                  f"duration={retry_duration}s ({retry_duration//60}:{retry_duration%60:02d})")
+
+            if not (use_cache and Path(retry_cache).exists()):
+                result = subprocess.run([
+                    sys.executable, 'scripts/build/transcribe_with_whisper.py',
+                    video_id,
+                    '--start', str(retry_start),
+                    '--duration', str(retry_duration),
+                    '--model', model,
+                    '--output', retry_cache
+                ])
+                if result.returncode != 0:
+                    print("    ⚠️ Retry transcription failed, trying next window")
+                    continue
+            else:
+                print(f"    ✓ Using cached retry transcription: {retry_cache}")
+
+            offset = calculate_offset(retry_cache, transcript_file,
+                                      transcript_start_time=transcript_start_time)
+            if offset is not None:
+                print(f"\n  ✅ Match succeeded on retry window (+{delta}s)")
+                break
     
     if offset is not None:
         print(f"\nAdd to video_mapping JSON: \"offset_seconds\": {int(round(offset))}")
