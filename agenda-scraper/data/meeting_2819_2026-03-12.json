@@ -135,6 +135,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "R-  10",
+        "waivers": [],
+        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the application and finds the request INCONSISTENT with the  City  of  Tampa  Code  of  Ordinances.  See  analysis  from  Development  Coordination  in  report  below  relating  to development pattern in the immediate area."
       }
     },
     {

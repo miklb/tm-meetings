@@ -4932,8 +4932,8 @@
         "net": 0
       },
       "staffReport": {
-        "landUseType": "OTHER",
-        "currentZoning": "P",
+        "landUseType": "ALCOHOL_BEVERAGE",
+        "currentZoning": "Planned Development (PD; Ord. 91-76),   Commercial General (CG)",
         "requestedZoning": null,
         "futureLandUse": "Community Mixed Use-35",
         "waivers": [],
@@ -5008,6 +5008,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "staffReport": {
+        "landUseType": "VACATION",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "waivers": [],
+        "findings": "FINDINGS: Right of way is currently improved. VACATING HISTORY:"
       }
     },
     {

@@ -371,7 +371,7 @@
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "RS-50",
-        "requestedZoning": null,
+        "requestedZoning": "and PD)",
         "futureLandUse": "Residential-20",
         "waivers": [
           "WAIVER(S) REQUESTED: 1. Section 27-283.7: To reduce the required number of parking spaces from 41 to 26 provided (36.6% reduction). 2. Section 27-284.3.3: To reduce the required use to use buffer on the east for  Lot  2 from 15’ and a 6’ tall masonry wall to 15’ and a 6’ tall PVC fence. 3. Section 27-284.3.3: To reduce the required use to  use  buffer on the east for Lot 1 from 15’ and a 6’ tall masonry wall to 4’ and a 6’ tall PVC fence."

@@ -1,7 +1,7 @@
 {
   "meetingId": "2841",
   "meetingType": "evening",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "April 23, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2841&type=agenda&doctype=1",
@@ -16,48 +16,40 @@
       "supportingDocuments": [
         {
           "title": "TA CPA 25-18  ORDINANCE AND EXHIBIT A.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-18%20%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=186755&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-18%20%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=187463&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-18  ORDINANCE AND EXHIBIT A.PDF in a new tab",
-          "originalText": "TA CPA 25-18  ORDINANCE AND EXHIBIT A.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23445/ta-cpa-25-18-ordinance-and-exhibit-a.pdf"
+          "originalText": "TA CPA 25-18  ORDINANCE AND EXHIBIT A.PDF"
         },
         {
           "title": "TA CPA25-18 BUSINESS IMPACT ESTIMATE.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-18%20BUSINESS%20IMPACT%20ESTIMATE.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=186756&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-18%20BUSINESS%20IMPACT%20ESTIMATE.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=187464&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA25-18 BUSINESS IMPACT ESTIMATE.PDF in a new tab",
-          "originalText": "TA CPA25-18 BUSINESS IMPACT ESTIMATE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23445/ta-cpa25-18-business-impact-estimate.pdf"
+          "originalText": "TA CPA25-18 BUSINESS IMPACT ESTIMATE.PDF"
         },
         {
           "title": "TCC TRANSMITTAL_042326.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_042326.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=186757&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_042326.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=187465&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TCC TRANSMITTAL_042326.PDF in a new tab",
-          "originalText": "TCC TRANSMITTAL_042326.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23445/tcc-transmittal_042326.pdf"
+          "originalText": "TCC TRANSMITTAL_042326.PDF"
         },
         {
           "title": "TA CPA 25-18 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-18%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=186758&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-18%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=187466&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-18 TCC PACKET.PDF in a new tab",
-          "originalText": "TA CPA 25-18 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23445/ta-cpa-25-18-tcc-packet.pdf"
+          "originalText": "TA CPA 25-18 TCC PACKET.PDF"
         },
         {
           "title": "TA CPA 25-18 LEGAL DESCRIPTION_REVISED031826.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-18%20LEGAL%20DESCRIPTION_REVISED031826.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=186759&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-18%20LEGAL%20DESCRIPTION_REVISED031826.PDF.pdf?documentType=1&meetingId=2841&itemId=23445&publishId=187467&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-18 LEGAL DESCRIPTION_REVISED031826.PDF in a new tab",
-          "originalText": "TA CPA 25-18 LEGAL DESCRIPTION_REVISED031826.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23445/ta-cpa-25-18-legal-description_revised031826.pdf"
+          "originalText": "TA CPA 25-18 LEGAL DESCRIPTION_REVISED031826.PDF"
         }
       ],
       "folioNumbers": [
         "125293.0000"
       ],
       "location": "3602 West Euclid Avenue",
-      "coordinates": {
-        "lat": 27.908416,
-        "lng": -82.502279
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -78,38 +70,33 @@
       "supportingDocuments": [
         {
           "title": "TA CPA25-19  BUSINESS IMPACT ESTIMATE.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-19%20%20BUSINESS%20IMPACT%20ESTIMATE.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=186760&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-19%20%20BUSINESS%20IMPACT%20ESTIMATE.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=187468&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA25-19  BUSINESS IMPACT ESTIMATE.PDF in a new tab",
-          "originalText": "TA CPA25-19  BUSINESS IMPACT ESTIMATE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23456/ta-cpa25-19-business-impact-estimate.pdf"
+          "originalText": "TA CPA25-19  BUSINESS IMPACT ESTIMATE.PDF"
         },
         {
           "title": "TA CPA25-19  ORDINANCE AND EXHIBIT A.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-19%20%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=186761&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-19%20%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=187469&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA25-19  ORDINANCE AND EXHIBIT A.PDF in a new tab",
-          "originalText": "TA CPA25-19  ORDINANCE AND EXHIBIT A.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23456/ta-cpa25-19-ordinance-and-exhibit-a.pdf"
+          "originalText": "TA CPA25-19  ORDINANCE AND EXHIBIT A.PDF"
         },
         {
           "title": "TA CPA 25-19 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-19%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=186762&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-19%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=187470&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-19 TCC PACKET.PDF in a new tab",
-          "originalText": "TA CPA 25-19 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23456/ta-cpa-25-19-tcc-packet.pdf"
+          "originalText": "TA CPA 25-19 TCC PACKET.PDF"
         },
         {
           "title": "TA CPA 25-19 LEGAL DESCRIPTION.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-19%20LEGAL%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=186763&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-19%20LEGAL%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=187471&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-19 LEGAL DESCRIPTION.PDF in a new tab",
-          "originalText": "TA CPA 25-19 LEGAL DESCRIPTION.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23456/ta-cpa-25-19-legal-description.pdf"
+          "originalText": "TA CPA 25-19 LEGAL DESCRIPTION.PDF"
         },
         {
           "title": "TCC TRANSMITTAL_042326.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_042326.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=186764&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_042326.PDF.pdf?documentType=1&meetingId=2841&itemId=23456&publishId=187472&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TCC TRANSMITTAL_042326.PDF in a new tab",
-          "originalText": "TCC TRANSMITTAL_042326.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23456/tcc-transmittal_042326.pdf"
+          "originalText": "TCC TRANSMITTAL_042326.PDF"
         }
       ],
       "folioNumbers": [
@@ -117,10 +104,7 @@
         "140483.0000"
       ],
       "location": "4615 East Fowler Avenue",
-      "coordinates": {
-        "lat": 28.05326,
-        "lng": -82.40774
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -141,24 +125,21 @@
       "supportingDocuments": [
         {
           "title": "TA CPA 25-20 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-20%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=23446&publishId=186765&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-20%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=23446&publishId=187473&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-20 TCC PACKET.PDF in a new tab",
-          "originalText": "TA CPA 25-20 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23446/ta-cpa-25-20-tcc-packet.pdf"
+          "originalText": "TA CPA 25-20 TCC PACKET.PDF"
         },
         {
           "title": "TA CPA 25-20 LEGAL DESCTRIPTION.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-20%20LEGAL%20DESCTRIPTION.PDF.pdf?documentType=1&meetingId=2841&itemId=23446&publishId=186766&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-20%20LEGAL%20DESCTRIPTION.PDF.pdf?documentType=1&meetingId=2841&itemId=23446&publishId=187474&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-20 LEGAL DESCTRIPTION.PDF in a new tab",
-          "originalText": "TA CPA 25-20 LEGAL DESCTRIPTION.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23446/ta-cpa-25-20-legal-desctription.pdf"
+          "originalText": "TA CPA 25-20 LEGAL DESCTRIPTION.PDF"
         },
         {
           "title": "TCC TRANSMITTAL_042326.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_042326.PDF.pdf?documentType=1&meetingId=2841&itemId=23446&publishId=186767&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_042326.PDF.pdf?documentType=1&meetingId=2841&itemId=23446&publishId=187475&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TCC TRANSMITTAL_042326.PDF in a new tab",
-          "originalText": "TCC TRANSMITTAL_042326.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/23446/tcc-transmittal_042326.pdf"
+          "originalText": "TCC TRANSMITTAL_042326.PDF"
         }
       ],
       "folioNumbers": [
@@ -171,10 +152,7 @@
         "140513.0000"
       ],
       "location": "11315 North 46",
-      "coordinates": {
-        "lat": 28.051507,
-        "lng": -82.408558
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -195,38 +173,33 @@
       "supportingDocuments": [
         {
           "title": "TCC TRANSMITTAL_012926.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=186768&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=187476&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TCC TRANSMITTAL_012926.PDF in a new tab",
-          "originalText": "TCC TRANSMITTAL_012926.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22108/tcc-transmittal_012926.pdf"
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
         },
         {
           "title": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=186769&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=187477&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-15 LEGAL DESCRIPTION.DOCX in a new tab",
-          "originalText": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22108/ta-cpa-25-15-legal-description.docx"
+          "originalText": "TA CPA 25-15 LEGAL DESCRIPTION.DOCX"
         },
         {
           "title": "TA CPA 25-15 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=186770&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-15%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=187478&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-15 TCC PACKET.PDF in a new tab",
-          "originalText": "TA CPA 25-15 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22108/ta-cpa-25-15-tcc-packet.pdf"
+          "originalText": "TA CPA 25-15 TCC PACKET.PDF"
         },
         {
           "title": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-15%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=186771&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-15%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=187479&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of CPA25-15 - ORDINANCE AND EXHIBIT A.PDF in a new tab",
-          "originalText": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22108/cpa25-15-ordinance-and-exhibit-a.pdf"
+          "originalText": "CPA25-15 - ORDINANCE AND EXHIBIT A.PDF"
         },
         {
           "title": "TA CPA25-15 CONTINUANCE REQUEST.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-15%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=186772&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-15%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2841&itemId=22108&publishId=187480&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA25-15 CONTINUANCE REQUEST.PDF in a new tab",
-          "originalText": "TA CPA25-15 CONTINUANCE REQUEST.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22108/ta-cpa25-15-continuance-request.pdf"
+          "originalText": "TA CPA25-15 CONTINUANCE REQUEST.PDF"
         }
       ],
       "folioNumbers": [
@@ -235,10 +208,7 @@
         "156781.0000"
       ],
       "location": "4304 North 26",
-      "coordinates": {
-        "lat": 27.98453,
-        "lng": -82.43081
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -259,48 +229,40 @@
       "supportingDocuments": [
         {
           "title": "TCC TRANSMITTAL_012926.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=186773&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_012926.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=187481&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TCC TRANSMITTAL_012926.PDF in a new tab",
-          "originalText": "TCC TRANSMITTAL_012926.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22109/tcc-transmittal_012926.pdf"
+          "originalText": "TCC TRANSMITTAL_012926.PDF"
         },
         {
           "title": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=186774&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=187482&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-17 LEGAL DESCRIPTION.DOCX in a new tab",
-          "originalText": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22109/ta-cpa-25-17-legal-description.docx"
+          "originalText": "TA CPA 25-17 LEGAL DESCRIPTION.DOCX"
         },
         {
           "title": "TA CPA 25-17 TCC PACKET.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=186775&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=187483&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-17 TCC PACKET.PDF in a new tab",
-          "originalText": "TA CPA 25-17 TCC PACKET.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22109/ta-cpa-25-17-tcc-packet.pdf"
+          "originalText": "TA CPA 25-17 TCC PACKET.PDF"
         },
         {
           "title": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-17%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=186776&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-17%20-%20ORDINANCE%20AND%20EXHIBIT%20A.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=187484&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of CPA25-17 - ORDINANCE AND EXHIBIT A.PDF in a new tab",
-          "originalText": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22109/cpa25-17-ordinance-and-exhibit-a.pdf"
+          "originalText": "CPA25-17 - ORDINANCE AND EXHIBIT A.PDF"
         },
         {
           "title": "TA CPA 25-17 CONTINUANCE REQUEST.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=186777&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-17%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2841&itemId=22109&publishId=187485&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of TA CPA 25-17 CONTINUANCE REQUEST.PDF in a new tab",
-          "originalText": "TA CPA 25-17 CONTINUANCE REQUEST.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22109/ta-cpa-25-17-continuance-request.pdf"
+          "originalText": "TA CPA 25-17 CONTINUANCE REQUEST.PDF"
         }
       ],
       "folioNumbers": [
         "156780.0000"
       ],
       "location": "4216 North 26",
-      "coordinates": {
-        "lat": 27.98411,
-        "lng": -82.43087
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -314,38 +276,46 @@
     {
       "number": 6,
       "agendaItemId": "22323",
-      "title": "File No. AB2-25-14\nPublic Hearing on application of TPA Affordable Real Estate LLC requesting a Special Use 2 for a Small Venue; Beer, Wine and Liquor (Consumption on Premises Only), generally located at 1724 N Nebraska Ave.",
-      "rawTitle": "File No. AB2-25-14\nPublic Hearing on application of TPA Affordable Real Estate LLC requesting a Special Use 2 for a Small Venue; Beer, Wine and Liquor (Consumption on Premises Only), generally located at 1724 N Nebraska Ave.",
+      "title": "File No. AB2-25-14\nPublic Hearing on application of TPA Affordable Real Estate LLC requesting a Special Use 2 for a Small Venue; Beer, Wine and Liquor (Consumption on Premises Only), generally located at 1724 N Nebraska Ave.\n\n(Ordinance being presented for first reading consideration) - An ordinance approving a special use permit (SU-2) for Alcoholic Beverage Sales – Small Venue (Consumption On-Premises Only) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 1724 North Nebraska Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing ordinance No. 2022-185; providing an effective date.",
+      "rawTitle": "File No. AB2-25-14\nPublic Hearing on application of TPA Affordable Real Estate LLC requesting a Special Use 2 for a Small Venue; Beer, Wine and Liquor (Consumption on Premises Only), generally located at 1724 N Nebraska Ave.\n\n(Ordinance being presented for first reading consideration) - An ordinance approving a special use permit (SU-2) for Alcoholic Beverage Sales – Small Venue (Consumption On-Premises Only) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 1724 North Nebraska Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing ordinance No. 2022-185; providing an effective date.",
       "fileNumber": "AB2-25-14",
       "background": "",
       "supportingDocuments": [
         {
           "title": "AB2-25-14 -1724 N NEBRASKA AVE - CERTIFIED APPLICATION.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-14%20-1724%20N%20NEBRASKA%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=186778&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-14%20-1724%20N%20NEBRASKA%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=187486&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-25-14 -1724 N NEBRASKA AVE - CERTIFIED APPLICATION.PDF in a new tab",
-          "originalText": "AB2-25-14 -1724 N NEBRASKA AVE - CERTIFIED APPLICATION.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22323/ab2-25-14-1724-n-nebraska-ave-certified-application.pdf"
+          "originalText": "AB2-25-14 -1724 N NEBRASKA AVE - CERTIFIED APPLICATION.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=186779&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=187487&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22323/summary-sheet-cover-sheet.pdf"
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "AB2-25-14 - SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-14%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=186780&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-14%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=187488&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-25-14 - SITE PLAN.PDF in a new tab",
-          "originalText": "AB2-25-14 - SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22323/ab2-25-14-site-plan.pdf"
+          "originalText": "AB2-25-14 - SITE PLAN.PDF"
         },
         {
           "title": "AB2-25-14 STAFF REPORT.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-14%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=186781&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-14%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=187489&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-25-14 STAFF REPORT.PDF in a new tab",
-          "originalText": "AB2-25-14 STAFF REPORT.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22323/ab2-25-14-staff-report.pdf"
+          "originalText": "AB2-25-14 STAFF REPORT.PDF"
+        },
+        {
+          "title": "ORDINANCE AB2-25-14 W-REPEAL CLERK.DOCX.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20AB2-25-14%20W-REPEAL%20CLERK.DOCX.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=187490&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ORDINANCE AB2-25-14 W-REPEAL CLERK.DOCX.PDF in a new tab",
+          "originalText": "ORDINANCE AB2-25-14 W-REPEAL CLERK.DOCX.PDF"
+        },
+        {
+          "title": "AB2-25-14 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-14%20BIE.PDF.pdf?documentType=1&meetingId=2841&itemId=22323&publishId=187491&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-14 BIE.PDF in a new tab",
+          "originalText": "AB2-25-14 BIE.PDF"
         }
       ],
       "folioNumbers": [],
@@ -372,45 +342,52 @@
     {
       "number": 7,
       "agendaItemId": "22325",
-      "title": "File No. AB2-26-05\nPublic hearing on the application of RSG Macdill LLC requesting a Special Use 2 permit for alcoholic beverage sales in connection with a Restaurant (beer, wine and liquor – consumption on premises only), generally located at 2507 South Macdill Avenue.",
-      "rawTitle": "File No. AB2-26-05\nPublic hearing on the application of RSG Macdill LLC requesting a Special Use 2 permit for alcoholic beverage sales in connection with a Restaurant (beer, wine and liquor – consumption on premises only), generally located at 2507 South Macdill Avenue.",
+      "title": "File No. AB2-26-05\nPublic hearing on the application of RSG Macdill LLC requesting a Special Use 2 permit for alcoholic beverage sales in connection with a Restaurant (beer, wine and liquor – consumption on premises only), generally located at 2507 South Macdill Avenue.\n\n(Ordinance being presented for first reading consideration) - An ordinance approving a special use permit (SU-2) for Alcoholic Beverage Sales – Restaurant (Consumption On-Premises Only) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 2507 South Macdill Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed;  repealing ordinance No. 2023-144; providing an effective date.",
+      "rawTitle": "File No. AB2-26-05\nPublic hearing on the application of RSG Macdill LLC requesting a Special Use 2 permit for alcoholic beverage sales in connection with a Restaurant (beer, wine and liquor – consumption on premises only), generally located at 2507 South Macdill Avenue.\n\n(Ordinance being presented for first reading consideration) - An ordinance approving a special use permit (SU-2) for Alcoholic Beverage Sales – Restaurant (Consumption On-Premises Only) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 2507 South Macdill Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed;  repealing ordinance No. 2023-144; providing an effective date.",
       "fileNumber": "AB2-26-05",
       "background": "",
       "supportingDocuments": [
         {
           "title": "AB2-26-05 - 2507 S MACDILL AVE - CERTIFIED APPLICATION V2.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20-%202507%20S%20MACDILL%20AVE%20-%20CERTIFIED%20APPLICATION%20V2.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=186782&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20-%202507%20S%20MACDILL%20AVE%20-%20CERTIFIED%20APPLICATION%20V2.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=187492&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-05 - 2507 S MACDILL AVE - CERTIFIED APPLICATION V2.PDF in a new tab",
-          "originalText": "AB2-26-05 - 2507 S MACDILL AVE - CERTIFIED APPLICATION V2.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22325/ab2-26-05-2507-s-macdill-ave-certified-application-v2.pdf"
+          "originalText": "AB2-26-05 - 2507 S MACDILL AVE - CERTIFIED APPLICATION V2.PDF"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=186783&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=187493&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22325/summary-sheet-cover-sheet.pdf"
+          "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "AB2-26-05 - SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=186784&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=187494&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-05 - SITE PLAN.PDF in a new tab",
-          "originalText": "AB2-26-05 - SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22325/ab2-26-05-site-plan.pdf"
+          "originalText": "AB2-26-05 - SITE PLAN.PDF"
         },
         {
           "title": "AB2-26-05 STAFF REPORT.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=186785&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=187495&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-05 STAFF REPORT.PDF in a new tab",
-          "originalText": "AB2-26-05 STAFF REPORT.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22325/ab2-26-05-staff-report.pdf"
+          "originalText": "AB2-26-05 STAFF REPORT.PDF"
         },
         {
           "title": "AB2-26-05 STAFF REPORT V2 FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20STAFF%20REPORT%20V2%20FINAL.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=186786&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20STAFF%20REPORT%20V2%20FINAL.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=187496&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-05 STAFF REPORT V2 FINAL.PDF in a new tab",
-          "originalText": "AB2-26-05 STAFF REPORT V2 FINAL.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-04-23/meeting-2841/22325/ab2-26-05-staff-report-v2-final.pdf"
+          "originalText": "AB2-26-05 STAFF REPORT V2 FINAL.PDF"
+        },
+        {
+          "title": "ORDINANCE AB2-26-05 W-REPEAL CLERK.DOCX.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20AB2-26-05%20W-REPEAL%20CLERK.DOCX.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=187497&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ORDINANCE AB2-26-05 W-REPEAL CLERK.DOCX.PDF in a new tab",
+          "originalText": "ORDINANCE AB2-26-05 W-REPEAL CLERK.DOCX.PDF"
+        },
+        {
+          "title": "AB2-26-05 BIE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-05%20BIE.PDF.pdf?documentType=1&meetingId=2841&itemId=22325&publishId=187498&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-26-05 BIE.PDF in a new tab",
+          "originalText": "AB2-26-05 BIE.PDF"
         }
       ],
       "folioNumbers": [],

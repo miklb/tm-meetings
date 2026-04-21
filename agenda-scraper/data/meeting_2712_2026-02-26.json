@@ -280,8 +280,8 @@
         "net": 0
       },
       "staffReport": {
-        "landUseType": "OTHER",
-        "currentZoning": "Y",
+        "landUseType": "ALCOHOL_BEVERAGE",
+        "currentZoning": "Ybor City Central Commercial Core (YC-1)",
         "requestedZoning": null,
         "futureLandUse": "Urban Mixed Use-60",
         "waivers": [],

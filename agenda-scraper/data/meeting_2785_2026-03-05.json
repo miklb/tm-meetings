@@ -4256,6 +4256,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "staffReport": {
+        "landUseType": "VACATION",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "waivers": [],
+        "findings": "FINDINGS: Right of way is currently improved VACATING HISTORY: Eastern portion of alley vacated per Ord. 180-A."
       }
     },
     {
@@ -4323,8 +4331,8 @@
       },
       "staffReport": {
         "landUseType": "REZONING",
-        "currentZoning": "R",
-        "requestedZoning": "R",
+        "currentZoning": "Residential Single-Family-60 (RS-60)",
+        "requestedZoning": "Residential Single-Family-50 (RS-50)",
         "futureLandUse": "R-  10",
         "waivers": [],
         "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the application and finds the request CONSISTENT with the City of Tampa Code of Ordinances."
