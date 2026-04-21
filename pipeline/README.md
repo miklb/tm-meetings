@@ -20,7 +20,8 @@ Consolidated orchestration scripts that tie together the agenda scraper (Node.js
 python3 pipeline/discover.py
 
 # 2. Process a single meeting
-./pipeline/process-meeting.sh 2645 2025-11-13
+npm run archive -- 2025-11-13
+# (or: ./pipeline/archive-meeting.sh 2645 2025-11-13)
 
 # 3. Or auto-process all new meetings
 python3 pipeline/discover.py --process
@@ -58,7 +59,9 @@ python pipeline/discover.py --date 2026-02-19
 python pipeline/discover.py --json
 ```
 
-### `process-meeting.sh` — End-to-end single meeting
+### `archive-meeting.sh` — End-to-end single meeting
+
+Invoke via `npm run archive -- <date>` from the project root, or call the script directly.
 
 Chains all pipeline steps for one meeting:
 
@@ -70,19 +73,22 @@ Chains all pipeline steps for one meeting:
 
 ```bash
 # Full pipeline
-./pipeline/process-meeting.sh 2645 2025-11-13
+npm run archive -- 2025-11-13
 
 # Skip video step (no YouTube key, or video not posted yet)
-./pipeline/process-meeting.sh 2645 2025-11-13 --skip-video
+npm run archive -- 2025-11-13 --skip-video
 
 # Skip site rebuild (batch processing — rebuild once at end)
-./pipeline/process-meeting.sh 2645 2025-11-13 --skip-site
+npm run archive -- 2025-11-13 --skip-site
 
 # Override meeting type
-./pipeline/process-meeting.sh 2645 2025-11-13 --meeting-type CRA
+npm run archive -- 2025-11-13 --meeting-type CRA
 
 # Preview without executing
-./pipeline/process-meeting.sh 2645 2025-11-13 --dry-run
+npm run archive -- 2025-11-13 --dry-run
+
+# Direct invocation with explicit pkey still works
+./pipeline/archive-meeting.sh 2645 2025-11-13
 ```
 
 Each step is **idempotent** — if the output file already exists, that step is skipped.

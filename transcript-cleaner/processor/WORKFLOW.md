@@ -9,7 +9,7 @@ The pipeline has two phases:
 1. **Transcript processing** — Scrape raw ALL CAPS transcript, convert to sentence case with NER
 2. **Video matching** — Find YouTube videos, calculate time offsets via Whisper, detect multi-part gaps
 
-For day-to-day use, `pipeline/process-meeting.sh` runs the entire pipeline end-to-end. For batch discovery of new meetings, use `pipeline/discover.py`.
+For day-to-day use, `pipeline/archive-meeting.sh` (via `npm run archive`) runs the entire pipeline end-to-end. For batch discovery of new meetings, use `pipeline/discover.py`.
 
 ## Environment Setup
 
@@ -39,14 +39,15 @@ Verify: `python3 -c "import dotenv, gliner; print('ok')"`
 ### Process a single meeting (end-to-end)
 
 ```bash
-# From project root, with venv activated
-./pipeline/process-meeting.sh <date>
+# From project root
+npm run archive -- <date>
+# (equivalent to ./pipeline/archive-meeting.sh <date>)
 ```
 
 The script auto-discovers the transcript pkey from tampagov.net. If multiple transcripts exist for that date (e.g., CRA + regular), it will list them and ask you to specify:
 
 ```bash
-./pipeline/process-meeting.sh <pkey> <date>
+./pipeline/archive-meeting.sh <pkey> <date>
 ```
 
 This runs scrape → capitalize → video pipeline → rebuild DB → rebuild site. Use `--skip-video` to skip video offset matching, or `--skip-site` to skip DB/site rebuild.
@@ -84,7 +85,7 @@ python3 src/capitalize_transcript.py \
 
 ### 3. Video Pipeline (unified)
 
-Finds YouTube videos, calculates Whisper offsets, and detects multi-part gaps in one command. This is what `process-meeting.sh` calls internally for the video phase.
+Finds YouTube videos, calculates Whisper offsets, and detects multi-part gaps in one command. This is what `archive-meeting.sh` calls internally for the video phase.
 
 ```bash
 python3 scripts/build/process_video.py <pkey> <date>
@@ -113,7 +114,7 @@ python3 scripts/build/process_video.py <pkey> <date>
 
 ### 4. Rebuild Database and Site
 
-After processing transcripts and/or video mappings, rebuild the SQLite database and Eleventy site so changes appear on the published site. This is automatic when using `process-meeting.sh`, but must be run manually when you've processed videos individually or fixed data by hand.
+After processing transcripts and/or video mappings, rebuild the SQLite database and Eleventy site so changes appear on the published site. This is automatic when using `archive-meeting.sh`, but must be run manually when you've processed videos individually or fixed data by hand.
 
 ```bash
 # From project root
@@ -211,7 +212,7 @@ The Whisper sample window likely landed on countdown music or silence. For Part 
 
 | Script                         | Purpose                                             |
 | ------------------------------ | --------------------------------------------------- |
-| `pipeline/process-meeting.sh`  | End-to-end: scrape → capitalize → video → DB → site |
+| `pipeline/archive-meeting.sh`  | End-to-end: scrape → capitalize → video → DB → site |
 | `pipeline/discover.py`         | Find unprocessed meetings, optionally auto-process  |
 | `pipeline/activate.sh`         | Activate the shared Python venv                     |
 | `pipeline/rebuild-entities.sh` | Rebuild entity databases from processed transcripts |

@@ -156,9 +156,9 @@ Use the transcript lookup to find pkeys, then process individually:
 python3 pipeline/transcript_lookup.py --match-db
 
 # Process a specific meeting (pkey + date)
-./pipeline/process-meeting.sh 2661 2026-02-26
-./pipeline/process-meeting.sh 2660 2026-02-19
-./pipeline/process-meeting.sh 2653 2026-01-22
+./pipeline/archive-meeting.sh 2661 2026-02-26
+./pipeline/archive-meeting.sh 2660 2026-02-19
+./pipeline/archive-meeting.sh 2653 2026-01-22
 ```
 
 ### Option C: Reprocess ALL 2026 transcripts (force re-capitalize)

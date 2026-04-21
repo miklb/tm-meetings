@@ -59,7 +59,7 @@ def main():
     parser.add_argument("--pages", type=int, default=2, help="Transcript index pages to scrape (default: 2)")
     parser.add_argument("--date", help="Filter to specific date (YYYY-MM-DD)")
     parser.add_argument("--process", action="store_true", help="Auto-process all discovered meetings")
-    parser.add_argument("--skip-video", action="store_true", help="Pass --skip-video to process-meeting.sh")
+    parser.add_argument("--skip-video", action="store_true", help="Pass --skip-video to archive-meeting.sh")
     parser.add_argument("--skip-site", action="store_true", help="Pass --skip-site to each meeting (rebuild once at end)")
     parser.add_argument("--dry-run", action="store_true", help="Show what would be done")
     parser.add_argument("--json", action="store_true", help="Output as JSON")
@@ -115,7 +115,7 @@ def main():
 
     print(f"\nProcessing {len(processable)} meeting(s)...\n")
 
-    process_script = str(PIPELINE_DIR / "process-meeting.sh")
+    process_script = str(PIPELINE_DIR / "archive-meeting.sh")
     successes = []
     failures = []
 

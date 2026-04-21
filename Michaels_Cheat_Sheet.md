@@ -1,30 +1,48 @@
 # Michael's Cheat Sheet
 
-The documentation is a bit verbose as there are a lot of moving parts and edge cases to handle, especially during development and debugging. This document is for distilling some of it down for standard workflow reference and to shape future documentation.
+Two top-level npm scripts drive everything. Both accept a date like `2026-04-16`.
 
-## On Friday's
+| Command                         | When                   | What it does                                                                      |
+| ------------------------------- | ---------------------- | --------------------------------------------------------------------------------- |
+| `npm run agenda -- YYYY-MM-DD`  | Friday (pre-meeting)   | Scrape agenda from Hyland → mirror PDFs to R2 → generate `*.wp.html`              |
+| `npm run archive -- YYYY-MM-DD` | Tuesday (post-meeting) | Scrape transcript → capitalize → match YouTube video + offset → rebuild DB + site |
 
-After `git pull`, run:
+Note the `--` separator: without it npm swallows the args.
+
+## Friday — Agenda prep
 
 ```bash
-npm run process -- YYYY-MM-DD            # convert + mirror using existing JSON (no re-scrape) note the space between flag and date
-npm run process -- YYYY-MM-DD --force    # re-scrape, then convert + mirror
-npm run process -- YYYY-MM-DD --skip-mirror  # skip R2 mirroring
+git pull
+npm run agenda -- YYYY-MM-DD                  # convert + mirror using existing JSON (no re-scrape)
+npm run agenda -- YYYY-MM-DD --force          # re-scrape, then convert + mirror
+npm run agenda -- YYYY-MM-DD --skip-mirror    # skip R2 mirroring
 ```
 
-`npm run process` calls `./process-agenda.sh` — they are the same thing. Note the `--` separator; without it npm doesn't pass the args to the script.
+If a JSON for the date already exists (e.g. from the nightly GH Action), the scrape step is skipped. Use `--force` to re-scrape anyway.
 
-By default, if a JSON for the date already exists (e.g. pulled from the nightly GH Action), the scrape step is skipped. Use `--force` to re-scrape anyway.
+Output: `agenda-scraper/agendas/agenda_YYYY-MM-DD.wp.html` plus mirrored PDFs on R2.
 
-This grabs the agendas for the date passed (YYYY-MM-DD), generates the file meeting_ID_YYYY_MM_DD.json and mirrors the supporting documents to R2. It also generates the wp.html file.
-
-`node scripts/build-db.js` rebuilds the db
-
-`cd site && npx @11ty/eleventy` rebuild the static site
-`wrangler pages deploy site/_site --project-name tampa-meetings`
-
-## On Tuesday:
+## Tuesday — Archive the meeting
 
 ```bash
-./pipeline/process-meeting.sh 2026-03-26
+npm run archive -- YYYY-MM-DD
+```
+
+Options:
+
+```bash
+npm run archive -- YYYY-MM-DD --skip-video          # no YouTube match / offset
+npm run archive -- YYYY-MM-DD --skip-site           # no DB + site rebuild
+npm run archive -- YYYY-MM-DD --meeting-type CRA    # override auto-detection
+npm run archive -- YYYY-MM-DD --dry-run             # show what would run
+```
+
+## Rebuild only
+
+If you fixed data by hand and just need to republish:
+
+```bash
+npm run build-db        # rebuild SQLite (scripts/build-db.js)
+npm run build-site      # Eleventy build
+npm run deploy          # wrangler pages deploy site/_site --project-name tampa-meetings
 ```

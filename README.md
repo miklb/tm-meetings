@@ -88,7 +88,7 @@ tampagov.net  ──▶ transcript-cleaner/ ──▶ Processed JSON + HTML
 
 pipeline/     ──▶ Orchestration       ──▶ SQLite DB + Eleventy site
                     ├── discover.py          (find new meetings)
-                    ├── process-meeting.sh   (end-to-end per meeting)
+                    ├── archive-meeting.sh   (end-to-end per meeting)
                     └── build-site.sh        (rebuild DB + site)
 
 site/         ──▶ Eleventy            ──▶ Static HTML pages

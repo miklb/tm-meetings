@@ -1,30 +1,31 @@
 #!/usr/bin/env bash
 #
-# process-meeting.sh — End-to-end pipeline for a single Tampa City Council
+# archive-meeting.sh — End-to-end pipeline for a single Tampa City Council
 # meeting transcript: scrape → capitalize → video → rebuild DB → rebuild site.
 #
 # Usage:
-#   ./pipeline/process-meeting.sh <date> [options]
-#   ./pipeline/process-meeting.sh <transcript_pkey> <date> [options]
+#   npm run archive -- <date> [options]           (from project root)
+#   ./pipeline/archive-meeting.sh <date> [options]
+#   ./pipeline/archive-meeting.sh <transcript_pkey> <date> [options]
 #
 # Examples:
 #   # Process by date (auto-discovers pkey from tampagov)
-#   ./pipeline/process-meeting.sh 2025-11-13
+#   npm run archive -- 2025-11-13
 #
 #   # Process a known transcript pkey
-#   ./pipeline/process-meeting.sh 2645 2025-11-13
+#   ./pipeline/archive-meeting.sh 2645 2025-11-13
 #
 #   # Skip video processing (no YouTube key, or no video yet)
-#   ./pipeline/process-meeting.sh 2025-11-13 --skip-video
+#   npm run archive -- 2025-11-13 --skip-video
 #
 #   # Override meeting type detection
-#   ./pipeline/process-meeting.sh 2025-11-13 --meeting-type CRA
+#   npm run archive -- 2025-11-13 --meeting-type CRA
 #
 #   # Skip the site rebuild step
-#   ./pipeline/process-meeting.sh 2025-11-13 --skip-site
+#   npm run archive -- 2025-11-13 --skip-site
 #
 #   # Dry run — show what would be done without executing
-#   ./pipeline/process-meeting.sh 2025-11-13 --dry-run
+#   npm run archive -- 2025-11-13 --dry-run
 #
 # Prerequisites:
 #   - Python venv at transcript-cleaner/processor/venv/ with deps installed

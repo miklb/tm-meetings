@@ -43,7 +43,7 @@ Hyland OnBase ─▶ agenda-scraper (JSON) ─▶ build-db.js (SQLite) ─▶ El
 ```
 ./pipeline/discover.py --process        # scrape + capitalize + video + DB + site
 ./pipeline/build-site.sh                # DB rebuild + Eleventy only
-./pipeline/process-meeting.sh 2653 2026-01-22   # single meeting
+./pipeline/archive-meeting.sh 2653 2026-01-22   # single meeting
 ```
 
 Run: `node scripts/build-db.js && cd site && npx eleventy`
@@ -300,7 +300,7 @@ Consolidated orchestration tier that bridges the three codebases (agenda-scraper
 
 - [x] `transcript_lookup.py` — Scrapes tampagov index, resolves `(date, meeting_type) → transcript pkey`, matches against OnBase IDs in SQLite
 - [x] `discover.py` — Compares transcript index against processed data, reports ready-to-process meetings, optionally auto-processes them
-- [x] `process-meeting.sh` — End-to-end per-meeting pipeline: scrape → capitalize → video → DB rebuild → site rebuild (idempotent steps)
+- [x] `archive-meeting.sh` — End-to-end per-meeting pipeline: scrape → capitalize → video → DB rebuild → site rebuild (idempotent steps)
 - [x] `build-site.sh` — Quick DB rebuild + Eleventy
 - [x] `rebuild-entities.sh` — Regenerate NER entity databases from agenda data
 - [x] `README.md` — Full usage docs with data flow diagram
