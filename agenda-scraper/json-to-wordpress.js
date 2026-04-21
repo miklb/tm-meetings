@@ -147,6 +147,8 @@ function cleanAgendaContent(content) {
     let cleaned = content
         // Format file numbers consistently
         .replace(/(File No\. [A-Za-z0-9\/\-]+)/gi, '**$1**')
+        // Also handle bare file numbers at start of text (e.g., "TA/CPA25-20 Transmittal...")
+        .replace(/^((?:DE[12]|TA\/CPA|REZ|VAC|AB[12]|SU\d?)\d{2}-\d+)\b/i, '**File No. $1**')
         
         // Remove email/memo transmission sentences (but preserve ones about continuing public hearings)
         // Match from "Memorandum from" to the end of the sentence, handling titles with periods (P.E., Ph.D., etc.)

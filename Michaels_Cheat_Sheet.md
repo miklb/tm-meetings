@@ -2,29 +2,56 @@
 
 The documentation is a bit verbose as there are a lot of moving parts and edge cases to handle, especially during development and debugging. This document is for distilling some of it down for standard workflow reference and to shape future documentation.
 
-## On Friday's
+## Weekly Recurring Checklist
 
-After `git pull`, run:
+Use this section as your running weekly tracker. Duplicate this block each week.
 
-```bash
-npm run process -- YYYY-MM-DD            # convert + mirror using existing JSON (no re-scrape) note the space between flag and date
-npm run process -- YYYY-MM-DD --force    # re-scrape, then convert + mirror
-npm run process -- YYYY-MM-DD --skip-mirror  # skip R2 mirroring
-```
+### Week Of: YYYY-MM-DD
 
-`npm run process` calls `./process-agenda.sh` — they are the same thing. Note the `--` separator; without it npm doesn't pass the args to the script.
+#### 1. Agenda Processing
 
-By default, if a JSON for the date already exists (e.g. pulled from the nightly GH Action), the scrape step is skipped. Use `--force` to re-scrape anyway.
+- [ ] Pull latest changes (`git pull`)
+- [ ] Process agenda date(s): `npm run process -- YYYY-MM-DD`
+- [ ] Re-scrape if needed: `npm run process -- YYYY-MM-DD --force`
+- [ ] Skip mirror run when appropriate: `npm run process -- YYYY-MM-DD --skip-mirror`
+- [ ] Confirm JSON and `.wp.html` output were generated for each target date
 
-This grabs the agendas for the date passed (YYYY-MM-DD), generates the file meeting_ID_YYYY_MM_DD.json and mirrors the supporting documents to R2. It also generates the wp.html file.
+#### 2. Data + Database
 
-`node scripts/build-db.js` rebuilds the db
+- [ ] Rebuild database: `node scripts/build-db.js`
+- [ ] Spot-check updated records in outputs that changed this week
 
-`cd site && npx @11ty/eleventy` rebuild the static site
-`wrangler pages deploy site/_site --project-name tampa-meetings`
+#### 3. Site Build + Deploy
 
-## On Tuesday:
+- [ ] Rebuild static site: `cd site && npx @11ty/eleventy`
+- [ ] Deploy pages: `wrangler pages deploy site/_site --project-name tampa-meetings`
+- [ ] Quick post-deploy sanity check (current meeting page + map + docs links)
 
-```bash
-./pipeline/process-meeting.sh 2026-03-26
-```
+#### 4. Transcript / Pipeline Work
+
+- [ ] Run meeting transcript pipeline when needed: `./pipeline/process-meeting.sh YYYY-MM-DD`
+- [ ] Confirm transcript outputs and links for processed meetings
+
+#### 5. Weekly Notes (What Got Done)
+
+- [ ] Key fixes completed:
+- [ ] Meetings/dates processed:
+- [ ] Deploys made:
+- [ ] Follow-ups for next week:
+
+---
+
+## Command Notes
+
+`npm run process` calls `./process-agenda.sh` (same behavior).
+
+Use the `--` separator so npm passes args to the script.
+
+By default, if JSON for a date already exists (for example from nightly GitHub Actions), scrape is skipped. Use `--force` to re-scrape.
+
+Running process for a date:
+
+- grabs agendas for `YYYY-MM-DD`
+- generates `meeting_ID_YYYY_MM_DD.json`
+- mirrors supporting documents to R2 (unless `--skip-mirror`)
+- generates the `.wp.html` file

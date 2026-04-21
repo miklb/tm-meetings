@@ -121,12 +121,41 @@ if [[ -z "$PKEY" ]]; then
         PKEY="$PKEYS"
         echo "  Found pkey: $PKEY"
     else
-        echo "Multiple transcripts found for $DATE:"
-        # Show full info so user can pick
+        echo "Multiple transcripts found for $DATE — processing all $PKEY_COUNT"
         "$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" 2>/dev/null
         echo ""
-        echo "Specify which one: $0 <pkey> $DATE [options]"
-        exit 1
+
+        # Process each pkey with --skip-site, then do one rebuild at the end
+        MULTI_FAILURES=0
+        while IFS= read -r MULTI_PKEY; do
+            echo ""
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            echo "  Processing pkey $MULTI_PKEY ($DATE)"
+            echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+            MULTI_ARGS=("$MULTI_PKEY" "$DATE" "--skip-site")
+            $SKIP_VIDEO && MULTI_ARGS+=("--skip-video")
+            [[ -n "$MEETING_TYPE" ]] && MULTI_ARGS+=("--meeting-type" "$MEETING_TYPE")
+            $DRY_RUN && MULTI_ARGS+=("--dry-run")
+
+            if ! bash "$0" "${MULTI_ARGS[@]}"; then
+                echo "FAILED: pkey=$MULTI_PKEY"
+                (( MULTI_FAILURES++ )) || true
+            fi
+        done <<< "$PKEYS"
+
+        # Single site rebuild at the end (unless --skip-site)
+        if ! $SKIP_SITE; then
+            step 4 "Rebuild SQLite database (combined)"
+            ( cd "$PROJECT_ROOT" && run node scripts/build-db.js )
+            step 5 "Rebuild Eleventy site (combined)"
+            ( cd "$SITE_DIR" && run npx @11ty/eleventy )
+        fi
+
+        if [[ "$MULTI_FAILURES" -gt 0 ]]; then
+            echo "WARNING: $MULTI_FAILURES meeting(s) failed."
+            exit 1
+        fi
+        exit 0
     fi
 fi
 

@@ -73,17 +73,23 @@ function identifyStaffReports(meetingData) {
         const fileNumber = item.fileNumber || '';
         
         // Check if this is a land use case by file number pattern
-        const isLandUseCase = /^(REZ|VAC|SU|TA\/CPA|CPA|PD)-/i.test(fileNumber) ||
+        const isLandUseCase = /^(REZ|VAC|SU|TA\/CPA|CPA|PD|AB2)-/i.test(fileNumber) ||
                              fileNumber.includes('TA/CPA');
         
         // Also check if title starts with "File No." (common for land use cases)
         const hasFileNoFormat = itemTitle.startsWith('File No. ') && itemTitle.includes(fileNumber);
         
         if ((isLandUseCase || hasFileNoFormat) && item.supportingDocuments) {
-            // Look for staff report final documents
-            const staffReports = item.supportingDocuments.filter(doc => 
-                doc.title.toUpperCase().includes('STAFF REPORT FINAL')
+            // Look for staff report documents — match any doc with "STAFF REPORT" in the name
+            const allStaffReports = item.supportingDocuments.filter(doc => 
+                doc.title.toUpperCase().includes('STAFF REPORT')
             );
+            
+            // Prefer docs with "FINAL" in the name; fall back to any staff report
+            const finalReports = allStaffReports.filter(doc =>
+                doc.title.toUpperCase().includes('FINAL')
+            );
+            const staffReports = finalReports.length > 0 ? finalReports : allStaffReports;
             
             if (staffReports.length > 0) {
                 // Select the most recent staff report if multiple exist
@@ -113,6 +119,7 @@ function determineLandUseType(fileNumber) {
     if (fileNumber.startsWith('TA/CPA')) return 'TEXT_AMENDMENT_COMP_PLAN';
     if (fileNumber.startsWith('VAC-')) return 'VACATION';
     if (fileNumber.startsWith('SU-')) return 'SPECIAL_USE';
+    if (fileNumber.startsWith('AB2-')) return 'ALCOHOL_BEVERAGE';
     return 'OTHER';
 }
 
@@ -272,6 +279,35 @@ function parseZoningData(textContent, fileNumber) {
     
     console.log(`📖 Parsing zoning data for ${fileNumber}...`);
     
+    /**
+     * Extract a zoning designation from text.
+     * Handles both short codes like "PD" / "RM-24" and full descriptions
+     * like "Ybor City Commercial General (YC-5)".
+     * Returns the parenthesized code when available, otherwise the full text.
+     */
+    function extractZoningValue(text) {
+        if (!text || !text.trim()) return null;
+        text = text.trim();
+        
+        // If text contains a parenthesized code like "(YC-5)" or "(PD)", prefer that
+        const codeInParens = text.match(/\(([A-Z][A-Z0-9-]{0,10})\)/);
+        if (codeInParens) {
+            // Return full description for display: "Ybor City Commercial General (YC-5)"
+            // Trim at the closing paren of the code (ignore trailing ref numbers, ord numbers, etc.)
+            const endIdx = text.indexOf(codeInParens[0]) + codeInParens[0].length;
+            return text.substring(0, endIdx).trim();
+        }
+        
+        // Short all-caps code like "PD", "RM-24", "CI"
+        const shortCode = text.match(/^([A-Z][A-Z0-9]{0,4}(?:-\d+)?)/);
+        if (shortCode) {
+            return shortCode[1];
+        }
+        
+        // Fallback: return everything up to a newline or semicolon
+        return text.split(/[;\n]/)[0].trim();
+    }
+    
     // Clean up text and split into lines
     const lines = textContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
     
@@ -292,16 +328,16 @@ function parseZoningData(textContent, fileNumber) {
                 
                 if (segments.length >= 2) {
                     // Current zoning is typically the first segment
-                    const currentMatch = segments[0].match(/^([A-Z]{1,4}(?:-\d+)?)/);
-                    if (currentMatch) {
-                        extractedData.currentZoning = currentMatch[1];
+                    const currentVal = extractZoningValue(segments[0] + ')');
+                    if (currentVal) {
+                        extractedData.currentZoning = currentVal;
                         console.log(`   Current Zoning: ${extractedData.currentZoning}`);
                     }
                     
                     // Requested zoning - look in the last segment
-                    const requestedMatch = segments[segments.length - 1].match(/^([A-Z]{1,4}(?:-\d+)?)/);
-                    if (requestedMatch) {
-                        extractedData.requestedZoning = requestedMatch[1];
+                    const requestedVal = extractZoningValue(segments[segments.length - 1] + ')');
+                    if (requestedVal) {
+                        extractedData.requestedZoning = requestedVal;
                         console.log(`   Requested Zoning: ${extractedData.requestedZoning}`);
                     }
                 }
@@ -311,18 +347,18 @@ function parseZoningData(textContent, fileNumber) {
         // Alternative: Look for separate CURRENT ZONING and REQUESTED ZONING lines
         if (line.startsWith('CURRENT ZONING:') && !line.includes('REQUESTED ZONING:')) {
             const zoningText = line.replace('CURRENT ZONING:', '').trim();
-            const zoningMatch = zoningText.match(/^([A-Z]{1,4}(?:-\d+)?)/);
-            if (zoningMatch) {
-                extractedData.currentZoning = zoningMatch[1];
+            const val = extractZoningValue(zoningText);
+            if (val) {
+                extractedData.currentZoning = val;
                 console.log(`   Current Zoning: ${extractedData.currentZoning}`);
             }
         }
         
         if (line.startsWith('REQUESTED ZONING:')) {
             const zoningText = line.replace('REQUESTED ZONING:', '').trim();
-            const zoningMatch = zoningText.match(/^([A-Z]{1,4}(?:-\d+)?)/);
-            if (zoningMatch) {
-                extractedData.requestedZoning = zoningMatch[1];
+            const val = extractZoningValue(zoningText);
+            if (val) {
+                extractedData.requestedZoning = val;
                 console.log(`   Requested Zoning: ${extractedData.requestedZoning}`);
             }
         }

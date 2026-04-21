@@ -81,6 +81,8 @@ jobs:
           if [[ "$HAS_MEANINGFUL" == "true" ]]; then
             echo "has_meaningful=true" >> "$GITHUB_OUTPUT"
             {
+              echo "@miklb"
+              echo ""
               echo "## Nightly Scrape — Changes Detected"
               echo ""
               if [[ -n "$NEW_MEETINGS" ]]; then

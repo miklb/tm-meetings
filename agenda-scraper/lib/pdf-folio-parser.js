@@ -16,40 +16,68 @@ const MAPBOX_TOKEN = process.env.MAPBOX_API_TOKEN;
 async function geocodeAddress(address, context = '') {
     if (!address) return null;
     
-    // Build search query with context if provided
-    let searchQuery = address;
+    // Build search queries: try with context first, fall back to without
+    const queries = [];
     if (context) {
-        searchQuery = `${address}, ${context}, Tampa, FL`;
-    } else {
-        searchQuery = `${address}, Tampa, FL`;
+        queries.push(`${address}, ${context}, Tampa, FL`);
+    }
+    queries.push(`${address}, Tampa, FL`);
+    
+    for (const searchQuery of queries) {
+        try {
+            const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(searchQuery)}.json`;
+            
+            const response = await axios.get(url, {
+                params: {
+                    access_token: MAPBOX_TOKEN,
+                    limit: 1,
+                    proximity: '-82.4572,27.9506', // Tampa city center
+                    bbox: '-82.64,27.83,-82.24,28.11', // Tampa bounding box
+                    types: 'address'
+                },
+                timeout: 5000
+            });
+
+            if (response.data.features && response.data.features.length > 0) {
+                const feature = response.data.features[0];
+                const [lng, lat] = feature.center;
+                console.log(`[Geocoder] "${searchQuery}" -> ${lat}, ${lng} (${feature.place_type})`);
+                return { lat, lng };
+            }
+
+            console.log(`[Geocoder] No address-level results for "${searchQuery}"`);
+
+        } catch (error) {
+            console.error(`[Geocoder] Error geocoding "${searchQuery}":`, error.message);
+        }
     }
     
+    // Last resort: try without type restriction (accepts any result type)
+    const fallbackQuery = `${address}, Tampa, FL`;
     try {
-        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(searchQuery)}.json`;
-        
+        const url = `https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(fallbackQuery)}.json`;
         const response = await axios.get(url, {
             params: {
                 access_token: MAPBOX_TOKEN,
                 limit: 1,
-                proximity: '-82.4572,27.9506', // Tampa city center
-                bbox: '-82.64,27.83,-82.24,28.11' // Tampa bounding box
+                proximity: '-82.4572,27.9506',
+                bbox: '-82.64,27.83,-82.24,28.11'
             },
             timeout: 5000
         });
 
         if (response.data.features && response.data.features.length > 0) {
-            const [lng, lat] = response.data.features[0].center;
-            console.log(`[Geocoder] "${searchQuery}" -> ${lat}, ${lng}`);
+            const feature = response.data.features[0];
+            const [lng, lat] = feature.center;
+            console.log(`[Geocoder] Fallback "${fallbackQuery}" -> ${lat}, ${lng} (${feature.place_type})`);
             return { lat, lng };
         }
-
-        console.log(`[Geocoder] No results for "${searchQuery}"`);
-        return null;
-
     } catch (error) {
-        console.error(`[Geocoder] Error geocoding "${searchQuery}":`, error.message);
-        return null;
+        console.error(`[Geocoder] Fallback error for "${fallbackQuery}":`, error.message);
     }
+    
+    console.log(`[Geocoder] No results for "${address}"`);
+    return null;
 }
 
 /**
