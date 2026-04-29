@@ -1,0 +1,39 @@
+{
+  "meetingId": "2881",
+  "meetingType": "special",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "May 5, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2881&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "23716",
+      "title": "Discuss of Memorandum of Understanding regarding the Tampa Bay Rays.\n\n- 30 minute presentation from the Tampa Bay Rays. \n\n- 30 minute presentation by the City and CRA. \n\n- Question and Answer Session.\n\n- 5 minutes for each stakeholder.\n\n- Additional Q&A.\n\nMemorandum from John Bennett, Chief of Staff, transmitting a presentation for said discussion. (To be R/F)",
+      "rawTitle": "Discuss of Memorandum of Understanding regarding the Tampa Bay Rays.\n\n- 30 minute presentation from the Tampa Bay Rays. \n\n- 30 minute presentation by the City and CRA. \n\n- Question and Answer Session.\n\n- 5 minutes for each stakeholder.\n\n- Additional Q&A.\n\nMemorandum from John Bennett, Chief of Staff, transmitting a presentation for said discussion. (To be R/F)",
+      "fileNumber": "R/F",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.BENNETT%20-%20050526%20SPECIAL%20CALL%20WORKSHOP%20SESSION%20-%20FILE%20NO.%20E2026-48.PDF.pdf?documentType=1&meetingId=2881&itemId=23716&publishId=187726&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48.PDF in a new tab",
+          "originalText": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      }
+    }
+  ],
+  "formattedDate": "2026-05-05"
+}
