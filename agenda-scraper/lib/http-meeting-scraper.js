@@ -5,9 +5,10 @@
 
 const axios = require('axios');
 const { CookieJar } = require('tough-cookie');
-const pdfParse = require('pdf-parse');
 const fs = require('fs');
 const path = require('path');
+const { extractTextFromBuffer } = require('./pdf-text-extractor');
+const { extractBackgroundSection } = require('./summary-sheet-parser');
 
 const {
   BASE_URL,
@@ -154,37 +155,22 @@ async function extractSummarySheetDetails(client, docs, formatBackgroundText, pa
 
   try {
     const response = await client.get(summaryDoc.url, { responseType: 'arraybuffer', timeout: 90000 });
-    
-    // Suppress pdf-parse warnings by temporarily redirecting stderr
-    const originalStderrWrite = process.stderr.write;
-    process.stderr.write = () => {};
-    
-    const pdfData = await pdfParse(response.data);
-    
-    // Restore stderr
-    process.stderr.write = originalStderrWrite;
-    
-    const text = pdfData.text || '';
+
+    const { text } = await extractTextFromBuffer(Buffer.from(response.data));
 
     result.summaryText = text;
     result.summaryDoc = summaryDoc;
     result.financialEntries = parseSummaryFinancialEntries(text);
 
-    // Extract background section
-    const backgroundPatterns = [
-      /background\s*:?([\s\S]*?)(?=\n\s*(?:fiscal\s+impact|recommendation|analysis|staff\s+recommendation|attachments?|budget|legal|conclusion|next\s+steps|justification|alternatives|contact|prepared\s+by|reviewed\s+by|$))/i,
-      /background\s*information\s*:?([\s\S]*?)(?=\n\s*(?:fiscal\s+impact|recommendation|analysis|staff\s+recommendation|attachments?|budget|legal|conclusion|next\s+steps|justification|alternatives|contact|prepared\s+by|reviewed\s+by|$))/i,
-      /project\s*background\s*:?([\s\S]*?)(?=\n\s*(?:fiscal\s+impact|recommendation|analysis|staff\s+recommendation|attachments?|budget|legal|conclusion|next\s+steps|justification|alternatives|contact|prepared\s+by|reviewed\s+by|$))/i
-    ];
-
-    for (const pattern of backgroundPatterns) {
-      const match = text.match(pattern);
-      if (match && match[1]) {
-        const cleaned = formatBackgroundText(match[1].trim());
-        if (cleaned.length > 20) {
-          result.backgroundText = cleaned;
-          break;
-        }
+    // Extract background section using the shared, header-aware extractor.
+    // (Earlier versions used a single regex with case-insensitive lookaheads
+    // that misfired on body text containing words like "recommendation",
+    // truncating Background mid-paragraph.)
+    const rawBackground = extractBackgroundSection(text);
+    if (rawBackground) {
+      const cleaned = formatBackgroundText(rawBackground);
+      if (cleaned && cleaned.length > 20) {
+        result.backgroundText = cleaned;
       }
     }
   } catch (err) {

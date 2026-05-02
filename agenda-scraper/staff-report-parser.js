@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
-const pdfParse = require('pdf-parse');
+const { extractTextFromBuffer } = require('./lib/pdf-text-extractor');
 
 /**
  * Select the most recent staff report when multiple exist
@@ -130,6 +130,7 @@ const STAFF_REPORT_FIELDS = {
     CURRENT_ZONING: ['CURRENT ZONING', 'EXISTING ZONING'],
     REQUESTED_ZONING: ['REQUESTED ZONING', 'PROPOSED ZONING'],
     FUTURE_LAND_USE: ['FUTURE LAND USE'],
+    NEIGHBORHOOD_ASSOCIATION: ['NEIGHBORHOOD ASSOCIATION'],
     WAIVERS: [
         'WAIVERS',
         'WAIVER(S) REQUESTED', 
@@ -138,6 +139,47 @@ const STAFF_REPORT_FIELDS = {
     ],
     FINDINGS: ['FINDINGS', 'STAFF FINDINGS']
 };
+
+/**
+ * Extract the NEIGHBORHOOD ASSOCIATION section as a list of association names.
+ *
+ * The section can span multiple lines and contain corporate suffixes that
+ * include commas (e.g. "Historic Ybor Neighborhood Civic Association, Inc.").
+ * We split on commas, then re-attach trailing suffix tokens.
+ *
+ * @param {string} text - Raw text from the staff report PDF
+ * @returns {string[]} - Cleaned list of association names (may be empty)
+ */
+function parseNeighborhoodAssociations(text) {
+    if (!text) return [];
+
+    // Capture from the label until the next ALL-CAPS label or a blank-line gap.
+    const labelRe = /NEIGHBORHOOD\s+ASSOCIATION:\s*([\s\S]*?)(?=\n\s*[A-Z][A-Z0-9 &/().#-]{2,}:\s|\n\s*\n)/i;
+    const match = text.match(labelRe);
+    if (!match) return [];
+
+    let raw = match[1].replace(/\s+/g, ' ').trim();
+    if (!raw || /^N\/?A$|^NONE$/i.test(raw)) return [];
+
+    // Some staff reports use "Inc.<space><CapitalLetter>" as an entity boundary
+    // instead of a comma. Normalize those to commas before splitting.
+    const SUFFIX_TOKEN = '(?:Inc|L\\.?L\\.?C|L\\.?L\\.?P|Corp|Co|Ltd|LP)';
+    raw = raw.replace(new RegExp(`(${SUFFIX_TOKEN})\\.\\s+(?=[A-Z])`, 'g'), '$1., ');
+
+    // Split on commas, then re-attach trailing corporate suffixes to the
+    // previous entity (e.g. "Civic Association, Inc.").
+    const SUFFIX_RE = /^(Inc\.?|L\.?L\.?C\.?|L\.?L\.?P\.?|Corp\.?|Co\.?|Ltd\.?|LP|Assn\.?)$/i;
+    const parts = raw.split(/\s*,\s*/).map((s) => s.trim()).filter(Boolean);
+    const result = [];
+    for (const part of parts) {
+        if (result.length && SUFFIX_RE.test(part)) {
+            result[result.length - 1] += ', ' + part;
+        } else {
+            result.push(part);
+        }
+    }
+    return result.map((s) => s.replace(/[,.;\s]+$/, '')).filter(Boolean);
+}
 
 /**
  * Test the staff report identification with meeting 2616
@@ -241,23 +283,60 @@ async function downloadAndExtractStaffReportPDF(pdfUrl, driver = null) {
         if (!pdfHeader.startsWith('%PDF')) {
             throw new Error('Downloaded file is not a valid PDF');
         }
-        
-        // Suppress pdf-parse warnings (TT font warnings) by temporarily redirecting stderr
-        const originalStderrWrite = process.stderr.write;
-        process.stderr.write = () => {};
 
-        // Parse the PDF using the existing infrastructure
-        const pdfData = await pdfParse(response.data);
-
-        // Restore stderr
-        process.stderr.write = originalStderrWrite;
-
-        return pdfData.text;
+        const { text } = await extractTextFromBuffer(Buffer.from(response.data));
+        return text;
         
     } catch (error) {
         console.error(`Error downloading/parsing PDF: ${error.message}`);
         return null;
     }
+}
+
+/**
+ * For two-column staff reports (e.g. right-of-way vacating reports), extract
+ * the FINDINGS column content. The layout looks like:
+ *
+ *   HEARING DATE:                            FINDINGS:
+ *   3/26/2026 @ 10:30 am                     Right of way is currently improved.
+ *   APPLICANT(S):
+ *   2111 N Boulevard LLC – Adam              VACATING HISTORY:
+ *
+ * We anchor on the column where "FINDINGS:" begins, then read substring(col)
+ * from each subsequent raw line until that right column starts a new uppercase
+ * header.
+ *
+ * @param {string[]} rawLines - Untrimmed lines from the PDF text
+ * @returns {string|null} - Findings text (joined), or null if not found
+ */
+function extractColumnFindings(rawLines) {
+    let headerIdx = -1;
+    let colIdx = -1;
+    for (let i = 0; i < rawLines.length; i++) {
+        const m = rawLines[i].match(/^(\s*[A-Z][A-Z\s\(\)\/&\-]+:\s{4,})FINDINGS:\s*$/);
+        if (m) {
+            headerIdx = i;
+            colIdx = m[1].length;
+            break;
+        }
+    }
+    if (headerIdx < 0 || colIdx < 0) return null;
+
+    const collected = [];
+    for (let j = headerIdx + 1; j < rawLines.length && j < headerIdx + 30; j++) {
+        const line = rawLines[j];
+        if (line.length <= colIdx) continue;
+        const right = line.substring(colIdx).trimEnd();
+        if (!right) continue;
+        // Stop if right column starts a new uppercase section header.
+        if (/^[A-Z][A-Z\s\(\)\/&\-]+:\s*$/.test(right) ||
+            /^[A-Z][A-Z\s\(\)\/&\-]{2,}:\s+\S/.test(right)) {
+            break;
+        }
+        collected.push(right.trim());
+    }
+    const text = collected.join(' ').trim();
+    return text || null;
 }
 
 /**
@@ -271,6 +350,7 @@ function parseZoningData(textContent, fileNumber) {
         currentZoning: null,
         requestedZoning: null,
         futureLandUse: null,
+        neighborhoodAssociations: [],
         waivers: [],
         findings: null
     };
@@ -278,6 +358,11 @@ function parseZoningData(textContent, fileNumber) {
     if (!textContent) return extractedData;
     
     console.log(`📖 Parsing zoning data for ${fileNumber}...`);
+
+    extractedData.neighborhoodAssociations = parseNeighborhoodAssociations(textContent);
+    if (extractedData.neighborhoodAssociations.length) {
+        console.log(`   Neighborhoods (${extractedData.neighborhoodAssociations.length}): ${extractedData.neighborhoodAssociations.join(' | ')}`);
+    }
     
     /**
      * Extract a zoning designation from text.
@@ -310,6 +395,13 @@ function parseZoningData(textContent, fileNumber) {
     
     // Clean up text and split into lines
     const lines = textContent.split('\n').map(line => line.trim()).filter(line => line.length > 0);
+
+    // Also keep raw (untrimmed) lines for column-aware extraction. Some staff
+    // reports — especially right-of-way vacating reports — use a fixed-width
+    // two-column layout where headers like "HEARING DATE:" sit beside "FINDINGS:"
+    // on the same physical line, with the actual findings text on the next line
+    // in the right column. The trimmed-line logic above can't see those columns.
+    const rawLines = textContent.split('\n');
     
     // Find the zoning section (looks for the two-column format)
     for (let i = 0; i < lines.length; i++) {
@@ -370,7 +462,11 @@ function parseZoningData(textContent, fileNumber) {
         if (line.includes('FUTURE LAND USE:')) {
             const futureLandUseMatch = line.match(/FUTURE LAND USE:\s*([^(]+)/);
             if (futureLandUseMatch) {
-                extractedData.futureLandUse = futureLandUseMatch[1].trim();
+                // Collapse runs of whitespace ("R-  20" -> "R-20" when adjacent
+                // to a hyphen, otherwise single-space).
+                let value = futureLandUseMatch[1].trim();
+                value = value.replace(/-\s+(\d)/g, '-$1').replace(/\s{2,}/g, ' ');
+                extractedData.futureLandUse = value;
                 console.log(`   Future Land Use: ${extractedData.futureLandUse}`);
             }
         }
@@ -408,8 +504,24 @@ function parseZoningData(textContent, fileNumber) {
                 console.log(`   Waiver: ${currentWaiverText.trim().substring(0, 80)}...`);
             }
             inWaiverSection = false;
-            
-            // Start collecting findings
+
+            // Detect two-column layout: a line like
+            //   "HEARING DATE:                            FINDINGS:"
+            // contains *another* uppercase label with a colon before FINDINGS,
+            // separated by ≥4 spaces. In that case, findings live in the right
+            // column of subsequent lines (vacating-staff-report layout).
+            const columnHeaderRe = /^\s*[A-Z][A-Z\s\(\)\/&\-]+:\s{4,}FINDINGS:\s*$/;
+            const isColumnLayout = rawLines.some(rl => columnHeaderRe.test(rl));
+            if (isColumnLayout) {
+                const colFindings = extractColumnFindings(rawLines);
+                if (colFindings) {
+                    extractedData.findings = colFindings;
+                    console.log(`   Findings (col-aware): ${colFindings.substring(0, 100)}...`);
+                    break;
+                }
+            }
+
+            // Start collecting findings (single-column path)
             let findingsText = line + ' ';
             for (let j = i + 1; j < lines.length; j++) {
                 const nextLine = lines[j].toUpperCase();
@@ -430,6 +542,8 @@ function parseZoningData(textContent, fileNumber) {
             let cleanFindings = findingsText.trim();
             cleanFindings = cleanFindings.replace(/\s*LOCATION MAP:\s*REZONING STAFF REPORT\s*REZ-\d{2}-\s*\d+\s*$/i, '');
             cleanFindings = cleanFindings.replace(/\s*REZONING STAFF REPORT\s*REZ-\d{2}-\s*\d+\s*$/i, '');
+            // Strip the leading "FINDINGS:" label so the field contains just the body.
+            cleanFindings = cleanFindings.replace(/^FINDINGS:\s*/i, '').trim();
             
             extractedData.findings = cleanFindings;
             console.log(`   Findings: ${cleanFindings.substring(0, 100)}...`);
@@ -567,6 +681,7 @@ async function integrateStaffReportsIntoAgendaItems(meetingData) {
                     currentZoning: result.extractedData.currentZoning,
                     requestedZoning: result.extractedData.requestedZoning,
                     futureLandUse: result.extractedData.futureLandUse,
+                    neighborhoodAssociations: result.extractedData.neighborhoodAssociations || [],
                     waivers: result.extractedData.waivers,
                     findings: result.extractedData.findings
                 };
@@ -708,6 +823,7 @@ module.exports = {
     integrateStaffReportsIntoAgendaItems,
     downloadAndExtractStaffReportPDF,
     parseZoningData,
+    parseNeighborhoodAssociations,
     saveParsingResults
 };
 

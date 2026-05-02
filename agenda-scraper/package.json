@@ -16,6 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "@aws-sdk/client-s3": "^3.947.0",
+    "@llamaindex/liteparse": "^1.5.2",
     "axios": "^1.11.0",
     "axios-cookiejar-support": "^6.0.2",
     "cheerio": "^1.1.0",

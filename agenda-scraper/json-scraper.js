@@ -73,6 +73,12 @@ function formatBackgroundText(text) {
         .replace(/(\b(?:Contract|Resolution|Case|File|No\.?|Number))\s*\n\s*([A-Z0-9-]+)/gi, '$1 $2')
         // Fix split dates like "01/05/\n2024" -> "01/05/2024"
         .replace(/(\d{1,2}\/\d{1,2}\/)\s*\n\s*(\d{4})/g, '$1$2')
+        // Fix hyphen-wrapped words/identifiers: "Design-\nBuild" -> "Design-Build",
+        // "2022-\n230" -> "2022-230", "agree-\nment" -> "agreement".
+        // Only join when the char before '-' and the char after the newline are
+        // both word characters (letter/digit), to avoid touching em-dashes or
+        // bullet-style "- item" lines.
+        .replace(/(\w)-\n\s*(\w)/g, '$1-$2')
         .trim();
     
     // Use the PDF's natural structure: split on lines and analyze the structure
@@ -217,36 +223,21 @@ async function extractBackgroundFromPDFAttempt(driver, pdfRelativeUrl) {
         process.stderr.write = originalStderrWrite;
 
         const text = pdfData.text;
-        
-        // Look for background section with specific patterns only
-        const backgroundPatterns = [
-            // Main background pattern - captures until common section headers
-            /background\s*:?\s*([\s\S]*?)(?=\n\s*(?:fiscal\s+impact|recommendation|analysis|staff\s+recommendation|attachments?|budget|legal|conclusion|next\s+steps|justification|alternatives|contact|prepared\s+by|reviewed\s+by|\n\s*\n|$))/i,
-            // Background information variant
-            /background\s*information\s*:?\s*([\s\S]*?)(?=\n\s*(?:fiscal\s+impact|recommendation|analysis|staff\s+recommendation|attachments?|budget|legal|conclusion|next\s+steps|justification|alternatives|contact|prepared\s+by|reviewed\s+by|\n\s*\n|$))/i,
-            // Project background variant
-            /project\s*background\s*:?\s*([\s\S]*?)(?=\n\s*(?:fiscal\s+impact|recommendation|analysis|staff\s+recommendation|attachments?|budget|legal|conclusion|next\s+steps|justification|alternatives|contact|prepared\s+by|reviewed\s+by|\n\s*\n|$))/i,
-            // Business case variant
-            /business\s*case\s*:?\s*([\s\S]*?)(?=\n\s*(?:fiscal\s+impact|recommendation|analysis|staff\s+recommendation|attachments?|budget|legal|conclusion|next\s+steps|justification|alternatives|contact|prepared\s+by|reviewed\s+by|\n\s*\n|$))/i
-        ];
-        
-        for (const pattern of backgroundPatterns) {
-            const match = text.match(pattern);
-            if (match && match[1]) {
-                let background = match[1].trim()
-                    .replace(/[\f\r]/g, '') // Remove form feeds and carriage returns
-                    .replace(/\s*\n\s*/g, '\n') // Normalize line breaks
-                    .trim();
-                
-                // Format numbered lists properly
-                background = formatBackgroundText(background);
-                
-                if (background.length > 20) {
-                    return background;
-                }
+
+        // Use the shared, header-aware extractor (handles BACKGROUND /
+        // BACKGROUND INFORMATION / PROJECT BACKGROUND and stops only at
+        // uppercase section labels).
+        const { extractBackgroundSection } = require('./lib/summary-sheet-parser');
+        const raw = extractBackgroundSection(text);
+        if (raw) {
+            const cleaned = formatBackgroundText(
+                raw.replace(/[\f\r]/g, '').replace(/\s*\n\s*/g, '\n').trim()
+            );
+            if (cleaned && cleaned.length > 20) {
+                return cleaned;
             }
         }
-        
+
         return '';
         
     } catch (error) {
