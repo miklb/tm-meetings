@@ -1,0 +1,6 @@
+.env
+.venv/
+data/coa-cache.json
+data/reports/
+__pycache__/
+*.pyc
