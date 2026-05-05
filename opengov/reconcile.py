@@ -80,143 +80,175 @@ def _extract_fiscal_year(context: str) -> int | None:
 # ------------------------------------------------------------------
 # Core enrichment
 # ------------------------------------------------------------------
-def _enrich_detail(
-    detail: dict[str, Any],
+# Map row.type values from the JS parser to budget-impact direction.
+#   +v  the City spends more / loses revenue it expected
+#   -v  the City spends less / receives revenue
+_TYPE_DIRECTION = {
+    "expenditure": +1,
+    "expenditure_decrease": -1,
+    "revenue": -1,
+    "revenue_decrease": +1,
+}
+
+_EMPTY_TOTALS = {
+    "expenditures": 0.0,
+    "decreases": 0.0,
+    "revenues": 0.0,
+    "revenueDecreases": 0.0,
+    "net": 0.0,
+}
+
+
+def _new_totals() -> dict[str, float]:
+    return dict(_EMPTY_TOTALS)
+
+
+def _add_to_totals(bucket: dict[str, float], row_type: str, value: float) -> None:
+    """Mutate ``bucket`` in place by adding one row's contribution."""
+    if row_type == "expenditure":
+        bucket["expenditures"] += value
+        bucket["net"] += value
+    elif row_type == "expenditure_decrease":
+        bucket["decreases"] += value
+        bucket["net"] -= value
+    elif row_type == "revenue":
+        bucket["revenues"] += value
+        bucket["net"] -= value
+    elif row_type == "revenue_decrease":
+        bucket["revenueDecreases"] += value
+        bucket["net"] += value
+    # unknown types are silently ignored — the JS parser already logs them
+
+
+def _round_totals(bucket: dict[str, float]) -> dict[str, float]:
+    return {k: round(v, 2) for k, v in bucket.items()}
+
+
+def _enrich_row(
+    row: dict[str, Any],
     cache: dict[str, Any],
 ) -> dict[str, Any]:
-    """Return an enriched copy of a single ``financialDetails`` entry.
+    """Resolve segment names from the CoA cache for one PROJECTED COSTS row.
 
-    Looks for an account code in the ``contexts`` list (first match wins),
-    resolves it, and merges the result into a new dict.  The original fields
-    are preserved unchanged.
+    The JS parser already produced structured ``fund``/``department``/``object``/
+    ``project`` segment codes plus ``fiscalYear``, ``type``, ``value``,
+    ``subjectToAppropriation``. This function only adds the human-readable
+    names and tracks which segments were not found in the public CoA.
     """
-    out = dict(detail)
-    out.setdefault("accountCode", None)
-    out.setdefault("fiscalYear", None)
-    out.setdefault("enriched", None)
-    out.setdefault("unresolved", [])
-
-    raw_code: str | None = None
-    fy: int | None = None
-    for ctx in detail.get("contexts") or []:
-        if raw_code is None:
-            raw_code = _extract_account_code(ctx)
-        if fy is None:
-            fy = _extract_fiscal_year(ctx)
-        if raw_code and fy:
-            break
-
-    out["fiscalYear"] = fy
-
-    if not raw_code:
-        return out
-
-    out["accountCode"] = raw_code
-    parsed = _parse_code(raw_code, cache)
-    out["unresolved"] = parsed.unresolved_codes
+    out = dict(row)
+    raw_code = row.get("accountCode") or ""
+    parsed = _parse_code(raw_code, cache) if raw_code else None
 
     enriched: dict[str, Any] = {}
-    if parsed.fund and parsed.fund.entry:
-        enriched["fund"] = {
-            "code": parsed.fund.raw,
-            "name": parsed.fund.entry.name,
-        }
-    if parsed.department and parsed.department.entry:
-        enriched["department"] = {
-            "code": parsed.department.raw,
-            "name": parsed.department.entry.name,
-        }
-    if parsed.object_ and parsed.object_.entry:
-        enriched["object"] = {
-            "code": parsed.object_.raw,
-            "name": parsed.object_.entry.name,
-        }
-    if parsed.project and parsed.project.entry:
-        enriched["project"] = {
-            "code": parsed.project.raw,
-            "name": parsed.project.entry.name,
-        }
-    if fy:
-        enriched["fiscalYear"] = fy
+    unresolved: list[str] = []
+    if parsed is not None:
+        if parsed.fund and parsed.fund.entry:
+            enriched["fund"] = {"code": parsed.fund.raw, "name": parsed.fund.entry.name}
+        if parsed.department and parsed.department.entry:
+            enriched["department"] = {"code": parsed.department.raw, "name": parsed.department.entry.name}
+        if parsed.object_ and parsed.object_.entry:
+            enriched["object"] = {"code": parsed.object_.raw, "name": parsed.object_.entry.name}
+        if parsed.project and parsed.project.entry:
+            enriched["project"] = {"code": parsed.project.raw, "name": parsed.project.entry.name}
+        unresolved = list(parsed.unresolved_codes)
 
     out["enriched"] = enriched or None
+    out["unresolved"] = unresolved
     return out
 
 
-# ------------------------------------------------------------------
-# Manifest assembly
-# ------------------------------------------------------------------
-def _aggregate(details: list[dict[str, Any]]) -> dict[str, Any]:
-    """Compute expenditure/decrease/revenue/net totals for a list of details."""
-    totals: dict[str, float] = {
-        "expenditures": 0.0,
-        "decreases": 0.0,
-        "revenues": 0.0,
-        "other": 0.0,
-        "net": 0.0,
-    }
-    for d in details:
-        t = d.get("type") or "unspecified"
-        v = d.get("value") or 0.0
-        if t == "expenditure":
-            totals["expenditures"] += v
-            totals["net"] += v
-        elif t == "expenditure_decrease":
-            totals["decreases"] += v
-            totals["net"] -= v
-        elif t == "revenue":
-            totals["revenues"] += v
-            totals["net"] -= v
+def _aggregate_rows(rows: list[dict[str, Any]]) -> dict[str, Any]:
+    """Compute committed (current-FY only) and total (all FYs) totals.
+
+    Returns:
+        {
+          "committed": { totals... },     # rows NOT subject to annual appropriation
+          "future":    { totals... },     # rows subject to annual appropriation
+          "total":     { totals... },     # both combined
+          "byFiscalYear": { "FY26": {...}, "FY27": {...} },
+          "headlineFiscalYear": "FY26" | None
+        }
+    """
+    committed = _new_totals()
+    future = _new_totals()
+    total = _new_totals()
+    by_fy: dict[str, dict[str, float]] = defaultdict(_new_totals)
+
+    for r in rows:
+        t = r.get("type") or "unknown"
+        v = r.get("value") or 0.0
+        fy = r.get("fiscalYear")
+        is_future = bool(r.get("subjectToAppropriation"))
+
+        _add_to_totals(total, t, v)
+        if is_future:
+            _add_to_totals(future, t, v)
         else:
-            totals["other"] += v
-    return {k: round(v, 2) for k, v in totals.items()}
+            _add_to_totals(committed, t, v)
+        if fy:
+            _add_to_totals(by_fy[fy], t, v)
+
+    # Headline FY: the earliest non-future-subject FY, falling back to
+    # earliest FY overall, falling back to None when no FY tags present.
+    fy_committed = sorted(
+        {r.get("fiscalYear") for r in rows if r.get("fiscalYear") and not r.get("subjectToAppropriation")}
+    )
+    fy_any = sorted({r.get("fiscalYear") for r in rows if r.get("fiscalYear")})
+    headline_fy = fy_committed[0] if fy_committed else (fy_any[0] if fy_any else None)
+
+    return {
+        "committed": _round_totals(committed),
+        "future": _round_totals(future),
+        "total": _round_totals(total),
+        "byFiscalYear": {fy: _round_totals(b) for fy, b in by_fy.items()},
+        "headlineFiscalYear": headline_fy,
+    }
 
 
 def reconcile_meeting(
     meeting: dict[str, Any],
     cache: dict[str, Any],
 ) -> dict[str, Any]:
-    """Enrich one meeting dict and return a funding manifest dict."""
+    """Enrich one meeting dict and return a funding manifest dict.
+
+    Reads each item's ``projectedCosts.rows`` (the new authoritative shape
+    produced by ``lib/projected-costs-parser.js``). Items without a
+    ``projectedCosts`` block are skipped — they have no parseable budget
+    action.
+    """
     by_fund: dict[str, dict[str, Any]] = defaultdict(
-        lambda: {"name": None, "expenditures": 0.0, "decreases": 0.0, "revenues": 0.0, "other": 0.0, "net": 0.0}
+        lambda: {"name": None, **_new_totals()}
     )
     by_dept: dict[str, dict[str, Any]] = defaultdict(
-        lambda: {"name": None, "expenditures": 0.0, "decreases": 0.0, "revenues": 0.0, "other": 0.0, "net": 0.0}
+        lambda: {"name": None, **_new_totals()}
     )
     total_unresolved = 0
     items_out: list[dict[str, Any]] = []
 
     for item in meeting.get("agendaItems", []):
-        enriched_details: list[dict[str, Any]] = []
-        for fd in item.get("financialDetails") or []:
-            ed = _enrich_detail(fd, cache)
-            enriched_details.append(ed)
-            total_unresolved += len(ed.get("unresolved") or [])
+        pc = item.get("projectedCosts") or {}
+        rows_in = pc.get("rows") or []
+        if not rows_in:
+            continue
 
-            # Roll up into fund/dept aggregates
-            fund_info = (ed.get("enriched") or {}).get("fund")
-            dept_info = (ed.get("enriched") or {}).get("department")
-            t = ed.get("type") or "unspecified"
-            v = ed.get("value") or 0.0
+        enriched_rows: list[dict[str, Any]] = []
+        for raw_row in rows_in:
+            er = _enrich_row(raw_row, cache)
+            enriched_rows.append(er)
+            total_unresolved += len(er.get("unresolved") or [])
 
-            def _add(bucket: dict, t: str, v: float, name: str | None) -> None:
-                bucket["name"] = bucket["name"] or name
-                if t == "expenditure":
-                    bucket["expenditures"] = round(bucket["expenditures"] + v, 2)
-                    bucket["net"] = round(bucket["net"] + v, 2)
-                elif t == "expenditure_decrease":
-                    bucket["decreases"] = round(bucket["decreases"] + v, 2)
-                    bucket["net"] = round(bucket["net"] - v, 2)
-                elif t == "revenue":
-                    bucket["revenues"] = round(bucket["revenues"] + v, 2)
-                    bucket["net"] = round(bucket["net"] - v, 2)
-                else:
-                    bucket["other"] = round(bucket["other"] + v, 2)
-
+            fund_info = (er.get("enriched") or {}).get("fund")
+            dept_info = (er.get("enriched") or {}).get("department")
+            t = er.get("type") or "unknown"
+            v = er.get("value") or 0.0
             if fund_info:
-                _add(by_fund[fund_info["code"]], t, v, fund_info["name"])
+                bucket = by_fund[fund_info["code"]]
+                bucket["name"] = bucket["name"] or fund_info["name"]
+                _add_to_totals(bucket, t, v)
             if dept_info:
-                _add(by_dept[dept_info["code"]], t, v, dept_info["name"])
+                bucket = by_dept[dept_info["code"]]
+                bucket["name"] = bucket["name"] or dept_info["name"]
+                _add_to_totals(bucket, t, v)
 
         items_out.append(
             {
@@ -224,13 +256,20 @@ def reconcile_meeting(
                 "itemNumber": item.get("number"),
                 "fileNumber": item.get("fileNumber"),
                 "title": item.get("title"),
-                "details": enriched_details,
-                "totals": _aggregate(enriched_details),
+                "fiscalImpactStatement": pc.get("fiscalImpactStatement") or "",
+                "rows": enriched_rows,
+                "totals": _aggregate_rows(enriched_rows),
             }
         )
 
-    # Only include items that have at least one financial detail
-    items_with_finance = [i for i in items_out if i["details"]]
+    # Round fund/dept aggregates for output.
+    for bucket in list(by_fund.values()) + list(by_dept.values()):
+        for k, v in list(bucket.items()):
+            if isinstance(v, float):
+                bucket[k] = round(v, 2)
+
+    all_rows = [r for i in items_out for r in i["rows"]]
+    summary_totals = _aggregate_rows(all_rows)
 
     return {
         "meetingId": meeting.get("meetingId"),
@@ -239,14 +278,12 @@ def reconcile_meeting(
         "meetingType": meeting.get("meetingType"),
         "generatedAt": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "coaId": cache.get("coa_id"),
-        "items": items_with_finance,
+        "items": items_out,
         "summary": {
-            "itemCount": len(items_with_finance),
+            "itemCount": len(items_out),
             "byFund": {k: dict(v) for k, v in by_fund.items()},
             "byDepartment": {k: dict(v) for k, v in by_dept.items()},
-            "totals": _aggregate(
-                [d for i in items_with_finance for d in i["details"]]
-            ),
+            "totals": summary_totals,
             "unresolvedCount": total_unresolved,
         },
     }
@@ -326,8 +363,8 @@ def _cli(argv: list[str] | None = None) -> int:
             total_codes = sum(
                 1
                 for i in manifest["items"]
-                for d in i["details"]
-                if d.get("accountCode")
+                for r in i["rows"]
+                if r.get("accountCode")
             )
             if total_codes == 0:
                 continue
@@ -337,11 +374,11 @@ def _cli(argv: list[str] | None = None) -> int:
             continue
 
         out_path = write_manifest(manifest, out_dir)
-        totals = manifest["summary"]["totals"]
+        totals = manifest["summary"]["totals"]["committed"]
         unresolved = manifest["summary"]["unresolvedCount"]
         print(
             f"{p.name}: {len(manifest['items'])} items with finance, "
-            f"net={totals['net']:+,.2f}, "
+            f"committed net={totals['net']:+,.2f}, "
             f"unresolved={unresolved} → {out_path.name}"
         )
 

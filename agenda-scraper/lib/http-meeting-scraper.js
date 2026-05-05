@@ -9,6 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const { extractTextFromBuffer } = require('./pdf-text-extractor');
 const { extractBackgroundSection } = require('./summary-sheet-parser');
+const { parseFiscalSections } = require('./projected-costs-parser');
 
 const {
   BASE_URL,
@@ -137,6 +138,7 @@ async function extractSummarySheetDetails(client, docs, formatBackgroundText, pa
     backgroundText: '',
     summaryText: '',
     financialEntries: [],
+    projectedCosts: null,
     summaryDoc: null
   };
 
@@ -161,6 +163,11 @@ async function extractSummarySheetDetails(client, docs, formatBackgroundText, pa
     result.summaryText = text;
     result.summaryDoc = summaryDoc;
     result.financialEntries = parseSummaryFinancialEntries(text);
+
+    // New authoritative parser: extract structured rows from the
+    // PROJECTED COSTS: section and the FISCAL IMPACT STATEMENT paragraph.
+    // This is the only fiscal data downstream consumers should rely on.
+    result.projectedCosts = parseFiscalSections(text);
 
     // Extract background section using the shared, header-aware extractor.
     // (Earlier versions used a single regex with case-insensitive lookaheads
@@ -474,7 +481,12 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
       coordinates: folioData.coordinates || null, // {lat, lng} or null
       dollarAmounts: dollarInfo.amounts,
       financialDetails: dollarInfo.details,
-      financialTotals: dollarInfo.totals
+      financialTotals: dollarInfo.totals,
+      // Authoritative fiscal data extracted from the Summary Sheet's
+      // PROJECTED COSTS: section. Replaces the heuristic financialDetails
+      // for downstream funding manifests and rendering.
+      summaryText: summaryDetails.summaryText || '',
+      projectedCosts: summaryDetails.projectedCosts || null
     };
   }
   
