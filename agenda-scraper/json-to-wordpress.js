@@ -2,6 +2,14 @@ const fs = require('fs');
 const path = require('path');
 require('dotenv').config();
 
+const {
+    loadFundingManifest,
+    buildFundingByItemId,
+    renderItemFinancialSection,
+} = require('./lib/render-funding');
+// Top-of-agenda summary card is intentionally disabled.
+const renderAgendaFundingOverview = () => '';
+
 /**
  * Extract date from agenda filename
  * @param {string} filename - The filename to extract date from
@@ -114,15 +122,11 @@ function formatBackgroundForWordPress(backgroundText) {
     
     // Add ordered list if we have numbered items
     if (listItems.length > 0) {
-        formattedContent += `\n<!-- wp:list {"ordered":true} -->
-<ol>`;
+        formattedContent += `\n<!-- wp:list {"ordered":true} -->\n<ol>`;
         listItems.forEach(item => {
-            formattedContent += `\n<!-- wp:list-item -->
-<li>${item}</li>
-<!-- /wp:list-item -->`;
+            formattedContent += `\n<!-- wp:list-item -->\n<li>${item}</li>\n<!-- /wp:list-item -->`;
         });
-        formattedContent += `\n</ol>
-<!-- /wp:list -->`;
+        formattedContent += `\n</ol>\n<!-- /wp:list -->`;
     }
     
     // Add regular paragraphs
@@ -401,6 +405,62 @@ function formatStaffReportForWordPress(staffReport) {
 }
 
 /**
+ * Build the unified "Item details" drawer for a single agenda item.
+ *
+ * Sections, in order:
+ *   1. Financial impact (only when the OpenGov manifest has resolved data)
+ *   2. Background narrative (when item.background is populated)
+ *   3. Staff report fallback (when no background but staffReport fields exist)
+ *
+ * Supporting documents are intentionally NOT inside this drawer — they
+ * remain a sibling block below the agenda item so links stay conspicuous.
+ *
+ * @param {object} item - Agenda item from the scraped meeting JSON
+ * @param {object|null} fundingItem - Matching entry from the funding manifest
+ * @returns {string} - WordPress block markup (empty string if no sections)
+ */
+function buildItemDetailsDrawer(item, fundingItem) {
+    const innerBlocks = [];
+
+    // 1. Financial impact (already a complete wp:html block)
+    const financial = renderItemFinancialSection(fundingItem, item.projectedCosts);
+    if (financial) innerBlocks.push(financial);
+
+    // 2. Background narrative — emit a heading + existing wp:paragraph/wp:list
+    //    blocks produced by formatBackgroundForWordPress.
+    if (item.background && item.background.trim().length > 0) {
+        const formattedBackground = formatBackgroundForWordPress(item.background.trim());
+        innerBlocks.push(
+            `<!-- wp:heading {"level":4,"className":"agenda-item-section__heading"} -->
+<h4 class="wp-block-heading agenda-item-section__heading">Background</h4>
+<!-- /wp:heading -->${formattedBackground}`
+        );
+    } else if (item.staffReport) {
+        // 3. Staff report fallback — formatStaffReportForWordPress returns raw
+        //    HTML (paragraphs, ul), so wrap it in a single wp:html block.
+        const formattedStaffReport = formatStaffReportForWordPress(item.staffReport);
+        if (formattedStaffReport) {
+            innerBlocks.push(
+                `<!-- wp:heading {"level":4,"className":"agenda-item-section__heading"} -->
+<h4 class="wp-block-heading agenda-item-section__heading">Staff report</h4>
+<!-- /wp:heading -->
+<!-- wp:html -->
+${formattedStaffReport}
+<!-- /wp:html -->`
+            );
+        }
+    }
+
+    if (innerBlocks.length === 0) return '';
+
+    return `\n\n<!-- wp:details -->
+<details class="wp-block-details agenda-item-details"><summary>Item details</summary>
+${innerBlocks.join('\n\n')}
+</details>
+<!-- /wp:details -->`;
+}
+
+/**
  * Generate background details block with summary/details structure
  * @param {string} background - Background text content
  * @returns {string} - WordPress block markup for background details
@@ -582,6 +642,18 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
 
 `;
 
+    // Load OpenGov funding manifest for this meeting (may be null).
+    const fundingManifest = loadFundingManifest(meeting.meetingId, meeting.formattedDate);
+    const fundingByItemId = buildFundingByItemId(fundingManifest);
+
+    // Insert agenda-level funding overview after the meeting link group (only
+    // for the leading meeting; evening agendas share the same manifest already
+    // surfaced above).
+    if (!isEveningAgenda) {
+        const overview = renderAgendaFundingOverview(fundingManifest);
+        if (overview) wpHtml += overview + '\n';
+    }
+
     // Process agenda items
     const processedItems = [];
     const fileNumberMatches = [];
@@ -637,21 +709,11 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
         // Remove any remaining markdown bold formatting
         cleanedText = cleanedText.replace(/\*\*([^*]+)\*\*/g, '$1');
 
-        // Add background details if available, or staff report data if background is empty
-        if (item.background && item.background.trim().length > 0) {
-            const formattedBackground = formatBackgroundForWordPress(item.background.trim());
-            cleanedText += `\n\n<!-- wp:details -->
-<details class="wp-block-details"><summary>Background</summary>${formattedBackground}</details>
-<!-- /wp:details -->`;
-        } else if (item.staffReport) {
-            // Use staff report data when background is empty
-            const formattedStaffReport = formatStaffReportForWordPress(item.staffReport);
-            if (formattedStaffReport) {
-                cleanedText += `\n\n<!-- wp:details -->
-<details class="wp-block-details"><summary>Staff Report Details</summary>${formattedStaffReport}</details>
-<!-- /wp:details -->`;
-            }
-        }
+        // Build the unified "Item details" drawer: financial impact (if any),
+        // then background narrative or staff report fallback.
+        const fundingItem = fundingByItemId[String(item.agendaItemId)] || null;
+        const drawer = buildItemDetailsDrawer(item, fundingItem);
+        if (drawer) cleanedText += drawer;
 
         // Add supporting documents if available
         if (item.supportingDocuments && item.supportingDocuments.length > 0) {

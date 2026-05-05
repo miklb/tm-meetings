@@ -198,6 +198,29 @@ const FILE_NUMBER_PATTERN = /([A-Z]{2,4})(\d{2})-(\d{4})/;
 
 ---
 
+## Agenda Pipeline — NEVER Skip Steps
+
+**Always use `process-agenda.sh` to process a meeting. Never run individual scripts directly.**
+
+```bash
+cd agenda-scraper && ./process-agenda.sh 2025-11-06
+```
+
+This runs in order:
+1. `json-scraper.js` — scrapes meeting JSON from OnBase
+2. `mirror-documents.js` — uploads documents to Cloudflare R2 and stamps `mirroredUrl` fields into the JSON
+3. `json-to-wordpress.js` — generates WP HTML using the mirrored URLs
+
+**Why this matters:** Running `json-scraper.js` directly overwrites the meeting JSON and erases all `mirroredUrl` fields that `mirror-documents.js` previously stamped in. The WP output will then link to the original OnBase URLs instead of the stable R2 mirrors.
+
+If you need to regenerate WP output only (JSON + mirrors already done): `node json-to-wordpress.js <meetingId>`
+
+If you need to re-mirror only (JSON already done): `node mirror-documents.js <meetingId>`
+
+**Never run `json-scraper.js <meetingId>` standalone on a meeting that has already been mirrored.**
+
+---
+
 ## Common Tasks
 
 ### Adding a New Meeting Type

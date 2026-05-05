@@ -28,6 +28,12 @@ test-*.js
 *-test.html
 *_test.wp.html
 *_clean_test.wp.html
+
+# Local audit / inspection scratch scripts (leading underscore convention)
+scripts/_*.py
+
+# Eval output (liteparse vs pdfparse A/B harness)
+output/liteparse-eval/
 *_formatted_test.wp.html
 
 # Python virtual environment
