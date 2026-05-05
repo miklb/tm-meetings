@@ -1505,6 +1505,12 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
             parseSummaryFinancialEntries
         });
 
+        // Meeting not available on server — skip without error
+        if (meetingData === null) {
+            console.log(`[HTTP] Meeting ${meetingId} skipped (not available on server).`);
+            return;
+        }
+
         // Integrate staff reports if available
         if (meetingData.agendaItems && meetingData.agendaItems.length > 0) {
             // Pass the entire meetingData object, not just agendaItems
@@ -1599,13 +1605,23 @@ async function main() {
         console.log(`[HTTP] Found ${meetings.length} meetings to process\n`);
         
         // Scrape each meeting sequentially
+        const failed = [];
         for (let i = 0; i < meetings.length; i++) {
             const meeting = meetings[i];
             console.log(`[HTTP] Processing meeting ${i + 1}/${meetings.length}: ${meeting.id} (${meeting.type})`);
-            await scrapeWithHTTP(meeting.id, meeting.type, session);
+            try {
+                await scrapeWithHTTP(meeting.id, meeting.type, session);
+            } catch (err) {
+                console.error(`[HTTP] ⚠️  Skipping meeting ${meeting.id} after error: ${err.message}`);
+                failed.push(meeting.id);
+            }
         }
-        
-        console.log(`\n[HTTP] ✅ All ${meetings.length} meetings processed successfully`);
+
+        if (failed.length > 0) {
+            console.warn(`\n[HTTP] ⚠️  ${failed.length} meeting(s) failed: ${failed.join(', ')}`);
+            process.exitCode = 1;
+        }
+        console.log(`\n[HTTP] ✅ Finished processing ${meetings.length - failed.length}/${meetings.length} meetings`);
     }
 }
 

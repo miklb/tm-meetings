@@ -280,6 +280,12 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   const meetingResponse = await client.get(meetingUrl, { timeout: 30000 });
   const html = meetingResponse.data;
 
+  // Detect server-side "Meeting not available" response early
+  if (html.includes('Meeting not available')) {
+    console.warn(`[HTTP] Meeting ${meetingId} is not available on the server — skipping.`);
+    return null;
+  }
+
   if (saveDebugFiles) {
     const outputDir = path.join(process.cwd(), 'output');
     fs.mkdirSync(outputDir, { recursive: true });
@@ -291,10 +297,10 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   // Extract loadAgendaItem configuration
   const loadConfig = await extractLoadAgendaConfig(client, html);
   if (!loadConfig || (!loadConfig.url && !loadConfig.templateUrl)) {
-    throw new Error('Unable to locate loadAgendaItem configuration');
+    console.warn(`[HTTP] Warning: Unable to locate loadAgendaItem configuration for meeting ${meetingId}. Item details will be unavailable.`);
+  } else {
+    console.log(`[HTTP] Found loadAgendaItem endpoint: ${loadConfig.url || loadConfig.templateUrl}`);
   }
-
-  console.log(`[HTTP] Found loadAgendaItem endpoint: ${loadConfig.url || loadConfig.templateUrl}`);
 
   // Fetch agenda document
   const agendaHtml = await fetchAgendaDocument(client, meetingId);
