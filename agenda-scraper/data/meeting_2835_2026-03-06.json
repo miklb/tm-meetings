@@ -32,7 +32,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 2,
@@ -60,7 +62,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     }
   ],
   "formattedDate": "2026-03-06"

@@ -18,15 +18,13 @@
           "title": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.BENNETT%20-%20050526%20SPECIAL%20CALL%20WORKSHOP%20SESSION%20-%20FILE%20NO.%20E2026-48.PDF.pdf?documentType=1&meetingId=2881&itemId=23716&publishId=188126&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48.PDF in a new tab",
-          "originalText": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-05-05/meeting-2881/23716/memo.bennett-050526-special-call-workshop-session-file-no.-e2026-48.pdf"
+          "originalText": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48.PDF"
         },
         {
           "title": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48 - 043026.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.BENNETT%20-%20050526%20SPECIAL%20CALL%20WORKSHOP%20SESSION%20-%20FILE%20NO.%20E2026-48%20-%2004.pdf?documentType=1&meetingId=2881&itemId=23716&publishId=188127&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48 - 043026.PDF in a new tab",
-          "originalText": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48 - 043026.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-05-05/meeting-2881/23716/memo.bennett-050526-special-call-workshop-session-file-no.-e2026-48-043026.pdf"
+          "originalText": "MEMO.BENNETT - 050526 SPECIAL CALL WORKSHOP SESSION - FILE NO. E2026-48 - 043026.PDF"
         }
       ],
       "folioNumbers": [],
@@ -40,7 +38,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     }
   ],
   "formattedDate": "2026-05-05"

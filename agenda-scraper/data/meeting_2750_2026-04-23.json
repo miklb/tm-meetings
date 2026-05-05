@@ -38,7 +38,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 2,
@@ -72,7 +74,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 3,
@@ -148,7 +152,9 @@
         "revenues": 0,
         "other": 0,
         "net": 334748.48
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 4,
@@ -169,7 +175,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 5,
@@ -209,7 +217,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 6,
@@ -243,7 +253,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 7,
@@ -271,7 +283,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 8,
@@ -292,7 +306,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     }
   ],
   "financialSummary": {

@@ -25,7 +25,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 2,
@@ -53,7 +55,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 3,
@@ -74,7 +78,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 4,
@@ -102,7 +108,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 5,
@@ -158,6 +166,14 @@
         "revenues": 0,
         "other": 1,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Parks and Recreation\nCouncil Regular\nSubmittal Date:                        3/13/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactNikki Coats 813-274-3312\nSubjectA Resolution approving a License and Hold Harmless Agreement between the \nCity of Tampa and Suffolk Construction Company, Inc. to allow the installation \nand teardown of scaffolding and protective fencing at Madison Street Park.\nResolution / \nOrdinance \nTitle\nA Resolution approving a License and Hold Harmless Agreement between the \nCity of Tampa, Florida, and Suffolk Construction Company, Inc. a for profit \norganization to allow the installation and teardown of scaffolding and \ntemporary closure of affected areas of Madison Street Park located at 1218 E \nMadison St, Tampa, Florida, and to provide protective fencing during \ninstallation and teardown of scaffolding for a license fee of One Dollar ($1); \nauthorizing the execution thereof by the Mayor of the City of Tampa; providing \nan effective date.\nBACKGROUND:\nSuffolk Construction Company, Inc. (Licensee) has contracted to paint the exterior of the \nChannel Club Apartments located at 1115 Twiggs St, Tampa, Florida which will require the \ninstallation of scaffolding to protect the public during this project.\nTo install and teardown the erected scaffolding Licensee will encroach upon certain parts of \nMadison Street Park.\nThe term of encroachment will be limited to those days that the scaffolding will be installed or \ntorn down.\nLicensee acknowledges that it intends, by executing this Agreement, to assume all risks, \nwhether known or unknown, which may arise from such activities.\nIt is the desire of the parties to establish the terms and conditions under which the License \nand Hold Harmless Agreement will be implemented.\nCity Council does hereby affirm that it would be beneficial to the residents of the City to enter \ninto the attached Agreement.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nNikki Coats3/13/2026 9:56:55 AMSubmitter\nTed Fowler3/13/2026 10:44:58 AMDepartment Head\nAstonah Turner3/13/2026 1:09:51 PMAttorney Coordinator\n\nCarl Brody3/20/2026 9:21:39 AMAssistant City Attorney\nCate Wells3/20/2026 9:23:28 AMCity Attorney\nMarlene Rigal3/20/2026 9:43:46 AMNeighborhood and Community Affairs \nDeputy\nOcea Wynn3/20/2026 11:09:00 AMNeighborhood and Community Affairs\nAmy Murphy3/23/2026 10:14:34 AMFinance Coordinator\nAlan Pissarenko3/23/2026 11:11:02 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/23/2026 11:17:22 AMBudget Operating Manager\nMichael Perry3/24/2026 4:28:31 AMBudget Officer\nLori Hernandez3/26/2026 9:52:17 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:45:03 PMChief of Staff\nJANE CASTOR3/27/2026 11:14:36 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -218,6 +234,30 @@
         "revenues": 196569,
         "other": 0,
         "net": -196569
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: City Attorney\nCouncil Regular\nSubmittal Date:                        3/19/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactAstonah Turner 274-5168\nSubjectResolution approving contract with the Department of Veterans Affairs for the \nNational Veterans Golden Age Games at the Tampa Convention Center\nResolution / \nOrdinance \nTitle\nA resolution approving the execution by the mayor and attestation by the city \nclerk of a solicitation/contract/order for commercial products and commercial \nservices between the Department of Veterans Affairs and the City of Tampa \nfor rental space at the Tampa Convention Center to hold the National \nVeterans Golden Age Games main event; providing an effective date.\nBACKGROUND:\nThis resolution authorizes the Mayor and City Clerk to execute a contract with the U.S. \nDepartment of Veterans Affairs for the use of the Tampa Convention Center to host the \nNational Veterans Golden Age Games from June 25 through July 2, 2026. The Games are an \nannual nationwide event for older veterans (generally age 55 and older) that promotes health, \nwellness, and camaraderie through adaptive sports and recreational competitions such as \nswimming, track and field, bowling, and golf.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution approves a contract between the Department of Veterans Affairs and the City \nof Tampa for the National Veterans Golden Age Games at the Tampa Convention Center. \nRevenue in the amount of $196,569 will be deposited in the General Fund for use by the \nTampa Convention Center.\nPROJECTED COSTS: 01100.212800.347505 $196,569 (Revenue Increase)\nGeneral Fund. Convention Center Business Operations. TCC Convention W/Exhibit\nApproverTimestampRole\nAstonah Turner3/19/2026 2:18:52 PMSubmitter\nAstonah Turner3/19/2026 2:18:57 PMDepartment Head\nDavid Ingram3/19/2026 3:02:30 PMConvention Center\nAstonah Turner3/19/2026 3:17:20 PMAttorney Coordinator\nRonald Wigginton3/20/2026 11:04:03 AMAssistant City Attorney\nCate Wells3/20/2026 11:11:06 AMCity Attorney\nABBYE FEELEY3/24/2026 4:36:38 PMDevelopment and Economic Opportunity\nKen Farrell3/25/2026 12:39:07 PMFinance Coordinator\nKen Farrell3/25/2026 3:47:11 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/25/2026 3:51:31 PMBudget Operating Manager\n\nMichael Perry3/25/2026 6:12:27 PMBudget Officer\nLori Hernandez3/26/2026 9:48:14 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:34 PMChief of Staff\nJANE CASTOR3/27/2026 11:09:24 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution approves a contract between the Department of Veterans Affairs and the City of Tampa for the National Veterans Golden Age Games at the Tampa Convention Center. Revenue in the amount of $196,569 will be deposited in the General Fund for use by the Tampa Convention Center.",
+        "projectedCostsRaw": "01100.212800.347505 $196,569 (Revenue Increase)\nGeneral Fund. Convention Center Business Operations. TCC Convention W/Exhibit",
+        "rows": [
+          {
+            "accountCode": "01100.212800.347505",
+            "fund": "01100",
+            "department": "212800",
+            "object": "347505",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$196,569",
+            "value": 196569,
+            "type": "revenue",
+            "signedValue": -196569,
+            "subjectToAppropriation": false,
+            "marker": "Revenue Increase",
+            "description": "General Fund. Convention Center Business Operations. TCC Convention W/Exhibit"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -226,7 +266,7 @@
       "title": "File No. INF26-22383 (Part 1 of 2) (See item 8)\nResolution authorizing Change Order 2 Final to GMP-5 Contract 20-C-00002 Comprehensive Infrastructure for Tampa’s Neighborhoods between the City of Tampa and Kiewit Infrastructure South Co.; a decrease in the amount of $4,298,138.86, authorizing execution of Change Order 2 Final by the Mayor of the City of Tampa; providing an effective date.",
       "rawTitle": "File No. INF26-22383 (Part 1 of 2) (See item 8)\nResolution authorizing Change Order 2 Final to GMP-5 Contract 20-C-00002 Comprehensive Infrastructure for Tampa’s Neighborhoods between the City of Tampa and Kiewit Infrastructure South Co.; a decrease in the amount of $4,298,138.86, authorizing execution of Change Order 2 Final by the Mayor of the City of Tampa; providing an effective date.",
       "fileNumber": "INF26-22383",
-      "background": "1. Contract Title: 20-C-00002 Comprehensive Infrastructure for Tampa's Neighborhoods Design Build (Foundation) GMP 5 a. Address of Project: East Tampa, Forest Hills, Macfarlane Park, and Virginia Park neighborhoods b. Number of bidders/submitters: N/A c. Names of bidders/submitters: N/A d. Dollar amount: $4,298,138.86 (deduction) e. Why the awardee was selected: N/A\n\n2. Contractor/Firm: Kiewit Infrastructure South Co.\n\n3. Business Case: The project provided comprehensive infrastructure improvements, that included water, wastewater, storm water, and transportation improvements performed under single projects for areas within the City of Tampa that have multiple infrastructure needs. The areas included under this project are located within the following neighborhoods: East Tampa, Forest Hills, MacFarlane Park, and Virginia Park.\n\nChange Order 1 provided for asphalt paving overage in East Tampa and Virginia Park; rebuilding of originally designed asphalt driveway for Macfarlane Park Yard improvements; tree planting in Virginia Park and Macfarlane Park; milling and full depth paving of N. Habana Avenue from W. Tampa Bay Boulevard to W. Columbus Drive; construction duration extension; and the cost for excess sod required to complete restoration.\n\nThis Change Order 2 Final provides for close out of Guaranteed Maximum Price 5 (GMP 5) only and release of retainage.\n\n4. Equal Business Opportunity (EBO) Statement: Kiewit Infrastructure South Co., the prime contractor, has utilized eight (8) City of Tampa-certified firms for subcontracting.\n\n5. Sustainability and Resiliency: N/A\n\n6. Community Engagement: N/A\n\n7. Project: a. Contract delivery method: This is a Design-Build project. A full-time City of Tampa Construction Inspector will be on-site during the project to ensure quality of construction.\n\nb. Placemaking: N/A c. Time, Quality Assurance, Cost Monitoring (Budget) •  N/A consecutive calendar days.\n\n• The e-Builder project management software system will be utilized to optimize the monitoring of schedules and costs. This software was recently purchased by the City of Tampa and is a premier system for construction project management.",
+      "background": "1. Contract Title: 20-C-00002 Comprehensive Infrastructure for Tampa's Neighborhoods Design Build (Foundation) GMP 5 a. Address of Project: East Tampa, Forest Hills, Macfarlane Park, and Virginia Park neighborhoods b. Number of bidders/submitters: N/A c. Names of bidders/submitters: N/A d. Dollar amount: $4,298,138.86 (deduction) e. Why the awardee was selected: N/A\n\n2. Contractor/Firm: Kiewit Infrastructure South Co.\n\n3. Business Case: The project provided comprehensive infrastructure improvements, that included water, wastewater, storm water, and transportation improvements performed under single projects for areas within the City of Tampa that have multiple infrastructure needs. The areas included under this project are located within the following neighborhoods: East Tampa, Forest Hills, MacFarlane Park, and Virginia Park.\n\nChange Order 1 provided for asphalt paving overage in East Tampa and Virginia Park; rebuilding of originally designed asphalt driveway for Macfarlane Park Yard improvements; tree planting in Virginia Park and Macfarlane Park; milling and full depth paving of N. Habana Avenue from W. Tampa Bay Boulevard to W. Columbus Drive; construction duration extension; and the cost for excess sod required to complete restoration.\n\nThis Change Order 2 Final provides for close out of Guaranteed Maximum Price 5 (GMP 5) only and release of retainage.\n\n4. Equal Business Opportunity (EBO) Statement: Kiewit Infrastructure South Co., the prime contractor, has utilized eight (8) City of Tampa-certified firms for subcontracting.\n\n5. Sustainability and Resiliency: N/A\n\n6. Community Engagement: N/A\n\n7. Project: a. Contract delivery method: This is a Design-Build project. A full-time City of Tampa Construction Inspector will be on-site during the project to ensure quality of construction.\n\nb. Placemaking: N/A c. Time, Quality Assurance, Cost Monitoring (Budget) •  N/A consecutive calendar days.\n\n• The e-Builder project management software system will be utilized to optimize the monitoring of schedules and costs. This software was recently purchased by the City of Tampa and is a premier system for construction project management.\n\nFiscal Impact:  Yes  The Budget Office will prepare a financial resolution for Council's approval at a later date.",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
@@ -330,6 +370,30 @@
         "revenues": 0,
         "other": 0,
         "net": 4298138.86
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Contract Administration\nCouncil Regular\nSubmittal Date:                        3/12/2026\nRequested Meeting Date: 3/26/2026\nType of Request:                                                  Council Resolution\nContactMelanie Daughtry 274-8012\nSubjectChange Order 2 to GMP-5 deducting $4,298,138.86 from Contract 20-C-\n00002, Comprehensive Infrastructure for Tampa’s Neighborhoods between \nthe City of Tampa and Kiewit Infrastructure South Co. (1 of 2)\nResolution / \nOrdinance \nTitle\nA Resolution authorizing Change Order 2 Final to GMP-5 Contract 20-C-\n00002 Comprehensive Infrastructure for Tampa’s Neighborhoods between the \nCity of Tampa and Kiewit Infrastructure South Co.; a decrease in the amount \nof $4,298,138.86, authorizing execution of Change Order 2 Final by the Mayor \nof the City of Tampa; providing an effective date.\nBACKGROUND:\n1. Contract Title: 20-C-00002 Comprehensive Infrastructure for Tampa's Neighborhoods \nDesign Build (Foundation) GMP 5\na. Address of Project: East Tampa, Forest Hills, Macfarlane Park, and Virginia Park \nneighborhoods\nb. Number of bidders/submitters: N/A\nc. Names of bidders/submitters: N/A\nd. Dollar amount: $4,298,138.86 (deduction)\ne. Why the awardee was selected: N/A\n2. Contractor/Firm: Kiewit Infrastructure South Co.\n3. Business Case: The project provided comprehensive infrastructure improvements, that \nincluded water, wastewater, storm water, and transportation improvements performed under \nsingle projects for areas within the City of Tampa that have multiple infrastructure needs. The \nareas included under this project are located within the following neighborhoods: East Tampa, \nForest Hills, MacFarlane Park, and Virginia Park.\nChange Order 1 provided for asphalt paving overage in East Tampa and Virginia Park; \nrebuilding of originally designed asphalt driveway for Macfarlane Park Yard improvements; \ntree planting in Virginia Park and Macfarlane Park; milling and full depth paving of N. Habana \nAvenue from W. Tampa Bay Boulevard to W. Columbus Drive; construction duration \nextension; and the cost for excess sod required to complete restoration.\nThis Change Order 2 Final provides for close out of Guaranteed Maximum Price 5 (GMP 5) \nonly and release of retainage.\n4. Equal Business Opportunity (EBO) Statement: Kiewit Infrastructure South Co., the prime \ncontractor, has utilized eight (8) City of Tampa-certified firms for subcontracting.\n5. Sustainability and Resiliency: N/A\n6. Community Engagement: N/A\n7. Project:\n\na. Contract delivery method: This is a Design-Build project. A full-time City of Tampa \nConstruction Inspector will be on-site during the project to ensure quality of construction.\nb. Placemaking: N/A\nc. Time, Quality Assurance, Cost Monitoring (Budget)\n•  N/A consecutive calendar days.\n• The e-Builder project management software system will be utilized to optimize the \nmonitoring of schedules and costs. This software was recently purchased by the City of \nTampa and is a premier system for construction project management.\nFiscal Impact:  Yes  The Budget Office will prepare a financial resolution for Council's \napproval at a later date.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution provides for Change Order No. 2 – Final to GMP-5, a decrease to the existing \ncontract with Kiewit Infrastructure South Co. in the amount of $4,298,138.86 for the \nComprehensive Infrastructure for Tampa's Neighborhoods, Phase I Project for use by the \nInfrastructure and Mobility Administration Department within the Water Future Debt Capital \nProjects Fund.\nBudget Office will prepare a financial resolution for Council's approval at a later date.\nPROJECTED COSTS: 40554.234110.563001.1001913 - $4,298,138.86 (Expenditure \nDecrease)\nWater Future Debt Capital Projects Fund. Infrastructure & Mobility Administration Capital \nProject Costs. Improvements Other than Bldgs. Comprehensive Infrastructure for Tampa’s \nNeighborhoods  Phase I Project\nApproverTimestampRole\nMelanie Daughtry3/12/2026 4:45:40 PMSubmitter\nJim Greiner3/13/2026 7:05:31 AMDepartment Head\nRory Jones3/13/2026 7:11:12 AMWater\nBrandon Campbell3/13/2026 10:06:00 AMMobility\nTed Fowler3/13/2026 7:26:00 AMParks and Recreation\nSajan Patel3/13/2026 12:22:10 PMEqual Business Opportunity\nAstonah Turner3/13/2026 1:08:31 PMAttorney Coordinator\nJustin Vaske3/13/2026 1:32:38 PMAssistant City Attorney\nCate Wells3/13/2026 1:40:47 PMCity Attorney\nBRAD BAIRD3/13/2026 2:40:44 PMInfrastructure Deputy\nSal Ruggiero3/13/2026 1:43:11 PMNeighborhood and Community Affairs \nDeputy\nSheila DelCastillo3/16/2026 8:33:36 AMInfrastructure and Mobility\nOcea Wynn3/13/2026 3:27:44 PMNeighborhood and Community Affairs\nKen Farrell3/16/2026 9:11:32 AMFinance Coordinator\nNicholas Pastue3/16/2026 2:46:12 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/16/2026 3:56:10 PMBudget Operating Manager\nMichael Perry3/18/2026 8:32:28 AMBudget Officer\nLori Hernandez3/26/2026 9:52:05 AMChief Financial Officer\n\nJOHN BENNETT3/26/2026 1:45:05 PMChief of Staff\nJANE CASTOR3/27/2026 11:14:50 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for Change Order No. 2 – Final to GMP-5, a decrease to the existing contract with Kiewit Infrastructure South Co. in the amount of $4,298,138.86 for the Comprehensive Infrastructure for Tampa's Neighborhoods, Phase I Project for use by the Infrastructure and Mobility Administration Department within the Water Future Debt Capital Projects Fund. Budget Office will prepare a financial resolution for Council's approval at a later date.",
+        "projectedCostsRaw": "40554.234110.563001.1001913 - $4,298,138.86 (Expenditure \nDecrease)\nWater Future Debt Capital Projects Fund. Infrastructure & Mobility Administration Capital \nProject Costs. Improvements Other than Bldgs. Comprehensive Infrastructure for Tampa’s \nNeighborhoods  Phase I Project",
+        "rows": [
+          {
+            "accountCode": "40554.234110.563001.1001913",
+            "fund": "40554",
+            "department": "234110",
+            "object": "563001",
+            "project": "1001913",
+            "fiscalYear": null,
+            "amount": "$4,298,138.86",
+            "value": 4298138.86,
+            "type": "expenditure",
+            "signedValue": 4298138.86,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Water Future Debt Capital Projects Fund. Infrastructure & Mobility Administration Capital Project Costs. Improvements Other than Bldgs. Comprehensive Infrastructure for Tampa’s Neighborhoods Phase I Project"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -424,6 +488,30 @@
         "revenues": 0,
         "other": 46674243.07,
         "net": 2302292.66
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Regular\nSubmittal Date:                        3/19/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactNicholas Pastue 274-7272\nSubjectRealign for the Comprehensive Infrastructure for Tampa’s Neighborhoods \nProject to budget reserves within the Water Future Debt Capital Projects \nFund. (Part 2 of 2)\nResolution / \nOrdinance \nTitle\nA resolution making certain changes in the budget of the City of Tampa for the \nfiscal year ending September 30, 2026; approving the transfer, reallocation, \nand/or appropriation of $2,302,292.66 for the Comprehensive Infrastructure \nfor Tampa’s Neighborhoods Project to budget reserves within the Water \nFuture Debt Capital Projects Fund; providing an effective date.\nBACKGROUND:\nOn February 16, 2023, City Council approved resolution 2023-165 for $42,376,104.21 as of \nthe Comprehensive Infrastructure for Tampa’s Neighborhoods Project. The department \nmodifying the agreement to be able to close out the contract for a cost saving of \n$4,298,138.86. Not all the funds were encumbered one time, instead were encumbered on an \nas need basis.\nThis resolution reallocates funds in the amount of $2,302,292.66 from the Comprehensive \nInfrastructure for Tampa’s Neighborhoods Project to budget reserves within the Water Future \nDebt Capital Projects Fund.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution reallocates funds in the amount of $2,302,292.66 from the Comprehensive \nInfrastructure for Tampa’s Neighborhoods Project to budget reserves within the Water Future \nDebt Capital Projects Fund.\nPROJECTED COSTS: 40554.234110.563001.1001913 - $(2,302,292.66) (Expenditure \nDecrease)\nWater Future Debt Capital Projects Fund. Infrastructure and Mobility Administration \nDepartment. Improvements Other than Buildings. Comprehensive Infrastructure for Tampa’s \nNeighborhoods Project\n40554.244600.599999 - $2,302,292.66 (Expenditure Increase)\nWater Future Debt Capital Projects Fund. Water Department. Other Uses Budget Reserve\nApproverTimestampRole\nNicholas Pastue3/19/2026 11:48:49 AMSubmitter\nKen Farrell3/19/2026 11:53:30 AMDepartment Head\n\nRory Jones3/19/2026 11:57:44 AMWater\nAstonah Turner3/19/2026 12:56:38 PMAttorney Coordinator\nJustin Vaske3/19/2026 12:57:45 PMAssistant City Attorney\nCate Wells3/19/2026 1:49:26 PMCity Attorney\nBRAD BAIRD3/19/2026 2:40:02 PMInfrastructure Deputy\nJEAN DUNCAN3/19/2026 2:57:25 PMInfrastructure and Mobility\nGiannina Carballa3/19/2026 3:29:53 PMFinance Coordinator\nNicholas Pastue3/20/2026 9:04:49 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/20/2026 9:10:08 AMBudget Operating Manager\nMichael Perry3/25/2026 9:28:14 AMBudget Officer\nLori Hernandez3/26/2026 9:56:38 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:36 PMChief of Staff\nJANE CASTOR3/27/2026 11:09:54 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution reallocates funds in the amount of $2,302,292.66 from the Comprehensive Infrastructure for Tampa’s Neighborhoods Project to budget reserves within the Water Future Debt Capital Projects Fund.",
+        "projectedCostsRaw": "40554.234110.563001.1001913 - $(2,302,292.66) (Expenditure \nDecrease)\nWater Future Debt Capital Projects Fund. Infrastructure and Mobility Administration \nDepartment. Improvements Other than Buildings. Comprehensive Infrastructure for Tampa’s \nNeighborhoods Project\n40554.244600.599999 - $2,302,292.66 (Expenditure Increase)\nWater Future Debt Capital Projects Fund. Water Department. Other Uses Budget Reserve",
+        "rows": [
+          {
+            "accountCode": "40554.244600.599999",
+            "fund": "40554",
+            "department": "244600",
+            "object": "599999",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$2,302,292.66",
+            "value": 2302292.66,
+            "type": "expenditure",
+            "signedValue": 2302292.66,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Increase",
+            "description": "Water Future Debt Capital Projects Fund. Water Department. Other Uses Budget Reserve"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -526,6 +614,45 @@
         "revenues": 0,
         "other": 131412,
         "net": 18588
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Regular\nSubmittal Date:                        2/17/2026\nRequested Meeting Date: 3/05/2026\nType of Request:                                                  Council Resolution\nContactAndy Waitman 813-274-7267\nSubjectFinancial resolution for New Tampa Players, Inc. prior year invoice\nResolution / \nOrdinance \nTitle\nA Resolution making certain changes in the budget of the City of Tampa for \nthe fiscal year ending September 30, 2026; approving the transfer, \nreallocation, and/or appropriation of $18,588 within the General Fund Social \nAction and Arts Funding (SAAF) for payment of an invoice from New Tampa \nPlayers, Inc. relating to services provided during Fiscal Year 2024; providing \nan effective date.\nBACKGROUND:\nIn FY2024, New Tampa Players, Inc. entered into an agreement with the City of Tampa in the \namount of $75,000 via Resolution 2024-154, passed and adopted by City Council on March \n7, 2024.  However, during FY2024, only three invoices totaling $56,412 were submitted to, \nand paid by the City, leaving a balance of $18,588 remaining on the agreement.  These funds \nlapsed to fund balance at the end of the fiscal year.  The last request for payment related to \nthe FY2024 agreement was recently submitted to the City for payment.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution reappropriates $18,588 to pay New Tampa Players for FY2024 services \nauthorized by Resolution 2024-154.  Funds are available for this purpose from the General \nFund Non-Department assigned use of fund balance.\nPROJECTED COSTS: 01100 220900 369936 $18,588 (Revenue Increase) \nGeneral Fund - Non Departmental Admin – Assigned Use of Fund Balance\n01100 220904 582547 $18,588 (Expenditure Increase)\nGeneral Fund - Non Departmental Agreements – New Tampa Players Penguin Project \nContribution\nApproverTimestampRole\nAndy Waitman3/11/2026 10:01:08 AMSubmitter\nKen Farrell3/12/2026 10:01:51 AMDepartment Head\nAstonah Turner3/12/2026 10:46:07 AMAttorney Coordinator\nJustin Vaske3/12/2026 10:49:03 AMAssistant City Attorney\nCate Wells3/12/2026 12:17:27 PMCity Attorney\nMichael Cain3/12/2026 12:45:37 PMFinance Coordinator\nAndy Waitman3/12/2026 2:08:56 PMFinance Fiscal and Lead Analyst\n\nTy Hawthorne3/12/2026 2:20:48 PMBudget Operating Manager\nMichael Perry3/16/2026 2:52:56 PMBudget Officer\nLori Hernandez3/26/2026 9:49:33 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:45:11 PMChief of Staff\nJANE CASTOR3/27/2026 11:15:26 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution reappropriates $18,588 to pay New Tampa Players for FY2024 services authorized by Resolution 2024-154. Funds are available for this purpose from the General Fund Non-Department assigned use of fund balance.",
+        "projectedCostsRaw": "01100 220900 369936 $18,588 (Revenue Increase) \nGeneral Fund - Non Departmental Admin – Assigned Use of Fund Balance\n01100 220904 582547 $18,588 (Expenditure Increase)\nGeneral Fund - Non Departmental Agreements – New Tampa Players Penguin Project \nContribution",
+        "rows": [
+          {
+            "accountCode": "01100.220900.369936",
+            "fund": "01100",
+            "department": "220900",
+            "object": "369936",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$18,588",
+            "value": 18588,
+            "type": "revenue",
+            "signedValue": -18588,
+            "subjectToAppropriation": false,
+            "marker": "Revenue Increase",
+            "description": "General Fund - Non Departmental Admin – Assigned Use of Fund Balance"
+          },
+          {
+            "accountCode": "01100.220904.582547",
+            "fund": "01100",
+            "department": "220904",
+            "object": "582547",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$18,588",
+            "value": 18588,
+            "type": "expenditure",
+            "signedValue": 18588,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Increase",
+            "description": "General Fund - Non Departmental Agreements – New Tampa Players Penguin Project Contribution"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -534,7 +661,7 @@
       "title": "File No. F26-22446\nResolution receiving and filing the City of Tampa Annual Comprehensive Financial Report (ACFR) for the Fiscal Year ending September 30, 2025.",
       "rawTitle": "File No. F26-22446\nResolution receiving and filing the City of Tampa Annual Comprehensive Financial Report (ACFR) for the Fiscal Year ending September 30, 2025.",
       "fileNumber": "F26-22446",
-      "background": "The attached Annual Comprehensive Financial Report (ACFR) provides an external audit for both the City of Tampa and the Tampa Historic Streetcar, Inc. (as a separate component unit of the City).  Both audits were conducted by the City’s external auditor, Forvis Mazars, LLP of Tampa, and both received an “unmodified” or “clean” audit.\n\nFY2025 ACFR Highlights: *External Auditors’ Opinion: from Forvis Mazars, LLP Independent Auditor’s Report “We have audited the financial statements of the governmental activities, the business-type activities, the discretely presented component unit, each major fund, and the aggregate remaining fund information of the City of Tampa, Florida (the “City”) as of and for the fiscal year ended September 30, 2025, and the related notes to the financial statements, which collectively comprise the City’s basic financial statements, as listed in the table of contents.\n\nIn our opinion, based on our audit and the report of the other auditors, the accompanying financial statements referred to above present fairly, in all material respects, the respective financial position of the governmental activities, the business-type activities, the discretely presented component unit, each major fund, and the aggregate remaining fund information of the City as of September 30, 2025, and the respective changes in financial position and, where applicable, cash flows, and the budgetary comparisons for the General Fund thereof for the fiscal year then ended in conformity with accounting principles generally accepted in the United States of America.” *Major Funds: Generally Accepted Accounting Principles (GAAP) has required the City to identify the following funds as major -General Fund -Community Redevelopment Funds (newly added) -Water Utility Fund -Wastewater Utility Fund -Solid Waste System Fund *Major funds are defined as: funds whose revenues, expenditures/expenses, assets, or liabilities are at least 10% of corresponding totals for all governmental or enterprise funds and at least 5% of the aggregate amount of all governmental and enterprise funds, per GASB Statement No. 34, Basic Financial Statements-and Management’s Discussion and Analysis- for State and Local Governments.\n\n*Uniform Guidance (Federal) and Florida Single Audit Act Overview: – An audit of Federal and State grants management found no material weakness or significant deficiencies in the City’s management of Federal Awards and State Projects.\n\n-Additionally, the City has qualified for six straight fiscal year as a low-risk auditee due to the City's financial management and financial systems.",
+      "background": "The attached Annual Comprehensive Financial Report (ACFR) provides an external audit for both the City of Tampa and the Tampa Historic Streetcar, Inc. (as a separate component unit of the City).  Both audits were conducted by the City’s external auditor, Forvis Mazars, LLP of Tampa, and both received an “unmodified” or “clean” audit.\n\nFY2025 ACFR Highlights: *External Auditors’ Opinion: from Forvis Mazars, LLP Independent Auditor’s Report “We have audited the financial statements of the governmental activities, the business-type activities, the discretely presented component unit, each major fund, and the aggregate remaining fund information of the City of Tampa, Florida (the “City”) as of and for the fiscal year ended September 30, 2025, and the related notes to the financial statements, which collectively comprise the City’s basic financial statements, as listed in the table of contents.\n\nIn our opinion, based on our audit and the report of the other auditors, the accompanying financial statements referred to above present fairly, in all material respects, the respective financial position of the governmental activities, the business-type activities, the discretely presented component unit, each major fund, and the aggregate remaining fund information of the City as of September 30, 2025, and the respective changes in financial position and, where applicable, cash flows, and the budgetary comparisons for the General Fund thereof for the fiscal year then ended in conformity with accounting principles generally accepted in the United States of America.” *Major Funds: Generally Accepted Accounting Principles (GAAP) has required the City to identify the following funds as major -General Fund -Community Redevelopment Funds (newly added) -Water Utility Fund -Wastewater Utility Fund -Solid Waste System Fund *Major funds are defined as: funds whose revenues, expenditures/expenses, assets, or liabilities are at least 10% of corresponding totals for all governmental or enterprise funds and at least 5% of the aggregate amount of all governmental and enterprise funds, per GASB Statement No. 34, Basic Financial Statements-and Management’s Discussion and Analysis-for State and Local Governments.\n\n*Uniform Guidance (Federal) and Florida Single Audit Act Overview: – An audit of Federal and State grants management found no material weakness or significant deficiencies in the City’s management of Federal Awards and State Projects.\n\n-Additionally, the City has qualified for six straight fiscal year as a low-risk auditee due to the City's financial management and financial systems.",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
@@ -566,6 +693,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Regular\nSubmittal Date:                        3/20/2026\nRequested Meeting Date: 4/16/2026\nType of Request:                                                  Council Resolution\nContactMichael Cain 813-274-8334\nSubject2025 Annual Comprehensive Financial Report (ACFR)\nResolution / \nOrdinance \nTitle\nA resolution receiving and filing the City of Tampa Annual Comprehensive \nFinancial Report (ACFR) for the Fiscal Year ending September 30, 2025.\nBACKGROUND:\nThe attached Annual Comprehensive Financial Report (ACFR) provides an external audit for \nboth the City of Tampa and the Tampa Historic Streetcar, Inc. (as a separate component unit \nof the City).  Both audits were conducted by the City’s external auditor, Forvis Mazars, LLP of \nTampa, and both received an “unmodified” or “clean” audit.  \nFY2025 ACFR Highlights: \n*External Auditors’ Opinion: from Forvis Mazars, LLP Independent Auditor’s Report \n“We have audited the financial statements of the governmental activities, the business-type \nactivities, the discretely presented component unit, each major fund, and the aggregate \nremaining fund information of the City of Tampa, Florida (the “City”) as of and for the fiscal \nyear ended September 30, 2025, and the related notes to the financial statements, which \ncollectively comprise the City’s basic financial statements, as listed in the table of contents.  \nIn our opinion, based on our audit and the report of the other auditors, the accompanying \nfinancial statements referred to above present fairly, in all material respects, the respective \nfinancial position of the governmental activities, the business-type activities, the discretely \npresented component unit, each major fund, and the aggregate remaining fund information of \nthe City as of September 30, 2025, and the respective changes in financial position and, \nwhere applicable, cash flows, and the budgetary comparisons for the General Fund thereof \nfor the fiscal year then ended in conformity with accounting principles generally accepted in \nthe United States of America.” \n*Major Funds: Generally Accepted Accounting Principles (GAAP) has required the City to \nidentify the following funds as major \n     -General Fund \n     -Community Redevelopment Funds (newly added) \n     -Water Utility Fund \n     -Wastewater Utility Fund \n     -Solid Waste System Fund \n\n*Major funds are defined as: funds whose revenues, expenditures/expenses, assets, or \nliabilities are at least 10% of corresponding totals for all governmental or enterprise funds and \nat least 5% of the aggregate amount of all governmental and enterprise funds, per GASB \nStatement No. 34, Basic Financial Statements-and Management’s Discussion and Analysis-\nfor State and Local Governments. \n*Uniform Guidance (Federal) and Florida Single Audit Act Overview: \n     – An audit of Federal and State grants management found no material weakness or \nsignificant deficiencies in the City’s management of Federal Awards and State Projects.   \n-Additionally, the City has qualified for six straight fiscal year as a low-risk auditee due to the \nCity's financial management and financial systems.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMichael Cain3/24/2026 9:11:12 AMSubmitter\nKen Farrell3/24/2026 9:13:16 AMDepartment Head\nTamara Lee3/26/2026 10:09:14 AM\nAstonah Turner3/26/2026 10:13:21 AMAttorney Coordinator\nJustin Vaske3/26/2026 11:03:46 AMAssistant City Attorney\nCate Wells3/26/2026 11:23:29 AMCity Attorney\nKen Farrell3/26/2026 11:28:00 AMFinance Coordinator\nMichael Cain3/26/2026 11:41:34 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/26/2026 11:45:07 AMBudget Operating Manager\nMichael Perry3/26/2026 11:58:57 AMBudget Officer\nLori Hernandez3/26/2026 1:27:19 PMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:29 PMChief of Staff\nJANE CASTOR3/27/2026 11:08:35 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -654,6 +789,45 @@
         "revenues": 0,
         "other": 0,
         "net": 587500
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Regular\nSubmittal Date:                        3/17/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactJennifer Seth 813-274-7274\nSubjectA resolution making certain changes in the budget of the City of Tampa for the \nfiscal year ending September 30, 2026; approving the transfer, reallocation, \nand/or appropriation of $585,000 within the Housing Program Fund for \nAffordable Housing activi\nResolution / \nOrdinance \nTitle\nA resolution making certain changes in the budget of the City of Tampa for the \nfiscal year ending September 30, 2026; approving the transfer, reallocation, \nand/or appropriation of $585,000 within the Housing Program Fund for \nAffordable Housing activities; providing an effective date.\nBACKGROUND:\nThe City of Tampa entered into a Land Disposition Agreement for the redevelopment of the \nRome Yard property. The project is being developed in multiple phases under ground leases \nwith the City, with the exception of the townhome units, which are for-sale residential product.\nUnder the terms of the Land Disposition Agreement, the City receives:\n• A one-time initial base rent payment of $2,500 per rental unit to be constructed in each \nleased phase, payable at lease commencement; and\n• Beginning in the second lease year and annually thereafter, 12.5% of the lessee’s net \nrevenue related to operations of the project from the prior year, payable each April 15.\nThe City recently received $585,000 associated with Phase 3A, known as Gallery at Rome \nYards, representing the initial base rent payment required under the agreement. Future base \nrent payments are expected as additional phases of the project move forward, with Phase 4 \nanticipated to begin in the next few months.  This financial resolution appropriates these \nfunds within the Housing Program Fund for the Catholic Charities Contribution for Tampa \nHope operations.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThe City has received funds in the amount of $585,000 pertaining Phase 3A of the Gallery at \nRome Yards Development Project Land Lease.  These funds are to be deposited and \nappropriated within the Housing Program Fund to be used for the Catholic Charities \ncontribution for Tampa Hope operations.\nPROJECTED COSTS: 12090.218400.362005 - $585,000 (Revenue Increase)\nHousing Program Fund Non Grant.DGM Housing and Community Development Admin.Rent \nLand/Building Facilities\n12090.218400.582539.1002764 - $585,000 (Expenditure Increase)\nHousing Program Fund Non Grant.DGM Housing and Community Development \nAdmin.Catholic Charities Contribution.HCD HPF Catholic Charities Contribution\nP - 1002764\n\nO - DEO-Housing & Community Development \nE - CTPA Catholic Charities Contribution\nT- 03\nA - 100665\nApproverTimestampRole\nJennifer Seth3/17/2026 1:03:39 PMSubmitter\nKen Farrell3/17/2026 2:01:32 PMDepartment Head\nMichelle Boone3/17/2026 2:08:35 PMHousing\nAstonah Turner3/17/2026 3:36:34 PMAttorney Coordinator\nJustin Vaske3/18/2026 8:53:57 AMAssistant City Attorney\nCate Wells3/18/2026 9:31:59 AMCity Attorney\nABBYE FEELEY3/20/2026 8:52:42 AMDevelopment and Economic Opportunity\nKen Farrell3/20/2026 8:58:22 AMFinance Coordinator\nJennifer Seth3/20/2026 10:22:50 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/23/2026 7:42:03 AMBudget Operating Manager\nMichael Perry3/24/2026 4:27:36 AMBudget Officer\nLori Hernandez3/26/2026 9:53:35 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:54 PMChief of Staff\nJANE CASTOR3/27/2026 11:12:34 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "The City has received funds in the amount of $585,000 pertaining Phase 3A of the Gallery at Rome Yards Development Project Land Lease. These funds are to be deposited and appropriated within the Housing Program Fund to be used for the Catholic Charities contribution for Tampa Hope operations.",
+        "projectedCostsRaw": "12090.218400.362005 - $585,000 (Revenue Increase)\nHousing Program Fund Non Grant.DGM Housing and Community Development Admin.Rent \nLand/Building Facilities\n12090.218400.582539.1002764 - $585,000 (Expenditure Increase)\nHousing Program Fund Non Grant.DGM Housing and Community Development \nAdmin.Catholic Charities Contribution.HCD HPF Catholic Charities Contribution\nP - 1002764\n\nO - DEO-Housing & Community Development \nE - CTPA Catholic Charities Contribution\nT- 03\nA - 100665",
+        "rows": [
+          {
+            "accountCode": "12090.218400.362005",
+            "fund": "12090",
+            "department": "218400",
+            "object": "362005",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$585,000",
+            "value": 585000,
+            "type": "revenue",
+            "signedValue": -585000,
+            "subjectToAppropriation": false,
+            "marker": "Revenue Increase",
+            "description": "Housing Program Fund Non Grant.DGM Housing and Community Development Admin.Rent Land/Building Facilities"
+          },
+          {
+            "accountCode": "12090.218400.582539.1002764",
+            "fund": "12090",
+            "department": "218400",
+            "object": "582539",
+            "project": "1002764",
+            "fiscalYear": null,
+            "amount": "$585,000",
+            "value": 585000,
+            "type": "expenditure",
+            "signedValue": 585000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Increase",
+            "description": "Housing Program Fund Non Grant.DGM Housing and Community Development Admin.Catholic Charities Contribution.HCD HPF Catholic Charities Contribution P - 1002764 O - DEO-Housing & Community Development E - CTPA Catholic Charities Contribution T- 03 A - 100665"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -694,6 +868,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Real Estate\nCouncil Regular\nSubmittal Date:                        3/18/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactSerena Brydon 4-7232\nSubjectA resolution approving an Easement Agreement from City of Tampa in favor \nof Peoples Gas System, Inc., for the purpose of placing underground gas \nfacilities in the vicinity of 2507 East 26th Avenue.\nResolution / \nOrdinance \nTitle\nA Resolution approving the execution by the Mayor and attestation by the City \nClerk of an Easement Agreement between the City of Tampa and Peoples \nGas System, Inc., for the purpose of placing underground gas facilities at City-\nowned property located at 2507 East 26th Avenue, Tampa, Florida; providing \nan effective date.\nBACKGROUND:\nPeoples Gas System, Inc. requested an easement from the City of Tampa for an easement at \nCity-owned property located in the vicinity of 2507 East 26th Avenue to facilitate gas services. \nThe Stormwater Engineering Division has no objection to granting this 30' x 30' (900 sf) \neasement for the installation and operation of a gas regulator station with a footprint of \napproximately 12' x 8'. The property is operated by the Mobility Department as a wet retention \npond.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nSerena Brydon3/18/2026 6:42:32 PMSubmitter\nMichelle VanLoan3/18/2026 7:00:01 PMDepartment Head\nAlexander Awad3/19/2026 8:44:21 AMMobility\nAstonah Turner3/19/2026 10:01:59 AMAttorney Coordinator\nRonald Wigginton3/20/2026 11:03:06 AMAssistant City Attorney\nCate Wells3/20/2026 11:13:13 AMCity Attorney\nGeri Lopez3/20/2026 2:29:51 PMDeputy Administrator DEO\nJEAN DUNCAN3/20/2026 11:46:13 AMInfrastructure and Mobility\nABBYE FEELEY3/24/2026 3:52:42 PMDevelopment and Economic Opportunity\nKen Farrell3/25/2026 3:38:31 PMFinance Coordinator\nAdam Hanes3/25/2026 3:46:02 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/25/2026 3:50:15 PMBudget Operating Manager\nMichael Perry3/25/2026 6:11:31 PMBudget Officer\n\nLori Hernandez3/26/2026 9:54:07 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:52 PMChief of Staff\nJANE CASTOR3/27/2026 11:11:27 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -702,7 +884,7 @@
       "title": "File No. DEO26-22421\nResolution approving the execution by the Mayor and attestation by the City Clerk of a First Amendment to Contract for Sale and Purchase between the City of Tampa, as Seller, and RMC Tampa Commons, L.L.C., as Purchaser, to include language within the Quit Claim Deed releasing any interest in phosphate, minerals, metals or petroleum reservations in the City property located at 201 North Dale Mabry Highway, Tampa, Florida; Providing an effective date.\n\nMemorandum from Michelle Van Loan, Real Estate Director, transmitting additional information for said agenda item. (To be R/F)",
       "rawTitle": "File No. DEO26-22421\nResolution approving the execution by the Mayor and attestation by the City Clerk of a First Amendment to Contract for Sale and Purchase between the City of Tampa, as Seller, and RMC Tampa Commons, L.L.C., as Purchaser, to include language within the Quit Claim Deed releasing any interest in phosphate, minerals, metals or petroleum reservations in the City property located at 201 North Dale Mabry Highway, Tampa, Florida; Providing an effective date.\n\nMemorandum from Michelle Van Loan, Real Estate Director, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "DEO26-22421",
-      "background": "The City of Tampa, Seller and RMC Tampa Commons, L.L.C., Purchaser entered into a Contract for Sale and Purchase dated November 10, 2025, pursuant to Resolution No. 2025-\n\n930.  The City agreed to sell an uneconomic remainder portion of City property, 1,073 square feet m.o.l., located at 201 North Dale Mabry Highway for development purposes.  The City was notified of a request from the buyer’s title company to include language within the Quit Claim Deed releasing any interest the City may have in phosphate, minerals, metals or petroleum.",
+      "background": "The City of Tampa, Seller and RMC Tampa Commons, L.L.C., Purchaser entered into a Contract for Sale and Purchase dated November 10, 2025, pursuant to Resolution No. 2025-930.  The City agreed to sell an uneconomic remainder portion of City property, 1,073 square feet m.o.l., located at 201 North Dale Mabry Highway for development purposes.  The City was notified of a request from the buyer’s title company to include language within the Quit Claim Deed releasing any interest the City may have in phosphate, minerals, metals or petroleum.",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
@@ -740,6 +922,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Real Estate\nCouncil Regular\nSubmittal Date:                        3/18/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactSerena Brydon 4-7232\nSubjectA Resolution approving First Amendment to Contract for Sale and Purchase to \ninclude language within the Quit Claim Deed releasing any interest in \nphosphate, minerals, metals or petroleum reservations in City property at 201 \nN Dale Mabry Hwy.\nResolution / \nOrdinance \nTitle\nA Resolution approving the execution by the Mayor and attestation by the City \nClerk of a First Amendment to Contract for Sale and Purchase between the \nCity of Tampa, as Seller, and RMC Tampa Commons, L.L.C., as Purchaser, \nto include language within the Quit Claim Deed releasing any interest in \nphosphate, minerals, metals or petroleum reservations in the City property \nlocated at 201 North Dale Mabry Highway, Tampa, Florida; Providing an \neffective date.\nBACKGROUND:\nThe City of Tampa, Seller and RMC Tampa Commons, L.L.C., Purchaser entered into a \nContract for Sale and Purchase dated November 10, 2025, pursuant to Resolution No. 2025-\n930.  The City agreed to sell an uneconomic remainder portion of City property, 1,073 square \nfeet m.o.l., located at 201 North Dale Mabry Highway for development purposes.  The City \nwas notified of a request from the buyer’s title company to include language within the Quit \nClaim Deed releasing any interest the City may have in phosphate, minerals, metals or \npetroleum.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nAnne Bliton3/19/2026 12:56:02 PMSubmitter\nMichelle VanLoan3/19/2026 1:08:56 PMDepartment Head\nAstonah Turner3/19/2026 1:11:55 PMAttorney Coordinator\nRonald Wigginton3/20/2026 9:36:00 AMAssistant City Attorney\nCate Wells3/20/2026 9:55:30 AMCity Attorney\nGeri Lopez3/20/2026 10:28:42 AMDeputy Administrator DEO\nABBYE FEELEY3/20/2026 10:32:01 AMDevelopment and Economic Opportunity\nAmy Murphy3/23/2026 10:15:49 AMFinance Coordinator\nJennifer Seth3/23/2026 1:22:37 PMFinance Fiscal and Lead Analyst\n\nTy Hawthorne3/23/2026 1:31:09 PMBudget Operating Manager\nMichael Perry3/24/2026 4:31:27 AMBudget Officer\nLori Hernandez3/26/2026 9:54:37 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:49 PMChief of Staff\nJANE CASTOR3/27/2026 11:11:14 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -804,6 +994,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: City Attorney\nCouncil Regular\nSubmittal Date:                        3/19/2026\nRequested Meeting Date: 3/26/2026\nType of Request:                                                  Council Resolution\nContactAstonah Turner 274-5168\nSubjectA Resolution approving an amended Rome Yard mixed-use development \nphasing and timing plan, as required by the Rome Yard Land Disposition \nAgreement\nResolution / \nOrdinance \nTitle\nA Resolution approving an amended Rome Yard mixed-use development \nphasing and timing plan, as required by the Rome Yard Land Disposition \nAgreement between the City of Tampa and RUDG, LLC, relating to the \nproperty located south of Columbus Drive, west of the Hillsborough River, east \nof Rome Avenue and north of Spruce Street (commonly known as Rome \nYard), in the City of Tampa, Florida; providing for an effective date.\nBACKGROUND:\nThe City and RUDG, LLC (“Developer”) entered into a Land Disposition Agreement, dated \nMay 5, 2022, for the property generally known as Rome Yard, for the Developer to construct \na development containing approximately 954 residential units, including affordable units.  The \nproperty is being developed in phases. The Agreement requires approval of a phasing and \ntiming plan.  City Council initially approved the Phasing and Timing Plan on  April 20, 2023, \nand approved amendments to the Phasing and Timing Plan on March 28, 2024 and May 15, \n2025.  The Developer is currently gearing up to close its construction financing and \ncommence construction on Phase 4, and has requested amendments to the Phasing and \nTiming Plan for Phase 3B and Phase 4.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nAstonah Turner3/19/2026 1:01:20 PMSubmitter\nAstonah Turner3/19/2026 1:01:25 PMDepartment Head\nAstonah Turner3/19/2026 5:10:16 PMAttorney Coordinator\nRebecca Johns3/20/2026 9:25:14 AMAssistant City Attorney\nCate Wells3/20/2026 9:51:52 AMCity Attorney\nAmy Murphy3/20/2026 10:04:50 AMFinance Coordinator\nJennifer Seth3/23/2026 12:49:12 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/23/2026 1:21:00 PMBudget Operating Manager\nMichael Perry3/24/2026 4:30:00 AMBudget Officer\n\nLori Hernandez3/26/2026 9:50:30 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:39 PMChief of Staff\nJANE CASTOR3/27/2026 11:10:32 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -874,6 +1072,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: City Attorney\nCouncil Regular\nSubmittal Date:                        3/19/2026\nRequested Meeting Date: 3/26/2026\nType of Request:                                                  Council Resolution\nContactAstonah Turner 274-5168\nSubjectApproval of Amended and Restated Ground Lease for Rome Yard Phase 4 \nExtending Completion Deadline and Aligning with Financing Requirements\nResolution / \nOrdinance \nTitle\nA Resolution approving an amended and Restated Ground Lease Agreement, \nincluding exhibits, between the City of Tampa and Rome Yards Phase 4, LLC, \nfor Phase 4 of the development commonly referred to as “Rome Yard”; \naffecting approximately 3.412 acres of city-owned land generally located south \nof Columbus Drive, west of the Hillsborough River, east of Rome Avenue and \nnorth of Spruce Street in the West Tampa Community Redevelopment Area; \namending and restating the ground lease agreement to extend the outside \ncompletion date and to make other amendments as necessary to comply with \nconstruction financing documents; authorizing the execution thereof and of \nexhibits by the Mayor and attestation by the City Clerk; providing an effective \ndate.\nBACKGROUND:\nThe City and RUDG, LLC (“Developer”) entered into a Land Disposition Agreement, dated \nMay 5, 2022, for the property generally known as Rome Yard, for the Developer to construct \na development containing approximately 954 residential units, including affordable units.  The \nproperty is being developed in phases.  The City and Rome Yards Phase 4, LLC entered into \na Ground Lease Agreement on September 1, 2024 for Phase 4 of the development.  The \nparties desire to amend the lease to extend the outside completion date from December 31, \n2027 to September 30, 2028, and to amend and add some provision in order to comply with \nconstruction financing documents. The parties are also agreeing to an exhibits for a \nRecognition Agreement and an Access and Garage Easement Agreement.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nAstonah Turner3/19/2026 12:59:00 PMSubmitter\nAstonah Turner3/19/2026 1:00:08 PMDepartment Head\nAstonah Turner3/19/2026 5:18:19 PMAttorney Coordinator\nRebecca Johns3/20/2026 9:31:59 AMAssistant City Attorney\n\nCate Wells3/20/2026 9:53:43 AMCity Attorney\nAmy Murphy3/20/2026 10:05:35 AMFinance Coordinator\nJennifer Seth3/23/2026 1:12:06 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/23/2026 1:22:01 PMBudget Operating Manager\nMichael Perry3/24/2026 4:30:39 AMBudget Officer\nLori Hernandez3/26/2026 9:56:06 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:43 PMChief of Staff\nJANE CASTOR3/27/2026 11:10:06 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -882,7 +1088,7 @@
       "title": "File No. DEO26-22452 (Part 1 of 2) (See item 17) \nResolution approving a property exchange agreement by, between, and among the City of Tampa, Ulele, Inc., Florida Avenue Real Estate Holdings, LLC, and RHH 220 7th Ave LLC involving both the City’s former cable office building and a portion of the historic Zion Cemetery; providing, among other things, for the following exchanges of property interests for no monetary consideration: (1) the conveyance by the City of Tampa and RHH 220 7th Ave LLC of their respective interests in the City’s former cable office building and five (5) feet of an adjacent strip of land in the Tampa Heights Riverfront Community Redevelopment Area to Ulele, Inc. by separate deeds; (2) the conveyance by the City of Tampa and Ulele, Inc. of their respective interests in the remainder of the adjacent strip of land located west of the City’s former cable office building (less the five (5) feet adjacent to the former cable office building) in the Tampa Heights Riverfront Community Redevelopment Area to RHH 220 7th Ave LLC by separate deeds; and (3) the conveyance by Florida Avenue Real Estate Holdings, LLC, a closely related entity to Ulele, Inc., of a portion of the former historic Zion Cemetery to the City of Tampa or the City’s designee by special warranty deed; authorizing execution of said property exchange agreement by the Mayor; providing an effective date.\n\nMemorandum from Morris Massey, Deputy City Attorney, transmitting additional information for said agenda item. (To be R/F)",
       "rawTitle": "File No. DEO26-22452 (Part 1 of 2) (See item 17) \nResolution approving a property exchange agreement by, between, and among the City of Tampa, Ulele, Inc., Florida Avenue Real Estate Holdings, LLC, and RHH 220 7th Ave LLC involving both the City’s former cable office building and a portion of the historic Zion Cemetery; providing, among other things, for the following exchanges of property interests for no monetary consideration: (1) the conveyance by the City of Tampa and RHH 220 7th Ave LLC of their respective interests in the City’s former cable office building and five (5) feet of an adjacent strip of land in the Tampa Heights Riverfront Community Redevelopment Area to Ulele, Inc. by separate deeds; (2) the conveyance by the City of Tampa and Ulele, Inc. of their respective interests in the remainder of the adjacent strip of land located west of the City’s former cable office building (less the five (5) feet adjacent to the former cable office building) in the Tampa Heights Riverfront Community Redevelopment Area to RHH 220 7th Ave LLC by separate deeds; and (3) the conveyance by Florida Avenue Real Estate Holdings, LLC, a closely related entity to Ulele, Inc., of a portion of the former historic Zion Cemetery to the City of Tampa or the City’s designee by special warranty deed; authorizing execution of said property exchange agreement by the Mayor; providing an effective date.\n\nMemorandum from Morris Massey, Deputy City Attorney, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "DEO26-22452",
-      "background": "The City of Tampa holds potential property interests in two adjacent parcels within the Tampa Heights Riverfront Community Redevelopment Area: the former Cable Office Parcel and an Adjacent Strip. In March 2025, the City issued a Request for Proposals (RFP) for the possible disposition of these properties. Ulele, Inc. submitted a proposal for the Cable Office Parcel offering, through its related entity, Florida Avenue Real Estate Holdings, LLC, to convey property at 3721 Florida Avenue, land identified as part of the historic Zion Cemetery, in exchange for the City’s interest. This property includes a portion of Tampa’s first African- American cemetery, long abandoned and developed over time.\n\nThe City determined that acquiring the Florida Avenue Property would support ongoing efforts to restore, preserve, and commemorate the historic Zion Cemetery. Additionally, both Ulele and RHH 220 7th Ave LLC responded to the RFP regarding the Adjacent Strip. The City agreed to divide this strip into two components: a larger Alley parcel adjoining property owned by RHH, and a Five-Foot Strip adjoining the Cable Office Parcel.\n\nPrevious leasing and disposition actions involving the Cable Office Parcel were the subject of litigation initiated by Riverside Heights Development, LLC, a company related to RHH. To resolve any resulting property interests, Ulele, the City, and RHH agreed to exchange their respective interests in the Cable Office Parcel, the Five-Foot Strip, and the Alley.\n\nThe City has determined that the Cable Office Parcel and Adjacent Strip are no longer needed for public or governmental purposes and has declared them surplus. All required statutory and policy procedures for disposition have been met in preparation for the proposed property exchange.",
+      "background": "The City of Tampa holds potential property interests in two adjacent parcels within the Tampa Heights Riverfront Community Redevelopment Area: the former Cable Office Parcel and an Adjacent Strip. In March 2025, the City issued a Request for Proposals (RFP) for the possible disposition of these properties. Ulele, Inc. submitted a proposal for the Cable Office Parcel offering, through its related entity, Florida Avenue Real Estate Holdings, LLC, to convey property at 3721 Florida Avenue, land identified as part of the historic Zion Cemetery, in exchange for the City’s interest. This property includes a portion of Tampa’s first African-American cemetery, long abandoned and developed over time.\n\nThe City determined that acquiring the Florida Avenue Property would support ongoing efforts to restore, preserve, and commemorate the historic Zion Cemetery. Additionally, both Ulele and RHH 220 7th Ave LLC responded to the RFP regarding the Adjacent Strip. The City agreed to divide this strip into two components: a larger Alley parcel adjoining property owned by RHH, and a Five-Foot Strip adjoining the Cable Office Parcel.\n\nPrevious leasing and disposition actions involving the Cable Office Parcel were the subject of litigation initiated by Riverside Heights Development, LLC, a company related to RHH. To resolve any resulting property interests, Ulele, the City, and RHH agreed to exchange their respective interests in the Cable Office Parcel, the Five-Foot Strip, and the Alley.\n\nThe City has determined that the Cable Office Parcel and Adjacent Strip are no longer needed for public or governmental purposes and has declared them surplus. All required statutory and policy procedures for disposition have been met in preparation for the proposed property exchange.",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
@@ -914,6 +1120,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: City Attorney\nCouncil Regular\nSubmittal Date:                        3/24/2026\nRequested Meeting Date: 4/16/2026\nType of Request:                                                  Council Resolution\nContactErin Bradley 47312\nSubjectA Resolution approving a property exchange involving the former cable office \nbuilding, adjacent land, and portions of Zion Cemetery among the City of \nTampa, Ulele, Florida Avenue Real Estate Holdings, and RHH.\nResolution / \nOrdinance \nTitle\nA Resolution approving a property exchange agreement by, between, and \namong the City of Tampa, Ulele, Inc., Florida Avenue Real Estate Holdings, \nLLC, and RHH 220 7th Ave LLC involving both the City’s former cable office \nbuilding and a portion of the historic Zion Cemetery; providing, among other \nthings, for the following exchanges of property interests for no monetary \nconsideration: (1) the conveyance by the City of Tampa and RHH 220 7th Ave \nLLC of their respective interests in the City’s former cable office building and \nfive (5) feet of an adjacent strip of land in the Tampa Heights Riverfront \nCommunity Redevelopment Area to Ulele, Inc. by separate deeds; (2) the \nconveyance by the City of Tampa and Ulele, Inc. of their respective interests \nin the remainder of the adjacent strip of land located west of the City’s former \ncable office building (less the five (5) feet adjacent to the former cable office \nbuilding) in the Tampa Heights Riverfront Community Redevelopment Area to \nRHH 220 7th Ave LLC by separate deeds; and (3) the conveyance by Florida \nAvenue Real Estate Holdings, LLC, a closely related entity to Ulele, Inc., of a \nportion of the former historic Zion Cemetery to the City of Tampa or the City’s \ndesignee by special warranty deed; authorizing execution of said property \nexchange agreement by the Mayor; providing an effective date.\nBACKGROUND:\nThe City of Tampa holds potential property interests in two adjacent parcels within the Tampa \nHeights Riverfront Community Redevelopment Area: the former Cable Office Parcel and an \nAdjacent Strip. In March 2025, the City issued a Request for Proposals (RFP) for the possible \ndisposition of these properties. Ulele, Inc. submitted a proposal for the Cable Office Parcel \noffering, through its related entity, Florida Avenue Real Estate Holdings, LLC, to convey \nproperty at 3721 Florida Avenue, land identified as part of the historic Zion Cemetery, in \nexchange for the City’s interest. This property includes a portion of Tampa’s first African-\nAmerican cemetery, long abandoned and developed over time.\nThe City determined that acquiring the Florida Avenue Property would support ongoing efforts \nto restore, preserve, and commemorate the historic Zion Cemetery. Additionally, both Ulele \nand RHH 220 7th Ave LLC responded to the RFP regarding the Adjacent Strip. The City \nagreed to divide this strip into two components: a larger Alley parcel adjoining property owned \nby RHH, and a Five-Foot Strip adjoining the Cable Office Parcel.\nPrevious leasing and disposition actions involving the Cable Office Parcel were the subject of \nlitigation initiated by Riverside Heights Development, LLC, a company related to RHH. To \nresolve any resulting property interests, Ulele, the City, and RHH agreed to exchange their \nrespective interests in the Cable Office Parcel, the Five-Foot Strip, and the Alley.\n\nThe City has determined that the Cable Office Parcel and Adjacent Strip are no longer \nneeded for public or governmental purposes and has declared them surplus. All required \nstatutory and policy procedures for disposition have been met in preparation for the proposed \nproperty exchange.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nErin Bradley3/24/2026 9:51:11 AMSubmitter\nErin Bradley3/24/2026 9:53:02 AMDepartment Head\nMichelle VanLoan3/24/2026 9:59:03 AMReal Estate\nErin Bradley3/24/2026 2:16:26 PMAttorney Coordinator\nMorris Massey3/24/2026 2:20:45 PMAssistant City Attorney\nCate Wells3/24/2026 2:26:52 PMCity Attorney\nGeri Lopez3/25/2026 5:15:41 PMDeputy Administrator DEO\nABBYE FEELEY3/25/2026 7:55:11 PMDevelopment and Economic Opportunity\nKen Farrell3/26/2026 7:39:54 AMFinance Coordinator\nSusan Gobble3/26/2026 9:48:39 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/26/2026 9:55:09 AMBudget Operating Manager\nMichael Perry3/26/2026 10:42:54 AMBudget Officer\nLori Hernandez3/26/2026 10:46:07 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:27 PMChief of Staff\nJANE CASTOR3/27/2026 11:08:22 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -954,6 +1168,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: City Attorney\nCouncil Regular\nSubmittal Date:                        3/24/2026\nRequested Meeting Date: 4/16/2026\nType of Request:                                                  Council Resolution\nContactErin Bradley 47312\nSubjectApproves an agreement for the Florida Avenue property, part of the historic \nZion Cemetery, to be conveyed to the Cemetery Society or a designated \nentity, with the City imposing covenants to ensure its perpetual preservation.\nResolution / \nOrdinance \nTitle\nA Resolution approving an agreement regarding a portion of Zion Cemetery \nby and between the City of Tampa and the Zion Cemetery Preservation & \nMaintenance Society, Inc., allowing for the direct conveyance of title to a \nportion of Zion Cemetery to either the Zion Cemetery Preservation & \nMaintenance Society, Inc., or a third party designated by the Cemetery \nSociety and the City by Florida Avenue Real Estate Holdings, LLC, pursuant \nto a separate property exchange agreement between the City, Florida Avenue \nHoldings, LLC, Ulele, Inc. and RHH 220 7th Ave., LLC, in lieu of the City; \nproviding that said conveyance shall be subject to a declaration of covenants \nand restrictions in favor of the City to ensure that the property is owned, \nrestored, enhanced, operated, maintained and preserved in perpetuity as part \nof the historic Zion Cemetery; authorizing execution of said agreement \nregarding a portion of Zion Cemetery by the Mayor; providing an effective \ndate.\nBACKGROUND:\nThe Tampa City Council has approved a Property Exchange Agreement among the City of \nTampa, Ulele, Inc., Florida Avenue Real Estate Holdings, LLC, and RHH 220 7th Ave LLC. \nAs part of this agreement, Florida Avenue will convey a parcel of real property, referred to as \nthe Florida Avenue Property, to the City or the Zion Cemetery Preservation & Maintenance \nSociety, Inc., or another entity jointly designated by the City and the Cemetery Society. In \nexchange, the City will convey its interest in the Cable Office Parcel and the Alley to Ulele.\nThe Florida Avenue Property was originally part of the historic Zion Cemetery, Tampa’s first \nAfrican-American cemetery, which was later developed with housing and commercial \nstructures. The Cemetery Society was established to support the ownership, restoration, \nenhancement, and preservation of the historic cemetery, including memorial markers or \ncommemorative structures recognizing those buried there.\nThe City and the Cemetery Society intend to enter into an Agreement Regarding a Portion of \nZion Cemetery to facilitate the conveyance of the Florida Avenue Property to the Cemetery \nSociety or a jointly designated entity. The conveyance is subject to a Declaration of \nCovenants and Restrictions in favor of the City to ensure that the property is preserved, \nenhanced, and maintained in perpetuity as part of the historic Zion Cemetery.\nFISCAL IMPACT: No\n\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nErin Bradley3/24/2026 2:16:55 PMSubmitter\nErin Bradley3/24/2026 2:17:37 PMDepartment Head\nMichelle VanLoan3/24/2026 2:26:37 PMReal Estate\nErin Bradley3/25/2026 9:02:31 AMAttorney Coordinator\nMorris Massey3/25/2026 10:25:14 AMAssistant City Attorney\nCate Wells3/25/2026 11:18:12 AMCity Attorney\nGeri Lopez3/25/2026 5:07:11 PMDeputy Administrator DEO\nABBYE FEELEY3/25/2026 7:54:58 PMDevelopment and Economic Opportunity\nKen Farrell3/26/2026 7:44:10 AMFinance Coordinator\nJennifer Seth3/26/2026 7:51:42 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/26/2026 8:15:21 AMBudget Operating Manager\nMichael Perry3/26/2026 10:42:33 AMBudget Officer\nLori Hernandez3/26/2026 10:45:22 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:25 PMChief of Staff\nJANE CASTOR3/27/2026 11:08:05 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -1088,6 +1310,90 @@
         "revenues": 0,
         "other": 0,
         "net": 379808
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Mobility\nCouncil Regular\nSubmittal Date:                        3/16/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactJoan Greco 813-274-7149\nSubjectApproving the Tampa Bay Estuary Program's third amended and restated \nInterlocal Agreement.\nResolution / \nOrdinance \nTitle\nA resolution of the city council of the city of Tampa, Florida, approving the \nTampa Bay Estuary Program third amended and restated Interlocal \nAgreement; authorizing the payment of dues as a member of the Tampa Bay \nEstuary Program and policy board for fiscal years 2027 through and including \n2031: authorizing execution by the mayor and attestation by the city clerk; \nproviding an effective date.\nBACKGROUND:\nThe City of Tampa (“City”) is one of the founding members of the Tampa Bay Estuary \nProgram (“TBEP”), including representation on its Management and Policy Boards. The \nTBEP currently has participants and members of various governmental agencies, including \nthe City of Tampa. The TBEP is governed by an Interlocal Agreement between the members \nand partners, and the TBEP members and partners contribute funding annually towards the \nprogram. The Policy Board reviews and recommends updates to the Interlocal Agreement on \na five-year basis, including fundings by dues. This Tampa Bay Estuary Program Third \nAmended and Restated Interlocal Agreement adds the City of Largo, Florida as a member \nand includes some adjustments to funding commitments of the members. The City benefits \nfrom its membership in the TBEP in the implementation of its stormwater and wastewater \nNational Pollutant Discharge Program (“NPDES”) permits.  The City agrees as a voting \nmember of the TBEP to pay $70,913 for the Fiscal Year 2027 with an annual increase of \n2.5% through Fiscal Year 2031. The City has determined that it is in the best interest of the \ncitizens of the City to continue as a member and support the TBEP through Management and \nPolicy Board participation, dues contribution, and approval of the Tampa Bay Estuary \nProgram Third Amended and Restated Interlocal Agreement. And therefore, the Mayor of the \nCity of Tampa is authorized and empowered to execute and the City Clerk/Deputy City Clerk \nis to attest and affix the Official Seal of the City of Tampa to the Tampa Bay Estuary Program \nThird Amended and Restated Interlocal Agreement on behalf of the City of Tampa.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThat the Tampa Bay Estuary Program Third Amended and Restated Interlocal Agreement \nbetween the City of St. Petersburg, the City of Clearwater, Hillsborough County, Pinellas \nCounty, Manatee County, Pasco County, the Southwest Florida Water Management District, \nthe Tampa Port Authority, the Hillsborough County Environmental Protection Commission, \nthe Florida Department of Environmental Protection, the Florida Fish and Wildlife \nConservation Commission, the Tampa Bay Regional Planning Council, the Manatee County \nPort Authority, and Tampa Bay Water and the City of Tampa is approved. The amounts will \n\nnot exceed $70,913 in FY2027, $73,375 in FY2028, $75,899 in FY2029, $78,485 in FY2030, \nand $81,136 in FY2031; subject to annual appropriation for use by the Mobility Department \nwithin the Stormwater Service Assessment Fund.\nPROJECTED COSTS: 10700.242000.534007 $70,913 FY2027 (Expenditure); subject to \nannual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $73,375 FY2028 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $75,899 FY2029 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $78,485 FY2030 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $81,136 FY2031 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\nApproverTimestampRole\nJoan Greco3/17/2026 1:19:52 PMSubmitter\nBrandon Campbell3/17/2026 1:28:08 PMDepartment Head\nAstonah Turner3/17/2026 3:37:05 PMAttorney Coordinator\nEmma Gregory3/17/2026 5:39:57 PMAssistant City Attorney\nCate Wells3/18/2026 9:29:56 AMCity Attorney\nJEAN DUNCAN3/18/2026 11:17:03 AMInfrastructure and Mobility\nKelli Reed3/19/2026 7:59:51 AMFinance Coordinator\nAdam Hanes3/25/2026 3:33:23 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/25/2026 3:48:48 PMBudget Operating Manager\nMichael Perry3/25/2026 6:10:51 PMBudget Officer\nLori Hernandez3/26/2026 9:52:39 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:45:00 PMChief of Staff\nJANE CASTOR3/27/2026 11:13:52 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "That the Tampa Bay Estuary Program Third Amended and Restated Interlocal Agreement between the City of St. Petersburg, the City of Clearwater, Hillsborough County, Pinellas County, Manatee County, Pasco County, the Southwest Florida Water Management District, the Tampa Port Authority, the Hillsborough County Environmental Protection Commission, the Florida Department of Environmental Protection, the Florida Fish and Wildlife Conservation Commission, the Tampa Bay Regional Planning Council, the Manatee County Port Authority, and Tampa Bay Water and the City of Tampa is approved. The amounts will not exceed $70,913 in FY2027, $73,375 in FY2028, $75,899 in FY2029, $78,485 in FY2030, and $81,136 in FY2031; subject to annual appropriation for use by the Mobility Department within the Stormwater Service Assessment Fund.",
+        "projectedCostsRaw": "10700.242000.534007 $70,913 FY2027 (Expenditure); subject to \nannual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $73,375 FY2028 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $75,899 FY2029 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $78,485 FY2030 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services\n10700.242000.534007 $81,136 FY2031 (Expenditure); subject to annual appropriation \nStormwater Service Assessment Fund. Stormwater Department. Other Contractual Services",
+        "rows": [
+          {
+            "accountCode": "10700.242000.534007",
+            "fund": "10700",
+            "department": "242000",
+            "object": "534007",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$70,913",
+            "value": 70913,
+            "type": "expenditure",
+            "signedValue": 70913,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": "Stormwater Service Assessment Fund. Stormwater Department. Other Contractual Services"
+          },
+          {
+            "accountCode": "10700.242000.534007",
+            "fund": "10700",
+            "department": "242000",
+            "object": "534007",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$73,375",
+            "value": 73375,
+            "type": "expenditure",
+            "signedValue": 73375,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": "Stormwater Service Assessment Fund. Stormwater Department. Other Contractual Services"
+          },
+          {
+            "accountCode": "10700.242000.534007",
+            "fund": "10700",
+            "department": "242000",
+            "object": "534007",
+            "project": null,
+            "fiscalYear": "FY29",
+            "amount": "$75,899",
+            "value": 75899,
+            "type": "expenditure",
+            "signedValue": 75899,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": "Stormwater Service Assessment Fund. Stormwater Department. Other Contractual Services"
+          },
+          {
+            "accountCode": "10700.242000.534007",
+            "fund": "10700",
+            "department": "242000",
+            "object": "534007",
+            "project": null,
+            "fiscalYear": "FY30",
+            "amount": "$78,485",
+            "value": 78485,
+            "type": "expenditure",
+            "signedValue": 78485,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": "Stormwater Service Assessment Fund. Stormwater Department. Other Contractual Services"
+          },
+          {
+            "accountCode": "10700.242000.534007",
+            "fund": "10700",
+            "department": "242000",
+            "object": "534007",
+            "project": null,
+            "fiscalYear": "FY31",
+            "amount": "$81,136",
+            "value": 81136,
+            "type": "expenditure",
+            "signedValue": 81136,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": "Stormwater Service Assessment Fund. Stormwater Department. Other Contractual Services"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -1153,15 +1459,30 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/05/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Mario Espaillat request to rezone property generally located at \n4102 N. 22nd Street from CG to PD (Residential, Single-Family Attached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-25-126\nPublic Hearing on application of Mario Espaillat request to rezone property \ngenerally located at 4102 N. 22nd Street from CG to PD (Residential, Single-\nFamily Attached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/5/2026 11:08:58 AMSubmitter\nLaChone Dock3/5/2026 11:09:05 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": "Community Mixed Use-35",
+        "neighborhoodAssociations": [
+          "Historic Belmont Heights Neighborhood Association",
+          "Tampa Overlook Neighborhood Association",
+          "Richmond Place",
+          "VM Ybor Neighborhood Association & Crimewatch",
+          "East Tampa 1"
+        ],
         "waivers": [
           "WAIVER(S) REQUESTED: 1. Section 27-240 (e) (1) b: Request to allow front door orientation for units 1,2, and 3 to face E. Ida Street. 2. Section 27-240 (e) (1) c: Request to reduce the corner setback of the garage opening from the minimum setback of 15’ to 7’."
         ],
-        "findings": "FINDINGS: The  Development  Review  and  Compliance  staff  has  reviewed  the  petition  and  finds  the  request  CONSISTENT with"
+        "findings": "The  Development  Review  and  Compliance  staff  has  reviewed  the  petition  and  finds  the  request  CONSISTENT with"
       }
     },
     {
@@ -1233,15 +1554,28 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/04/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Miguel Aquino request to rezone property generally located at \n2707 E. 22nd Avenue from RM-16 to PD (Residential, Single-Family Semi-\nDetached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-25-129\nPublic Hearing on application of Miguel Aquino request to rezone property \ngenerally located at 2707 E. 22nd Avenue from RM-16 to PD (Residential, \nSingle-Family Semi-Detached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/4/2026 12:57:20 PMSubmitter\nLaChone Dock3/4/2026 12:57:27 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "RM-16",
         "requestedZoning": "PD",
-        "futureLandUse": "R-  20",
+        "futureLandUse": "R-20",
+        "neighborhoodAssociations": [
+          "Jackson Heights Neighborhood Associated & Crime Watch",
+          "Ybor City Management LLC",
+          "Tampa Overlook Neighborhood Association"
+        ],
         "waivers": [
           "WAIVER(S) REQUESTED: None"
         ],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  it  be  the  pleasure  of  City  Council  to  approve  the application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet."
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  it  be  the  pleasure  of  City  Council  to  approve  the application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet."
       }
     },
     {
@@ -1331,16 +1665,32 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/04/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Thomas Lafferty request to rezone property generally located at \n110 South Boulevard from PD to PD (Residential, Multiple-Family & Parking \nOff Street Commercial).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-32\nPublic Hearing on application of Thomas Lafferty request to rezone property \ngenerally located at 110 South Boulevard from PD to PD (Residential, \nMultiple-Family & Parking Off Street Commercial).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/4/2026 12:59:46 PMSubmitter\nLaChone Dock3/4/2026 12:59:53 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": "RMU-100",
+        "neighborhoodAssociations": [
+          "Hyde Park Spanishtown Creek Civic Association",
+          "Spanishtown Creek Civic Association",
+          "Bayshore Gardens Neighborhood Association Inc",
+          "Parkland Estates Civic Club, Inc",
+          "SoHo Neighborhood Association, Inc",
+          "Historic Hyde Park Neighborhood Association, Inc"
+        ],
         "waivers": [
           "PREVIOUSLY APPROVED WAIVERS (REZ-22-40): 1. Section 27-284.2.5(F)(1): Request to remove one non-hazardous grand, tree #49, a 38” Live Oak rated C-5; in arborist report. 2. Section 27-284.3.3.(D): Request to reduce the required 8 feet vehicular use area buffer to 5 feet to the south along Cleveland Street. 3. Section  27-283.10:  Request  to  reduce  the  required  number  of  overall  parking  spaces  from  416  required  parking spaces to 225 parking spaces (45% reduction). 4. Section 27-283.14: Request to reduce the required number of loading berths from 3 to 1. 5. Section 27-283.15: o Request to allow loading to occur in more than one continuous maneuver and to allow maneuvering in the right-of  -way. o Request to allow a 12’ x 30’ loading space in lieu of a 12’ x 60’ space. 6. Section 27-160:  Request  to  allow  a  reduction  in  special  street  setback  from  42  feet  to  36  feet  for  any  building  or structure on the property.",
           "NEW WAIVER(S) REQUESTED: 1. Section 27-284.2.5(F)(1): To remove one non-hazardous grand, tree #49, a 40” Live Oak rated C-5; in arborist report. 2. Section 27-283.15: To allow one 12’ x 39’ loading space in lieu of two 12’ x 60’ spaces. REZONING STAFF REPORT REZ-26-  0000032 DEVELOPMENT COORDINATION | 2555 EAST HANNA AVENUE, TAMPA, FL 33610                                                              Page 2 3. Section 27-284.3.3: Request to reduce the required use landscape buffer from 15’ and 6’ masonry wall to 0’  and 6’ masonry wall to the east and south abutting folio #194092.0000. 4. Section  27-284.3.3.(A):  Request  to  reduce  the  required  30%  Multi-family  greenspace  area  to  0%,  subject  to landscape in lieu fees at the time of permitting. 5. Section 27-283.7: To reduce the required parking from 418 to 41 provided (90%). 6. Section 27-283.14: To reduce the required number of loading berths from 2 to 1. 7. Section 27-284.3.3.(D): A) Request  to  reduce  the  required  20%  VUA  greenspace  (2,887  sf)  to  14%  VUA  greenspace  (2,147  sf)  subject  to landscape in lieu fees at the time of permitting. B)  Request to reduce the minimum parking island width from 13’ to 0’. C) Request  to  reduce  the  required  8’  VUA  landscape  buffer  abutting  Fielding  Ave  to  5’  and  6’  abutting  Cleveland Street."
         ],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  See  findings  from  Development  Coordination,  Natural Resources  and  Transportation  in  report  below.  Should  it  be  the  pleasure  of  City  Council  to  approve  the  application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation's inconsistent finding. LOCATION MAP: PROJECT INFORMATION: Commercial Development  Not Applicable Residential Unit Count (Maximum) 238 Units (1 bedroom: 49 units, 2 bedroom: 189 units) Maximum Building Height  162’ (11 stories) Setbacks (Perimeter) 0’ For all property lines Lot Area (SF/Acreage) 41,548 SF (0.95 acres)"
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  See  findings  from  Development  Coordination,  Natural Resources  and  Transportation  in  report  below.  Should  it  be  the  pleasure  of  City  Council  to  approve  the  application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation's inconsistent finding. LOCATION MAP: PROJECT INFORMATION: Commercial Development  Not Applicable Residential Unit Count (Maximum) 238 Units (1 bedroom: 49 units, 2 bedroom: 189 units) Maximum Building Height  162’ (11 stories) Setbacks (Perimeter) 0’ For all property lines Lot Area (SF/Acreage) 41,548 SF (0.95 acres)"
       }
     },
     {
@@ -1381,6 +1731,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: City Attorney\nCouncil Regular\nSubmittal Date:                        3/17/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Ordinance\nContactKimber Spitsberg 813-274-8842\nSubjectOrdinance  - Veterans' Advisory Committee\nResolution / \nOrdinance \nTitle\nAn ordinance of the City of Tampa, Florida amending Chapter 2, Article VI, of \nthe City of Tampa Code by adding section 2-326 Definitions; section 2-327 \nVeterans’ Advisory Committee; section 2-328 Meetings; section 2-329 \nPurpose and Function; repealing all ordinances or parts of ordinances in \nconflict therewith; providing for severability; providing an effective date.\nBACKGROUND:\nThe City of Tampa  recognizes that local residents who have served in the United States \nArmed Forces have made extraordinary sacrifices to preserve the freedoms and security of \nour community and nation.  The City requires expert, experience-based advice to identify \ngaps in services to City of Tampa veterans and to effectively allocate funding and resources \nthat specifically target the needs of these former service members and create greater \nawareness of veterans in the community.  Through this ordinance the City incorporates the \ninterests and awareness of veterans, their families, and caregivers through the creation of a \nVeterans’ Advisory Committee which shall serve as a liaison between the City and greater \nveterans’ community in the City of Tampa.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nKimber Spitsberg3/17/2026 11:48:35 AMSubmitter\nAstonah Turner3/17/2026 1:04:45 PMDepartment Head\nMarlene Rigal3/17/2026 4:02:19 PMNeighborhood Enhancement\nAstonah Turner3/17/2026 4:51:50 PMAttorney Coordinator\nCarl Brody3/18/2026 12:18:07 PMAssistant City Attorney\nCate Wells3/18/2026 12:22:36 PMCity Attorney\nMarlene Rigal3/18/2026 1:04:49 PMNeighborhood and Community Affairs \nDeputy\nOcea Wynn3/18/2026 1:19:30 PMNeighborhood and Community Affairs\nAmy Murphy3/20/2026 10:02:01 AMFinance Coordinator\n\nAlan Pissarenko3/20/2026 10:13:00 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/23/2026 7:40:56 AMBudget Operating Manager\nMichael Perry3/24/2026 4:26:24 AMBudget Officer\nLori Hernandez3/26/2026 9:53:05 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:57 PMChief of Staff\nJANE CASTOR3/27/2026 11:14:04 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -1389,7 +1747,7 @@
       "title": "File No. E2026-8 CH 26 (Please note that Item 4 is a presentation related to the aforementioned ordinance.)\n(Ordinance being presented for first reading consideration) - An ordinance of the City of Tampa, Florida, amending City of Tampa code of ordinances chapter 26, Article I: section 26-31, utility rates, fees and charges and section 26-37, water capacity fee; by increasing the water and wastewater capacity fees; by removing conflicting and outdated portions of section 26-31, utility rates, fees and charges; by repealing all ordinances or parts of ordinances in conflict therewith; providing for severability; providing an effective date.",
       "rawTitle": "File No. E2026-8 CH 26 (Please note that Item 4 is a presentation related to the aforementioned ordinance.)\n(Ordinance being presented for first reading consideration) - An ordinance of the City of Tampa, Florida, amending City of Tampa code of ordinances chapter 26, Article I: section 26-31, utility rates, fees and charges and section 26-37, water capacity fee; by increasing the water and wastewater capacity fees; by removing conflicting and outdated portions of section 26-31, utility rates, fees and charges; by repealing all ordinances or parts of ordinances in conflict therewith; providing for severability; providing an effective date.",
       "fileNumber": "E2026-8",
-      "background": "Water and wastewater capacity fees are like impact fees in that they require payment on new development or redevelopment within the City.  Development impacts affect the capacity of both plants and the water distribution and wastewater collections system.\n\nThe City last updated the capacity fees in 2020 which included:  Initiated the payment of water capacity fees, Reduction of the wastewater capacity fees,  Established a capacity fee of $0.00 for qualified affordable housing units, and  Requirement to review the capacity fees every five years.\n\nThe City has engaged the Raftelis firm to conduct the capacity fee study.  Based on their",
+      "background": "Water and wastewater capacity fees are like impact fees in that they require payment on new development or redevelopment within the City.  Development impacts affect the capacity of both plants and the water distribution and wastewater collections system.\n\nThe City last updated the capacity fees in 2020 which included:  Initiated the payment of water capacity fees, Reduction of the wastewater capacity fees,  Established a capacity fee of $0.00 for qualified affordable housing units, and  Requirement to review the capacity fees every five years.\n\nThe City has engaged the Raftelis firm to conduct the capacity fee study.  Based on their analysis, the City is recommending limiting the proposed increases to no greater than 50% of the current fee and phasing it in over a four-year implementation schedule starting on March 1, 2027.\n\nCity staff along with Raftelis presented the City’s findings and recommendation to the development community on February 18, 2026. Public hearings before City Council to present the proposed capacity fee increase ordinance are scheduled for April 2, 2026 and May 7, 2026.",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
@@ -1445,6 +1803,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Regular\nSubmittal Date:                        3/19/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Ordinance\nContactNicholas Pastue 274-7272\nSubjectAn ordinance of the City of Tampa, Florida, amending City of Tampa code of \nordinances chapter 26, Article I: section 26-31, utility rates, fees and charges \nand section 26-37, water capacity fee; by increasing the water and wastewater \ncapacity fees.\nResolution / \nOrdinance \nTitle\nAn ordinance of the City of Tampa, Florida, amending City of Tampa code of \nordinances chapter 26, Article I: section 26-31, utility rates, fees and charges \nand section 26-37, water capacity fee; by increasing the water and wastewater \ncapacity fees; by removing conflicting and outdated portions of section 26-31, \nutility rates, fees and charges; by repealing all ordinances or parts of \nordinances in conflict therewith; providing for severability; providing an \neffective date.\nBACKGROUND:\nWater and wastewater capacity fees are like impact fees in that they require payment on new \ndevelopment or redevelopment within the City.  Development impacts affect the capacity of \nboth plants and the water distribution and wastewater collections system.\nThe City last updated the capacity fees in 2020 which included:\n Initiated the payment of water capacity fees,\nReduction of the wastewater capacity fees, \n Established a capacity fee of $0.00 for qualified affordable housing units, and\n Requirement to review the capacity fees every five years.\nThe City has engaged the Raftelis firm to conduct the capacity fee study.  Based on their \nanalysis, the City is recommending limiting the proposed increases to no greater than 50% of \nthe current fee and phasing it in over a four-year implementation schedule starting on March \n1, 2027.\nCity staff along with Raftelis presented the City’s findings and recommendation to the \ndevelopment community on February 18, 2026. Public hearings before City Council to \npresent the proposed capacity fee increase ordinance are scheduled for April 2, 2026 and \nMay 7, 2026.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThe revenue received from implementing the 4-year increase of the water and wastewater \ncapacity fees will fund capital expenditures for providing water and wastewater capacity for \nnew development.\nPROJECTED COSTS: The projected amount will be determined based upon usage.\n\nApproverTimestampRole\nNicholas Pastue3/19/2026 10:48:38 AMSubmitter\nKen Farrell3/19/2026 10:54:35 AMDepartment Head\nRory Jones3/19/2026 11:17:52 AMWater\nMichele Miles3/19/2026 2:27:32 PMWastewater\nAstonah Turner3/20/2026 10:03:23 AMAttorney Coordinator\nMcLane Evans3/20/2026 10:59:59 AMAssistant City Attorney\nCate Wells3/20/2026 11:15:52 AMCity Attorney\nBRAD BAIRD3/20/2026 1:29:23 PMInfrastructure Deputy\nJEAN DUNCAN3/20/2026 1:43:35 PMInfrastructure and Mobility\nKelli Reed3/23/2026 7:38:22 AMFinance Coordinator\nNicholas Pastue3/23/2026 9:02:29 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/23/2026 9:09:33 AMBudget Operating Manager\nMichael Perry3/25/2026 9:30:18 AMBudget Officer\nLori Hernandez3/26/2026 9:55:21 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:46 PMChief of Staff\nJANE CASTOR3/27/2026 11:10:20 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "The revenue received from implementing the 4-year increase of the water and wastewater capacity fees will fund capital expenditures for providing water and wastewater capacity for new development.",
+        "projectedCostsRaw": "The projected amount will be determined based upon usage.",
+        "rows": [],
+        "hasProjectedCosts": true,
+        "hasParsedRows": false
       }
     },
     {
@@ -1466,7 +1832,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 25,
@@ -1852,6 +2220,420 @@
         "revenues": 0,
         "other": 20000000,
         "net": 7180000
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Contract Administration\nCouncil Regular\nSubmittal Date:                        2/17/2026\nRequested Meeting Date: 3/05/2026\nType of Request:                                                  Council Resolution\nContactHeather Herlein 813-274-8544\nSubjectAgreements for Consultant Services in connection with Contract 25-D-00002 \nDesign Assistance Services and Development Consultation for CRA \nCommercial Pre-Development Grants.\nResolution / \nOrdinance \nTitle\nA Resolution authorizing Agreements for Consultant Services in an amount \nnot to exceed $10,000,000 between the City of Tampa and Austin \nConstruction Group Inc., the City of Tampa and BDG Architects, PLLC, the \nCity of Tampa and Boggs Design Partners, LLC, the City of Tampa and \nOutsideIN Architecture, LLC, and the City of Tampa and Veith Engineering & \nBusiness Solutions, LLC in connection with Contract 25-D-00002 Design \nAssistance Services and Development Consultation for CRA Commercial Pre-\nDevelopment Grants; authorizing the Mayor of the City of Tampa to execute \nsame; providing an effective date.\nBACKGROUND:\n1.Contract Title:25-D-02001 Design Assistance Services and Development \nConsultation for CRA Commercial       \nPre-Development Grants\na. Address of Project: Tampa Community Redevelopment Areas\nb. Number of bidders/submitters: 8 (eight)\nc.Names of bidders/submitters: \n Austin Construction Group Inc.\n Boggs Design Partners, LLC\n BDG Architects LLP\n Veith Engineering & Business Solutions, LLC\n OutsideIN Architecture, LLC\n CPL Architects and Engineers, Inc.\n Applied Sciences Consulting, Inc.\n Masters Architectural Group 4, Inc.\nd. Dollar amount: $10,000,000.00\ne. Why the awardee was selected: Most qualified 5 (five) firms were selected pursuant to FS \n287.055 Consultants’ Competitive Negotiation Act (CCNA).\n2. Contractor/Firm: Austin Construction Group Inc., Boggs Design Partners, LLC, BDG \nArchitects, PLLC, OutsideIn Architecture, LLC, and Veith Engineering & Business Solutions, \nLLC\n3.Business Case: \nThe design assistance services are being provided through the Tampa CRA to individual \nproperty/business owners as part of the Tampa CRA's Pre-Development Grants as a service. \nThe goal of the Pre-Development Grant is to reduce the barriers of upfront development costs \nposed to owners of properties within the Tampa Community Redevelopment Areas (TCRA) \nby encouraging the use of design guidelines and incentivizing small to medium scale \n\nimprovement projects. It is designed to increase property values by encouraging \nimprovements that exceed the requirements of the City Code of Ordinance and spur private \ninvestment within the CRA areas.\nThis project provides professional engineering or architectural services for design assistance \nservices and development consultation for Community Redevelopment Agency (CRA) \nCommercial Pre-Development Grants and associated services including, but not limited to; \ninitial consultations, conceptual design, working designs, final design and documentation, and \nEngineer of Record or Architect post-design services (as needed) for permit approval.\nFive (5) design teams have been selected to be engaged over the course of three (3) years to \nassist with a total number of approximately fifty (50) projects which will be issued as Task \nOrders.\n4. Equal Business Opportunity (EBO) Statement: Austin Construction Group Inc., Boggs \nDesign Partners, LLC, and Veith Engineering & Business Solutions, LLC, are city-certified \nSmall Local Business Enterprises (SLBEs).\n5. Sustainability and Resiliency: N/A\n6. Community Engagement: The firm will conduct one-on-one in-person consultations with \nproperty and business owners and CRA staff, consultations with City of Tampa Architectural \nReview Commission and Historic Preservation if necessary, and pre-application permitting \nconsultation with City of Tampa Construction Services Department.\n7. Project:\na. Contract delivery method: This is a Professional Architectural-Engineering Services \nContract.\nb. Placemaking: N/A\nc. Time, Quality Assurance, Cost Monitoring (Budget)\n• Three (3) years.\n• Trimble Unity Construct project management software system will be utilized to optimize \nmonitoring of schedules and costs.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis Resolution provides funding in the amount of $10,000,000 for use by the CRA for\nthe Design Assistance Services and Development Consultation for CRA Commercial Pre-\nDevelopment Grants from within the Central Park CRA Fund, the Channel District CRA Fund, \nthe Downtown CRA Fund, the Drew Park CRA Fund, the West Tampa CRA Fund, the East \nTampa CRA Fund, the Tampa Heights Riverfront CRA Fund, the Ybor City I CRA Fund, and \nthe YBOR City II CRA Fund.\nPROJECTED COSTS: 61800.213825.531002 $40,000 (Expenditure)\nCentral Park CRA Fund. CRA Dept. Professional Services\n61900.213825.531002 $45,000 (Expenditure)\nChannel District CRA Fund. CRA Dept. Professional Services\n62200.213825.531002 $180,000 (Expenditure)\nDowntown CRA Fund. CRA Dept. Professional Services\n62300.213825.531002 $192,483 (Expenditure)\n\nDrew Park CRA Fund. CRA Dept. Professional Services\n62350.213825.531002 $541,516 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Professional Services\n62400.213825.531002 $1,505,270 (Expenditure)\nEast Tampa CRA Fund. CRA Dept. Professional Services\n62500.213825.531002 $17,000 (Expenditure)\nTampa Heights Riverfront CRA Fund. CRA Dept. Professional Services\n62600.213825.531002 $122,220 (Expenditure)\nYbor City I CRA Fund. CRA Dept. Professional Services\n62700.213825.531002 $164,584 (Expenditure)\nYbor City II CRA Fund. CRA Dept. Professional Services\n61800.213825.531002 $110,000 (Expenditure) (FY2027)\nCentral Park CRA Fund. CRA Dept. Professional Services\n61900.213825.531002 $500,000 (Expenditure) (FY2027)\nChannel District CRA Fund. CRA Dept. Professional Services\n62200.213825.531002 $895,963 (Expenditure) (FY2027)\nDowntown CRA Fund. CRA Dept. Professional Services\n62300.213825.531002 $200,000 (Expenditure) (FY2027)\nDrew Park CRA Fund. CRA Dept. Professional Services\n62350.213825.531002 $600,000 (Expenditure) (FY2027)\nWest Tampa CRA Fund. CRA Dept. Professional Services\n62400.213825.531002 $800,000 (Expenditure) (FY2027)\nEast Tampa CRA Fund. CRA Dept. Professional Services\n62500.213825.531002 $120,000 (Expenditure) (FY2027)\nTampa Heights Riverfront CRA Fund\n62600.213825.531002 $250,000 (Expenditure) (FY2027)\nYbor City I CRA Fund. CRA Dept. Professional Services\n62700.213825.531002 $120,000 (Expenditure) (FY2027)\nYbor City II CRA Fund. CRA Dept. Professional Services\n61800.213825.531002 $110,000 (Expenditure) (FY2028)\nCentral Park CRA Fund. CRA Dept. Professional Services\n61900.213825.531002 $500,000 (Expenditure) (FY2028)\nChannel District CRA Fund. CRA Dept. Professional Services\n62200.213825.531002 $895,964 (Expenditure) (FY2028)\n\nDowntown CRA Fund. CRA Dept. Professional Services\n62300.213825.531002 $200,000 (Expenditure) (FY2028)\nDrew Park CRA Fund. CRA Dept. Professional Services\n62350.213825.531002 $600,000 (Expenditure) (FY2028)\nWest Tampa CRA Fund. CRA Dept. Professional Services\n62400.213825.531002 $800,000 (Expenditure) (FY2028)\nEast Tampa CRA Fund. CRA Dept. Professional Services\n62500.213825.531002 $120,000 (Expenditure) (FY2028)\nTampa Heights Riverfront CRA Fund\n62600.213825.531002 $250,000 (Expenditure) (FY2028)\nYbor City I CRA Fund. CRA Dept. Professional Services\n62700.213825.531002 $120,000 (Expenditure) (FY2028)\nYbor City II CRA Fund. CRA Dept. Professional Services\nApproverTimestampRole\nHeather Herlein2/17/2026 12:07:42 PMSubmitter\nRichard Mutterback2/17/2026 12:56:03 PMDepartment Head\nSherri Scott2/18/2026 7:16:37 AMCommunity and Redevelopment Agency\nSajan Patel2/18/2026 2:52:08 PMEqual Business Opportunity\nAstonah Turner2/18/2026 4:16:58 PMAttorney Coordinator\nJustin Vaske2/19/2026 4:01:17 PMAssistant City Attorney\nCate Wells2/19/2026 4:48:06 PMCity Attorney\nHeather Herlein2/20/2026 1:30:19 PMInfrastructure Deputy\nJEAN DUNCAN2/20/2026 2:12:51 PMInfrastructure and Mobility\nMichael Cain2/20/2026 4:26:46 PMFinance Coordinator\nKen Farrell2/25/2026 2:44:12 PMFinance Fiscal and Lead Analyst\nTy Hawthorne2/25/2026 3:58:27 PMBudget Operating Manager\nMichael Perry2/26/2026 4:35:13 AMBudget Officer\nDennis Rogero2/26/2026 2:39:33 PMChief Financial Officer\nJOHN BENNETT2/26/2026 3:23:50 PMChief of Staff\nJOHN BENNETT2/26/2026 3:25:20 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This Resolution provides funding in the amount of $10,000,000 for use by the CRA for the Design Assistance Services and Development Consultation for CRA Commercial Pre- Development Grants from within the Central Park CRA Fund, the Channel District CRA Fund, the Downtown CRA Fund, the Drew Park CRA Fund, the West Tampa CRA Fund, the East Tampa CRA Fund, the Tampa Heights Riverfront CRA Fund, the Ybor City I CRA Fund, and the YBOR City II CRA Fund.",
+        "projectedCostsRaw": "61800.213825.531002 $40,000 (Expenditure)\nCentral Park CRA Fund. CRA Dept. Professional Services\n61900.213825.531002 $45,000 (Expenditure)\nChannel District CRA Fund. CRA Dept. Professional Services\n62200.213825.531002 $180,000 (Expenditure)\nDowntown CRA Fund. CRA Dept. Professional Services\n62300.213825.531002 $192,483 (Expenditure)\n\nDrew Park CRA Fund. CRA Dept. Professional Services\n62350.213825.531002 $541,516 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Professional Services\n62400.213825.531002 $1,505,270 (Expenditure)\nEast Tampa CRA Fund. CRA Dept. Professional Services\n62500.213825.531002 $17,000 (Expenditure)\nTampa Heights Riverfront CRA Fund. CRA Dept. Professional Services\n62600.213825.531002 $122,220 (Expenditure)\nYbor City I CRA Fund. CRA Dept. Professional Services\n62700.213825.531002 $164,584 (Expenditure)\nYbor City II CRA Fund. CRA Dept. Professional Services\n61800.213825.531002 $110,000 (Expenditure) (FY2027)\nCentral Park CRA Fund. CRA Dept. Professional Services\n61900.213825.531002 $500,000 (Expenditure) (FY2027)\nChannel District CRA Fund. CRA Dept. Professional Services\n62200.213825.531002 $895,963 (Expenditure) (FY2027)\nDowntown CRA Fund. CRA Dept. Professional Services\n62300.213825.531002 $200,000 (Expenditure) (FY2027)\nDrew Park CRA Fund. CRA Dept. Professional Services\n62350.213825.531002 $600,000 (Expenditure) (FY2027)\nWest Tampa CRA Fund. CRA Dept. Professional Services\n62400.213825.531002 $800,000 (Expenditure) (FY2027)\nEast Tampa CRA Fund. CRA Dept. Professional Services\n62500.213825.531002 $120,000 (Expenditure) (FY2027)\nTampa Heights Riverfront CRA Fund\n62600.213825.531002 $250,000 (Expenditure) (FY2027)\nYbor City I CRA Fund. CRA Dept. Professional Services\n62700.213825.531002 $120,000 (Expenditure) (FY2027)\nYbor City II CRA Fund. CRA Dept. Professional Services\n61800.213825.531002 $110,000 (Expenditure) (FY2028)\nCentral Park CRA Fund. CRA Dept. Professional Services\n61900.213825.531002 $500,000 (Expenditure) (FY2028)\nChannel District CRA Fund. CRA Dept. Professional Services\n62200.213825.531002 $895,964 (Expenditure) (FY2028)\n\nDowntown CRA Fund. CRA Dept. Professional Services\n62300.213825.531002 $200,000 (Expenditure) (FY2028)\nDrew Park CRA Fund. CRA Dept. Professional Services\n62350.213825.531002 $600,000 (Expenditure) (FY2028)\nWest Tampa CRA Fund. CRA Dept. Professional Services\n62400.213825.531002 $800,000 (Expenditure) (FY2028)\nEast Tampa CRA Fund. CRA Dept. Professional Services\n62500.213825.531002 $120,000 (Expenditure) (FY2028)\nTampa Heights Riverfront CRA Fund\n62600.213825.531002 $250,000 (Expenditure) (FY2028)\nYbor City I CRA Fund. CRA Dept. Professional Services\n62700.213825.531002 $120,000 (Expenditure) (FY2028)\nYbor City II CRA Fund. CRA Dept. Professional Services",
+        "rows": [
+          {
+            "accountCode": "61800.213825.531002",
+            "fund": "61800",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$40,000",
+            "value": 40000,
+            "type": "expenditure",
+            "signedValue": 40000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Central Park CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "61900.213825.531002",
+            "fund": "61900",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$45,000",
+            "value": 45000,
+            "type": "expenditure",
+            "signedValue": 45000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Channel District CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62200.213825.531002",
+            "fund": "62200",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$180,000",
+            "value": 180000,
+            "type": "expenditure",
+            "signedValue": 180000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Downtown CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62300.213825.531002",
+            "fund": "62300",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$192,483",
+            "value": 192483,
+            "type": "expenditure",
+            "signedValue": 192483,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Drew Park CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62350.213825.531002",
+            "fund": "62350",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$541,516",
+            "value": 541516,
+            "type": "expenditure",
+            "signedValue": 541516,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "West Tampa CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62400.213825.531002",
+            "fund": "62400",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$1,505,270",
+            "value": 1505270,
+            "type": "expenditure",
+            "signedValue": 1505270,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "East Tampa CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62500.213825.531002",
+            "fund": "62500",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$17,000",
+            "value": 17000,
+            "type": "expenditure",
+            "signedValue": 17000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Tampa Heights Riverfront CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62600.213825.531002",
+            "fund": "62600",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$122,220",
+            "value": 122220,
+            "type": "expenditure",
+            "signedValue": 122220,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Ybor City I CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62700.213825.531002",
+            "fund": "62700",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$164,584",
+            "value": 164584,
+            "type": "expenditure",
+            "signedValue": 164584,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Ybor City II CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "61800.213825.531002",
+            "fund": "61800",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$110,000",
+            "value": 110000,
+            "type": "expenditure",
+            "signedValue": 110000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Central Park CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "61900.213825.531002",
+            "fund": "61900",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$500,000",
+            "value": 500000,
+            "type": "expenditure",
+            "signedValue": 500000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Channel District CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62200.213825.531002",
+            "fund": "62200",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$895,963",
+            "value": 895963,
+            "type": "expenditure",
+            "signedValue": 895963,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Downtown CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62300.213825.531002",
+            "fund": "62300",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$200,000",
+            "value": 200000,
+            "type": "expenditure",
+            "signedValue": 200000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Drew Park CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62350.213825.531002",
+            "fund": "62350",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$600,000",
+            "value": 600000,
+            "type": "expenditure",
+            "signedValue": 600000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") West Tampa CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62400.213825.531002",
+            "fund": "62400",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$800,000",
+            "value": 800000,
+            "type": "expenditure",
+            "signedValue": 800000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") East Tampa CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62500.213825.531002",
+            "fund": "62500",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$120,000",
+            "value": 120000,
+            "type": "expenditure",
+            "signedValue": 120000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Tampa Heights Riverfront CRA Fund"
+          },
+          {
+            "accountCode": "62600.213825.531002",
+            "fund": "62600",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$250,000",
+            "value": 250000,
+            "type": "expenditure",
+            "signedValue": 250000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Ybor City I CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62700.213825.531002",
+            "fund": "62700",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$120,000",
+            "value": 120000,
+            "type": "expenditure",
+            "signedValue": 120000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Ybor City II CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "61800.213825.531002",
+            "fund": "61800",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$110,000",
+            "value": 110000,
+            "type": "expenditure",
+            "signedValue": 110000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Central Park CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "61900.213825.531002",
+            "fund": "61900",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$500,000",
+            "value": 500000,
+            "type": "expenditure",
+            "signedValue": 500000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Channel District CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62200.213825.531002",
+            "fund": "62200",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$895,964",
+            "value": 895964,
+            "type": "expenditure",
+            "signedValue": 895964,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Downtown CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62300.213825.531002",
+            "fund": "62300",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$200,000",
+            "value": 200000,
+            "type": "expenditure",
+            "signedValue": 200000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Drew Park CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62350.213825.531002",
+            "fund": "62350",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$600,000",
+            "value": 600000,
+            "type": "expenditure",
+            "signedValue": 600000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") West Tampa CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62400.213825.531002",
+            "fund": "62400",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$800,000",
+            "value": 800000,
+            "type": "expenditure",
+            "signedValue": 800000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") East Tampa CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62500.213825.531002",
+            "fund": "62500",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$120,000",
+            "value": 120000,
+            "type": "expenditure",
+            "signedValue": 120000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Tampa Heights Riverfront CRA Fund"
+          },
+          {
+            "accountCode": "62600.213825.531002",
+            "fund": "62600",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$250,000",
+            "value": 250000,
+            "type": "expenditure",
+            "signedValue": 250000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Ybor City I CRA Fund. CRA Dept. Professional Services"
+          },
+          {
+            "accountCode": "62700.213825.531002",
+            "fund": "62700",
+            "department": "213825",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$120,000",
+            "value": 120000,
+            "type": "expenditure",
+            "signedValue": 120000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Ybor City II CRA Fund. CRA Dept. Professional Services"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -1922,6 +2704,30 @@
         "revenues": 0,
         "other": 0,
         "net": 21788470
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Contract Administration\nCouncil Regular\nSubmittal Date:                        2/04/2026\nRequested Meeting Date: 2/19/2026\nType of Request:                                                  Council Resolution\nContactVenus Martinez 813-274-8682\nSubjectA Resolution accepting the proposal of J. Kokolakis Contracting, Inc. dba \nKokolakis Contracting pertaining to Contract 24-C-00032 TPD Howard Ave \nAnnex Bldg, in the amount of $21,788,470. Part 1 of 3\nResolution / \nOrdinance \nTitle\nA Resolution accepting the proposal of J. Kokolakis Contracting, Inc. dba \nKokolakis Contracting pertaining to Contract 24-C-00032 TPD Howard Ave \nAnnex Bldg, in the amount of $21,788,470; authorizing the Mayor of the City \nof Tampa to execute said Contract on behalf of the City of Tampa; providing \nan effective date. Part 1 of 3\nBACKGROUND:\n1.Contract Title: \na. Address of Project: 5005 Howard Avenue; Tampa, FL 33603\nb. Number of bidders/submitters: 3\nc.Names of bidders/submitters: \n•Kokolakis Contracting \n•Burke Construction Group, Inc. \n• Mainstay Construction Services, LLC\nd. Dollar amount: $21,788,470\ne. Why the awardee was selected: The lowest responsible responsive bidder was selected \npursuant to FS 255.20.\n1. Contractor/Firm: J. Kokolakis Contracting\n2. Business Case: This project will provide for renovation and construction of the existing \nfacility for the relocation of the Tampa Police Department (TPD) Evidence Control Section, \nand Forensic Unit currently at 34th Street (McKay Bay Peninsula) and TPD’s Downtown \nHeadquarters to the adjoining sites of 5005 North Howard Avenue and 5115 North Albany \nAvenue.\n3. Equal Business Opportunity (EBO) Statement:  Following a review by the Equal Business \nOpportunity (EBO) Division, J. Kokolakis Contracting, Inc. has been confirmed to be in full \ncompliance with all Good Faith Effort Compliance Program (GFECP) requirements. They \nactively reached out to and solicited City of Tampa certified firms, resulting in Small Local \nBusiness Enterprise (SLBE) participation that meets and exceeds the established goal, with a \ntotal participation rate of: SLBE = 28%.\n4.Sustainability and Resiliency: Project provides for renovation and construction of the \nexisting facility for the relocation of the Tampa Police Department. This project is consistent \nwith Transforming Tampa's Tomorrow goal of Sustainability and Resiliency. \n5. Community Engagement: The Contract Administration Department (CAD) will assist the \nContractor in all communication efforts to ensure transparency and integration of the \nstakeholders.\n6. Project:\n\na. Contract delivery method: This is a Design/Bid/Build project. A full-time City of Tampa \nConstruction Inspector will be on-site during the project to ensure quality of construction.\nb. Placemaking: N/A\nc. Time, Quality Assurance, Cost Monitoring (Budget)\n•  730 consecutive calendar days.\n• The Trimble project management software system will be utilized to optimize the monitoring \nof schedules and costs. This software was recently purchased by the City of Tampa and is a \npremier system for construction project management.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis Resolution provides funding in the amount of $21,788,470 for a construction award to \nKokolakis Contracting for use by the TPD Howard Avenue Annex Building project -Phase 2 \nwithin the Non Ad Valorem Bonds CIP Fund – Future Debt.\nPROJECTED COSTS: 31630 232500 563000 1002690 $21,788,470 (Expenditure Increase)  \nNon Ad Valorem Bonds CIP Fund - Future Debt TPD Infrastructure TPD Howard Avenue \nAnnex Building project – Phase 2\nP: 1002690 O: TPD E: CTPA Infrastructure  T: 30 A: 100593\nApproverTimestampRole\nVenus Martinez3/12/2026 11:45:13 AMSubmitter\nRichard Mutterback3/12/2026 1:58:20 PMDepartment Head\nLee Bercaw3/12/2026 4:54:53 PMPolice Chief\nAdriana Colina3/20/2026 10:45:00 AMLogistics and Assets\nSajan Patel3/20/2026 2:37:08 PMEqual Business Opportunity\nAstonah Turner3/20/2026 2:52:48 PMAttorney Coordinator\nEmma Gregory3/20/2026 3:19:22 PMAssistant City Attorney\nCate Wells3/20/2026 3:29:59 PMCity Attorney\nBRAD BAIRD3/20/2026 4:00:17 PMInfrastructure Deputy\nJEAN DUNCAN3/20/2026 4:11:57 PMInfrastructure and Mobility\nKelli Reed3/23/2026 7:40:21 AMFinance Coordinator\nKelli Reed3/23/2026 8:00:00 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/25/2026 2:26:01 PMBudget Operating Manager\nMichael Perry3/25/2026 4:21:15 PMBudget Officer\nLori Hernandez3/26/2026 9:57:23 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:45:14 PMChief of Staff\nJANE CASTOR3/27/2026 11:15:37 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This Resolution provides funding in the amount of $21,788,470 for a construction award to Kokolakis Contracting for use by the TPD Howard Avenue Annex Building project -Phase 2 within the Non Ad Valorem Bonds CIP Fund – Future Debt.",
+        "projectedCostsRaw": "31630 232500 563000 1002690 $21,788,470 (Expenditure Increase)  \nNon Ad Valorem Bonds CIP Fund - Future Debt TPD Infrastructure TPD Howard Avenue \nAnnex Building project – Phase 2\nP: 1002690 O: TPD E: CTPA Infrastructure  T: 30 A: 100593",
+        "rows": [
+          {
+            "accountCode": "31630.232500.563000.1002690",
+            "fund": "31630",
+            "department": "232500",
+            "object": "563000",
+            "project": "1002690",
+            "fiscalYear": null,
+            "amount": "$21,788,470",
+            "value": 21788470,
+            "type": "expenditure",
+            "signedValue": 21788470,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Increase",
+            "description": "Non Ad Valorem Bonds CIP Fund - Future Debt TPD Infrastructure TPD Howard Avenue Annex Building project – Phase 2 P: 1002690 O: TPD E: CTPA Infrastructure T: 30 A: 100593"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -1930,7 +2736,7 @@
       "title": "File No. PS26-21914 (Part 2 of 3) (See Items 26 and 28) (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council) \nResolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $175,396.25 within the Non Ad Valorem Bonds CIP Fund -Series 2025 for the TPD Howard Avenue Annex Building project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices) and $14,121,500 within the Non Ad Valorem Bonds CIP Fund - Future Debt for the TPD Howard Avenue Annex Building project - Phase 2. \n\nMemorandum from Richard Mutterback, Director, Contract Administration, transmitting additional information for said agenda item. (To be R/F)",
       "rawTitle": "File No. PS26-21914 (Part 2 of 3) (See Items 26 and 28) (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council) \nResolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation and/or appropriation of $175,396.25 within the Non Ad Valorem Bonds CIP Fund -Series 2025 for the TPD Howard Avenue Annex Building project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices) and $14,121,500 within the Non Ad Valorem Bonds CIP Fund - Future Debt for the TPD Howard Avenue Annex Building project - Phase 2. \n\nMemorandum from Richard Mutterback, Director, Contract Administration, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "PS26-21914",
-      "background": "This financial resolution: a.  Realigns $1,296,000 from the TPD Howard Avenue Annex Building Project -Phase 1 to the TPD Howard Avenue Annex Building Project -Phase 2 within the Non-Ad Valorem Bonds CIP Fund - Future Debt.\n\nb.  Reduces future debt proceeds for the TPD Howard Avenue Annex Building Project, Phase 2 from the new revised $41,296,000 (adopted $40,000,000 plus realigned $1,296,000) to a proposed budget of $27,174,500, a decrease of $14,121,500 due to the construction bid coming under the initial estimate.\n\nc.  Realigns $175,396.25 from the TPD Howard Avenue Annex Building Project, Phase 1 to budget reserves within the Non-Ad Valorem Bonds CIP Fund -Series 2025 for a proposed",
+      "background": "This financial resolution: a.  Realigns $1,296,000 from the TPD Howard Avenue Annex Building Project -Phase 1 to the TPD Howard Avenue Annex Building Project -Phase 2 within the Non-Ad Valorem Bonds CIP Fund - Future Debt.\n\nb.  Reduces future debt proceeds for the TPD Howard Avenue Annex Building Project, Phase 2 from the new revised $41,296,000 (adopted $40,000,000 plus realigned $1,296,000) to a proposed budget of $27,174,500, a decrease of $14,121,500 due to the construction bid coming under the initial estimate.\n\nc.  Realigns $175,396.25 from the TPD Howard Avenue Annex Building Project, Phase 1 to budget reserves within the Non-Ad Valorem Bonds CIP Fund -Series 2025 for a proposed budget of $3,824,604.\n\nThe TPD Howard Avenue Annex Building project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices) will now be closed (see A and C above). The construction phase of the project will be funded by the TPD Howard Avenue Annex Building Project - Phase 2 within the Non-Ad Valorem Bonds CIP Fund - Future Debt (see B above).\n\nOn October 20, 2022, Resolution Number 2022-915, authorized the reimbursement of certain costs relating to the acquisition, construction, and equipping of certain capital improvements.\n\nOne of the CIP projects identified within that resolution is the TPD Howard Avenue Annex Building project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices).\n\nThere is concurrent Reimbursement Resolution being presented to Council for adoption that will allow the City to reimbursement itself in an amount not to exceed $27,174,500 from future tax-exempt debt proceeds from the TPD Howard Avenue Annex Building Project – Phase 2.",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
@@ -2126,6 +2932,105 @@
         "revenues": 0,
         "other": 85120604,
         "net": -39824603.75
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Regular\nSubmittal Date:                        2/23/2026\nRequested Meeting Date: 3/26/2026\nType of Request:                                                  Council Resolution\nContactKelli Reed 813-274-3331\nSubjectFinancial Resolution – TPD Howard Avenue Annex Building project - Phase 1 \n(FKA Relocation of TPD Impound Facility and Offices) and TPD Howard \nAvenue Annex Building project - Phase 2\nResolution / \nOrdinance \nTitle\nA resolution making certain changes in the budget of the City of Tampa for the \nfiscal year ending September 30, 2026; approving the transfer, reallocation \nand/or appropriation of $175,396.25 within the Non Ad Valorem Bonds CIP \nFund -Series 2025 for the TPD Howard Avenue Annex Building project - \nPhase 1 (FKA Relocation of TPD Impound Facility and Offices) and \n$14,121,500 within the Non Ad Valorem Bonds CIP Fund - Future Debt for the \nTPD Howard Avenue Annex Building project - Phase 2. (Part 2 of 3)\nBACKGROUND:\nThis financial resolution:\n     a.  Realigns $1,296,000 from the TPD Howard Avenue Annex Building Project -Phase 1 to \nthe TPD Howard Avenue Annex Building Project -Phase 2 within the Non-Ad Valorem Bonds \nCIP Fund - Future Debt.  \n     b.  Reduces future debt proceeds for the TPD Howard Avenue Annex Building Project, \nPhase 2 from the new revised $41,296,000 (adopted $40,000,000 plus realigned $1,296,000) \nto a proposed budget of $27,174,500, a decrease of $14,121,500 due to the construction bid \ncoming under the initial estimate.  \n     c.  Realigns $175,396.25 from the TPD Howard Avenue Annex Building Project, Phase 1 \nto budget reserves within the Non-Ad Valorem Bonds CIP Fund -Series 2025 for a proposed \nbudget of $3,824,604. \nThe TPD Howard Avenue Annex Building project - Phase 1 (FKA Relocation of TPD Impound \nFacility and Offices) will now be closed (see A and C above). The construction phase of the \nproject will be funded by the TPD Howard Avenue Annex Building Project - Phase 2 within the \nNon-Ad Valorem Bonds CIP Fund - Future Debt (see B above).\nOn October 20, 2022, Resolution Number 2022-915, authorized the reimbursement of certain \ncosts relating to the acquisition, construction, and equipping of certain capital improvements.  \nOne of the CIP projects identified within that resolution is the TPD Howard Avenue Annex \nBuilding project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices).\nThere is concurrent Reimbursement Resolution being presented to Council for adoption that \nwill allow the City to reimbursement itself in an amount not to exceed $27,174,500 from future \ntax-exempt debt proceeds from the TPD Howard Avenue Annex Building Project – Phase 2.\n\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nRealigns $1,296,000 from the TPD Howard Avenue Annex Building Project -Phase 1 to the \nTPD Howard Avenue Annex Building Project -Phase 2 within the Non-Ad Valorem Bonds CIP \nFund - Future Debt.\nReduces future debt proceeds for the TPD Howard Avenue Annex Building Project, Phase 2 \nfrom the new revised $41,296,000 (adopted $40,000,000 plus realigned $1,296,000) to a \nproposed budget of $27,174,500, a decrease of $14,121,500 due to the construction bid \ncoming under the initial estimate.\nRealigns $175,396.25 from the TPD Howard Avenue Annex Building Project, Phase 1 to \nbudget reserves within the Non-Ad Valorem Bonds CIP Fund -Series 2025 for a proposed \nbudget of $3,824,604.\nPROJECTED COSTS: 31620 210700 563000 1002121 $175,396.25 (Expenditure Decrease)\nNon Ad Valorem Bonds CIP Fund -Series 2025 LAM Infrastructure TPD Howard Avenue \nAnnex Building Project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices)\n31620 220900 569999 $175,396.25 (Expenditure Increase)\nNon Ad Valorem Bonds CIP Fund -Series 2025 Budget Reserves\n31630 210700 563000 1002121 $1,296,000 (Expenditure Decrease)\nNon Ad Valorem Bonds CIP Fund  -Future Debt LAM Infrastructure TPD Howard Avenue \nAnnex Building Project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices)\n31630 232500 563000 1002690 $1,296,000 (Expenditure Increase)\nNon Ad Valorem Bonds CIP Fund  - Future Debt TPD Infrastructure TPD Howard Avenue \nAnnex Building project – Phase 2\n31630 232500 384001 1002690 $14,121,500 (Revenue Decrease)\nNon Ad Valorem Bonds CIP Fund  - Future Debt TPD Bond Proceeds TPD Howard Avenue \nAnnex Building project – Phase 2\n31630 232500 563000 1002690 $14,121,500 (Expenditure Decrease)\nNon Ad Valorem Bonds CIP Fund  - Future Debt TPD Infrastructure TPD Howard Avenue \nAnnex Building project – Phase 2\nApproverTimestampRole\nKelli Reed2/23/2026 2:35:58 PMSubmitter\nTy Hawthorne2/24/2026 8:51:24 AMDepartment Head\nLee Bercaw2/24/2026 9:59:27 AMPolice Chief\nAstonah Turner2/24/2026 10:13:52 AMAttorney Coordinator\nJustin Vaske2/24/2026 10:18:01 AMAssistant City Attorney\nCate Wells2/24/2026 10:23:36 AMCity Attorney\nJEAN DUNCAN2/24/2026 11:24:06 AMInfrastructure and Mobility\nKelli Reed2/24/2026 3:18:42 PMFinance Coordinator\nKelli Reed2/24/2026 3:18:49 PMFinance Fiscal and Lead Analyst\nTy Hawthorne2/24/2026 3:21:18 PMBudget Operating Manager\nMichael Perry3/25/2026 4:25:19 PMBudget Officer\n\nLori Hernandez3/26/2026 9:57:50 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:45:08 PMChief of Staff\nJANE CASTOR3/27/2026 11:15:09 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "Realigns $1,296,000 from the TPD Howard Avenue Annex Building Project -Phase 1 to the TPD Howard Avenue Annex Building Project -Phase 2 within the Non-Ad Valorem Bonds CIP Fund - Future Debt. Reduces future debt proceeds for the TPD Howard Avenue Annex Building Project, Phase 2 from the new revised $41,296,000 (adopted $40,000,000 plus realigned $1,296,000) to a proposed budget of $27,174,500, a decrease of $14,121,500 due to the construction bid coming under the initial estimate. Realigns $175,396.25 from the TPD Howard Avenue Annex Building Project, Phase 1 to budget reserves within the Non-Ad Valorem Bonds CIP Fund -Series 2025 for a proposed budget of $3,824,604.",
+        "projectedCostsRaw": "31620 210700 563000 1002121 $175,396.25 (Expenditure Decrease)\nNon Ad Valorem Bonds CIP Fund -Series 2025 LAM Infrastructure TPD Howard Avenue \nAnnex Building Project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices)\n31620 220900 569999 $175,396.25 (Expenditure Increase)\nNon Ad Valorem Bonds CIP Fund -Series 2025 Budget Reserves\n31630 210700 563000 1002121 $1,296,000 (Expenditure Decrease)\nNon Ad Valorem Bonds CIP Fund  -Future Debt LAM Infrastructure TPD Howard Avenue \nAnnex Building Project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices)\n31630 232500 563000 1002690 $1,296,000 (Expenditure Increase)\nNon Ad Valorem Bonds CIP Fund  - Future Debt TPD Infrastructure TPD Howard Avenue \nAnnex Building project – Phase 2\n31630 232500 384001 1002690 $14,121,500 (Revenue Decrease)\nNon Ad Valorem Bonds CIP Fund  - Future Debt TPD Bond Proceeds TPD Howard Avenue \nAnnex Building project – Phase 2\n31630 232500 563000 1002690 $14,121,500 (Expenditure Decrease)\nNon Ad Valorem Bonds CIP Fund  - Future Debt TPD Infrastructure TPD Howard Avenue \nAnnex Building project – Phase 2",
+        "rows": [
+          {
+            "accountCode": "31620.210700.563000.1002121",
+            "fund": "31620",
+            "department": "210700",
+            "object": "563000",
+            "project": "1002121",
+            "fiscalYear": null,
+            "amount": "$175,396.25",
+            "value": 175396.25,
+            "type": "expenditure_decrease",
+            "signedValue": -175396.25,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Non Ad Valorem Bonds CIP Fund -Series 2025 LAM Infrastructure TPD Howard Avenue Annex Building Project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices)"
+          },
+          {
+            "accountCode": "31620.220900.569999",
+            "fund": "31620",
+            "department": "220900",
+            "object": "569999",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$175,396.25",
+            "value": 175396.25,
+            "type": "expenditure",
+            "signedValue": 175396.25,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Increase",
+            "description": "Non Ad Valorem Bonds CIP Fund -Series 2025 Budget Reserves"
+          },
+          {
+            "accountCode": "31630.210700.563000.1002121",
+            "fund": "31630",
+            "department": "210700",
+            "object": "563000",
+            "project": "1002121",
+            "fiscalYear": null,
+            "amount": "$1,296,000",
+            "value": 1296000,
+            "type": "expenditure_decrease",
+            "signedValue": -1296000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Non Ad Valorem Bonds CIP Fund -Future Debt LAM Infrastructure TPD Howard Avenue Annex Building Project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices)"
+          },
+          {
+            "accountCode": "31630.232500.563000.1002690",
+            "fund": "31630",
+            "department": "232500",
+            "object": "563000",
+            "project": "1002690",
+            "fiscalYear": null,
+            "amount": "$1,296,000",
+            "value": 1296000,
+            "type": "expenditure",
+            "signedValue": 1296000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Increase",
+            "description": "Non Ad Valorem Bonds CIP Fund - Future Debt TPD Infrastructure TPD Howard Avenue Annex Building project – Phase 2"
+          },
+          {
+            "accountCode": "31630.232500.384001.1002690",
+            "fund": "31630",
+            "department": "232500",
+            "object": "384001",
+            "project": "1002690",
+            "fiscalYear": null,
+            "amount": "$14,121,500",
+            "value": 14121500,
+            "type": "revenue_decrease",
+            "signedValue": 14121500,
+            "subjectToAppropriation": false,
+            "marker": "Revenue Decrease",
+            "description": "Non Ad Valorem Bonds CIP Fund - Future Debt TPD Bond Proceeds TPD Howard Avenue Annex Building project – Phase 2"
+          },
+          {
+            "accountCode": "31630.232500.563000.1002690",
+            "fund": "31630",
+            "department": "232500",
+            "object": "563000",
+            "project": "1002690",
+            "fiscalYear": null,
+            "amount": "$14,121,500",
+            "value": 14121500,
+            "type": "expenditure_decrease",
+            "signedValue": -14121500,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Non Ad Valorem Bonds CIP Fund - Future Debt TPD Infrastructure TPD Howard Avenue Annex Building project – Phase 2"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -2134,7 +3039,7 @@
       "title": "File No. PS26-22442 (Part 3 of 3)(See items 26 and 27) (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.) \nResolution of the City of Tampa, Florida, regarding the reimbursement of certain costs relating to the acquisition, construction and equipping of the TPD Howard Avenue Annex Building Project, Phase 2; providing an effective date.\n\nMemorandum from Richard Mutterback, Director, Contract Administration, transmitting additional information for said agenda item. (To be R/F)",
       "rawTitle": "File No. PS26-22442 (Part 3 of 3)(See items 26 and 27) (Placed under Staff Reports and Unfinished Business pursuant to a motion made by Council.) \nResolution of the City of Tampa, Florida, regarding the reimbursement of certain costs relating to the acquisition, construction and equipping of the TPD Howard Avenue Annex Building Project, Phase 2; providing an effective date.\n\nMemorandum from Richard Mutterback, Director, Contract Administration, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "PS26-22442",
-      "background": "On October 20, 2022, Resolution Number 2022-915, authorized the reimbursement of certain costs relating to the acquisition, construction, and equipping of certain capital improvements.\n\nOne of the CIP projects identified within that resolution is the TPD Howard Avenue Annex Building project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices).\n\nStaff is requesting Council to adopt the attached reimbursement resolution for the design/bid/build agreement of the Tampa Police Department (TPD) Howard Avenue Annex Building Project, Phase 2 in an amount not to exceed $27,174,500.  Adoption of the reimbursement resolution preserves the City’s ability to issue tax-exempt debt.  Without adopting the reimbursement resolution, any debt issued for this project would be issued as taxable debt at a higher interest rate.\n\nThe Reimbursement Resolution allows the City to reimburse various costs and expenditures related to the acquisition, construction and equipping of the TPD Howard Avenue Annex Building Project, Phase 2.  The City has paid for, and/or reasonably anticipates that it will pay for, such costs and expenditures from legally available funds within the General Fund and/or other governmental and capital funds of the City.   It is reasonably expected that any reimbursement of such costs and expenditures will come from the issuance of tax-exempt debt which is currently not expected to exceed $27,174,500 aggregate principal amount. It is currently the intention of the City to issue tax-exempt debt from a covenant of the City to",
+      "background": "On October 20, 2022, Resolution Number 2022-915, authorized the reimbursement of certain costs relating to the acquisition, construction, and equipping of certain capital improvements.\n\nOne of the CIP projects identified within that resolution is the TPD Howard Avenue Annex Building project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices).\n\nStaff is requesting Council to adopt the attached reimbursement resolution for the design/bid/build agreement of the Tampa Police Department (TPD) Howard Avenue Annex Building Project, Phase 2 in an amount not to exceed $27,174,500.  Adoption of the reimbursement resolution preserves the City’s ability to issue tax-exempt debt.  Without adopting the reimbursement resolution, any debt issued for this project would be issued as taxable debt at a higher interest rate.\n\nThe Reimbursement Resolution allows the City to reimburse various costs and expenditures related to the acquisition, construction and equipping of the TPD Howard Avenue Annex Building Project, Phase 2.  The City has paid for, and/or reasonably anticipates that it will pay for, such costs and expenditures from legally available funds within the General Fund and/or other governmental and capital funds of the City.   It is reasonably expected that any reimbursement of such costs and expenditures will come from the issuance of tax-exempt debt which is currently not expected to exceed $27,174,500 aggregate principal amount. It is currently the intention of the City to issue tax-exempt debt from a covenant of the City to budget and appropriate sufficient legally available non-ad valorem revenues of the City. The adoption of an official intent does not require or commit the City to issue any tax-exempt debt.\n\nThis project will provide for the renovation and construction of the existing facility, for the relocation of the TPD Evidence Control Section and Forensic Unit, currently at 34th Street (McKay Bay Peninsula), and for TPD’s Downtown Headquarters to the adjoining sites of 5005 North Howard Avenue and 5115 North Albany Avenue.\n\nThe current budget for the TPD Howard Avenue Annex Building Project (Phases 1 and 2) is $48,475,732, which includes the following funding sources: TPD Howard Avenue Annex Building Project – Phase 1 FY2016 Bank Note Fund                                        $2,646,732 Utilities Services Taxes Capital Projects Fund             140,000 Non-Ad Valorem Bonds CIP Fund -Series 2021B      393,000 Non-Ad Valorem Bonds CIP Fund- Series 2025   4,000,000 Non-Ad Valorem Bonds CIP Fund- Future Debt  1,296,000 Total Phase 1                                                        $8,475,732 TPD Howard Avenue Annex Building Project – Phase 2 Non-Ad Valorem Bonds CIP Fund- Future Debt     $40,000,000 Total Adopted Project Funding Sources               $48,475,732 A concurrent Resolution (Item 1 of 3) is presented for City Council’s approval for the Design-Build services agreement of the TPD Howard Avenue Annex Building Project, Phase 2 (Contract 24-C-00032) between the City of Tampa and J. Kokolakis Contracting, Inc. in the amount of $21,788,470 which will be fully funded with future debt proceeds.\n\nAdditionally, a concurrent Financial Resolution (Item 2 of 3) is presented for City Council’s approval for the following: a) Realign $1,296,000 from the TPD Howard Avenue Annex Building Project -Phase 1 to the TPD Howard Avenue Annex Building Project -Phase 2 within the Non-Ad Valorem Bonds CIP Fund - Future Debt.\n\nb) Reduce future debt proceeds for the TPD Howard Avenue Annex Building Project, Phase 2 from the new revised $41,296,000 (adopted $40,000,000 plus realigned $1,296,000) to a proposed budget of $27,174,500, a decrease of $14,121,500 due to the construction bid coming under the initial estimate.\n\nc) Realign $175,396.25 from the TPD Howard Avenue Annex Building Project, Phase 1 to budget reserves within the Non-Ad Valorem Bonds CIP Fund -Series 2025 for a revised use of debt proceeds of $3,824,604.\n\nThe total proposed budget for the TPD Howard Avenue Annex Building Project is anticipated to be $34,178,836, with funding as follows: TPD Howard Avenue Annex Building Project – Phase 1 FY2016 Bank Note Fund                                          $2,646,732 Utilities Services Taxes Capital Projects Fund              140,000 Non-Ad Valorem Bonds CIP Fund -Series 2021B          393,000 Non-Ad Valorem Bonds CIP Fund- Series 2025         3,824,604 Total Phase 1                                                        $7,004,336 TPD Howard Avenue Annex Building Project – Phase 2 Non-Ad Valorem Bonds CIP Fund- Future Debt     $27,174,500 Total Proposed Budget                                     $34,178,836 Please refer to the attached TPD Howard Avenue Annex Building Project Budget for additional details.",
       "supportingDocuments": [
         {
           "title": "REIMBURSEMENT RESOLUTION.PDF",
@@ -2404,6 +3309,14 @@
         "revenues": 0,
         "other": 209161838.25,
         "net": 13053000
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Regular\nSubmittal Date:                        3/19/2026\nRequested Meeting Date: 4/02/2026\nType of Request:                                                  Council Resolution\nContactGiannina Carballa 813-274-8087\nSubjectResolution to reimburse the City for cost related to the TPD Howard Avenue \nAnnex Building Project, Phase 2 for an amount not to exceed $27,174,500 \n(Part 3 of 3).\nResolution / \nOrdinance \nTitle\nA Resolution of the City of Tampa, Florida, regarding the reimbursement of \ncertain costs relating to the acquisition, construction and equipping of the TPD \nHoward Avenue Annex Building Project, Phase 2; providing an effective date\nBACKGROUND:\nOn October 20, 2022, Resolution Number 2022-915, authorized the reimbursement of certain \ncosts relating to the acquisition, construction, and equipping of certain capital improvements.  \nOne of the CIP projects identified within that resolution is the TPD Howard Avenue Annex \nBuilding project - Phase 1 (FKA Relocation of TPD Impound Facility and Offices).\nStaff is requesting Council to adopt the attached reimbursement resolution for the \ndesign/bid/build agreement of the Tampa Police Department (TPD) Howard Avenue Annex \nBuilding Project, Phase 2 in an amount not to exceed $27,174,500.  Adoption of the \nreimbursement resolution preserves the City’s ability to issue tax-exempt debt.  Without \nadopting the reimbursement resolution, any debt issued for this project would be issued as \ntaxable debt at a higher interest rate.\nThe Reimbursement Resolution allows the City to reimburse various costs and expenditures \nrelated to the acquisition, construction and equipping of the TPD Howard Avenue Annex \nBuilding Project, Phase 2.  The City has paid for, and/or reasonably anticipates that it will pay \nfor, such costs and expenditures from legally available funds within the General Fund and/or \nother governmental and capital funds of the City.   It is reasonably expected that any \nreimbursement of such costs and expenditures will come from the issuance of tax-exempt \ndebt which is currently not expected to exceed $27,174,500 aggregate principal amount. It is \ncurrently the intention of the City to issue tax-exempt debt from a covenant of the City to \nbudget and appropriate sufficient legally available non-ad valorem revenues of the City. The \nadoption of an official intent does not require or commit the City to issue any tax-exempt debt.\nThis project will provide for the renovation and construction of the existing facility, for the \nrelocation of the TPD Evidence Control Section and Forensic Unit, currently at 34th Street \n(McKay Bay Peninsula), and for TPD’s Downtown Headquarters to the adjoining sites of 5005 \nNorth Howard Avenue and 5115 North Albany Avenue.\nThe current budget for the TPD Howard Avenue Annex Building Project (Phases 1 and 2) is \n$48,475,732, which includes the following funding sources:\n\nTPD Howard Avenue Annex Building Project – Phase 1\nFY2016 Bank Note Fund                                        $2,646,732\nUtilities Services Taxes Capital Projects Fund             140,000\nNon-Ad Valorem Bonds CIP Fund -Series 2021B      393,000\nNon-Ad Valorem Bonds CIP Fund- Series 2025   4,000,000\nNon-Ad Valorem Bonds CIP Fund- Future Debt  1,296,000\nTotal Phase 1                                                        $8,475,732\nTPD Howard Avenue Annex Building Project – Phase 2\nNon-Ad Valorem Bonds CIP Fund- Future Debt     $40,000,000\nTotal Adopted Project Funding Sources               $48,475,732\nA concurrent Resolution (Item 1 of 3) is presented for City Council’s approval for the Design-\nBuild services agreement of the TPD Howard Avenue Annex Building Project, Phase 2 \n(Contract 24-C-00032) between the City of Tampa and J. Kokolakis Contracting, Inc. in the \namount of $21,788,470 which will be fully funded with future debt proceeds.\nAdditionally, a concurrent Financial Resolution (Item 2 of 3) is presented for City Council’s \napproval for the following:\n    a) Realign $1,296,000 from the TPD Howard Avenue Annex Building Project -Phase 1 to \nthe TPD Howard Avenue Annex Building Project -Phase 2 within the Non-Ad Valorem Bonds \nCIP Fund - Future Debt.   \n    b) Reduce future debt proceeds for the TPD Howard Avenue Annex Building Project, \nPhase 2 from the new revised $41,296,000 (adopted $40,000,000 plus realigned $1,296,000) \nto a proposed budget of $27,174,500, a decrease of $14,121,500 due to the construction bid \ncoming under the initial estimate.  \n    c) Realign $175,396.25 from the TPD Howard Avenue Annex Building Project, Phase 1 to \nbudget reserves within the Non-Ad Valorem Bonds CIP Fund -Series 2025 for a revised use \nof debt proceeds of $3,824,604.\nThe total proposed budget for the TPD Howard Avenue Annex Building Project is anticipated \nto be $34,178,836, with funding as follows:\nTPD Howard Avenue Annex Building Project – Phase 1\nFY2016 Bank Note Fund                                          $2,646,732 \nUtilities Services Taxes Capital Projects Fund              140,000 \nNon-Ad Valorem Bonds CIP Fund -Series 2021B          393,000 \nNon-Ad Valorem Bonds CIP Fund- Series 2025         3,824,604 \nTotal Phase 1                                                        $7,004,336\nTPD Howard Avenue Annex Building Project – Phase 2\nNon-Ad Valorem Bonds CIP Fund- Future Debt     $27,174,500\nTotal Proposed Budget                                     $34,178,836 \nPlease refer to the attached TPD Howard Avenue Annex Building Project Budget for \nadditional details.\nFISCAL IMPACT: Yes\n\nFISCAL IMPACT STATEMENT:\nThe Reimbursement Resolution will allow the City to reimburse itself an amount not to exceed \n$27,174,500 from future tax-exempt debt proceeds for the TPD Howard Avenue Annex \nBuilding Project.\nPROJECTED COSTS: Authorize an amount not to exceed $27,174,500 of debt proceeds to \nreimburse the City for the TPD Howard Avenue Annex Building Project.\nApproverTimestampRole\nGiannina Carballa3/19/2026 3:37:15 PMSubmitter\nKen Farrell3/19/2026 3:39:44 PMDepartment Head\nAstonah Turner3/19/2026 4:02:32 PMAttorney Coordinator\nJustin Vaske3/25/2026 11:50:32 AMAssistant City Attorney\nCate Wells3/25/2026 12:03:29 PMCity Attorney\nGiannina Carballa3/25/2026 12:13:59 PMFinance Coordinator\nGiannina Carballa3/25/2026 1:58:28 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/25/2026 2:26:11 PMBudget Operating Manager\nMichael Perry3/25/2026 4:27:50 PMBudget Officer\nLori Hernandez3/26/2026 9:58:24 AMChief Financial Officer\nJOHN BENNETT3/26/2026 1:44:32 PMChief of Staff\nJANE CASTOR3/27/2026 11:09:12 AMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "The Reimbursement Resolution will allow the City to reimburse itself an amount not to exceed $27,174,500 from future tax-exempt debt proceeds for the TPD Howard Avenue Annex Building Project.",
+        "projectedCostsRaw": "Authorize an amount not to exceed $27,174,500 of debt proceeds to \nreimburse the City for the TPD Howard Avenue Annex Building Project.",
+        "rows": [],
+        "hasProjectedCosts": true,
+        "hasParsedRows": false
       }
     },
     {
@@ -2432,7 +3345,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 30,
@@ -2460,7 +3375,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 31,
@@ -2578,7 +3495,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 32,
@@ -2606,7 +3525,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 33,
@@ -2640,7 +3561,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 34,
@@ -2668,7 +3591,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 35,
@@ -2696,7 +3621,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     }
   ],
   "financialSummary": {

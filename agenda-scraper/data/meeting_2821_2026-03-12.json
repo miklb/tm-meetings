@@ -25,7 +25,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 2,
@@ -46,7 +48,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 3,
@@ -118,6 +122,60 @@
         "revenues": 0,
         "other": 15000000,
         "net": 5000000
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  CRA Resolution\nContactMia Dorton 813-274-8643\nSubjectChannel District CRA - A Resolution of the Community Redevelopment \nAgency of the City of Tampa, Florida, approving the Florida Aquarium, Inc. \nGrant Funding and Construction Agreement by and between the CRA and the \nFlorida Aquarium.\nResolution / \nOrdinance \nTitle\nFile No. CRA26-22055\nChannel District CRA - A Resolution of the Community Redevelopment \nAgency of the City of Tampa, Florida, approving the Florida Aquarium, Inc. \nGrant Funding and Construction Agreement by and between said Community \nRedevelopment Agency (“CRA”) and the Florida Aquarium, Inc. (“awardee”) to \nrepair and renovate property generally described as 701 Channelside Drive \nTampa, Florida 33602  (“the Florida Aquarium Property”) including major \nimprovements to and renovations of the existing facilities, creating new \nexhibits, a multi-space gallery and a large-scale outdoor exhibit on property \nlocated within the boundaries of the Channel District Community \nRedevelopment Area; authorizing execution of the Community \nRedevelopment Grant Funding Agreement by the Chair of the CRA and \nattestation by the CRA Secretary; providing an effective date.\nBACKGROUND:\nThe Awardee has proposed to redevelop the Florida Aquarium Property through major \nimprovements to and renovations of the existing facilities, creating new exhibits, a multi-space \ngallery and a large-scale outdoor exhibit.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution provides for an agreement between the Community Redevelopment Agency \nof the City of Tampa and The Florida Aquarium. Inc. for the Channel District CRA not to \nexceed $15,000,000 within the Channel District CRA Fund.\nPROJECTED COSTS: 61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2026)\nChannel District CRA Fund. CRA Dept. Florida Aquarium Contribution\nP-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165\n61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2027)\nChannel District CRA Fund. CRA Dept. Florida Aquarium Contribution\nP-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165\nSubject to FY2027 Budget and Appropriation \n61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2028)\n\nChannel District CRA Fund. CRA Dept. Florida Aquarium Contribution\nP-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165\nSubject to FY2028 Budget and Appropriation\nApproverTimestampRole\nMia Dorton2/27/2026 7:56:11 AMSubmitter\nSherri Scott2/27/2026 1:51:53 PMDepartment Head\nSherri Scott2/27/2026 1:54:02 PMCommunity and Redevelopment Agency\nAstonah Turner2/27/2026 2:56:04 PMAttorney Coordinator\nMorris Massey3/2/2026 10:10:32 AMAssistant City Attorney\nCate Wells3/2/2026 10:17:18 AMCity Attorney\nLori Hernandez3/4/2026 10:17:55 AMFinance Coordinator\nSusan Gobble3/4/2026 12:15:29 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/4/2026 12:50:26 PMBudget Operating Manager\nMichael Perry3/4/2026 2:30:10 PMBudget Officer\nDennis Rogero3/5/2026 1:35:30 PMChief Financial Officer\nJOHN BENNETT3/5/2026 3:34:03 PMChief of Staff\nJANE CASTOR3/5/2026 9:12:26 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for an agreement between the Community Redevelopment Agency of the City of Tampa and The Florida Aquarium. Inc. for the Channel District CRA not to exceed $15,000,000 within the Channel District CRA Fund.",
+        "projectedCostsRaw": "61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2026)\nChannel District CRA Fund. CRA Dept. Florida Aquarium Contribution\nP-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165\n61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2027)\nChannel District CRA Fund. CRA Dept. Florida Aquarium Contribution\nP-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165\nSubject to FY2027 Budget and Appropriation \n61900 213800 582517 1002841 $5,000,000 (Expenditure) (FY2028)\n\nChannel District CRA Fund. CRA Dept. Florida Aquarium Contribution\nP-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165\nSubject to FY2028 Budget and Appropriation",
+        "rows": [
+          {
+            "accountCode": "61900.213800.582517.1002841",
+            "fund": "61900",
+            "department": "213800",
+            "object": "582517",
+            "project": "1002841",
+            "fiscalYear": "FY26",
+            "amount": "$5,000,000",
+            "value": 5000000,
+            "type": "expenditure",
+            "signedValue": 5000000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Channel District CRA Fund. CRA Dept. Florida Aquarium Contribution P-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165"
+          },
+          {
+            "accountCode": "61900.213800.582517.1002841",
+            "fund": "61900",
+            "department": "213800",
+            "object": "582517",
+            "project": "1002841",
+            "fiscalYear": "FY27",
+            "amount": "$5,000,000",
+            "value": 5000000,
+            "type": "expenditure",
+            "signedValue": 5000000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Channel District CRA Fund. CRA Dept. Florida Aquarium Contribution P-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165 Subject to FY2027 Budget and Appropriation"
+          },
+          {
+            "accountCode": "61900.213800.582517.1002841",
+            "fund": "61900",
+            "department": "213800",
+            "object": "582517",
+            "project": "1002841",
+            "fiscalYear": "FY28",
+            "amount": "$5,000,000",
+            "value": 5000000,
+            "type": "expenditure",
+            "signedValue": 5000000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Channel District CRA Fund. CRA Dept. Florida Aquarium Contribution P-1002841, O-CRA Dept., E-CTPA Florida Aquarium Contribution, T-30, A-000165 Subject to FY2028 Budget and Appropriation"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -204,6 +262,60 @@
         "revenues": 0,
         "other": 4000000,
         "net": 2666667
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  CRA Resolution\nContactMia Dorton 813-274-8643\nSubjectProposed development of a mixed-income residential project consisting of a \ntotal of one hundred four (104) residential units, of which twenty-two (22) units \nwill be designated as workforce housing\nResolution / \nOrdinance \nTitle\nFile No. CRA26-22056\nDowntown CRA - A Resolution of the Community Redevelopment Agency of \nthe City of Tampa, Florida, approving the 801 Whiting LLC Grant Funding \nAgreement and Construction Agreement by and between said Community \nRedevelopment Agency (“CRA”) and 801 Whiting LLC (“Grant Recipient”) to \ndevelop a portion of the property generally described as 801 E. Whiting St, \nTampa, Florida (“the 801 Whiting Property”) as workforce housing on property \nlocated within the boundaries of the Downtown Community Redevelopment \nArea; authorizing execution of the Community Redevelopment Grant Funding \nAgreement by the Chair of the CRA and attestation by the CRA Secretary; \nproviding an effective date.\nBACKGROUND:\nSection 163.387(6)(c)(7), Florida Statutes, authorizes the Community Redevelopment Agency \nof the City of Tampa (“CRA”) to expend monies from the redevelopment trust fund for the \ndevelopment of affordable housing in a designated community redevelopment area, in this \ncase, the Downtown CRA.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution provides for an agreement between the City of Tampa Community \nRedevelopment Agency (CRA) and 801 Whiting LLC for the Downtown CRA not to exceed \n$4,000,000 within the Downtown CRA fund.\nPROJECTED COSTS: 62100 213829 561000 $1,333,333 (Expenditure) (FY2026)\nDowntown CRA Fund. CRA Dept. CTPA Land\n62100 213829 561000 $1,333,333 (Expenditure) (FY2027)\nDowntown CRA Fund. CRA Dept. CTPA Land\nSubject to FY2027 Budget and Appropriation \n62100 213829 561000 $1,333,334 (Expenditure) (FY2028)\nDowntown CRA Fund. CRA Dept. CTPA Land\nSubject to FY2028 Budget and Appropriation\n\nApproverTimestampRole\nMia Dorton3/4/2026 7:51:35 AMSubmitter\nCedric McCray3/4/2026 11:19:47 AMDepartment Head\nCedric McCray3/4/2026 11:20:21 AMCommunity and Redevelopment Agency\nAstonah Turner3/4/2026 2:33:09 PMAttorney Coordinator\nMorris Massey3/5/2026 8:44:20 AMAssistant City Attorney\nCate Wells3/5/2026 10:45:19 AMCity Attorney\nLori Hernandez3/5/2026 10:47:36 AMFinance Coordinator\nSusan Gobble3/5/2026 11:05:19 AMFinance Fiscal and Lead Analyst\nTy Hawthorne3/5/2026 11:25:03 AMBudget Operating Manager\nMichael Perry3/5/2026 12:59:58 PMBudget Officer\nDennis Rogero3/5/2026 1:41:30 PMChief Financial Officer\nJOHN BENNETT3/5/2026 3:34:05 PMChief of Staff\nJANE CASTOR3/5/2026 9:15:32 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for an agreement between the City of Tampa Community Redevelopment Agency (CRA) and 801 Whiting LLC for the Downtown CRA not to exceed $4,000,000 within the Downtown CRA fund.",
+        "projectedCostsRaw": "62100 213829 561000 $1,333,333 (Expenditure) (FY2026)\nDowntown CRA Fund. CRA Dept. CTPA Land\n62100 213829 561000 $1,333,333 (Expenditure) (FY2027)\nDowntown CRA Fund. CRA Dept. CTPA Land\nSubject to FY2027 Budget and Appropriation \n62100 213829 561000 $1,333,334 (Expenditure) (FY2028)\nDowntown CRA Fund. CRA Dept. CTPA Land\nSubject to FY2028 Budget and Appropriation",
+        "rows": [
+          {
+            "accountCode": "62100.213829.561000",
+            "fund": "62100",
+            "department": "213829",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": "FY26",
+            "amount": "$1,333,333",
+            "value": 1333333,
+            "type": "expenditure",
+            "signedValue": 1333333,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Downtown CRA Fund. CRA Dept. CTPA Land"
+          },
+          {
+            "accountCode": "62100.213829.561000",
+            "fund": "62100",
+            "department": "213829",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$1,333,333",
+            "value": 1333333,
+            "type": "expenditure",
+            "signedValue": 1333333,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Downtown CRA Fund. CRA Dept. CTPA Land Subject to FY2027 Budget and Appropriation"
+          },
+          {
+            "accountCode": "62100.213829.561000",
+            "fund": "62100",
+            "department": "213829",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$1,333,334",
+            "value": 1333334,
+            "type": "expenditure",
+            "signedValue": 1333334,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Downtown CRA Fund. CRA Dept. CTPA Land Subject to FY2028 Budget and Appropriation"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -290,6 +402,60 @@
         "revenues": 0,
         "other": 1750000,
         "net": 1166667
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  CRA Resolution\nContactMia Dorton 813-274-8643\nSubjectA Resolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, approving the East Tampa Affordable Housing Development Grant \nFunding Agreement and Construction Agreement by and between said CRA \nand Clonts Properties, Inc.\nResolution / \nOrdinance \nTitle\nFile No. CRA26-22058\nA Resolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, approving the East Tampa Affordable Housing Development Grant \nFunding Agreement and Construction Agreement by and between said \nCommunity Redevelopment Agency (“CRA”) and Clonts Properties, Inc \n(“Grant Recipient”) to develop the property generally described as 3812-3816 \nTemple St Tampa, Florida  (“the Grant Park Property”) as affordable housing \non property located within the boundaries of the East Tampa Community \nRedevelopment Area; authorizing execution of the Community \nRedevelopment Grant Funding Agreement by the Chair of the CRA and \nattestation by the CRA Secretary; providing an effective date.\nBACKGROUND:\nClonts Properties, Inc. has proposed the development of a rental residential project consisting \nof fourteen (14) units, all of which will be designated as one hundred percent (100%) \naffordable housing. The Proposed Project will be located within the boundaries of the East \nTampa Community Redevelopment Area\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution provides for an agreement between the City of Tampa Community \nRedevelopment Agency (CRA) and Clonts Properties, LLC for the East Tampa CRA not to \nexceed $1,750,000 within the East Tampa CRA fund.\nPROJECTED COSTS: 62400 213829 561000 $583,333 (Expenditure) (FY2026)\nEast Tampa CRA Fund. CRA Dept. CTPA Land\n62400 213829 561000 $583,333 (Expenditure) (FY2027)\nEast Tampa CRA Fund. CRA Dept. CTPA Land\nSubject to FY2027 Budget and Appropriation \n62400 213829 561000 $583,334 (Expenditure) (FY2028)\nEast Tampa CRA Fund. CRA Dept. CTPA Land\nSubject to FY2028 Budget and Appropriation\n\nApproverTimestampRole\nMia Dorton2/27/2026 2:05:47 PMSubmitter\nSherri Scott2/27/2026 2:09:08 PMDepartment Head\nSherri Scott2/27/2026 2:10:53 PMCommunity and Redevelopment Agency\nAstonah Turner2/27/2026 5:42:00 PMAttorney Coordinator\nMorris Massey3/3/2026 12:02:21 PMAssistant City Attorney\nCate Wells3/3/2026 2:25:45 PMCity Attorney\nLori Hernandez3/4/2026 10:18:21 AMFinance Coordinator\nSusan Gobble3/4/2026 12:16:02 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/4/2026 12:50:57 PMBudget Operating Manager\nMichael Perry3/4/2026 2:31:19 PMBudget Officer\nDennis Rogero3/5/2026 2:08:38 PMChief Financial Officer\nJOHN BENNETT3/5/2026 3:34:07 PMChief of Staff\nJANE CASTOR3/5/2026 9:20:49 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for an agreement between the City of Tampa Community Redevelopment Agency (CRA) and Clonts Properties, LLC for the East Tampa CRA not to exceed $1,750,000 within the East Tampa CRA fund.",
+        "projectedCostsRaw": "62400 213829 561000 $583,333 (Expenditure) (FY2026)\nEast Tampa CRA Fund. CRA Dept. CTPA Land\n62400 213829 561000 $583,333 (Expenditure) (FY2027)\nEast Tampa CRA Fund. CRA Dept. CTPA Land\nSubject to FY2027 Budget and Appropriation \n62400 213829 561000 $583,334 (Expenditure) (FY2028)\nEast Tampa CRA Fund. CRA Dept. CTPA Land\nSubject to FY2028 Budget and Appropriation",
+        "rows": [
+          {
+            "accountCode": "62400.213829.561000",
+            "fund": "62400",
+            "department": "213829",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": "FY26",
+            "amount": "$583,333",
+            "value": 583333,
+            "type": "expenditure",
+            "signedValue": 583333,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") East Tampa CRA Fund. CRA Dept. CTPA Land"
+          },
+          {
+            "accountCode": "62400.213829.561000",
+            "fund": "62400",
+            "department": "213829",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$583,333",
+            "value": 583333,
+            "type": "expenditure",
+            "signedValue": 583333,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") East Tampa CRA Fund. CRA Dept. CTPA Land Subject to FY2027 Budget and Appropriation"
+          },
+          {
+            "accountCode": "62400.213829.561000",
+            "fund": "62400",
+            "department": "213829",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$583,334",
+            "value": 583334,
+            "type": "expenditure",
+            "signedValue": 583334,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") East Tampa CRA Fund. CRA Dept. CTPA Land Subject to FY2028 Budget and Appropriation"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -318,7 +484,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 7,
@@ -358,6 +526,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectCentral Park CRA - CAC Appointment for Casey Bauer\nResolution / \nOrdinance \nTitle\nCentral Park CRA - CAC Appointment for Casey Bauer\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton2/26/2026 3:25:11 PMSubmitter\nSherri Scott2/26/2026 3:35:07 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -404,6 +580,14 @@
         "revenues": 0,
         "other": 0,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectWest Tampa CRA CAC Appointments for Janice Williams and Allen Berrebbi\nResolution / \nOrdinance \nTitle\nWest Tampa CRA CAC Appointments for Janice Williams and Allen Berrebbi\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton2/26/2026 3:24:58 PMSubmitter\nSherri Scott2/26/2026 3:36:03 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -468,6 +652,14 @@
         "revenues": 0,
         "other": 700000,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectThe Downtown CAC motioned to recommend awarding $700,000 special \nprojects funding reimbursable grant to the Tampa Arts Alliance for the \nDowntown Arts Center project,\nResolution / \nOrdinance \nTitle\nDowntown Arts Center Funding Request - CRA staff reviewed the application \npacket on November 21, 2025, and found this project consistent with the \nDowntown Tampa Community Redevelopment Plan Land Use and Economic \nDevelopment Goal 2, which is to promote economic growth in the Downtown \nCRA community.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton2/26/2026 3:24:36 PMSubmitter\nSherri Scott2/26/2026 3:40:09 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -540,6 +732,14 @@
         "revenues": 0,
         "other": 21888.08,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectFunds of $21,888.08 will be reprogrammed from the completed Jackson \nStreet Parking Lot Remediation Project. After reappropriating $21,888.08 to \nthe Kid Mason Community Center Renovation Project the remainder will be \nreallocated to DT Infrastructure.\nResolution / \nOrdinance \nTitle\nDowntown CRA- Kid Mason Program Change - CRA staff requests the \napproval of a program change of $21,888.08 in the Downtown CRA budget to \naccount for the final project closeout change order of the Kid Mason \nCommunity Center renovations. The funding will provide 10 weeks of general \nconditions from July 21, 2024, to September 30, 2024, including increased \nbond costs stemming from Interim Change Order 1, dated March 28, 2024, \nand Interim Change Order 2, dated October 3, 2024. Interim Change Orders 1 \nand 2 did not account for additional general conditions related to the contract \ntime extension and additional bond costs resulting from the increased contract \nvalue.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton2/26/2026 3:24:01 PMSubmitter\nSherri Scott2/26/2026 3:41:25 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -650,6 +850,14 @@
         "revenues": 0,
         "other": 11000000,
         "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/25/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectCurtis Hixon Waterfront Park enhancements include site prep/demo; site \nfurniture; event lawn and terrace drainage; irrigation improvements; reinforced \nconcrete pavement; addition of canopy trees/palms; new sod/soil; and \nrestroom improvements.\nResolution / \nOrdinance \nTitle\nDowntown CRA - Curtis Hixon Program Change - CRA staff requests the \napproval of a program change in the amount of $5.5 million in the Downtown \nCRA budget to fund Curtis Hixon Waterfront Park enhancements as requested \nby the Parks and Recreation Department on February 12, 2026.\nCRA staff requests reprogramming $3,000,000 from Neighborhood \nInfrastructure to a new budget line for this project. \nThe remaining $2.5 million will be budgeted in FY27.\nFrom Neighborhood Infrastructure - $3,000,000 \n(62200.213800.563001.0000489)\nTo Downtown Non-core Curtis Hixon Waterfront Park Enhancements - \n$3,000,000 (62200.213800.563001.1002920)\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton2/26/2026 3:23:11 PMSubmitter\nSherri Scott2/26/2026 3:42:16 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
       }
     },
     {
@@ -752,6 +960,30 @@
         "revenues": 0,
         "other": 0,
         "net": 600000
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/26/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  CRA Resolution\nContactMia Dorton 813-274-8643\nSubjectA Resolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, approving the purchase of real property in the East Tampa \nCommunity Redevelopment Area located at 4539 N. 19th Street, Tampa, \nFlorida.\nResolution / \nOrdinance \nTitle\nFile No. CRA26-22083\nEast Tampa CRA - A Resolution of the Community Redevelopment Agency of \nthe City of Tampa, Florida, approving the purchase of real property in the East \nTampa Community Redevelopment Area located at 4539 N. 19th Street, \nTampa, Florida, for Community Redevelopment purposes at a purchase price \nof $290,000 together with closing costs in the approximate amount of $10,000, \npursuant to a contract for sale and purchase between the City of Tampa, as \npurchaser, and Daniel Rijos, as seller; authorizing payment of the purchase \nprice and closing costs associated with the purchase of said parcel of real \nproperty with proceeds from the East Tampa Community Redevelopment \nAgency Fund; providing an effective date.\nBACKGROUND:\nThe City desires to purchase the Property for community redevelopment purposes consistent \nwith the East Tampa Community Redevelopment Plan\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution provides for the purchase of real property located at 4539 N. 19th Street, \nTampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 \ntogether with closing costs in the approximate amount of $10,000, pursuant to a contract for \nsale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller with \nproceeds from the East Tampa Community Redevelopment Agency Land Assemblage Fund.\nPROJECTED COSTS: 62400.213800.561000.0000.0000496.0000000 $300,000 \n(Expenditure)\nEast Tampa CRA Fund. CRA Dept. Land\nP-0000496, O-Economic Opportunity Dept. E-CTPA Land, T-20, A-000166\nApproverTimestampRole\nMia Dorton2/26/2026 4:04:19 PMSubmitter\nSherri Scott2/26/2026 4:14:12 PMDepartment Head\nCedric McCray2/27/2026 4:39:08 PMCommunity and Redevelopment Agency\nAstonah Turner2/27/2026 5:41:39 PMAttorney Coordinator\n\nMorris Massey3/3/2026 12:02:52 PMAssistant City Attorney\nCate Wells3/3/2026 2:25:11 PMCity Attorney\nLori Hernandez3/4/2026 10:17:00 AMFinance Coordinator\nSusan Gobble3/4/2026 12:15:09 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/4/2026 12:49:53 PMBudget Operating Manager\nMichael Perry3/4/2026 2:28:15 PMBudget Officer\nDennis Rogero3/5/2026 2:09:57 PMChief Financial Officer\nJOHN BENNETT3/5/2026 3:34:00 PMChief of Staff\nJANE CASTOR3/5/2026 9:11:28 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for the purchase of real property located at 4539 N. 19th Street, Tampa, Florida, for Community Redevelopment purposes at a purchase price of $290,000 together with closing costs in the approximate amount of $10,000, pursuant to a contract for sale and purchase between the City of Tampa, as purchaser, and Daniel Rijos, as seller with proceeds from the East Tampa Community Redevelopment Agency Land Assemblage Fund.",
+        "projectedCostsRaw": "62400.213800.561000.0000.0000496.0000000 $300,000 \n(Expenditure)\nEast Tampa CRA Fund. CRA Dept. Land\nP-0000496, O-Economic Opportunity Dept. E-CTPA Land, T-20, A-000166",
+        "rows": [
+          {
+            "accountCode": "62400.213800.561000",
+            "fund": "62400",
+            "department": "213800",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$300,000",
+            "value": 300000,
+            "type": "expenditure",
+            "signedValue": 300000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "East Tampa CRA Fund. CRA Dept. Land P-0000496, O-Economic Opportunity Dept. E-CTPA Land, T-20, A-000166"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     },
     {
@@ -820,6 +1052,30 @@
         "revenues": 0,
         "other": 375000,
         "net": 375000
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        2/27/2026\nRequested Meeting Date: 4/09/2026\nType of Request:                                                  CRA Resolution\nContactMia Dorton 813-274-8643\nSubjectWest Tampa CRA -Resolution of the Community Redevelopment Agency of \nthe City of Tampa, Florida, approving the Domain Homes Affordable Housing \nGrant Funding Agreement and Construction Agreement by and between said \nCRA and Domain Homes.\nResolution / \nOrdinance \nTitle\nFile No. CRA26-22118\nWest Tampa CRA - A Resolution of the Community Redevelopment Agency \nof the City of Tampa, Florida, approving the Domain Homes Affordable \nHousing Grant Funding Agreement and Construction Agreement by and \nbetween said Community Redevelopment Agency (“CRA”) and Domain \nHomes, Inc. (“Grant Recipient”) to construct single-family homes on property \nlocated at 1948 W. Spruce Street (four [4] lots), and 2324 W. St. Conrad \nStreet (one [1] lot),Tampa, Florida, within the boundaries of the applicable \nCommunity Redevelopment Area; authorizing execution of the Community \nRedevelopment Grant Funding Agreement by the Chair of the CRA and \nattestation by the CRA Secretary; providing an effective date.\nBACKGROUND:\nDomain Homes, Inc. has proposed the construction of five (5) single-family homes designed \nas a scattered-site residential development to support affordable homeownership \nopportunities in the West Tampa CRA.  The Grant Recipient has requested financial \nassistance from the CRA in connection with the construction of the affordable single-family \nhomes and subject to the terms and conditions of this Agreement, the CRA is willing to \nprovide financial assistance to the Grant Recipient in connection with the construction of the \nsingle-family homes.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis Resolution provides for an agreement between Domain Homes and the Tampa CRA for \na total amount not to exceed Three Hundred Thousand Dollars ($375,000.00), for the West \nTampa CRA within the West Tampa CRA Fund.\nPROJECTED COSTS: 62350.213829.561000 $375,000 (Expenditure) (FY26)\nWest Tampa CRA Fund. CRA Department. Land Assemblage.\nApproverTimestampRole\nMia Dorton3/3/2026 1:29:25 PMSubmitter\nSherri Scott3/3/2026 2:10:11 PMDepartment Head\nSherri Scott3/3/2026 2:10:57 PMCommunity and Redevelopment Agency\n\nAstonah Turner3/3/2026 2:23:05 PMAttorney Coordinator\nMorris Massey3/4/2026 9:33:51 AMAssistant City Attorney\nCate Wells3/4/2026 11:26:28 AMCity Attorney\nLori Hernandez3/4/2026 2:43:19 PMFinance Coordinator\nSusan Gobble3/4/2026 3:44:40 PMFinance Fiscal and Lead Analyst\nTy Hawthorne3/4/2026 3:49:30 PMBudget Operating Manager\nMichael Perry3/4/2026 4:02:42 PMBudget Officer\nDennis Rogero3/5/2026 2:11:00 PMChief Financial Officer\nJOHN BENNETT3/5/2026 3:33:57 PMChief of Staff\nJANE CASTOR3/5/2026 8:59:00 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This Resolution provides for an agreement between Domain Homes and the Tampa CRA for a total amount not to exceed Three Hundred Thousand Dollars ($375,000.00), for the West Tampa CRA within the West Tampa CRA Fund.",
+        "projectedCostsRaw": "62350.213829.561000 $375,000 (Expenditure) (FY26)\nWest Tampa CRA Fund. CRA Department. Land Assemblage.",
+        "rows": [
+          {
+            "accountCode": "62350.213829.561000",
+            "fund": "62350",
+            "department": "213829",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": "FY26",
+            "amount": "$375,000",
+            "value": 375000,
+            "type": "expenditure",
+            "signedValue": 375000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") West Tampa CRA Fund. CRA Department. Land Assemblage."
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
       }
     }
   ],

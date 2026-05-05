@@ -25,7 +25,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 2,
@@ -65,7 +67,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 3,
@@ -136,13 +140,30 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/05/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Jeffrey W Jones request to rezone property generally located at \n2907 W Euclid Avenue from RS-60 to RS-50 (Residential, Single Family \nDetached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-25-112\nPublic Hearing on application of Jeffrey W Jones request to rezone property \ngenerally located at 2907 W Euclid Avenue from RS-60 to RS-50 (Residential, \nSingle Family Detached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/5/2026 1:24:45 PMSubmitter\nLaChone Dock3/5/2026 1:24:52 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": null,
         "requestedZoning": null,
-        "futureLandUse": "R-  10",
+        "futureLandUse": "R-10",
+        "neighborhoodAssociations": [
+          "Bayshore Beautiful Neighborhood Association, Inc",
+          "Keep Bayshore Beautiful Inc",
+          "Hawthorne Pond Condominium Association Inc",
+          "Belmar Gardens Neighborhood",
+          "345 Bayshore Condominium Association",
+          "Ballast Point Neighborhood Association",
+          "Parkland Estates Civic Club, Inc"
+        ],
         "waivers": [],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the application and finds the request INCONSISTENT with the  City  of  Tampa  Code  of  Ordinances.  See  analysis  from  Development  Coordination  in  report  below  relating  to development pattern in the immediate area."
+        "findings": "The Development Review and Compliance staff has reviewed the application and finds the request INCONSISTENT with the  City  of  Tampa  Code  of  Ordinances.  See  analysis  from  Development  Coordination  in  report  below  relating  to development pattern in the immediate area."
       }
     },
     {
@@ -208,15 +229,30 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/05/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Mario Espaillat request to rezone property generally located at \n4102 N. 22nd Street from CG to PD (Residential, Single-Family Attached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-25-126\nPublic Hearing on application of Mario Espaillat request to rezone property \ngenerally located at 4102 N. 22nd Street from CG to PD (Residential, Single-\nFamily Attached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/5/2026 11:08:58 AMSubmitter\nLaChone Dock3/5/2026 11:09:05 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": "Community Mixed Use-35",
+        "neighborhoodAssociations": [
+          "Historic Belmont Heights Neighborhood Association",
+          "Tampa Overlook Neighborhood Association",
+          "Richmond Place",
+          "VM Ybor Neighborhood Association & Crimewatch",
+          "East Tampa 1"
+        ],
         "waivers": [
           "WAIVER(S) REQUESTED: 1. Section 27-240 (e) (1) b: Request to allow front door orientation for units 1,2, and 3 to face E. Ida Street. 2. Section 27-240 (e) (1) c: Request to reduce the corner setback of the garage opening from the minimum setback of 15’ to 7’."
         ],
-        "findings": "FINDINGS: The  Development  Review  and  Compliance  staff  has  reviewed  the  petition  and  finds  the  request  CONSISTENT with"
+        "findings": "The  Development  Review  and  Compliance  staff  has  reviewed  the  petition  and  finds  the  request  CONSISTENT with"
       }
     },
     {
@@ -288,15 +324,28 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/04/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Miguel Aquino request to rezone property generally located at \n2707 E. 22nd Avenue from RM-16 to PD (Residential, Single-Family Semi-\nDetached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-25-129\nPublic Hearing on application of Miguel Aquino request to rezone property \ngenerally located at 2707 E. 22nd Avenue from RM-16 to PD (Residential, \nSingle-Family Semi-Detached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/4/2026 12:57:20 PMSubmitter\nLaChone Dock3/4/2026 12:57:27 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "RM-16",
         "requestedZoning": "PD",
-        "futureLandUse": "R-  20",
+        "futureLandUse": "R-20",
+        "neighborhoodAssociations": [
+          "Jackson Heights Neighborhood Associated & Crime Watch",
+          "Ybor City Management LLC",
+          "Tampa Overlook Neighborhood Association"
+        ],
         "waivers": [
           "WAIVER(S) REQUESTED: None"
         ],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  it  be  the  pleasure  of  City  Council  to  approve  the application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet."
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  it  be  the  pleasure  of  City  Council  to  approve  the application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet."
       }
     },
     {
@@ -386,15 +435,30 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/04/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of James Lascara request to rezone property generally located at \n1008 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-\nDetached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-02\nPublic Hearing on application of James Lascara request to rezone property \ngenerally located at 1008 W. La Salle Street from RS-50 to PD (Residential, \nSingle-Family Semi-Detached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/4/2026 12:58:09 PMSubmitter\nLaChone Dock3/4/2026 12:58:15 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "RS-50",
         "requestedZoning": "PD",
-        "futureLandUse": "R-  20",
+        "futureLandUse": "R-20",
+        "neighborhoodAssociations": [
+          "West Riverfront Neighborhood Crimewatch Association, Inc",
+          "West Tampa CRA Community Advisory Committee",
+          "North Hyde Park Civic Asso. Neighborhood Crime Watch",
+          "Armory Gardens Civic Association",
+          "North Hyde Park Civic Association, Inc"
+        ],
         "waivers": [
           "WAIVER(S) REQUESTED: 1. Section 27-241.2.c.5.1: Request to allow for vehicular access to the lot from the front rather than the alley."
         ],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. Notwithstanding staff’s finding of inconsistency, if City Council approves the application and waiver requested, the modifications to the site plan as shown on the submitted revision sheet must be completed between first and second reading."
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. Notwithstanding staff’s finding of inconsistency, if City Council approves the application and waiver requested, the modifications to the site plan as shown on the submitted revision sheet must be completed between first and second reading."
       }
     },
     {
@@ -484,15 +548,30 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/04/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of James Lascara request to rezone property generally located at \n1307 W. La Salle Street from RS-50 to PD (Residential, Single-Family Semi-\nDetached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-03\nPublic Hearing on application of James Lascara request to rezone property \ngenerally located at 1307 W. La Salle Street from RS-50 to PD (Residential, \nSingle-Family Semi-Detached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/4/2026 12:58:42 PMSubmitter\nLaChone Dock3/4/2026 12:58:49 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "RS-50",
         "requestedZoning": "PD",
-        "futureLandUse": "R-  20",
+        "futureLandUse": "R-20",
+        "neighborhoodAssociations": [
+          "West Riverfront Neighborhood Crimewatch Association, Inc",
+          "West Tampa CRA Community Advisory Committee",
+          "North Hyde Park Civic Asso. Neighborhood Crime Watch",
+          "Armory Gardens Civic Association",
+          "North Hyde Park Civic Association, Inc"
+        ],
         "waivers": [
           "WAIVER(S) REQUESTED: 1. Section 27-241 2 (c) 5: Request to allow for vehicular access to the lot from the front rather than the alley. 2. Section 27-162: Request to reduce building separation from 15’ to 10’ 8”."
         ],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  City  Council  approve  the  application  and  waiver requested,  the  modifications  to  the  site  plan  as  shown  on  the  submitted  revision  sheet  must  be  completed  between first and second reading."
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  City  Council  approve  the  application  and  waiver requested,  the  modifications  to  the  site  plan  as  shown  on  the  submitted  revision  sheet  must  be  completed  between first and second reading."
       }
     },
     {
@@ -558,15 +637,28 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/04/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Global Engineering request to rezone property generally located \nat 4420 W. Carmen Street from RS-50 to Pd (Residential, Single-Family \nAttached).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-06\nPublic Hearing on application of Global Engineering request to rezone \nproperty generally located at 4420 W. Carmen Street from RS-50 to Pd \n(Residential, Single-Family Attached).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/4/2026 12:59:10 PMSubmitter\nLaChone Dock3/4/2026 12:59:16 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "RS-50",
         "requestedZoning": "PD",
         "futureLandUse": "Residential-20",
+        "neighborhoodAssociations": [
+          "Westshore Palms, Inc",
+          "Westshore Alliance",
+          "Bretton Woods Association, Inc"
+        ],
         "waivers": [
           "WAIVER(S) REQUESTED: 1. Section 27-282.9(c)(1): Request to allow front doors of units 2, 3 & 4 to face a side lot line or drive aisle rather than an internal courtyard or right-of  -way. 2. Section 27-284.3.3(A): Request to reduce the required 5’ use to use buffer to 4’ to the west and 3’ to the south."
         ],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  it  be  the  pleasure  of  City  Council  to  approve  the application, further modifications to the site plan must be completed by the applicant in between 1st and 2nd Reading of Ordinance as stated on the revision sheet."
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Should  it  be  the  pleasure  of  City  Council  to  approve  the application, further modifications to the site plan must be completed by the applicant in between 1st and 2nd Reading of Ordinance as stated on the revision sheet."
       }
     },
     {
@@ -650,16 +742,32 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/04/2026\nRequested Meeting Date: 3/12/2026\nType of Request:                                                  Public Hearing\nContactStephanie Pope 813-274-8274\nSubjectApplication of Thomas Lafferty request to rezone property generally located at \n110 South Boulevard from PD to PD (Residential, Multiple-Family & Parking \nOff Street Commercial).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-32\nPublic Hearing on application of Thomas Lafferty request to rezone property \ngenerally located at 110 South Boulevard from PD to PD (Residential, \nMultiple-Family & Parking Off Street Commercial).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock3/4/2026 12:59:46 PMSubmitter\nLaChone Dock3/4/2026 12:59:53 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": "RMU-100",
+        "neighborhoodAssociations": [
+          "Hyde Park Spanishtown Creek Civic Association",
+          "Spanishtown Creek Civic Association",
+          "Bayshore Gardens Neighborhood Association Inc",
+          "Parkland Estates Civic Club, Inc",
+          "SoHo Neighborhood Association, Inc",
+          "Historic Hyde Park Neighborhood Association, Inc"
+        ],
         "waivers": [
           "PREVIOUSLY APPROVED WAIVERS (REZ-22-40): 1. Section 27-284.2.5(F)(1): Request to remove one non-hazardous grand, tree #49, a 38” Live Oak rated C-5; in arborist report. 2. Section 27-284.3.3.(D): Request to reduce the required 8 feet vehicular use area buffer to 5 feet to the south along Cleveland Street. 3. Section  27-283.10:  Request  to  reduce  the  required  number  of  overall  parking  spaces  from  416  required  parking spaces to 225 parking spaces (45% reduction). 4. Section 27-283.14: Request to reduce the required number of loading berths from 3 to 1. 5. Section 27-283.15: o Request to allow loading to occur in more than one continuous maneuver and to allow maneuvering in the right-of  -way. o Request to allow a 12’ x 30’ loading space in lieu of a 12’ x 60’ space. 6. Section 27-160:  Request  to  allow  a  reduction  in  special  street  setback  from  42  feet  to  36  feet  for  any  building  or structure on the property.",
           "NEW WAIVER(S) REQUESTED: 1. Section 27-284.2.5(F)(1): To remove one non-hazardous grand, tree #49, a 40” Live Oak rated C-5; in arborist report. 2. Section 27-283.15: To allow one 12’ x 39’ loading space in lieu of two 12’ x 60’ spaces. REZONING STAFF REPORT REZ-26-  0000032 DEVELOPMENT COORDINATION | 2555 EAST HANNA AVENUE, TAMPA, FL 33610                                                              Page 2 3. Section 27-284.3.3: Request to reduce the required use landscape buffer from 15’ and 6’ masonry wall to 0’  and 6’ masonry wall to the east and south abutting folio #194092.0000. 4. Section  27-284.3.3.(A):  Request  to  reduce  the  required  30%  Multi-family  greenspace  area  to  0%,  subject  to landscape in lieu fees at the time of permitting. 5. Section 27-283.7: To reduce the required parking from 418 to 41 provided (90%). 6. Section 27-283.14: To reduce the required number of loading berths from 2 to 1. 7. Section 27-284.3.3.(D): A) Request  to  reduce  the  required  20%  VUA  greenspace  (2,887  sf)  to  14%  VUA  greenspace  (2,147  sf)  subject  to landscape in lieu fees at the time of permitting. B)  Request to reduce the minimum parking island width from 13’ to 0’. C) Request  to  reduce  the  required  8’  VUA  landscape  buffer  abutting  Fielding  Ave  to  5’  and  6’  abutting  Cleveland Street."
         ],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  See  findings  from  Development  Coordination,  Natural Resources  and  Transportation  in  report  below.  Should  it  be  the  pleasure  of  City  Council  to  approve  the  application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation's inconsistent finding. LOCATION MAP: PROJECT INFORMATION: Commercial Development  Not Applicable Residential Unit Count (Maximum) 238 Units (1 bedroom: 49 units, 2 bedroom: 189 units) Maximum Building Height  162’ (11 stories) Setbacks (Perimeter) 0’ For all property lines Lot Area (SF/Acreage) 41,548 SF (0.95 acres)"
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  See  findings  from  Development  Coordination,  Natural Resources  and  Transportation  in  report  below.  Should  it  be  the  pleasure  of  City  Council  to  approve  the  application, further modifications to the site plan must be completed by the applicant in between 1 st and 2 nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation's inconsistent finding. LOCATION MAP: PROJECT INFORMATION: Commercial Development  Not Applicable Residential Unit Count (Maximum) 238 Units (1 bedroom: 49 units, 2 bedroom: 189 units) Maximum Building Height  162’ (11 stories) Setbacks (Perimeter) 0’ For all property lines Lot Area (SF/Acreage) 41,548 SF (0.95 acres)"
       }
     }
   ],

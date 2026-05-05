@@ -49,10 +49,7 @@
         "125293.0000"
       ],
       "location": "3602 West Euclid Avenue",
-      "coordinates": {
-        "lat": 27.908416,
-        "lng": -82.502279
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -61,7 +58,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 2,
@@ -107,10 +106,7 @@
         "140483.0000"
       ],
       "location": "4615 East Fowler Avenue",
-      "coordinates": {
-        "lat": 28.05326,
-        "lng": -82.40774
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -119,7 +115,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 3,
@@ -158,10 +156,7 @@
         "140513.0000"
       ],
       "location": "11315 North 46",
-      "coordinates": {
-        "lat": 28.051507,
-        "lng": -82.408558
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -170,7 +165,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 4,
@@ -223,10 +220,7 @@
         "156781.0000"
       ],
       "location": "4304 North 26",
-      "coordinates": {
-        "lat": 27.98453,
-        "lng": -82.43081
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -235,7 +229,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 5,
@@ -280,10 +276,7 @@
         "156780.0000"
       ],
       "location": "4216 North 26",
-      "coordinates": {
-        "lat": 27.98411,
-        "lng": -82.43087
-      },
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -292,7 +285,9 @@
         "revenues": 0,
         "other": 0,
         "net": 0
-      }
+      },
+      "summaryText": "",
+      "projectedCosts": null
     },
     {
       "number": 6,
@@ -363,13 +358,28 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/10/2026\nRequested Meeting Date: 4/23/2026\nType of Request:                                                  Public Hearing\nContactLeo Debardeleben 813-507-5563\nSubjectApplication of TPA Affordable Real Estate LLC requesting a Special Use 2 for \na Small Venue; Beer, Wine and Liquor (Consumption on Premises Only), \ngenerally located at 1724 N Nebraska Ave.\nResolution / \nOrdinance \nTitle\nFile No. AB2-25-14\nPublic Hearing on application of TPA Affordable Real Estate LLC requesting a \nSpecial Use 2 for a Small Venue; Beer, Wine and Liquor (Consumption on \nPremises Only), generally located at 1724 N Nebraska Ave.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLeo Debardeleben3/24/2026 8:33:15 AMSubmitter\nLaChone Dock3/24/2026 8:44:46 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "ALCOHOL_BEVERAGE",
         "currentZoning": "Ybor City Commercial General (YC-5)",
         "requestedZoning": null,
         "futureLandUse": "Community Mixed Use-35",
+        "neighborhoodAssociations": [
+          "Historic Ybor Neighborhood Civic Association, Inc",
+          "Ybor City Management LLC",
+          "David Bailey",
+          "Hyde Park Spanishtown Creek Civic Association",
+          "Bowman Heights"
+        ],
         "waivers": [],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Minor  site  plan  modifications  are  required  to  be  made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-25-0000014"
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Minor  site  plan  modifications  are  required  to  be  made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-25-0000014"
       }
     },
     {
@@ -435,13 +445,28 @@
         "other": 0,
         "net": 0
       },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        3/10/2026\nRequested Meeting Date: 4/23/2026\nType of Request:                                                  Public Hearing\nContactLeo Debardeleben 813-507-5563\nSubjectApplication of RSG Macdill LLC requesting a Special Use 2 permit for \nalcoholic beverage sales in connection with a restaurant (beer, wine and liquor \n– consumption on premises only), generally located at 2507 South Macdill \nAvenue.\nResolution / \nOrdinance \nTitle\nFile No. AB2-26-05\nPublic hearing on the application of RSG Macdill LLC requesting a Special \nUse 2 permit for alcoholic beverage sales in connection with a Restaurant \n(beer, wine and liquor – consumption on premises only), generally located at \n2507 South Macdill Avenue.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLeo Debardeleben3/24/2026 8:33:03 AMSubmitter\nLaChone Dock3/24/2026 8:44:06 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
       "staffReport": {
         "landUseType": "ALCOHOL_BEVERAGE",
         "currentZoning": "Commercial Intensive (CI)",
         "requestedZoning": null,
         "futureLandUse": "Community Commercial 35 & Residential 20",
+        "neighborhoodAssociations": [
+          "Palma Ceia Neighborhood Association, Inc",
+          "Virginia Park Neighborhood Association, Inc",
+          "Bayshore Gardens Neighborhood Association, Inc",
+          "Palma Ceia West Neighborhood Association, Inc",
+          "Parkland Estates Civic Club, Inc"
+        ],
         "waivers": [],
-        "findings": "FINDINGS: The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Minor  site  plan  modifications  are  required  to  be  made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-26-0000005"
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable  City  of  Tampa  Land  Development  Regulations.  Minor  site  plan  modifications  are  required  to  be  made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-26-0000005"
       }
     }
   ],
