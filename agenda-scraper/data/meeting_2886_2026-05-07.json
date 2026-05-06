@@ -1,0 +1,34 @@
+{
+  "meetingId": "2886",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "May 7, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2886&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 74,
+      "agendaItemId": "23624",
+      "title": "File No. DEO26-23624Resolution approving the execution by the Mayor and attestation by the City Clerk of an Ownership, Maintenance, Use, Assumption of Risk and Hold Harmless Agreement between the City of Tampa and Water Street Tampa, LLC for the installation and maintenance of certain public realm improvements and features on those certain public rights-of-way in the vicinity of 302 Caesar Street or 200 S. Nebraska Avenue in Tampa, Florida, as more particularly described herein; providing an effective date. Memorandum from Ron Wigginton, Assistant City Attorney, transmitting a substitute agreement for said agenda item. (To be R/F)",
+      "rawTitle": "File No. DEO26-23624Resolution approving the execution by the Mayor and attestation by the City Clerk of an Ownership, Maintenance, Use, Assumption of Risk and Hold Harmless Agreement between the City of Tampa and Water Street Tampa, LLC for the installation and maintenance of certain public realm improvements and features on those certain public rights-of-way in the vicinity of 302 Caesar Street or 200 S. Nebraska Avenue in Tampa, Florida, as more particularly described herein; providing an effective date. Memorandum from Ron Wigginton, Assistant City Attorney, transmitting a substitute agreement for said agenda item. (To be R/F)",
+      "fileNumber": "DEO26-23624Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    }
+  ],
+  "formattedDate": "2026-05-07"
+}
