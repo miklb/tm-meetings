@@ -1,0 +1,113 @@
+# Meetings Maintenance & Dependency Chores
+
+A schedule for keeping runtime dependencies, tooling, and Node.js versions current.
+
+---
+
+## Node.js
+
+Node.js uses **year-based versioning** with an 18-month Active LTS window:
+
+| Version | Released | Active LTS        | Maintenance       | Status                |
+| ------- | -------- | ----------------- | ----------------- | --------------------- |
+| 20      | Apr 2023 | Oct 2023–Oct 2024 | Oct 2024–Apr 2026 | ⚠️ EOL Apr 30 2026    |
+| 22      | Apr 2024 | Oct 2024–Oct 2025 | Oct 2025–Apr 2027 | Maintenance           |
+| 24      | Apr 2025 | Oct 2025–Apr 2027 | Apr 2027–Apr 2028 | **Active LTS ✓**      |
+| 26      | Apr 2026 | Oct 2026–Apr 2028 | Apr 2028–Apr 2029 | Current (not yet LTS) |
+
+> ⚠️ **Action required:** This repo's `.nvmrc` and CI workflow are pinned to Node **20**, which reached EOL on April 30, 2026. Upgrade to **Node 24** (current Active LTS). See upgrade checklist below.
+
+**Rules:**
+
+- `.nvmrc` in the repo root pins the Node version — commit version changes there.
+- No need to run `nvm use` manually. Add this hook to `~/.zshrc` and it auto-activates when you `cd` into any directory with a `.nvmrc`:
+
+  ```zsh
+  autoload -U add-zsh-hook
+  load-nvmrc() {
+    local nvmrc_path="$(nvm_find_nvmrc)"
+    if [ -n "$nvmrc_path" ]; then
+      local nvmrc_ver=$(nvm version "$(cat "$nvmrc_path")")
+      [ "$nvmrc_ver" = "N/A" ] && nvm install || [ "$nvmrc_ver" != "$(nvm version)" ] && nvm use
+    fi
+  }
+  add-zsh-hook chpwd load-nvmrc
+  load-nvmrc
+  ```
+
+- When a new even major ships in April, evaluate upgrading after it hits Active LTS in October.
+- Flag and update `.nvmrc` and `nightly-scrape.yml` within one month of LTS activation.
+
+---
+
+## Dependency Inventory
+
+### Node.js (npm)
+
+| Package                   | Location             | Purpose                     | Check                                    |
+| ------------------------- | -------------------- | --------------------------- | ---------------------------------------- |
+| `axios`                   | `agenda-scraper/`    | HTTP scraping client        | `npm outdated` in `agenda-scraper/`      |
+| `axios-cookiejar-support` | `agenda-scraper/`    | Cookie session support      | same                                     |
+| `cheerio`                 | `agenda-scraper/`    | HTML parsing                | same                                     |
+| `@aws-sdk/client-s3`      | `agenda-scraper/`    | R2 document mirroring       | same                                     |
+| `@llamaindex/liteparse`   | `agenda-scraper/`    | PDF text extraction         | same                                     |
+| `pdf-parse` / `pdfreader` | `agenda-scraper/`    | PDF parsing fallbacks       | same                                     |
+| `selenium-webdriver`      | `agenda-scraper/`    | Legacy Selenium scrape path | same                                     |
+| `tough-cookie`            | `agenda-scraper/`    | Cookie jar                  | same                                     |
+| `dotenv`                  | `agenda-scraper/`    | Environment variables       | same                                     |
+| `@11ty/eleventy`          | `site/`              | Static site generator       | `npm outdated` in `site/`                |
+| `better-sqlite3`          | `site/` + `scripts/` | SQLite access               | `npm outdated` in `site/` and `scripts/` |
+| `glob`                    | `scripts/`           | File globbing for build-db  | `npm outdated` in `scripts/`             |
+| Node.js                   | Runtime              | All JS execution            | https://nodejs.org/en/about/releases     |
+
+### Python (`transcript-cleaner/processor/venv`)
+
+| Package                    | Purpose                      | Check                                  |
+| -------------------------- | ---------------------------- | -------------------------------------- |
+| `gliner`                   | NER entity recognition       | `pip list --outdated` (activate first) |
+| `beautifulsoup4`           | HTML parsing                 | same                                   |
+| `requests`                 | HTTP in Python scripts       | same                                   |
+| `lxml`                     | XML/HTML parser backend      | same                                   |
+| `jinja2`                   | HTML template generation     | same                                   |
+| `google-api-python-client` | YouTube Data API             | same                                   |
+| `yt-dlp`                   | Audio extraction for Whisper | same                                   |
+| `openai-whisper`           | Whisper offset calculation   | same                                   |
+| `httpx`                    | opengov/ HTTP client         | `pip list --outdated` in opengov venv  |
+| `python-dotenv`            | Environment variables        | same as transcript venv                |
+
+---
+
+## Chore Schedule
+
+### Monthly (first Monday of each month)
+
+- [ ] Run `npm outdated` in `agenda-scraper/`, `site/`, and `scripts/` — apply patch updates
+- [ ] Check `yt-dlp` (releases frequently): `pip install --upgrade yt-dlp` in transcript venv
+
+### Quarterly (Jan, Apr, Jul, Oct)
+
+- [ ] `source pipeline/activate.sh && pip list --outdated` — review and apply safe upgrades
+- [ ] Review Node.js minor/patch: `nvm ls-remote 24 | tail -5` — update `.nvmrc` to latest `24.x.x` if desired
+- [ ] Review `@11ty/eleventy` for minor/major releases (breaking changes common on majors)
+- [ ] Review `@llamaindex/liteparse` — active development, check changelog before upgrading
+
+### Annually (October — aligns with Node LTS activation)
+
+- [ ] Evaluate upgrading to new Node.js LTS major
+  - Update `.nvmrc`, `.github/workflows/nightly-scrape.yml` (`node-version`), `README.md`, `copilot-instructions.md`, `global.instructions.md`
+- [ ] Audit all dependencies for EOL or known CVEs
+- [ ] Review Python version compatibility
+
+---
+
+## Upgrade Checklist (Node.js major bump)
+
+1. `nvm install <version> && nvm alias default <version>`
+2. Update `.nvmrc` to new major
+3. Update `node-version` in `.github/workflows/nightly-scrape.yml`
+4. Update `README.md` prerequisites line
+5. Update `.github/copilot-instructions.md` Environment section
+6. Update `global.instructions.md` Environment section
+7. Update user memory `environment.md` Node.js note
+8. Run `npm ci` in `agenda-scraper/`, `site/`, `scripts/` and verify no breakage
+9. Commit: `chore: upgrade to Node <version>`
