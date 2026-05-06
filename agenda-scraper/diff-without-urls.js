@@ -86,11 +86,7 @@ function deepEqual(obj1, obj2, path = '') {
   return diffs;
 }
 
-function formatDiff(diff, summary = false) {
-  if (summary) {
-    return formatSummary(diff);
-  }
-  
+function formatDiff(diff) {
   const lines = [];
   
   for (const d of diff) {
@@ -140,85 +136,124 @@ function formatDiff(diff, summary = false) {
   return lines.join('\n');
 }
 
-function formatSummary(diffs) {
-  const itemChanges = new Map();
-  const globalChanges = [];
-  
-  for (const d of diffs) {
-    const path = d.path;
-    
-    // Check if it's an agendaItem change
-    const itemMatch = path.match(/^agendaItems\[(\d+)\]\.?(.+)?/);
-    
-    if (itemMatch) {
-      const itemIndex = parseInt(itemMatch[1]);
-      const field = itemMatch[2] || '';
-      
-      if (!itemChanges.has(itemIndex)) {
-        itemChanges.set(itemIndex, {
-          fields: new Set(),
-          newDocs: 0,
-          changes: []
-        });
-      }
-      
-      const item = itemChanges.get(itemIndex);
-      
-      if (field.includes('supportingDocuments') && d.type === 'array_item_added') {
-        item.newDocs++;
-        if (d.value && d.value.title) {
-          item.changes.push(`  - New document: ${d.value.title}`);
-        }
-      } else if (field.includes('title')) {
-        item.fields.add('title');
-      } else if (field.includes('background')) {
-        item.fields.add('background');
-      } else if (field.includes('summary')) {
-        item.fields.add('summary');
-      } else if (field) {
-        item.fields.add(field.split('.')[0]);
-      }
-    } else {
-      // Global change (not in an agendaItem)
-      globalChanges.push({ path, type: d.type });
-    }
+function formatSummary(oldData, newData) {
+  const lines = [];
+  let urlOnlyCount = 0;
+  let hasMeaningfulChange = false;
+
+  // 1. agendaType change
+  if (oldData.agendaType !== newData.agendaType) {
+    hasMeaningfulChange = true;
+    lines.push(`**Agenda type:** ${oldData.agendaType} → ${newData.agendaType}\n`);
   }
-  
-  const lines = ['# Changes Summary\n'];
-  
-  if (globalChanges.length > 0) {
-    lines.push('## Global Changes');
-    for (const change of globalChanges) {
-      lines.push(`- ${change.path}`);
+
+  // 2. Agenda items added/removed by stable agendaItemId
+  const oldItems = oldData.agendaItems || [];
+  const newItems = newData.agendaItems || [];
+  const oldById = new Map(oldItems.map(i => [i.agendaItemId, i]));
+  const newById = new Map(newItems.map(i => [i.agendaItemId, i]));
+  const addedIds = [...newById.keys()].filter(id => !oldById.has(id));
+  const removedIds = [...oldById.keys()].filter(id => !newById.has(id));
+
+  if (addedIds.length > 0 || removedIds.length > 0 || oldItems.length !== newItems.length) {
+    hasMeaningfulChange = true;
+    const countPart = oldItems.length !== newItems.length
+      ? `${oldItems.length} → ${newItems.length}`
+      : `${newItems.length}`;
+    const addedPart = addedIds.length > 0
+      ? addedIds.map(id => {
+          const item = newById.get(id);
+          const label = item && item.fileNumber ? `${item.fileNumber} (${id})` : id;
+          return `added ${label}`;
+        }).join(', ')
+      : '';
+    const removedPart = removedIds.length > 0
+      ? removedIds.map(id => {
+          const item = oldById.get(id);
+          const label = item && item.fileNumber ? `${item.fileNumber} (${id})` : id;
+          return `removed ${label}`;
+        }).join(', ')
+      : '';
+    const changes = [addedPart, removedPart].filter(Boolean).join('; ');
+    lines.push(`**Items:** ${countPart}${changes ? ` (${changes})` : ''}\n`);
+  }
+
+  // 3. Financial summary delta — compare by fileNumber, not by array index
+  const oldFS = oldData.financialSummary || {};
+  const newFS = newData.financialSummary || {};
+  const oldExpItems = oldFS.expenditureItems || [];
+  const newExpItems = newFS.expenditureItems || [];
+  const oldByFile = new Map(oldExpItems.map(i => [i.fileNumber, i]));
+  const newByFile = new Map(newExpItems.map(i => [i.fileNumber, i]));
+  const droppedFromSummary = [...oldByFile.keys()].filter(fn => !newByFile.has(fn));
+  const addedToSummary = [...newByFile.keys()].filter(fn => !oldByFile.has(fn));
+  const amountChanged = [...newByFile.keys()]
+    .filter(fn => oldByFile.has(fn) && oldByFile.get(fn).amount !== newByFile.get(fn).amount)
+    .map(fn => ({ fn, old: oldByFile.get(fn).formatted, new: newByFile.get(fn).formatted }));
+
+  const totalChanged = oldFS.formattedTotalAmountDiscussed !== newFS.formattedTotalAmountDiscussed;
+  const itemCountChanged = (oldFS.itemCount || oldExpItems.length) !== (newFS.itemCount || newExpItems.length);
+
+  if (totalChanged || itemCountChanged || droppedFromSummary.length > 0 || addedToSummary.length > 0 || amountChanged.length > 0) {
+    hasMeaningfulChange = true;
+    const totalStr = totalChanged
+      ? `${oldFS.formattedTotalAmountDiscussed} → ${newFS.formattedTotalAmountDiscussed}`
+      : (oldFS.formattedTotalAmountDiscussed || '(unknown)');
+    const oldCount = oldFS.itemCount != null ? oldFS.itemCount : oldExpItems.length;
+    const newCount = newFS.itemCount != null ? newFS.itemCount : newExpItems.length;
+    const countStr = itemCountChanged ? `${oldCount} → ${newCount}` : `${newCount}`;
+    lines.push(`**Financial summary:** ${totalStr} across ${countStr} items`);
+    lines.push(`  - Dropped from summary: ${droppedFromSummary.length > 0 ? droppedFromSummary.join(', ') : '(none)'}`);
+    lines.push(`  - Newly in summary: ${addedToSummary.length > 0 ? addedToSummary.join(', ') : '(none)'}`);
+    if (amountChanged.length > 0) {
+      lines.push(`  - Amount changed: ${amountChanged.map(c => `${c.fn} (${c.old} → ${c.new})`).join('; ')}`);
     }
     lines.push('');
   }
-  
-  if (itemChanges.size > 0) {
-    lines.push('## Agenda Items Changed\n');
-    
-    const sortedItems = Array.from(itemChanges.entries()).sort((a, b) => a[0] - b[0]);
-    
-    for (const [itemIndex, info] of sortedItems) {
-      const fields = Array.from(info.fields);
-      let summary = `**Item #${itemIndex}**`;
-      
-      if (info.newDocs > 0) {
-        summary += ` - ${info.newDocs} new document${info.newDocs > 1 ? 's' : ''}`;
-      }
-      if (fields.length > 0) {
-        summary += ` - Modified: ${fields.join(', ')}`;
-      }
-      
-      lines.push(summary);
-      
-      if (info.changes.length > 0) {
-        lines.push(...info.changes);
-      }
-      lines.push('');
+
+  // 4. Genuinely new/removed documents — compare by title key, not by index
+  const docKey = doc => (doc.title || doc.originalText || '').trim().toUpperCase();
+  const newDocsByItem = [];
+
+  for (const [id, newItem] of newById) {
+    if (!oldById.has(id)) continue; // brand-new item — already reported above
+    const oldItem = oldById.get(id);
+    const oldDocKeys = new Set((oldItem.supportingDocuments || []).map(docKey).filter(k => k));
+    const newDocs = newItem.supportingDocuments || [];
+    const genuinelyNew = newDocs.filter(doc => {
+      const key = docKey(doc);
+      return key && !oldDocKeys.has(key);
+    });
+    newDocs.forEach(doc => {
+      const key = docKey(doc);
+      if (key && oldDocKeys.has(key)) urlOnlyCount++;
+    });
+    if (genuinelyNew.length > 0) {
+      newDocsByItem.push({ id, item: newItem, docs: genuinelyNew });
     }
   }
-  
+
+  if (newDocsByItem.length > 0) {
+    hasMeaningfulChange = true;
+    lines.push('**New documents:**');
+    for (const { id, item, docs } of newDocsByItem) {
+      const label = item.fileNumber ? item.fileNumber : `agendaItemId=${id}`;
+      lines.push(`  - ${label} (agendaItemId=${id}): ${docs.length} new document${docs.length !== 1 ? 's' : ''}`);
+      for (const doc of docs) {
+        lines.push(`    - ${docKey(doc)}`);
+      }
+    }
+    lines.push('');
+  }
+
+  if (urlOnlyCount > 0) {
+    lines.push(`_Note: ${urlOnlyCount} document URLs changed (publishId rotation only — suppressed)_\n`);
+  }
+
+  if (!hasMeaningfulChange) {
+    return '✅ No meaningful changes (URL-only changes ignored)';
+  }
+
   return lines.join('\n');
 }
 
@@ -250,13 +285,12 @@ try {
   
   newData = JSON.parse(fs.readFileSync(filteredArgs[1], 'utf-8'));
   
-  const diffs = deepEqual(oldData, newData);
-  
-  if (diffs.length === 0) {
-    console.log('✅ No meaningful changes (URL-only changes ignored)');
+  if (summaryMode) {
+    console.log(formatSummary(oldData, newData));
   } else {
-    if (summaryMode) {
-      console.log(formatDiff(diffs, true));
+    const diffs = deepEqual(oldData, newData);
+    if (diffs.length === 0) {
+      console.log('✅ No meaningful changes (URL-only changes ignored)');
     } else {
       console.log(`\n🔍 Found ${diffs.length} meaningful changes:\n`);
       console.log(formatDiff(diffs));
