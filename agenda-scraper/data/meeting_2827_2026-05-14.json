@@ -1,0 +1,944 @@
+{
+  "meetingId": "2827",
+  "meetingType": "cra",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "May 14, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2827&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "23728",
+      "title": "File No. CRA24-2242\nYbor CAC Chair, Tom DeGeorge, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "rawTitle": "File No. CRA24-2242\nYbor CAC Chair, Tom DeGeorge, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "fileNumber": "CRA24-2242",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 2,
+      "agendaItemId": "23729",
+      "title": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting May Project Tracking Report, Commercial Grants Tracking Report, Residential Grants Tracking Report, and Housing Grants Tracking Report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting May Project Tracking Report, Commercial Grants Tracking Report, Residential Grants Tracking Report, and Housing Grants Tracking Report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA24-2241",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DIRECTORSREPORT(CRA24-2241;ONBASENO.23729).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DIRECTORSREPORT(CRA24-2241%3bONBASENO.23729).PDF.pdf?documentType=1&meetingId=2827&itemId=23729&publishId=193446&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DIRECTORSREPORT(CRA24-2241;ONBASENO.23729).PDF in a new tab",
+          "originalText": "DIRECTORSREPORT(CRA24-2241;ONBASENO.23729).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 3,
+      "agendaItemId": "23722",
+      "title": "File No. CRA26-23722\nWest Tampa - Rey Park Program Change - 2301 N. Howard Avenue\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-23722\nWest Tampa - Rey Park Program Change - 2301 N. Howard Avenue\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-23722",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ADA -WT CRA PROGRAM CHANGE - WEST TAMPA CRA REALIGN FUNDS FOR STREETSCAPE - MAY 2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ADA%20-WT%20CRA%20PROGRAM%20CHANGE%20-%20WEST%20TAMPA%20CRA%20REALIGN%20FUNDS%20FOR%20STREETSCAPE%20.pdf?documentType=1&meetingId=2827&itemId=23722&publishId=193447&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ADA -WT CRA PROGRAM CHANGE - WEST TAMPA CRA REALIGN FUNDS FOR STREETSCAPE - MAY 2026.PDF in a new tab",
+          "originalText": "ADA -WT CRA PROGRAM CHANGE - WEST TAMPA CRA REALIGN FUNDS FOR STREETSCAPE - MAY 2026.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2827&itemId=23722&publishId=193448&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "WTREYPARKPROGRAMCHANGE(CRA26-23722;ONBASENO.23722).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WTREYPARKPROGRAMCHANGE(CRA26-23722%3bONBASENO.23722).PDF.pdf?documentType=1&meetingId=2827&itemId=23722&publishId=193449&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WTREYPARKPROGRAMCHANGE(CRA26-23722;ONBASENO.23722).PDF in a new tab",
+          "originalText": "WTREYPARKPROGRAMCHANGE(CRA26-23722;ONBASENO.23722).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$1,000,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$1,000,000",
+          "value": 1000000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "SubjectStaff request to realign FY26 funds in the amount of $1,000,000 for the Rey ContactMia Dorton 813-274-8643",
+            "Park Streetscape program by moving $1,000,0000 from the West Tampa",
+            "ContactMia Dorton 813-274-8643 SubjectStaff request to realign FY26 funds in the amount of $1,000,000 for the Rey",
+            "SubjectStaff request to realign FY26 funds in the amount of $1,000,000 for the Rey Park Streetscape program by moving $1,000,0000 from the West Tampa"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 1000000,
+        "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        4/29/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectStaff request to realign FY26 funds in the amount of $1,000,000 for the Rey \nPark Streetscape program by moving $1,000,0000 from the West Tampa \nDistrict Improvements line item to a new Rey Park Streetscape Improvements \nline item.\nResolution / \nOrdinance \nTitle\nWest Tampa - Rey Park Program Change - 2301 N. Howard Avenue\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton4/30/2026 1:51:25 PMSubmitter\nSherri Scott4/30/2026 2:15:10 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "23723",
+      "title": "File No. CRA26-23723\nEast Tampa FY26 Budget Reprogramming\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-23723\nEast Tampa FY26 Budget Reprogramming\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-23723",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ADA ET - FY26 PROPOSED BUDGET CHANGES - V.2.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ADA%20ET%20-%20FY26%20PROPOSED%20BUDGET%20CHANGES%20-%20V.2.PDF.pdf?documentType=1&meetingId=2827&itemId=23723&publishId=193450&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ADA ET - FY26 PROPOSED BUDGET CHANGES - V.2.PDF in a new tab",
+          "originalText": "ADA ET - FY26 PROPOSED BUDGET CHANGES - V.2.PDF"
+        },
+        {
+          "title": "ADA- ET - FY26 REPROGRAMMING CHART.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ADA-%20ET%20-%20FY26%20REPROGRAMMING%20CHART.PDF.pdf?documentType=1&meetingId=2827&itemId=23723&publishId=193451&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ADA- ET - FY26 REPROGRAMMING CHART.PDF in a new tab",
+          "originalText": "ADA- ET - FY26 REPROGRAMMING CHART.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2827&itemId=23723&publishId=193452&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "ETBUDGETREPROGRAM(CRA26-23723;ONBASENO.23723).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ETBUDGETREPROGRAM(CRA26-23723%3bONBASENO.23723).PDF.pdf?documentType=1&meetingId=2827&itemId=23723&publishId=193453&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ETBUDGETREPROGRAM(CRA26-23723;ONBASENO.23723).PDF in a new tab",
+          "originalText": "ETBUDGETREPROGRAM(CRA26-23723;ONBASENO.23723).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        4/29/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectStaff recommends that the CRA Board approve the proposed FY26 East \nTampa CRA budget reprogramming, as recommended by the East Tampa \nCAC, to realign existing resources with priority redevelopment and housing \ninitiatives within the East Tampa CRA.\nResolution / \nOrdinance \nTitle\nEast Tampa FY26 Budget Reprogramming\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton4/30/2026 1:51:15 PMSubmitter\nSherri Scott4/30/2026 2:14:21 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "23724",
+      "title": "File No. CRA26-23724 \nChannel District CRA - Ybor Harbor - Special Project Funding Request\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-23724 \nChannel District CRA - Ybor Harbor - Special Project Funding Request\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-23724",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "YBOR HARBOR AWARD CHECKLIST - ADA (SIGNED) V2.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/YBOR%20HARBOR%20AWARD%20CHECKLIST%20-%20ADA%20(SIGNED)%20V2.PDF.pdf?documentType=1&meetingId=2827&itemId=23724&publishId=193454&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of YBOR HARBOR AWARD CHECKLIST - ADA (SIGNED) V2.PDF in a new tab",
+          "originalText": "YBOR HARBOR AWARD CHECKLIST - ADA (SIGNED) V2.PDF"
+        },
+        {
+          "title": "YBOR HARBOR_INFRASTRUCTURE OVERVIEW_CONDENSED PRESENTATION DECK_5.14.2026-3RD PARTY.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/YBOR%20HARBOR_INFRASTRUCTURE%20OVERVIEW_CONDENSED%20PRESENTATION%20DECK_5.14.2026-3RD%20PARTY.PDF.pdf?documentType=1&meetingId=2827&itemId=23724&publishId=193455&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of YBOR HARBOR_INFRASTRUCTURE OVERVIEW_CONDENSED PRESENTATION DECK_5.14.2026-3RD PARTY.PDF in a new tab",
+          "originalText": "YBOR HARBOR_INFRASTRUCTURE OVERVIEW_CONDENSED PRESENTATION DECK_5.14.2026-3RD PARTY.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2827&itemId=23724&publishId=193456&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "CDYBORHARBORSPECIALPROJECTFUNDING(CRA26-23724;ONBASENO.23724).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CDYBORHARBORSPECIALPROJECTFUNDING(CRA26-23724%3bONBASENO.23724).PDF.pdf?documentType=1&meetingId=2827&itemId=23724&publishId=193457&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CDYBORHARBORSPECIALPROJECTFUNDING(CRA26-23724;ONBASENO.23724).PDF in a new tab",
+          "originalText": "CDYBORHARBORSPECIALPROJECTFUNDING(CRA26-23724;ONBASENO.23724).PDF"
+        },
+        {
+          "title": "CDYBORHARBORSPECIALPROJECTFUNDINGPPT(CRA26-23724;ONBASENO.23724).PPTX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CDYBORHARBORSPECIALPROJECTFUNDINGPPT(CRA26-23724%3bONBASENO.23724).PPTX.pdf?documentType=1&meetingId=2827&itemId=23724&publishId=193458&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CDYBORHARBORSPECIALPROJECTFUNDINGPPT(CRA26-23724;ONBASENO.23724).PPTX in a new tab",
+          "originalText": "CDYBORHARBORSPECIALPROJECTFUNDINGPPT(CRA26-23724;ONBASENO.23724).PPTX"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$35,000,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$35,000,000",
+          "value": 35000000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "request in the amount of $35,000,000 over five fiscal years. Channel District budget allocations, CRA staff recommend funding this",
+            "Channel District budget allocations, CRA staff recommend funding this request in the amount of $35,000,000 over five fiscal years."
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 35000000,
+        "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        4/29/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectAfter reviewing the applicant’s funding request and the current and future \nChannel District budget allocations, CRA staff recommend funding this \nrequest in the amount of $35,000,000 over five fiscal years.\nResolution / \nOrdinance \nTitle\nChannel District CRA - Ybor Harbor - Special Project Funding Request\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton4/30/2026 1:51:05 PMSubmitter\nSherri Scott4/30/2026 2:17:11 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      }
+    },
+    {
+      "number": 6,
+      "agendaItemId": "23725",
+      "title": "File No. CRA26-23725\nEast Tampa CRA - East Tampa Community Opportunity Center (Gator Building Site) Request for Authorization to Issue Development Feasibility Assessment RFQ\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-23725\nEast Tampa CRA - East Tampa Community Opportunity Center (Gator Building Site) Request for Authorization to Issue Development Feasibility Assessment RFQ\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-23725",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ET COMMUNITY OPPORTUNITY CENTER- RFQ FOR ASSESSMENT  5-14-26  - CRA BOARD - ADA.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ET%20COMMUNITY%20OPPORTUNITY%20CENTER-%20RFQ%20FOR%20ASSESSMENT%20%205-14-26%20%20-%20CRA%20BOARD%20.pdf?documentType=1&meetingId=2827&itemId=23725&publishId=193459&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ET COMMUNITY OPPORTUNITY CENTER- RFQ FOR ASSESSMENT  5-14-26  - CRA BOARD - ADA.PDF in a new tab",
+          "originalText": "ET COMMUNITY OPPORTUNITY CENTER- RFQ FOR ASSESSMENT  5-14-26  - CRA BOARD - ADA.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2827&itemId=23725&publishId=193460&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725).PDF.pdf?documentType=1&meetingId=2827&itemId=23725&publishId=193461&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725).PDF in a new tab",
+          "originalText": "ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725).PDF"
+        },
+        {
+          "title": "ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725)PPT.PPTX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725)PPT.PPTX.pdf?documentType=1&meetingId=2827&itemId=23725&publishId=193462&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725)PPT.PPTX in a new tab",
+          "originalText": "ETCOMMUNITYOPPORTUNITYCENTER(GATORBUILDINGSITE)(ONBASENO.23725)PPT.PPTX"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        4/29/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectStaff are requesting authorization to issue an RFQ to identify and select a \nDevelopment Feasibility Consultant to support feasibility analysis, community \nengagement, and conceptual development for the East Tampa Community \nOpportunity Center.\nResolution / \nOrdinance \nTitle\nEast Tampa CRA - East Tampa Community Opportunity Center (Gator \nBuilding Site) Request for Authorization\nto Issue Development Feasibility Assessment RFQ\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton4/30/2026 1:50:16 PMSubmitter\nSherri Scott5/6/2026 4:06:47 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      }
+    },
+    {
+      "number": 7,
+      "agendaItemId": "23730",
+      "title": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)(Said agenda item continued from January 15, 2026 due to meeting cancellation)\n\nMemorandum from Adriana Colina, Director of Logistics and Asset Management, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19842\nCRA Staff to provide a monthly update on Tampa Union Station. (Original motion initiated by Carlson-Maniscalco on December 11, 2025)(Said agenda item continued from January 15, 2026 due to meeting cancellation)\n\nMemorandum from Adriana Colina, Director of Logistics and Asset Management, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19842",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TAMPAUNIONSTATION(FILENO.CRA25-19842%3bONBASENO.22054).PDF.pdf?documentType=1&meetingId=2827&itemId=23730&publishId=193463&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF in a new tab",
+          "originalText": "TAMPAUNIONSTATION(FILENO.CRA25-19842;ONBASENO.22054).PDF"
+        },
+        {
+          "title": "TAMPA UNION STATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TAMPA%20UNION%20STATION.PDF.pdf?documentType=1&meetingId=2827&itemId=23730&publishId=193464&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TAMPA UNION STATION.PDF in a new tab",
+          "originalText": "TAMPA UNION STATION.PDF"
+        },
+        {
+          "title": "TAMPAUNIONSTATIONMONTHLYUPDATE(FILENO.CRA25-19842;ONBASENO.23730).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TAMPAUNIONSTATIONMONTHLYUPDATE(FILENO.CRA25-19842%3bONBASENO.23730).PDF.pdf?documentType=1&meetingId=2827&itemId=23730&publishId=193465&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TAMPAUNIONSTATIONMONTHLYUPDATE(FILENO.CRA25-19842;ONBASENO.23730).PDF in a new tab",
+          "originalText": "TAMPAUNIONSTATIONMONTHLYUPDATE(FILENO.CRA25-19842;ONBASENO.23730).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 8,
+      "agendaItemId": "21595",
+      "title": "File No. CRA26-21595\nCRA Staff to present on the feasibility within our different CRAs, and to have one position in each of the CRA Boards that is designated to an organization that promotes Civil Rights. (Original motion initiated by Viera-Maniscalco on February 12, 2026)",
+      "rawTitle": "File No. CRA26-21595\nCRA Staff to present on the feasibility within our different CRAs, and to have one position in each of the CRA Boards that is designated to an organization that promotes Civil Rights. (Original motion initiated by Viera-Maniscalco on February 12, 2026)",
+      "fileNumber": "CRA26-21595",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 9,
+      "agendaItemId": "21596",
+      "title": "File No. CRA26-21596\nCRA Staff and the Parks and Recreation Department to work with Karen Clay, Disability Community Advocate, to identify a park and to fund disability friendly equipment and provide report. (Original motion initiated by Viera-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-21596\nCRA Staff and the Parks and Recreation Department to work with Karen Clay, Disability Community Advocate, to identify a park and to fund disability friendly equipment and provide report. (Original motion initiated by Viera-Maniscalco on February 12, 2026)\n\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-21596",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DISABILITYFRIENDLYPARKEQUIPMENT(FILENO.CRA26-21596;ONBASENO.21596).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DISABILITYFRIENDLYPARKEQUIPMENT(FILENO.CRA26-21596%3bONBASENO.21596).PDF.pdf?documentType=1&meetingId=2827&itemId=21596&publishId=193466&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DISABILITYFRIENDLYPARKEQUIPMENT(FILENO.CRA26-21596;ONBASENO.21596).PDF in a new tab",
+          "originalText": "DISABILITYFRIENDLYPARKEQUIPMENT(FILENO.CRA26-21596;ONBASENO.21596).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 10,
+      "agendaItemId": "23731",
+      "title": "File No. CRA26-22463\nEast Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750. (Continued from April 9, 2026)\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-22463\nEast Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750. (Continued from April 9, 2026)\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-22463",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2025.030.00%20COT%20-EAST%20TAMPA%20CRA%20WAYFINDING%20AS1.PDF.pdf?documentType=1&meetingId=2827&itemId=23731&publishId=193467&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1.PDF in a new tab",
+          "originalText": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1.PDF"
+        },
+        {
+          "title": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1 REV1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2025.030.00%20COT%20-EAST%20TAMPA%20CRA%20WAYFINDING%20AS1%20REV1.PDF.pdf?documentType=1&meetingId=2827&itemId=23731&publishId=193468&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1 REV1.PDF in a new tab",
+          "originalText": "2025.030.00 COT -EAST TAMPA CRA WAYFINDING AS1 REV1.PDF"
+        },
+        {
+          "title": "ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463;ONBASENO.22463).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463%3bONBASENO.22463).PDF.pdf?documentType=1&meetingId=2827&itemId=23731&publishId=193469&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463;ONBASENO.22463).PDF in a new tab",
+          "originalText": "ETWAYFINDINGGATEWAYSIGNAGEPROJECT(CRA26-22463;ONBASENO.22463).PDF"
+        },
+        {
+          "title": "ETWAYFINDINGANDGATEWAYSIGNAGE(CRA26-22463;ONBASENO.23731).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ETWAYFINDINGANDGATEWAYSIGNAGE(CRA26-22463%3bONBASENO.23731).PDF.pdf?documentType=1&meetingId=2827&itemId=23731&publishId=193470&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ETWAYFINDINGANDGATEWAYSIGNAGE(CRA26-22463;ONBASENO.23731).PDF in a new tab",
+          "originalText": "ETWAYFINDINGANDGATEWAYSIGNAGE(CRA26-22463;ONBASENO.23731).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$83,750"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$83,750",
+          "value": 83750,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "File No. CRA26-22463 East Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750. (Continued from April 9, 2026)",
+            "File No. CRA26-22463East Tampa CRA- Wayfinding and Gateway Signage Project - Neighborhood Signage Direction and Additional Services Authorization - After coordinating with the City of Tampa Community Engagement and Partnerships Department, and reviewing feasibility considerations related to neighborhood signage, staff recommends that the CRA Board proceed with Option 2 – Expanded Wayfinding System without neighborhood signage, approving the Additional Services proposal in the amount of $83,750. (Continued from April 9, 2026) Memorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)"
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 83750,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 11,
+      "agendaItemId": "23726",
+      "title": "File No. CRA26-23726\nWest Tampa CRA - Special Projects Funding Request - Dr. Walter L. Smith Library & Museum Renovations\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-23726\nWest Tampa CRA - Special Projects Funding Request - Dr. Walter L. Smith Library & Museum Renovations\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-23726",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "WALTER SMITH LIBRARY AWARD MAKING CHECKLIST - ADA (SIGNED)V1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WALTER%20SMITH%20LIBRARY%20AWARD%20MAKING%20CHECKLIST%20-%20ADA%20(SIGNED)V1.PDF.pdf?documentType=1&meetingId=2827&itemId=23726&publishId=193471&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WALTER SMITH LIBRARY AWARD MAKING CHECKLIST - ADA (SIGNED)V1.PDF in a new tab",
+          "originalText": "WALTER SMITH LIBRARY AWARD MAKING CHECKLIST - ADA (SIGNED)V1.PDF"
+        },
+        {
+          "title": "PRESENTATION FOR  WLS LIBRARY PITCH FINAL-3RD PARTY.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/PRESENTATION%20FOR%20%20WLS%20LIBRARY%20PITCH%20FINAL-3RD%20PARTY.PDF.pdf?documentType=1&meetingId=2827&itemId=23726&publishId=193472&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of PRESENTATION FOR  WLS LIBRARY PITCH FINAL-3RD PARTY.PDF in a new tab",
+          "originalText": "PRESENTATION FOR  WLS LIBRARY PITCH FINAL-3RD PARTY.PDF"
+        },
+        {
+          "title": "WTSPECIALPROJECTFUNDINGREQUESTDR.WALTERL.SMITHLIBRARY(CRA26-23726;ONBASENO.23726).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WTSPECIALPROJECTFUNDINGREQUESTDR.WALTERL.SMITHLIBRARY(CRA26-23726%3bONBASENO.23726).PDF.pdf?documentType=1&meetingId=2827&itemId=23726&publishId=193473&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WTSPECIALPROJECTFUNDINGREQUESTDR.WALTERL.SMITHLIBRARY(CRA26-23726;ONBASENO.23726).PDF in a new tab",
+          "originalText": "WTSPECIALPROJECTFUNDINGREQUESTDR.WALTERL.SMITHLIBRARY(CRA26-23726;ONBASENO.23726).PDF"
+        },
+        {
+          "title": "WTSPECIALPROJECTSFUNDINGREQUESTDR.WALTERL.SMITHLIBRARYPPT(CRA26-23726;ONBASENO.23726).PPTX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WTSPECIALPROJECTSFUNDINGREQUESTDR.WALTERL.SMITHLIBRARYPPT(CRA26-23726%3bONBASENO.23726).PPTX.pdf?documentType=1&meetingId=2827&itemId=23726&publishId=193474&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WTSPECIALPROJECTSFUNDINGREQUESTDR.WALTERL.SMITHLIBRARYPPT(CRA26-23726;ONBASENO.23726).PPTX in a new tab",
+          "originalText": "WTSPECIALPROJECTSFUNDINGREQUESTDR.WALTERL.SMITHLIBRARYPPT(CRA26-23726;ONBASENO.23726).PPTX"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 12,
+      "agendaItemId": "23727",
+      "title": "File No. CRA26-23727\nDrew Park CRA - FY26 Budget Reprogramming\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA26-23727\nDrew Park CRA - FY26 Budget Reprogramming\n\nMemorandum from Feliz Nunez, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CRA26-23727",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "DP FY 26 BUDGET REPROGRAMMING CHART - ADA PROOF.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DP%20FY%2026%20BUDGET%20REPROGRAMMING%20CHART%20-%20ADA%20PROOF.PDF.pdf?documentType=1&meetingId=2827&itemId=23727&publishId=193475&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DP FY 26 BUDGET REPROGRAMMING CHART - ADA PROOF.PDF in a new tab",
+          "originalText": "DP FY 26 BUDGET REPROGRAMMING CHART - ADA PROOF.PDF"
+        },
+        {
+          "title": "DP FY 26 PROPOSED BUDGET CHANGES - ADA COMPLIANT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DP%20FY%2026%20PROPOSED%20BUDGET%20CHANGES%20-%20ADA%20COMPLIANT.PDF.pdf?documentType=1&meetingId=2827&itemId=23727&publishId=193476&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DP FY 26 PROPOSED BUDGET CHANGES - ADA COMPLIANT.PDF in a new tab",
+          "originalText": "DP FY 26 PROPOSED BUDGET CHANGES - ADA COMPLIANT.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2827&itemId=23727&publishId=193477&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "DPBUDGETREPROGRAM(CRA26-23727;ONBASENO.23727).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DPBUDGETREPROGRAM(CRA26-23727%3bONBASENO.23727).PDF.pdf?documentType=1&meetingId=2827&itemId=23727&publishId=193478&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DPBUDGETREPROGRAM(CRA26-23727;ONBASENO.23727).PDF in a new tab",
+          "originalText": "DPBUDGETREPROGRAM(CRA26-23727;ONBASENO.23727).PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$8,194,824.25"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$8,194,824.25",
+          "value": 8194824.25,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "SubjectThe proposed reprogramming reallocates a total of $8,194,824.25 within the ContactMia Dorton 813-274-8643",
+            "ContactMia Dorton 813-274-8643 SubjectThe proposed reprogramming reallocates a total of $8,194,824.25 within the"
+          ],
+          "sources": [
+            "summary",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 8194824.25,
+        "net": 0
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        4/29/2026\nRequested Meeting Date: 5/14/2026\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectThe proposed reprogramming reallocates a total of $8,194,824.25 within the \nexisting FY26 Drew Park CRA budget. This action does not increase the \noverall budget and is intended to better align available resources with current \nredevelopment priorities.\nResolution / \nOrdinance \nTitle\nDrew Park CRA - FY26 Budget Reprogramming\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton4/30/2026 11:50:43 AMSubmitter\nSherri Scott4/30/2026 11:52:54 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      }
+    },
+    {
+      "number": 13,
+      "agendaItemId": "22718",
+      "title": "File No. CRA26-22718 \nMulti District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes:\n\n•\tCentral Park $21,250 \n•\tChannel District $3,750 \n•\tDowntown $182,935\n•\tTampa Heights Riverfront $23,858.75\nTotal = $231,793.75",
+      "rawTitle": "File No. CRA26-22718 \nMulti District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes:\n\n•\tCentral Park $21,250 \n•\tChannel District $3,750 \n•\tDowntown $182,935\n•\tTampa Heights Riverfront $23,858.75\nTotal = $231,793.75",
+      "fileNumber": "CRA26-22718",
+      "background": "api(+)’s original multi-district wayfinding scope of work (Resolution No. 2025-651 / Contract25-D-00008) included the development and placement of 150 signs. Following field verification of each proposed location and a comprehensive inventory of existing CRA-located Riverwalk signage, the total program was expanded to 280 signs - comprising 55 right-of-way signs and 75 Riverwalk signs - reflecting a more coordinated and complete wayfinding network.",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2827&itemId=22718&publishId=193479&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "2025.029.00 COT -MULTI DISTRICT AND RIVERWALK WAYFINDING AS1(REV1).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2025.029.00%20COT%20-MULTI%20DISTRICT%20AND%20RIVERWALK%20WAYFINDING%20AS1(REV1).PDF.pdf?documentType=1&meetingId=2827&itemId=22718&publishId=193480&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2025.029.00 COT -MULTI DISTRICT AND RIVERWALK WAYFINDING AS1(REV1).PDF in a new tab",
+          "originalText": "2025.029.00 COT -MULTI DISTRICT AND RIVERWALK WAYFINDING AS1(REV1).PDF"
+        },
+        {
+          "title": "ADA CRA REALIGN FUNDS FOR WAYFINDING - APR 2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ADA%20CRA%20REALIGN%20FUNDS%20FOR%20WAYFINDING%20-%20APR%202026.PDF.pdf?documentType=1&meetingId=2827&itemId=22718&publishId=193481&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ADA CRA REALIGN FUNDS FOR WAYFINDING - APR 2026.PDF in a new tab",
+          "originalText": "ADA CRA REALIGN FUNDS FOR WAYFINDING - APR 2026.PDF"
+        },
+        {
+          "title": "R 25-D-00008 2025-651 CRA MULTI-DISTRICT WAYFINDING SIGNING DESIGN  -  ARCHITECTURE PLUS  AGRMNT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/R%2025-D-00008%202025-651%20CRA%20MULTI-DISTRICT%20WAYFINDING%20SIGNING%20DESIGN%20%20-%20%20ARCHITE.pdf?documentType=1&meetingId=2827&itemId=22718&publishId=193482&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of R 25-D-00008 2025-651 CRA MULTI-DISTRICT WAYFINDING SIGNING DESIGN  -  ARCHITECTURE PLUS  AGRMNT.PDF in a new tab",
+          "originalText": "R 25-D-00008 2025-651 CRA MULTI-DISTRICT WAYFINDING SIGNING DESIGN  -  ARCHITECTURE PLUS  AGRMNT.PDF"
+        },
+        {
+          "title": "RESO MULTI DISTRICT WAYFINDING ADDITIONAL SCOPE RIVERWALK.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RESO%20MULTI%20DISTRICT%20WAYFINDING%20ADDITIONAL%20SCOPE%20RIVERWALK.PDF.pdf?documentType=1&meetingId=2827&itemId=22718&publishId=193483&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RESO MULTI DISTRICT WAYFINDING ADDITIONAL SCOPE RIVERWALK.PDF in a new tab",
+          "originalText": "RESO MULTI DISTRICT WAYFINDING ADDITIONAL SCOPE RIVERWALK.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$21,250",
+        "$3,750",
+        "$182,935",
+        "$23,858.75",
+        "$231,793.75"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$21,250",
+          "value": 21250,
+          "signedValue": 21250,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "•Central Park $21,250 amendment to the existing contract with the following program changes:",
+            "PROJECTED COSTS: 61800 213800 563001 0000 1001550 $21,250 (Expenditure Downtown Non-Core and Tampa Heights CRA funds.",
+            "61800 213800 563001 0000 1002383 $21,250 (Expenditure) P-1001550, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304",
+            "Multi District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes: •\tCentral Park $21,250",
+            "File No. CRA26-22718 Multi District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes: •  Central Park $21,250 •  Channel District $3,750 •  Downtown $182,935• Tampa Heights Riverfront $23,858.75Total = $231,793.75",
+            "amendment to the existing contract with the following program changes: •Central Park $21,250",
+            "Downtown Non-Core and Tampa Heights CRA funds. PROJECTED COSTS: 61800 213800 563001 0000 1001550 $21,250 (Expenditure",
+            "P-1001550, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304 61800 213800 563001 0000 1002383 $21,250 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$3,750",
+          "value": 3750,
+          "signedValue": 3750,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "•Channel District $3,750",
+            "61900 213800 563001 0000 0000491 $3,750 (Expenditure Decrease) P-1002383, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304",
+            "61900 213800 563001 0000 1002174 $3,750 (Expenditure) P-0000491, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-000165",
+            "•\tCentral Park $21,250 •\tChannel District $3,750",
+            "File No. CRA26-22718 Multi District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes: •  Central Park $21,250 •  Channel District $3,750 •  Downtown $182,935• Tampa Heights Riverfront $23,858.75Total = $231,793.75",
+            "•Central Park $21,250 •Channel District $3,750",
+            "P-1002383, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304 61900 213800 563001 0000 0000491 $3,750 (Expenditure Decrease)",
+            "P-0000491, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-000165 61900 213800 563001 0000 1002174 $3,750 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$182,935",
+          "value": 182935,
+          "signedValue": 182935,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "• Downtown $182,935",
+            "62200 213800 563001 0000 0000489 $182,935 (Expenditure Decrease) P-10002174, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-0000165",
+            "62200 213800 563001 0000 1002176 $182,935 (Expenditure) P-0000489, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202",
+            "•\tChannel District $3,750 •\tDowntown $182,935",
+            "File No. CRA26-22718 Multi District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes: •  Central Park $21,250 •  Channel District $3,750 •  Downtown $182,935• Tampa Heights Riverfront $23,858.75Total = $231,793.75",
+            "•Channel District $3,750 • Downtown $182,935",
+            "P-10002174, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-0000165 62200 213800 563001 0000 0000489 $182,935 (Expenditure Decrease)",
+            "P-0000489, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202 62200 213800 563001 0000 1002176 $182,935 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$23,858.75",
+          "value": 23858.75,
+          "signedValue": 23858.75,
+          "type": "expenditure",
+          "section": "projected_costs",
+          "contexts": [
+            "• Tampa Heights Riverfront $23,858.75",
+            "62500 213800 563001 0000 0000490 $23,858.75 (Expenditure Decrease) P-10002176, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202",
+            "62500 213800 563001 0000 1002653 $23,858.75 (Expenditure) P-0000490, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103",
+            "•\tDowntown $182,935 •\tTampa Heights Riverfront $23,858.75",
+            "File No. CRA26-22718 Multi District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes: •  Central Park $21,250 •  Channel District $3,750 •  Downtown $182,935• Tampa Heights Riverfront $23,858.75Total = $231,793.75",
+            "• Downtown $182,935 • Tampa Heights Riverfront $23,858.75",
+            "P-10002176, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202 62500 213800 563001 0000 0000490 $23,858.75 (Expenditure Decrease)",
+            "P-0000490, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103 62500 213800 563001 0000 1002653 $23,858.75 (Expenditure)"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        },
+        {
+          "amount": "$231,793.75",
+          "value": 231793.75,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": "fiscal_impact",
+          "contexts": [
+            "Total = $231,793.75",
+            "This amendment provides an additional $231,793.75 for 130 more signs than originally FISCAL IMPACT STATEMENT:",
+            "•\tTampa Heights Riverfront $23,858.75 Total = $231,793.75",
+            "File No. CRA26-22718 Multi District Wayfinding Contract Amendment for Additional Signs and CRA-located Riverwalk Signage. CRA staff respectfully request approval of an amendment to the existing contract with the following program changes: •  Central Park $21,250 •  Channel District $3,750 •  Downtown $182,935• Tampa Heights Riverfront $23,858.75Total = $231,793.75",
+            "• Tampa Heights Riverfront $23,858.75 Total = $231,793.75",
+            "FISCAL IMPACT STATEMENT: This amendment provides an additional $231,793.75 for 130 more signs than originally"
+          ],
+          "sources": [
+            "summary",
+            "primary",
+            "additional_0",
+            "additional_1"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 231793.75,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 231793.75,
+        "net": 231793.75
+      },
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        3/26/2026\nRequested Meeting Date: 4/09/2026\nType of Request:                                                  CRA Resolution\nContactMia Dorton 813-274-8643\nSubjectMulti District Wayfinding Contract Amendment for Additional Signs and CRA-\nlocated Riverwalk Signage\nResolution / \nOrdinance \nTitle\nMulti District Wayfinding Contract Amendment for Additional Signs and CRA-\nlocated Riverwalk Signage. CRA staff respectfully request approval of an \namendment to the existing contract with the following program changes:\n•Central Park $21,250 \n•Channel District $3,750 \n• Downtown $182,935\n• Tampa Heights Riverfront $23,858.75\nTotal = $231,793.75\nBACKGROUND:\napi(+)’s original multi-district wayfinding scope of work (Resolution No. 2025-651 / Contract \n25-D-00008) included the development and placement of 150 signs. Following field \nverification of each proposed location and a comprehensive inventory of existing CRA-located \nRiverwalk signage, the total program was expanded to 280 signs - comprising 55 right-of-way \nsigns and 75 Riverwalk signs - reflecting a more coordinated and complete wayfinding \nnetwork.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis amendment provides an additional $231,793.75 for 130 more signs than originally \nproposed, for a more complete wayfinding network and including updates to the previously \nexisting ones, which are over 10 years old, within the Central Park, Channel District, \nDowntown Non-Core and Tampa Heights CRA funds.\nPROJECTED COSTS: 61800 213800 563001 0000 1001550 $21,250 (Expenditure \nDecrease)\nCentral Park CRA. CRA Department. Improvements other than Bldgs.\nP-1001550, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304\n61800 213800 563001 0000 1002383 $21,250 (Expenditure)\nCentral Park CRA. CRA Department. Improvements other than Bldgs.\nP-1002383, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304\n61900 213800 563001 0000 0000491 $3,750 (Expenditure Decrease)\nChannel District CRA. CRA Department. Improvements other than Bldgs.\n\nP-0000491, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-000165  \n61900 213800 563001 0000 1002174 $3,750 (Expenditure)\nChannel District CRA. CRA Department. Improvements other than Bldgs.  \nP-10002174, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-0000165\n62200 213800 563001 0000 0000489 $182,935 (Expenditure Decrease)\nDowntown Non-core CRA. CRA Department. Improvements other than Bldgs.  \nP-0000489, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202\n62200 213800 563001 0000 1002176 $182,935 (Expenditure)\nDowntown Non-core CRA. CRA Department. Improvements other than Bldgs.  \nP-10002176, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202\n62500 213800 563001 0000 0000490 $23,858.75 (Expenditure Decrease)\nTampa Heights CRA. CRA Department. Improvements other than Bldgs.\nP-0000490, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103\n 62500 213800 563001 0000 1002653 $23,858.75 (Expenditure)\nTampa Heights CRA. CRA Department. Improvements other than Bldgs.\nP-10002653, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103\nApproverTimestampRole\nMia Dorton4/30/2026 11:51:41 AMSubmitter\nSherri Scott4/30/2026 11:57:05 AMDepartment Head\nCedric McCray4/30/2026 1:24:48 PMCommunity and Redevelopment Agency\nAstonah Turner5/1/2026 8:36:37 AMAttorney Coordinator\nErin Bradley5/8/2026 11:05:10 AMAssistant City Attorney\nCate Wells5/8/2026 1:11:31 PMCity Attorney\nAmy Murphy5/8/2026 1:32:36 PMFinance Coordinator\nSusan Gobble5/8/2026 3:06:56 PMFinance Fiscal and Lead Analyst\nMichael Perry5/8/2026 3:52:36 PMBudget Operating Manager\nMichael Perry5/8/2026 3:53:03 PMBudget Officer\nDennis Rogero5/8/2026 3:55:39 PMChief Financial Officer\nTamara Lee5/8/2026 3:58:34 PMChief of Staff\nTamara Lee5/8/2026 3:58:44 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This amendment provides an additional $231,793.75 for 130 more signs than originally proposed, for a more complete wayfinding network and including updates to the previously existing ones, which are over 10 years old, within the Central Park, Channel District, Downtown Non-Core and Tampa Heights CRA funds.",
+        "projectedCostsRaw": "61800 213800 563001 0000 1001550 $21,250 (Expenditure \nDecrease)\nCentral Park CRA. CRA Department. Improvements other than Bldgs.\nP-1001550, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304\n61800 213800 563001 0000 1002383 $21,250 (Expenditure)\nCentral Park CRA. CRA Department. Improvements other than Bldgs.\nP-1002383, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304\n61900 213800 563001 0000 0000491 $3,750 (Expenditure Decrease)\nChannel District CRA. CRA Department. Improvements other than Bldgs.\n\nP-0000491, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-000165  \n61900 213800 563001 0000 1002174 $3,750 (Expenditure)\nChannel District CRA. CRA Department. Improvements other than Bldgs.  \nP-10002174, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-0000165\n62200 213800 563001 0000 0000489 $182,935 (Expenditure Decrease)\nDowntown Non-core CRA. CRA Department. Improvements other than Bldgs.  \nP-0000489, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202\n62200 213800 563001 0000 1002176 $182,935 (Expenditure)\nDowntown Non-core CRA. CRA Department. Improvements other than Bldgs.  \nP-10002176, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202\n62500 213800 563001 0000 0000490 $23,858.75 (Expenditure Decrease)\nTampa Heights CRA. CRA Department. Improvements other than Bldgs.\nP-0000490, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103\n 62500 213800 563001 0000 1002653 $23,858.75 (Expenditure)\nTampa Heights CRA. CRA Department. Improvements other than Bldgs.\nP-10002653, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103",
+        "rows": [
+          {
+            "accountCode": "61800.213800.563001",
+            "fund": "61800",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$21,250",
+            "value": 21250,
+            "type": "expenditure",
+            "signedValue": 21250,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Central Park CRA. CRA Department. Improvements other than Bldgs. P-1001550, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304"
+          },
+          {
+            "accountCode": "61800.213800.563001",
+            "fund": "61800",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$21,250",
+            "value": 21250,
+            "type": "expenditure",
+            "signedValue": 21250,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Central Park CRA. CRA Department. Improvements other than Bldgs. P-1002383, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304"
+          },
+          {
+            "accountCode": "61900.213800.563001",
+            "fund": "61900",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$3,750",
+            "value": 3750,
+            "type": "expenditure_decrease",
+            "signedValue": -3750,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Channel District CRA. CRA Department. Improvements other than Bldgs. P-0000491, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-000165"
+          },
+          {
+            "accountCode": "61900.213800.563001",
+            "fund": "61900",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$3,750",
+            "value": 3750,
+            "type": "expenditure",
+            "signedValue": 3750,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Channel District CRA. CRA Department. Improvements other than Bldgs. P-10002174, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-0000165"
+          },
+          {
+            "accountCode": "62200.213800.563001",
+            "fund": "62200",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$182,935",
+            "value": 182935,
+            "type": "expenditure_decrease",
+            "signedValue": -182935,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Downtown Non-core CRA. CRA Department. Improvements other than Bldgs. P-0000489, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202"
+          },
+          {
+            "accountCode": "62200.213800.563001",
+            "fund": "62200",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$182,935",
+            "value": 182935,
+            "type": "expenditure",
+            "signedValue": 182935,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Downtown Non-core CRA. CRA Department. Improvements other than Bldgs. P-10002176, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202"
+          },
+          {
+            "accountCode": "62500.213800.563001",
+            "fund": "62500",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$23,858.75",
+            "value": 23858.75,
+            "type": "expenditure_decrease",
+            "signedValue": -23858.75,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure Decrease",
+            "description": "Tampa Heights CRA. CRA Department. Improvements other than Bldgs. P-0000490, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103"
+          },
+          {
+            "accountCode": "62500.213800.563001",
+            "fund": "62500",
+            "department": "213800",
+            "object": "563001",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$23,858.75",
+            "value": 23858.75,
+            "type": "expenditure",
+            "signedValue": 23858.75,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Tampa Heights CRA. CRA Department. Improvements other than Bldgs. P-10002653, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      }
+    }
+  ],
+  "financialSummary": {
+    "totalAmountDiscussed": 44510368,
+    "formattedTotalAmountDiscussed": "$44,510,368.00",
+    "itemCount": 5,
+    "range": {
+      "smallest": {
+        "number": 10,
+        "fileNumber": "CRA26-22463",
+        "amount": 83750,
+        "formatted": "$83,750.00"
+      },
+      "largest": {
+        "number": 5,
+        "fileNumber": "CRA26-23724",
+        "amount": 35000000,
+        "formatted": "$35,000,000.00"
+      }
+    },
+    "totalExpenditures": 231793.75,
+    "formattedTotalExpenditures": "$231,793.75",
+    "expenditureRange": {
+      "smallest": {
+        "number": 13,
+        "fileNumber": "CRA26-22718",
+        "amount": 231793.75,
+        "formatted": "$231,793.75"
+      },
+      "largest": {
+        "number": 13,
+        "fileNumber": "CRA26-22718",
+        "amount": 231793.75,
+        "formatted": "$231,793.75"
+      },
+      "count": 1
+    },
+    "expenditureItems": [
+      {
+        "number": 13,
+        "fileNumber": "CRA26-22718",
+        "amount": 231793.75,
+        "formatted": "$231,793.75"
+      }
+    ]
+  },
+  "formattedDate": "2026-05-14"
+}
