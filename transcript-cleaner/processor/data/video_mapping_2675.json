@@ -1,0 +1,17 @@
+{
+  "meeting_id": 2675,
+  "meeting_date": "2026-05-05",
+  "meeting_type": "Special",
+  "videos": [
+    {
+      "video_id": "kWscHG5LXvg",
+      "title": "Tampa City Council Workshop - 05/05/26",
+      "part": 1,
+      "session": "morning",
+      "published_at": "2026-05-06T15:14:12Z",
+      "duration": "PT3H58M21S",
+      "chapters": [],
+      "offset_seconds": 416
+    }
+  ]
+}

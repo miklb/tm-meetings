@@ -1,0 +1,27 @@
+{
+  "meeting_id": 2676,
+  "meeting_date": "2026-05-07",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "T24FUZXcH_M",
+      "title": "Tampa City Council - 05/07/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-05-08T05:08:57Z",
+      "duration": "PT3H38M",
+      "chapters": [],
+      "offset_seconds": 374
+    },
+    {
+      "video_id": "6FqTYO1CXEs",
+      "title": "Tampa City Council - 05/07/26 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-05-08T09:54:07Z",
+      "duration": "PT3H23M1S",
+      "chapters": [],
+      "transcript_start_time": "01:34:10PM"
+    }
+  ]
+}
