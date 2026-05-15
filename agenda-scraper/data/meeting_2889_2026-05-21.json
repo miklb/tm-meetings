@@ -1,0 +1,64 @@
+{
+  "meetingId": "2889",
+  "meetingType": "special",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "May 21, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2889&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "24163",
+      "title": "Board to discuss the MOU between the Tampa Bay Rays, Hillsborough County, City of Tampa and the CRA. In addition, Drew Park CAC to be present and speak regarding the MOU. CRA Staff to discuss the obligation of the feasibility of paying a debt off without any money coming into the CRA.",
+      "rawTitle": "Board to discuss the MOU between the Tampa Bay Rays, Hillsborough County, City of Tampa and the CRA. In addition, Drew Park CAC to be present and speak regarding the MOU. CRA Staff to discuss the obligation of the feasibility of paying a debt off without any money coming into the CRA.",
+      "fileNumber": null,
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 2,
+      "agendaItemId": "24164",
+      "title": "Resolution of the Community Redevelopment Agency of the city of Tampa, Florida, approving and authorizing the Chair or Chair Pro-tem of the Community Redevelopment Agency of the City of Tampa to execute a non-binding Memorandum of Understanding by, between and among the City of Tampa, the Community Redevelopment Agency of the City of Tampa, Hillsborough County, Rays Baseball Club, LLC, and Tampa Bay Rays Stadium Company, LLC, concerning the development construction, funding, ownership and operation of a new ballpark project for the purpose of hosting major league baseball games by the Tampa Bay Rays and for other community events on a portion of the current campus and property of Hillsborough College located at the intersection of Dale Mabry Highway and Tampa Bay Boulevard in the Drew Park Community Redevelopment area, and providing certain terms and conditions for the negotiation of more detailed project agreements for the development, construction, funding, ownership and operation of said new ballpark project; providing an effective date.",
+      "rawTitle": "Resolution of the Community Redevelopment Agency of the city of Tampa, Florida, approving and authorizing the Chair or Chair Pro-tem of the Community Redevelopment Agency of the City of Tampa to execute a non-binding Memorandum of Understanding by, between and among the City of Tampa, the Community Redevelopment Agency of the City of Tampa, Hillsborough County, Rays Baseball Club, LLC, and Tampa Bay Rays Stadium Company, LLC, concerning the development construction, funding, ownership and operation of a new ballpark project for the purpose of hosting major league baseball games by the Tampa Bay Rays and for other community events on a portion of the current campus and property of Hillsborough College located at the intersection of Dale Mabry Highway and Tampa Bay Boulevard in the Drew Park Community Redevelopment area, and providing certain terms and conditions for the negotiation of more detailed project agreements for the development, construction, funding, ownership and operation of said new ballpark project; providing an effective date.",
+      "fileNumber": "Pro-tem",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "CRA RESO - RAYS MOU.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20RESO%20-%20RAYS%20MOU.PDF.pdf?documentType=1&meetingId=2889&itemId=24164&publishId=194435&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA RESO - RAYS MOU.PDF in a new tab",
+          "originalText": "CRA RESO - RAYS MOU.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    }
+  ],
+  "formattedDate": "2026-05-21"
+}
