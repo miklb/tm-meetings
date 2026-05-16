@@ -5693,8 +5693,11 @@
         }
       ],
       "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
+      "location": "2312 West Grace Street",
+      "coordinates": {
+        "lat": 27.952614,
+        "lng": -82.483463
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {

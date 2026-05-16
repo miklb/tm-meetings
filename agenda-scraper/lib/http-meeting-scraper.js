@@ -702,10 +702,21 @@ async function fetchMeetingList(options = {}) {
       meetingType = 'cra';
     }
 
+    // Normalise the OnBase date (tries common field names) to YYYY-MM-DD
+    let date = null;
+    const rawDate = m.MeetingStartDate || m.MeetingDate || m.StartDateTime || m.Date || null;
+    if (rawDate) {
+      const d = new Date(rawDate);
+      if (!isNaN(d.getTime())) {
+        date = d.toISOString().slice(0, 10);
+      }
+    }
+
     meetings.push({
       id: String(m.ID),
       type: meetingType,
-      href: `${AGENDA_BASE}/Meetings/ViewMeeting?id=${m.ID}&doctype=1`
+      href: `${AGENDA_BASE}/Meetings/ViewMeeting?id=${m.ID}&doctype=1`,
+      date
     });
   }
 
@@ -767,10 +778,20 @@ function fetchMeetingListFromHTML(html) {
       return href.includes('ViewMeeting') && href.includes('doctype=1');
     }).first();
 
+    // Try to extract a date (MM/DD/YYYY) from the row text
+    let date = null;
+    const rowRawText = $tr.text();
+    const dateMatch = rowRawText.match(/(\d{1,2})\/(\d{1,2})\/(\d{4})/);
+    if (dateMatch) {
+      const [, month, day, year] = dateMatch;
+      date = `${year}-${String(month).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+    }
+
     meetings.push({
       id: meetingId,
       type: meetingType,
-      href: agendaLink.length > 0 ? absoluteUrl(agendaLink.attr('href')) : null
+      href: agendaLink.length > 0 ? absoluteUrl(agendaLink.attr('href')) : null,
+      date
     });
   });
 

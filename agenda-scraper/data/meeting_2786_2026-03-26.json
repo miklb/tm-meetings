@@ -6593,7 +6593,10 @@
         "197975.0000"
       ],
       "location": "1301 East Columbus Drive",
-      "coordinates": null,
+      "coordinates": {
+        "lat": 27.96665,
+        "lng": -82.44534
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {

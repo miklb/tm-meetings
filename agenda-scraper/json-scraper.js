@@ -1543,7 +1543,17 @@ async function main() {
     
     // Check for --selenium flag
     const useSelenium = args.includes('--selenium');
-    const filteredArgs = args.filter(arg => arg !== '--selenium');
+
+    // Check for --date <YYYY-MM-DD> flag
+    const dateArgIndex = args.indexOf('--date');
+    const targetDate = dateArgIndex !== -1 ? args[dateArgIndex + 1] : null;
+
+    const filteredArgs = args.filter((arg, i) => {
+        if (arg === '--selenium') return false;
+        if (arg === '--date') return false;
+        if (i > 0 && args[i - 1] === '--date') return false;
+        return true;
+    });
     const specificMeetingId = filteredArgs[0];
     
     console.log(`\n🚀 Tampa Agenda Scraper`);
@@ -1592,8 +1602,20 @@ async function main() {
         }
         
         // Get meetings with their IDs and types
-        const meetings = await fetchMeetingList({ session });
+        let meetings = await fetchMeetingList({ session });
         console.log(`[HTTP] Found ${meetings.length} meetings to process\n`);
+
+        // Filter by target date when --date is specified
+        if (targetDate) {
+            const withDates = meetings.filter(m => m.date !== null);
+            if (withDates.length > 0) {
+                const filtered = meetings.filter(m => m.date === targetDate);
+                console.log(`[HTTP] Filtering to date ${targetDate}: ${filtered.length} of ${meetings.length} meeting(s) match\n`);
+                meetings = filtered;
+            } else {
+                console.log(`[HTTP] No date info in meeting list — scraping all and filtering by date ${targetDate} after fetch\n`);
+            }
+        }
         
         // Scrape each meeting sequentially
         const failed = [];

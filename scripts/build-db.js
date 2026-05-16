@@ -530,7 +530,16 @@ function main() {
       }
 
       const items = data.agendaItems || [];
-      const meetingType = inferTypeFromItems(items);
+      let meetingType = inferTypeFromItems(items);
+      // inferTypeFromItems defaults to 'regular' when item prefixes don't
+      // indicate a specialised type (CRA, evening). Fall back to the JSON's
+      // own meetingType for meetings OnBase explicitly classifies as non-regular
+      // (e.g. specially-called workshops where item prefixes are generic).
+      if (meetingType === 'regular' && data.meetingType) {
+        const key = data.meetingType.toLowerCase();
+        const mapped = VIDEO_MEETING_TYPE_MAP[key];
+        if (mapped && mapped !== 'regular') meetingType = mapped;
+      }
 
       insertMeeting.run({
         id: meetingId,
