@@ -547,24 +547,37 @@ function generateWordPressMarkup(meetings) {
     }
     
     const hasMultipleMeetings = nonAddendumMeetings.length > 1;
-    
+
+    // Derive the secondary-meeting label up-front so it can be referenced
+    // both in the leading meeting's nav strip and in the heading inserted
+    // when the secondary meeting is appended.
+    const typeLabels = {
+        evening:  'Evening Agenda',
+        cra:      'CRA Agenda',
+        workshop: 'Workshop Agenda',
+        special:  'Special Call Agenda',
+    };
+    const secondaryMeeting = hasMultipleMeetings ? nonAddendumMeetings[1] : null;
+    const secondaryLabel = secondaryMeeting
+        ? (typeLabels[(secondaryMeeting.meetingType || '').toLowerCase()] || 'Additional Agenda')
+        : 'Evening Agenda';
+
     // Process meetings in order, following original combination logic
     nonAddendumMeetings.forEach((meeting, meetingIndex) => {
-        const wpHtml = generateSingleMeetingMarkup(meeting, meetingIndex > 0, hasMultipleMeetings);
+        const wpHtml = generateSingleMeetingMarkup(meeting, meetingIndex > 0, hasMultipleMeetings, secondaryLabel);
         
         // Check if we should combine with existing agenda for the same date
         const existingFile = findExistingWordPressFileForDate(meeting.meetingId, meeting.formattedDate);
         
         if (existingFile && meetingIndex > 0) {
-            // Read existing content and append evening agenda
+            // Read existing content and append the secondary meeting agenda.
             const existingContent = fs.readFileSync(existingFile, 'utf8');
-            
-            // For evening agenda, we need to preserve the complete structure that generateSingleMeetingMarkup creates
-            // When isEveningAgenda=true, generateSingleMeetingMarkup skips intro content and heading, 
-            // so we need to add the evening agenda heading and then append the complete generated content
-            
+
+            // The heading anchor stays `evening-agenda` for backward
+            // compatibility with existing in-page links; only the visible
+            // label changes per meeting type.
             let eveningContent = `<!-- wp:heading {"level":2} -->
-<h2 id="evening-agenda">Evening Agenda</h2>
+<h2 id="evening-agenda">${secondaryLabel}</h2>
 <!-- /wp:heading -->
 
 ` + wpHtml.trim();
@@ -591,7 +604,7 @@ function generateWordPressMarkup(meetings) {
  * @param {boolean} hasMultipleMeetings - Whether there are multiple meetings for this date
  * @returns {string} - WordPress block markup
  */
-function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultipleMeetings = false) {
+function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultipleMeetings = false, secondaryLabel = 'Evening Agenda') {
     // Start with intro paragraph (only for first meeting)
     let wpHtml = '';
     
@@ -608,7 +621,7 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
         // Add navigation links if there are multiple meetings
         if (hasMultipleMeetings) {
             wpHtml += `<!-- wp:paragraph {"align":"center"} -->
-<p class="has-text-align-center"><strong>Quick Navigation:</strong> <a href="#morning-agenda">Morning Agenda</a> | <a href="#evening-agenda">Evening Agenda</a></p>
+<p class="has-text-align-center"><strong>Quick Navigation:</strong> <a href="#morning-agenda">Morning Agenda</a> | <a href="#evening-agenda">${secondaryLabel}</a></p>
 <!-- /wp:paragraph -->
 
 `;
