@@ -209,13 +209,16 @@ cd agenda-scraper && ./process-agenda.sh 2025-11-06
 This runs in order:
 1. `json-scraper.js` — scrapes meeting JSON from OnBase
 2. `mirror-documents.js` — uploads documents to Cloudflare R2 and stamps `mirroredUrl` fields into the JSON
-3. `json-to-wordpress.js` — generates WP HTML using the mirrored URLs
+3. `python3 -m opengov.reconcile` — reconciles PROJECTED COSTS rows against the OpenGov CoA and writes `opengov/data/reports/<meetingId>-<date>-funding-manifest.json`
+4. `json-to-wordpress.js` — generates WP HTML using the mirrored URLs and the funding manifest
 
-**Why this matters:** Running `json-scraper.js` directly overwrites the meeting JSON and erases all `mirroredUrl` fields that `mirror-documents.js` previously stamped in. The WP output will then link to the original OnBase URLs instead of the stable R2 mirrors.
+**Why this matters:** Running `json-scraper.js` directly overwrites the meeting JSON and erases all `mirroredUrl` fields that `mirror-documents.js` previously stamped in. The WP output will then link to the original OnBase URLs instead of the stable R2 mirrors. Skipping the reconciliation step makes the per-item Financial impact sections silently disappear from the WP output.
 
-If you need to regenerate WP output only (JSON + mirrors already done): `node json-to-wordpress.js <meetingId>`
+If you need to regenerate WP output only (JSON + mirrors + manifest already done): `node json-to-wordpress.js <meetingId>`
 
 If you need to re-mirror only (JSON already done): `node mirror-documents.js <meetingId>`
+
+If you need to re-reconcile only (JSON already done): `python3 -m opengov.reconcile agenda-scraper/data/meeting_<id>_<date>.json`
 
 **Never run `json-scraper.js <meetingId>` standalone on a meeting that has already been mirrored.**
 

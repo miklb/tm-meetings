@@ -44,7 +44,7 @@ else
         echo "Step 1: Running JSON scraper..."
     fi
     echo "⏳ This may take several minutes for agendas with many supporting documents..."
-    node json-scraper.js
+    node json-scraper.js --date "$DATE"
 
     if [ $? -ne 0 ]; then
         echo "❌ JSON scraper failed"
@@ -79,7 +79,34 @@ if [ "$EXISTING_JSON" -gt 0 ]; then
         echo ""
     fi
 
-    echo "Step 3: Converting to WordPress markup..."
+    echo "Step 3: Reconciling financial details against OpenGov CoA..."
+    # Generates opengov/data/reports/<meetingId>-<date>-funding-manifest.json
+    # which render-funding.js reads to build the per-item Financial impact
+    # sections. Without this step, financial sections silently disappear.
+    REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+    MEETING_FILES=$(find "$REPO_ROOT/agenda-scraper/data" -name "*${DATE}*.json" -not -name "*.bak.*" 2>/dev/null)
+    if [ -n "$MEETING_FILES" ]; then
+        if [ -f "$REPO_ROOT/.venv/bin/python3" ]; then
+            (
+                cd "$REPO_ROOT" && \
+                # shellcheck disable=SC2086
+                .venv/bin/python3 -m opengov.reconcile $MEETING_FILES
+            )
+            if [ $? -eq 0 ]; then
+                echo "✓ Funding manifests written"
+            else
+                echo "⚠️  Reconciliation had errors (financial sections may be missing)"
+            fi
+        else
+            echo "⚠️  .venv not found at $REPO_ROOT/.venv — skipping reconciliation"
+            echo "    Run: python3 -m venv .venv && .venv/bin/pip install -r opengov/requirements.txt"
+        fi
+    else
+        echo "⚠️  No meeting JSON files found for reconciliation"
+    fi
+    echo ""
+
+    echo "Step 4: Converting to WordPress markup..."
     node json-to-wordpress.js --date "$DATE"
 
     if [ $? -eq 0 ]; then
