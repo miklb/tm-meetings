@@ -21,7 +21,8 @@
       "published_at": "2026-05-08T09:54:07Z",
       "duration": "PT3H23M1S",
       "chapters": [],
-      "transcript_start_time": "01:34:10PM"
+      "transcript_start_time": "01:34:10PM",
+      "offset_seconds": 150
     }
   ]
 }
