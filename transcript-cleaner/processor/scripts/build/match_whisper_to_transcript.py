@@ -17,12 +17,15 @@ And calculates the video offset by finding where Whisper text matches official t
 """
 
 import json
+import logging
 import sys
 import subprocess
 import re
 from collections import namedtuple
 from pathlib import Path
 from datetime import datetime
+
+logger = logging.getLogger(__name__)
 
 
 # Returned by calculate_smart_duration — tells the transcriber where to start
@@ -47,14 +50,14 @@ def save_offset_to_mapping(video_mapping_file: str, video_id: str, offset: float
     """
     path = Path(video_mapping_file)
     if not path.exists():
-        print(f"  ⚠️  Video mapping file not found: {video_mapping_file}")
+        logger.warning("  ⚠️  Video mapping file not found: %s", video_mapping_file)
         return False
 
     try:
         with open(path, 'r') as f:
             mapping = json.load(f)
     except (json.JSONDecodeError, IOError) as e:
-        print(f"  ⚠️  Could not read video mapping: {e}")
+        logger.warning("  ⚠️  Could not read video mapping: %s", e)
         return False
 
     # Find and update the matching video entry
@@ -66,14 +69,15 @@ def save_offset_to_mapping(video_mapping_file: str, video_id: str, offset: float
             break
 
     if not updated:
-        print(f"  ⚠️  Video ID '{video_id}' not found in {path.name}")
+        logger.warning("  ⚠️  Video ID '%s' not found in %s", video_id, path.name)
         return False
 
     # Write back
     with open(path, 'w') as f:
         json.dump(mapping, f, indent=2)
 
-    print(f"  ✅ Saved offset_seconds={int(round(offset))} to {path.name} for video {video_id}")
+    logger.info("  ✅ Saved offset_seconds=%d to %s for video %s",
+                int(round(offset)), path.name, video_id)
     return True
 
 
@@ -187,9 +191,9 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
                 chapters = video.get('chapters', [])
                 break
         else:
-            print(f"  ⚠️  Video '{video_id}' not found in mapping — using defaults")
+            logger.warning("  ⚠️  Video '%s' not found in mapping — using defaults", video_id)
     except (json.JSONDecodeError, IOError) as e:
-        print(f"  ⚠️  Could not read video mapping for smart duration: {e}")
+        logger.warning("  ⚠️  Could not read video mapping for smart duration: %s", e)
 
     # --- Read first segment timestamp from transcript ---
     first_speech_seconds = None
@@ -297,11 +301,11 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
         reason = f"Part {part} — no chapter data, conservative {PART2_NO_CHAPTERS_DURATION}s"
 
     if start > 0:
-        print(f"  📐 Smart duration: skip to {start}s ({start // 60}:{start % 60:02d}), "
-              f"capture {duration}s ({duration // 60}:{duration % 60:02d}) — {reason}")
+        logger.info("  📐 Smart duration: skip to %ds (%d:%02d), capture %ds (%d:%02d) — %s",
+                    start, start // 60, start % 60, duration, duration // 60, duration % 60, reason)
     else:
-        end = start + duration
-        print(f"  📐 Smart duration: {duration}s ({duration // 60}:{duration % 60:02d}) — {reason}")
+        logger.info("  📐 Smart duration: %ds (%d:%02d) — %s",
+                    duration, duration // 60, duration % 60, reason)
     return AudioWindow(start=start, duration=duration)
 
 
@@ -460,7 +464,7 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
     Returns:
         dict with match info or None if no good match found
     """
-    print("\nSearching for speech match...")
+    logger.info("\nSearching for speech match...")
 
     MIN_SCORE = 0.3        # At least 30% of n-grams must match
     OFFSET_TOLERANCE = 30  # Seconds — matches within this range cluster together
@@ -496,14 +500,14 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
     # First pass: strict filter. Second pass: allow shorter procedural speech.
     candidates = collect_candidates(4)
     if not candidates:
-        print("  ⚠️  No candidates with >=4 content words; retrying with >=3")
+        logger.warning("  ⚠️  No candidates with >=4 content words; retrying with >=3")
         candidates = collect_candidates(3)
 
     if not candidates:
-        print("ERROR: No meaningful speech found in Whisper output")
+        logger.error("ERROR: No meaningful speech found in Whisper output")
         return None
 
-    print(f"  Found {len(candidates)} candidate Whisper segments to try")
+    logger.info("  Found %d candidate Whisper segments to try", len(candidates))
 
     # Compare against official segments covering at least the first 20 min
     # of transcript time.  Workshops can have 40+ short segments (roll call,
@@ -589,11 +593,11 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
                 })
 
     if not all_matches:
-        print(f"\nERROR: Could not find Whisper text in official transcript "
-              f"(tried {len(candidates)} candidates, min score {MIN_SCORE})")
+        logger.error("\nERROR: Could not find Whisper text in official transcript "
+                     "(tried %d candidates, min score %s)", len(candidates), MIN_SCORE)
         return None
 
-    print(f"  {len(all_matches)} matches above threshold")
+    logger.info("  %d matches above threshold", len(all_matches))
 
     # --- Early-segment fuzzy match ---
     # The earliest Whisper segments give the most accurate offset (minimal
@@ -665,7 +669,7 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
                 })
 
     if early_fuzzy_matches:
-        print(f"  {len(early_fuzzy_matches)} early fuzzy match(es) found (bigram + word overlap)")
+        logger.info("  %d early fuzzy match(es) found (bigram + word overlap)", len(early_fuzzy_matches))
 
     # --- Cross-validation: cluster matches by implied offset ---
     clusters = []  # initialized for runner-up logging below
@@ -693,14 +697,14 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
         best_cluster = clusters[0]
 
         # Log cluster info
-        print(f"\n  Offset clusters: {len(clusters)}")
+        logger.info("\n  Offset clusters: %d", len(clusters))
         for i, cl in enumerate(clusters[:4]):
             offsets = [m['implied_offset'] for m in cl]
             median_off = sorted(offsets)[len(offsets) // 2]
-            print(f"    Cluster {i+1}: offset ~{median_off:.0f}s, "
-                  f"{unique_candidates(cl)} unique candidates, "
-                  f"{len(cl)} total matches, "
-                  f"best score {max(m['score'] for m in cl):.2f}")
+            logger.info("    Cluster %d: offset ~%.0fs, %d unique candidates, "
+                        "%d total matches, best score %.2f",
+                        i + 1, median_off, unique_candidates(cl),
+                        len(cl), max(m['score'] for m in cl))
 
         # Within the winning cluster, pick match with highest score
         best_cluster.sort(key=lambda m: m['score'], reverse=True)
@@ -715,11 +719,13 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
             best['implied_offset'] = median_offset
             best['cluster_median'] = True
 
-        print(f"\n✓ MATCHED Whisper candidate {best['candidate_idx']} at {best['whisper_start']:.1f}s "
-              f"to official segment {best['official_index']} "
-              f"at {best['official_timestamp']} (score: {best['score']:.2f}, "
-              f"offset: {best['implied_offset']:.0f}s, "
-              f"cluster support: {unique_candidates(best_cluster)} candidates)")
+        logger.info("\n✓ MATCHED Whisper candidate %d at %.1fs "
+                    "to official segment %d at %s (score: %.2f, offset: %.0fs, "
+                    "cluster support: %d candidates)",
+                    best['candidate_idx'], best['whisper_start'],
+                    best['official_index'], best['official_timestamp'],
+                    best['score'], best['implied_offset'],
+                    unique_candidates(best_cluster))
 
         # --- Early-segment preference ---
         # If an early fuzzy match has an implied offset within OFFSET_TOLERANCE
@@ -753,34 +759,37 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
                     break
 
         if early_preferred:
-            print(f"\n  ⚡ Early segment match (candidate {early_preferred['candidate_idx']}) "
-                  f"at {early_preferred['whisper_start']:.1f}s → segment {early_preferred['official_index']} "
-                  f"at {early_preferred['official_timestamp']} "
-                  f"(offset: {early_preferred['implied_offset']:.0f}s)")
-            print(f"     Whisper: \"{early_preferred['whisper_text'][:80]}\"")
-            print(f"     Using early segment offset (more precise, less interpolation)")
+            logger.info("\n  ⚡ Early segment match (candidate %d) at %.1fs → segment %d "
+                        "at %s (offset: %.0fs)",
+                        early_preferred['candidate_idx'], early_preferred['whisper_start'],
+                        early_preferred['official_index'], early_preferred['official_timestamp'],
+                        early_preferred['implied_offset'])
+            logger.info("     Whisper: \"%s\"", early_preferred['whisper_text'][:80])
+            logger.info("     Using early segment offset (more precise, less interpolation)")
             best = early_preferred
     else:
         # Only one match or no baseline — just pick highest score
         all_matches.sort(key=lambda m: m['score'], reverse=True)
         best = all_matches[0]
 
-        print(f"\n✓ MATCHED Whisper candidate {best['candidate_idx']} at {best['whisper_start']:.1f}s "
-              f"to official segment {best['official_index']} "
-              f"at {best['official_timestamp']} (score: {best['score']:.2f})")
+        logger.info("\n✓ MATCHED Whisper candidate %d at %.1fs "
+                    "to official segment %d at %s (score: %.2f)",
+                    best['candidate_idx'], best['whisper_start'],
+                    best['official_index'], best['official_timestamp'], best['score'])
 
-    print(f"  Whisper:  \"{best['whisper_text'][:80]}\"")
-    print(f"  Official: \"{best['official_text'][:80]}\"")
+    logger.info("  Whisper:  \"%s\"", best['whisper_text'][:80])
+    logger.info("  Official: \"%s\"", best['official_text'][:80])
 
     # Log runner-up if from a different cluster
     if len(clusters) > 1:
         runner_cluster = clusters[1]
         runner = max(runner_cluster, key=lambda m: m['score'])
-        print(f"  Runner-up cluster: candidate {runner['candidate_idx']} at "
-              f"{runner['whisper_start']:.1f}s → segment {runner['official_index']} "
-              f"at {runner['official_timestamp']} (score: {runner['score']:.2f}, "
-              f"offset: {runner['implied_offset']:.0f}s, "
-              f"{unique_candidates(runner_cluster)} candidates)")
+        logger.info("  Runner-up cluster: candidate %d at %.1fs → segment %d "
+                    "at %s (score: %.2f, offset: %.0fs, %d candidates)",
+                    runner['candidate_idx'], runner['whisper_start'],
+                    runner['official_index'], runner['official_timestamp'],
+                    runner['score'], runner['implied_offset'],
+                    unique_candidates(runner_cluster))
 
     return best
 
@@ -807,15 +816,15 @@ def calculate_offset(whisper_json_file, official_transcript_file,
         whisper_data = json.load(f)
     
     whisper_segments = whisper_data['segments']
-    print(f"✓ Loaded Whisper output: {len(whisper_segments)} segments")
-    
+    logger.info("✓ Loaded Whisper output: %d segments", len(whisper_segments))
+
     # Load official transcript
     with open(official_transcript_file) as f:
         official_data = json.load(f)
-    
+
     official_segments = official_data['segments']
-    print(f"✓ Loaded official transcript: {len(official_segments)} segments")
-    
+    logger.info("✓ Loaded official transcript: %d segments", len(official_segments))
+
     # For Part 2+ videos, filter to segments at/after transcript_start_time
     if transcript_start_time:
         start_secs = parse_timestamp_to_seconds(transcript_start_time)
@@ -823,29 +832,29 @@ def calculate_offset(whisper_json_file, official_transcript_file,
                     if s.get('timestamp') and
                     parse_timestamp_to_seconds(s['timestamp']) >= start_secs]
         if not filtered:
-            print(f"❌ No segments found at or after {transcript_start_time}")
+            logger.error("❌ No segments found at or after %s", transcript_start_time)
             return None
-        print(f"  Filtered to {len(filtered)} segments at/after {transcript_start_time} "
-              f"(from {len(official_segments)} total)")
+        logger.info("  Filtered to %d segments at/after %s (from %d total)",
+                    len(filtered), transcript_start_time, len(official_segments))
         official_segments = filtered
 
     # Get baseline timestamp
     first_timestamp = official_segments[0].get('timestamp')
     if not first_timestamp:
-        print("❌ First official segment has no timestamp")
+        logger.error("❌ First official segment has no timestamp")
         return None
-    
+
     first_seconds = parse_timestamp_to_seconds(first_timestamp)
-    print(f"  First official timestamp: {first_timestamp} (baseline)")
+    logger.info("  First official timestamp: %s (baseline)", first_timestamp)
     
     # Find match (pass baseline for cross-validation)
     match = find_best_match(whisper_segments, official_segments,
                             first_seconds=first_seconds)
     
     if not match:
-        print("\n❌ No good match found")
+        logger.error("\n❌ No good match found")
         return None
-    
+
     # Use the position-adjusted offset if available (from cross-validation),
     # otherwise fall back to segment-start-based offset
     if match.get('implied_offset') is not None:
@@ -864,42 +873,50 @@ def calculate_offset(whisper_json_file, official_transcript_file,
         position_adjustment = 0
         position_frac = 0
         seg_dur = 0
-    
-    print(f"\n" + "="*70)
-    print(f"✅ MATCH FOUND")
-    print(f"="*70)
-    print(f"Whisper first speech at {whisper_video_time:.1f}s:")
-    print(f"  \"{match['whisper_text'][:80]}...\"")
-    print(f"\nFound in official segment {match['official_index']} at {match['official_timestamp']}:")
-    print(f"  \"{match['official_text'][:80]}...\"")
-    print(f"\nOffset Calculation:")
-    print(f"  Meeting baseline: {first_timestamp} (0 seconds)")
-    print(f"  Official segment: {match['official_timestamp']} ({seconds_from_meeting_start}s from start)")
+
+    logger.info("\n" + "=" * 70)
+    logger.info("✅ MATCH FOUND")
+    logger.info("=" * 70)
+    logger.info("Whisper first speech at %.1fs:", whisper_video_time)
+    logger.info("  \"%s...\"", match['whisper_text'][:80])
+    logger.info("\nFound in official segment %d at %s:",
+                match['official_index'], match['official_timestamp'])
+    logger.info("  \"%s...\"", match['official_text'][:80])
+    logger.info("\nOffset Calculation:")
+    logger.info("  Meeting baseline: %s (0 seconds)", first_timestamp)
+    logger.info("  Official segment: %s (%.0fs from start)",
+                match['official_timestamp'], seconds_from_meeting_start)
     if match.get('early_match') and match.get('official_index') == 0:
-        print(f"  Whisper video time: {whisper_video_time:.1f}s")
-        print(f"  ")
-        print(f"  Offset = whisper_time (direct, first segment)")
-        print(f"  Offset = {offset:.1f}s")
+        logger.info("  Whisper video time: %.1fs", whisper_video_time)
+        logger.info("  ")
+        logger.info("  Offset = whisper_time (direct, first segment)")
+        logger.info("  Offset = %.1fs", offset)
     elif position_adjustment > 1:
-        print(f"  Position within segment: {position_frac:.0%} of {seg_dur:.0f}s = +{position_adjustment:.1f}s")
-        print(f"  Adjusted transcript time: {seconds_from_meeting_start + position_adjustment:.1f}s from start")
-        print(f"  Whisper video time: {whisper_video_time:.1f}s")
+        logger.info("  Position within segment: %.0f%% of %.0fs = +%.1fs",
+                    position_frac * 100, seg_dur, position_adjustment)
+        logger.info("  Adjusted transcript time: %.1fs from start",
+                    seconds_from_meeting_start + position_adjustment)
+        logger.info("  Whisper video time: %.1fs", whisper_video_time)
         if match.get('cluster_median'):
             individual = whisper_video_time - (seconds_from_meeting_start + position_adjustment)
-            print(f"  ")
-            print(f"  Best match offset: {individual:.1f}s")
-            print(f"  Cluster median offset: {offset:.1f}s (used — averages out interpolation error)")
+            logger.info("  ")
+            logger.info("  Best match offset: %.1fs", individual)
+            logger.info("  Cluster median offset: %.1fs (used — averages out interpolation error)", offset)
         else:
-            print(f"  ")
-            print(f"  Offset = whisper_time - adjusted_transcript_time")
-            print(f"  Offset = {whisper_video_time:.1f}s - {seconds_from_meeting_start + position_adjustment:.1f}s = {offset:.1f}s")
+            logger.info("  ")
+            logger.info("  Offset = whisper_time - adjusted_transcript_time")
+            logger.info("  Offset = %.1fs - %.1fs = %.1fs",
+                        whisper_video_time,
+                        seconds_from_meeting_start + position_adjustment,
+                        offset)
     else:
-        print(f"  Whisper video time: {whisper_video_time:.1f}s")
-        print(f"  ")
-        print(f"  Offset = whisper_time - transcript_time")
-        print(f"  Offset = {whisper_video_time:.1f}s - {seconds_from_meeting_start:.1f}s = {offset:.1f}s")
-    print(f"\n✅ OFFSET: {offset:.1f} seconds ({int(offset//60)}:{int(offset%60):02d})")
-    print("="*70)
+        logger.info("  Whisper video time: %.1fs", whisper_video_time)
+        logger.info("  ")
+        logger.info("  Offset = whisper_time - transcript_time")
+        logger.info("  Offset = %.1fs - %.1fs = %.1fs",
+                    whisper_video_time, seconds_from_meeting_start, offset)
+    logger.info("\n✅ OFFSET: %.1f seconds (%d:%02d)", offset, int(offset // 60), int(offset % 60))
+    logger.info("=" * 70)
     
     return offset
 

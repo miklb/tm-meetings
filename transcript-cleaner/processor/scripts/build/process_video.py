@@ -24,6 +24,7 @@ Examples:
 
 import argparse
 import json
+import logging
 import os
 import subprocess
 import sys
@@ -34,6 +35,7 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+from src.logging_config import setup_logging
 from src.meeting_type_detector import detect_meeting_type
 from src.transcript_gap_detector import detect_gaps, save_gaps_to_mapping
 from scripts.build.match_whisper_to_transcript import (
@@ -44,6 +46,8 @@ from scripts.build.match_whisper_to_transcript import (
 
 # Rate-limiting delay between consecutive yt-dlp downloads (seconds)
 YTDLP_DELAY_SECONDS = 7
+
+logger = logging.getLogger(__name__)
 
 # Subprocess environment: ensure child processes can resolve 'from src.*'
 # and can find venv binaries (yt-dlp) on PATH
@@ -98,12 +102,12 @@ def fetch_videos(
         The video mapping dict, or None on failure.
     """
     if output_path.exists():
-        print(f"  ✓ Video mapping already exists: {output_path.name}")
+        logger.info("  ✓ Video mapping already exists: %s", output_path.name)
         with open(output_path) as f:
             return json.load(f)
 
     if dry_run:
-        print(f"  [dry-run] Would call YouTube API for {meeting_date}")
+        logger.info("  [dry-run] Would call YouTube API for %s", meeting_date)
         return None
 
     # Build the command — delegate to youtube_fetcher.py's CLI
@@ -112,21 +116,25 @@ def fetch_videos(
         "src/youtube_fetcher.py",
         meeting_date,
         "--meeting-id", str(meeting_id),
+        "--log-date", meeting_date,
     ]
     if meeting_type:
         cmd += ["--meeting-type", meeting_type]
     if transcript_path:
         cmd += ["--transcript", str(transcript_path)]
 
-    print(f"  ▶ Searching YouTube for videos...")
+    logger.info("  ▶ Searching YouTube for videos...")
+    logger.debug("--- Launching youtube_fetcher ---")
     result = subprocess.run(cmd, capture_output=True, text=True, cwd=str(PROJECT_ROOT), env=_SUBPROCESS_ENV)
+    logger.debug("--- youtube_fetcher exited (rc=%d) ---", result.returncode)
+
     if result.returncode != 0:
-        print(f"  ❌ YouTube fetch failed:")
+        logger.error("  ❌ YouTube fetch failed:")
         for line in result.stderr.strip().splitlines():
-            print(f"     {line}")
+            logger.warning("     %s", line)
         return None
 
-    # Print relevant stdout lines
+    # Echo subprocess stdout to console (it was captured to suppress interleaving)
     for line in result.stdout.strip().splitlines():
         if line.strip():
             print(f"     {line}")
@@ -135,7 +143,7 @@ def fetch_videos(
         with open(output_path) as f:
             return json.load(f)
 
-    print(f"  ❌ Video mapping not created at {output_path}")
+    logger.error("  ❌ Video mapping not created at %s", output_path)
     return None
 
 
@@ -144,6 +152,7 @@ def process_single_video(
     transcript_path: Path,
     mapping_path: Path,
     model: str,
+    meeting_date: str,
     dry_run: bool = False,
 ) -> dict:
     """
@@ -168,17 +177,18 @@ def process_single_video(
 
     # Skip if offset already calculated
     if existing_offset is not None:
-        print(f"  ✓ Part {part} ({video_id}): offset already set to {existing_offset}s — skipping")
+        logger.info("  ✓ Part %d (%s): offset already set to %ds — skipping", part, video_id, existing_offset)
         result["status"] = "already_done"
         return result
 
     if dry_run:
         window = calculate_smart_duration(str(mapping_path), str(transcript_path), video_id)
         if window.start > 0:
-            print(f"  [dry-run] Part {part} ({video_id}): would skip to {window.start}s, "
-                  f"transcribe {window.duration}s, then match")
+            logger.info("  [dry-run] Part %d (%s): would skip to %ds, transcribe %ds, then match",
+                        part, video_id, window.start, window.duration)
         else:
-            print(f"  [dry-run] Part {part} ({video_id}): would transcribe {window.duration}s, then match")
+            logger.info("  [dry-run] Part %d (%s): would transcribe %ds, then match",
+                        part, video_id, window.duration)
         result["duration_used"] = window.duration
         result["status"] = "dry_run"
         return result
@@ -200,12 +210,13 @@ def process_single_video(
     cache_file.parent.mkdir(exist_ok=True)
 
     if cache_file.exists():
-        print(f"  ✓ Part {part}: using cached Whisper output ({cache_file.name})")
+        logger.info("  ✓ Part %d: using cached Whisper output (%s)", part, cache_file.name)
     else:
         if audio_start > 0:
-            print(f"  ▶ Part {part}: skipping to {audio_start}s, transcribing {duration}s with Whisper ({model})...")
+            logger.info("  ▶ Part %d: skipping to %ds, transcribing %ds with Whisper (%s)...",
+                        part, audio_start, duration, model)
         else:
-            print(f"  ▶ Part {part}: transcribing {duration}s with Whisper ({model})...")
+            logger.info("  ▶ Part %d: transcribing %ds with Whisper (%s)...", part, duration, model)
         cmd = [
             sys.executable,
             "scripts/build/transcribe_with_whisper.py",
@@ -213,21 +224,24 @@ def process_single_video(
             "--duration", str(duration),
             "--model", model,
             "--output", str(cache_file),
+            "--log-date", meeting_date,
         ]
         if audio_start > 0:
             cmd.extend(["--start", str(audio_start)])
 
+        logger.debug("--- Launching transcribe_with_whisper for Part %d (%s) ---", part, video_id)
         transcribe_result = subprocess.run(
             cmd,
-            capture_output=True,
+            stderr=subprocess.PIPE,
             text=True,
             cwd=str(PROJECT_ROOT),
             env=_SUBPROCESS_ENV,
         )
+        logger.debug("--- transcribe_with_whisper exited (rc=%d) ---", transcribe_result.returncode)
         if transcribe_result.returncode != 0:
-            print(f"  ❌ Whisper transcription failed for Part {part}")
+            logger.error("  ❌ Whisper transcription failed for Part %d", part)
             for line in transcribe_result.stderr.strip().splitlines():
-                print(f"     {line}")
+                logger.warning("     %s", line)
             result["status"] = "transcription_failed"
             return result
 
@@ -243,7 +257,7 @@ def process_single_video(
         result["offset"] = int(round(offset))
         result["status"] = "success"
     else:
-        print(f"  ❌ Part {part}: could not match Whisper output to transcript")
+        logger.error("  ❌ Part %d: could not match Whisper output to transcript", part)
         result["status"] = "match_failed"
 
     return result
@@ -276,55 +290,58 @@ def run_pipeline(
     mapping_path = Path(f"data/video_mapping_{meeting_id}.json")
     prefix = "[dry-run] " if dry_run else ""
 
-    print(f"\n{'=' * 70}")
-    print(f" {prefix}VIDEO PIPELINE — Meeting {meeting_id} ({meeting_date})")
-    print(f"{'=' * 70}\n")
+    setup_logging(meeting_date)
+
+    logger.info("\n%s", "=" * 70)
+    logger.info(" %sVIDEO PIPELINE — Meeting %d (%s)", prefix, meeting_id, meeting_date)
+    logger.info("%s\n", "=" * 70)
 
     # ── Step 1: Find transcript and detect meeting type ──────────────────
-    print("Step 1: Locate transcript and detect meeting type")
+    logger.info("Step 1: Locate transcript and detect meeting type")
 
     transcript_path = find_transcript(meeting_id, meeting_date)
     if transcript_path is None:
-        print(f"  ❌ No transcript found for meeting {meeting_id} ({meeting_date})")
-        print(f"     Expected: data/processed/processed_transcript_{meeting_id}_{meeting_date}.json")
-        print(f"     Run scraping + capitalization first (see WORKFLOW.md steps 1-2)")
+        logger.error("  ❌ No transcript found for meeting %d (%s)", meeting_id, meeting_date)
+        logger.error("     Expected: data/processed/processed_transcript_%d_%s.json", meeting_id, meeting_date)
+        logger.error("     Run scraping + capitalization first (see WORKFLOW.md steps 1-2)")
         return False
 
-    print(f"  ✓ Transcript: {transcript_path}")
+    logger.info("  ✓ Transcript: %s", transcript_path)
 
     if meeting_type:
         detected_label = meeting_type
-        print(f"  ✓ Meeting type: {meeting_type} (explicit override)")
+        logger.info("  ✓ Meeting type: %s (explicit override)", meeting_type)
     else:
         detected = detect_meeting_type(
             transcript_path=str(transcript_path),
             meeting_id=meeting_id,
         )
         detected_label = detected.label
-        print(f"  ✓ Meeting type: {detected.label} (auto-detected, search: '{detected.youtube_search_term}')")
+        logger.info("  ✓ Meeting type: %s (auto-detected, search: '%s')",
+                    detected.label, detected.youtube_search_term)
 
     # ── Step 2: Find YouTube videos ──────────────────────────────────────
-    print(f"\nStep 2: Find YouTube videos")
+    logger.info("\nStep 2: Find YouTube videos")
 
     if skip_fetch and not mapping_path.exists():
-        print(f"  ❌ --skip-fetch but no existing mapping at {mapping_path}")
+        logger.error("  ❌ --skip-fetch but no existing mapping at %s", mapping_path)
         return False
 
     mapping = fetch_videos(
         meeting_id, meeting_date, meeting_type, transcript_path, mapping_path, dry_run
     )
     if mapping is None and not dry_run:
-        print("  ❌ Could not obtain video mapping — aborting")
+        logger.error("  ❌ Could not obtain video mapping — aborting")
         return False
 
     if mapping:
         videos = sorted(mapping.get("videos", []), key=lambda v: v.get("part", 1))
-        print(f"  ✓ {len(videos)} video(s) found:")
+        logger.info("  ✓ %d video(s) found:", len(videos))
         for v in videos:
-            print(f"     Part {v.get('part', '?')}: {v.get('title', v['video_id'])} "
-                  f"({v.get('duration', 'unknown')})")
+            logger.info("     Part %s: %s (%s)",
+                        v.get("part", "?"), v.get("title", v["video_id"]), v.get("duration", "unknown"))
     elif dry_run:
-        print("  [dry-run] Would fetch and save video mapping")
+        logger.info("  [dry-run] Would fetch and save video mapping")
         videos = []
     else:
         videos = []
@@ -333,29 +350,30 @@ def run_pipeline(
     # For multi-part meetings, detect gaps first so transcript_start_time
     # is available for Part 2+ offset matching.
     if videos and len(videos) > 1:
-        print(f"\nStep 3: Detect transcript gaps (multi-part meeting)")
+        logger.info("\nStep 3: Detect transcript gaps (multi-part meeting)")
 
         if dry_run:
-            print(f"  [dry-run] Would scan for gaps ≥ {min_gap_minutes} min")
+            logger.info("  [dry-run] Would scan for gaps ≥ %d min", min_gap_minutes)
         else:
             gap_result = detect_gaps(str(transcript_path), min_gap_minutes)
             if gap_result.gaps:
-                print(f"  ✓ Found {len(gap_result.gaps)} gap(s):")
+                logger.info("  ✓ Found %d gap(s):", len(gap_result.gaps))
                 for g in gap_result.gaps:
-                    print(f"     {g.end_timestamp} → {g.resume_timestamp} ({g.gap_minutes} min)")
+                    logger.info("     %s → %s (%s min)", g.end_timestamp, g.resume_timestamp, g.gap_minutes)
                 save_gaps_to_mapping(str(mapping_path), gap_result.gaps)
                 # Reload the mapping so video dicts have transcript_start_time
                 with open(mapping_path) as f:
                     mapping = json.load(f)
                 videos = sorted(mapping.get("videos", []), key=lambda v: v.get("part", 1))
             else:
-                print(f"  ℹ️  No gaps ≥ {min_gap_minutes} min — transcript appears to be single-session")
+                logger.info("  ℹ️  No gaps ≥ %d min — transcript appears to be single-session",
+                            min_gap_minutes)
     elif videos and len(videos) == 1:
-        print(f"\nStep 3: Gap detection — skipped (single video)")
+        logger.info("\nStep 3: Gap detection — skipped (single video)")
 
     # ── Step 4: Calculate offsets (Whisper → transcript matching) ─────
     if videos:
-        print(f"\nStep 4: Calculate offsets (Whisper → transcript matching)")
+        logger.info("\nStep 4: Calculate offsets (Whisper → transcript matching)")
 
         results = []
         for i, video in enumerate(videos):
@@ -364,19 +382,19 @@ def run_pipeline(
                 existing_offset = video.get("offset_seconds")
                 cache_exists = _whisper_cache_exists(video["video_id"], model)
                 if existing_offset is None and not cache_exists:
-                    print(f"  ⏳ Rate-limit delay ({YTDLP_DELAY_SECONDS}s)...")
+                    logger.info("  ⏳ Rate-limit delay (%ds)...", YTDLP_DELAY_SECONDS)
                     time.sleep(YTDLP_DELAY_SECONDS)
 
-            r = process_single_video(video, transcript_path, mapping_path, model, dry_run)
+            r = process_single_video(video, transcript_path, mapping_path, model, meeting_date, dry_run)
             results.append(r)
 
     # ── Summary ──────────────────────────────────────────────────────────
-    print(f"\n{'=' * 70}")
-    print(f" {prefix}SUMMARY — Meeting {meeting_id} ({meeting_date})")
-    print(f"{'=' * 70}")
-    print(f"  Meeting type:  {detected_label}")
-    print(f"  Transcript:    {transcript_path}")
-    print(f"  Video mapping: {mapping_path}")
+    logger.info("\n%s", "=" * 70)
+    logger.info(" %sSUMMARY — Meeting %d (%s)", prefix, meeting_id, meeting_date)
+    logger.info("%s", "=" * 70)
+    logger.info("  Meeting type:  %s", detected_label)
+    logger.info("  Transcript:    %s", transcript_path)
+    logger.info("  Video mapping: %s", mapping_path)
 
     all_ok = False
     if videos:
@@ -396,18 +414,18 @@ def run_pipeline(
                 tst_str = f" | transcript_start_time={tst}" if tst else ""
                 if offset is None:
                     all_ok = False
-                print(f"  Part {part}: {vid}  offset={offset_str}{tst_str}")
+                logger.info("  Part %s: %s  offset=%s%s", part, vid, offset_str, tst_str)
 
             if all_ok:
-                print(f"\n  ✅ Pipeline complete — all offsets calculated")
+                logger.info("\n  ✅ Pipeline complete — all offsets calculated")
             else:
-                print(f"\n  ⚠️  Pipeline finished with missing offsets — review above")
+                logger.warning("\n  ⚠️  Pipeline finished with missing offsets — review above")
         elif dry_run:
-            print(f"\n  [dry-run] No changes made")
+            logger.info("\n  [dry-run] No changes made")
     else:
-        print(f"\n  ℹ️  No videos processed")
+        logger.info("\n  ℹ️  No videos processed")
 
-    print()
+    logger.info("")
     return all_ok if videos and not dry_run else True
 
 

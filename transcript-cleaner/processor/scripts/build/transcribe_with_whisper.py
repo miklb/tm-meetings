@@ -6,6 +6,7 @@ This script ONLY does transcription - no matching, no offset calculation.
 Just downloads audio, transcribes it, and saves the result.
 """
 
+import logging
 import whisper
 import sys
 import json
@@ -14,6 +15,8 @@ import subprocess
 import tempfile
 import os
 from pathlib import Path
+
+logger = logging.getLogger(__name__)
 
 
 def _find_ytdlp() -> str:
@@ -74,20 +77,21 @@ def transcribe_video(video_id, duration=300, model_name='base', start=0):
     - text: transcribed text
     """
     if start > 0:
-        print(f"Downloading {duration}s of audio from {video_id} (starting at {start}s / {start//60}:{start%60:02d})...")
+        logger.info("Downloading %ds of audio from %s (starting at %ds / %d:%02d)...",
+                    duration, video_id, start, start // 60, start % 60)
     else:
-        print(f"Downloading first {duration}s of audio from {video_id}...")
+        logger.info("Downloading first %ds of audio from %s...", duration, video_id)
     audio_path = download_audio_sample(video_id, duration, start)
-    
-    print(f"Loading Whisper model '{model_name}'...")
+
+    logger.info("Loading Whisper model '%s'...", model_name)
     model = whisper.load_model(model_name)
-    
-    print(f"Transcribing {audio_path}...")
+
+    logger.info("Transcribing %s...", audio_path)
     result = model.transcribe(audio_path, word_timestamps=False)
-    
+
     # Clean up
     os.remove(audio_path)
-    
+
     # Shift timestamps to absolute video time when audio was extracted
     # from a non-zero start point
     segments = result['segments']
@@ -95,51 +99,44 @@ def transcribe_video(video_id, duration=300, model_name='base', start=0):
         for seg in segments:
             seg['start'] += start
             seg['end'] += start
-        print(f"  Shifted {len(segments)} segment timestamps by +{start}s")
-    
+        logger.info("  Shifted %d segment timestamps by +%ds", len(segments), start)
+
     return segments
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python transcribe_with_whisper.py <video_id> [options]")
-        print("\nOptions:")
-        print("  --duration <secs>   Sample duration (default: 300)")
-        print("  --start <secs>      Start offset in video (default: 0)")
-        print("  --model <name>      Whisper model (tiny/base/small, default: base)")
-        print("  --output <file>     Output JSON file (default: whisper_<video_id>.json)")
-        print("\nExample:")
-        print("  python transcribe_with_whisper.py JhLSLEN6AUc --duration 360 --output whisper_2435.json")
-        print("  python transcribe_with_whisper.py JhLSLEN6AUc --start 1130 --duration 300  # skip b-roll")
-        sys.exit(1)
-    
-    video_id = sys.argv[1]
-    duration = 300
-    start = 0
-    model_name = 'base'
-    output_file = f"whisper_{video_id}.json"
-    
-    # Parse arguments
-    i = 2
-    while i < len(sys.argv):
-        if sys.argv[i] == '--duration' and i + 1 < len(sys.argv):
-            duration = int(sys.argv[i + 1])
-            i += 2
-        elif sys.argv[i] == '--start' and i + 1 < len(sys.argv):
-            start = int(sys.argv[i + 1])
-            i += 2
-        elif sys.argv[i] == '--model' and i + 1 < len(sys.argv):
-            model_name = sys.argv[i + 1]
-            i += 2
-        elif sys.argv[i] == '--output' and i + 1 < len(sys.argv):
-            output_file = sys.argv[i + 1]
-            i += 2
-        else:
-            i += 1
-    
+    import argparse
+    # Import here to avoid circular imports when used as a library
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
+    from src.logging_config import setup_logging
+
+    parser = argparse.ArgumentParser(
+        description="Transcribe a YouTube video with Whisper and save JSON output."
+    )
+    parser.add_argument("video_id", help="YouTube video ID")
+    parser.add_argument("--duration", type=int, default=300,
+                        help="Sample duration in seconds (default: 300)")
+    parser.add_argument("--start", type=int, default=0,
+                        help="Start offset in video seconds (default: 0)")
+    parser.add_argument("--model", default="base",
+                        help="Whisper model: tiny/base/small/medium (default: base)")
+    parser.add_argument("--output", default=None,
+                        help="Output JSON file (default: whisper_<video_id>.json)")
+    parser.add_argument("--log-date", default=None,
+                        help="Meeting date YYYY-MM-DD — routes logs to that meeting's log file")
+    args = parser.parse_args()
+
+    setup_logging(args.log_date)
+
+    video_id = args.video_id
+    duration = args.duration
+    start = args.start
+    model_name = args.model
+    output_file = args.output or f"whisper_{video_id}.json"
+
     # Transcribe
     segments = transcribe_video(video_id, duration, model_name, start)
-    
+
     # Save to JSON
     output_data = {
         'video_id': video_id,
@@ -148,18 +145,18 @@ def main():
         'model': model_name,
         'segments': segments
     }
-    
+
     with open(output_file, 'w') as f:
         json.dump(output_data, f, indent=2)
-    
-    print(f"\n✓ Saved {len(segments)} segments to {output_file}")
-    
-    # Also print human-readable version
-    print("\nTranscription:")
+
+    logger.info("\n✓ Saved %d segments to %s", len(segments), output_file)
+
+    # Log full transcription at DEBUG so it appears in the log file but not console
+    logger.debug("\nTranscription:")
     for seg in segments:
         start_min = int(seg['start'] // 60)
         start_sec = int(seg['start'] % 60)
-        print(f"  [{start_min}:{start_sec:02d}] {seg['text']}")
+        logger.debug("  [%d:%02d] %s", start_min, start_sec, seg['text'])
 
 
 if __name__ == '__main__':

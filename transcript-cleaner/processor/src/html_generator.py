@@ -597,17 +597,14 @@ def main():
     parser.add_argument('--meeting-id', type=int, help='Generate single meeting by ID')
     parser.add_argument('--output', default='output/site', help='Output directory')
     parser.add_argument('--all', action='store_true', help='Generate all meetings')
-    
+
     args = parser.parse_args()
-    
-    # Set up logging
-    logging.basicConfig(
-        level=logging.INFO,
-        format='%(levelname)s: %(message)s'
-    )
-    
+
+    from src.logging_config import setup_logging
+    setup_logging()
+
     generator = HTMLGenerator(output_dir=args.output)
-    
+
     if args.meeting_id:
         success = generator.generate_transcript_page(args.meeting_id)
         print(f"\n{'✅' if success else '❌'} Meeting {args.meeting_id}")
@@ -618,7 +615,7 @@ def main():
     else:
         print("Please specify --meeting-id or --all")
         return 1
-    
+
     return 0
 
 

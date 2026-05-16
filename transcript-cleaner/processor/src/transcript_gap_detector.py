@@ -11,10 +11,13 @@ which html_generator.py uses to assign segments to the correct video part.
 """
 
 import json
+import logging
 import re
 from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Optional
+
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -165,19 +168,19 @@ def save_gaps_to_mapping(
     """
     path = Path(video_mapping_path)
     if not path.exists():
-        print(f"  ⚠️  Video mapping file not found: {video_mapping_path}")
+        logger.warning("  ⚠️  Video mapping file not found: %s", video_mapping_path)
         return False
 
     try:
         with open(path, "r") as f:
             mapping = json.load(f)
     except (json.JSONDecodeError, IOError) as e:
-        print(f"  ⚠️  Could not read video mapping: {e}")
+        logger.warning("  ⚠️  Could not read video mapping: %s", e)
         return False
 
     videos = mapping.get("videos", [])
     if not videos:
-        print("  ⚠️  No videos in mapping")
+        logger.warning("  ⚠️  No videos in mapping")
         return False
 
     # Sort videos by part number to ensure correct ordering
@@ -196,20 +199,22 @@ def save_gaps_to_mapping(
                 break
 
         if target_video is None:
-            print(f"  ⚠️  No video entry for Part {part_num} to assign gap at {gap.resume_timestamp}")
+            logger.warning("  ⚠️  No video entry for Part %d to assign gap at %s",
+                           part_num, gap.resume_timestamp)
             continue
 
         old_value = target_video.get("transcript_start_time")
         target_video["transcript_start_time"] = gap.resume_timestamp
         updated = True
         if old_value and old_value != gap.resume_timestamp:
-            print(f"  ⚠️  Part {part_num}: transcript_start_time changed from {old_value} → {gap.resume_timestamp}")
+            logger.warning("  ⚠️  Part %d: transcript_start_time changed from %s → %s",
+                           part_num, old_value, gap.resume_timestamp)
         else:
-            print(f"  ✅ Part {part_num}: transcript_start_time = {gap.resume_timestamp} "
-                  f"(gap of {gap.gap_minutes} min after segment {gap.after_segment_index})")
+            logger.info("  ✅ Part %d: transcript_start_time = %s (gap of %s min after segment %d)",
+                        part_num, gap.resume_timestamp, gap.gap_minutes, gap.after_segment_index)
 
     if not updated:
-        print("  ℹ️  No gaps matched to video parts — single-part meeting?")
+        logger.info("  ℹ️  No gaps matched to video parts — single-part meeting?")
         return False
 
     with open(path, "w") as f:
@@ -239,7 +244,7 @@ def detect_and_save(
     if result.gaps:
         save_gaps_to_mapping(video_mapping_path, result.gaps)
     else:
-        print(f"  ℹ️  No gaps ≥ {min_gap_minutes} min detected — single-part meeting")
+        logger.info("  ℹ️  No gaps ≥ %d min detected — single-part meeting", min_gap_minutes)
 
     return result
 
@@ -248,6 +253,7 @@ def detect_and_save(
 
 def main():
     import argparse
+    from src.logging_config import setup_logging
 
     parser = argparse.ArgumentParser(
         description="Detect time gaps in official transcripts for multi-part video boundary detection."
@@ -274,28 +280,31 @@ def main():
 
     args = parser.parse_args()
 
+    setup_logging()
+
     result = detect_gaps(args.transcript, args.min_gap)
 
-    print(f"\nTranscript: {result.transcript_path}")
-    print(f"Segments:   {result.total_segments}")
-    print(f"First:      {result.first_timestamp}")
+    logger.info("\nTranscript: %s", result.transcript_path)
+    logger.info("Segments:   %d", result.total_segments)
+    logger.info("First:      %s", result.first_timestamp)
 
     if not result.gaps:
-        print(f"\nNo gaps ≥ {args.min_gap} minutes detected — single-part meeting.\n")
+        logger.info("\nNo gaps ≥ %d minutes detected — single-part meeting.\n", args.min_gap)
         return
 
-    print(f"\nDetected {len(result.gaps)} gap(s):\n")
+    logger.info("\nDetected %d gap(s):\n", len(result.gaps))
     for i, gap in enumerate(result.gaps):
-        print(f"  Gap {i + 1}: {gap.end_timestamp} → {gap.resume_timestamp} "
-              f"({gap.gap_minutes} min, after segment {gap.after_segment_index})")
+        logger.info("  Gap %d: %s → %s (%s min, after segment %d)",
+                    i + 1, gap.end_timestamp, gap.resume_timestamp,
+                    gap.gap_minutes, gap.after_segment_index)
         if gap.resume_speaker:
-            print(f"          First speaker: {gap.resume_speaker}")
+            logger.info("          First speaker: %s", gap.resume_speaker)
 
     if args.video_mapping and not args.dry_run:
-        print()
+        logger.info("")
         save_gaps_to_mapping(args.video_mapping, result.gaps)
     elif args.dry_run:
-        print("\n  (dry-run mode — no files modified)")
+        logger.info("\n  (dry-run mode — no files modified)")
 
 
 if __name__ == "__main__":

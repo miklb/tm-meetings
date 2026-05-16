@@ -30,7 +30,6 @@ except ImportError:
     YOUTUBE_API_AVAILABLE = False
     logging.warning("google-api-python-client not installed. Install with: pip install google-api-python-client")
 
-logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
@@ -436,7 +435,8 @@ def main():
     """Example usage."""
     import sys
     import argparse
-    
+    from src.logging_config import setup_logging
+
     parser = argparse.ArgumentParser(
         description='Fetch YouTube videos for Tampa City Council meetings',
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -444,15 +444,15 @@ def main():
 Examples:
   # Just search for videos by date
   python youtube_fetcher.py 2025-10-23
-  
+
   # Save video mapping for a meeting
   python youtube_fetcher.py --meeting-id 2639 --meeting-date 2025-10-23
-  
+
 Note: Set YOUTUBE_API_KEY environment variable first
 Get API key from: https://console.cloud.google.com/apis/credentials
         '''
     )
-    
+
     parser.add_argument('meeting_date', nargs='?', help='Meeting date (YYYY-MM-DD)')
     parser.add_argument('--meeting-id', type=int, help='Meeting ID (saves to data/video_mapping_<ID>.json)')
     parser.add_argument('--meeting-date', dest='meeting_date_flag', help='Meeting date (YYYY-MM-DD)')
@@ -466,20 +466,27 @@ Get API key from: https://console.cloud.google.com/apis/credentials
         help='Path to transcript JSON file. Used for auto-detecting meeting type '
              'when --meeting-type is not specified.',
     )
-    
+    parser.add_argument(
+        '--log-date',
+        default=None,
+        help='Meeting date YYYY-MM-DD — routes logs to that meeting\'s log file',
+    )
+
     args = parser.parse_args()
-    
+
     # Determine meeting date (positional arg takes precedence)
     meeting_date = args.meeting_date or args.meeting_date_flag
-    
+
     if not meeting_date:
         parser.print_help()
         sys.exit(1)
-    
+
+    setup_logging(args.log_date or meeting_date)
+
     # Resolve meeting type: explicit flag > auto-detect from transcript > default
     meeting_type_override = args.meeting_type
     transcript_path = args.transcript
-    
+
     # Map short CLI names to YouTube search terms
     cli_type_map = {
         'cra': 'Community Redevelopment',
@@ -488,18 +495,18 @@ Get API key from: https://console.cloud.google.com/apis/credentials
         'evening': 'City Council',
         'city council': 'City Council',
     }
-    
+
     if meeting_type_override:
         search_term = cli_type_map.get(
             meeting_type_override.lower(), meeting_type_override
         )
         type_label = meeting_type_override.capitalize()
-        print(f"Using meeting type: {meeting_type_override} (search: '{search_term}')")
+        logger.info("Using meeting type: %s (search: '%s')", meeting_type_override, search_term)
     elif transcript_path:
         detected = detect_meeting_type(transcript_path=transcript_path, meeting_id=args.meeting_id)
         search_term = detected.youtube_search_term
         type_label = detected.label
-        print(f"Auto-detected meeting type: {detected.label} (search: '{search_term}')")
+        logger.info("Auto-detected meeting type: %s (search: '%s')", detected.label, search_term)
     elif args.meeting_id:
         # Try to find transcript file automatically
         transcript_dir = Path('data/transcripts')
@@ -510,34 +517,34 @@ Get API key from: https://console.cloud.google.com/apis/credentials
             detected = detect_meeting_type(transcript_path=str(candidates[0]), meeting_id=args.meeting_id)
             search_term = detected.youtube_search_term
             type_label = detected.label
-            print(f"Auto-detected meeting type: {detected.label} (from {candidates[0].name})")
+            logger.info("Auto-detected meeting type: %s (from %s)", detected.label, candidates[0].name)
         else:
             search_term = 'City Council'
             type_label = None
-            print(f"No transcript found for meeting {args.meeting_id}, defaulting to 'City Council'")
+            logger.info("No transcript found for meeting %d, defaulting to 'City Council'", args.meeting_id)
     else:
         search_term = 'City Council'
         type_label = None
-    
+
     fetcher = YouTubeFetcher()
     videos = fetcher.find_videos_for_meeting(
         meeting_date,
         meeting_type=search_term,
         meeting_type_label=type_label,
     )
-    
+
     if videos:
-        print(f"\nFound {len(videos)} video(s) for {meeting_date}:")
+        logger.info("\nFound %d video(s) for %s:", len(videos), meeting_date)
         for i, video in enumerate(videos, 1):
-            print(f"\nPart {i}:")
-            print(f"  Title: {video['title']}")
-            print(f"  Video ID: {video['video_id']}")
-            print(f"  URL: https://www.youtube.com/watch?v={video['video_id']}")
+            logger.info("\nPart %d:", i)
+            logger.info("  Title: %s", video['title'])
+            logger.info("  Video ID: %s", video['video_id'])
+            logger.info("  URL: https://www.youtube.com/watch?v=%s", video['video_id'])
             if video['session']:
-                print(f"  Session: {video['session']}")
+                logger.info("  Session: %s", video['session'])
             if video['duration']:
-                print(f"  Duration: {video['duration']}")
-        
+                logger.info("  Duration: %s", video['duration'])
+
         # If meeting ID provided, save to file
         if args.meeting_id:
             output_path = Path('data') / f'video_mapping_{args.meeting_id}.json'
@@ -549,14 +556,14 @@ Get API key from: https://console.cloud.google.com/apis/credentials
             }
             with open(output_path, 'w') as f:
                 json.dump(mapping, f, indent=2)
-            print(f"\n✅ Saved video mapping to {output_path}")
+            logger.info("\n✅ Saved video mapping to %s", output_path)
     else:
-        print(f"No videos found for {meeting_date}")
-        print("\nTroubleshooting:")
-        print("1. Check YOUTUBE_API_KEY environment variable is set")
-        print("2. Verify the date format (YYYY-MM-DD)")
-        print("3. Make sure videos exist for this date on the channel")
-        print("4. Try --meeting-type to specify type explicitly")
+        logger.warning("No videos found for %s", meeting_date)
+        logger.info("\nTroubleshooting:")
+        logger.info("1. Check YOUTUBE_API_KEY environment variable is set")
+        logger.info("2. Verify the date format (YYYY-MM-DD)")
+        logger.info("3. Make sure videos exist for this date on the channel")
+        logger.info("4. Try --meeting-type to specify type explicitly")
 
 
 if __name__ == '__main__':
