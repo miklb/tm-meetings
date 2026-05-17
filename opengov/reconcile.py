@@ -124,6 +124,28 @@ def _round_totals(bucket: dict[str, float]) -> dict[str, float]:
     return {k: round(v, 2) for k, v in bucket.items()}
 
 
+def _compute_reallocation(
+    rows: list[dict[str, Any]],
+    committed_totals: dict[str, float],
+) -> dict[str, Any] | None:
+    """Return a reallocation summary block when an item both increases and
+    decreases spending (i.e. moves money between line items).
+
+    Returns None when there are no decrease rows (pure new spending or revenue).
+    """
+    decreases = committed_totals.get("decreases", 0.0)
+    increases = committed_totals.get("expenditures", 0.0)
+    if decreases == 0.0:
+        return None
+    imbalance = round(decreases - increases, 2)
+    return {
+        "decreasesTotal": round(decreases, 2),
+        "increasesTotal": round(increases, 2),
+        "imbalance": imbalance,
+        "balanced": abs(imbalance) <= 1.0,
+    }
+
+
 def _enrich_row(
     row: dict[str, Any],
     cache: dict[str, Any],
@@ -250,6 +272,7 @@ def reconcile_meeting(
                 bucket["name"] = bucket["name"] or dept_info["name"]
                 _add_to_totals(bucket, t, v)
 
+        item_totals = _aggregate_rows(enriched_rows)
         items_out.append(
             {
                 "agendaItemId": item.get("agendaItemId"),
@@ -258,7 +281,8 @@ def reconcile_meeting(
                 "title": item.get("title"),
                 "fiscalImpactStatement": pc.get("fiscalImpactStatement") or "",
                 "rows": enriched_rows,
-                "totals": _aggregate_rows(enriched_rows),
+                "totals": item_totals,
+                "reallocation": _compute_reallocation(enriched_rows, item_totals["committed"]),
             }
         )
 

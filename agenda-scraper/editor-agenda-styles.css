@@ -146,3 +146,19 @@
   text-decoration-color: #1d636b; /* accent-3 */
   text-decoration-thickness: 3px;
 }
+
+/* Financial section — warning notices */
+.editor-styles-wrapper .agenda-item-financial__warning {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-inline-start: 3px solid #e6b45e; /* accent-1 */
+  background: rgba(230, 180, 94, 0.1);
+  font-size: 0.875rem;
+  color: #314a59; /* contrast */
+  border-radius: 0 4px 4px 0;
+}
+
+.editor-styles-wrapper .agenda-item-financial__warning--imbalance {
+  border-inline-start-color: #c0392b;
+  background: rgba(192, 57, 43, 0.08);
+}

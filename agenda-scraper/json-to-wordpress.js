@@ -423,7 +423,13 @@ function buildItemDetailsDrawer(item, fundingItem) {
     const innerBlocks = [];
 
     // 1. Financial impact (already a complete wp:html block)
-    const financial = renderItemFinancialSection(fundingItem, item.projectedCosts);
+    // Augment the manifest funding item with supporting documents from the
+    // agenda item so the renderer can link to the cover sheet PDF in
+    // reallocation imbalance warnings.
+    const fundingItemWithDocs = fundingItem
+        ? { ...fundingItem, supportingDocuments: item.supportingDocuments || [] }
+        : fundingItem;
+    const financial = renderItemFinancialSection(fundingItemWithDocs, item.projectedCosts);
     if (financial) innerBlocks.push(financial);
 
     // 2. Background narrative — emit a heading + existing wp:paragraph/wp:list

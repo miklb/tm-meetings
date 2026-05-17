@@ -234,3 +234,19 @@ a.item-permalink {
 a.item-permalink:hover {
   text-decoration: none;
 }
+
+/* Financial section — warning notices */
+.agenda-item-financial__warning {
+  margin-top: var(--wp--preset--spacing--20);
+  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+  border-inline-start: 3px solid var(--wp--preset--color--accent-1, #e6b45e);
+  background: color-mix(in srgb, var(--wp--preset--color--accent-1, #e6b45e) 10%, transparent);
+  font-size: var(--wp--preset--font-size--small, 0.875rem);
+  color: var(--wp--preset--color--contrast, #314a59);
+  border-radius: 0 4px 4px 0;
+}
+
+.agenda-item-financial__warning--imbalance {
+  border-inline-start-color: var(--wp--preset--color--accent-2, #c0392b);
+  background: color-mix(in srgb, var(--wp--preset--color--accent-2, #c0392b) 8%, transparent);
+}

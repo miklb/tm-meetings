@@ -181,7 +181,21 @@ function renderItemFinancialSection(fundingItem, rawProjectedCosts) {
         revRows.length === 1 && expRows.length === 1 &&
         revRows[0].value === expRows[0].value;
 
-    const totalRows = isPureGrantPair ? [] : [
+    // Reallocation: the resolution moves money between line items rather than
+    // authorizing new net spending. When a reallocation block is present we
+    // replace "Spending authorized" with a "Reallocated" headline that shows
+    // the larger side (matches the dollar figure in the resolution title).
+    const reallocation = fundingItem.reallocation || null;
+    const isReallocation = reallocation !== null && !isPureGrantPair;
+
+    const totalRows = isPureGrantPair ? [] : isReallocation ? [
+        ['Reallocated', Math.max(reallocation.decreasesTotal, reallocation.increasesTotal),
+            'Funds moved between accounts within the same fund or department; not net new spending.'],
+        ['Grant or revenue accepted', effRevenues,
+            'Outside funds (grants, fees, reimbursements) the City is committing to receive in the current fiscal year.'],
+        ['Revenue reduced', effRevenueDecreases,
+            'Outside funds the City was expecting but will no longer receive (e.g. a grant amendment).'],
+    ] : [
         ['Spending authorized', effExpenditures,
             'Total dollars this resolution authorizes the City to spend in the current fiscal year. Inter-fund transfers are excluded to avoid double-counting.'],
         ['Grant or revenue accepted', effRevenues,
@@ -276,9 +290,29 @@ function renderItemFinancialSection(fundingItem, rawProjectedCosts) {
         if (e.fund && e.department && e.object && !e.project) continue;
         trulyUnknown += 1;
     }
-    const warningHtml = trulyUnknown
+    const coaWarningHtml = trulyUnknown
         ? `<p class="agenda-item-financial__warning" role="note">${trulyUnknown} account code${trulyUnknown === 1 ? '' : 's'} could not be matched to the City's chart of accounts.</p>`
         : '';
+
+    // Reallocation imbalance warning — surfaces a clerical discrepancy on the
+    // city's Summary Sheet where the decrease and increase sides don't match.
+    let imbalanceWarningHtml = '';
+    if (isReallocation && reallocation && !reallocation.balanced) {
+        const imb = formatMoney(Math.abs(reallocation.imbalance));
+        // Link to the cover-sheet PDF if available via supporting documents.
+        const coverSheet = (fundingItem.supportingDocuments || []).find(
+            d => /cover\s*sheet/i.test(d.title || '')
+        );
+        const pdfUrl = (coverSheet && coverSheet.mirroredUrl) || null;
+        const pdfLink = pdfUrl
+            ? ` <a href="${escapeHtml(pdfUrl)}" target="_blank" rel="noopener noreferrer">Review the source PDF.</a>`
+            : ' Review the source PDF for clarification.';
+        imbalanceWarningHtml = `<p class="agenda-item-financial__warning agenda-item-financial__warning--imbalance" role="note">` +
+            `Note: The Summary Sheet shows an imbalance of ${escapeHtml(imb)} between the decrease and increase amounts.${pdfLink}` +
+            `</p>`;
+    }
+
+    const warningHtml = [coaWarningHtml, imbalanceWarningHtml].filter(Boolean).join('\n');
 
     return `<!-- wp:html -->
 <section class="agenda-item-financial" aria-labelledby="financial-${escapeHtml(fundingItem.agendaItemId)}">

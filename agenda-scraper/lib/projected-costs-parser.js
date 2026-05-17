@@ -78,7 +78,14 @@ const ACCOUNT_CODE_ANCHOR_RE = new RegExp(ACCOUNT_CODE_RE.source, 'g');
 // "<code> FY26 $X (Type)" and "<code> $X FY2026 (Type)" formats).
 const FY_RE = /\bFY\s*(?:20)?(\d{2})\b/i;
 const AMOUNT_RE = /\$([\d,]+(?:\.\d{2})?)/;
-const MARKER_RE = /\(([^)]+)\)/;
+// MARKER_RE is now global so we can iterate all parenthesized groups in a
+// row and skip any whose content is a bare dollar amount (e.g. "($294,318)").
+// Tampa staff use that negative-amount convention for decreases, which means
+// the type marker like "(Expenditure Decrease)" appears AFTER the amount.
+const MARKER_RE = /\(([^)]+)\)/g;
+// Pattern to detect a parens group that is just a dollar amount, not a type
+// marker. These must be skipped when searching for the type marker.
+const DOLLAR_ONLY_RE = /^\$?[\d,]+(?:\.\d{2})?$/;
 // Subject-to-appropriation: phrase may wrap across line breaks, so use
 // \s+ between every word.
 const SUBJECT_RE = /subject\s+to\s+annual\s+appropriation/i;
@@ -178,7 +185,17 @@ function parseProjectedCostsRows(sectionText) {
     if (!codeMatch) continue;
 
     const amountMatch = AMOUNT_RE.exec(text);
-    const markerMatch = MARKER_RE.exec(text);
+    // Find the type-marker parens group, skipping any group whose content is
+    // a bare dollar amount (e.g. "($294,318)" in decrease rows).
+    MARKER_RE.lastIndex = 0;
+    let markerMatch = null;
+    let m;
+    while ((m = MARKER_RE.exec(text)) !== null) {
+      if (!DOLLAR_ONLY_RE.test(m[1].trim())) {
+        markerMatch = m;
+        break;
+      }
+    }
     const fyMatch = FY_RE.exec(text);
     const subjectMatch = SUBJECT_RE.exec(text);
 
