@@ -1,7 +1,7 @@
 {
   "meetingId": "2889",
   "meetingType": "special",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "May 21, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2889&type=agenda&doctype=1",
@@ -39,7 +39,7 @@
       "supportingDocuments": [
         {
           "title": "CRA RESO - RAYS MOU.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20RESO%20-%20RAYS%20MOU.PDF.pdf?documentType=1&meetingId=2889&itemId=24164&publishId=194435&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20RESO%20-%20RAYS%20MOU.PDF.pdf?documentType=1&meetingId=2889&itemId=24164&publishId=194544&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of CRA RESO - RAYS MOU.PDF in a new tab",
           "originalText": "CRA RESO - RAYS MOU.PDF"
         }
