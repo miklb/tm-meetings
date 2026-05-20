@@ -15,6 +15,7 @@ const path = require('path');
 require('dotenv').config();
 
 const { DocumentMirror } = require('./lib/document-mirror');
+const { loadChangeLog, saveChangeLog, appendOrMergeEntry } = require('./lib/change-log');
 
 /**
  * Parse command line arguments
@@ -248,6 +249,20 @@ async function main() {
     const results = await mirror.mirrorMeeting(meetingData, {
       force: options.force,
     });
+
+    // Record newly-uploaded documents in the change log
+    if (results.uploadedDocuments && results.uploadedDocuments.length > 0) {
+      try {
+        const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
+        appendOrMergeEntry(changeLog, {
+          mirroredAt: new Date().toISOString(),
+          newDocuments: results.uploadedDocuments,
+        });
+        saveChangeLog(changeLog);
+      } catch (changeLogErr) {
+        console.warn(`Warning: change-log update failed: ${changeLogErr.message}`);
+      }
+    }
 
     // Update summary
     summary.meetings++;

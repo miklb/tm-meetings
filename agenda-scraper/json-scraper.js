@@ -6,6 +6,8 @@ const axios = require('axios');
 const pdfParse = require('pdf-parse');
 const { toTitleCase } = require('./format-helpers');
 const { integrateStaffReportsIntoAgendaItems } = require('./staff-report-parser');
+const { loadChangeLog, saveChangeLog, appendOrMergeEntry } = require('./lib/change-log');
+const { computeMeetingDiff, diffIsEmpty } = require('./lib/diff-meeting');
 
 // HTTP scraper module (default)
 const { createSession, fetchMeeting, fetchMeetingList } = require('./lib/http-meeting-scraper');
@@ -1351,8 +1353,37 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                         console.log(`Preserved ${restored} mirrored document URLs from previous scrape`);
                     }
                 }
+
+                // Capture meaningful diff for the public change-log
+                try {
+                    const diff = computeMeetingDiff(existing, meetingData);
+                    if (!diffIsEmpty(diff)) {
+                        const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
+                        appendOrMergeEntry(changeLog, {
+                            scrapedAt: new Date().toISOString(),
+                            agendaTypePromoted: diff.agendaTypePromoted,
+                            itemsAdded: diff.itemsAdded,
+                            itemsRemoved: diff.itemsRemoved,
+                            totalChanged: diff.totalChanged,
+                        });
+                        saveChangeLog(changeLog);
+                    }
+                } catch (changeLogErr) {
+                    console.warn(`Warning: change-log update failed: ${changeLogErr.message}`);
+                }
             } catch (e) {
                 // Existing file unreadable — proceed without merge
+            }
+        } else {
+            // First scrape — initialise the log with firstSeenAt so we have a baseline
+            try {
+                const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
+                if (!changeLog.firstSeenAt) {
+                    changeLog.firstSeenAt = new Date().toISOString();
+                    saveChangeLog(changeLog);
+                }
+            } catch (changeLogErr) {
+                console.warn(`Warning: change-log initialisation failed: ${changeLogErr.message}`);
             }
         }
 

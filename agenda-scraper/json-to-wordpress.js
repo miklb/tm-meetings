@@ -7,6 +7,7 @@ const {
     buildFundingByItemId,
     renderItemFinancialSection,
 } = require('./lib/render-funding');
+const { loadChangeLog } = require('./lib/change-log');
 // Top-of-agenda summary card is intentionally disabled.
 const renderAgendaFundingOverview = () => '';
 
@@ -520,6 +521,108 @@ function generateSupportingDocsMarkup(supportingDocuments) {
 }
 
 /**
+ * Format a UTC date key (YYYY-MM-DD) to a friendly string like "Tuesday, December 9, 2025".
+ * @param {string} dateKey
+ * @returns {string}
+ */
+function formatChangeLogDate(dateKey) {
+    const [year, month, day] = dateKey.split('-').map(Number);
+    const d = new Date(Date.UTC(year, month - 1, day));
+    return d.toLocaleDateString('en-US', {
+        weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
+        timeZone: 'UTC',
+    });
+}
+
+/**
+ * Render the public-facing "What's Changed" aside block for one meeting.
+ * Returns an empty string when the change log has no entries.
+ *
+ * @param {Object|null} changeLog  Result of loadChangeLog (may be null).
+ * @param {Object}      meeting    Meeting data object (needs .meetingId).
+ * @returns {string} WordPress block markup.
+ */
+function renderWhatsChangedBox(changeLog, meeting) {
+    if (!changeLog || !changeLog.entries || changeLog.entries.length === 0) {
+        return '';
+    }
+
+    const mid = meeting.meetingId;
+    const headingId = `whats-changed-${mid}`;
+
+    let inner = `<h3 id="${headingId}">What's Changed</h3>\n`;
+
+    for (const entry of changeLog.entries) {
+        const sections = [];
+
+        // Draft → Final promotion
+        if (entry.agendaTypePromoted && entry.agendaTypePromoted.to === 'FINAL') {
+            sections.push(`<p>Agenda was finalized.</p>`);
+        }
+
+        // Items added
+        if (entry.itemsAdded && entry.itemsAdded.length > 0) {
+            const bullets = entry.itemsAdded.map(item => {
+                const label = item.fileNumber ? `<strong>${item.fileNumber}</strong>` : `Item ${item.number}`;
+                const title = item.shortTitle ? ` \u2014 ${item.shortTitle}` : '';
+                return `<li>${label}${title}</li>`;
+            }).join('\n');
+            sections.push(`<p>Item${entry.itemsAdded.length > 1 ? 's' : ''} added:</p>\n<ul>\n${bullets}\n</ul>`);
+        }
+
+        // Items removed
+        if (entry.itemsRemoved && entry.itemsRemoved.length > 0) {
+            const bullets = entry.itemsRemoved.map(item => {
+                const label = item.fileNumber ? `<strong>${item.fileNumber}</strong>` : `Item ${item.number}`;
+                const title = item.shortTitle ? ` \u2014 ${item.shortTitle}` : '';
+                return `<li>${label}${title}</li>`;
+            }).join('\n');
+            sections.push(`<p>Item${entry.itemsRemoved.length > 1 ? 's' : ''} removed:</p>\n<ul>\n${bullets}\n</ul>`);
+        }
+
+        // Budget total changed
+        if (entry.totalChanged) {
+            sections.push(`<p>Estimated budget impact changed from ${entry.totalChanged.from} to ${entry.totalChanged.to}.</p>`);
+        }
+
+        // Newly mirrored documents grouped by item
+        if (entry.newDocuments && entry.newDocuments.length > 0) {
+            const groups = new Map();
+            for (const doc of entry.newDocuments) {
+                const key = `${doc.itemNumber}::${doc.itemFileNumber}`;
+                if (!groups.has(key)) {
+                    groups.set(key, { itemNumber: doc.itemNumber, itemFileNumber: doc.itemFileNumber, files: [] });
+                }
+                groups.get(key).files.push(doc.filename);
+            }
+            const bullets = [...groups.values()].map(g => {
+                const label = g.itemFileNumber
+                    ? `<strong>Item ${g.itemNumber} \u2014 ${g.itemFileNumber}</strong>`
+                    : `<strong>Item ${g.itemNumber}</strong>`;
+                return `<li>${label}: ${g.files.join(', ')}</li>`;
+            }).join('\n');
+            sections.push(`<p>New supporting documents:</p>\n<ul>\n${bullets}\n</ul>`);
+        }
+
+        if (sections.length === 0) continue;
+
+        const dateLabel = formatChangeLogDate(entry.date);
+        inner += `<p><strong>${dateLabel}</strong></p>\n${sections.join('\n')}\n`;
+    }
+
+    // If only the heading was added (no real content after stripping empties) return nothing
+    if (inner.trim() === `<h3 id="${headingId}">What's Changed</h3>`) return '';
+
+    return `<!-- wp:group {"className":"agenda-whats-changed"} -->
+<aside class="wp-block-group agenda-whats-changed" aria-labelledby="${headingId}">
+${inner.trim()}
+</aside>
+<!-- /wp:group -->
+
+`;
+}
+
+/**
  * Get output filename for the generated markup
  * @param {Array} meetings - Array of meeting data objects
  * @returns {string} - Output filename
@@ -664,6 +767,16 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
     // Load OpenGov funding manifest for this meeting (may be null).
     const fundingManifest = loadFundingManifest(meeting.meetingId, meeting.formattedDate);
     const fundingByItemId = buildFundingByItemId(fundingManifest);
+
+    // Insert "What's Changed" box for every meeting session (morning and evening),
+    // loaded from its own per-meeting change-log file.
+    try {
+        const changeLog = loadChangeLog(meeting.meetingId, meeting.formattedDate);
+        const changesBlock = renderWhatsChangedBox(changeLog, meeting);
+        if (changesBlock) wpHtml += changesBlock;
+    } catch (e) {
+        // Non-fatal — change-log read failure should never break the render
+    }
 
     // Insert agenda-level funding overview after the meeting link group (only
     // for the leading meeting; evening agendas share the same manifest already

@@ -162,3 +162,45 @@
   border-inline-start-color: #c0392b;
   background: rgba(192, 57, 43, 0.08);
 }
+
+/* ============================================================
+   What's Changed info box — editor preview
+   ============================================================ */
+.editor-styles-wrapper .wp-block-group.agenda-whats-changed {
+  margin-block: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(29, 99, 107, 0.08); /* accent-3 at 8% */
+  border-inline-start: 4px solid #1d636b; /* accent-3 */
+  border-radius: 0 6px 6px 0;
+  max-width: 65ch;
+}
+
+.editor-styles-wrapper .wp-block-group.agenda-whats-changed h3 {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1d636b; /* accent-3 */
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.editor-styles-wrapper .wp-block-group.agenda-whats-changed p {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.875rem;
+  color: #314a59; /* contrast */
+  margin-block: 0.25rem;
+}
+
+.editor-styles-wrapper .wp-block-group.agenda-whats-changed ul {
+  margin-block: 0.25rem 0.75rem;
+  padding-inline-start: 1.25rem;
+}
+
+.editor-styles-wrapper .wp-block-group.agenda-whats-changed ul li {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.875rem;
+  color: #314a59; /* contrast */
+  margin-bottom: 0.25rem;
+}

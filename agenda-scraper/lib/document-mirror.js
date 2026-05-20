@@ -246,6 +246,7 @@ class DocumentMirror {
       skipped: 0,
       failed: 0,
       documents: [],
+      uploadedDocuments: [], // new: [{itemNumber, itemFileNumber, filename}]
     };
 
     if (!item.supportingDocuments || item.supportingDocuments.length === 0) {
@@ -271,6 +272,11 @@ class DocumentMirror {
         if (result.status === 'uploaded') {
           results.uploaded++;
           console.log(`  ✓ Uploaded: ${filename} (${this.formatBytes(result.size)})`);
+          results.uploadedDocuments.push({
+            itemNumber: item.number,
+            itemFileNumber: item.fileNumber || '',
+            filename,
+          });
         } else {
           results.skipped++;
           console.log(`  ○ Exists: ${filename}`);
@@ -325,6 +331,7 @@ class DocumentMirror {
       skipped: 0,
       failed: 0,
       errors: [],
+      uploadedDocuments: [], // new: [{itemNumber, itemFileNumber, filename}]
     };
 
     // Count total documents
@@ -350,6 +357,11 @@ class DocumentMirror {
       results.uploaded += itemResults.uploaded;
       results.skipped += itemResults.skipped;
       results.failed += itemResults.failed;
+
+      // Accumulate newly uploaded doc metadata for the change log
+      if (itemResults.uploadedDocuments && itemResults.uploadedDocuments.length > 0) {
+        results.uploadedDocuments.push(...itemResults.uploadedDocuments);
+      }
 
       // Collect errors
       for (const doc of itemResults.documents) {
