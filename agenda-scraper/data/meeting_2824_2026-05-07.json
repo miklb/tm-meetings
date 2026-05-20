@@ -9922,11 +9922,8 @@
         }
       ],
       "folioNumbers": [],
-      "location": "2406 E. Annie Street",
-      "coordinates": {
-        "lat": 28.03647,
-        "lng": -82.43201
-      },
+      "location": "",
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {

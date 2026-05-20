@@ -1,0 +1,206 @@
+{
+  "meetingId": "2893",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "May 21, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2893&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 48,
+      "agendaItemId": "23698",
+      "title": "File No. TA/CPA25-19 (UNAN; Viera absent)(Ordinance being presented for second reading and adoption) - An ordinance amending the Tampa Comprehensive Plan, Future Land Use Element, Future Land Use Map, for the property located at 4615 and 4801 East Fowler Avenue, from Light Industrial (LI) and Public/Semi-Public (P/SP) to Public/Semi-Public (P/SP); providing for repeal of all ordinances in conflict; providing for severability; providing for an effective date. (Original motion to approve said ordinance on first reading was initiated by Young-Maniscalco on April 23, 2026) Letter from John Muller, Director Facilities Management and Real Estate Services Hillsborough County, requesting a continuance of said item to July 16, 2026. (To be R/F)",
+      "rawTitle": "File No. TA/CPA25-19 (UNAN; Viera absent)(Ordinance being presented for second reading and adoption) - An ordinance amending the Tampa Comprehensive Plan, Future Land Use Element, Future Land Use Map, for the property located at 4615 and 4801 East Fowler Avenue, from Light Industrial (LI) and Public/Semi-Public (P/SP) to Public/Semi-Public (P/SP); providing for repeal of all ordinances in conflict; providing for severability; providing for an effective date. (Original motion to approve said ordinance on first reading was initiated by Young-Maniscalco on April 23, 2026) Letter from John Muller, Director Facilities Management and Real Estate Services Hillsborough County, requesting a continuance of said item to July 16, 2026. (To be R/F)",
+      "fileNumber": "TA/CPA25-19",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 67,
+      "agendaItemId": "22312",
+      "title": "File No. CM26-22312Revenue and Finance staff to appear and provide the Mid-Year Review. (Original motion initiated by Miranda-Maniscalco on March 5, 2026) Memorandum from Dennis R. Rogero, Jr., Chief Financial Officer, requesting a continuance for said agenda item to May 28, 2026. (To be R/F)",
+      "rawTitle": "File No. CM26-22312Revenue and Finance staff to appear and provide the Mid-Year Review. (Original motion initiated by Miranda-Maniscalco on March 5, 2026) Memorandum from Dennis R. Rogero, Jr., Chief Financial Officer, requesting a continuance for said agenda item to May 28, 2026. (To be R/F)",
+      "fileNumber": "CM26-22312Rev",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 2,
+      "agendaItemId": "22408",
+      "title": "File No. CM26-22408Planning Commission to provide a 15-minute presentation on the newly adopted single-member district boundaries. (Original Motion initiated by Maniscalco-Miranda on March 12, 2026) Email from Lisa Edwards, Legislative Aide District 2, transmitting a PowerPoint Presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM26-22408Planning Commission to provide a 15-minute presentation on the newly adopted single-member district boundaries. (Original Motion initiated by Maniscalco-Miranda on March 12, 2026) Email from Lisa Edwards, Legislative Aide District 2, transmitting a PowerPoint Presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CM26-22408Pla",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 38,
+      "agendaItemId": "23652",
+      "title": "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution.",
+      "rawTitle": "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution.",
+      "fileNumber": "DEO26-23652Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$44,151.92",
+        "$24,151.92"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$44,151.92",
+          "value": 44151.92,
+          "signedValue": -44151.92,
+          "type": "revenue",
+          "section": null,
+          "contexts": [
+            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution.",
+            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution."
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        },
+        {
+          "amount": "$24,151.92",
+          "value": 24151.92,
+          "signedValue": -24151.92,
+          "type": "revenue",
+          "section": null,
+          "contexts": [
+            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution.",
+            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution."
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 68303.84,
+        "other": 0,
+        "net": -68303.84
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 66,
+      "agendaItemId": "23501",
+      "title": "File No. CM26-23501Related Group to provide an update on which companies/contractors are working, and if there have been any changes in companies and contractors related to the Rome Yard Community Benefits Agreement. (Original motion initiated by Young-Viera on April 16, 2026.) Email from Alberto Milo, President Related Urban Group, transmitting a written quarterly report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM26-23501Related Group to provide an update on which companies/contractors are working, and if there have been any changes in companies and contractors related to the Rome Yard Community Benefits Agreement. (Original motion initiated by Young-Viera on April 16, 2026.) Email from Alberto Milo, President Related Urban Group, transmitting a written quarterly report for said agenda item. (To be R/F)",
+      "fileNumber": "CM26-23501Rel",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 53,
+      "agendaItemId": "24063",
+      "title": "File No. E2026-8 CH 27(Substitute ordinance being presented for first reading consideration) - An ordinance of the city of Tampa, Florida, relating to publicly initiated text amendments, to consider comprehensive amendments to the city of Tampa code of ordinances, amending section 27-6, establishment of land development code; amending chapter 27, (zoning and land development), article ii (administrative and general procedures), division 8 (subdivision procedures); providing for severability; repealing all ordinances or parts of ordinances in conflict therewith; providing an effective date. Email from Eric Cotton, Development Coordination Manager, transmitting a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. E2026-8 CH 27(Substitute ordinance being presented for first reading consideration) - An ordinance of the city of Tampa, Florida, relating to publicly initiated text amendments, to consider comprehensive amendments to the city of Tampa code of ordinances, amending section 27-6, establishment of land development code; amending chapter 27, (zoning and land development), article ii (administrative and general procedures), division 8 (subdivision procedures); providing for severability; repealing all ordinances or parts of ordinances in conflict therewith; providing an effective date. Email from Eric Cotton, Development Coordination Manager, transmitting a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "E2026-8",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    }
+  ],
+  "financialSummary": {
+    "totalAmountDiscussed": 44151.92,
+    "formattedTotalAmountDiscussed": "$44,151.92",
+    "itemCount": 1,
+    "range": {
+      "smallest": {
+        "number": 38,
+        "fileNumber": "DEO26-23652Res",
+        "amount": 44151.92,
+        "formatted": "$44,151.92"
+      },
+      "largest": {
+        "number": 38,
+        "fileNumber": "DEO26-23652Res",
+        "amount": 44151.92,
+        "formatted": "$44,151.92"
+      }
+    },
+    "totalExpenditures": 0,
+    "formattedTotalExpenditures": "$0.00",
+    "expenditureRange": null,
+    "expenditureItems": []
+  },
+  "formattedDate": "2026-05-21"
+}
