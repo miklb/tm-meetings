@@ -96,6 +96,30 @@ while [[ $# -gt 0 ]]; do
     esac
 done
 
+# ── Helpers ────────────────────────────────────────────────────────────────────
+step() {
+    local num="$1"; shift
+    echo ""
+    echo "════════════════════════════════════════════════════════════"
+    echo "  Step $num: $*"
+    echo "════════════════════════════════════════════════════════════"
+}
+
+run() {
+    if $DRY_RUN; then
+        echo "[dry-run] $*"
+    else
+        "$@"
+    fi
+}
+
+elapsed() {
+    local start="$1"
+    local end
+    end=$(date +%s)
+    echo "$(( end - start ))s"
+}
+
 # ── Validation ─────────────────────────────────────────────────────────────────
 if [[ ! -x "$VENV_PYTHON" ]]; then
     echo "ERROR: Python venv not found at $VENV_PYTHON"
@@ -163,30 +187,6 @@ fi
 # ── File paths ─────────────────────────────────────────────────────────────────
 RAW_FILE="$RAW_DIR/transcript_${PKEY}_${DATE}.json"
 PROCESSED_FILE="$PROCESSED_DIR/processed_transcript_${PKEY}_${DATE}.json"
-
-# ── Helpers ────────────────────────────────────────────────────────────────────
-step() {
-    local num="$1"; shift
-    echo ""
-    echo "════════════════════════════════════════════════════════════"
-    echo "  Step $num: $*"
-    echo "════════════════════════════════════════════════════════════"
-}
-
-run() {
-    if $DRY_RUN; then
-        echo "[dry-run] $*"
-    else
-        "$@"
-    fi
-}
-
-elapsed() {
-    local start="$1"
-    local end
-    end=$(date +%s)
-    echo "$(( end - start ))s"
-}
 
 # ══════════════════════════════════════════════════════════════════════════════
 #  Pipeline
