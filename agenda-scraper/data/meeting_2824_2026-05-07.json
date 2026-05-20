@@ -4613,11 +4613,11 @@
             "fiscalYear": "FY26",
             "amount": "$50,000",
             "value": 50000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -50000,
             "subjectToAppropriation": false,
-            "marker": "$50,000",
-            "description": "(Expenditure Decrease) Solid Waste Operations Fund - Department of Solid Waste & EPM - Landfill-Utility Services"
+            "marker": "Expenditure Decrease",
+            "description": "Solid Waste Operations Fund - Department of Solid Waste & EPM - Landfill-Utility Services"
           },
           {
             "accountCode": "41400.240500.571007",
@@ -5713,11 +5713,11 @@
             "fiscalYear": null,
             "amount": "$520,600",
             "value": 520600,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -520600,
             "subjectToAppropriation": false,
-            "marker": "$520,600",
-            "description": "(Expenditure Decrease) Solid Waste Capital/Construction Fund - Department of Solid Waste & EPM - Improv. Other Than Bldgs. - McKay Bay WTE Lime Silo Refurbishment Project"
+            "marker": "Expenditure Decrease",
+            "description": "Solid Waste Capital/Construction Fund - Department of Solid Waste & EPM - Improv. Other Than Bldgs. - McKay Bay WTE Lime Silo Refurbishment Project"
           },
           {
             "accountCode": "41500.239500.563001",
@@ -5728,11 +5728,11 @@
             "fiscalYear": null,
             "amount": "$777,500",
             "value": 777500,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -777500,
             "subjectToAppropriation": false,
-            "marker": "$777,500",
-            "description": "(Expenditure Decrease) Solid Waste Capital/Construction Fund - Department of Solid Waste & EPM - Improv. Other Than Bldgs. - McKay Bay WTE Carbon Silo Refurbishment Project"
+            "marker": "Expenditure Decrease",
+            "description": "Solid Waste Capital/Construction Fund - Department of Solid Waste & EPM - Improv. Other Than Bldgs. - McKay Bay WTE Carbon Silo Refurbishment Project"
           },
           {
             "accountCode": "41500.239500.563001",
@@ -5743,11 +5743,11 @@
             "fiscalYear": null,
             "amount": "$900,000",
             "value": 900000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -900000,
             "subjectToAppropriation": false,
-            "marker": "$900,000",
-            "description": "(Expenditure Decrease) Solid Waste Capital/Construction Fund - Department of Solid Waste & EPM - Improv. Other Than Bldgs. - McKay Bay WTE Bull Nose & Water Wall Tube Replacement Project"
+            "marker": "Expenditure Decrease",
+            "description": "Solid Waste Capital/Construction Fund - Department of Solid Waste & EPM - Improv. Other Than Bldgs. - McKay Bay WTE Bull Nose & Water Wall Tube Replacement Project"
           },
           {
             "accountCode": "41500.239500.563001.1002755",
@@ -7650,11 +7650,11 @@
             "fiscalYear": null,
             "amount": "$700,000",
             "value": 700000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -700000,
             "subjectToAppropriation": false,
-            "marker": "$700,000",
-            "description": "(Expenditure decrease) Downtown Non-Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. Neighborhood Infrastructure P-0000489, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-100202"
+            "marker": "Expenditure decrease",
+            "description": "Downtown Non-Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. Neighborhood Infrastructure P-0000489, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-100202"
           },
           {
             "accountCode": "62200.213800.567000.1002175",
@@ -7665,11 +7665,11 @@
             "fiscalYear": null,
             "amount": "$300,000",
             "value": 300000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -300000,
             "subjectToAppropriation": false,
-            "marker": "$300,000",
-            "description": "(Expenditure decrease) Downtown Non-Core CRA Fund. CRA Dept. CTPA Works of Art. Public Art P-1002175, O-CRA Dept., E-CTPA Works of Art, T-30, A-100202"
+            "marker": "Expenditure decrease",
+            "description": "Downtown Non-Core CRA Fund. CRA Dept. CTPA Works of Art. Public Art P-1002175, O-CRA Dept., E-CTPA Works of Art, T-30, A-100202"
           },
           {
             "accountCode": "62200.213807.549008",

@@ -1299,11 +1299,11 @@
             "fiscalYear": null,
             "amount": "$294,318",
             "value": 294318,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -294318,
             "subjectToAppropriation": false,
-            "marker": "$294,318",
-            "description": "(Expenditure Decrease) General Fund. Convention Center Repair and Maintenance. Machinery and Equipment"
+            "marker": "Expenditure Decrease",
+            "description": "General Fund. Convention Center Repair and Maintenance. Machinery and Equipment"
           },
           {
             "accountCode": "01100.212800.564000",
@@ -1314,11 +1314,11 @@
             "fiscalYear": null,
             "amount": "$68,117",
             "value": 68117,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -68117,
             "subjectToAppropriation": false,
-            "marker": "$68,117",
-            "description": "(Expenditure Decrease) General Fund. Convention Center Business Operations. Machinery and Equipment"
+            "marker": "Expenditure Decrease",
+            "description": "General Fund. Convention Center Business Operations. Machinery and Equipment"
           },
           {
             "accountCode": "01100.213600.546000",
@@ -5954,11 +5954,11 @@
             "fiscalYear": null,
             "amount": "$3,697,026",
             "value": 3697026,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -3697026,
             "subjectToAppropriation": false,
-            "marker": "$3,697,026",
-            "description": "(Expenditure Decrease) Wastewater Future Debt Capital Projects Fund. Wastewater Department. Improvements Other Than Bldgs. H. F. Curren Junction Chamber No.1 Odor Control System Replacement Project P: 1002799 O: WW-Wastewater Dept E: CTPA Improvements Other Than Bldgs T: 30 A: 100631"
+            "marker": "Expenditure Decrease",
+            "description": "Wastewater Future Debt Capital Projects Fund. Wastewater Department. Improvements Other Than Bldgs. H. F. Curren Junction Chamber No.1 Odor Control System Replacement Project P: 1002799 O: WW-Wastewater Dept E: CTPA Improvements Other Than Bldgs T: 30 A: 100631"
           },
           {
             "accountCode": "41154.243200.563001.1001865",

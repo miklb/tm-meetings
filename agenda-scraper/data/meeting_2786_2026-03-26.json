@@ -4089,11 +4089,11 @@
             "fiscalYear": null,
             "amount": "$200,000",
             "value": 200000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -200000,
             "subjectToAppropriation": false,
-            "marker": "$200,000",
-            "description": "(Expenditure Decrease) Water Operations Fund. Water Department. Computers Bulk Purchases Hardware/Software"
+            "marker": "Expenditure Decrease",
+            "description": "Water Operations Fund. Water Department. Computers Bulk Purchases Hardware/Software"
           },
           {
             "accountCode": "40400.245600.571006",
@@ -5331,11 +5331,11 @@
             "fiscalYear": null,
             "amount": "$91,837",
             "value": 91837,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -91837,
             "subjectToAppropriation": false,
-            "marker": "$91,837",
-            "description": "(Expenditure decrease) Downtown Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-1001359, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-000163"
+            "marker": "Expenditure decrease",
+            "description": "Downtown Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-1001359, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-000163"
           },
           {
             "accountCode": "62100.213800.563001.1001785",
@@ -5376,11 +5376,11 @@
             "fiscalYear": null,
             "amount": "$408,843",
             "value": 408843,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -408843,
             "subjectToAppropriation": false,
-            "marker": "$408,843",
-            "description": "(Expenditure decrease) Downtown Non-Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-1001359, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-100202"
+            "marker": "Expenditure decrease",
+            "description": "Downtown Non-Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-1001359, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-100202"
           },
           {
             "accountCode": "62200.213800.563001.0000489",
@@ -5391,11 +5391,11 @@
             "fiscalYear": null,
             "amount": "$2,591,157",
             "value": 2591157,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -2591157,
             "subjectToAppropriation": false,
-            "marker": "$2,591,157",
-            "description": "(Expenditure decrease) Downtown Non-Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-0000489, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-100202"
+            "marker": "Expenditure decrease",
+            "description": "Downtown Non-Core CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-0000489, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-100202"
           },
           {
             "accountCode": "62200.213800.563001.1002920",

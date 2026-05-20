@@ -1916,11 +1916,11 @@
             "fiscalYear": null,
             "amount": "$85,248",
             "value": 85248,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -85248,
             "subjectToAppropriation": false,
-            "marker": "$85,248",
-            "description": "(Expenditure decrease) General Fund. Economic Opportunity Department. 100 Youth Leadership Program Contribution"
+            "marker": "Expenditure decrease",
+            "description": "General Fund. Economic Opportunity Department. 100 Youth Leadership Program Contribution"
           },
           {
             "accountCode": "01100.220400.582511",
@@ -3255,11 +3255,11 @@
             "fiscalYear": null,
             "amount": "$140,000",
             "value": 140000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -140000,
             "subjectToAppropriation": false,
-            "marker": "$140,000",
-            "description": "(Expenditure Decrease) Wastewater Future Debt Capital Projects Fund. Wastewater Department. Improvements Other Than Bldgs. Force Main Discharge Repairs P: 1001567 O: WW-Wastewater Dept E: CTPA Improvements Other Than Bldgs T: 30 A: 100631"
+            "marker": "Expenditure Decrease",
+            "description": "Wastewater Future Debt Capital Projects Fund. Wastewater Department. Improvements Other Than Bldgs. Force Main Discharge Repairs P: 1001567 O: WW-Wastewater Dept E: CTPA Improvements Other Than Bldgs T: 30 A: 100631"
           },
           {
             "accountCode": "41154.243200.563001.1002477",
@@ -4074,11 +4074,11 @@
             "fiscalYear": null,
             "amount": "$2,525,000",
             "value": 2525000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -2525000,
             "subjectToAppropriation": false,
-            "marker": "$2,525,000",
-            "description": "(Expenditure decrease) East Tampa CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-0000493, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-000166"
+            "marker": "Expenditure decrease",
+            "description": "East Tampa CRA Fund. CRA Dept. CTPA Improvements Other than Bldg. P-0000493, O-CRA Dept., E-CTPA Improvements Other than Bldgs., T-30, A-000166"
           },
           {
             "accountCode": "62400.213829.561000",
@@ -6728,11 +6728,11 @@
             "fiscalYear": "FY26",
             "amount": "$250,000",
             "value": 250000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure_decrease",
+            "signedValue": -250000,
             "subjectToAppropriation": false,
-            "marker": "$250,000",
-            "description": "(Expenditure Decrease) Wastewater Operations Fund. Wastewater Department. Rentals and Leases"
+            "marker": "Expenditure Decrease",
+            "description": "Wastewater Operations Fund. Wastewater Department. Rentals and Leases"
           },
           {
             "accountCode": "41000.244200.571006",
