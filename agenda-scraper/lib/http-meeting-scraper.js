@@ -18,6 +18,7 @@ const {
   extractMeetingDate,
   extractLoadAgendaConfig,
   parseAgendaTable,
+  parseAddendumSections,
   parseSupportingDocuments,
   formatCurrency
 } = require('./http-utils');
@@ -508,6 +509,16 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   const isAddendum = isAddendumAgenda(agendaHtml);
   if (isAddendum) {
     console.log(`[HTTP] Detected ADDENDUM agenda for meeting ${meetingId}`);
+
+    // Parse section headers and attach metadata to each item
+    const sectionMap = parseAddendumSections(agendaHtml);
+    const CONTINUANCE_RE = /continuance.*?\bto\s+([A-Z][a-z]+\s+\d{1,2},?\s*\d{4})/i;
+
+    processedItems.forEach(item => {
+      item.addendumSection = sectionMap.get(item.number) ?? null;
+      const match = (item.title || '').match(CONTINUANCE_RE);
+      item.continuedToDate = match ? match[1].replace(/,\s*/, ', ').trim() : null;
+    });
   }
 
   // Build meeting data object

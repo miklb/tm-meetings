@@ -550,39 +550,67 @@ function renderWhatsChangedBox(changeLog, meeting) {
     const mid = meeting.meetingId;
     const headingId = `whats-changed-${mid}`;
 
-    let inner = `<h3 id="${headingId}">What's Changed</h3>\n`;
+    // Build agenda-item-number → anchor-id lookup so we can link each entry
+    // back to its position in the main agenda list.
+    const itemAnchorMap = new Map();
+    for (const item of (meeting.agendaItems || [])) {
+        if (item.number != null && item.agendaItemId != null) {
+            itemAnchorMap.set(String(item.number), `item-${item.agendaItemId}`);
+        }
+    }
+
+    // Shorthand: paragraph using theme preset classes so the block editor
+    // renders the correct colours/size without needing custom CSS loaded.
+    // textColor:"contrast" → has-contrast-color; fontSize:"small" → has-small-font-size
+    const para = (content) =>
+        `<!-- wp:paragraph {"textColor":"contrast","fontSize":"small"} -->\n<p class="has-contrast-color has-small-font-size">${content}</p>\n<!-- /wp:paragraph -->`;
+
+    // textColor:"accent-3" → has-accent-3-color (teal); fontSize:"large" → has-large-font-size
+    // Both are preset-based so save() emits only classes, no inline styles — validation stays clean.
+    let innerBlocks = `<!-- wp:heading {"level":3,"anchor":"${headingId}","textColor":"accent-3","fontSize":"large"} -->
+<h3 class="wp-block-heading has-accent-3-color has-large-font-size" id="${headingId}">What's Changed</h3>
+<!-- /wp:heading -->
+`;
+
+    let hasContent = false;
 
     for (const entry of changeLog.entries) {
         const sections = [];
 
         // Draft → Final promotion
         if (entry.agendaTypePromoted && entry.agendaTypePromoted.to === 'FINAL') {
-            sections.push(`<p>Agenda was finalized.</p>`);
+            sections.push(para('Agenda was finalized.'));
         }
 
         // Items added
         if (entry.itemsAdded && entry.itemsAdded.length > 0) {
             const bullets = entry.itemsAdded.map(item => {
-                const label = item.fileNumber ? `<strong>${item.fileNumber}</strong>` : `Item ${item.number}`;
+                const anchor = item.agendaItemId ? `#item-${item.agendaItemId}` : null;
+                const text = item.fileNumber ? item.fileNumber : `Item ${item.number}`;
+                const linked = anchor ? `<a href="${anchor}">${text}</a>` : text;
+                const label = `<strong>${linked}</strong>`;
                 const title = item.shortTitle ? ` \u2014 ${item.shortTitle}` : '';
-                return `<li>${label}${title}</li>`;
+                return `<!-- wp:list-item -->\n<li>${label}${title}</li>\n<!-- /wp:list-item -->`;
             }).join('\n');
-            sections.push(`<p>Item${entry.itemsAdded.length > 1 ? 's' : ''} added:</p>\n<ul>\n${bullets}\n</ul>`);
+            sections.push(`${para(`Item${entry.itemsAdded.length > 1 ? 's' : ''} added:`)}\n<!-- wp:list -->\n<ul class="wp-block-list">\n${bullets}\n</ul>\n<!-- /wp:list -->`);
         }
 
         // Items removed
         if (entry.itemsRemoved && entry.itemsRemoved.length > 0) {
             const bullets = entry.itemsRemoved.map(item => {
-                const label = item.fileNumber ? `<strong>${item.fileNumber}</strong>` : `Item ${item.number}`;
+                const anchor = item.agendaItemId ? `#item-${item.agendaItemId}` : null;
+                const text = item.fileNumber ? item.fileNumber : `Item ${item.number}`;
+                const linked = anchor ? `<a href="${anchor}">${text}</a>` : text;
+                const label = `<strong>${linked}</strong>`;
                 const title = item.shortTitle ? ` \u2014 ${item.shortTitle}` : '';
-                return `<li>${label}${title}</li>`;
+                return `<!-- wp:list-item -->\n<li>${label}${title}</li>\n<!-- /wp:list-item -->`;
             }).join('\n');
-            sections.push(`<p>Item${entry.itemsRemoved.length > 1 ? 's' : ''} removed:</p>\n<ul>\n${bullets}\n</ul>`);
+            sections.push(`${para(`Item${entry.itemsRemoved.length > 1 ? 's' : ''} removed:`)}\n<!-- wp:list -->\n<ul class="wp-block-list">\n${bullets}\n</ul>\n<!-- /wp:list -->`);
         }
 
         // Budget total changed
         if (entry.totalChanged) {
-            sections.push(`<p>Estimated budget impact changed from ${entry.totalChanged.from} to ${entry.totalChanged.to}.</p>`);
+            sections.push(para(`Estimated budget impact changed from ${entry.totalChanged.from} to ${entry.totalChanged.to}.`));
         }
 
         // Newly mirrored documents grouped by item
@@ -596,27 +624,34 @@ function renderWhatsChangedBox(changeLog, meeting) {
                 groups.get(key).files.push(doc.filename);
             }
             const bullets = [...groups.values()].map(g => {
-                const label = g.itemFileNumber
-                    ? `<strong>Item ${g.itemNumber} \u2014 ${g.itemFileNumber}</strong>`
-                    : `<strong>Item ${g.itemNumber}</strong>`;
-                return `<li>${label}: ${g.files.join(', ')}</li>`;
+                const anchor = itemAnchorMap.get(String(g.itemNumber));
+                const itemText = g.itemFileNumber
+                    ? `Item ${g.itemNumber} \u2014 ${g.itemFileNumber}`
+                    : `Item ${g.itemNumber}`;
+                const linked = anchor ? `<a href="#${anchor}">${itemText}</a>` : itemText;
+                const label = `<strong>${linked}</strong>`;
+                return `<!-- wp:list-item -->\n<li>${label}: ${g.files.join(', ')}</li>\n<!-- /wp:list-item -->`;
             }).join('\n');
-            sections.push(`<p>New supporting documents:</p>\n<ul>\n${bullets}\n</ul>`);
+            sections.push(`<!-- wp:group {"className":"agenda-supporting-docs"} -->\n<div class="wp-block-group agenda-supporting-docs"><!-- wp:heading {"level":4} -->\n<h4 class="wp-block-heading">New Supporting Documents:</h4>\n<!-- /wp:heading -->\n<!-- wp:list -->\n<ul class="wp-block-list">\n${bullets}\n</ul>\n<!-- /wp:list -->\n</div>\n<!-- /wp:group -->`);
         }
 
         if (sections.length === 0) continue;
+        hasContent = true;
 
         const dateLabel = formatChangeLogDate(entry.date);
-        inner += `<p><strong>${dateLabel}</strong></p>\n${sections.join('\n')}\n`;
+        innerBlocks += `${para(`<strong>${dateLabel}</strong>`)}\n${sections.join('\n')}\n`;
     }
 
-    // If only the heading was added (no real content after stripping empties) return nothing
-    if (inner.trim() === `<h3 id="${headingId}">What's Changed</h3>`) return '';
+    if (!hasContent) return '';
 
-    return `<!-- wp:group {"className":"agenda-whats-changed"} -->
-<aside class="wp-block-group agenda-whats-changed" aria-labelledby="${headingId}">
-${inner.trim()}
-</aside>
+    // backgroundColor:"accent-5" → has-accent-5-background-color (off-white #F8F8F2,
+    // same as the theme's quote block bg). Custom CSS .agenda-whats-changed adds the
+    // teal left border. Block-level padding via spacing preset keeps the editor preview
+    // in sync without relying on custom CSS being loaded.
+    return `<!-- wp:group {"backgroundColor":"accent-5","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"className":"agenda-whats-changed"} -->
+<div class="wp-block-group agenda-whats-changed has-accent-5-background-color" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
+${innerBlocks.trim()}
+</div>
 <!-- /wp:group -->
 
 `;
@@ -641,20 +676,25 @@ ${inner.trim()}
 function generateWordPressMarkup(meetings) {
     const outputDir = path.join(__dirname, 'agendas');
     
-    // Filter out addendum meetings - they're updates to existing agendas, not separate meetings
-    const nonAddendumMeetings = meetings.filter(meeting => {
-        if (meeting.isAddendum) {
-            console.log(`⏭️  Skipping addendum meeting ${meeting.meetingId} for ${meeting.formattedDate || meeting.meetingDate}`);
-            return false;
-        }
-        return true;
-    });
-    
+    // Separate main meetings from addendum meetings
+    const nonAddendumMeetings = meetings.filter(m => !m.isAddendum);
+    const addendumMeetings = meetings.filter(m => m.isAddendum);
+
+    if (addendumMeetings.length > 0) {
+        const label = addendumMeetings[0].formattedDate || addendumMeetings[0].meetingDate;
+        console.log(`📋 Found ${addendumMeetings.length} addendum meeting(s) for ${label} — will merge into output`);
+    }
+
     if (nonAddendumMeetings.length === 0) {
         console.log('⚠️  No non-addendum meetings to process');
         return 'No meetings to process (all were addendums)';
     }
-    
+
+    // For each main meeting, find addenda with matching meetingType
+    function findAddendaForMeeting(mainMeeting) {
+        return addendumMeetings.filter(a => a.meetingType === mainMeeting.meetingType);
+    }
+
     const hasMultipleMeetings = nonAddendumMeetings.length > 1;
 
     // Derive the secondary-meeting label up-front so it can be referenced
@@ -673,7 +713,8 @@ function generateWordPressMarkup(meetings) {
 
     // Process meetings in order, following original combination logic
     nonAddendumMeetings.forEach((meeting, meetingIndex) => {
-        const wpHtml = generateSingleMeetingMarkup(meeting, meetingIndex > 0, hasMultipleMeetings, secondaryLabel);
+        const addenda = findAddendaForMeeting(meeting);
+        const wpHtml = generateSingleMeetingMarkup(meeting, meetingIndex > 0, hasMultipleMeetings, secondaryLabel, addenda);
         
         // Check if we should combine with existing agenda for the same date
         const existingFile = findExistingWordPressFileForDate(meeting.meetingId, meeting.formattedDate);
@@ -707,15 +748,131 @@ function generateWordPressMarkup(meetings) {
 }
 
 /**
+ * Render the Addendum summary section appended at the bottom of the post.
+ * Groups addendum items by their parsed section: walkons, removedFromConsent,
+ * continuances, and otherChanges.
+ * @param {Array} addenda - Array of addendum meeting data objects
+ * @returns {string} WordPress block HTML or empty string
+ */
+function renderAddendumSection(addenda) {
+    const sections = {
+        walkons: [],
+        removedFromConsent: [],
+        continuances: [],
+        otherChanges: [],
+    };
+
+    const sectionLabels = {
+        walkons: 'Walk-on Items / New Business',
+        removedFromConsent: 'Removed from Consent for Separate Vote',
+        continuances: 'Continuances & Removals',
+        otherChanges: 'Other Changes',
+    };
+
+    for (const addendum of addenda) {
+        for (const item of (addendum.agendaItems || [])) {
+            const key = item.addendumSection || 'otherChanges';
+            if (sections[key]) sections[key].push(item);
+        }
+    }
+
+    const hasItems = Object.values(sections).some(arr => arr.length > 0);
+    if (!hasItems) return '';
+
+    let html = `\n<!-- wp:heading {"level":2} -->
+<h2 id="addendum">Addendum</h2>
+<!-- /wp:heading -->
+
+<!-- wp:group {"className":"addendum-section"} -->
+<div class="wp-block-group addendum-section">
+<!-- wp:paragraph -->
+<p><em>Items below were received after the final agenda was published.</em></p>
+<!-- /wp:paragraph -->
+
+`;
+
+    for (const [sectionKey, items] of Object.entries(sections)) {
+        if (items.length === 0) continue;
+
+        html += `<!-- wp:heading {"level":3} -->
+<h3>${sectionLabels[sectionKey]}</h3>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list">
+`;
+
+        for (const item of items) {
+            const rawText = item.rawTitle || item.title || '';
+            const itemText = cleanAgendaContent(rawText).replace(/\*\*([^*]+)\*\*/g, '$1').trim();
+
+            let liContent = `<p>${itemText}</p>`;
+
+            if (item.continuedToDate) {
+                liContent += `<p class="addendum-continued">⚠️ <strong>Continued to ${item.continuedToDate}</strong></p>`;
+            }
+
+            if (item.supportingDocuments && item.supportingDocuments.length > 0) {
+                liContent += `<ul>`;
+                item.supportingDocuments.forEach(doc => {
+                    const docUrl = doc.mirroredUrl ||
+                        (doc.url.startsWith('http') ? doc.url : 'https://tampagov.hylandcloud.com' + doc.url.replace(/&amp;/g, '&'));
+                    const docText = doc.title || doc.originalText || 'Document';
+                    liContent += `<li><a href="${docUrl}" target="_blank" rel="noopener noreferrer">${docText}</a></li>`;
+                });
+                liContent += `</ul>`;
+            }
+
+            html += `<!-- wp:list-item -->
+<li>${liContent}</li>
+<!-- /wp:list-item -->
+`;
+        }
+
+        html += `</ul>
+<!-- /wp:list -->
+
+`;
+    }
+
+    html += `</div>
+<!-- /wp:group -->
+`;
+
+    return html;
+}
+
+/**
  * Generate WordPress markup for a single meeting
  * @param {Object} meeting - Meeting data object
  * @param {boolean} isEveningAgenda - Whether this is an evening agenda
  * @param {boolean} hasMultipleMeetings - Whether there are multiple meetings for this date
  * @returns {string} - WordPress block markup
  */
-function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultipleMeetings = false, secondaryLabel = 'Evening Agenda') {
+function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultipleMeetings = false, secondaryLabel = 'Evening Agenda', addenda = []) {
     // Start with intro paragraph (only for first meeting)
     let wpHtml = '';
+
+    // Build addendum lookup maps from paired addenda
+    const continuedItems = new Map(); // itemNumber -> continuedToDate string
+    const updatedItemNums = new Set(); // item numbers with non-continuance addendum changes
+    const walkonItems = []; // brand-new items added by addendum (walk-ons)
+
+    for (const addendum of addenda) {
+        for (const item of (addendum.agendaItems || [])) {
+            if (item.continuedToDate) {
+                continuedItems.set(item.number, item.continuedToDate);
+            } else if (item.addendumSection === 'walkons') {
+                walkonItems.push(item);
+            } else if (item.addendumSection) {
+                // Only flag as "Updated" when we have explicit section metadata (new scrapes)
+                updatedItemNums.add(item.number);
+            }
+            // Items scraped before section metadata was added (no addendumSection) still
+            // appear in the addendum summary section at the bottom via renderAddendumSection,
+            // but do NOT trigger inline notices on main agenda items.
+        }
+    }
     
     // Determine the agenda type label (defaults to "draft" if not specified)
     const agendaTypeLower = meeting.agendaType === 'FINAL' ? 'final' : 'draft';
@@ -763,6 +920,15 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
 <!-- /wp:group -->
 
 `;
+
+    // Addendum jump link — shown prominently when paired addenda exist
+    if (addenda.length > 0) {
+        wpHtml += `<!-- wp:group {"className":"addendum-jump-notice"} -->
+<div class="wp-block-group addendum-jump-notice"><!-- wp:paragraph --><p>📋 <strong>Addendum available.</strong> Changes were received after this agenda was published. <a href="#addendum">Jump to addendum ↓</a></p><!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+`;
+    }
 
     // Load OpenGov funding manifest for this meeting (may be null).
     const fundingManifest = loadFundingManifest(meeting.meetingId, meeting.formattedDate);
@@ -882,6 +1048,22 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
 <!-- /wp:group -->`;
         }
 
+        // Addendum inline notice — continuance or other update
+        if (continuedItems.has(item.number)) {
+            const continuedTo = continuedItems.get(item.number);
+            cleanedText += `
+
+<!-- wp:group {"className":"addendum-notice addendum-notice--continuance"} -->
+<div class="wp-block-group addendum-notice addendum-notice--continuance"><p>⚠️ <strong>Continued to ${continuedTo}</strong> — see <a href="#addendum">Addendum</a></p></div>
+<!-- /wp:group -->`;
+        } else if (updatedItemNums.has(item.number)) {
+            cleanedText += `
+
+<!-- wp:group {"className":"addendum-notice addendum-notice--updated"} -->
+<div class="wp-block-group addendum-notice addendum-notice--updated"><p>📋 <strong>Updated by Addendum</strong> — see <a href="#addendum">Addendum</a> for details</p></div>
+<!-- /wp:group -->`;
+        }
+
         processedItems.push({ itemNumber, cleanedText, hasStrongTag });
         
         // Track the first occurrence of a strong tag
@@ -889,6 +1071,16 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
             firstStrongIndex = processedItems.length - 1;
         }
     });
+
+    // Pre-render walk-on items (if any) for injection at the end of the last list
+    const walkonListHtml = walkonItems.map(item => {
+        const walkonText = cleanAgendaContent(item.rawTitle || item.title || '')
+            .replace(/\*\*([^*]+)\*\*/g, '$1');
+        return `<!-- wp:list-item {"value":${item.number},"className":"addendum-walkon"} -->
+<li value="${item.number}" class="addendum-walkon"><span class="addendum-badge">Added by Addendum</span> ${formatTextWithBlocks(walkonText)}</li>
+<!-- /wp:list-item -->
+`;
+    }).join('');
 
     // Generate the agenda list(s) based on whether there's a split
     if (firstStrongIndex !== -1) {
@@ -1018,6 +1210,7 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
 <!-- /wp:list-item -->
 `;
         }
+        if (walkonListHtml) wpHtml += walkonListHtml;
         wpHtml += `</ol>
 <!-- /wp:list -->
 `;
@@ -1061,9 +1254,16 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
 <!-- /wp:list-item -->
 `;
         });
+        if (walkonListHtml) wpHtml += walkonListHtml;
         wpHtml += `</ol>
 <!-- /wp:list -->
 `;
+    }
+
+    // Append addendum summary section if addenda were provided
+    if (addenda.length > 0) {
+        const addendumSection = renderAddendumSection(addenda);
+        if (addendumSection) wpHtml += '\n' + addendumSection;
     }
 
     return wpHtml;
@@ -1136,6 +1336,21 @@ async function main(meetingIds = [], date = null) {
                 }
             } else {
                 console.warn(`No JSON file found for meeting ID ${meetingId}`);
+            }
+        }
+
+        // Auto-load addendum meetings for the same date(s) so they are merged into output
+        const loadedDates = new Set(meetings.map(m => m.formattedDate).filter(Boolean));
+        const loadedIds = new Set(meetings.map(m => m.meetingId));
+        for (const meetingDate of loadedDates) {
+            const addendumFiles = findJSONFilesForDate(meetingDate);
+            for (const filePath of addendumFiles) {
+                const meetingData = loadJSONData(filePath);
+                if (meetingData && meetingData.isAddendum && !loadedIds.has(meetingData.meetingId)) {
+                    meetings.push(meetingData);
+                    loadedIds.add(meetingData.meetingId);
+                    console.log(`Auto-loaded addendum meeting ${meetingData.meetingId} for ${meetingDate}`);
+                }
             }
         }
     }

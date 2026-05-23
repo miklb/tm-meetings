@@ -177,7 +177,6 @@
 
 .editor-styles-wrapper .wp-block-group.agenda-whats-changed h3 {
   font-family: "Libre Franklin", sans-serif;
-  font-size: 1rem;
   font-weight: 700;
   color: #1d636b; /* accent-3 */
   margin-top: 0;
@@ -203,4 +202,74 @@
   font-size: 0.875rem;
   color: #314a59; /* contrast */
   margin-bottom: 0.25rem;
+}
+
+/* Addendum Styles */
+
+.editor-styles-wrapper .addendum-notice {
+  border-inline-start: 4px solid;
+  padding: 0.4rem 0.75rem;
+  margin-block: 0.5rem;
+  border-radius: 0 4px 4px 0;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.9rem;
+}
+
+.editor-styles-wrapper .addendum-notice--continuance {
+  border-color: #c97000;
+  background-color: #fff8ed;
+  color: #5a3300;
+}
+
+.editor-styles-wrapper .addendum-notice--updated {
+  border-color: #2a6395;
+  background-color: #edf4fb;
+  color: #1a3f5c;
+}
+
+.editor-styles-wrapper .addendum-notice p {
+  margin: 0;
+}
+
+.editor-styles-wrapper .addendum-badge {
+  display: inline-block;
+  background-color: #1e5c2e;
+  color: #fff;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+  margin-inline-end: 0.4em;
+  vertical-align: middle;
+}
+
+.editor-styles-wrapper .addendum-walkon {
+  background-color: #f0faf2;
+  border-inline-start: 3px solid #1e5c2e;
+  padding-inline-start: 0.5rem;
+}
+
+.editor-styles-wrapper .addendum-section {
+  border-block-start: 2px solid #8a8a82;
+  margin-block-start: 2rem;
+  padding-block-start: 1rem;
+}
+
+.editor-styles-wrapper .addendum-continued {
+  color: #c97000;
+  margin-block-start: 0.25rem;
+}
+
+.editor-styles-wrapper .addendum-jump-notice {
+  background-color: #fff8e1;
+  border-inline-start: 4px solid #f59e0b;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-block-end: 1rem;
+}
+
+.editor-styles-wrapper .addendum-jump-notice p {
+  margin: 0;
 }

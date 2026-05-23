@@ -265,7 +265,6 @@ a.item-permalink:hover {
 
 .wp-block-group.agenda-whats-changed h3 {
   font-family: var(--wp--preset--font-family--libre-franklin, "Libre Franklin", sans-serif);
-  font-size: var(--wp--preset--font-size--medium, 1rem);
   font-weight: 700;
   color: var(--wp--preset--color--accent-3, #1d636b);
   margin-block-start: 0;
@@ -297,4 +296,78 @@ a.item-permalink:hover {
   .wp-block-group.agenda-whats-changed {
     padding: var(--wp--preset--spacing--30);
   }
+}
+
+/* Addendum Styles */
+
+.addendum-notice {
+  border-inline-start: 4px solid;
+  padding: 0.4rem 0.75rem;
+  margin-block: 0.5rem;
+  border-radius: 0 4px 4px 0;
+  font-family: var(--wp--preset--font-family--libre-franklin, "Libre Franklin", sans-serif);
+  font-size: 0.9rem;
+}
+
+.addendum-notice--continuance {
+  border-color: #c97000;
+  background-color: #fff8ed;
+  color: #5a3300;
+}
+
+.addendum-notice--updated {
+  border-color: #2a6395;
+  background-color: #edf4fb;
+  color: #1a3f5c;
+}
+
+.addendum-notice p {
+  margin: 0;
+}
+
+.addendum-badge {
+  display: inline-block;
+  background-color: #1e5c2e;
+  color: #fff;
+  font-family: var(--wp--preset--font-family--libre-franklin, "Libre Franklin", sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.15em 0.55em;
+  border-radius: 3px;
+  margin-inline-end: 0.4em;
+  vertical-align: middle;
+}
+
+.addendum-walkon {
+  background-color: #f0faf2;
+  border-inline-start: 3px solid #1e5c2e;
+  padding-inline-start: 0.5rem;
+}
+
+.addendum-section {
+  border-block-start: 2px solid var(--wp--preset--color--accent-4, #8a8a82);
+  margin-block-start: 2rem;
+  padding-block-start: 1rem;
+}
+
+.addendum-section h2 {
+  font-family: var(--wp--preset--font-family--libre-franklin, "Libre Franklin", sans-serif);
+}
+
+.addendum-continued {
+  color: #c97000;
+  margin-block-start: 0.25rem;
+}
+
+.addendum-jump-notice {
+  background-color: #fff8e1;
+  border-inline-start: 4px solid #f59e0b;
+  border-radius: 4px;
+  padding: 0.75rem 1rem;
+  margin-block-end: 1rem;
+}
+
+.addendum-jump-notice p {
+  margin: 0;
 }

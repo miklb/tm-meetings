@@ -274,6 +274,60 @@ function parseSupportingDocuments(html) {
 }
 
 /**
+ * Parse addendum section headers and map item numbers to their section.
+ * Addendum agendas contain 4 named sections separated by bold/underlined <p> headers.
+ * @param {string} html - Agenda HTML
+ * @returns {Map<number, string>} Map of item number to section key
+ */
+function parseAddendumSections(html) {
+  const cheerio = require('cheerio');
+  const $ = cheerio.load(html);
+  const sectionMap = new Map();
+
+  const SECTION_KEYS = [
+    { match: 'OFF-THE-AGENDA ITEMS/NEW BUSINESS', key: 'walkons' },
+    { match: 'ITEMS REMOVED FROM COMMITTEE REPORTS', key: 'removedFromConsent' },
+    { match: 'CONTINUANCE OR REMOVAL OF ITEMS', key: 'continuances' },
+    { match: 'OTHER CHANGES TO THE MEETING OR AGENDA', key: 'otherChanges' },
+  ];
+
+  let currentSection = null;
+
+  // Iterate all <p> and <table> elements in document order.
+  // Section headers are <p> elements with underlined spans; item tables follow them.
+  $('p, table').each((_, el) => {
+    const $el = $(el);
+
+    if (el.tagName === 'p') {
+      // Only consider underlined paragraphs as potential section headers
+      const hasUnderline = $el.find('span[style*="text-decoration:underline"]').length > 0;
+      if (!hasUnderline) return;
+
+      const text = $el.text().replace(/\s+/g, ' ').trim().toUpperCase();
+      for (const { match, key } of SECTION_KEYS) {
+        if (text.includes(match)) {
+          currentSection = key;
+          return;
+        }
+      }
+    } else if (el.tagName === 'table' && currentSection) {
+      // Find the first row to check if it is a numbered agenda item
+      const $firstRow = $el.find('tr').first();
+      const $cells = $firstRow.find('td');
+      if ($cells.length < 2) return;
+
+      const numberText = $cells.eq(0).text().trim();
+      const numberMatch = numberText.match(/^(\d+)\./);
+      if (numberMatch) {
+        sectionMap.set(parseInt(numberMatch[1], 10), currentSection);
+      }
+    }
+  });
+
+  return sectionMap;
+}
+
+/**
  * Format currency value
  * @param {number} value - Numeric value
  * @returns {string|null} - Formatted currency string
@@ -297,6 +351,7 @@ module.exports = {
   parseLoadAgendaFromSource,
   extractLoadAgendaConfig,
   parseAgendaTable,
+  parseAddendumSections,
   parseSupportingDocuments,
   formatCurrency
 };
