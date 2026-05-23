@@ -1,0 +1,48 @@
+{
+  "meetingId": "2839",
+  "meetingDate": "2026-05-21",
+  "firstSeenAt": null,
+  "entries": [
+    {
+      "date": "2026-05-21",
+      "mirroredAt": "2026-05-21T00:24:30.371Z",
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-22407",
+          "filename": "GOVT MEETINGS AIRSIDE D 2026 MAY QR-MMC.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "CM26-22408",
+          "filename": "INFORMATION_ITEM_18MAY2026_TAMPA_REDISTRICTING_2026.PDF"
+        },
+        {
+          "itemNumber": 48,
+          "itemFileNumber": "TA/CPA25-19",
+          "filename": "2026-05-19 - LETTER TO TAMPA COUNCIL RE. MOSI.PDF"
+        },
+        {
+          "itemNumber": 53,
+          "itemFileNumber": "E2026-8",
+          "filename": "JULY 2025 CYCLE - SUBDIVISION CHANGES V2.PPTX"
+        },
+        {
+          "itemNumber": 66,
+          "itemFileNumber": "CM26-23501",
+          "filename": "CBA QUARTERLY REPORTING - ROME YARDS 3A - 4.21.26.PDF"
+        },
+        {
+          "itemNumber": 66,
+          "itemFileNumber": "CM26-23501",
+          "filename": "TOPPING OUT CELEBRATION FLYER RY3A 5.11.26.PNG"
+        },
+        {
+          "itemNumber": 67,
+          "itemFileNumber": "CM26-22312",
+          "filename": "MEMO.ROGERO - 052126 REGULAR COUNCIL SESSION - ONBASE AGENDA ITEM NO. 23321.DOCX"
+        }
+      ]
+    }
+  ]
+}
