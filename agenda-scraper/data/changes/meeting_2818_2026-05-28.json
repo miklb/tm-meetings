@@ -2,5 +2,22 @@
   "meetingId": "2818",
   "meetingDate": "2026-05-28",
   "firstSeenAt": "2026-05-24T16:34:06.758Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-05-27",
+      "mirroredAt": "2026-05-27T01:14:59.034Z",
+      "newDocuments": [
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "CM26-22117/CM25-18955",
+          "filename": "LFDS 5_26 COUNCIL PRESO.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "CM26-22117/CM25-18955",
+          "filename": "TDP-LFDS-DESIGNGUIDELINES_MAY2026.PDF"
+        }
+      ]
+    }
+  ]
 }
