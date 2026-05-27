@@ -250,15 +250,24 @@ async function main() {
       force: options.force,
     });
 
-    // Record newly-uploaded documents in the change log
+    // Record newly-uploaded documents in the change log.
+    // Only record on *subsequent* mirror runs — the first run establishes the
+    // baseline. If firstSeenAt is null this is the first time we've mirrored
+    // this meeting, so set the baseline timestamp and skip the "new docs" entry.
     if (results.uploadedDocuments && results.uploadedDocuments.length > 0) {
       try {
         const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
-        appendOrMergeEntry(changeLog, {
-          mirroredAt: new Date().toISOString(),
-          newDocuments: results.uploadedDocuments,
-        });
-        saveChangeLog(changeLog);
+        if (!changeLog.firstSeenAt) {
+          // First mirror run — record baseline timestamp, no change entry.
+          changeLog.firstSeenAt = new Date().toISOString();
+          saveChangeLog(changeLog);
+        } else {
+          appendOrMergeEntry(changeLog, {
+            mirroredAt: new Date().toISOString(),
+            newDocuments: results.uploadedDocuments,
+          });
+          saveChangeLog(changeLog);
+        }
       } catch (changeLogErr) {
         console.warn(`Warning: change-log update failed: ${changeLogErr.message}`);
       }

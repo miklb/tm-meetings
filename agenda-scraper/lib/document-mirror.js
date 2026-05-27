@@ -92,6 +92,23 @@ class DocumentMirror {
   }
 
   /**
+   * Get the file extension from a download URL path.
+   * OnBase serves Word/Excel docs as PDF via DownloadFileBytes (e.g. foo.DO.pdf)
+   * so the URL extension is more authoritative than the link-text title.
+   * @param {string} url
+   * @returns {string|null} lowercase extension including dot, e.g. '.pdf', or null
+   */
+  getExtFromUrl(url) {
+    try {
+      const lastSegment = new URL(url).pathname.split('/').pop();
+      const ext = path.extname(decodeURIComponent(lastSegment)).toLowerCase();
+      return ext || null;
+    } catch (e) {
+      return null;
+    }
+  }
+
+  /**
    * Check if document already exists in S3
    * @param {string} key - S3 object key
    * @returns {Promise<boolean>} True if exists
@@ -254,8 +271,20 @@ class DocumentMirror {
     }
 
     for (const doc of item.supportingDocuments) {
-      const filename = doc.title || doc.originalText || 'document.pdf';
-      
+      // Start with the human-readable title (link text from OnBase)
+      let filename = doc.title || doc.originalText || 'document.pdf';
+
+      // Override the extension with the one from the download URL.
+      // OnBase converts Word/Excel files to PDF at the DownloadFileBytes endpoint
+      // and signals this via the URL path extension (e.g. foo.DO.pdf for foo.DOCX).
+      const urlExt = this.getExtFromUrl(doc.url);
+      if (urlExt) {
+        const titleExt = path.extname(filename).toLowerCase();
+        if (titleExt !== urlExt) {
+          filename = filename.slice(0, filename.length - titleExt.length) + urlExt;
+        }
+      }
+
       try {
         const result = await this.mirrorDocument(
           doc.url,
