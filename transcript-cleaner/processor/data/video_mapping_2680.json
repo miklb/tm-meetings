@@ -1,0 +1,68 @@
+{
+  "meeting_id": 2680,
+  "meeting_date": "2026-05-21",
+  "meeting_type": "CRA",
+  "videos": [
+    {
+      "video_id": "WHLaTN95SF0",
+      "title": "Community Redevelopment Agency - 05/21/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-05-22T03:08:43Z",
+      "duration": "PT6H25M35S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 58: Administration Update - Rays Ballpark MOU",
+          "timestamp": "00:10:24",
+          "seconds": 624
+        },
+        {
+          "title": "Item 58: Administration Update - Rays Ballpark MOU",
+          "timestamp": "02:12:11",
+          "seconds": 7931
+        },
+        {
+          "title": "Item 1: Rays MOU Funding Discussion",
+          "timestamp": "04:51:53",
+          "seconds": 17513
+        },
+        {
+          "title": "Item 53: E2026-8 CH 27",
+          "timestamp": "05:36:20",
+          "seconds": 20180
+        },
+        {
+          "title": "Item 55: SU1-26-18-C - 704 North Glen Avenue",
+          "timestamp": "05:42:57",
+          "seconds": 20577
+        },
+        {
+          "title": "Item 57: HN26-23863 - West Cypress Street at North Gomez Avenue",
+          "timestamp": "05:49:27",
+          "seconds": 20967
+        },
+        {
+          "title": "Item 65: CM26-23875 - New Tampa Fire Coverage",
+          "timestamp": "05:50:52",
+          "seconds": 21052
+        },
+        {
+          "title": "Item 56: HN26-23865 - East 9th Avenue at North 18th Street",
+          "timestamp": "06:13:09",
+          "seconds": 22389
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "06:18:05",
+          "seconds": 22685
+        }
+      ],
+      "offset_seconds": 8428
+    }
+  ]
+}

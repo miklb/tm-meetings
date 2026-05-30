@@ -1,0 +1,68 @@
+{
+  "meeting_id": 2679,
+  "meeting_date": "2026-05-21",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "E6NNtdBBgJ4",
+      "title": "Tampa City Council - 05/21/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-05-22T03:24:47Z",
+      "duration": "PT2H15M16S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-22407 - Tampa Airport Update",
+          "timestamp": "00:25:19",
+          "seconds": 1519
+        },
+        {
+          "title": "Item 2: CM26-22408 - District Boundaries Presentation",
+          "timestamp": "00:44:48",
+          "seconds": 2688
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:53:09",
+          "seconds": 3189
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:57:37",
+          "seconds": 7057
+        },
+        {
+          "title": "Item 47: TA/CPA25-18 - 3602 West Euclid Avenue",
+          "timestamp": "02:00:20",
+          "seconds": 7220
+        },
+        {
+          "title": "Item 49: TA/CPA25-15 - 4304 North 26th Street",
+          "timestamp": "02:01:54",
+          "seconds": 7314
+        },
+        {
+          "title": "Item 50: TA/CPA25-17 - 4216 North 26th Street",
+          "timestamp": "02:05:54",
+          "seconds": 7554
+        },
+        {
+          "title": "Item 51: AB2-25-14 - 1724 North Nebraska Avenue",
+          "timestamp": "02:0:19",
+          "seconds": 7219
+        },
+        {
+          "title": "Item 52: AB2-26-05 - 2507 South Macdill Avenue",
+          "timestamp": "02:11:18",
+          "seconds": 7878
+        }
+      ],
+      "offset_seconds": 553
+    }
+  ]
+}
