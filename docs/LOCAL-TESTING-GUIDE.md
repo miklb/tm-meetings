@@ -150,6 +150,59 @@ Execute the exact same `curl` command again.
 
 ---
 
+## Production Deployment & Configuration Steps
+
+To roll out the keyword notification system to your live site, complete the following setup steps in your Cloudflare and GitHub environments.
+
+### 1. Apply D1 Migrations to Remote Database
+Apply the schema updates to your live production D1 database:
+```bash
+npx wrangler d1 migrations apply tampa-meetings-notifications --remote
+```
+
+### 2. Configure Cloudflare Pages Environment Variables & Secrets
+Log into your Cloudflare Dashboard, go to your **Pages Project** settings under **Settings > Environment Variables**, and add the following variables:
+
+| Variable Name | Type | Value / Purpose |
+| :--- | :--- | :--- |
+| `RESEND_API_KEY` | **Secret** | Your Resend API key (e.g. `re_xxxx`). Required to send real emails. |
+| `WEBHOOK_SECRET` | **Secret** | A secure, randomly generated token (e.g. using `openssl rand -hex 24`). Used to secure the `/api/notify` endpoint. |
+| `REGISTRATION_MODE`| **Variable** | Set to `SUPPORTERS_ONLY` (default for private beta), `BETA_AND_SUPPORTERS`, or `PUBLIC`. |
+
+*Note: Remember to redeploy or restart the deployment for new environment variables to take effect.*
+
+### 3. Configure GitHub Action Secrets
+To allow the nightly scrape workflow to authenticate and call your live notify webhook, you must add the webhook secret to your repository secrets:
+1. Go to your GitHub Repository.
+2. Navigate to **Settings > Secrets and variables > Actions**.
+3. Click **New repository secret**.
+4. Name: `WEBHOOK_SECRET`
+5. Value: *[Insert the exact same random token you generated for `WEBHOOK_SECRET` in Cloudflare]*
+
+### 4. Deploy Frontend and Functions
+Build and deploy the application to Cloudflare Pages:
+```bash
+# Build the Eleventy static output
+npm run build-site
+
+# Deploy to Cloudflare Pages
+npm run deploy
+```
+
+### 5. Seeding Remote Supporter & Beta Lists
+During the private beta, you can manually authorize emails in your production D1 instance by running execute commands with the `--remote` flag:
+
+- **Add an Active Supporter**:
+  ```bash
+  npx wrangler d1 execute tampa-meetings-notifications --remote --command="INSERT OR REPLACE INTO supporters (email, tier, source, active_until) VALUES ('user@tampamonitor.com', 'supporter', 'manual', NULL);"
+  ```
+- **Add a Beta Tester**:
+  ```bash
+  npx wrangler d1 execute tampa-meetings-notifications --remote --command="INSERT OR REPLACE INTO beta_testers (email) VALUES ('tester@example.com');"
+  ```
+
+---
+
 ## Reference Source Files
 
 - Webhook Handler: [notify.js](file:///Users/miklb/Sites/meetings/site/functions/api/notify.js)
