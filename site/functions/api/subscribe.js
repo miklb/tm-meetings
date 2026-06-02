@@ -223,6 +223,7 @@ export async function onRequestPost(context) {
         headers: { "Content-Type": "application/json" }
       });
     }
+  }
   const responsePayload = { 
     success: true, 
     message: "Verification email sent. Please check your inbox to confirm your subscription." 
