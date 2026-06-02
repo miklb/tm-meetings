@@ -261,11 +261,23 @@ export async function onRequestPost(context) {
       const background = item.background || '';
       const docTitles = (item.supportingDocuments || []).map(d => d.title || '');
 
+      // Extract and concatenate staff report fields for matching
+      const staffReportText = item.staffReport ? [
+        item.staffReport.currentZoning || '',
+        item.staffReport.requestedZoning || '',
+        item.staffReport.futureLandUse || '',
+        item.staffReport.overlayDistrict || '',
+        ...(item.staffReport.neighborhoodAssociations || []),
+        ...(item.staffReport.waivers || []),
+        item.staffReport.findings || ''
+      ].join(' ') : '';
+
       const searchableText = [
         itemTitle,
         background,
         fileNumber,
-        ...docTitles
+        ...docTitles,
+        staffReportText
       ].join(' ').toLowerCase();
 
       const matchedKeys = new Set();

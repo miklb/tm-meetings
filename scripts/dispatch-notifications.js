@@ -62,6 +62,7 @@ async function main() {
           title: item.title,
           fileNumber: item.fileNumber,
           background: item.background || '',
+          staffReport: item.staffReport || null,
           supportingDocuments: (item.supportingDocuments || []).map(doc => ({
             title: doc.title,
             url: doc.mirroredUrl || doc.url

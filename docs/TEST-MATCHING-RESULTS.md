@@ -1,8 +1,8 @@
 # Historical Keyword Matching Report
 
-Generated on: 2026-06-02T03:18:37.257Z
+Generated on: 2026-06-02T03:31:58.963Z
 
-## Subscriber: supporter@tampamonitor.com (166 matches)
+## Subscriber: supporter@tampamonitor.com (181 matches)
 
 ### 2025-08-28 — City Council — August 28, 2025 (REGULAR)
 
@@ -927,6 +927,88 @@ Memorandum from Adriana Colina, Director of Logistics and Asset Management, tran
 CIO’s office to work on a plan to create a TampaCRA.org website or landing page, a TampaCRA.org email address, and signatures for CRA staff; also, for a electronic Tampa CRA letterhead to be used by CRA Staff. (Original motion initiated by Carlson-Hurtak on February 12, 2026)
 
 Memorandum from Eric Hayden, Director of Technology & Innovation, transmitting a written report for said agenda item. (To be R/F)
+  * Matched keywords: `carlson`
+
+### 2026-05-14 — Evening Session — May 14, 2026 (EVENING)
+
+* **File REZ-25-118**: File No. REZ-25-118
+Continued Public Hearing from February 12, 2026 on application of Global Engineering request to rezone property generally located at 4714 E. Hillsborough Avenue from CI & RS-50 to PD (Business Professional Office, Open Storage & All CI Uses).
+
+(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 4714 East Hillsborough Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) CI (Commercial Intensive) and RS-50 (Residential Single-Family) to PD (Planned Development, Business Professional Office,  all CI Uses, and Accessory Open Storage); providing an effective date.
+  * Matched keywords: `seminole heights`
+
+### 2026-06-04 — City Council — June 4, 2026 (REGULAR)
+
+* **File VAC-25-10**: File No. VAC-25-10 (UNAN)
+(Ordinance being presented for second reading and adoption) - An ordinance of the City of Tampa, Florida, vacating, closing, discontinuing and abandoning the alleyway located North of Cordelia Street, South of Ivy Street, East of Lincoln Avenue, and West of Mantanzas Avenue, within the Plat of John H. Drew's First Extension in the City of Tampa, Hillsborough County, Florida, as more fully described in Section 2 hereof, subject to certain covenants, conditions and restrictions as more particularly set forth herein; providing for enforcement and penalties for violations; providing for definitions, interpretations and repealing conflicts; providing for severability; providing an effective date. (Previously heard on July 17, 2025, at which a motion initiated by Hurtak-Maniscalco to deny the application was adopted with Miranda voting no) (Motion to reconsider and set public hearing initiated by Carlson-Viera on July 31, 2025)(Motion to reschedule from February 5, 2026 initiated by Maniscalco-Miranda)(Original motion to approve said ordinance on first reading was initiated by Hurtak-Viera on May 7, 2026)
+  * Matched keywords: `carlson`
+
+* **File E2026-8**: File No. E2026-8 CH 27  (Hurtak no, Carlson absent)
+(Ordinance being presented for second reading and adoption) - An ordinance of the City of Tampa, Florida, relating to publicly initiated text amendments, making revisions to City of Tampa Code of Ordinances, amending Chapter 27, (Zoning and Land Development), amending section 27-43, definitions; amending 27-156, Official Schedule of District Regulations; repealing section 27-160, Special Street Setbacks; amending section 27-177, Historic District Established; amending 27-184, Official Schedule of Permitted Principal, Accessory and Special Uses; Required Off-Street Parking Ratios by use; Parking Space Equivalencies by Transportation Mode; amending 27-198, Official Schedule of Permitted Principal, Accessory and Special Uses; Required Off-Street Parking Ratios by Use; Parking Space Equivalencies by Transportation Mode; amending section 27-199, Official Schedule of Dimensional Regulations; amending section 27-211.8, Schedule of Permitted Uses by District; Amending Section 212.4, Schedule of Allowable, Permitted, and Prohibited Uses by District; creating section 27-282.31, Certified Recovery Residences; amending section 27-283.12, Off-Street Parking Space Standards; providing for severability; repealing all ordinances or parts of ordinances in conflict therewith; providing an effective date. (Motion adopting resolution to schedule said public hearing initiated by Maniscalco-Miranda on April 16, 2026)(Original motion to approve said substitute ordinance on first reading was initiated by Viera-Maniscalco on May 14, 2026)
+
+Memorandum from Dana Crosby Collier, Sr. Assistant City Attorney, transmitting additional information for said agenda item. (To be R/F)
+
+Email from Phyllis Ho-Zuhars, Senior Executive Aide to Chief of Staff, transmitting a PowerPoint presentation for said agenda item. (To be R/F)
+  * Matched keywords: `carlson`
+
+* **File REZ-26-11**: File No. REZ-26-11 (UNAN; Carlson absent)
+(Ordinance being presented for second reading and adoption) - An ordinance rezoning property in the general vicinity of 1500 West La Salle Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential Single-Family) to RM-18 (Residential, Multiple-Family); providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Young-Viera on May 14, 2026)
+  * Matched keywords: `carlson`
+
+* **File REZ-26-16**: File No. REZ-26-16 (UNAN; Carlson absent)
+(Ordinance being presented for second reading and adoption)- An ordinance rezoning property in the general vicinity of 3206 North Tampa Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) to PD (Planned Development, Residential, Single-Family Attached); providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Hurtak-Miranda on May 14, 2026)
+  * Matched keywords: `carlson`
+
+* **File REZ-26-37**: File No. REZ-26-37 (UNAN; Carlson absent)
+(Ordinance being presented for second reading and adoption) - An ordinance rezoning property in the general vicinity of 1313 West Nassau Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential Single-Family) to PD (Planned Development, Residential, Single-Family, Semi-Detached); providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Maniscalco-Miranda on May 14, 2026)
+
+Resolution approving a bonus provision agreement between Poseidon Fund I, LLC, and the city of Tampa, in relation to REZ-26-37 for the property located at 1313 West Nassau Street; authorizing the execution thereof by the Mayor of the City of Tampa; directing the City Clerk to file a copy of the fully executed bonus provision agreement in the official records of the city; providing an effective date.
+  * Matched keywords: `carlson`
+
+* **File REZ-26-52**: File No. REZ-26-52 (UNAN; Carlson absent)
+(Ordinance being presented for second reading and adoption)- An ordinance rezoning property in the general vicinity of 5200 South Manhattan Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) PD (Planned Development) to PD (Planned Development, Residential, Single-Family Attached); providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Miranda-Viera on May 14, 2026)
+  * Matched keywords: `carlson`
+
+* **File REZ-25-118**: File No. REZ-25-118 (UNAN; Carlson absent)
+(Ordinance being presented for second reading and adoption)- An ordinance rezoning property in the general vicinity of 4714 East Hillsborough Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) CI (Commercial Intensive) and RS-50 (Residential Single-Family) to PD (Planned Development, Business Professional Office,  all CI Uses, and Accessory Open Storage); providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Viera-Miranda on May 14, 2026)
+  * Matched keywords: `carlson`
+
+* **File REZ-26-18**: File No. REZ-26-18 (UNAN; Carlson absent)
+(Ordinance being presented for second reading and adoption)- An ordinance rezoning property in the general vicinity of 3602 West Euclid Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RO (Residential Office) to CG (Commercial General); providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Young-Maniscalco on May 14, 2026)
+  * Matched keywords: `carlson`
+
+* **File REZ-26-26**: File No. REZ-26-26  (UNAN; Carlson absent)
+Ordinance being presented for second reading and adoption) - An ordinance rezoning property in the general vicinity of 2602 and 2604 East Dr Martin Luther King Jr Boulevard and 2603 East Ida Street, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification(s) RS-50 (Residential, Single-Family) and CI (Commercial Intensive) to PD (Planned Development, Residential Multiple-Family); providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Hurtak-Miranda on May 14, 2026)
+  * Matched keywords: `carlson`
+
+* **File CM24-5717/CM25-20837**: File No. CM24-5717/CM25-20837
+Staff to present monthly reports, quarterly in-person, otherwise written reports on an update on the status of Station 24 to include reports from Fire Chief Barbara Tripp, Director of Contract Administration Richard Mutterback, and the Project Manager, include updates on the date for a groundbreaking. In addition, GMP Contract presentation. (Original motion initiated by Viera-Clendenin on May 16, 2024)(Motion to reschedule from October 3, 2024 to said date initiated by Viera-Miranda on August 19, 2024)(Motion requesting an update initiated by Viera-Hurtak on September 5, 2024)(Amended motion initiated by Viera-Miranda on December 19, 2024)(Updated amended motion initiated by Viera-Miranda on February 6, 2025)(Updated amended motion for in-person report initiated by Viera-Hurtak on August 28, 2025) (Updated motion initiated by Hurtak-Miranda on May 28, 2026)(Next quarterly in-person report scheduled for July 16, 2026)
+
+Memorandum from Chief Barbara Tripp, Tampa Fire Rescue, notifying City Council that staff and the project manager will appear in-person for update. (To be R/F)
+  * Matched keywords: `station 24`
+
+* **File CM26-21879**: File No. CM26-21879
+Mobility to report on the possibility of adding larger school zone signs and flashing lights. (Original motion initiated by Carlson-Maniscalco on February 19, 2026)
+
+Memorandum from Adam Purcell, Transportation Service Director of Mobility Department, transmitting a written report for said agenda item. (To be R/F)
+  * Matched keywords: `carlson`
+
+* **File CM26-23873**: File No. CM26-23873
+Chief of Staff to speak to Council and employees about how this administration will protect employees from retaliation by the administration. (Original motion initiated by Carlson-Young on May 7, 2026)
+
+Memorandum from John Bennett, Chief of Staff, transmitting a PowerPoint presentation for said agenda item. (To be R/F)
+  * Matched keywords: `carlson`
+
+* **File CM26-23872**: File No. CM26-23872
+Martin Shelby, Council Attorney, to report on whether second reading public hearings could be adopted simultaneously where there are no objections. (Original motion initiated by Carlson-Maniscalco on May 7, 2026)
+
+Email from Martin Shelby, Council Attorney, requesting that said agenda item be continued to June 18, 2026 as a written staff report. (To be R/F)
+  * Matched keywords: `carlson`
+
+* **File CM26-21881**: File No. CM26-21881
+Administration to report as to creating an “event/parade” budget that would be approved in advanced by City Council that would include all paid and in-kind services, departments such as stormwater and TPD would be paid by this fund. (Original motion initiated by Carlson-Hurtak on February 19, 2026)
+
+Memorandum from Sal Ruggiero, Deputy Administrator of Neighborhood & Community Affairs, and Ted Fowler, Director of Parks & Recreation, requesting that said agenda item be continued to August 17, 2026 Budget Workshop. (To be R/F)
   * Matched keywords: `carlson`
 
 ### 2026-05-21 — City Council — May 21, 2026 (REGULAR)

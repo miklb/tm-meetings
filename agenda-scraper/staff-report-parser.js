@@ -182,6 +182,26 @@ function parseNeighborhoodAssociations(text) {
 }
 
 /**
+ * Extract the OVERLAY DISTRICT section.
+ *
+ * @param {string} text - Raw text from the staff report PDF
+ * @returns {string|null} - Overlay district name (may be null)
+ */
+function parseOverlayDistrict(text) {
+    if (!text) return null;
+
+    // Capture from the label until the next ALL-CAPS label or a blank-line gap.
+    const labelRe = /OVERLAY\s+DISTRICT:\s*([\s\S]*?)(?=\n\s*[A-Z][A-Z0-9 &/().#-]{2,}:\s|\n\s*\n)/i;
+    const match = text.match(labelRe);
+    if (!match) return null;
+
+    const raw = match[1].replace(/\s+/g, ' ').trim();
+    if (!raw || /^N\/?A$|^NONE$/i.test(raw)) return null;
+
+    return raw;
+}
+
+/**
  * Test the staff report identification with meeting 2616
  */
 function testStaffReportIdentification() {
@@ -350,6 +370,7 @@ function parseZoningData(textContent, fileNumber) {
         currentZoning: null,
         requestedZoning: null,
         futureLandUse: null,
+        overlayDistrict: null,
         neighborhoodAssociations: [],
         waivers: [],
         findings: null
@@ -358,6 +379,11 @@ function parseZoningData(textContent, fileNumber) {
     if (!textContent) return extractedData;
     
     console.log(`📖 Parsing zoning data for ${fileNumber}...`);
+
+    extractedData.overlayDistrict = parseOverlayDistrict(textContent);
+    if (extractedData.overlayDistrict) {
+        console.log(`   Overlay District: ${extractedData.overlayDistrict}`);
+    }
 
     extractedData.neighborhoodAssociations = parseNeighborhoodAssociations(textContent);
     if (extractedData.neighborhoodAssociations.length) {
@@ -681,6 +707,7 @@ async function integrateStaffReportsIntoAgendaItems(meetingData) {
                     currentZoning: result.extractedData.currentZoning,
                     requestedZoning: result.extractedData.requestedZoning,
                     futureLandUse: result.extractedData.futureLandUse,
+                    overlayDistrict: result.extractedData.overlayDistrict,
                     neighborhoodAssociations: result.extractedData.neighborhoodAssociations || [],
                     waivers: result.extractedData.waivers,
                     findings: result.extractedData.findings

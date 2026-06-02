@@ -91,7 +91,7 @@ console.log(`- File Numbers: ${fileNumKeywords.join(', ') || '(none)'}\n`);
 // 4. Fetch all meetings & agenda items
 console.log(`Scanning historical agenda database...`);
 const agendaItems = meetingsDb.prepare(`
-  SELECT a.id as item_id, a.file_number, a.title as item_title, a.background, 
+  SELECT a.id as item_id, a.file_number, a.title as item_title, a.background, a.staff_report, 
          m.id as meeting_id, m.date, m.meeting_type, m.title as meeting_title
   FROM agenda_items a
   JOIN meetings m ON a.meeting_id = m.id
@@ -116,12 +116,24 @@ const subscriberDigests = {};
 for (const item of agendaItems) {
   const docTitles = docsByItemId[item.item_id] || [];
   
+  const staffReport = item.staff_report ? JSON.parse(item.staff_report) : null;
+  const staffReportText = staffReport ? [
+    staffReport.currentZoning || '',
+    staffReport.requestedZoning || '',
+    staffReport.futureLandUse || '',
+    staffReport.overlayDistrict || '',
+    ...(staffReport.neighborhoodAssociations || []),
+    ...(staffReport.waivers || []),
+    staffReport.findings || ''
+  ].join(' ') : '';
+
   // Construct single searchable text string (lowercased)
   const searchableText = [
     item.item_title || '',
     item.background || '',
     item.file_number || '',
-    ...docTitles
+    ...docTitles,
+    staffReportText
   ].join(' ').toLowerCase();
 
   const matchedKeys = new Set();

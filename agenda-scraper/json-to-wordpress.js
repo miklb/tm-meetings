@@ -384,6 +384,16 @@ function formatStaffReportForWordPress(staffReport) {
         content += `<p><strong>Future Land Use:</strong> ${staffReport.futureLandUse}</p>`;
     }
 
+    // Overlay District
+    if (staffReport.overlayDistrict) {
+        content += `<p><strong>Overlay District:</strong> ${staffReport.overlayDistrict}</p>`;
+    }
+
+    // Neighborhood Association
+    if (staffReport.neighborhoodAssociations && staffReport.neighborhoodAssociations.length > 0) {
+        content += `<p><strong>Neighborhood Association:</strong> ${staffReport.neighborhoodAssociations.join(', ')}</p>`;
+    }
+
     // Waivers
     if (staffReport.waivers && staffReport.waivers.length > 0) {
         content += '<p><strong>Waivers:</strong></p><ul>';
