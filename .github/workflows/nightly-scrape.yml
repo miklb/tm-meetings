@@ -123,6 +123,14 @@ jobs:
             echo "has_meaningful=false" >> "$GITHUB_OUTPUT"
           fi
 
+      - name: Dispatch Keyword Notifications
+        if: steps.git-check.outputs.has_changes == 'true'
+        env:
+          WEBHOOK_SECRET: ${{ secrets.WEBHOOK_SECRET }}
+          NOTIFICATIONS_API_URL: https://meetings.tampamonitor.com/api/notify
+        working-directory: .
+        run: node scripts/dispatch-notifications.js
+
       - name: Commit and push changes
         if: steps.git-check.outputs.has_changes == 'true'
         working-directory: .

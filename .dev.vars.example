@@ -1,0 +1,9 @@
+# Local secrets for Wrangler Pages Functions development
+# Copy this file to .dev.vars and fill in your actual keys.
+# Do NOT commit .dev.vars to version control!
+
+# Resend API Key (get from https://resend.com/)
+RESEND_API_KEY="re_your_api_key_here"
+
+# Shared secret key to authorize the nightly scrape webhook from GitHub Actions
+WEBHOOK_SECRET="your_shared_webhook_secret_here"
