@@ -87,10 +87,14 @@ export async function onRequestPost(context) {
         console.log(`\n=== [LOCAL RESEND VERIFICATION] ===\nTo: ${emailLower}\nLink: ${verifyUrl}\n===================================\n`);
       }
 
-      return new Response(JSON.stringify({ 
-        success: true, 
-        message: "Your subscription is not verified yet. We have sent a new verification link to your inbox." 
-      }), {
+      const responsePayload = {
+        success: true,
+        message: "Your subscription is not verified yet. We have sent a new verification link to your inbox."
+      };
+      if (!resendApiKey) {
+        responsePayload.devVerifyUrl = verifyUrl;
+      }
+      return new Response(JSON.stringify(responsePayload), {
         status: 200,
         headers: { "Content-Type": "application/json" }
       });
@@ -128,10 +132,14 @@ export async function onRequestPost(context) {
         console.log(`\n=== [LOCAL SEND MANAGEMENT LINK] ===\nTo: ${emailLower}\nLink: ${manageUrl}\n===================================\n`);
       }
 
-      return new Response(JSON.stringify({ 
-        success: true, 
-        message: "We have sent a management link to your inbox." 
-      }), {
+      const responsePayload = {
+        success: true,
+        message: "We have sent a management link to your inbox."
+      };
+      if (!resendApiKey) {
+        responsePayload.devManageUrl = manageUrl;
+      }
+      return new Response(JSON.stringify(responsePayload), {
         status: 200,
         headers: { "Content-Type": "application/json" }
       });

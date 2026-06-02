@@ -223,7 +223,12 @@ export async function onRequestPost(context) {
         headers: { "Content-Type": "application/json" }
       });
     }
-  } else {
+  const responsePayload = { 
+    success: true, 
+    message: "Verification email sent. Please check your inbox to confirm your subscription." 
+  };
+
+  if (!resendApiKey) {
     // MOCK EMAIL LOGGING (No API key present)
     console.log(`
 =========================================
@@ -234,12 +239,10 @@ Verification Link: ${verifyUrl}
 Keywords: ${cleanKeywords.join(', ')}
 =========================================
     `);
+    responsePayload.devVerifyUrl = verifyUrl;
   }
 
-  return new Response(JSON.stringify({ 
-    success: true, 
-    message: "Verification email sent. Please check your inbox to confirm your subscription." 
-  }), {
+  return new Response(JSON.stringify(responsePayload), {
     status: 200,
     headers: { "Content-Type": "application/json" }
   });

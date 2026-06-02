@@ -516,7 +516,8 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       manageUserBadge.innerText = keywordLimit === 15 ? 'Beta / Supporter' : 'Free Member';
       
       // Load tags
-      manageTags = data.keywords || [];
+      manageTags.length = 0;
+      manageTags.push(...(data.keywords || []));
       renderTags(manageTagContainer, manageKeywordsInput, manageTags);
       updateLimitHelp();
 
@@ -634,9 +635,13 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
         throw new Error(data.error || "Subscription request failed.");
       }
 
-      showBanner(data.message, 'success');
+      let msg = data.message;
+      if (data.devVerifyUrl) {
+        msg += `<br><a href="${data.devVerifyUrl}" style="display: inline-block; margin-top: 10px; font-weight: bold; color: #047857; text-decoration: underline;">[Local Dev Mode] Click here to verify subscription →</a>`;
+      }
+      showBanner(msg, 'success');
       subscribeForm.reset();
-      subscribeTags = [];
+      subscribeTags.length = 0;
       renderTags(tagContainer, subKeywordsInput, subscribeTags);
     } catch (err) {
       showBanner(err.message, 'error');
@@ -665,7 +670,13 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
 
-      showBanner(data.message, 'success');
+      let msg = data.message;
+      if (data.devManageUrl) {
+        msg += `<br><a href="${data.devManageUrl}" style="display: inline-block; margin-top: 10px; font-weight: bold; color: #047857; text-decoration: underline;">[Local Dev Mode] Click here to open your dashboard →</a>`;
+      } else if (data.devVerifyUrl) {
+        msg += `<br><a href="${data.devVerifyUrl}" style="display: inline-block; margin-top: 10px; font-weight: bold; color: #047857; text-decoration: underline;">[Local Dev Mode] Click here to verify subscription →</a>`;
+      }
+      showBanner(msg, 'success');
       requestForm.reset();
       switchPanel('subscribe');
     } catch (err) {
@@ -699,7 +710,8 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       if (!res.ok) throw new Error(data.error);
 
       showBanner(data.message, 'success');
-      manageTags = data.keywords || [];
+      manageTags.length = 0;
+      manageTags.push(...(data.keywords || []));
       renderTags(manageTagContainer, manageKeywordsInput, manageTags);
     } catch (err) {
       showBanner(err.message, 'error');
@@ -738,7 +750,7 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
     
     statusBanner.classList.remove('hidden', 'success', 'error');
     statusBanner.classList.add(type);
-    statusBanner.innerText = msg;
+    statusBanner.innerHTML = msg;
     
     // Scroll to top of viewport to ensure they see it
     window.scrollTo({ top: 0, behavior: 'smooth' });
