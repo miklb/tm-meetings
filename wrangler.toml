@@ -1,0 +1,12 @@
+# Cloudflare Pages configuration for Tampa Meetings
+name = "tampa-meetings"
+pages_build_output_dir = "site/_site"
+compatibility_date = "2024-03-01"
+
+[vars]
+REGISTRATION_MODE = "SUPPORTERS_ONLY"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "tampa-meetings-notifications"
+database_id = "91f3b0f2-dd85-4962-b7dc-1ea4b2ff8c92"
