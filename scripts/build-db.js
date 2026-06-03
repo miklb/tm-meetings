@@ -189,6 +189,15 @@ const TRANSCRIPT_TYPE_OVERRIDES = {
 };
 
 /**
+ * Manual type overrides for agenda meetings where automatic inference fails
+ * or OnBase classification is incorrect (e.g. dual meetings).
+ * Keys are OnBase meeting IDs as numbers.
+ */
+const MEETING_TYPE_OVERRIDES = {
+  2889: 'cra', // 2026-05-21 Special CRA Meeting — OnBase lists as 'special', but it was a CRA meeting
+};
+
+/**
  * Infer the agenda meeting_type slug from processed transcript data and its
  * corresponding video mapping (if available).
  *
@@ -539,6 +548,11 @@ function main() {
         const key = data.meetingType.toLowerCase();
         const mapped = VIDEO_MEETING_TYPE_MAP[key];
         if (mapped && mapped !== 'regular') meetingType = mapped;
+      }
+
+      // Apply manual meeting type overrides
+      if (MEETING_TYPE_OVERRIDES[meetingId]) {
+        meetingType = MEETING_TYPE_OVERRIDES[meetingId];
       }
 
       insertMeeting.run({

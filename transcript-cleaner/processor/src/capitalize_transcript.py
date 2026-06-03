@@ -192,6 +192,7 @@ class TranscriptCapitalizer:
         # Matches: "north franklin street", "n. tampa st", "e. twiggs street"
         self.street_pattern = re.compile(
             r'\b((?:north|south|east|west|n\.|s\.|e\.|w\.|n|s|e|w)\s+)?'
+            r'(?!the\b|a\b|an\b|on\b|at\b|to\b|from\b|by\b|of\b|in\b|for\b|and\b|or\b|with\b|about\b)'
             r'([a-z][a-z]+(?:\s+[a-z][a-z]+)?)\s+'
             r'(' + suffix_alts + r')\b',
             re.IGNORECASE
@@ -239,7 +240,7 @@ class TranscriptCapitalizer:
         
         # Step 2: Replace multi-word entities first (greedy longest match)
         for pattern in self.multiword_patterns:
-            if pattern in text_lower:
+            if pattern in text_lower.lower():
                 # Get proper casing
                 if pattern in self.multiword_standard:
                     proper = self.multiword_standard[pattern]
@@ -263,7 +264,7 @@ class TranscriptCapitalizer:
                 # Extract person and organization names from this text
                 # Process in chunks to avoid truncation (GLiNER has 384 token limit)
                 # Using 250 words per chunk to be conservative (tokens < words)
-                labels = ["person", "organization"]
+                labels = ["person", "organization", "law", "document", "facility"]
                 chunk_size = 250  # words (conservative to stay well under 384 token limit)
                 words = text_lower.split()
                 
@@ -279,15 +280,43 @@ class TranscriptCapitalizer:
                         if entity_text.lower() in self.acronyms:
                             continue
                         
+                        # Skip if it is a substring of any multi-word database entity
+                        if any(entity_text.lower() in db_pattern for db_pattern in self.multiword_patterns):
+                            continue
+                        
                         # Title case the entity (capitalize each word)
-                        # Preserve hyphenated name casing
+                        # Preserve hyphenated name casing, handle acronyms/possessives, and keep common lowercase words lowercase
                         words_in_entity = entity_text.split()
                         proper_parts = []
-                        for w in words_in_entity:
-                            if '-' in w:
-                                proper_parts.append('-'.join(p.capitalize() for p in w.split('-')))
+                        for idx, w in enumerate(words_in_entity):
+                            # Separate punctuation/possessive for the word inside the entity
+                            match_w = re.match(r'^([^\w]*)(.+?)([^\w]*)$', w)
+                            if match_w:
+                                lead_w, core_w, trail_w = match_w.groups()
                             else:
-                                proper_parts.append(w.capitalize())
+                                lead_w = trail_w = ''
+                                core_w = w
+                            
+                            # Check for possessive
+                            suffix_w = ''
+                            base_w = core_w
+                            if len(core_w) > 2 and core_w.lower().endswith("'s"):
+                                suffix_w = core_w[-2:]
+                                base_w = core_w[:-2]
+                            elif len(core_w) > 1 and core_w.endswith("'"):
+                                suffix_w = "'"
+                                base_w = core_w[:-1]
+                            
+                            clean_w = re.sub(r'[^\w-]', '', base_w).lower()
+                            
+                            if clean_w in self.special_rules.get('always_lowercase', []):
+                                proper_parts.append(lead_w + clean_w + suffix_w + trail_w)
+                            elif clean_w in self.acronyms or clean_w in self.special_rules.get('always_uppercase', []):
+                                proper_parts.append(lead_w + base_w.upper() + suffix_w + trail_w)
+                            elif '-' in clean_w:
+                                proper_parts.append(lead_w + '-'.join(p.capitalize() for p in clean_w.split('-')) + suffix_w + trail_w)
+                            else:
+                                proper_parts.append(lead_w + base_w.capitalize() + suffix_w + trail_w)
                         proper_case = ' '.join(proper_parts)
                         
                         # Store both single and multi-word entities
@@ -302,7 +331,7 @@ class TranscriptCapitalizer:
         
         # Step 2.6: Replace GLiNER multi-word entities
         for pattern, proper in sorted(gliner_multiword.items(), key=lambda x: len(x[0]), reverse=True):
-            if pattern in text_lower:
+            if pattern in text_lower.lower():
                 text_lower = re.sub(
                     r'\b' + re.escape(pattern) + r'\b',
                     proper,
@@ -324,35 +353,50 @@ class TranscriptCapitalizer:
                 leading_punct = trailing_punct = ''
                 word_core = word
             
-            # Clean word for lookup (just alphanumeric and hyphens)
-            word_clean = re.sub(r'[^\w-]', '', word_core).lower()
-
-            # Context-sensitive disambiguation: 'it'/'us' are both common pronouns
-            # and acronyms. Only uppercase when context rules out the pronoun reading.
-            if word_clean in _CONTEXT_SENSITIVE:
-                if self._is_common_word_context(word_clean, i, words):
-                    # Treat as pronoun; still respect sentence-start capitalisation
-                    if i == 0 or (i > 0 and any(p in words[i - 1] for p in ['.', '!', '?'])):
-                        result = word_clean[0].upper() + word_clean[1:]
-                    else:
-                        result = word_clean
-                    capitalized_words.append(leading_punct + result + trailing_punct)
-                    continue
-                # Not pronoun context — fall through to normal acronym/entity rules
-
-            # Check if this should be an acronym (override other capitalizations)
-            if word_clean in self.acronyms:
-                capitalized_words.append(leading_punct + word_clean.upper() + trailing_punct)
-                continue
-            
             # Check if already capitalized from multi-word replacement
             if word_core and word_core[0].isupper():
                 capitalized_words.append(word)
                 continue
+
+            # Check for possessive suffix ('s or ')
+            suffix = ''
+            base_core = word_core
+            
+            if len(word_core) > 2 and word_core.lower().endswith("'s"):
+                suffix = word_core[-2:]
+                base_core = word_core[:-2]
+            elif len(word_core) > 1 and word_core.endswith("'"):
+                suffix = "'"
+                base_core = word_core[:-1]
+            
+            # Clean base word for lookup (just alphanumeric and hyphens)
+            base_clean = re.sub(r'[^\w-]', '', base_core).lower()
+
+            if not base_clean:
+                capitalized_words.append(word)
+                continue
+
+            # Context-sensitive disambiguation: 'it'/'us' are both common pronouns
+            # and acronyms. Only uppercase when context rules out the pronoun reading.
+            if base_clean in _CONTEXT_SENSITIVE:
+                if self._is_common_word_context(base_clean, i, words):
+                    # Treat as pronoun; still respect sentence-start capitalisation
+                    if i == 0 or (i > 0 and any(p in words[i - 1] for p in ['.', '!', '?'])):
+                        result = base_core[0].upper() + base_core[1:]
+                    else:
+                        result = base_core
+                    capitalized_words.append(leading_punct + result + suffix + trailing_punct)
+                    continue
+                # Not pronoun context — fall through to normal acronym/entity rules
+
+            # Check if this should be an acronym (override other capitalizations)
+            if base_clean in self.acronyms:
+                capitalized_words.append(leading_punct + base_core.upper() + suffix + trailing_punct)
+                continue
             
             # Rule 0: Hyphenated words — check early so sentence-start rules don't clobber names
-            if '-' in word_clean and len(word_clean) > 2:
-                parts = word_clean.split('-')
+            if '-' in base_clean and len(base_clean) > 2:
+                parts = base_clean.split('-')
                 is_name_like = any(
                     p.lower() in self.standard_lookup 
                     or p.lower() in self.agenda_entities
@@ -368,86 +412,77 @@ class TranscriptCapitalizer:
                         else:
                             fixed_parts.append(p.capitalize())
                     fixed = '-'.join(fixed_parts)
-                    capitalized_words.append(leading_punct + fixed + trailing_punct)
+                    capitalized_words.append(leading_punct + fixed + suffix + trailing_punct)
                     continue
             
             # Rule 1: First word of sentence (always capitalize)
             if i == 0:
-                # Capitalize first letter only
-                if word_clean:
-                    capitalized = word_clean[0].upper() + word_clean[1:]
-                    capitalized_words.append(leading_punct + capitalized + trailing_punct)
-                else:
-                    capitalized_words.append(word)
+                capitalized = base_core[0].upper() + base_core[1:]
+                capitalized_words.append(leading_punct + capitalized + suffix + trailing_punct)
                 continue
             
             # Rule 2: After sentence-ending punctuation
             if i > 0 and any(p in words[i-1] for p in ['.', '!', '?']):
-                # Capitalize first letter only
-                if word_clean:
-                    capitalized = word_clean[0].upper() + word_clean[1:]
-                    capitalized_words.append(leading_punct + capitalized + trailing_punct)
-                else:
-                    capitalized_words.append(word)
+                capitalized = base_core[0].upper() + base_core[1:]
+                capitalized_words.append(leading_punct + capitalized + suffix + trailing_punct)
                 continue
             
             # Rule 3: Pronoun "I"
-            if word_clean == 'i':
-                capitalized_words.append(leading_punct + 'I' + trailing_punct)
+            if base_clean == 'i':
+                capitalized_words.append(leading_punct + 'I' + suffix + trailing_punct)
                 continue
             
             # Rule 4: Always lowercase words
-            if word_clean in self.special_rules['always_lowercase']:
-                capitalized_words.append(leading_punct + word_clean + trailing_punct)
+            if base_clean in self.special_rules['always_lowercase']:
+                capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
                 continue
             
             # Rule 5: Always uppercase (acronyms)
-            if word_clean in self.special_rules['always_uppercase']:
-                capitalized_words.append(leading_punct + word_clean.upper() + trailing_punct)
+            if base_clean in self.special_rules['always_uppercase']:
+                capitalized_words.append(leading_punct + base_core.upper() + suffix + trailing_punct)
                 continue
             
             # Rule 5.5: Detect likely acronyms (2-5 uppercase letters in original)
             # If original text was ALL CAPS, check if the word is a known acronym pattern
             orig_word = text.split()[i] if i < len(text.split()) else ''
-            if (len(word_clean) >= 2 and len(word_clean) <= 5 
-                    and word_clean.isalpha() 
+            if (len(base_clean) >= 2 and len(base_clean) <= 5 
+                    and base_clean.isalpha() 
                     and orig_word.isupper()
-                    and word_clean in self.acronyms):
-                capitalized_words.append(leading_punct + word_clean.upper() + trailing_punct)
+                    and base_clean in self.acronyms):
+                capitalized_words.append(leading_punct + base_core.upper() + suffix + trailing_punct)
                 continue
             
             # Rule 6: Skip ambiguous words (common nouns that match entity names)
-            if word_clean in self.skip_words:
-                capitalized_words.append(leading_punct + word_clean + trailing_punct)
+            if base_clean in self.skip_words:
+                capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
                 continue
             
             # Rule 7: Check standard entities
-            if word_clean in self.standard_lookup:
-                proper = self.standard_lookup[word_clean]
-                capitalized_words.append(leading_punct + proper + trailing_punct)
+            if base_clean in self.standard_lookup:
+                proper = self.standard_lookup[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
             
             # Rule 7: Check agenda entities
-            if word_clean in self.agenda_entities:
-                proper = self.agenda_entities[word_clean]
-                capitalized_words.append(leading_punct + proper + trailing_punct)
+            if base_clean in self.agenda_entities:
+                proper = self.agenda_entities[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
             
             # Rule 8: Check GLiNER-detected entities
-            if word_clean in gliner_entities:
-                proper = gliner_entities[word_clean]
-                capitalized_words.append(leading_punct + proper + trailing_punct)
+            if base_clean in gliner_entities:
+                proper = gliner_entities[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
             
             # Rule 9: Numeric patterns (dates, times, etc.)
-            # Keep as-is but capitalize first letter if alphabetic
-            if re.match(r'^\d', word_clean):
+            if re.match(r'^\d', base_clean):
                 capitalized_words.append(word)
                 continue
             
             # Default: Keep lowercase (conservative approach)
             # Only capitalize what we know about
-            capitalized_words.append(leading_punct + word_clean + trailing_punct)
+            capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
         
         return ' '.join(capitalized_words)
     
