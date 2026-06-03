@@ -1,0 +1,38 @@
+{
+  "meeting_id": 2682,
+  "meeting_date": "2026-05-28",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "ojhJqkpbac4",
+      "title": "Tampa City Council PM - 05/28/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-05-29T10:34:07Z",
+      "duration": "PT1H11M26S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: BF26-23512 - Brownfield Area Designation Ashley-Laurel-Tampa",
+          "timestamp": "00:17:49",
+          "seconds": 1069
+        },
+        {
+          "title": "Item 2: BF26-23532 - Brownfield Area Designation Twiggs Street",
+          "timestamp": "00:19:49",
+          "seconds": 1189
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "00:22:22",
+          "seconds": 1342
+        }
+      ],
+      "offset_seconds": 751
+    }
+  ]
+}

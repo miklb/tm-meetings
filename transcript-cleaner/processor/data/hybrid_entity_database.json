@@ -1,5 +1,17 @@
 {
   "people": {
+    "Guido Maniscalco": {
+      "frequency": 1,
+      "confidence": 1.0,
+      "score": 1.0,
+      "agendas": 1
+    },
+    "Charlie Miranda": {
+      "frequency": 1,
+      "confidence": 1.0,
+      "score": 1.0,
+      "agendas": 1
+    },
     "Barbara Tripp": {
       "frequency": 24,
       "confidence": 1.0,

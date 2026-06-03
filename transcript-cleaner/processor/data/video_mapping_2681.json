@@ -1,0 +1,53 @@
+{
+  "meeting_id": 2681,
+  "meeting_date": "2026-05-28",
+  "meeting_type": "Workshop",
+  "videos": [
+    {
+      "video_id": "mJPbkfqsv6I",
+      "title": "Tampa City Council Workshop - 05/28/26",
+      "part": 1,
+      "session": "morning",
+      "published_at": "2026-05-28T18:10:45Z",
+      "duration": "PT5H15S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-23651 - CDBG-DR Program Presentation",
+          "timestamp": "00:13:09",
+          "seconds": 789
+        },
+        {
+          "title": "Item 2: CM26-22312 - Mid-Year Budget Review",
+          "timestamp": "00:39:32",
+          "seconds": 2372
+        },
+        {
+          "title": "Item 3: CM26-21095 - Social Action and Arts Fund",
+          "timestamp": "01:59:17",
+          "seconds": 7157
+        },
+        {
+          "title": "Item 4: CM25-19447 - Convention Center Enterprise Fund",
+          "timestamp": "02:55:42",
+          "seconds": 10542
+        },
+        {
+          "title": "Item 5: CM26-22117 / CM25-18955 - Large Format Digital Signs",
+          "timestamp": "03:13:42",
+          "seconds": 11622
+        },
+        {
+          "title": "Item 6: CM26-21882 - OnBase Presentation Posting Rule",
+          "timestamp": "04:53:32",
+          "seconds": 17612
+        }
+      ],
+      "offset_seconds": 516
+    }
+  ]
+}
