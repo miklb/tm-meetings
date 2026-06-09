@@ -355,54 +355,104 @@ function loadJSONData(filePath) {
  */
 
 /**
- * Format staff report data for WordPress display
- * @param {object} staffReport - Staff report data object
- * @returns {string} - Formatted HTML for staff report
+ * Split a waiver blob ("1. foo. 2. bar. 3. baz") into individual items.
+ * Splits on whitespace that precedes a cardinal number + ". " sequence, so
+ * section codes like "27-284.2.5" are not treated as split points (the digit
+ * there is not followed by whitespace before the period).
  */
-function formatStaffReportForWordPress(staffReport) {
-    if (!staffReport) {
-        return '';
-    }
+function splitNumberedWaivers(text) {
+    // Only attempt splitting when the text contains at least " 2. " (two waivers).
+    if (!/\s2\.\s/.test(text)) return [text.trim()].filter(Boolean);
+    return text.split(/\s+(?=\d{1,2}\.\s)/).map(s => s.trim()).filter(Boolean);
+}
 
-    let content = '';
+/**
+ * Format land use staff report data as a semantic HTML section.
+ *
+ * Always renders when any field is present. Caller wraps in wp:html.
+ * Mirrors the visual pattern of agenda-item-financial sections:
+ *   <section aria-labelledby> / <dl> for facts / <ol> for ordered waivers.
+ *
+ * @param {object} staffReport - staffReport object from agendaItem
+ * @param {string|number} agendaItemId - used for aria-labelledby
+ * @returns {string} - HTML string, or empty string when nothing to render
+ */
+function formatStaffReportForWordPress(staffReport, agendaItemId) {
+    if (!staffReport) return '';
 
-    // Current and Requested Zoning
+    const id = agendaItemId ? String(agendaItemId) : 'unknown';
+    const labelId = `land-use-${id}`;
+    const parts = [];
+
+    // --- Key/value fact table (zoning, FLU, neighbourhood associations) ---
+    const factRows = [];
+
     if (staffReport.currentZoning || staffReport.requestedZoning) {
-        content += '<p><strong>Zoning:</strong> ';
+        let zoningVal;
         if (staffReport.currentZoning && staffReport.requestedZoning) {
-            content += `${staffReport.currentZoning} → ${staffReport.requestedZoning}`;
+            zoningVal = `${staffReport.currentZoning} → ${staffReport.requestedZoning}`;
         } else if (staffReport.currentZoning) {
-            content += staffReport.currentZoning;
-        } else if (staffReport.requestedZoning) {
-            content += `Requested: ${staffReport.requestedZoning}`;
+            zoningVal = staffReport.currentZoning;
+        } else {
+            zoningVal = `Requested: ${staffReport.requestedZoning}`;
         }
-        content += '</p>';
+        factRows.push(`<div class="agenda-item-land-use__fact"><dt>Zoning</dt><dd>${zoningVal}</dd></div>`);
     }
 
-    // Future Land Use
     if (staffReport.futureLandUse) {
-        content += `<p><strong>Future Land Use:</strong> ${staffReport.futureLandUse}</p>`;
+        factRows.push(`<div class="agenda-item-land-use__fact"><dt>Future land use</dt><dd>${staffReport.futureLandUse}</dd></div>`);
     }
 
-    // Waivers
-    if (staffReport.waivers && staffReport.waivers.length > 0) {
-        content += '<p><strong>Waivers:</strong></p><ul>';
-        staffReport.waivers.forEach(waiver => {
-            // Clean up the waiver text and remove redundant labels
-            let cleanWaiver = waiver.replace(/^(PREVIOUSLY APPROVED WAIVERS.*?:|NEW WAIVER.*?REQUESTED:\s*|WAIVER\(S\)\s*REQUESTED:\s*)/i, '');
-            cleanWaiver = cleanWaiver.trim();
-            content += `<li>${cleanWaiver}</li>`;
-        });
-        content += '</ul>';
+    const assocs = Array.isArray(staffReport.neighborhoodAssociations)
+        ? staffReport.neighborhoodAssociations.filter(Boolean)
+        : [];
+    if (assocs.length) {
+        const label = assocs.length === 1 ? 'Neighborhood association' : 'Neighborhood associations';
+        const dds = assocs.map(a => `<dd>${a}</dd>`).join('');
+        factRows.push(`<div class="agenda-item-land-use__fact"><dt>${label}</dt>${dds}</div>`);
     }
 
-    // Findings (strip the "FINDINGS:" label as requested)
+    if (factRows.length) {
+        parts.push(`<dl class="agenda-item-land-use__facts">${factRows.join('')}</dl>`);
+    }
+
+    // --- Waivers as an ordered list ---
+    const waiverBlobs = Array.isArray(staffReport.waivers) ? staffReport.waivers : [];
+    const waiverItems = [];
+    for (const blob of waiverBlobs) {
+        // Strip section label left over from the parser ("WAIVER(S) REQUESTED:", etc.)
+        const stripped = blob
+            .replace(/^(?:PREVIOUSLY APPROVED WAIVERS.*?:|NEW WAIVER.*?REQUESTED:\s*|WAIVER\(S\)\s*REQUESTED:\s*)/i, '')
+            .trim();
+        if (stripped) waiverItems.push(...splitNumberedWaivers(stripped));
+    }
+    if (waiverItems.length) {
+        // Strip leading "N. " numbering — the <ol> provides the count.
+        const lis = waiverItems
+            .map(w => w.replace(/^\d{1,2}\.\s+/, '').trim())
+            .filter(Boolean)
+            .map(w => `<li>${w}</li>`)
+            .join('');
+        parts.push(
+            `<h5 class="agenda-item-land-use__waivers-heading">Waivers requested</h5>` +
+            `<ol class="agenda-item-land-use__waivers">${lis}</ol>`
+        );
+    }
+
+    // --- Staff findings ---
     if (staffReport.findings) {
-        let cleanFindings = staffReport.findings.replace(/^FINDINGS:\s*/i, '').trim();
-        content += `<p><strong>Staff Findings:</strong> ${cleanFindings}</p>`;
+        const clean = staffReport.findings.replace(/^FINDINGS:\s*/i, '').trim();
+        if (clean) {
+            parts.push(`<p class="agenda-item-land-use__findings"><strong>Staff findings:</strong> ${clean}</p>`);
+        }
     }
 
-    return content;
+    if (!parts.length) return '';
+
+    return `<section class="agenda-item-land-use" aria-labelledby="${labelId}">
+<h4 id="${labelId}" class="agenda-item-section__heading">Land use details</h4>
+${parts.join('\n')}
+</section>`;
 }
 
 /**
@@ -442,19 +492,16 @@ function buildItemDetailsDrawer(item, fundingItem) {
 <h4 class="wp-block-heading agenda-item-section__heading">Background</h4>
 <!-- /wp:heading -->${formattedBackground}`
         );
-    } else if (item.staffReport) {
-        // 3. Staff report fallback — formatStaffReportForWordPress returns raw
-        //    HTML (paragraphs, ul), so wrap it in a single wp:html block.
-        const formattedStaffReport = formatStaffReportForWordPress(item.staffReport);
+    }
+
+    // 3. Land use details — always rendered when staffReport data exists,
+    //    independent of whether a background narrative is present.
+    if (item.staffReport) {
+        const formattedStaffReport = formatStaffReportForWordPress(item.staffReport, item.agendaItemId);
         if (formattedStaffReport) {
-            innerBlocks.push(
-                `<!-- wp:heading {"level":4,"className":"agenda-item-section__heading"} -->
-<h4 class="wp-block-heading agenda-item-section__heading">Staff report</h4>
-<!-- /wp:heading -->
-<!-- wp:html -->
+            innerBlocks.push(`<!-- wp:html -->
 ${formattedStaffReport}
-<!-- /wp:html -->`
-            );
+<!-- /wp:html -->`);
         }
     }
 

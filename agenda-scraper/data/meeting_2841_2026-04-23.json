@@ -49,7 +49,10 @@
         "125293.0000"
       ],
       "location": "3602 West Euclid Avenue",
-      "coordinates": null,
+      "coordinates": {
+        "lat": 27.908416,
+        "lng": -82.502279
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -106,7 +109,10 @@
         "140483.0000"
       ],
       "location": "4615 East Fowler Avenue",
-      "coordinates": null,
+      "coordinates": {
+        "lat": 28.05326,
+        "lng": -82.40774
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -156,7 +162,10 @@
         "140513.0000"
       ],
       "location": "11315 North 46",
-      "coordinates": null,
+      "coordinates": {
+        "lat": 28.051507,
+        "lng": -82.408558
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -220,7 +229,10 @@
         "156781.0000"
       ],
       "location": "4304 North 26",
-      "coordinates": null,
+      "coordinates": {
+        "lat": 27.98453,
+        "lng": -82.43081
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -276,7 +288,10 @@
         "156780.0000"
       ],
       "location": "4216 North 26",
-      "coordinates": null,
+      "coordinates": {
+        "lat": 27.98411,
+        "lng": -82.43087
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {

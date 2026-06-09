@@ -9922,8 +9922,11 @@
         }
       ],
       "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
+      "location": "2406 E. Annie Street",
+      "coordinates": {
+        "lat": 28.03647,
+        "lng": -82.43201
+      },
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -10217,7 +10220,7 @@
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "PD",
-        "requestedZoning": "M",
+        "requestedZoning": "PD",
         "futureLandUse": "R-20",
         "neighborhoodAssociations": [
           "Palma Ceia Pines",

@@ -373,6 +373,9 @@ function parseZoningData(textContent, fileNumber) {
     function extractZoningValue(text) {
         if (!text || !text.trim()) return null;
         text = text.trim();
+        // Strip leading non-zoning characters (e.g. '& ' from column merging)
+        // so '&   RM-18 (Residential…)' resolves to 'RM-18' cleanly.
+        text = text.replace(/^[^A-Z(]+/, '');
         
         // If text contains a parenthesized code like "(YC-5)" or "(PD)", prefer that
         const codeInParens = text.match(/\(([A-Z][A-Z0-9-]{0,10})\)/);
@@ -413,24 +416,38 @@ function parseZoningData(textContent, fileNumber) {
             if (i + 1 < lines.length) {
                 const zoningLine = lines[i + 1];
                 console.log(`   Found zoning line: ${zoningLine}`);
-                
-                // For the format: "PD (Planned Development) (REZ-22-72; Ord. 2022-191) PD (Planned Development)"
-                // Split by ')' and look for zoning codes at the start of segments
-                const segments = zoningLine.split(/\)\s+/);
-                
-                if (segments.length >= 2) {
-                    // Current zoning is typically the first segment
-                    const currentVal = extractZoningValue(segments[0] + ')');
+
+                // Two-column PDFs merge both columns into one line separated by a
+                // large whitespace gap (10+ spaces). Try that split first.
+                // e.g. "RM-24 (Residential Multiple Family-24) and         CI   (Commercial Intensive)"
+                //                                                  ^^^^^^^^^ column gap
+                const columnParts = zoningLine.split(/\s{10,}/);
+                if (columnParts.length >= 2) {
+                    const currentVal = extractZoningValue(columnParts[0]);
                     if (currentVal) {
                         extractedData.currentZoning = currentVal;
                         console.log(`   Current Zoning: ${extractedData.currentZoning}`);
                     }
-                    
-                    // Requested zoning - look in the last segment
-                    const requestedVal = extractZoningValue(segments[segments.length - 1] + ')');
+                    const requestedVal = extractZoningValue(columnParts[columnParts.length - 1]);
                     if (requestedVal) {
                         extractedData.requestedZoning = requestedVal;
                         console.log(`   Requested Zoning: ${extractedData.requestedZoning}`);
+                    }
+                } else {
+                    // Single-line format: "PD (Planned Development) (REZ-22-72; Ord. 2022-191) PD (Planned Development)"
+                    // Split on ') ' boundaries between zoning code descriptions.
+                    const segments = zoningLine.split(/\)\s+/);
+                    if (segments.length >= 2) {
+                        const currentVal = extractZoningValue(segments[0] + ')');
+                        if (currentVal) {
+                            extractedData.currentZoning = currentVal;
+                            console.log(`   Current Zoning: ${extractedData.currentZoning}`);
+                        }
+                        const requestedVal = extractZoningValue(segments[segments.length - 1] + ')');
+                        if (requestedVal) {
+                            extractedData.requestedZoning = requestedVal;
+                            console.log(`   Requested Zoning: ${extractedData.requestedZoning}`);
+                        }
                     }
                 }
             }
@@ -579,8 +596,10 @@ async function processStaffReport(staffReportItem, driver = null) {
             console.log(`📥 Processing ${report.title} for ${staffReportItem.fileNumber}...`);
             
             try {
-                // Download and extract text using existing infrastructure
-                const textContent = await downloadAndExtractStaffReportPDF(report.url, driver);
+                // Prefer the stable R2-mirrored URL; fall back to original OnBase URL
+                // (OnBase requires session cookies that are only available during scraping).
+                const pdfUrl = report.mirroredUrl || report.url;
+                const textContent = await downloadAndExtractStaffReportPDF(pdfUrl, driver);
                 
                 if (!textContent) {
                     throw new Error('Could not extract text from PDF');

@@ -263,7 +263,7 @@
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "CI",
-        "requestedZoning": "S",
+        "requestedZoning": "PD",
         "futureLandUse": "Community Commercial-35",
         "neighborhoodAssociations": [
           "Tampa Heights Civic Association",
@@ -362,8 +362,8 @@
       },
       "staffReport": {
         "landUseType": "REZONING",
-        "currentZoning": null,
-        "requestedZoning": null,
+        "currentZoning": "RS-50",
+        "requestedZoning": "PD",
         "futureLandUse": "Urban Mixed Use-60",
         "neighborhoodAssociations": [
           "Oakford Park Neighborhood Association, Inc",
