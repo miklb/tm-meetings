@@ -198,6 +198,52 @@ const FILE_NUMBER_PATTERN = /([A-Z]{2,4})(\d{2})-(\d{4})/;
 
 ---
 
+## Keyword Notifications Dispatch
+
+Keyword notifications are **manually triggered** — they are not part of the nightly scrape. Dispatch after:
+1. The WordPress agenda post is published
+2. The Monday morning newsletter has gone out
+
+### Trigger via GitHub Actions (preferred)
+
+```bash
+gh workflow run dispatch-notifications.yml \
+  -f meeting_ids=2591 \
+  -f wordpress_url=https://tampamonitor.com/agendas/2025-11-06/
+```
+
+For multiple meetings on the same agenda day (e.g., Council + CRA):
+```bash
+-f meeting_ids=2591,2592
+```
+
+The `wordpress_url` is optional — if omitted, email links fall back to the static site. It is passed to all meeting IDs in the batch.
+
+### Run locally (for testing)
+
+```bash
+WEBHOOK_SECRET=<secret> \
+MEETING_IDS=2591 \
+WORDPRESS_AGENDA_URL=https://tampamonitor.com/agendas/2025-11-06/ \
+node scripts/dispatch-notifications.js
+```
+
+Omit `WORDPRESS_AGENDA_URL` to test fallback behaviour. With no `RESEND_API_KEY`, the worker logs emails instead of sending them.
+
+### Sponsor slot
+
+Add/remove a sponsor in notification emails by setting Pages Function env vars — no code change required:
+
+| Var | Purpose |
+| --- | ------- |
+| `SPONSOR_IMAGE_URL` | Absolute URL of banner image (600px wide) |
+| `SPONSOR_LINK_URL` | Destination URL |
+| `SPONSOR_ALT_TEXT` | Alt text (also used in plain-text fallback) |
+
+Both URL vars must be set; if either is absent the slot is not rendered.
+
+---
+
 ## Agenda Pipeline — NEVER Skip Steps
 
 **Always use `process-agenda.sh` to process a meeting. Never run individual scripts directly.**
