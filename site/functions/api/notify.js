@@ -253,6 +253,7 @@ export async function onRequestPost(context) {
     const meetingDate = meeting.meetingDate || '';
     const meetingType = meeting.meetingType || 'regular';
     const meetingTitle = meeting.meetingTitle || meeting.title || buildTitle(meetingType, meetingDate);
+    const meetingWordpressUrl = meeting.wordpressUrl || null;
 
     for (const item of meeting.agendaItems || []) {
       const agendaItemId = item.agendaItemId;
@@ -344,6 +345,7 @@ export async function onRequestPost(context) {
                 meetingDate,
                 meetingType,
                 meetingTitle,
+                wordpressUrl: meetingWordpressUrl,
                 items: {}
               };
             }
@@ -371,83 +373,145 @@ export async function onRequestPost(context) {
   const url = new URL(request.url);
   const origin = url.origin;
 
+  // Sponsor slot — rendered when both image and link env vars are set
+  const sponsorImageUrl = env.SPONSOR_IMAGE_URL || '';
+  const sponsorLinkUrl = env.SPONSOR_LINK_URL || '';
+  const sponsorAltText = env.SPONSOR_ALT_TEXT || 'Our Sponsor';
+  const hasSponsor = sponsorImageUrl && sponsorLinkUrl;
+
+  const sponsorHtml = hasSponsor ? `
+    <tr>
+      <td style="padding: 0 0 28px 0; text-align: center;">
+        <a href="${sponsorLinkUrl}" target="_blank" rel="noopener sponsored" style="display: block;">
+          <img src="${sponsorImageUrl}" alt="${sponsorAltText}" width="560" style="display: block; width: 100%; max-width: 560px; height: auto; border: 0; margin: 0 auto;" />
+        </a>
+      </td>
+    </tr>` : '';
+
+  const sponsorText = hasSponsor ? `${sponsorAltText}: ${sponsorLinkUrl}\n\n` : '';
+
   for (const [email, digest] of Object.entries(subscriberDigests)) {
     const { subInfo, meetings } = digest;
-    const manageUrl = `${origin}/notifications/?email=${encodeURIComponent(email)}&token=${subInfo.unsubscribeToken}`;
     const unsubscribeUrl = `${origin}/api/unsubscribe?token=${subInfo.unsubscribeToken}`;
 
-    let html = `
-      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #1f2937;">
-        <header style="border-bottom: 2px solid #e5e7eb; padding-bottom: 16px; margin-bottom: 24px;">
-          <h2 style="color: #1d4ed8; margin: 0; font-size: 24px; font-weight: 800; letter-spacing: -0.025em;">Tampa Monitor</h2>
-          <p style="margin: 4px 0 0 0; color: #6b7280; font-size: 14px;">Tampa City Council Agenda Alerts</p>
-        </header>
-        
-        <p style="font-size: 16px; line-height: 1.5; margin-bottom: 20px;">We found new agenda items matching your tracked keywords on Tampa City Council meetings.</p>
-    `;
+    // Use first meeting's date in the subject line
+    const firstMeet = Object.values(meetings)[0];
+    const subjectDate = firstMeet?.meetingDate || '';
+    const subject = subjectDate
+      ? `Tampa Monitor: New agenda matches — ${subjectDate}`
+      : `Tampa Monitor: New agenda matches`;
 
-    let text = `Tampa Monitor — Tampa City Council Agenda Alerts\n\nWe found new agenda items matching your tracked keywords.\n\n`;
+    let html = `<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #1f2937;">
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="max-width: 600px; margin: 0 auto;">
+
+  <tr>
+    <td style="border-bottom: 2px solid #e5e7eb; padding-bottom: 16px; margin-bottom: 0;">
+      <span style="color: #1d4ed8; font-size: 22px; font-weight: 800; letter-spacing: -0.025em;">Tampa Monitor</span>
+      <span style="color: #6b7280; font-size: 13px; display: block; margin-top: 2px;">Tampa City Council Agenda Alerts</span>
+    </td>
+  </tr>
+
+  ${sponsorHtml}
+
+  <tr>
+    <td style="padding: 24px 0 8px 0;">
+      <p style="margin: 0; font-size: 15px; line-height: 1.5; color: #374151;">
+        New agenda items match your tracked keywords.
+      </p>
+    </td>
+  </tr>
+`;
+
+    let text = `Tampa Monitor — Tampa City Council Agenda Alerts\n`;
+    if (hasSponsor) text += `\n${sponsorText}`;
+    text += `\nNew agenda items match your tracked keywords.\n`;
 
     for (const meet of Object.values(meetings)) {
-      html += `
-        <div style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px; padding: 16px; margin-bottom: 24px;">
-          <h3 style="margin-top: 0; margin-bottom: 12px; color: #111827; font-size: 18px; font-weight: 700; border-bottom: 1px solid #e5e7eb; padding-bottom: 8px;">
-            ${meet.meetingTitle}
-          </h3>
-      `;
-      text += `=== ${meet.meetingTitle} ===\n\n`;
+      const agendaLink = meet.wordpressUrl || `${origin}/meetings/${meet.meetingId}/`;
 
-      for (const item of Object.values(meet.items)) {
-        const itemUrl = `${origin}/meetings/${meet.meetingId}/#item-${item.agendaItemId}`;
+      html += `
+  <tr>
+    <td style="padding: 20px 0 0 0;">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px;">
+        <tr>
+          <td style="padding: 16px 16px 0 16px;">
+            <p style="margin: 0 0 12px 0; font-size: 17px; font-weight: 700; color: #111827; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px;">
+              ${meet.meetingTitle}
+            </p>
+          </td>
+        </tr>`;
+
+      text += `\n=== ${meet.meetingTitle} ===\n\n`;
+
+      const itemList = Object.values(meet.items);
+      itemList.forEach((item, idx) => {
+        const isLast = idx === itemList.length - 1;
+        const itemUrl = meet.wordpressUrl
+          ? `${meet.wordpressUrl}#item-${item.fileNumber || item.agendaItemId}`
+          : `${origin}/meetings/${meet.meetingId}/#item-${item.agendaItemId}`;
         const kwList = Array.from(item.matchedKeywords).join(', ');
+        const itemBorder = isLast ? '' : 'border-bottom: 1px dashed #e5e7eb;';
 
         html += `
-          <div style="margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px dashed #e5e7eb;">
-            <div style="font-weight: 600; color: #374151; font-size: 15px;">
-              Item ${item.itemNumber} ${item.fileNumber ? `(${item.fileNumber})` : ''}
-            </div>
-            <p style="margin: 6px 0; font-size: 15px; line-height: 1.4; color: #111827;">${item.title}</p>
-            <div style="margin-top: 8px;">
+        <tr>
+          <td style="padding: 12px 16px; ${itemBorder}">
+            <p style="margin: 0 0 3px 0; font-size: 13px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em;">
+              Item ${item.itemNumber}${item.fileNumber ? ` &middot; ${item.fileNumber}` : ''}
+            </p>
+            <p style="margin: 0 0 8px 0; font-size: 15px; line-height: 1.4; color: #111827; font-weight: 500;">${item.title}</p>
+            <p style="margin: 0 0 8px 0;">
               <span style="background-color: #dbeafe; color: #1e40af; font-size: 12px; font-weight: 500; padding: 2px 8px; border-radius: 9999px; display: inline-block;">
                 Matched: ${kwList}
               </span>
-              <a href="${itemUrl}" style="color: #1d4ed8; font-size: 14px; font-weight: 500; text-decoration: none; margin-left: 12px; display: inline-block;">
-                View on website &rarr;
-              </a>
-            </div>
-          </div>
-        `;
+            </p>
+            <a href="${itemUrl}" style="color: #1d4ed8; font-size: 13px; font-weight: 600; text-decoration: none;">View item &rarr;</a>
+          </td>
+        </tr>`;
 
-        text += `Item ${item.itemNumber} ${item.fileNumber ? `(${item.fileNumber})` : ''}\n`;
-        text += `Title: ${item.title}\n`;
+        text += `Item ${item.itemNumber}${item.fileNumber ? ` (${item.fileNumber})` : ''}\n`;
+        text += `${item.title}\n`;
         text += `Matched: ${kwList}\n`;
         text += `Link: ${itemUrl}\n\n`;
-      }
+      });
 
-      // Remove trailing dashed border for last item
-      html = html.replace(/border-bottom: 1px dashed #e5e7eb;(?=[^]*?<\/div>\s*<\/div>\s*$)/, '');
-      html += `</div>`;
+      html += `
+        <tr>
+          <td style="padding: 12px 16px 14px 16px; border-top: 1px solid #e5e7eb;">
+            <a href="${agendaLink}" style="color: #1d4ed8; font-size: 13px; font-weight: 600; text-decoration: none;">View full agenda &rarr;</a>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>`;
+
+      text += `Full agenda: ${agendaLink}\n`;
     }
 
     html += `
-        <footer style="margin-top: 40px; border-top: 1px solid #e5e7eb; padding-top: 16px; font-size: 12px; color: #9ca3af; line-height: 1.5;">
-          <p style="margin: 0 0 8px 0;">You are receiving this because you subscribed to keyword notifications on Tampa Monitor.</p>
-          <p style="margin: 0;">
-            <a href="${manageUrl}" style="color: #1d4ed8; text-decoration: underline;">Manage your keywords</a>
-            &nbsp;&middot;&nbsp;
-            <a href="${unsubscribeUrl}" style="color: #1d4ed8; text-decoration: underline;">Unsubscribe</a>
-          </p>
-        </footer>
-      </div>
-    `;
+  <tr>
+    <td style="padding: 32px 0 0 0; border-top: 1px solid #e5e7eb; font-size: 12px; color: #9ca3af; line-height: 1.6;">
+      <p style="margin: 0 0 6px 0;">You subscribed to keyword alerts on <a href="${origin}" style="color: #9ca3af;">Tampa Monitor</a>.</p>
+      <p style="margin: 0 0 6px 0;">Please do not forward this email — the unsubscribe link below is unique to your inbox.</p>
+      <p style="margin: 0;">
+        <a href="${origin}/notifications/" style="color: #6b7280; text-decoration: underline;">Manage keywords</a>
+        &nbsp;&middot;&nbsp;
+        <a href="${unsubscribeUrl}" style="color: #6b7280; text-decoration: underline;">Unsubscribe</a>
+      </p>
+    </td>
+  </tr>
 
-    text += `To manage your keywords, visit: ${manageUrl}\n`;
-    text += `To unsubscribe, visit: ${unsubscribeUrl}\n`;
+</table>
+</div>`;
+
+    text += `\n---\nYou subscribed to keyword alerts on Tampa Monitor.\n`;
+    text += `Please do not forward this email — the unsubscribe link is unique to your inbox.\n`;
+    text += `Manage keywords: ${origin}/notifications/\n`;
+    text += `Unsubscribe: ${unsubscribeUrl}\n`;
 
     emailsToSend.push({
       from: "Tampa Monitor <notifications@tampamonitor.com>",
       to: email,
-      subject: `Tampa Monitor: Tracked keyword matches found`,
+      subject,
       html,
       text
     });

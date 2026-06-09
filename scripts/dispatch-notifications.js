@@ -2,7 +2,6 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
 
 async function main() {
   const apiUrl = process.env.NOTIFICATIONS_API_URL || 'https://meetings.tampamonitor.com/api/notify';
@@ -13,77 +12,85 @@ async function main() {
     process.exit(1);
   }
 
-  console.log(`Checking for modified/new meeting JSON files...`);
-  
-  // Find staged files that match 'agenda-scraper/data/meeting_*.json'
-  let stagedFilesStr = '';
-  try {
-    stagedFilesStr = execSync(
-      "git diff --staged --diff-filter=AM --name-only -- 'agenda-scraper/data/meeting_*.json'",
-      { encoding: 'utf8' }
-    ).trim();
-  } catch (err) {
-    console.error(`Failed to get staged files via git: ${err.message}`);
+  // Support --meeting-ids=2591,2592 CLI arg or MEETING_IDS env var
+  const args = process.argv.slice(2);
+  const meetingIdsArg = (args.find(a => a.startsWith('--meeting-ids=')) || '').split('=')[1] || '';
+  const meetingIdsRaw = meetingIdsArg || process.env.MEETING_IDS || '';
+  const meetingIds = meetingIdsRaw.split(',').map(id => id.trim()).filter(Boolean);
+
+  if (meetingIds.length === 0) {
+    console.error('Error: Specify meeting IDs via MEETING_IDS env var or --meeting-ids=<id1,id2> flag.');
     process.exit(1);
   }
 
-  if (!stagedFilesStr) {
-    console.log('No new or modified meeting JSON files found staged in git. Nothing to notify.');
-    process.exit(0);
+  // Support --wp-url=<url> CLI arg or WORDPRESS_AGENDA_URL env var
+  const wpUrlArg = (args.find(a => a.startsWith('--wp-url=')) || '').split('=')[1] || '';
+  const wordpressUrl = wpUrlArg || process.env.WORDPRESS_AGENDA_URL || '';
+
+  if (!wordpressUrl) {
+    console.warn('Warning: No WordPress agenda URL provided (WORDPRESS_AGENDA_URL or --wp-url). Email links will fall back to the static site.');
   }
 
-  const filePaths = stagedFilesStr.split('\n').filter(Boolean);
-  console.log(`Found ${filePaths.length} changed meeting file(s):`);
-  for (const fp of filePaths) {
-    console.log(`- ${fp}`);
+  console.log(`Meeting IDs: ${meetingIds.join(', ')}`);
+  if (wordpressUrl) {
+    console.log(`WordPress URL: ${wordpressUrl}`);
   }
 
+  const dataDir = path.resolve(process.cwd(), 'agenda-scraper/data');
+
+  if (!fs.existsSync(dataDir)) {
+    console.error(`Error: Data directory not found: ${dataDir}`);
+    process.exit(1);
+  }
+
+  const allFiles = fs.readdirSync(dataDir);
   const meetings = [];
-  for (const relativePath of filePaths) {
-    const fullPath = path.resolve(process.cwd(), relativePath);
-    if (!fs.existsSync(fullPath)) {
-      console.warn(`Warning: File does not exist: ${relativePath}`);
-      continue;
-    }
 
-    try {
-      const fileContent = fs.readFileSync(fullPath, 'utf8');
-      const data = JSON.parse(fileContent);
-      
-      // Keep only necessary fields to optimize payload size
-      const parsedMeeting = {
-        meetingId: data.meetingId,
-        meetingType: data.meetingType || 'regular',
-        meetingDate: data.meetingDate,
-        sourceUrl: data.sourceUrl,
-        agendaItems: (data.agendaItems || []).map(item => ({
-          number: item.number,
-          agendaItemId: item.agendaItemId,
-          title: item.title,
-          fileNumber: item.fileNumber,
-          background: item.background || '',
-          staffReport: item.staffReport || null,
-          supportingDocuments: (item.supportingDocuments || []).map(doc => ({
-            title: doc.title,
-            url: doc.mirroredUrl || doc.url
-          }))
-        }))
-      };
-      
-      meetings.push(parsedMeeting);
-    } catch (err) {
-      console.error(`Error reading/parsing ${relativePath}: ${err.message}`);
+  for (const id of meetingIds) {
+    const matchingFiles = allFiles.filter(f => new RegExp(`^meeting_${id}_.*\\.json$`).test(f));
+
+    if (matchingFiles.length === 0) {
+      console.error(`Error: No meeting JSON file found for ID ${id} in ${dataDir}`);
       process.exit(1);
     }
-  }
 
-  if (meetings.length === 0) {
-    console.log('No valid meeting data parsed. Aborting notification dispatch.');
-    process.exit(0);
+    if (matchingFiles.length > 1) {
+      console.warn(`Warning: Multiple files found for meeting ID ${id}; using ${matchingFiles[0]}`);
+    }
+
+    const filePath = path.join(dataDir, matchingFiles[0]);
+    console.log(`Reading: ${matchingFiles[0]}`);
+
+    let data;
+    try {
+      data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+    } catch (err) {
+      console.error(`Error reading/parsing ${filePath}: ${err.message}`);
+      process.exit(1);
+    }
+
+    meetings.push({
+      meetingId: data.meetingId,
+      meetingType: data.meetingType || 'regular',
+      meetingDate: data.meetingDate,
+      wordpressUrl: wordpressUrl || null,
+      agendaItems: (data.agendaItems || []).map(item => ({
+        number: item.number,
+        agendaItemId: item.agendaItemId,
+        title: item.title,
+        fileNumber: item.fileNumber,
+        background: item.background || '',
+        staffReport: item.staffReport || null,
+        supportingDocuments: (item.supportingDocuments || []).map(doc => ({
+          title: doc.title,
+          url: doc.mirroredUrl || doc.url
+        }))
+      }))
+    });
   }
 
   const payload = { meetings };
-  console.log(`Sending payload to ${apiUrl}...`);
+  console.log(`\nSending ${meetings.length} meeting(s) to ${apiUrl}...`);
 
   try {
     const response = await fetch(apiUrl, {
@@ -96,14 +103,14 @@ async function main() {
     });
 
     const responseText = await response.text();
-    console.log(`Response Status: ${response.status} ${response.statusText}`);
-    console.log(`Response Body: ${responseText}`);
+    console.log(`Response: ${response.status} ${response.statusText}`);
+    console.log(responseText);
 
     if (!response.ok) {
       throw new Error(`Server returned error status: ${response.status}`);
     }
-    
-    console.log('Notifications dispatched successfully!');
+
+    console.log('\nNotifications dispatched successfully.');
   } catch (err) {
     console.error(`Failed to send notifications webhook: ${err.message}`);
     process.exit(1);
