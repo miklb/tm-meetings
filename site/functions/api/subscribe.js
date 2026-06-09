@@ -9,6 +9,16 @@ function isValidEmail(email) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
 
+async function verifyTurnstile(token, secretKey, ip) {
+  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ secret: secretKey, response: token, remoteip: ip })
+  });
+  const data = await res.json();
+  return data.success === true;
+}
+
 export async function onRequestPost(context) {
   const { request, env } = context;
   const db = env.DB;
@@ -30,7 +40,20 @@ export async function onRequestPost(context) {
     });
   }
 
-  const { email, keywords } = body;
+  const { email, keywords, turnstile_token } = body;
+
+  // Validate Turnstile when configured
+  const turnstileSecret = env.TURNSTILE_SECRET_KEY;
+  if (turnstileSecret) {
+    const ip = request.headers.get('CF-Connecting-IP') || '';
+    const valid = await verifyTurnstile(turnstile_token || '', turnstileSecret, ip);
+    if (!valid) {
+      return new Response(JSON.stringify({ error: "Bot verification failed. Please try again." }), {
+        status: 400,
+        headers: { "Content-Type": "application/json" }
+      });
+    }
+  }
 
   if (!email || !isValidEmail(email)) {
     return new Response(JSON.stringify({ error: "A valid email address is required." }), {
@@ -118,6 +141,22 @@ export async function onRequestPost(context) {
     });
   }
 
+  // Enforce per-email verification rate limit (3 emails per 24h)
+  const recentEmailCount = await db.prepare(
+    `SELECT COUNT(*) as count FROM email_rate_limits
+     WHERE email = ? AND sent_at > datetime('now', '-24 hours')`
+  ).bind(emailLower).first();
+
+  if (recentEmailCount && recentEmailCount.count >= 3) {
+    return new Response(JSON.stringify({
+      success: true,
+      message: "Verification email sent. Please check your inbox to confirm your subscription."
+    }), {
+      status: 200,
+      headers: { "Content-Type": "application/json" }
+    });
+  }
+
   // Check if already subscribed and verified
   const existingSub = await db.prepare(
     'SELECT id, verified FROM subscriptions WHERE email = ?'
@@ -165,6 +204,7 @@ export async function onRequestPost(context) {
       ).bind(subId, keyword, matchType));
     }
 
+    statements.push(db.prepare('INSERT INTO email_rate_limits (email) VALUES (?)').bind(emailLower));
     await db.batch(statements);
   } catch (err) {
     return new Response(JSON.stringify({ error: `Database write failed: ${err.message}` }), {

@@ -298,11 +298,11 @@ export async function onRequestPost(context) {
         }
       }
 
-      // C. File number match
+      // C. File number match (exact, since keywords are stored as complete file numbers)
       if (fileNumber) {
         const fileNumLower = fileNumber.toLowerCase();
         for (const kw of fileNumKeywords) {
-          if (fileNumLower.startsWith(kw)) {
+          if (fileNumLower === kw) {
             matchedKeys.add(`file_number:${kw}`);
           }
         }

@@ -16,6 +16,7 @@ export async function onRequest(context) {
   ];
   
   const headers = new Headers();
+  headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
   if (allowedOrigins.includes(origin)) {
     headers.set("Access-Control-Allow-Origin", origin);
     headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");

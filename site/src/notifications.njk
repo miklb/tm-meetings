@@ -39,6 +39,9 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
           </div>
         </div>
 
+        {% if turnstile.siteKey %}
+        <div id="sub-turnstile" class="cf-turnstile" data-sitekey="{{ turnstile.siteKey }}"></div>
+        {% endif %}
         <button type="submit" class="btn btn-primary" id="btn-subscribe">Subscribe</button>
       </form>
     </div>
@@ -63,6 +66,9 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
           <input type="email" id="req-email" name="email" required placeholder="your.email@example.com">
         </div>
 
+        {% if turnstile.siteKey %}
+        <div id="req-turnstile" class="cf-turnstile" data-sitekey="{{ turnstile.siteKey }}"></div>
+        {% endif %}
         <button type="submit" class="btn btn-primary" id="btn-request">Send Management Link</button>
       </form>
     </div>
@@ -437,7 +443,8 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
   // App State
   let subscribeTags = [];
   let manageTags = [];
-  let currentToken = '';
+  let currentToken = '';       // short-lived session token for keyword management
+  let unsubscribeToken = '';   // permanent token for one-click unsubscribe
   let activeEmail = '';
   let keywordLimit = 15;
 
@@ -509,6 +516,7 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       // Populate state
       activeEmail = data.email;
       currentToken = token;
+      unsubscribeToken = data.unsubscribeToken || '';
       keywordLimit = data.keywordLimit || 15;
       
       // Update UI elements
@@ -623,10 +631,11 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
 
     setBtnLoading(btnSubscribe, true, "Subscribing...");
     try {
+      const turnstileToken = subscribeForm.querySelector('[name="cf-turnstile-response"]')?.value || '';
       const res = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, keywords: subscribeTags })
+        body: JSON.stringify({ email, keywords: subscribeTags, turnstile_token: turnstileToken })
       });
       
       const data = await res.json();
@@ -643,8 +652,10 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       subscribeForm.reset();
       subscribeTags.length = 0;
       renderTags(tagContainer, subKeywordsInput, subscribeTags);
+      if (window.turnstile) window.turnstile.reset(document.getElementById('sub-turnstile'));
     } catch (err) {
       showBanner(err.message, 'error');
+      if (window.turnstile) window.turnstile.reset(document.getElementById('sub-turnstile'));
     } finally {
       setBtnLoading(btnSubscribe, false, "Subscribe");
     }
@@ -661,10 +672,11 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
 
     setBtnLoading(btnRequest, true, "Sending...");
     try {
+      const turnstileToken = requestForm.querySelector('[name="cf-turnstile-response"]')?.value || '';
       const res = await fetch('/api/manage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
+        body: JSON.stringify({ email, turnstile_token: turnstileToken })
       });
       
       const data = await res.json();
@@ -678,9 +690,11 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       }
       showBanner(msg, 'success');
       requestForm.reset();
+      if (window.turnstile) window.turnstile.reset(document.getElementById('req-turnstile'));
       switchPanel('subscribe');
     } catch (err) {
       showBanner(err.message, 'error');
+      if (window.turnstile) window.turnstile.reset(document.getElementById('req-turnstile'));
     } finally {
       setBtnLoading(btnRequest, false, "Send Management Link");
     }
@@ -723,7 +737,7 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
   // 4. Unsubscribe GET Redirect
   btnUnsubscribe.addEventListener('click', () => {
     if (confirm("Are you sure you want to unsubscribe? This will permanently delete your notification settings.")) {
-      window.location.href = `/api/unsubscribe?token=${currentToken}`;
+      window.location.href = `/api/unsubscribe?token=${unsubscribeToken}`;
     }
   });
 
@@ -780,9 +794,14 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
   });
   logoutBtn.addEventListener('click', () => {
     currentToken = '';
+    unsubscribeToken = '';
     activeEmail = '';
     switchPanel('subscribe');
     showBanner('');
   });
 })();
 </script>
+
+{% if turnstile.siteKey %}
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+{% endif %}
