@@ -1,0 +1,163 @@
+{
+  "meeting_id": 2683,
+  "meeting_date": "2026-06-04",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "014FsNyjkqI",
+      "title": "Tampa City Council - 06/04/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-06-04T19:26:46Z",
+      "duration": "PT6H13M57S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-15 - Police Officer of the Month",
+          "timestamp": "00:18:32",
+          "seconds": 1112
+        },
+        {
+          "title": "Item 2: E2026-15 - Firefighter of the Quarter",
+          "timestamp": "00:30:59",
+          "seconds": 1859
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:47:38",
+          "seconds": 2858
+        },
+        {
+          "title": "Administrative Update",
+          "timestamp": "01:34:11",
+          "seconds": 5651
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:53:02",
+          "seconds": 6782
+        },
+        {
+          "title": "Item 39: VAC-25-10 - Cordelia-Ivy-Lincoln-Mantanzas Alleyway",
+          "timestamp": "01:56:37",
+          "seconds": 6997
+        },
+        {
+          "title": "Item 40: E2026-8 CH 22 - Sidewalk Construction Requirements",
+          "timestamp": "01:57:52",
+          "seconds": 7072
+        },
+        {
+          "title": "Item 41: E2026-8 CH 27 - Chapter 27 Text Amendments",
+          "timestamp": "02:04:52",
+          "seconds": 7492
+        },
+        {
+          "title": "Item 51: E2026-8 CH 27 - Subdivision Procedures Text Amendments",
+          "timestamp": "02:11:02",
+          "seconds": 7862
+        },
+        {
+          "title": "Item 42: E2026-8 CH 2 - Veterans' Advisory Committee",
+          "timestamp": "02:11:50",
+          "seconds": 7910
+        },
+        {
+          "title": "Item 43: E2026-8 CH 26.5 - Strategic Business Development Program",
+          "timestamp": "02:12:32",
+          "seconds": 7952
+        },
+        {
+          "title": "Item 44: REZ-26-11 - 1500 West La Salle Street",
+          "timestamp": "02:13:32",
+          "seconds": 8012
+        },
+        {
+          "title": "Item 45: REZ-26-16 - 3206 North Tampa Street",
+          "timestamp": "02:14:52",
+          "seconds": 8092
+        },
+        {
+          "title": "Item 46: REZ-26-37 - 1313 West Nassau Street",
+          "timestamp": "02:16:32",
+          "seconds": 8192
+        },
+        {
+          "title": "Item 47: REZ-26-52 - 5200 South Manhattan Avenue",
+          "timestamp": "02:18:22",
+          "seconds": 8302
+        },
+        {
+          "title": "Item 48: REZ-25-118 - 4714 East Hillsborough Avenue",
+          "timestamp": "02:20:37",
+          "seconds": 8437
+        },
+        {
+          "title": "Item 49: REZ-26-18 - 3602 West Euclid Avenue",
+          "timestamp": "02:22:02",
+          "seconds": 8522
+        },
+        {
+          "title": "Item 50: REZ-26-26 - 2602/2604 East MLK Jr Blvd",
+          "timestamp": "02:23:47",
+          "seconds": 8627
+        },
+        {
+          "title": "Item 52: VAC-23-20 - Highland Park Vacation Correction",
+          "timestamp": "02:26:57",
+          "seconds": 8817
+        },
+        {
+          "title": "Item 53: E2026-8 CH 14 - School Zone Speed Cameras",
+          "timestamp": "02:29:12",
+          "seconds": 8952
+        },
+        {
+          "title": "Item 58: CM24-5717/CM25-20837 - Station 24 Status Update",
+          "timestamp": "03:28:54",
+          "seconds": 12534
+        },
+        {
+          "title": "Item 53: E2026-8 CH 14 - School Zone Speed Cameras",
+          "timestamp": "04:44:13",
+          "seconds": 17053
+        },
+        {
+          "title": "Item 59: CM26-21879 - School Zone Signs and Lights",
+          "timestamp": "05:04:03",
+          "seconds": 18243
+        },
+        {
+          "title": "Item 19",
+          "timestamp": "05:13:08",
+          "seconds": 18788
+        },
+        {
+          "title": "Item 60: CM26-21880 - Interdepartmental Money Transfer Agreements",
+          "timestamp": "05:24:03",
+          "seconds": 19443
+        },
+        {
+          "title": "Item 61: CM26-23873 - Employee Retaliation Protections",
+          "timestamp": "05:27:28",
+          "seconds": 19648
+        },
+        {
+          "title": "Item 62: E2026-48 - Council Rules of Procedure",
+          "timestamp": "05:46:05",
+          "seconds": 20765
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "05:51:10",
+          "seconds": 21070
+        }
+      ],
+      "offset_seconds": 541
+    }
+  ]
+}
