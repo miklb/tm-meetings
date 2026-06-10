@@ -9922,11 +9922,8 @@
         }
       ],
       "folioNumbers": [],
-      "location": "2406 E. Annie Street",
-      "coordinates": {
-        "lat": 28.03647,
-        "lng": -82.43201
-      },
+      "location": "",
+      "coordinates": null,
       "dollarAmounts": [],
       "financialDetails": [],
       "financialTotals": {
@@ -10320,7 +10317,7 @@
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "RS-50",
-        "requestedZoning": "and PD)",
+        "requestedZoning": "PD",
         "futureLandUse": "Residential-20",
         "neighborhoodAssociations": [
           "Virginia Park Neighborhood Association, Inc",

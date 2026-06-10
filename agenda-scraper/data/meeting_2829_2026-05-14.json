@@ -856,7 +856,7 @@
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "CI",
-        "requestedZoning": "&     PD (Planned Development))",
+        "requestedZoning": "PD",
         "futureLandUse": "Community Commercial-35",
         "neighborhoodAssociations": [
           "Northeast Community Crimewatch & Civic Association",
@@ -1048,7 +1048,7 @@
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "CI",
-        "requestedZoning": "&     PD (Planned Development))",
+        "requestedZoning": "PD",
         "futureLandUse": "Community Commercial-35",
         "neighborhoodAssociations": [
           "College Hill-Belmont Heights Neighborhood Association & Crime Watch",
