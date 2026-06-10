@@ -6,6 +6,15 @@
         <meta name="text-scale" content="scale">
         <title>{{ title or "Tampa City Council Meetings" }}</title>
         {% if description %}<meta name="description" content="{{ description }}">{% endif %}
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Tampa City Council Meetings">
+        <meta property="og:title" content="{{ title or 'Tampa City Council Meetings' }}">
+        {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+        <meta property="og:url" content="https://meetings.tampamonitor.com{{ page.url }}">
+        <meta property="og:image" content="https://meetings.tampamonitor.com/img/archives_cover.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="675">
+        <meta name="twitter:card" content="summary_large_image">
         <link rel="stylesheet" href="/css/style.css">
     </head>
     <body>
