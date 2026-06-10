@@ -2,5 +2,87 @@
   "meetingId": "2878",
   "meetingDate": "2026-06-11",
   "firstSeenAt": "2026-06-06T23:16:00.112Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-06-10",
+      "mirroredAt": "2026-06-10T00:09:33.017Z",
+      "newDocuments": [
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "REZ-26-07",
+          "filename": "BIE - REZ 26-07.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "REZ-26-07",
+          "filename": "FINAL ORDINANCE - REZ 26-07.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-36",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-36.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-36",
+          "filename": "BIE REZ 26-36.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-36",
+          "filename": "FINAL ORDINANCE REZ 26-36.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-26-46",
+          "filename": "BIE REZ 26-46.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-26-46",
+          "filename": "FINAL ORDINANCE REZ 26-46.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-26-51",
+          "filename": "BIE REZ 26-51.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-26-51",
+          "filename": "FINAL ORDINANCE REZ 26-51.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-53",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-53.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-53",
+          "filename": "BIE REZ 26-53.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-53",
+          "filename": "FINAL ORDINANCE REZ 26-53.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-86",
+          "filename": "FINAL ORDINANCE REZ-25-86.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-25-119",
+          "filename": "FINAL ORDINANCE REZ 25-119.PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "REZ-26-43",
+          "filename": "BIE REZ 26-43.PDF"
+        }
+      ]
+    }
+  ]
 }
