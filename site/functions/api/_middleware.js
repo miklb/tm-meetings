@@ -1,4 +1,8 @@
-// Rate limiting map (IP -> timestamp[])
+// Rate limiting map (IP -> timestamp[]).
+// Best-effort only: this Map is per-isolate and per-colo, resets on cold
+// starts, and is not shared across Cloudflare PoPs. The real protections are
+// the DB-backed 3-per-24h email cap and Turnstile; production should also
+// have a Cloudflare WAF rate-limiting rule on /api/subscribe and /api/manage.
 const rateLimitMap = new Map();
 const LIMIT_WINDOW = 60000; // 1 minute
 const MAX_REQUESTS = 10;    // 10 requests per minute
@@ -17,11 +21,11 @@ export async function onRequest(context) {
   
   const headers = new Headers();
   headers.set("Referrer-Policy", "strict-origin-when-cross-origin");
+  headers.set("X-Content-Type-Options", "nosniff");
   if (allowedOrigins.includes(origin)) {
     headers.set("Access-Control-Allow-Origin", origin);
     headers.set("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
     headers.set("Access-Control-Allow-Headers", "Content-Type, X-Webhook-Secret");
-    headers.set("Access-Control-Allow-Credentials", "true");
   }
 
   // Handle preflight OPTIONS request
@@ -67,7 +71,8 @@ export async function onRequest(context) {
     }
     return newResponse;
   } catch (err) {
-    return new Response(JSON.stringify({ error: err.message || "Internal Server Error" }), {
+    console.error(`api middleware: unhandled error: ${err.message}`);
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
       status: 500,
       headers: {
         ...Object.fromEntries(headers.entries()),

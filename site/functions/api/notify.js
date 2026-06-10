@@ -1,3 +1,5 @@
+import { isDev, escapeHtml, isHttpUrl, secretsMatch, jsonResponse } from '../../lib/api-utils.js';
+
 function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
@@ -28,22 +30,30 @@ function buildTitle(type, dateStr) {
 export async function onRequestPost(context) {
   const { request, env } = context;
   const db = env.DB;
+  const dev = isDev(env);
 
   if (!db) {
-    return new Response(JSON.stringify({ error: "Database binding missing." }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
+    console.error("notify: DB binding missing");
+    return jsonResponse({ error: "Service temporarily unavailable." }, 500);
   }
 
-  // 1. Verify Webhook Secret
+  // 1. Verify Webhook Secret. Fail closed: a missing secret must disable the
+  // endpoint, not open it to unauthenticated callers.
   const secret = env.WEBHOOK_SECRET;
+  if (!secret) {
+    console.error("notify: WEBHOOK_SECRET not configured");
+    return jsonResponse({ error: "Service temporarily unavailable." }, 500);
+  }
   const receivedSecret = request.headers.get("X-Webhook-Secret");
-  if (secret && receivedSecret !== secret) {
-    return new Response(JSON.stringify({ error: "Unauthorized" }), {
-      status: 401,
-      headers: { "Content-Type": "application/json" }
-    });
+  if (!(await secretsMatch(receivedSecret, secret))) {
+    return jsonResponse({ error: "Unauthorized" }, 401);
+  }
+
+  // In production a Resend key is required; mock dispatch is dev-only.
+  const resendApiKey = env.RESEND_API_KEY;
+  if (!dev && !resendApiKey) {
+    console.error("notify: RESEND_API_KEY not configured");
+    return jsonResponse({ error: "Service temporarily unavailable." }, 500);
   }
 
   // 2. Parse payload
@@ -51,26 +61,20 @@ export async function onRequestPost(context) {
   try {
     payload = await request.json();
   } catch (e) {
-    return new Response(JSON.stringify({ error: "Invalid JSON payload." }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "Invalid JSON payload." }, 400);
   }
 
   if (!payload || !payload.meetings || !Array.isArray(payload.meetings) || payload.meetings.length === 0) {
-    return new Response(JSON.stringify({ success: true, message: "No meetings found in payload to process." }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ success: true, message: "No meetings found in payload to process." }, 200);
   }
 
   // 3. Fetch verified subscribers, supporter status, and beta testers in a single query
   let subscribers;
   try {
     const query = `
-      SELECT 
-        s.id AS sub_id, 
-        s.email, 
+      SELECT
+        s.id AS sub_id,
+        s.email,
         s.unsubscribe_token,
         sup.email AS supporter_email,
         sup.active_until AS supporter_active_until,
@@ -83,29 +87,24 @@ export async function onRequestPost(context) {
     const { results } = await db.prepare(query).all();
     subscribers = results || [];
   } catch (err) {
-    return new Response(JSON.stringify({ error: `Database subscribers read failed: ${err.message}` }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
+    console.error(`notify: subscribers read failed: ${err.message}`);
+    return jsonResponse({ error: "Database read failed." }, 500);
   }
 
   if (subscribers.length === 0) {
-    return new Response(JSON.stringify({ success: true, message: "No verified subscribers found." }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ success: true, message: "No verified subscribers found." }, 200);
   }
 
   // 4. Apply registration modes & keyword limit filters
   const regMode = env.REGISTRATION_MODE || 'SUPPORTERS_ONLY';
   const now = new Date();
   const allowedSubscribers = [];
-  const subscriberMap = new Map();
+  const subscriberByEmail = new Map();
 
   for (const row of subscribers) {
     const hasSupporterRow = row.supporter_email !== null;
     const isSupporter = hasSupporterRow && (
-      row.supporter_active_until === null || 
+      row.supporter_active_until === null ||
       new Date(row.supporter_active_until) > now
     );
     const isBetaTester = row.is_beta_tester === 1;
@@ -138,15 +137,12 @@ export async function onRequestPost(context) {
         limit: keywordLimit
       };
       allowedSubscribers.push(subInfo);
-      subscriberMap.set(row.sub_id, subInfo);
+      subscriberByEmail.set(subInfo.email, subInfo);
     }
   }
 
   if (allowedSubscribers.length === 0) {
-    return new Response(JSON.stringify({ success: true, message: "No active subscribers meet registration mode requirements." }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ success: true, message: "No active subscribers meet registration mode requirements." }, 200);
   }
 
   // 5. Fetch and filter keywords for allowed subscribers
@@ -157,10 +153,8 @@ export async function onRequestPost(context) {
     ).all();
     keywordRows = results || [];
   } catch (err) {
-    return new Response(JSON.stringify({ error: `Database keywords read failed: ${err.message}` }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
+    console.error(`notify: keywords read failed: ${err.message}`);
+    return jsonResponse({ error: "Database read failed." }, 500);
   }
 
   const keywordsBySubId = {};
@@ -195,10 +189,7 @@ export async function onRequestPost(context) {
   }
 
   if (activeKeywords.length === 0) {
-    return new Response(JSON.stringify({ success: true, message: "No active keywords found to match." }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ success: true, message: "No active keywords found to match." }, 200);
   }
 
   // 6. Compile Regex Engines
@@ -253,7 +244,8 @@ export async function onRequestPost(context) {
     const meetingDate = meeting.meetingDate || '';
     const meetingType = meeting.meetingType || 'regular';
     const meetingTitle = meeting.meetingTitle || meeting.title || buildTitle(meetingType, meetingDate);
-    const meetingWordpressUrl = meeting.wordpressUrl || null;
+    // Only accept http(s) URLs as link targets in emails
+    const meetingWordpressUrl = isHttpUrl(meeting.wordpressUrl) ? meeting.wordpressUrl : null;
 
     for (const item of meeting.agendaItems || []) {
       const agendaItemId = item.agendaItemId;
@@ -314,10 +306,12 @@ export async function onRequestPost(context) {
           const subscribers = keywordToSubscribers[matchKey];
           if (!subscribers) continue;
 
-          const [matchType, keyword] = matchKey.split(':');
+          // Split on the first colon only — keywords may themselves contain colons
+          const sepIdx = matchKey.indexOf(':');
+          const keyword = matchKey.slice(sepIdx + 1);
 
           for (const email of subscribers) {
-            const sub = allowedSubscribers.find(s => s.email === email);
+            const sub = subscriberByEmail.get(email);
             if (!sub) continue;
 
             const sentKey = `${sub.subId}:${agendaItemId}:${keyword}`;
@@ -373,17 +367,17 @@ export async function onRequestPost(context) {
   const url = new URL(request.url);
   const origin = url.origin;
 
-  // Sponsor slot — rendered when both image and link env vars are set
-  const sponsorImageUrl = env.SPONSOR_IMAGE_URL || '';
-  const sponsorLinkUrl = env.SPONSOR_LINK_URL || '';
+  // Sponsor slot — rendered when both image and link env vars are set and are valid http(s) URLs
+  const sponsorImageUrl = isHttpUrl(env.SPONSOR_IMAGE_URL) ? env.SPONSOR_IMAGE_URL : '';
+  const sponsorLinkUrl = isHttpUrl(env.SPONSOR_LINK_URL) ? env.SPONSOR_LINK_URL : '';
   const sponsorAltText = env.SPONSOR_ALT_TEXT || 'Our Sponsor';
   const hasSponsor = sponsorImageUrl && sponsorLinkUrl;
 
   const sponsorHtml = hasSponsor ? `
     <tr>
       <td style="padding: 0 0 28px 0; text-align: center;">
-        <a href="${sponsorLinkUrl}" target="_blank" rel="noopener sponsored" style="display: block;">
-          <img src="${sponsorImageUrl}" alt="${sponsorAltText}" width="560" style="display: block; width: 100%; max-width: 560px; height: auto; border: 0; margin: 0 auto;" />
+        <a href="${escapeHtml(sponsorLinkUrl)}" target="_blank" rel="noopener sponsored" style="display: block;">
+          <img src="${escapeHtml(sponsorImageUrl)}" alt="${escapeHtml(sponsorAltText)}" width="560" style="display: block; width: 100%; max-width: 560px; height: auto; border: 0; margin: 0 auto;" />
         </a>
       </td>
     </tr>` : '';
@@ -436,7 +430,7 @@ export async function onRequestPost(context) {
         <tr>
           <td style="padding: 16px 16px 0 16px;">
             <p style="margin: 0 0 12px 0; font-size: 17px; font-weight: 700; color: #111827; border-bottom: 1px solid #e5e7eb; padding-bottom: 10px;">
-              ${meet.meetingTitle}
+              ${escapeHtml(meet.meetingTitle)}
             </p>
           </td>
         </tr>`;
@@ -456,15 +450,15 @@ export async function onRequestPost(context) {
         <tr>
           <td style="padding: 12px 16px; ${itemBorder}">
             <p style="margin: 0 0 3px 0; font-size: 13px; font-weight: 600; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em;">
-              Item ${item.itemNumber}${item.fileNumber ? ` &middot; ${item.fileNumber}` : ''}
+              Item ${escapeHtml(item.itemNumber)}${item.fileNumber ? ` &middot; ${escapeHtml(item.fileNumber)}` : ''}
             </p>
-            <p style="margin: 0 0 8px 0; font-size: 15px; line-height: 1.4; color: #111827; font-weight: 500;">${item.title}</p>
+            <p style="margin: 0 0 8px 0; font-size: 15px; line-height: 1.4; color: #111827; font-weight: 500;">${escapeHtml(item.title)}</p>
             <p style="margin: 0 0 8px 0;">
               <span style="background-color: #dbeafe; color: #1e40af; font-size: 12px; font-weight: 500; padding: 2px 8px; border-radius: 9999px; display: inline-block;">
-                Matched: ${kwList}
+                Matched: ${escapeHtml(kwList)}
               </span>
             </p>
-            <a href="${itemUrl}" style="color: #1d4ed8; font-size: 13px; font-weight: 600; text-decoration: none;">View item &rarr;</a>
+            <a href="${escapeHtml(itemUrl)}" style="color: #1d4ed8; font-size: 13px; font-weight: 600; text-decoration: none;">View item &rarr;</a>
           </td>
         </tr>`;
 
@@ -477,7 +471,7 @@ export async function onRequestPost(context) {
       html += `
         <tr>
           <td style="padding: 12px 16px 14px 16px; border-top: 1px solid #e5e7eb;">
-            <a href="${agendaLink}" style="color: #1d4ed8; font-size: 13px; font-weight: 600; text-decoration: none;">View full agenda &rarr;</a>
+            <a href="${escapeHtml(agendaLink)}" style="color: #1d4ed8; font-size: 13px; font-weight: 600; text-decoration: none;">View full agenda &rarr;</a>
           </td>
         </tr>
       </table>
@@ -513,12 +507,17 @@ export async function onRequestPost(context) {
       to: email,
       subject,
       html,
-      text
+      text,
+      // RFC 8058 one-click unsubscribe — required by Gmail/Yahoo bulk-sender
+      // rules; the POST handler in unsubscribe.js services it.
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click"
+      }
     });
   }
 
-  // 10. Dispatch emails via Resend API or log them locally
-  const resendApiKey = env.RESEND_API_KEY;
+  // 10. Dispatch emails via Resend API or log them locally (dev only)
   const devEmails = [];
 
   if (emailsToSend.length > 0) {
@@ -530,8 +529,8 @@ export async function onRequestPost(context) {
         }
 
         for (const batch of batches) {
-          const endpoint = batch.length === 1 
-            ? "https://api.resend.com/emails" 
+          const endpoint = batch.length === 1
+            ? "https://api.resend.com/emails"
             : "https://api.resend.com/emails/batch";
           const body = batch.length === 1 ? batch[0] : batch;
 
@@ -550,10 +549,8 @@ export async function onRequestPost(context) {
           }
         }
       } catch (err) {
-        return new Response(JSON.stringify({ error: `Email dispatch failed: ${err.message}` }), {
-          status: 500,
-          headers: { "Content-Type": "application/json" }
-        });
+        console.error(`notify: email dispatch failed: ${err.message}`);
+        return jsonResponse({ error: "Email dispatch failed." }, 500);
       }
     } else {
       console.log(`\n=== [LOCAL DEV - NOTIFICATIONS EMAIL MOCK] ===`);
@@ -578,7 +575,7 @@ export async function onRequestPost(context) {
     // 11. Write to notification_log
     if (newNotificationLogs.length > 0) {
       try {
-        const insertStatements = newNotificationLogs.map(log => 
+        const insertStatements = newNotificationLogs.map(log =>
           db.prepare(`
             INSERT INTO notification_log (subscription_id, meeting_id, agenda_item_id, keyword_matched)
             VALUES (?, ?, ?, ?)
@@ -598,12 +595,9 @@ export async function onRequestPost(context) {
     matchesLogged: newNotificationLogs.length
   };
 
-  if (!resendApiKey) {
+  if (dev && !resendApiKey) {
     responsePayload.devEmails = devEmails;
   }
 
-  return new Response(JSON.stringify(responsePayload), {
-    status: 200,
-    headers: { "Content-Type": "application/json" }
-  });
+  return jsonResponse(responsePayload, 200);
 }

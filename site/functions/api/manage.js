@@ -1,86 +1,84 @@
-function generateToken(length = 32) {
-  const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-  const array = new Uint8Array(length);
-  crypto.getRandomValues(array);
-  return Array.from(array, byte => chars[byte % chars.length]).join('');
-}
+import {
+  isDev,
+  generateToken,
+  sha256Hex,
+  isValidEmail,
+  verifyTurnstile,
+  jsonResponse
+} from '../../lib/api-utils.js';
 
-function isValidEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+// Anti-enumeration: every outcome of the request-link flow that depends on
+// whether an email is registered must return this exact response.
+const UNIFORM_MESSAGE = "If your email is registered, we have sent a link to your inbox.";
 
-async function verifyTurnstile(token, secretKey, ip) {
-  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ secret: secretKey, response: token, remoteip: ip })
+async function sendEmail(resendApiKey, message) {
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${resendApiKey}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(message)
   });
-  const data = await res.json();
-  return data.success === true;
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`Resend API error: ${errorText}`);
+  }
 }
 
 export async function onRequestPost(context) {
   const { request, env } = context;
   const db = env.DB;
+  const dev = isDev(env);
 
   if (!db) {
-    return new Response(JSON.stringify({ error: "Database binding missing." }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
+    console.error("manage: DB binding missing");
+    return jsonResponse({ error: "Service temporarily unavailable." }, 500);
   }
 
   let body;
   try {
     body = await request.json();
   } catch (e) {
-    return new Response(JSON.stringify({ error: "Invalid JSON payload." }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "Invalid JSON payload." }, 400);
   }
 
   const { email, token, keywords, turnstile_token } = body;
 
   if (!email || !isValidEmail(email)) {
-    return new Response(JSON.stringify({ error: "A valid email address is required." }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "A valid email address is required." }, 400);
   }
 
   const emailLower = email.trim().toLowerCase();
 
   // ─── 1. Passwordless request flow (email only) ───────────────────────────
   if (token === undefined && keywords === undefined) {
-    // Validate Turnstile when configured
+    // Fail closed: in production these must be configured. Missing secrets
+    // must never silently downgrade into dev behavior.
     const turnstileSecret = env.TURNSTILE_SECRET_KEY;
+    const resendApiKey = env.RESEND_API_KEY;
+    if (!dev && (!turnstileSecret || !resendApiKey)) {
+      console.error("manage: TURNSTILE_SECRET_KEY or RESEND_API_KEY not configured");
+      return jsonResponse({ error: "Service temporarily unavailable." }, 500);
+    }
+
+    // Validate Turnstile (always in production; in dev only when configured)
     if (turnstileSecret) {
       const ip = request.headers.get('CF-Connecting-IP') || '';
       const valid = await verifyTurnstile(turnstile_token || '', turnstileSecret, ip);
       if (!valid) {
-        return new Response(JSON.stringify({ error: "Bot verification failed. Please try again." }), {
-          status: 400,
-          headers: { "Content-Type": "application/json" }
-        });
+        return jsonResponse({ error: "Bot verification failed. Please try again." }, 400);
       }
     }
 
-    // Uniform response to prevent email enumeration
-    const uniformSuccess = new Response(JSON.stringify({
-      success: true,
-      message: "If your email is registered, we have sent a management link to your inbox."
-    }), {
-      status: 200,
-      headers: { "Content-Type": "application/json" }
-    });
+    const uniformSuccess = () => jsonResponse({ success: true, message: UNIFORM_MESSAGE }, 200);
 
     const sub = await db.prepare(
-      'SELECT id, verified, verification_token, unsubscribe_token FROM subscriptions WHERE email = ?'
+      'SELECT id, verified FROM subscriptions WHERE email = ?'
     ).bind(emailLower).first();
 
     if (!sub) {
-      return uniformSuccess;
+      return uniformSuccess();
     }
 
     // Enforce per-email rate limit (3 emails per 24h)
@@ -90,142 +88,133 @@ export async function onRequestPost(context) {
     ).bind(emailLower).first();
 
     if (recentCount && recentCount.count >= 3) {
-      return uniformSuccess;
+      return uniformSuccess();
     }
 
     const url = new URL(request.url);
-    const resendApiKey = env.RESEND_API_KEY;
 
     if (sub.verified === 0) {
-      // Resend verification email
-      const verifyUrl = `${url.origin}/api/verify?token=${sub.verification_token}`;
+      // Resend verification. Stored tokens are hashes, so rotate: issue a new
+      // raw token for the email and store its hash.
+      const verifyToken = generateToken(32);
+      const verifyTokenHash = await sha256Hex(verifyToken);
+      const verifyUrl = `${url.origin}/api/verify?token=${verifyToken}`;
+
+      try {
+        await db.batch([
+          db.prepare(
+            'UPDATE subscriptions SET verification_token = ?, updated_at = (datetime(\'now\')) WHERE id = ?'
+          ).bind(verifyTokenHash, sub.id),
+          db.prepare('INSERT INTO email_rate_limits (email) VALUES (?)').bind(emailLower),
+          db.prepare(`DELETE FROM email_rate_limits WHERE sent_at < datetime('now', '-24 hours')`)
+        ]);
+      } catch (err) {
+        console.error(`manage: verification token rotation failed: ${err.message}`);
+        return jsonResponse({ error: "Something went wrong. Please try again later." }, 500);
+      }
 
       if (resendApiKey) {
         try {
-          await fetch("https://api.resend.com/emails", {
-            method: "POST",
-            headers: {
-              "Authorization": `Bearer ${resendApiKey}`,
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              from: "Tampa Monitor <notifications@tampamonitor.com>",
-              to: emailLower,
-              subject: "Verify your keyword notifications subscription",
-              html: `
-                <p>You requested a verification link for your Tampa Monitor meeting agenda alerts subscription.</p>
-                <p>Please click the link below to verify your email and activate your subscription:</p>
-                <p><a href="${verifyUrl}" style="background-color: #1d4ed8; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">Verify Email Address</a></p>
-                <p><a href="${verifyUrl}">${verifyUrl}</a></p>
-              `,
-              text: `Verify your email: ${verifyUrl}`
-            })
+          await sendEmail(resendApiKey, {
+            from: "Tampa Monitor <notifications@tampamonitor.com>",
+            to: emailLower,
+            subject: "Verify your keyword notifications subscription",
+            html: `
+              <p>You requested a link for your Tampa Monitor meeting agenda alerts subscription.</p>
+              <p>Your email address is not verified yet. Please click the link below to verify it and activate your subscription:</p>
+              <p><a href="${verifyUrl}" style="background-color: #1d4ed8; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">Verify Email Address</a></p>
+              <p><a href="${verifyUrl}">${verifyUrl}</a></p>
+            `,
+            text: `Verify your email: ${verifyUrl}`
           });
         } catch (err) {
-          console.error(`Resend fail: ${err.message}`);
+          console.error(`manage: verification resend failed: ${err.message}`);
         }
       } else {
         console.log(`\n=== [LOCAL RESEND VERIFICATION] ===\nTo: ${emailLower}\nLink: ${verifyUrl}\n===================================\n`);
       }
 
-      await db.prepare('INSERT INTO email_rate_limits (email) VALUES (?)').bind(emailLower).run();
-
-      const responsePayload = {
-        success: true,
-        message: "Your subscription is not verified yet. We have sent a new verification link to your inbox."
-      };
-      if (!resendApiKey) {
+      // Uniform response: same body whether the email was unknown, verified,
+      // or unverified. The state-specific detail lives in the email.
+      const responsePayload = { success: true, message: UNIFORM_MESSAGE };
+      if (!resendApiKey && dev) {
         responsePayload.devVerifyUrl = verifyUrl;
       }
-      return new Response(JSON.stringify(responsePayload), {
-        status: 200,
-        headers: { "Content-Type": "application/json" }
-      });
+      return jsonResponse(responsePayload, 200);
     } else {
-      // Generate a short-lived session token (15-minute expiry)
+      // Generate a short-lived session token (15-minute expiry). Only the
+      // SHA-256 hash is stored; the raw token goes into the emailed link.
       const sessionToken = generateToken(32);
+      const sessionTokenHash = await sha256Hex(sessionToken);
       const expiresAt = new Date(Date.now() + 15 * 60 * 1000).toISOString();
 
-      await db.batch([
-        db.prepare(
-          'INSERT INTO session_tokens (token, subscription_id, expires_at) VALUES (?, ?, ?)'
-        ).bind(sessionToken, sub.id, expiresAt),
-        db.prepare('INSERT INTO email_rate_limits (email) VALUES (?)').bind(emailLower)
-      ]);
+      try {
+        await db.batch([
+          db.prepare(
+            'INSERT INTO session_tokens (token, subscription_id, expires_at) VALUES (?, ?, ?)'
+          ).bind(sessionTokenHash, sub.id, expiresAt),
+          db.prepare('INSERT INTO email_rate_limits (email) VALUES (?)').bind(emailLower),
+          // Opportunistic pruning keeps both housekeeping tables bounded
+          db.prepare(`DELETE FROM session_tokens WHERE expires_at < datetime('now')`),
+          db.prepare(`DELETE FROM email_rate_limits WHERE sent_at < datetime('now', '-24 hours')`)
+        ]);
+      } catch (err) {
+        console.error(`manage: session token creation failed: ${err.message}`);
+        return jsonResponse({ error: "Something went wrong. Please try again later." }, 500);
+      }
 
       const manageUrl = `${url.origin}/notifications/?email=${encodeURIComponent(emailLower)}&token=${sessionToken}`;
 
       if (resendApiKey) {
         try {
-          await fetch("https://api.resend.com/emails", {
-            method: "POST",
-            headers: {
-              "Authorization": `Bearer ${resendApiKey}`,
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-              from: "Tampa Monitor <notifications@tampamonitor.com>",
-              to: emailLower,
-              subject: "Manage your Tampa Monitor keyword notifications",
-              html: `
-                <p>Use the link below to manage your keywords. This link expires in 15 minutes.</p>
-                <p><a href="${manageUrl}" style="background-color: #1d4ed8; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">Manage Keywords</a></p>
-                <p><a href="${manageUrl}">${manageUrl}</a></p>
-                <br>
-                <p><small>This link is single-session. Please do not forward this email.</small></p>
-              `,
-              text: `Manage your subscription (expires in 15 minutes): ${manageUrl}`
-            })
+          await sendEmail(resendApiKey, {
+            from: "Tampa Monitor <notifications@tampamonitor.com>",
+            to: emailLower,
+            subject: "Manage your Tampa Monitor keyword notifications",
+            html: `
+              <p>Use the link below to manage your keywords. This link expires in 15 minutes.</p>
+              <p><a href="${manageUrl}" style="background-color: #1d4ed8; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">Manage Keywords</a></p>
+              <p><a href="${manageUrl}">${manageUrl}</a></p>
+              <br>
+              <p><small>This link expires in 15 minutes. Please do not forward this email.</small></p>
+            `,
+            text: `Manage your subscription (expires in 15 minutes): ${manageUrl}`
           });
         } catch (err) {
-          console.error(`Resend fail: ${err.message}`);
+          console.error(`manage: management link send failed: ${err.message}`);
         }
       } else {
         console.log(`\n=== [LOCAL SEND MANAGEMENT LINK] ===\nTo: ${emailLower}\nLink: ${manageUrl}\n===================================\n`);
       }
 
-      const responsePayload = {
-        success: true,
-        message: "We have sent a management link to your inbox. It expires in 15 minutes."
-      };
-      if (!resendApiKey) {
+      const responsePayload = { success: true, message: UNIFORM_MESSAGE };
+      if (!resendApiKey && dev) {
         responsePayload.devManageUrl = manageUrl;
       }
-      return new Response(JSON.stringify(responsePayload), {
-        status: 200,
-        headers: { "Content-Type": "application/json" }
-      });
+      return jsonResponse(responsePayload, 200);
     }
   }
 
   // ─── 2. Authenticated flow (session token provided) ──────────────────────
   if (!token) {
-    return new Response(JSON.stringify({ error: "Authorization token is required." }), {
-      status: 401,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "Authorization token is required." }, 401);
   }
 
-  // Look up session token joined with subscription
+  // Look up session token (stored hashed) joined with subscription
+  const tokenHash = await sha256Hex(token);
   const sessionRow = await db.prepare(
     `SELECT st.expires_at, s.id AS sub_id, s.verified, s.unsubscribe_token
      FROM session_tokens st
      JOIN subscriptions s ON s.id = st.subscription_id
      WHERE s.email = ? AND st.token = ?`
-  ).bind(emailLower, token).first();
+  ).bind(emailLower, tokenHash).first();
 
   if (!sessionRow) {
-    return new Response(JSON.stringify({ error: "Invalid or expired authorization token. Please request a new management link." }), {
-      status: 401,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "Invalid or expired authorization token. Please request a new management link." }, 401);
   }
 
   if (new Date(sessionRow.expires_at) <= new Date()) {
-    return new Response(JSON.stringify({ error: "Your management link has expired. Please request a new one." }), {
-      status: 401,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "Your management link has expired. Please request a new one." }, 401);
   }
 
   const subId = sessionRow.sub_id;
@@ -233,10 +222,7 @@ export async function onRequestPost(context) {
   const unsubscribeToken = sessionRow.unsubscribe_token;
 
   if (subVerified === 0) {
-    return new Response(JSON.stringify({ error: "Please verify your email address before managing keywords." }), {
-      status: 403,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "Please verify your email address before managing keywords." }, 403);
   }
 
   // Determine user's tier and limit
@@ -276,12 +262,9 @@ export async function onRequestPost(context) {
   }
 
   if (!isAllowed) {
-    return new Response(JSON.stringify({
+    return jsonResponse({
       error: "Your subscription is paused. Management is restricted to active supporters during the private beta."
-    }), {
-      status: 403,
-      headers: { "Content-Type": "application/json" }
-    });
+    }, 403);
   }
 
   // Read keywords flow
@@ -291,45 +274,34 @@ export async function onRequestPost(context) {
         'SELECT keyword FROM keywords WHERE subscription_id = ?'
       ).bind(subId).all();
 
-      return new Response(JSON.stringify({
+      return jsonResponse({
         success: true,
         email: emailLower,
         keywords: keywordsRows.results.map(r => r.keyword),
         keywordLimit,
         unsubscribeToken
-      }), {
-        status: 200,
-        headers: { "Content-Type": "application/json" }
-      });
+      }, 200);
     } catch (err) {
-      return new Response(JSON.stringify({ error: `Database read failed: ${err.message}` }), {
-        status: 500,
-        headers: { "Content-Type": "application/json" }
-      });
+      console.error(`manage: keywords read failed: ${err.message}`);
+      return jsonResponse({ error: "Something went wrong. Please try again later." }, 500);
     }
   }
 
   // Update keywords flow
   if (!Array.isArray(keywords)) {
-    return new Response(JSON.stringify({ error: "Keywords list must be an array." }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" }
-    });
+    return jsonResponse({ error: "Keywords list must be an array." }, 400);
   }
 
   const cleanKeywords = [...new Set(
     keywords
-      .map(k => k.trim().toLowerCase())
+      .map(k => String(k).trim().toLowerCase())
       .filter(k => k.length >= 2 && k.length <= 50)
   )];
 
   if (cleanKeywords.length > keywordLimit) {
-    return new Response(JSON.stringify({
+    return jsonResponse({
       error: `Your account tier allows a maximum of ${keywordLimit} keywords. You submitted ${cleanKeywords.length}.`
-    }), {
-      status: 400,
-      headers: { "Content-Type": "application/json" }
-    });
+    }, 400);
   }
 
   try {
@@ -350,18 +322,13 @@ export async function onRequestPost(context) {
 
     await db.batch(statements);
   } catch (err) {
-    return new Response(JSON.stringify({ error: `Database update failed: ${err.message}` }), {
-      status: 500,
-      headers: { "Content-Type": "application/json" }
-    });
+    console.error(`manage: keywords update failed: ${err.message}`);
+    return jsonResponse({ error: "Something went wrong. Please try again later." }, 500);
   }
 
-  return new Response(JSON.stringify({
+  return jsonResponse({
     success: true,
     message: "Keywords updated successfully.",
     keywords: cleanKeywords
-  }), {
-    status: 200,
-    headers: { "Content-Type": "application/json" }
-  });
+  }, 200);
 }

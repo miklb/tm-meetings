@@ -97,3 +97,7 @@ agenda-scraper/legacy/
 
 # Transcript processor specific
 transcript-cleaner/processor/output/
+
+# Wrangler local secrets
+.dev.vars
+site/.dev.vars

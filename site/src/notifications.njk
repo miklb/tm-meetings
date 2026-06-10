@@ -460,7 +460,7 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
 
     // Show banner if redirects carry status
     if (status) {
-      handleQueryStatus(status, email);
+      handleQueryStatus(status);
     }
 
     // Direct Login via link
@@ -476,18 +476,18 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
   });
 
   // Handle various status messages from redirects
-  function handleQueryStatus(status, email) {
+  function handleQueryStatus(status) {
     statusBanner.classList.remove('hidden', 'success', 'error');
-    
+
     if (status === 'verified') {
       statusBanner.classList.add('success');
-      statusBanner.innerText = `Success! Your email address (${email}) has been verified. You will now receive meeting alerts.`;
+      statusBanner.innerText = "Success! Your email address has been verified. You will now receive meeting alerts.";
     } else if (status === 'already_verified') {
       statusBanner.classList.add('success');
       statusBanner.innerText = "This subscription has already been verified.";
     } else if (status === 'unsubscribed') {
       statusBanner.classList.add('success');
-      statusBanner.innerText = `You have unsubscribed successfully. All keywords and subscription details for ${email} have been deleted.`;
+      statusBanner.innerText = "You have unsubscribed successfully. All keywords and subscription details have been deleted.";
     } else if (status === 'verify_failed') {
       statusBanner.classList.add('error');
       statusBanner.innerText = "Email verification failed. The link may have expired or is invalid. Please request a new subscription.";
@@ -734,10 +734,20 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
     }
   });
 
-  // 4. Unsubscribe GET Redirect
-  btnUnsubscribe.addEventListener('click', () => {
-    if (confirm("Are you sure you want to unsubscribe? This will permanently delete your notification settings.")) {
-      window.location.href = `/api/unsubscribe?token=${unsubscribeToken}`;
+  // 4. Unsubscribe POST (deletion only happens on POST so email-scanner GETs are harmless)
+  btnUnsubscribe.addEventListener('click', async () => {
+    if (!confirm("Are you sure you want to unsubscribe? This will permanently delete your notification settings.")) {
+      return;
+    }
+    try {
+      const res = await fetch(`/api/unsubscribe?token=${encodeURIComponent(unsubscribeToken)}`, { method: 'POST' });
+      if (!res.ok && res.status !== 303) {
+        throw new Error("Failed to unsubscribe. Please try again or use the link in a recent email.");
+      }
+      switchPanel('subscribe');
+      handleQueryStatus('unsubscribed');
+    } catch (err) {
+      showBanner(err.message, 'error');
     }
   });
 

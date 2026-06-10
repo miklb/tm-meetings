@@ -228,7 +228,7 @@ WORDPRESS_AGENDA_URL=https://tampamonitor.com/agendas/2025-11-06/ \
 node scripts/dispatch-notifications.js
 ```
 
-Omit `WORDPRESS_AGENDA_URL` to test fallback behaviour. With no `RESEND_API_KEY`, the worker logs emails instead of sending them.
+Omit `WORDPRESS_AGENDA_URL` to test fallback behaviour. When the worker runs with `ENVIRONMENT="development"` and no `RESEND_API_KEY`, it logs emails instead of sending them; in production both `WEBHOOK_SECRET` and `RESEND_API_KEY` are required (the endpoint fails closed).
 
 ### Sponsor slot
 

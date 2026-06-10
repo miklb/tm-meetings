@@ -2,8 +2,21 @@
 # Copy this file to .dev.vars and fill in your actual keys.
 # Do NOT commit .dev.vars to version control!
 
-# Resend API Key (get from https://resend.com/)
+# Required for local development. The API fails closed in production: when
+# ENVIRONMENT is not "development", missing RESEND_API_KEY /
+# TURNSTILE_SECRET_KEY / WEBHOOK_SECRET return errors instead of silently
+# disabling security checks, and dev affordances (mock emails, devVerifyUrl /
+# devManageUrl / devEmails in responses) are never emitted.
+ENVIRONMENT="development"
+
+# Resend API Key (get from https://resend.com/). Optional in dev — when absent,
+# emails are mocked to the console and dev links are returned in responses.
 RESEND_API_KEY="re_your_api_key_here"
 
-# Shared secret key to authorize the nightly scrape webhook from GitHub Actions
+# Shared secret to authorize the notifications dispatch webhook (required —
+# /api/notify refuses requests when unset)
 WEBHOOK_SECRET="your_shared_webhook_secret_here"
+
+# Cloudflare Turnstile (optional in dev — bot checks are skipped when absent;
+# required in production)
+# TURNSTILE_SECRET_KEY="your_turnstile_secret_key"

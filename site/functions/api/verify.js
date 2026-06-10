@@ -1,9 +1,12 @@
+import { sha256Hex } from '../../lib/api-utils.js';
+
 export async function onRequestGet(context) {
   const { request, env } = context;
   const db = env.DB;
 
   if (!db) {
-    return new Response("Database binding missing.", { status: 500 });
+    console.error("verify: DB binding missing");
+    return new Response("Service temporarily unavailable.", { status: 500 });
   }
 
   const url = new URL(request.url);
@@ -13,10 +16,11 @@ export async function onRequestGet(context) {
     return new Response("Verification token is missing.", { status: 400 });
   }
 
-  // Find the subscription with this token
+  // Tokens are stored as SHA-256 hashes; hash the presented token to look it up
+  const tokenHash = await sha256Hex(token);
   const sub = await db.prepare(
-    'SELECT id, email, verified FROM subscriptions WHERE verification_token = ?'
-  ).bind(token).first();
+    'SELECT id, verified FROM subscriptions WHERE verification_token = ?'
+  ).bind(tokenHash).first();
 
   if (!sub) {
     // If not found, redirect to notifications page with an error status
@@ -34,9 +38,10 @@ export async function onRequestGet(context) {
       'UPDATE subscriptions SET verified = 1, verification_token = NULL, updated_at = (datetime(\'now\')) WHERE id = ?'
     ).bind(sub.id).run();
   } catch (err) {
-    return new Response(`Database update failed: ${err.message}`, { status: 500 });
+    console.error(`verify: database update failed: ${err.message}`);
+    return new Response("Something went wrong. Please try the link again later.", { status: 500 });
   }
 
-  // Redirect to notifications page with success query param
-  return Response.redirect(`${url.origin}/notifications/?status=verified&email=${encodeURIComponent(sub.email)}`, 302);
+  // Redirect to notifications page with success query param (no PII in the URL)
+  return Response.redirect(`${url.origin}/notifications/?status=verified`, 302);
 }
