@@ -148,6 +148,11 @@ function formatBackgroundForWordPress(backgroundText) {
 }
 
 function cleanAgendaContent(content) {
+    // Strip a memo/email transmission sentence unless it requests a
+    // continuance (e.g. "requesting that said agenda item be continued to
+    // July 23, 2026") — those memos carry real scheduling information.
+    const stripUnlessContinuance = (match) => /continu/i.test(match) ? match : ' ';
+
     // First preserve file numbers with proper formatting
     let cleaned = content
         // Format file numbers consistently
@@ -155,14 +160,15 @@ function cleanAgendaContent(content) {
         // Also handle bare file numbers at start of text (e.g., "TA/CPA25-20 Transmittal...")
         .replace(/^((?:DE[12]|TA\/CPA|REZ|VAC|AB[12]|SU\d?)\d{2}-\d+)\b/i, '**File No. $1**')
         
-        // Remove email/memo transmission sentences (but preserve ones about continuing public hearings)
+        // Remove email/memo transmission sentences (but preserve any that
+        // request a continuance — see stripUnlessContinuance above)
         // Match from "Memorandum from" to the end of the sentence, handling titles with periods (P.E., Ph.D., etc.)
         // Match pattern: "Memorandum from [name with possible periods], [title], [action verb] [content]. (To be R/F)"
-        .replace(/\s*Memorandum from (?!.*requesting that said public hearing be continued)[^.]*?(?:,\s*(?:notifying|transmitting|advising|requesting|recommending)[^.]*)+\.\s*(?:\(To be R\/F\))?/gi, ' ')
-        .replace(/\s*Email from (?!.*requesting that said public hearing be continued)[^.]*?(?:,\s*(?:notifying|transmitting|advising|requesting|recommending)[^.]*)+\.\s*(?:\(To be R\/F\))?/gi, ' ')
+        .replace(/\s*Memorandum from [^.]*?(?:,\s*(?:notifying|transmitting|advising|requesting|recommending)[^.]*)+\.\s*(?:\(To be R\/F\))?/gi, stripUnlessContinuance)
+        .replace(/\s*Email from [^.]*?(?:,\s*(?:notifying|transmitting|advising|requesting|recommending)[^.]*)+\.\s*(?:\(To be R\/F\))?/gi, stripUnlessContinuance)
         // Fallback: Match entire paragraph starting with Memorandum/Email from (handles multi-clause sentences)
-        .replace(/\s*Memorandum from (?!.*requesting that said public hearing be continued)[^]*?(?:for said (?:agenda )?item|To be R\/F)[^.]*\.?\s*(?:\(To be R\/F\))?/gi, ' ')
-        .replace(/\s*Email from (?!.*requesting that said public hearing be continued)[^]*?(?:for said (?:agenda )?item|To be R\/F)[^.]*\.?\s*(?:\(To be R\/F\))?/gi, ' ')
+        .replace(/\s*Memorandum from [^]*?(?:for said (?:agenda )?item|To be R\/F)[^.]*\.?\s*(?:\(To be R\/F\))?/gi, stripUnlessContinuance)
+        .replace(/\s*Email from [^]*?(?:for said (?:agenda )?item|To be R\/F)[^.]*\.?\s*(?:\(To be R\/F\))?/gi, stripUnlessContinuance)
         
         // Remove standalone "transmitting" phrases (e.g., ", transmitting a PowerPoint presentation for said agenda item.")
         .replace(/,?\s*(?:and\s+)?transmitting (?:a |an )?(?:PowerPoint |written )?(?:presentation|response|report|memo|memorandum)[^\.]*for said (?:agenda )?item\.?/gi, '')
@@ -723,9 +729,19 @@ ${innerBlocks.trim()}
 function generateWordPressMarkup(meetings) {
     const outputDir = path.join(__dirname, 'agendas');
     
+    // Skip stub meetings: OnBase sometimes posts a meeting shell before the
+    // agenda is published, leaving no sourceUrl and no items to render.
+    const usableMeetings = meetings.filter(m => {
+        const isStub = !m.sourceUrl || !(m.agendaItems && m.agendaItems.length);
+        if (isStub) {
+            console.log(`⚠️  Skipping meeting ${m.meetingId} (${m.meetingType}) — no sourceUrl/agenda items yet (stub)`);
+        }
+        return !isStub;
+    });
+
     // Separate main meetings from addendum meetings
-    const nonAddendumMeetings = meetings.filter(m => !m.isAddendum);
-    const addendumMeetings = meetings.filter(m => m.isAddendum);
+    const nonAddendumMeetings = usableMeetings.filter(m => !m.isAddendum);
+    const addendumMeetings = usableMeetings.filter(m => m.isAddendum);
 
     if (addendumMeetings.length > 0) {
         const label = addendumMeetings[0].formattedDate || addendumMeetings[0].meetingDate;
@@ -826,8 +842,8 @@ function renderAddendumSection(addenda) {
     const hasItems = Object.values(sections).some(arr => arr.length > 0);
     if (!hasItems) return '';
 
-    let html = `\n<!-- wp:heading {"level":2} -->
-<h2 id="addendum">Addendum</h2>
+    let html = `\n<!-- wp:heading {"level":3} -->
+<h3 id="addendum">Addendum</h3>
 <!-- /wp:heading -->
 
 <!-- wp:group {"className":"addendum-section"} -->
@@ -841,8 +857,8 @@ function renderAddendumSection(addenda) {
     for (const [sectionKey, items] of Object.entries(sections)) {
         if (items.length === 0) continue;
 
-        html += `<!-- wp:heading {"level":3} -->
-<h3>${sectionLabels[sectionKey]}</h3>
+        html += `<!-- wp:heading {"level":4} -->
+<h4>${sectionLabels[sectionKey]}</h4>
 <!-- /wp:heading -->
 
 <!-- wp:list -->
@@ -900,18 +916,17 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
     // Start with intro paragraph (only for first meeting)
     let wpHtml = '';
 
-    // Build addendum lookup maps from paired addenda
+    // Build addendum lookup maps from paired addenda. Walk-ons are not
+    // tracked here — they render only in the Addendum section, never as
+    // injected agenda items.
     const continuedItems = new Map(); // itemNumber -> continuedToDate string
     const updatedItemNums = new Set(); // item numbers with non-continuance addendum changes
-    const walkonItems = []; // brand-new items added by addendum (walk-ons)
 
     for (const addendum of addenda) {
         for (const item of (addendum.agendaItems || [])) {
             if (item.continuedToDate) {
                 continuedItems.set(item.number, item.continuedToDate);
-            } else if (item.addendumSection === 'walkons') {
-                walkonItems.push(item);
-            } else if (item.addendumSection) {
+            } else if (item.addendumSection && item.addendumSection !== 'walkons') {
                 // Only flag as "Updated" when we have explicit section metadata (new scrapes)
                 updatedItemNums.add(item.number);
             }
@@ -1119,16 +1134,6 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
         }
     });
 
-    // Pre-render walk-on items (if any) for injection at the end of the last list
-    const walkonListHtml = walkonItems.map(item => {
-        const walkonText = cleanAgendaContent(item.rawTitle || item.title || '')
-            .replace(/\*\*([^*]+)\*\*/g, '$1');
-        return `<!-- wp:list-item {"value":${item.number},"className":"addendum-walkon"} -->
-<li value="${item.number}" class="addendum-walkon"><span class="addendum-badge">Added by Addendum</span> ${formatTextWithBlocks(walkonText)}</li>
-<!-- /wp:list-item -->
-`;
-    }).join('');
-
     // Generate the agenda list(s) based on whether there's a split
     if (firstStrongIndex !== -1) {
         // First part of the list
@@ -1257,7 +1262,6 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
 <!-- /wp:list-item -->
 `;
         }
-        if (walkonListHtml) wpHtml += walkonListHtml;
         wpHtml += `</ol>
 <!-- /wp:list -->
 `;
@@ -1301,7 +1305,6 @@ function generateSingleMeetingMarkup(meeting, isEveningAgenda = false, hasMultip
 <!-- /wp:list-item -->
 `;
         });
-        if (walkonListHtml) wpHtml += walkonListHtml;
         wpHtml += `</ol>
 <!-- /wp:list -->
 `;

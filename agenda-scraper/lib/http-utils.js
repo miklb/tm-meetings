@@ -279,17 +279,19 @@ function parseSupportingDocuments(html) {
  * @param {string} html - Agenda HTML
  * @returns {Map<number, string>} Map of item number to section key
  */
+const ADDENDUM_SECTION_KEYS = [
+  { match: 'OFF-THE-AGENDA ITEMS/NEW BUSINESS', key: 'walkons' },
+  { match: 'ITEMS REMOVED FROM COMMITTEE REPORTS', key: 'removedFromConsent' },
+  { match: 'CONTINUANCE OR REMOVAL OF ITEMS', key: 'continuances' },
+  { match: 'OTHER CHANGES TO THE MEETING OR AGENDA', key: 'otherChanges' },
+];
+
 function parseAddendumSections(html) {
   const cheerio = require('cheerio');
   const $ = cheerio.load(html);
   const sectionMap = new Map();
 
-  const SECTION_KEYS = [
-    { match: 'OFF-THE-AGENDA ITEMS/NEW BUSINESS', key: 'walkons' },
-    { match: 'ITEMS REMOVED FROM COMMITTEE REPORTS', key: 'removedFromConsent' },
-    { match: 'CONTINUANCE OR REMOVAL OF ITEMS', key: 'continuances' },
-    { match: 'OTHER CHANGES TO THE MEETING OR AGENDA', key: 'otherChanges' },
-  ];
+  const SECTION_KEYS = ADDENDUM_SECTION_KEYS;
 
   let currentSection = null;
 
@@ -328,6 +330,71 @@ function parseAddendumSections(html) {
 }
 
 /**
+ * Fallback parser for static addendum documents (Word-converted HTML with no
+ * loadAgendaItem links). Some addenda — e.g. CRA addenda — are published as
+ * plain documents where items sit in two-column tables: a numbered first cell
+ * ("4.") for existing agenda items, or an underlined "Walk-on:" label for
+ * new business. Returns the same item shape as parseAgendaTable, with
+ * agendaItemId null and addendumSection already assigned from the
+ * surrounding section headers.
+ * @param {string} html - Agenda HTML
+ * @param {Function} extractFileNumber - File number extraction function
+ * @returns {Array} - Array of agenda item objects
+ */
+function parseStaticAddendumItems(html, extractFileNumber) {
+  const cheerio = require('cheerio');
+  const $ = cheerio.load(html);
+  const items = [];
+
+  let currentSection = null;
+
+  $('p, table').each((_, el) => {
+    const $el = $(el);
+
+    if (el.tagName === 'p') {
+      // Section headers are top-level underlined paragraphs; skip paragraphs
+      // nested inside item tables (e.g. the "Walk-on:" cell label).
+      if ($el.parents('table').length > 0) return;
+      const hasUnderline = $el.find('span[style*="text-decoration:underline"]').length > 0;
+      if (!hasUnderline) return;
+
+      const text = $el.text().replace(/\s+/g, ' ').trim().toUpperCase();
+      for (const { match, key } of ADDENDUM_SECTION_KEYS) {
+        if (text.includes(match)) {
+          currentSection = key;
+          return;
+        }
+      }
+      return;
+    }
+
+    // Item tables: two columns, label cell + content cell
+    const $firstRow = $el.find('tr').first();
+    const $cells = $firstRow.find('td');
+    if ($cells.length < 2) return;
+
+    const label = $cells.eq(0).text().trim();
+    const contentText = $cells.eq(1).text().trim();
+    if (!contentText) return;
+
+    const numberMatch = label.match(/^(\d+)\./);
+    const isWalkon = /^walk[-\s]?ons?\b/i.test(label);
+    if (!numberMatch && !isWalkon) return;
+
+    items.push({
+      number: numberMatch ? parseInt(numberMatch[1], 10) : null,
+      agendaItemId: null,
+      rawText: contentText,
+      linkId: null,
+      extractedFileNumber: extractFileNumber ? extractFileNumber(contentText) : null,
+      addendumSection: isWalkon ? 'walkons' : currentSection
+    });
+  });
+
+  return items;
+}
+
+/**
  * Format currency value
  * @param {number} value - Numeric value
  * @returns {string|null} - Formatted currency string
@@ -352,6 +419,7 @@ module.exports = {
   extractLoadAgendaConfig,
   parseAgendaTable,
   parseAddendumSections,
+  parseStaticAddendumItems,
   parseSupportingDocuments,
   formatCurrency
 };

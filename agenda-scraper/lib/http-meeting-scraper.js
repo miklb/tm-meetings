@@ -19,6 +19,7 @@ const {
   extractLoadAgendaConfig,
   parseAgendaTable,
   parseAddendumSections,
+  parseStaticAddendumItems,
   parseSupportingDocuments,
   formatCurrency
 } = require('./http-utils');
@@ -308,8 +309,19 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   }
 
   // Parse agenda table
-  const agendaItems = parseAgendaTable(agendaHtml, extractFileNumber);
+  let agendaItems = parseAgendaTable(agendaHtml, extractFileNumber);
   console.log(`[HTTP] Found ${agendaItems.length} agenda items`);
+
+  // Detect if this is an addendum agenda
+  const isAddendum = isAddendumAgenda(agendaHtml);
+
+  // Some addenda (e.g. CRA) are static Word-converted documents with no
+  // loadAgendaItem links, so the structural parse finds nothing. Fall back
+  // to the static addendum parser before giving up.
+  if (agendaItems.length === 0 && isAddendum) {
+    agendaItems = parseStaticAddendumItems(agendaHtml, extractFileNumber);
+    console.log(`[HTTP] Static addendum fallback found ${agendaItems.length} item(s)`);
+  }
 
   if (agendaItems.length === 0) {
     console.warn('[HTTP] No agenda items found');
@@ -317,7 +329,9 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
       meetingId,
       meetingType,
       agendaType: extractAgendaType(agendaHtml),
+      isAddendum,
       meetingDate: extractMeetingDate(html) || extractMeetingDate(agendaHtml) || '',
+      sourceUrl: `${AGENDA_BASE}/Documents/ViewAgenda?meetingId=${meetingId}&type=agenda&doctype=1`,
       agendaItems: []
     };
   }
@@ -505,8 +519,6 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     processedItems.push(...batchResults);
   }
 
-  // Detect if this is an addendum agenda
-  const isAddendum = isAddendumAgenda(agendaHtml);
   if (isAddendum) {
     console.log(`[HTTP] Detected ADDENDUM agenda for meeting ${meetingId}`);
 
@@ -514,8 +526,10 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     const sectionMap = parseAddendumSections(agendaHtml);
     const CONTINUANCE_RE = /continuance.*?\bto\s+([A-Z][a-z]+\s+\d{1,2},?\s*\d{4})/i;
 
-    processedItems.forEach(item => {
-      item.addendumSection = sectionMap.get(item.number) ?? null;
+    processedItems.forEach((item, idx) => {
+      // Static-addendum fallback items carry their section directly (and may
+      // have no number for sectionMap to key on, e.g. walk-ons).
+      item.addendumSection = sectionMap.get(item.number) ?? agendaItems[idx].addendumSection ?? null;
       const match = (item.title || '').match(CONTINUANCE_RE);
       item.continuedToDate = match ? match[1].replace(/,\s*/, ', ').trim() : null;
     });
