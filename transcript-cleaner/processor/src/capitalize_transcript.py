@@ -35,6 +35,26 @@ _IT_ACRONYM_NEXT = frozenset({
 # In council speech, country references almost exclusively appear as "the US".
 _US_COUNTRY_PREV = frozenset({'the'})
 
+# Role/title words that get harvested from multi-word names like "Chair Clendenin"
+# or "Board Member Maniscalco".  They must never be treated as surnames on their
+# own, or single-word lookup would capitalize every "board"/"chair"/"member".
+_NON_SURNAME_WORDS = frozenset({
+    'chair', 'vice', 'board', 'member', 'mayor', 'council', 'councilman',
+    'councilwoman', 'commissioner', 'director', 'attorney', 'officer',
+    'captain', 'chief', 'reverend', 'doctor', 'judge', 'president',
+    'secretary', 'treasurer', 'clerk', 'sergeant', 'lieutenant', 'grant',
+})
+
+# Month names that are also common English words ("may"/"march"/"august").
+# Only capitalize these when they appear in a date-like context.
+_AMBIGUOUS_MONTHS = frozenset({'may', 'march', 'august'})
+
+# Tokens preceding an ambiguous month that signal a real date reference.
+_MONTH_CONTEXT_PREV = frozenset({
+    'in', 'on', 'by', 'since', 'until', 'of', 'through', 'before', 'after',
+    'early', 'late', 'mid', 'this', 'last', 'next',
+})
+
 
 def _load_config(config_file: str = "data/capitalization_config.json") -> dict:
     """Load acronyms, neighborhoods, and street suffixes from config file."""
@@ -97,7 +117,21 @@ class TranscriptCapitalizer:
             proper = ' '.join(w.capitalize() for w in neighborhood.split())
             self.agenda_entities[neighborhood] = proper
         
-        # Build surname index from people names for hyphenated name matching
+        # Build surname index from people names for single-word and hyphenated
+        # matching.  Exclude role/title words harvested from names like
+        # "Chair Clendenin", anything the config already protects, and ambiguous
+        # months, so single-word lookup stays safe.
+        _always_lower = set(w.lower() for w in self.special_rules.get('always_lowercase', []))
+
+        def _accept_surname(token: str) -> bool:
+            t = token.lower()
+            return (len(t) >= 3
+                    and t.isalpha()
+                    and t not in _NON_SURNAME_WORDS
+                    and t not in self.skip_words
+                    and t not in _always_lower
+                    and t not in _AMBIGUOUS_MONTHS)
+
         self.known_surnames = {}
         for name in list(hybrid_data['people'].keys()):
             parts = name.split()
@@ -105,11 +139,13 @@ class TranscriptCapitalizer:
                 last = parts[-1]
                 if '-' in last:
                     for hp in last.split('-'):
-                        self.known_surnames[hp.lower()] = hp
-                else:
+                        if _accept_surname(hp):
+                            self.known_surnames[hp.lower()] = hp
+                elif _accept_surname(last):
                     self.known_surnames[last.lower()] = last
                 # First name too
-                self.known_surnames[parts[0].lower()] = parts[0]
+                if _accept_surname(parts[0]):
+                    self.known_surnames[parts[0].lower()] = parts[0]
         
         print(f"  ✓ Loaded {len(self.agenda_entities)} agenda entities")
         print(f"  ✓ Built {len(self.known_surnames)} surname index")
@@ -264,13 +300,17 @@ class TranscriptCapitalizer:
                 # Extract person and organization names from this text
                 # Process in chunks to avoid truncation (GLiNER has 384 token limit)
                 # Using 250 words per chunk to be conservative (tokens < words)
-                labels = ["person", "organization", "law", "document", "facility"]
+                # Only "person" and "organization" — the broader "law"/"document"/
+                # "facility" labels caused generic phrases to be title-cased
+                # ("Laws in Place", "Required Documents", "Beautiful Park").
+                # Real acts/documents should live in the entity database instead.
+                labels = ["person", "organization"]
                 chunk_size = 250  # words (conservative to stay well under 384 token limit)
                 words = text_lower.split()
-                
+
                 for i in range(0, len(words), chunk_size):
                     chunk = ' '.join(words[i:i+chunk_size])
-                    entities = self.gliner_model.predict_entities(chunk, labels, threshold=0.4)
+                    entities = self.gliner_model.predict_entities(chunk, labels, threshold=0.55)
                     
                     # Store GLiNER-detected entities with their proper casing
                     for entity in entities:
@@ -393,7 +433,17 @@ class TranscriptCapitalizer:
             if base_clean in self.acronyms:
                 capitalized_words.append(leading_punct + base_core.upper() + suffix + trailing_punct)
                 continue
-            
+
+            # Acronym plurals: "cras" -> "CRAs", "cacs" -> "CACs", "rfps" -> "RFPs".
+            # Stem must be at least 2 chars so common words ("is"/"as"/"us") are
+            # left alone, and the lowercase 's' is preserved as the plural marker.
+            if (len(base_clean) > 2 and base_clean.endswith('s')
+                    and base_clean[:-1] in self.acronyms):
+                capitalized_words.append(
+                    leading_punct + base_core[:-1].upper() + 's' + suffix + trailing_punct
+                )
+                continue
+
             # Rule 0: Hyphenated words — check early so sentence-start rules don't clobber names
             if '-' in base_clean and len(base_clean) > 2:
                 parts = base_clean.split('-')
@@ -457,15 +507,42 @@ class TranscriptCapitalizer:
                 capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
                 continue
             
+            # Rule 6.5: Ambiguous month names ("may"/"march"/"august") are stored
+            # as standard entities but double as common words. Only let them reach
+            # the entity lookup below in a date-like context; otherwise lowercase.
+            if base_clean in _AMBIGUOUS_MONTHS:
+                def _ctx_token(j):
+                    if 0 <= j < len(words):
+                        m = re.match(r"^[^\w]*([\w']+)[^\w]*$", words[j])
+                        return m.group(1).lower() if m else ''
+                    return ''
+                nxt, prv = _ctx_token(i + 1), _ctx_token(i - 1)
+                date_like = bool(
+                    re.match(r'^\d{1,4}(st|nd|rd|th)?$', nxt)
+                    or re.match(r'^\d{4}$', prv)
+                    or prv in _MONTH_CONTEXT_PREV
+                )
+                if not date_like:
+                    capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
+                    continue
+                # date context: fall through to the standard-entity lookup -> "May"
+
             # Rule 7: Check standard entities
             if base_clean in self.standard_lookup:
                 proper = self.standard_lookup[base_clean]
                 capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
-            
+
             # Rule 7: Check agenda entities
             if base_clean in self.agenda_entities:
                 proper = self.agenda_entities[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
+                continue
+
+            # Rule 7c: Known council/staff surnames used on their own,
+            # e.g. "board member clendenin" -> "board member Clendenin".
+            if base_clean in self.known_surnames:
+                proper = self.known_surnames[base_clean]
                 capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
             

@@ -55,8 +55,12 @@ print("\n=== Running GLiNER Zero-Shot Tests (use_gliner=True) ===")
 cap_gliner = TranscriptCapitalizer(use_gliner=True)
 
 gliner_tests = {
-    # Law/Act capitalization
-    "THE BROWNFIELDS REDEVELOPMENT ACT WAS PASSED": "The Brownfields Redevelopment Act was passed",
+    # The "law"/"document"/"facility" GLiNER labels were removed because they
+    # title-cased generic phrases ("Laws in Place", "Required Documents",
+    # "Beautiful Park"). Named acts are no longer auto-capitalized by GLiNER —
+    # add them to data/standard_entities.json for reliable, false-positive-free
+    # capitalization.
+    "THE BROWNFIELDS REDEVELOPMENT ACT WAS PASSED": "The brownfields redevelopment act was passed",
     # Document name capitalization with lowercase prepositions/conjunctions (e.g. on, of)
     "THE STAFF REPORT ON ROYAL STREET BROWNFIELD AREA DESIGNATION WAS READ": "The Staff report on Royal Street Brownfield Area designation was read",
     # Facility capitalization
