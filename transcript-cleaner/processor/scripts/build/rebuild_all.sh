@@ -70,6 +70,7 @@ echo ""
 echo "4/5  Building speaker roster..."
 "$VENV_PYTHON" "$SCRIPT_DIR/build_speaker_roster.py" \
     --transcripts "$DATA_DIR/transcripts/*.json" \
+    --config "$DATA_DIR/capitalization_config.json" \
     --output "$DATA_DIR/roster_entities.json"
 echo ""
 

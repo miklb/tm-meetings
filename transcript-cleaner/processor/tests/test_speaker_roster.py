@@ -29,6 +29,12 @@ tests = {
     # ...but NOT when the bare word is used as a common adjective.
     "THE YOUNG MAN SPOKE": "The young man spoke",
     "WE DOCK THE BOAT": "We dock the boat",
+
+    # name_allowlist: "miranda" is a dictionary word but a sitting member whose
+    # common-word sense is rare, so it capitalizes even as a bare surname.
+    "I AGREE WITH MIRANDA": "I agree with Miranda",
+    # "young" stays OFF the allowlist — the everyday adjective is too common.
+    "WE SUPPORT YOUNG FAMILIES": "We support young families",
 }
 
 passed = failed = 0

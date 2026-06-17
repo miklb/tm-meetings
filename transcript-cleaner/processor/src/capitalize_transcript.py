@@ -98,6 +98,9 @@ class TranscriptCapitalizer:
         self.neighborhoods = set(config.get('neighborhoods', []))
         self.street_suffixes = set(config.get('street_suffixes', []))
         self.skip_words = set(config.get('skip_words', []))
+        # Surnames that are dictionary words but should still capitalize alone
+        # (members/officials whose common-word sense is rare in council speech).
+        self.name_allowlist = set(w.lower() for w in config.get('name_allowlist', []))
         
         # Load standard entities
         with open(standard_entities_file, 'r') as f:
@@ -148,7 +151,7 @@ class TranscriptCapitalizer:
                     and t not in self.skip_words
                     and t not in _always_lower
                     and t not in _AMBIGUOUS_MONTHS
-                    and t not in self._common_words)
+                    and (t not in self._common_words or t in self.name_allowlist))
 
         self.known_surnames = {}
         for name in list(hybrid_data['people'].keys()):

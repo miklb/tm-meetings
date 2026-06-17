@@ -108,7 +108,16 @@ def is_person_label(label: str) -> bool:
     return all(re.fullmatch(r"[A-Za-z][A-Za-z'\-]*\.?", tok) for tok in tokens)
 
 
-def build_roster(transcript_glob: str, min_count: int) -> dict:
+def load_name_allowlist(config_path: str) -> set:
+    """Surnames that are dictionary words but should still be standalone rules."""
+    try:
+        with open(config_path, encoding='utf-8') as f:
+            return {w.lower() for w in json.load(f).get('name_allowlist', [])}
+    except (OSError, json.JSONDecodeError):
+        return set()
+
+
+def build_roster(transcript_glob: str, min_count: int, config_path: str) -> dict:
     counts = Counter()
     for path in glob.glob(transcript_glob):
         try:
@@ -121,6 +130,7 @@ def build_roster(transcript_glob: str, min_count: int) -> dict:
                 counts[label] += 1
 
     common = load_common_words()
+    allowlist = load_name_allowlist(config_path)
 
     # Pass 1: best proper-casing and total count per name (merging source
     # casing variants, preferring the one that preserves intercaps).
@@ -141,7 +151,7 @@ def build_roster(transcript_glob: str, min_count: int) -> dict:
         tokens = proper.split()
         for tok in (tokens[0], tokens[-1]):
             t = tok.lower().rstrip('.')
-            if len(t) >= 3 and t.isalpha() and t not in common:
+            if len(t) >= 3 and t.isalpha() and (t not in common or t in allowlist):
                 single_word_names[t] = tok
 
     return {
@@ -159,11 +169,13 @@ def main():
     parser.add_argument('--transcripts', default='data/transcripts/*.json',
                         help='Glob for raw transcript JSON files')
     parser.add_argument('--output', type=Path, default=Path('data/roster_entities.json'))
+    parser.add_argument('--config', default='data/capitalization_config.json',
+                        help='Config file providing name_allowlist')
     parser.add_argument('--min-count', type=int, default=1,
                         help='Minimum speaker-segment count to include a name')
     args = parser.parse_args()
 
-    roster = build_roster(args.transcripts, args.min_count)
+    roster = build_roster(args.transcripts, args.min_count, args.config)
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with open(args.output, 'w', encoding='utf-8') as f:
         json.dump(roster, f, indent=2, ensure_ascii=False)
