@@ -106,10 +106,13 @@ def main():
                     segment['text'] = capitalizer.capitalize_text(segment['text'])
 
                 if 'speaker' in segment:
-                    # Capitalize speaker name (convert from ALL CAPS to Title Case)
+                    # Capitalize the speaker name through the same entity-aware
+                    # path as the text (and as archive-meeting.sh), so intercaps
+                    # roster names like "Cedric McCray" / "LaChone Dock" are
+                    # preserved rather than flattened to "Mccray" / "Lachone".
                     speaker = segment['speaker'].strip()
                     if speaker:
-                        segment['speaker'] = ' '.join(word.capitalize() for word in speaker.split())
+                        segment['speaker'] = capitalizer.capitalize_text(speaker)
 
             # Save processed transcript
             with open(output_file, 'w', encoding='utf-8') as f:
