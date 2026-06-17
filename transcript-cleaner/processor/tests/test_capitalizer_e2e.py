@@ -66,6 +66,11 @@ gliner_tests = {
     # Facility capitalization
     "WE MET AT THE TAMPA CONVENTION CENTER": "We met at The Tampa Convention Center",
     "THE EVENT WAS AT CURTIS HIXON PARK": "The event was at Curtis Hixon Park",
+    # GLiNER mislabels generic demographic phrases as people — these must NOT be
+    # title-cased ("Young Lady"/"Young Man" was the bug).
+    "I SAW THE YOUNG LADY CRYING": "I saw the young lady crying",
+    "WE HEARD FROM A YOUNG MAN TODAY": "We heard from a young man today",
+    "SMALL BUSINESS OWNERS SPOKE": "Small business owners spoke",
 }
 
 print()

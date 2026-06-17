@@ -66,6 +66,16 @@ _NAME_TITLE_PREV = frozenset({
     'senator', 'judge', 'officer',
 })
 
+# Generic demographic nouns. A GLiNER multi-word "person" ending in one of these
+# is a description ("young lady", "young man", "business owners"), not a name.
+_GENERIC_PERSON_NOUNS = frozenset({
+    'lady', 'ladies', 'man', 'men', 'woman', 'women', 'person', 'persons',
+    'people', 'guy', 'guys', 'gentleman', 'gentlemen', 'folks', 'kid', 'kids',
+    'child', 'children', 'boy', 'boys', 'girl', 'girls', 'family', 'families',
+    'citizen', 'citizens', 'resident', 'residents', 'neighbor', 'neighbors',
+    'owner', 'owners', 'student', 'students', 'professional', 'professionals',
+})
+
 
 _COMMON_WORDS_PATH = "/usr/share/dict/words"
 
@@ -380,7 +390,16 @@ class TranscriptCapitalizer:
                         # Skip if it is a substring of any multi-word database entity
                         if any(entity_text.lower() in db_pattern for db_pattern in self.multiword_patterns):
                             continue
-                        
+
+                        # Skip generic descriptions GLiNER mislabels as people:
+                        # a multi-word phrase ending in a common demographic noun
+                        # ("young lady", "young man", "young people", "small
+                        # business owners"). A real personal name does not end in
+                        # one of these words, so genuine names are unaffected.
+                        ent_tokens = [re.sub(r"[^\w]", '', w).lower() for w in entity_text.split()]
+                        if len(ent_tokens) > 1 and ent_tokens[-1] in _GENERIC_PERSON_NOUNS:
+                            continue
+
                         # Title case the entity (capitalize each word)
                         # Preserve hyphenated name casing, handle acronyms/possessives, and keep common lowercase words lowercase
                         words_in_entity = entity_text.split()
