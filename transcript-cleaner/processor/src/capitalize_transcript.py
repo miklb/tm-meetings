@@ -56,6 +56,21 @@ _MONTH_CONTEXT_PREV = frozenset({
 })
 
 
+_COMMON_WORDS_PATH = "/usr/share/dict/words"
+
+
+def _load_common_words() -> set:
+    """Lowercase English words, used to keep common-word surnames ("Young",
+    "Dock", "Pope", "Steady") out of the standalone surname index — they would
+    otherwise capitalize every occurrence of the common word. Falls back to an
+    empty set (no filtering) if the system word list is unavailable."""
+    try:
+        with open(_COMMON_WORDS_PATH, 'r', encoding='utf-8', errors='ignore') as f:
+            return {w.strip().lower() for w in f if w.strip().isalpha()}
+    except OSError:
+        return set()
+
+
 def _load_config(config_file: str = "data/capitalization_config.json") -> dict:
     """Load acronyms, neighborhoods, and street suffixes from config file."""
     config_path = Path(config_file)
@@ -71,6 +86,7 @@ class TranscriptCapitalizer:
                  standard_entities_file: str = "data/standard_entities.json",
                  hybrid_entities_file: str = "data/hybrid_entity_database.json",
                  config_file: str = "data/capitalization_config.json",
+                 roster_file: str = "data/roster_entities.json",
                  use_gliner: bool = True):
         """Initialize with entity databases and optionally GLiNER model."""
         
@@ -122,6 +138,7 @@ class TranscriptCapitalizer:
         # "Chair Clendenin", anything the config already protects, and ambiguous
         # months, so single-word lookup stays safe.
         _always_lower = set(w.lower() for w in self.special_rules.get('always_lowercase', []))
+        self._common_words = _load_common_words()
 
         def _accept_surname(token: str) -> bool:
             t = token.lower()
@@ -130,7 +147,8 @@ class TranscriptCapitalizer:
                     and t not in _NON_SURNAME_WORDS
                     and t not in self.skip_words
                     and t not in _always_lower
-                    and t not in _AMBIGUOUS_MONTHS)
+                    and t not in _AMBIGUOUS_MONTHS
+                    and t not in self._common_words)
 
         self.known_surnames = {}
         for name in list(hybrid_data['people'].keys()):
@@ -146,9 +164,27 @@ class TranscriptCapitalizer:
                 # First name too
                 if _accept_surname(parts[0]):
                     self.known_surnames[parts[0].lower()] = parts[0]
-        
+
+        # Speaker-label roster: the authoritative list of people who actually
+        # spoke in meetings (council/CRA members, staff, recurring guests).
+        # Always loaded so their names are never left lowercase, regardless of
+        # whether they appear in any agenda. Built by build_speaker_roster.py.
+        roster_path = Path(roster_file)
+        roster_names = 0
+        if roster_path.exists():
+            with open(roster_path, 'r') as f:
+                roster = json.load(f)
+            # Full names -> agenda entities (single- and multi-word matching).
+            for key, proper in roster.get('full_names', {}).items():
+                self.agenda_entities[key] = proper
+            # First/last tokens already filtered to exclude common English words.
+            for key, proper in roster.get('single_word_names', {}).items():
+                self.known_surnames[key] = proper
+            roster_names = len(roster.get('full_names', {}))
+
         print(f"  ✓ Loaded {len(self.agenda_entities)} agenda entities")
         print(f"  ✓ Built {len(self.known_surnames)} surname index")
+        print(f"  ✓ Loaded {roster_names} roster names from speaker labels")
         
         # Load GLiNER for runtime entity detection
         self.use_gliner = use_gliner
