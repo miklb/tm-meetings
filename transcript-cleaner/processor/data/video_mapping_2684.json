@@ -1,0 +1,90 @@
+{
+  "meeting_id": 2684,
+  "meeting_date": "2026-06-11",
+  "meeting_type": "CRA",
+  "videos": [
+    {
+      "video_id": "JMCZ6RmvBmk",
+      "title": "Community Redevelopment Agency - 06/11/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-06-12T05:13:52Z",
+      "duration": "PT3H13M45S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 9: CRA26-24681 - Tampa Bay Rays Ballpark MOU",
+          "timestamp": "00:18:39",
+          "seconds": 1119
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:42:45",
+          "seconds": 2565
+        },
+        {
+          "title": "Item 1: CRA24-2242 - West Tampa CAC Verbal Report",
+          "timestamp": "01:54:57",
+          "seconds": 6897
+        },
+        {
+          "title": "Item 2: CRA24-2241 - CRA Director's Monthly Report",
+          "timestamp": "02:11:17",
+          "seconds": 7877
+        },
+        {
+          "title": "Item 3: CRA26-24444 - 34th Street Workforce Housing",
+          "timestamp": "02:14:17",
+          "seconds": 8057
+        },
+        {
+          "title": "Item 4: CRA25-19542 - Special Request Funding Limits",
+          "timestamp": "02:44:29",
+          "seconds": 9869
+        }
+      ],
+      "offset_seconds": 496
+    },
+    {
+      "video_id": "hCQUJBxgavE",
+      "title": "Community Redevelopment Agency - 06/11/26 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-06-12T08:03:53Z",
+      "duration": "PT2H22M36S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 5: CRA26-24165 - CRA Housing Funding Discussion",
+          "timestamp": "00:14:10",
+          "seconds": 850
+        },
+        {
+          "title": "Item 7: CRA26-23737 - CRA Website Outsourcing",
+          "timestamp": "01:14:46",
+          "seconds": 4486
+        },
+        {
+          "title": "Item 8: CRA26-24445 - East Tampa CRP Update",
+          "timestamp": "01:17:34",
+          "seconds": 4654
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "02:07:05",
+          "seconds": 7625
+        }
+      ],
+      "transcript_start_time": "1:16:25PM",
+      "offset_seconds": 617
+    }
+  ]
+}
