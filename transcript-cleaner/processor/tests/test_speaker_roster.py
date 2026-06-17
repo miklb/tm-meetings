@@ -24,10 +24,15 @@ tests = {
     "CEDRIC MCCRAY GAVE THE REPORT": "Cedric McCray gave the report",
     "WE HEARD FROM LACHONE DOCK": "We heard from LaChone Dock",
 
-    # Common-word surnames: capitalized in full-name context...
+    # Common-word surname "Young" (council member Naya Young):
+    # full name...
     "NAYA YOUNG SECONDED": "Naya Young seconded",
-    # ...but NOT when the bare word is used as a common adjective.
+    # ...preceded by a title/role -> capitalized as the member...
+    "COUNCILWOMAN YOUNG MADE A MOTION": "Councilwoman Young made a motion",
+    "I YIELD TO MEMBER YOUNG": "I yield to member Young",
+    # ...but the bare everyday adjective stays lowercase.
     "THE YOUNG MAN SPOKE": "The young man spoke",
+    "WE SUPPORT YOUNG FAMILIES": "We support young families",
     "WE DOCK THE BOAT": "We dock the boat",
 
     # name_allowlist: "miranda" is a dictionary word but a sitting member whose

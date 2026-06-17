@@ -55,6 +55,17 @@ _MONTH_CONTEXT_PREV = frozenset({
     'early', 'late', 'mid', 'this', 'last', 'next',
 })
 
+# Titles/roles that, when they precede a surname, signal name use rather than
+# the everyday word. Used to capitalize ambiguous common-word surnames like
+# "Young" ("councilwoman young" -> "councilwoman Young"; "young people" stays).
+_NAME_TITLE_PREV = frozenset({
+    'councilman', 'councilwoman', 'councilmember', 'councilperson', 'council',
+    'member', 'chair', 'chairman', 'chairwoman', 'chairperson', 'commissioner',
+    'mr', 'mrs', 'ms', 'miss', 'dr', 'doctor', 'vice', 'mayor', 'attorney',
+    'director', 'board', 'reverend', 'captain', 'president', 'representative',
+    'senator', 'judge', 'officer',
+})
+
 
 _COMMON_WORDS_PATH = "/usr/share/dict/words"
 
@@ -136,37 +147,42 @@ class TranscriptCapitalizer:
             proper = ' '.join(w.capitalize() for w in neighborhood.split())
             self.agenda_entities[neighborhood] = proper
         
-        # Build surname index from people names for single-word and hyphenated
-        # matching.  Exclude role/title words harvested from names like
-        # "Chair Clendenin", anything the config already protects, and ambiguous
-        # months, so single-word lookup stays safe.
+        # Build the surname index from people names. Each name token is sorted
+        # into one of two buckets:
+        #   known_surnames   — capitalized unconditionally (not a common word,
+        #                      or explicitly allowlisted).
+        #   context_surnames — a common English word that is ALSO a surname
+        #                      (e.g. "Young", "Dock"); only capitalized when
+        #                      preceded by a title/role, so "councilwoman young"
+        #                      becomes "...Young" but "young people" is left alone.
+        # Role/title words from names like "Chair Clendenin", config-protected
+        # words, and ambiguous months are rejected outright.
         _always_lower = set(w.lower() for w in self.special_rules.get('always_lowercase', []))
         self._common_words = _load_common_words()
-
-        def _accept_surname(token: str) -> bool:
-            t = token.lower()
-            return (len(t) >= 3
-                    and t.isalpha()
-                    and t not in _NON_SURNAME_WORDS
-                    and t not in self.skip_words
-                    and t not in _always_lower
-                    and t not in _AMBIGUOUS_MONTHS
-                    and (t not in self._common_words or t in self.name_allowlist))
-
         self.known_surnames = {}
+        self.context_surnames = {}
+
+        def _register_surname(token: str):
+            t = token.lower().rstrip('.')
+            if (len(t) < 3 or not t.isalpha()
+                    or t in _NON_SURNAME_WORDS or t in self.skip_words
+                    or t in _always_lower or t in _AMBIGUOUS_MONTHS):
+                return
+            if t not in self._common_words or t in self.name_allowlist:
+                self.known_surnames[t] = token
+            elif t not in self.known_surnames:
+                self.context_surnames[t] = token
+
         for name in list(hybrid_data['people'].keys()):
             parts = name.split()
             if len(parts) >= 2:
                 last = parts[-1]
                 if '-' in last:
                     for hp in last.split('-'):
-                        if _accept_surname(hp):
-                            self.known_surnames[hp.lower()] = hp
-                elif _accept_surname(last):
-                    self.known_surnames[last.lower()] = last
-                # First name too
-                if _accept_surname(parts[0]):
-                    self.known_surnames[parts[0].lower()] = parts[0]
+                        _register_surname(hp)
+                else:
+                    _register_surname(last)
+                _register_surname(parts[0])
 
         # Speaker-label roster: the authoritative list of people who actually
         # spoke in meetings (council/CRA members, staff, recurring guests).
@@ -177,16 +193,18 @@ class TranscriptCapitalizer:
         if roster_path.exists():
             with open(roster_path, 'r') as f:
                 roster = json.load(f)
-            # Full names -> agenda entities (single- and multi-word matching).
+            # Full names -> agenda entities (single- and multi-word matching),
+            # and their first/last tokens -> surname buckets.
             for key, proper in roster.get('full_names', {}).items():
                 self.agenda_entities[key] = proper
-            # First/last tokens already filtered to exclude common English words.
-            for key, proper in roster.get('single_word_names', {}).items():
-                self.known_surnames[key] = proper
+                tokens = proper.split()
+                _register_surname(tokens[0])
+                _register_surname(tokens[-1])
             roster_names = len(roster.get('full_names', {}))
 
         print(f"  ✓ Loaded {len(self.agenda_entities)} agenda entities")
-        print(f"  ✓ Built {len(self.known_surnames)} surname index")
+        print(f"  ✓ Built {len(self.known_surnames)} surname index "
+              f"(+{len(self.context_surnames)} title-gated)")
         print(f"  ✓ Loaded {roster_names} roster names from speaker labels")
         
         # Load GLiNER for runtime entity detection
@@ -584,7 +602,17 @@ class TranscriptCapitalizer:
                 proper = self.known_surnames[base_clean]
                 capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
-            
+
+            # Rule 7d: Ambiguous common-word surnames (e.g. "Young", "Dock") only
+            # capitalize when preceded by a title/role — "councilwoman young" ->
+            # "councilwoman Young", while "young people" stays lowercase.
+            if base_clean in self.context_surnames and i > 0:
+                prev_clean = re.sub(r'[^\w]', '', words[i - 1]).lower()
+                if prev_clean in _NAME_TITLE_PREV:
+                    proper = self.context_surnames[base_clean]
+                    capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
+                    continue
+
             # Rule 8: Check GLiNER-detected entities
             if base_clean in gliner_entities:
                 proper = gliner_entities[base_clean]
