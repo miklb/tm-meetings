@@ -429,6 +429,12 @@ class TranscriptCapitalizer:
                                 proper_parts.append(lead_w + clean_w + suffix_w + trail_w)
                             elif clean_w in self.acronyms or clean_w in self.special_rules.get('always_uppercase', []):
                                 proper_parts.append(lead_w + base_w.upper() + suffix_w + trail_w)
+                            elif clean_w in self.known_surnames:
+                                # Defer to our authoritative casing so GLiNER does
+                                # not flatten intercaps names ("McCray" -> "Mccray").
+                                proper_parts.append(lead_w + self.known_surnames[clean_w] + suffix_w + trail_w)
+                            elif clean_w in self.context_surnames:
+                                proper_parts.append(lead_w + self.context_surnames[clean_w] + suffix_w + trail_w)
                             elif '-' in clean_w:
                                 proper_parts.append(lead_w + '-'.join(p.capitalize() for p in clean_w.split('-')) + suffix_w + trail_w)
                             else:
