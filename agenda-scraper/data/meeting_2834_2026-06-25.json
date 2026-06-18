@@ -1,0 +1,256 @@
+{
+  "meetingId": "2834",
+  "meetingType": "workshop",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "June 25, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2834&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "24439",
+      "title": "File No. CM26-23875\nDiscussion on 33647 response times in light of the moving of the apparatus with a plan of action with response time and including an update on the status with the developer. (Original motion initiated by Viera-Carlson on May 7, 2026)(Updated motion initiated by Viera-Maniscalco on May 21, 2026)",
+      "rawTitle": "File No. CM26-23875\nDiscussion on 33647 response times in light of the moving of the apparatus with a plan of action with response time and including an update on the status with the developer. (Original motion initiated by Viera-Carlson on May 7, 2026)(Updated motion initiated by Viera-Maniscalco on May 21, 2026)",
+      "fileNumber": "CM26-23875",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.TRIPP%20-%20052126%20REGULAR%20COUNCIL%20SESSION%20-%20FILE%20NO.%20CM26-23875.PDF.pdf?documentType=1&meetingId=2834&itemId=24439&publishId=198893&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF in a new tab",
+          "originalText": "MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 2,
+      "agendaItemId": "23708",
+      "title": "File No. CM26-23708\nTampa Police Department to prepare and implement a plan to enforce ambient noise, to focus on noise and reactive suggestions, and a task force. (Original motion initiated by Hurtak-Maniscalco on April 23, 2026)",
+      "rawTitle": "File No. CM26-23708\nTampa Police Department to prepare and implement a plan to enforce ambient noise, to focus on noise and reactive suggestions, and a task force. (Original motion initiated by Hurtak-Maniscalco on April 23, 2026)",
+      "fileNumber": "CM26-23708",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 3,
+      "agendaItemId": "23649",
+      "title": "File No. CM26-23649\nWorkshop for the second round of conversation on the tree trust fund and NRAC. (Original motion initiated by Hurtak-Carlson on April 23, 2026)\n\nMemorandum from Brian Knox, Senior Forester Examiner, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM26-23649\nWorkshop for the second round of conversation on the tree trust fund and NRAC. (Original motion initiated by Hurtak-Carlson on April 23, 2026)\n\nMemorandum from Brian Knox, Senior Forester Examiner, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "fileNumber": "CM26-23649",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "MEMO.LOPEZ - 062526 WORKSHOP COUNCIL SESSION - FILE NO. CM26-23649.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.LOPEZ%20-%20062526%20WORKSHOP%20COUNCIL%20SESSION%20-%20FILE%20NO.%20CM26-23649.PDF.pdf?documentType=1&meetingId=2834&itemId=23649&publishId=198894&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO.LOPEZ - 062526 WORKSHOP COUNCIL SESSION - FILE NO. CM26-23649.PDF in a new tab",
+          "originalText": "MEMO.LOPEZ - 062526 WORKSHOP COUNCIL SESSION - FILE NO. CM26-23649.PDF"
+        },
+        {
+          "title": "NRAC6.25CCFINALADAPPT.PPTX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/NRAC6.25CCFINALADAPPT.PPTX.pdf?documentType=1&meetingId=2834&itemId=23649&publishId=198895&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of NRAC6.25CCFINALADAPPT.PPTX in a new tab",
+          "originalText": "NRAC6.25CCFINALADAPPT.PPTX"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 4,
+      "agendaItemId": "24827",
+      "title": "File No. CM26-24827\nIn part of the review of the $300 per tree mitigation fee, Staff to explain the steps required to increase the mitigation fee. (Original motion initiated by Hurtak-Miranda on June 4, 2026)",
+      "rawTitle": "File No. CM26-24827\nIn part of the review of the $300 per tree mitigation fee, Staff to explain the steps required to increase the mitigation fee. (Original motion initiated by Hurtak-Miranda on June 4, 2026)",
+      "fileNumber": "CM26-24827",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$300"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$300",
+          "value": 300,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "File No. CM26-24827 In part of the review of the $300 per tree mitigation fee, Staff to explain the steps required to increase the mitigation fee. (Original motion initiated by Hurtak-Miranda on June 4, 2026)",
+            "File No. CM26-24827In part of the review of the $300 per tree mitigation fee, Staff to explain the steps required to increase the mitigation fee. (Original motion initiated by Hurtak-Miranda on June 4, 2026)"
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 300,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 5,
+      "agendaItemId": "24871",
+      "title": "File No. CM26-24871\nStaff to give a brief explanation of the TreeMendous Program, to include success rates, tree selection, wait list, where trees can be planted and homeowner requirements; further, explain what is required to expand the program to include planting in homeowner front yards. (Original motion initiated by Hurtak-Young on June 4, 2026)",
+      "rawTitle": "File No. CM26-24871\nStaff to give a brief explanation of the TreeMendous Program, to include success rates, tree selection, wait list, where trees can be planted and homeowner requirements; further, explain what is required to expand the program to include planting in homeowner front yards. (Original motion initiated by Hurtak-Young on June 4, 2026)",
+      "fileNumber": "CM26-24871",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 6,
+      "agendaItemId": "23705",
+      "title": "File No. CM26-23705\nCouncil and Staff to have a discussion on making it illegal in the City of Tampa for businesses to modify vehicles and to review Collier County’s ordinance regarding noise. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
+      "rawTitle": "File No. CM26-23705\nCouncil and Staff to have a discussion on making it illegal in the City of Tampa for businesses to modify vehicles and to review Collier County’s ordinance regarding noise. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
+      "fileNumber": "CM26-23705",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 7,
+      "agendaItemId": "23707",
+      "title": "File No. CM26-23707 \nStaff to return to Council with acoustic design standards for new and existing operators, particular those within feet of residential towers. (Original motion initiated by Young-Miranda on April 23, 2026)",
+      "rawTitle": "File No. CM26-23707 \nStaff to return to Council with acoustic design standards for new and existing operators, particular those within feet of residential towers. (Original motion initiated by Young-Miranda on April 23, 2026)",
+      "fileNumber": "CM26-23707",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    },
+    {
+      "number": 8,
+      "agendaItemId": "23706",
+      "title": "File No. CM26-23706\nCity Legal Staff to present suggestions for proposed enforceable rule changes to the Ordinance on Chapter 14. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
+      "rawTitle": "File No. CM26-23706\nCity Legal Staff to present suggestions for proposed enforceable rule changes to the Ordinance on Chapter 14. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
+      "fileNumber": "CM26-23706",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null
+    }
+  ],
+  "financialSummary": {
+    "totalAmountDiscussed": 300,
+    "formattedTotalAmountDiscussed": "$300.00",
+    "itemCount": 1,
+    "range": {
+      "smallest": {
+        "number": 4,
+        "fileNumber": "CM26-24827",
+        "amount": 300,
+        "formatted": "$300.00"
+      },
+      "largest": {
+        "number": 4,
+        "fileNumber": "CM26-24827",
+        "amount": 300,
+        "formatted": "$300.00"
+      }
+    },
+    "totalExpenditures": 0,
+    "formattedTotalExpenditures": "$0.00",
+    "expenditureRange": null,
+    "expenditureItems": []
+  },
+  "formattedDate": "2026-06-25"
+}
