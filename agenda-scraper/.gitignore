@@ -48,3 +48,14 @@ output/
 
 # Publishing scripts (contains production server paths)
 publish-wp.js
+
+# Minutes feature (not public yet)
+fetch-minutes.js
+discover-meetings.js
+audit-missing-minutes.js
+query-votes.js
+probe-summary.js
+lib/minutes-parser.js
+docs/MINUTES-PARSING.md
+data/minutes_*.json
+data/discovered-meetings.json
