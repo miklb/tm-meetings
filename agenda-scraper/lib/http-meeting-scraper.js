@@ -712,18 +712,24 @@ async function fetchMeetingList(options = {}) {
     const name = (m.Name || '').toLowerCase();
     const typeName = (m.MeetingTypeName || '').toLowerCase();
 
-    // Skip non-council meetings (code enforcement boards, etc.)
-    if (typeName.includes('code enforcement') || name.includes('code enforcement')) continue;
+    // Skip non-council meetings. Use an allowlist keyed on MeetingTypeName so that
+    // names like "Special Magistrate" don't slip through on the word "special".
+    const ALLOWED_TYPES = new Set([
+      'council regular', 'council evening', 'council workshop',
+      'council special', 'council calendar',
+      'cra regular', 'cra special',
+    ]);
+    if (!ALLOWED_TYPES.has(typeName)) continue;
 
     let meetingType = 'regular';
 
-    if (typeName.includes('evening') || name.includes('evening')) {
+    if (typeName.includes('evening')) {
       meetingType = 'evening';
-    } else if (typeName.includes('workshop') || name.includes('workshop')) {
+    } else if (typeName.includes('workshop') || typeName.includes('calendar')) {
       meetingType = 'workshop';
-    } else if (typeName.includes('special') || name.includes('special')) {
+    } else if (typeName.includes('special')) {
       meetingType = 'special';
-    } else if (typeName.includes('cra') || name.includes('cra') || name.includes('community redevelopment')) {
+    } else if (typeName.includes('cra')) {
       meetingType = 'cra';
     }
 
@@ -783,14 +789,15 @@ function fetchMeetingListFromHTML(html) {
 
     const rowText = $tr.text().toLowerCase();
 
-    // Skip non-council meetings (code enforcement boards, etc.)
-    if (rowText.includes('code enforcement')) return;
+    // Skip non-council meetings. "special magistrate" contains "special" so
+    // check the blocklist before the meetingType branch below.
+    if (rowText.includes('code enforcement') || rowText.includes('special magistrate')) return;
 
     let meetingType = 'regular';
-    
+
     if (rowText.includes('evening')) {
       meetingType = 'evening';
-    } else if (rowText.includes('workshop')) {
+    } else if (rowText.includes('workshop') || rowText.includes('calendar')) {
       meetingType = 'workshop';
     } else if (rowText.includes('special')) {
       meetingType = 'special';
