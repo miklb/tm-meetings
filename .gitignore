@@ -98,3 +98,4 @@ agenda-scraper/legacy/
 # Transcript processor specific
 transcript-cleaner/processor/output/
 docs/SUPPORTER-TIERS-AND-FREEMIUM-PLAN.md
+site/.dev.vars
