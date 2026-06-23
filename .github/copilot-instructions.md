@@ -200,26 +200,11 @@ const FILE_NUMBER_PATTERN = /([A-Z]{2,4})(\d{2})-(\d{4})/;
 
 ## Keyword Notifications Dispatch
 
-Keyword notifications are **manually triggered** — they are not part of the nightly scrape. Dispatch after:
+Keyword notifications are **manually triggered from your machine** — they are not part of the nightly scrape and there is no GitHub Action. Dispatch after:
 1. The WordPress agenda post is published
 2. The Monday morning newsletter has gone out
 
-### Trigger via GitHub Actions (preferred)
-
-```bash
-gh workflow run dispatch-notifications.yml \
-  -f meeting_ids=2591 \
-  -f wordpress_url=https://tampamonitor.com/agendas/2025-11-06/
-```
-
-For multiple meetings on the same agenda day (e.g., Council + CRA):
-```bash
--f meeting_ids=2591,2592
-```
-
-The `wordpress_url` is optional — if omitted, email links fall back to the static site. It is passed to all meeting IDs in the batch.
-
-### Run locally (for testing)
+### Run the dispatch script
 
 ```bash
 WEBHOOK_SECRET=<secret> \
@@ -228,7 +213,14 @@ WORDPRESS_AGENDA_URL=https://tampamonitor.com/agendas/2025-11-06/ \
 node scripts/dispatch-notifications.js
 ```
 
-Omit `WORDPRESS_AGENDA_URL` to test fallback behaviour. When the worker runs with `ENVIRONMENT="development"` and no `RESEND_API_KEY`, it logs emails instead of sending them; in production both `WEBHOOK_SECRET` and `RESEND_API_KEY` are required (the endpoint fails closed).
+For multiple meetings on the same agenda day (e.g., Council + CRA), pass a comma-separated list:
+```bash
+MEETING_IDS=2591,2592
+```
+
+The `WORDPRESS_AGENDA_URL` is optional — if omitted, email links fall back to the static site. It is passed to all meeting IDs in the batch. `WEBHOOK_SECRET` is kept in your local `.env` (never committed) and matches the Worker secret.
+
+When the worker runs with `ENVIRONMENT="development"` and no `RESEND_API_KEY`, it logs emails instead of sending them; in production both `WEBHOOK_SECRET` and `RESEND_API_KEY` are required (the endpoint fails closed).
 
 ### Sponsor slot
 

@@ -111,7 +111,7 @@ This logs matched keywords in the terminal and outputs a full Markdown summary r
 
 ## 6. Trigger Webhook & Verify Idempotency
 
-This is the endpoint the manual dispatch workflow (`dispatch-notifications.yml` / `scripts/dispatch-notifications.js`) calls after the WordPress agenda is published.
+This is the endpoint the manual dispatch script (`scripts/dispatch-notifications.js`, run locally) calls after the WordPress agenda is published.
 
 The endpoint fails closed: requests without a matching `X-Webhook-Secret` header are rejected (401), and the secret must be set in `site/.dev.vars` (the value below matches the Prerequisites example).
 
@@ -206,13 +206,12 @@ Do **not** set `ENVIRONMENT="development"` in production — it gates the mock-e
 ### 2b. Add a WAF Rate-Limiting Rule
 The in-process IP rate limiter in `_middleware.js` is best-effort only (per-isolate, per-colo). In the Cloudflare dashboard, add a rate-limiting rule (available on the free plan) covering `/api/subscribe` and `/api/manage`, e.g. 10 requests per minute per IP.
 
-### 3. Configure GitHub Action Secrets
-To allow the nightly scrape workflow to authenticate and call your live notify webhook, you must add the webhook secret to your repository secrets:
-1. Go to your GitHub Repository.
-2. Navigate to **Settings > Secrets and variables > Actions**.
-3. Click **New repository secret**.
-4. Name: `WEBHOOK_SECRET`
-5. Value: *[Insert the exact same random token you generated for `WEBHOOK_SECRET` in Cloudflare]*
+### 3. Configure the Dispatch Secret Locally
+Dispatch is run by hand from your machine (no GitHub Action), so `WEBHOOK_SECRET` only needs to live in two places:
+1. As a Worker secret in Cloudflare (`npx wrangler secret put WEBHOOK_SECRET`) so the `/api/notify` endpoint can authenticate the request.
+2. In your local `.env` (git-ignored), matching the exact same token, so `scripts/dispatch-notifications.js` can send it in the `X-Webhook-Secret` header.
+
+There is no repository secret to configure — nothing in GitHub Actions calls the notify webhook.
 
 ### 4. Deploy Frontend and Functions
 Build and deploy the application to Cloudflare Pages:

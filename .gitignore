@@ -98,6 +98,10 @@ agenda-scraper/legacy/
 # Transcript processor specific
 transcript-cleaner/processor/output/
 
+# Minutes scraper data (WIP, regenerable — keep out of git like other scraper output)
+agenda-scraper/data/minutes_*.json
+agenda-scraper/data/discovered-meetings.json
+
 # Wrangler local secrets
 .dev.vars
 site/.dev.vars
