@@ -4,6 +4,47 @@ This guide outlines step-by-step instructions for testing the keyword notificati
 
 ---
 
+## Testing Runbook (read this first)
+
+The full validation runs in four phases — local (mocked email) → production wiring → live smoke test (real email) → beta cutover. Each step below links to the detailed section further down.
+
+### Phase 1 — Local end-to-end (no real emails)
+Everything runs against local D1 with mocked emails (verify/manage links print to the Wrangler console). One terminal runs the dev server, another runs curl/SQL.
+
+1. **Prereqs** — `npm run build-db`; apply D1 migrations `--local` from `site/`; create `site/.dev.vars` with `ENVIRONMENT="development"` + `WEBHOOK_SECRET="any-local-secret"`. → [Prerequisites](#prerequisites)
+2. **Seed a supporter** into local D1 (required in `SUPPORTERS_ONLY` mode). → [§1](#1-seed-a-local-test-supporter)
+3. **Run the dev server** from `site/`. → [§2](#2-run-the-development-server)
+4. **Subscribe → verify** — POST `/api/subscribe`, follow the `devVerifyUrl`. → [§3](#3-test-subscription-flow-local-dev-mock)
+5. **Manage keywords** — POST `/api/manage`, follow `devManageUrl`; confirm the 15-keyword cap and 15-min link expiry. → [§4](#4-manage-keywords-dashboard)
+6. **Matching report** — `node scripts/test-matching.js` against real historical agenda data. → [§5](#5-evaluate-historical-matches-cli-report)
+7. **Dispatch + idempotency** — POST sample payload to `/api/notify`; confirm `sentCount:1`, then re-POST and confirm `sentCount:0` (dedup). → [§6](#6-trigger-webhook--verify-idempotency)
+8. **Two-step unsubscribe** — GET must not delete, POST deletes; verify rows gone. → [§7](#7-test-two-step-unsubscribe)
+
+**Exit criteria:** verification, management, matching, dedup, and unsubscribe all behave; the mocked digest in the console looks right (item links, sponsor slot, plain-text mirror).
+
+### Phase 2 — Production wiring (one-time)
+See [Production Deployment & Configuration Steps](#production-deployment--configuration-steps).
+- Apply D1 migrations `--remote`.
+- Pages secrets/vars: `RESEND_API_KEY` ✅ done · **`WEBHOOK_SECRET`** (Worker secret + matching copy in local `.env`) · **`TURNSTILE_SECRET_KEY`** + `TURNSTILE_SITE_KEY` · `REGISTRATION_MODE=SUPPORTERS_ONLY`.
+- Add the WAF rate-limit rule on `/api/subscribe` + `/api/manage`.
+- Seed real beta supporters/testers into remote D1.
+
+### Phase 3 — Live smoke test (real Resend email to yourself)
+1. Deploy the branch (or a Pages preview); subscribe with your own email through the real form (Turnstile live); confirm the verification email actually arrives.
+2. After a real WordPress agenda post is published, run the local dispatch for that meeting:
+   `MEETING_IDS=<id> WORDPRESS_AGENDA_URL=<wp-url> WEBHOOK_SECRET=<secret> node scripts/dispatch-notifications.js`
+   Confirm the digest arrives and the **"View full agenda" link points at the WordPress post**, with item deep-links resolving to `…#item-<fileNumber>`.
+3. Re-run the same dispatch → confirm no duplicate email (prod `notification_log`).
+
+### Phase 4 — Beta cutover
+Invite the real beta list. On a live agenda night, run dispatch **after the WP post is up and the Monday newsletter has gone out** (cadence in `.github/copilot-instructions.md` → "Keyword Notifications Dispatch").
+
+### Known gaps before a testing night
+- **Turnstile keys** not set up yet — needed before Phase 2/3 or the production form rejects everyone.
+- **`WEBHOOK_SECRET`** still needs generating (`openssl rand -hex 24`) and placing in both the Worker secret and your local `.env`.
+
+---
+
 ## Prerequisites
 
 1. **Main SQLite Database**: Ensure the historical meeting database has been built:
