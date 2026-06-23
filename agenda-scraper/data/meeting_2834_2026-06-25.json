@@ -1,24 +1,30 @@
 {
   "meetingId": "2834",
   "meetingType": "workshop",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "June 25, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2834&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
-      "agendaItemId": "24439",
-      "title": "File No. CM26-23875\nDiscussion on 33647 response times in light of the moving of the apparatus with a plan of action with response time and including an update on the status with the developer. (Original motion initiated by Viera-Carlson on May 7, 2026)(Updated motion initiated by Viera-Maniscalco on May 21, 2026)",
-      "rawTitle": "File No. CM26-23875\nDiscussion on 33647 response times in light of the moving of the apparatus with a plan of action with response time and including an update on the status with the developer. (Original motion initiated by Viera-Carlson on May 7, 2026)(Updated motion initiated by Viera-Maniscalco on May 21, 2026)",
-      "fileNumber": "CM26-23875",
+      "agendaItemId": "25525",
+      "title": "File No. E2026-48 \nResolution amending and restating the Rules of Procedure governing the meetings of the City Council of the City of Tampa, to primarily address public participation within the limited public forum created to conduct official public business; providing an effective date. (Original motion to schedule for second reading of the resolution initiated by Hurtak-Maniscalco on June 4, 2026)(Continued from June 18, 2026)",
+      "rawTitle": "File No. E2026-48 \nResolution amending and restating the Rules of Procedure governing the meetings of the City Council of the City of Tampa, to primarily address public participation within the limited public forum created to conduct official public business; providing an effective date. (Original motion to schedule for second reading of the resolution initiated by Hurtak-Maniscalco on June 4, 2026)(Continued from June 18, 2026)",
+      "fileNumber": "E2026-48",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.TRIPP%20-%20052126%20REGULAR%20COUNCIL%20SESSION%20-%20FILE%20NO.%20CM26-23875.PDF.pdf?documentType=1&meetingId=2834&itemId=24439&publishId=199319&isSection=False&isAttachment=True",
-          "originalTitle": "View PDF of MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF in a new tab",
-          "originalText": "MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF"
+          "title": "MEMO ON COUNCIL RULES OF PROCEDURE 6-4-2026 AGENDA.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO%20ON%20COUNCIL%20RULES%20OF%20PROCEDURE%206-4-2026%20AGENDA.PDF.pdf?documentType=1&meetingId=2834&itemId=25525&publishId=199401&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO ON COUNCIL RULES OF PROCEDURE 6-4-2026 AGENDA.PDF in a new tab",
+          "originalText": "MEMO ON COUNCIL RULES OF PROCEDURE 6-4-2026 AGENDA.PDF"
+        },
+        {
+          "title": "RULES OF PROCEDURE 6-4-2026 AGENDA PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RULES%20OF%20PROCEDURE%206-4-2026%20AGENDA%20PACKET.PDF.pdf?documentType=1&meetingId=2834&itemId=25525&publishId=199402&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RULES OF PROCEDURE 6-4-2026 AGENDA PACKET.PDF in a new tab",
+          "originalText": "RULES OF PROCEDURE 6-4-2026 AGENDA PACKET.PDF"
         }
       ],
       "folioNumbers": [],
@@ -38,12 +44,19 @@
     },
     {
       "number": 2,
-      "agendaItemId": "23708",
-      "title": "File No. CM26-23708Tampa Police Department to prepare and implement a plan to enforce ambient noise, to focus on noise and reactive suggestions, and a task force. (Original motion initiated by Hurtak-Maniscalco on April 23, 2026)",
-      "rawTitle": "File No. CM26-23708Tampa Police Department to prepare and implement a plan to enforce ambient noise, to focus on noise and reactive suggestions, and a task force. (Original motion initiated by Hurtak-Maniscalco on April 23, 2026)",
-      "fileNumber": "CM26-23708Tam",
+      "agendaItemId": "24439",
+      "title": "File No. CM26-23875\nDiscussion on 33647 response times in light of the moving of the apparatus with a plan of action with response time and including an update on the status with the developer. (Original motion initiated by Viera-Carlson on May 7, 2026)(Updated motion initiated by Viera-Maniscalco on May 21, 2026)",
+      "rawTitle": "File No. CM26-23875\nDiscussion on 33647 response times in light of the moving of the apparatus with a plan of action with response time and including an update on the status with the developer. (Original motion initiated by Viera-Carlson on May 7, 2026)(Updated motion initiated by Viera-Maniscalco on May 21, 2026)",
+      "fileNumber": "CM26-23875",
       "background": "",
-      "supportingDocuments": [],
+      "supportingDocuments": [
+        {
+          "title": "MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.TRIPP%20-%20052126%20REGULAR%20COUNCIL%20SESSION%20-%20FILE%20NO.%20CM26-23875.PDF.pdf?documentType=1&meetingId=2834&itemId=24439&publishId=199403&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF in a new tab",
+          "originalText": "MEMO.TRIPP - 052126 REGULAR COUNCIL SESSION - FILE NO. CM26-23875.PDF"
+        }
+      ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
@@ -69,13 +82,13 @@
       "supportingDocuments": [
         {
           "title": "MEMO.LOPEZ - 062526 WORKSHOP COUNCIL SESSION - FILE NO. CM26-23649.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.LOPEZ%20-%20062526%20WORKSHOP%20COUNCIL%20SESSION%20-%20FILE%20NO.%20CM26-23649.PDF.pdf?documentType=1&meetingId=2834&itemId=23649&publishId=199320&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.LOPEZ%20-%20062526%20WORKSHOP%20COUNCIL%20SESSION%20-%20FILE%20NO.%20CM26-23649.PDF.pdf?documentType=1&meetingId=2834&itemId=23649&publishId=199404&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of MEMO.LOPEZ - 062526 WORKSHOP COUNCIL SESSION - FILE NO. CM26-23649.PDF in a new tab",
           "originalText": "MEMO.LOPEZ - 062526 WORKSHOP COUNCIL SESSION - FILE NO. CM26-23649.PDF"
         },
         {
           "title": "NRAC6.25CCFINALADAPPT.PPTX",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/NRAC6.25CCFINALADAPPT.PPTX.pdf?documentType=1&meetingId=2834&itemId=23649&publishId=199321&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/NRAC6.25CCFINALADAPPT.PPTX.pdf?documentType=1&meetingId=2834&itemId=23649&publishId=199405&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of NRAC6.25CCFINALADAPPT.PPTX in a new tab",
           "originalText": "NRAC6.25CCFINALADAPPT.PPTX"
         }
@@ -161,58 +174,19 @@
     },
     {
       "number": 6,
-      "agendaItemId": "23705",
-      "title": "File No. CM26-23705Council and Staff to have a discussion on making it illegal in the City of Tampa for businesses to modify vehicles and to review Collier County’s ordinance regarding noise. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
-      "rawTitle": "File No. CM26-23705Council and Staff to have a discussion on making it illegal in the City of Tampa for businesses to modify vehicles and to review Collier County’s ordinance regarding noise. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
-      "fileNumber": "CM26-23705Cou",
-      "background": "",
-      "supportingDocuments": [],
-      "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
-      "summaryText": "",
-      "projectedCosts": null
-    },
-    {
-      "number": 7,
       "agendaItemId": "23707",
-      "title": "File No. CM26-23707 \nStaff to return to Council with acoustic design standards for new and existing operators, particular those within feet of residential towers. (Original motion initiated by Young-Miranda on April 23, 2026)",
-      "rawTitle": "File No. CM26-23707 \nStaff to return to Council with acoustic design standards for new and existing operators, particular those within feet of residential towers. (Original motion initiated by Young-Miranda on April 23, 2026)",
+      "title": "File No. CM26-23707 \nStaff to return to Council with acoustic design standards for new and existing operators, particular those within feet of residential towers. (Original motion initiated by Young-Miranda on April 23, 2026)\n\nMemorandum from Councilwoman Young, requesting that said agenda item be continued to September 24, 2024. (To be R/F)",
+      "rawTitle": "File No. CM26-23707 \nStaff to return to Council with acoustic design standards for new and existing operators, particular those within feet of residential towers. (Original motion initiated by Young-Miranda on April 23, 2026)\n\nMemorandum from Councilwoman Young, requesting that said agenda item be continued to September 24, 2024. (To be R/F)",
       "fileNumber": "CM26-23707",
       "background": "",
-      "supportingDocuments": [],
-      "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
-      "summaryText": "",
-      "projectedCosts": null
-    },
-    {
-      "number": 8,
-      "agendaItemId": "23706",
-      "title": "File No. CM26-23706City Legal Staff to present suggestions for proposed enforceable rule changes to the Ordinance on Chapter 14. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
-      "rawTitle": "File No. CM26-23706City Legal Staff to present suggestions for proposed enforceable rule changes to the Ordinance on Chapter 14. (Original motion initiated by Clendenin-Miranda on April 23, 2026)",
-      "fileNumber": "CM26-23706Cit",
-      "background": "",
-      "supportingDocuments": [],
+      "supportingDocuments": [
+        {
+          "title": "NOISE CONTINUOUS MEMO.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/NOISE%20CONTINUOUS%20MEMO.PDF.pdf?documentType=1&meetingId=2834&itemId=23707&publishId=199406&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of NOISE CONTINUOUS MEMO.PDF in a new tab",
+          "originalText": "NOISE CONTINUOUS MEMO.PDF"
+        }
+      ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
