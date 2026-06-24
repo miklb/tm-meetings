@@ -1,0 +1,25 @@
+/* ============================================================================
+   app.css — design-system entry for the meetings site.
+
+   The existing meetings stylesheet (style.css) is absorbed as a low-priority
+   `legacy` layer, so its domain components (agenda / transcript / video) keep
+   working untouched while the shared foundation + chrome win where they overlap
+   (typography, links, chrome). Migrate rules out of `legacy` over time.
+
+   Shared with tm-static via copy-now/package-later — keep these files in sync by
+   hand for now; extract a package if the duplication starts to hurt.
+
+   (Runtime @import = one request per file; fine for now, concat+minify later.)
+   ========================================================================== */
+@layer legacy, tokens, reset, base, layout, components, utilities;
+
+@import url("style.css") layer(legacy);
+
+@import url("tokens.css");
+@import url("reset.css");
+@import url("base.css");
+@import url("layout.css");
+
+/* shared chrome components added in the next step */
+
+@import url("utilities.css");

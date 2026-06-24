@@ -1,0 +1,15 @@
+/* ============================================================================
+   RESET — minimal, modern. Sets sane defaults only; no opinions (those live in
+   base). From the mockups' reset block.
+   ========================================================================== */
+@layer reset {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  /* prevent iOS text inflation (standard + webkit, per baseline support) */
+  html { text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
+
+  /* kill default margins; spacing is applied intentionally via the scale */
+  body, h1, h2, h3, h4, h5, h6, p, figure, blockquote, ul, ol { margin: 0; }
+
+  img, svg { display: block; max-width: 100%; }
+}
