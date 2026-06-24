@@ -97,5 +97,8 @@ agenda-scraper/legacy/
 
 # Transcript processor specific
 transcript-cleaner/processor/output/
-docs/SUPPORTER-TIERS-AND-FREEMIUM-PLAN.md
 site/.dev.vars
+
+# Planning docs — working notes, not project documentation. Put any *-PLAN
+# or scratch design doc under docs/plans/ to keep it out of version control.
+docs/plans/
