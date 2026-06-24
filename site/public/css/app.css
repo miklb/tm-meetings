@@ -11,7 +11,7 @@
 
    (Runtime @import = one request per file; fine for now, concat+minify later.)
    ========================================================================== */
-@layer legacy, tokens, reset, base, layout, components, utilities;
+@layer legacy, tokens, reset, base, layout, components, local, utilities;
 
 @import url("style.css") layer(legacy);
 
@@ -27,5 +27,10 @@
 @import url("components/mainnav.css");
 @import url("components/toolbox.css");
 @import url("components/site-footer.css");
+@import url("components/section-head.css");
+@import url("components/breadcrumb.css");
+
+/* meetings-specific polish (above components) */
+@import url("local.css");
 
 @import url("utilities.css");

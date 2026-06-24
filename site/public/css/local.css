@@ -1,0 +1,30 @@
+/* ============================================================================
+   local.css — meetings-specific polish that sits ABOVE the shared components
+   layer (so it can override both legacy and shared rules). Keep tm-static-shared
+   files pristine; site-specific tweaks live here.
+   ========================================================================== */
+@layer local {
+  /* The footer is a full-bleed band — override the legacy
+     `.site-footer { max-width: 65ch; margin-inline: auto }` constraint that was
+     boxing it in. */
+  .site-footer { max-width: none; }
+
+  /* ---- single meeting header: design-system heading + meta ---- */
+  .meeting-title {
+    font-family: var(--font-serif);
+    font-size: var(--step-3);
+    font-weight: 700;
+    line-height: 1.12;
+    text-wrap: balance;
+    margin: var(--s-sm) 0 var(--s-md);
+  }
+  .meeting-title .agenda-type {
+    font-family: var(--font-sans);
+    vertical-align: middle;
+  }
+  .meeting-meta {
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+  }
+}
