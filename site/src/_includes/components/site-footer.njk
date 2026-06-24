@@ -1,0 +1,36 @@
+{#
+  COMPONENT: site-footer — site footer with nav columns + colophon.
+
+  Params:
+   • siteName   (string, required)
+   • tagline    (string, required) — short tagline below the site name
+   • navColumns (array, required)  — [{heading, items: [{label, href}]}]
+   • copyright  (string, required) — e.g. "© 2026 The Tampa Monitor"
+   • creed      (string, optional) — e.g. "Independent · Transparent · Fact-based"
+#}
+{% macro siteFooter(siteName, tagline, navColumns, copyright, creed="") %}
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div class="site-footer__brand">
+        <span class="brand__name">{{ siteName }}</span>
+        <p>{{ tagline }}</p>
+      </div>
+      {% for col in navColumns %}
+      <nav aria-label="{{ col.heading }}">
+        <h2>{{ col.heading }}</h2>
+        <ul>
+          {% for item in col.items %}
+          <li><a href="{{ item.href }}">{{ item.label }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+      {% endfor %}
+    </div>
+    <div class="colophon">
+      <span>{{ copyright }}</span>
+      {% if creed %}<span class="colophon__creed">{{ creed }}</span>{% endif %}
+    </div>
+  </div>
+</footer>
+{% endmacro %}

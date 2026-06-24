@@ -1,0 +1,103 @@
+/* ============================================================================
+   COMPONENT: toolbox + tool — full-bleed ink band + civic-data tool cards.
+   ========================================================================== */
+@layer components {
+  /* ---- band shell (shared basis for any full-bleed section) ---- */
+  .band {
+    position: relative;
+    overflow: hidden;
+    padding-block: var(--s-2xl);
+  }
+  .band--ink {
+    background: var(--ink);
+    color: var(--c-paper);
+    background-image: radial-gradient(
+      120% 80% at 85% -10%,
+      color-mix(in srgb, var(--c-teal) 55%, transparent),
+      transparent 60%
+    );
+  }
+
+  /* city-hall watermark ghosted in the bottom-right corner */
+  .band__watermark {
+    position: absolute;
+    right: 2%;
+    bottom: -8%;
+    width: min(26vw, 300px);
+    aspect-ratio: 325 / 400;
+    opacity: .06;
+    pointer-events: none;
+    background: var(--c-paper);
+    -webkit-mask: url(/assets/images/city-hall-outline.svg) no-repeat center / contain;
+    mask: url(/assets/images/city-hall-outline.svg) no-repeat center / contain;
+  }
+
+  /* ---- toolbox head ---- */
+  .toolbox__head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s-md);
+    flex-wrap: wrap;
+    margin-bottom: var(--s-lg);
+  }
+  .toolbox__heading {
+    color: #fff;
+    font-size: var(--step-3);
+    margin-top: .2rem;
+  }
+  .toolbox__tagline {
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    color: color-mix(in srgb, #fff 75%, transparent);
+    max-width: 34ch;
+    margin: 0;
+  }
+
+  /* ---- toolbox grid ---- */
+  .toolbox__grid {
+    display: grid;
+    gap: var(--s-md);
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  }
+
+  /* ---- tool card ---- */
+  .tool {
+    display: flex;
+    gap: var(--s-md);
+    padding: var(--s-md);
+    background: color-mix(in srgb, #fff 7%, transparent);
+    border: 1px solid color-mix(in srgb, #fff 14%, transparent);
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: #fff;
+    transition: background .15s, transform .15s;
+  }
+  .tool:hover {
+    background: color-mix(in srgb, #fff 13%, transparent);
+    transform: translateY(-2px);
+    color: #fff;
+  }
+  .tool__icon { flex: none; color: var(--accent); }
+  .tool__name, .tool__desc, .tool__status { display: block; }
+  .tool__name {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: var(--step-0);
+    letter-spacing: .01em;
+  }
+  .tool__desc {
+    font-family: var(--font-sans);
+    font-size: .78rem;
+    color: color-mix(in srgb, #fff 72%, transparent);
+    margin-top: .15rem;
+  }
+  .tool__status {
+    font-family: var(--font-sans);
+    font-size: .7rem;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-top: .35rem;
+  }
+}

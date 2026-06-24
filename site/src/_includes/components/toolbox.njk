@@ -1,0 +1,53 @@
+{#
+  COMPONENT: toolbox + tool — full-width ink band (toolbox) holding civic-data
+  tool cards (tool). Appears on every page above the footer.
+
+  toolbox macro:
+   • tools      (array, required)  — array of tool data objects
+   • headingId  (string, optional) — id on the h2 for aria-labelledby
+   • label      (string, optional, default "What we're monitoring")
+   • heading    (string, optional, default "The toolbox")
+   • tagline    (string, optional) — tagline beside the heading
+
+  tool macro (also importable standalone):
+   • name        (string, required)
+   • href        (string, required)
+   • desc        (string, optional) — one-line description
+   • status      (string, optional) — e.g. "Updated weekly" | "Live map"
+   • iconSvgBody (string, optional) — inner SVG content (paths/rects) rendered safe
+                                      inside a standard 24×24 stroke SVG wrapper
+#}
+{% macro toolbox(tools, headingId="", label="What we're monitoring", heading="The toolbox", tagline="") %}
+<section class="band band--ink" id="toolbox"{% if headingId %} aria-labelledby="{{ headingId }}"{% endif %}>
+  <div class="band__watermark" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="toolbox__head">
+      <div>
+        <p class="label label--gold">{{ label }}</p>
+        <h2{% if headingId %} id="{{ headingId }}"{% endif %} class="toolbox__heading">{{ heading }}</h2>
+      </div>
+      {% if tagline %}<p class="toolbox__tagline">{{ tagline }}</p>{% endif %}
+    </div>
+    <div class="toolbox__grid">
+      {% for t in tools %}
+      {{ tool(t.name, t.href, t.desc, t.status, t.iconSvgBody) }}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endmacro %}
+
+{% macro tool(name, href, desc="", status="", iconSvgBody="") %}
+<a class="tool" href="{{ href }}">
+  {% if iconSvgBody %}
+  <svg class="tool__icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+    {{ iconSvgBody | safe }}
+  </svg>
+  {% endif %}
+  <span>
+    <span class="tool__name">{{ name }}</span>
+    {% if desc %}<span class="tool__desc">{{ desc }}</span>{% endif %}
+    {% if status %}<span class="tool__status">{{ status }}</span>{% endif %}
+  </span>
+</a>
+{% endmacro %}

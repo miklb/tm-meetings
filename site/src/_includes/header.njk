@@ -23,11 +23,18 @@
     <body>
         <a class="skip-link" href="#main-content">Skip to content</a>
 
-        <header class="site-header">
-            <nav aria-label="Primary">
-                <a href="/" class="site-title">Tampa City Council Meetings</a>
-                <a href="/about/" class="nav-link">About</a>
-            </nav>
-        </header>
+        {# Shared Monitor chrome: topbar → masthead → mainnav, fed from site.json.
+           No global search here (showSearch=false); topbar links cross over to the
+           main Monitor site. #}
+        {% from "components/topbar.njk" import topbar %}
+        {% from "components/masthead.njk" import masthead %}
+        {% from "components/mainnav.njk" import mainnav %}
+
+        {{ topbar(links=[
+          { label: "The Tampa Monitor", href: "https://tampamonitor.com/", cta: false },
+          { label: "Donate", href: "https://tampamonitor.com/donate/", cta: true }
+        ]) }}
+        {{ masthead(siteName=site.title, tagline=site.brandTag, logoSrc=site.logo, showSearch=false) }}
+        {{ mainnav(items=site.nav, currentPath=page.url) }}
 
         <main id="main-content">

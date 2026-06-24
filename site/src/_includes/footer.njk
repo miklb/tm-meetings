@@ -1,9 +1,19 @@
 </main>
 
-<footer class="site-footer">
-<p>Data sourced from the
-    <a href="https://tampagov.hylandcloud.com/251agendaonline/">Tampa City Clerk — Hyland OnBase</a>. This is an unofficial resource.</p>
-</footer>
+{# Shared Monitor chrome: the toolbox band (cross-links to the Monitor's tools)
+   then the site-footer. The data-source attribution lives in the "Source" footer
+   column (site.json); the "unofficial resource" disclaimer rides in the colophon. #}
+{% include "partials/toolbox.njk" %}
+
+{% from "components/site-footer.njk" import siteFooter %}
+{% set yr %}{% year %}{% endset %}
+{{ siteFooter(
+  siteName=site.title,
+  tagline=site.description,
+  navColumns=site.footerColumns,
+  copyright="© " ~ yr ~ " " ~ site.title ~ " · Unofficial resource",
+  creed=site.creed
+) }}
 
 {# Load video + search scripts only on meeting pages with media #}
 {% if meeting and(meeting.has_video or meeting.has_transcript) %}
