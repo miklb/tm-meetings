@@ -4,6 +4,20 @@ A schedule for keeping runtime dependencies, tooling, and Node.js versions curre
 
 ---
 
+## ⚠️ One-off: AI instruction-file audit (added 2026-07-03)
+
+The `.github/` agent instruction files were shaped by older models and have drifted from the code. Verified issues, ordered by impact:
+
+- [ ] **Venv contradiction.** [.github/instructions/python-environment.instructions.md](.github/instructions/python-environment.instructions.md) and the "Python Environment" section of [.github/copilot-instructions.md](.github/copilot-instructions.md) both claim the project uses a **single** venv, but `opengov/` has its own venv at `opengov/.venv/` (per [opengov.instructions.md](.github/instructions/opengov.instructions.md)). Fix the wording in both, and consider narrowing python-environment's `applyTo: "**/*.py"` glob to exclude `opengov/**` so the two files never both apply with conflicting advice. The root `CLAUDE.md` documents the two-venv reality — keep it in sync.
+- [ ] **opengov.instructions.md "Things that have NOT been built yet" is stale.** Per-item funding insertion in `json-to-wordpress.js` **is** built now: it imports `loadFundingManifest` / `buildFundingByItemId` from `lib/render-funding` and renders per-item financial sections plus an agenda-level overview (`json-to-wordpress.js` ~lines 995–1075). Remove/update that bullet and re-verify the other two (select-endpoint amounts, fiscal-year ledger).
+- [ ] **copilot-instructions.md directory tree is wrong.** `pipeline/scrapers/`, `pipeline/processors/`, `pipeline/scripts/`, and `data/agendas/` don't exist; the tree omits `agenda-scraper/`, `transcript-cleaner/`, `opengov/`, and `scripts/`. Redraw from the actual layout.
+- [ ] **copilot-instructions.md "Common Tasks" is stale.** No `MEETING_TYPES` constant exists anywhere in the repo; the Datasette task references `pipeline/scripts/build-database.py` and `deploy-datasette.sh`, which don't exist (Datasette is still "Future" per README — the real DB build is `scripts/build-db.js`).
+- [ ] **copilot-instructions.md "Automated Checks" lists `npm run lint`** — no package.json in the repo defines a lint script. Either add one or drop the claim.
+- [ ] **Decide the WCAG target.** Repo files say WCAG 2.1 AA; the Tampa Monitor shared conventions target 2.2 AA. Pick one and align copilot-instructions.md, README, and CLAUDE.md.
+- [ ] Bump the `_Last updated_` stamp in copilot-instructions.md when done.
+
+---
+
 ## Node.js
 
 Node.js uses **year-based versioning** with an 18-month Active LTS window:

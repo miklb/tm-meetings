@@ -36,6 +36,11 @@ site/.cache/
 *~
 .DS_Store
 
+# Claude Code — never commit local settings or session transcripts
+.claude/
+*.jsonl.claude
+CLAUDE.local.md
+
 # Testing
 .pytest_cache/
 .coverage
