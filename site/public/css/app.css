@@ -20,12 +20,11 @@
 @import url("base.css");
 @import url("layout.css");
 
-/* shared chrome components (topbar → masthead → mainnav → toolbox → footer) */
+/* shared chrome components (topbar → masthead → mainnav → footer) */
 @import url("components/label.css");
 @import url("components/topbar.css");
 @import url("components/masthead.css");
 @import url("components/mainnav.css");
-@import url("components/toolbox.css");
 @import url("components/site-footer.css");
 @import url("components/section-head.css");
 @import url("components/breadcrumb.css");

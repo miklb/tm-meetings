@@ -1,10 +1,8 @@
 </main>
 
-{# Shared Monitor chrome: the toolbox band (cross-links to the Monitor's tools)
-   then the site-footer. The data-source attribution lives in the "Source" footer
-   column (site.json); the "unofficial resource" disclaimer rides in the colophon. #}
-{% include "partials/toolbox.njk" %}
-
+{# Shared Monitor chrome: the site-footer. The data-source attribution lives in
+   the "Source" footer column (site.json); the "unofficial resource" disclaimer
+   rides in the colophon. #}
 {% from "components/site-footer.njk" import siteFooter %}
 {% set yr %}{% year %}{% endset %}
 {{ siteFooter(

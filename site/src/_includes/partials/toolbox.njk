@@ -1,5 +1,8 @@
 {#
-  Site-wide toolbox band — rendered on every page (in base.njk) above the footer.
+  Site-wide toolbox band — currently PARKED (not included anywhere). The tool
+  lineup still needs to be organized before this ships; re-hook it in footer.njk
+  ({% include "partials/toolbox.njk" %} above the site-footer) and restore the
+  components/toolbox.css import in public/css/app.css when it's ready.
 
   The tool icons are small bespoke inline SVGs (not the post sprite), so they live
   here as `iconSvgBody` strings rather than in JSON — the `tool` macro drops them
