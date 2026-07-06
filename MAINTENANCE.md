@@ -22,14 +22,14 @@ The `.github/` agent instruction files were shaped by older models and have drif
 
 Node.js uses **year-based versioning** with an 18-month Active LTS window:
 
-| Version | Released | Active LTS        | Maintenance       | Status                |
-| ------- | -------- | ----------------- | ----------------- | --------------------- |
-| 20      | Apr 2023 | Oct 2023–Oct 2024 | Oct 2024–Apr 2026 | ⚠️ EOL Apr 30 2026    |
-| 22      | Apr 2024 | Oct 2024–Oct 2025 | Oct 2025–Apr 2027 | Maintenance           |
-| 24      | Apr 2025 | Oct 2025–Apr 2027 | Apr 2027–Apr 2028 | **Active LTS ✓**      |
-| 26      | Apr 2026 | Oct 2026–Apr 2028 | Apr 2028–Apr 2029 | Current (not yet LTS) |
+| Version | Released | Active LTS Starts | Active LTS Ends | Status    |
+| ------- | -------- | ----------------- | --------------- | --------- |
+| 26      | Apr 2026 | Oct 2026          | Apr 2028        | Current ✓ |
+| 28      | Apr 2027 | Oct 2027          | Apr 2029        | Future    |
 
-> ⚠️ **Action required:** This repo's `.nvmrc` and CI workflow are pinned to Node **20**, which reached EOL on April 30, 2026. Upgrade to **Node 24** (current Active LTS). See upgrade checklist below.
+This repo is pinned to Node **26** (matching toolshed) in `.nvmrc`,
+`.github/workflows/nightly-scrape.yml`, and the README. Upgraded from EOL
+Node 20 in July 2026.
 
 **Rules:**
 
@@ -49,7 +49,7 @@ Node.js uses **year-based versioning** with an 18-month Active LTS window:
   load-nvmrc
   ```
 
-- When a new even major ships in April, evaluate upgrading after it hits Active LTS in October.
+- When a new major ships in April, evaluate upgrading after it hits Active LTS in October.
 - Flag and update `.nvmrc` and `nightly-scrape.yml` within one month of LTS activation.
 
 ---
@@ -101,7 +101,7 @@ Node.js uses **year-based versioning** with an 18-month Active LTS window:
 ### Quarterly (Jan, Apr, Jul, Oct)
 
 - [ ] `source pipeline/activate.sh && pip list --outdated` — review and apply safe upgrades
-- [ ] Review Node.js minor/patch: `nvm ls-remote 24 | tail -5` — update `.nvmrc` to latest `24.x.x` if desired
+- [ ] Review Node.js minor/patch: `nvm ls-remote 26 | tail -5` — update `.nvmrc` to latest `26.x.x` if desired
 - [ ] Review `@11ty/eleventy` for minor/major releases (breaking changes common on majors)
 - [ ] Review `@llamaindex/liteparse` — active development, check changelog before upgrading
 
