@@ -123,7 +123,7 @@ site/         ──▶ Eleventy            ──▶ Static HTML pages
 
 ## Prerequisites
 
-- Node.js 20+
+- Node.js 26+
 - Python 3.11+ (3.12 recommended for transcript processor)
 - SQLite 3
 
