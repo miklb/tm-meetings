@@ -41,7 +41,18 @@ Invite the real beta list. On a live agenda night, run dispatch **after the WP p
 
 ### Known gaps before a testing night
 - **Turnstile keys** not set up yet — needed before Phase 2/3 or the production form rejects everyone.
+  `TURNSTILE_SITE_KEY` is read from the **shell environment at Eleventy build time**
+  (`site/src/_data/turnstile.js`), so the production build must run with it exported —
+  it is not a Pages secret. `TURNSTILE_SECRET_KEY` *is* a Pages secret.
 - **`WEBHOOK_SECRET`** still needs generating (`openssl rand -hex 24`) and placing in both the Worker secret and your local `.env`.
+
+### Production probe findings (2026-07-05)
+Verified against the live Cloudflare account before beta wiring:
+- **Remote D1 is empty** — `tampa-meetings-notifications` exists (created 2026-06-02) but has **0 tables**. Migrations have never been applied `--remote`; every API call will fail until they are.
+- **Wrangler D1 auth scope** — `wrangler d1 migrations list --remote` returned a 7403 authorization error while `wrangler d1 list` worked. If `migrations apply --remote` hits the same error, refresh credentials with `wrangler login` first.
+- **`npm run deploy` does not ship the Functions.** Wrangler bundles a `functions/` directory adjacent to where it runs; ours is at `site/functions/` and the npm script runs from the repo root. Production `POST /api/notify` returns a bare 405 (static-asset response) — no Functions are live. Deploy from `site/` instead (`npx wrangler pages deploy _site --project-name tampa-meetings`) and confirm the wrangler output reports compiling/uploading Functions before trusting any deploy.
+- **Production already serves the WIP signup page** — `meetings.tampamonitor.com/notifications/` went out with stale build output in the ~June 21 production deploy, so a form that errors on submit is publicly reachable now (not linked in nav). The launch deploy replaces it; don't let it linger.
+- **Pages secrets:** only `RESEND_API_KEY` is set. `WEBHOOK_SECRET` and `TURNSTILE_SECRET_KEY` are still missing (see gaps above).
 
 ---
 
