@@ -1,0 +1,68 @@
+{
+  "meeting_id": 2688,
+  "meeting_date": "2026-06-25",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "nMxKNZlTz7Q",
+      "title": "Tampa City Council PM - 06/25/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-06-26T13:10:49Z",
+      "duration": "PT2H53M10S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: AAP26-23734 - FY2027 Annual Action Plan",
+          "timestamp": "00:15:37",
+          "seconds": 937
+        },
+        {
+          "title": "Item 2: TA/CPA 25-20 - 11315 North 46th Street",
+          "timestamp": "00:20:45",
+          "seconds": 1245
+        },
+        {
+          "title": "Item 4: TA/CPA 26-02 - 1701 East 2nd Avenue",
+          "timestamp": "00:29:30",
+          "seconds": 1770
+        },
+        {
+          "title": "Item 5: VAC-26-09 - East Ybor Alleys",
+          "timestamp": "00:38:00",
+          "seconds": 2280
+        },
+        {
+          "title": "Item 6: AB2-26-08 - 2105 West Morrison Avenue",
+          "timestamp": "00:44:45",
+          "seconds": 2685
+        },
+        {
+          "title": "Item 7: AB2-26-09 - 1281 Ray Charles Boulevard",
+          "timestamp": "00:54:40",
+          "seconds": 3280
+        },
+        {
+          "title": "Item 8: AB2-26-14 - 1301 East 4th Avenue",
+          "timestamp": "01:06:25",
+          "seconds": 3985
+        },
+        {
+          "title": "Item 9: REZ-26-28 - Various Ybor Addresses",
+          "timestamp": "01:53:30",
+          "seconds": 6810
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "02:32:10",
+          "seconds": 9130
+        }
+      ],
+      "offset_seconds": 806
+    }
+  ]
+}
