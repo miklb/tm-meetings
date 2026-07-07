@@ -291,9 +291,9 @@ Do **not** set `ENVIRONMENT="development"` in production — it gates the mock-e
 
 _Note: Remember to redeploy or restart the deployment for new environment variables to take effect._
 
-### 2b. Add a WAF Rate-Limiting Rule
+### 2b. Add a WAF Rate-Limiting Rule — DEFERRED (plan-gated, 2026-07-07)
 
-The in-process IP rate limiter in `_middleware.js` is best-effort only (per-isolate, per-colo). In the Cloudflare dashboard, add a rate-limiting rule (available on the free plan) covering `/api/subscribe` and `/api/manage`, e.g. 10 requests per minute per IP.
+The in-process IP rate limiter in `_middleware.js` is best-effort only (per-isolate, per-colo). The plan was a dashboard rate-limiting rule covering `/api/subscribe` and `/api/manage` (e.g. 10 requests per minute per IP), but the rule turned out to be gated behind a paid plan on this account. Deferred for the beta: Turnstile (fail-closed) + per-email limits in `email_rate_limits` + the middleware limiter are adequate for a small private list. Revisit at public launch or if abuse shows up in the logs.
 
 ### 3. Configure the Dispatch Secret Locally
 
