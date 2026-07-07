@@ -142,11 +142,13 @@ export async function onRequestPost(context) {
       }
       return jsonResponse(responsePayload, 200);
     } else {
-      // Generate a short-lived session token (15-minute expiry). Only the
-      // SHA-256 hash is stored; the raw token goes into the emailed link.
+      // Generate a short-lived session token (1-hour expiry — long enough to
+      // open the email a bit later without re-requesting; short enough that a
+      // forwarded link goes stale same-day). Only the SHA-256 hash is stored;
+      // the raw token goes into the emailed link.
       const sessionToken = generateToken(32);
       const sessionTokenHash = await sha256Hex(sessionToken);
-      const expiresAt = new Date(Date.now() + 15 * 60 * 1000).toISOString();
+      const expiresAt = new Date(Date.now() + 60 * 60 * 1000).toISOString();
 
       try {
         await db.batch([
@@ -172,13 +174,13 @@ export async function onRequestPost(context) {
             to: emailLower,
             subject: "Manage your Tampa Monitor keyword notifications",
             html: `
-              <p>Use the link below to manage your keywords. This link expires in 15 minutes.</p>
+              <p>Use the link below to manage your keywords. This link expires in 1 hour.</p>
               <p><a href="${manageUrl}" style="background-color: #1d4ed8; color: white; padding: 10px 16px; text-decoration: none; border-radius: 4px; display: inline-block;">Manage Keywords</a></p>
               <p><a href="${manageUrl}">${manageUrl}</a></p>
               <br>
-              <p><small>This link expires in 15 minutes. Please do not forward this email.</small></p>
+              <p><small>This link expires in 1 hour. Please do not forward this email.</small></p>
             `,
-            text: `Manage your subscription (expires in 15 minutes): ${manageUrl}`
+            text: `Manage your subscription (expires in 1 hour): ${manageUrl}`
           });
         } catch (err) {
           console.error(`manage: management link send failed: ${err.message}`);

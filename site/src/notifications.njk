@@ -534,8 +534,10 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       switchPanel('manage');
       if (statusBanner.classList.contains('error')) showBanner('');
     } catch (err) {
+      // Land on the request-a-link form so "request a new one" is actionable
+      // right below the error, not hidden behind the subscribe card's footer.
       showBanner(err.message, 'error');
-      switchPanel('subscribe');
+      switchPanel('request');
     } finally {
       showLoading(false);
     }

@@ -42,14 +42,14 @@ export async function onRequestGet(context) {
     return new Response("Something went wrong. Please try the link again later.", { status: 500 });
   }
 
-  // Mint a short-lived management session so the user lands on their keyword
-  // list instead of an empty subscribe form. Same pattern as the manage.js
-  // magic link (raw token in the URL, only the hash stored); the page JS
-  // scrubs the query string from history after it loads.
+  // Mint a short-lived management session (1 hour, matching manage.js) so the
+  // user lands on their keyword list instead of an empty subscribe form. Same
+  // pattern as the manage.js magic link (raw token in the URL, only the hash
+  // stored); the page JS scrubs the query string from history after it loads.
   try {
     const sessionToken = generateToken(32);
     const sessionTokenHash = await sha256Hex(sessionToken);
-    const expiresAt = new Date(Date.now() + 15 * 60 * 1000).toISOString();
+    const expiresAt = new Date(Date.now() + 60 * 60 * 1000).toISOString();
 
     await db.batch([
       db.prepare(
