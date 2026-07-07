@@ -440,8 +440,10 @@ export async function onRequestPost(context) {
       const itemList = Object.values(meet.items);
       itemList.forEach((item, idx) => {
         const isLast = idx === itemList.length - 1;
+        // Anchor by agendaItemId — both the wp.html generator and the static
+        // meeting pages emit id="item-<agendaItemId>" (never the File No.)
         const itemUrl = meet.wordpressUrl
-          ? `${meet.wordpressUrl}#item-${item.fileNumber || item.agendaItemId}`
+          ? `${meet.wordpressUrl}#item-${item.agendaItemId || item.fileNumber}`
           : `${origin}/meetings/${meet.meetingId}/#item-${item.agendaItemId}`;
         const kwList = Array.from(item.matchedKeywords).join(', ');
         const itemBorder = isLast ? '' : 'border-bottom: 1px dashed #e5e7eb;';

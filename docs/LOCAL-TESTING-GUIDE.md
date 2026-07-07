@@ -37,7 +37,7 @@ See [Production Deployment & Configuration Steps](#production-deployment--config
 1. Deploy the branch (or a Pages preview); subscribe with your own email through the real form (Turnstile live); confirm the verification email actually arrives.
 2. After a real WordPress agenda post is published, run the local dispatch for that meeting:
    `MEETING_IDS=<id> WORDPRESS_AGENDA_URL=<wp-url> WEBHOOK_SECRET=<secret> node scripts/dispatch-notifications.js`
-   Confirm the digest arrives and the **"View full agenda" link points at the WordPress post**, with item deep-links resolving to `…#item-<fileNumber>`.
+   Confirm the digest arrives and the **"View full agenda" link points at the WordPress post**, with item deep-links resolving to `…#item-<agendaItemId>` (e.g. `#item-24871` — the OnBase item id, **not** the File No.; that's what the wp.html anchors use).
 3. Re-run the same dispatch → confirm no duplicate email (prod `notification_log`).
 
 ### Phase 4 — Beta cutover
