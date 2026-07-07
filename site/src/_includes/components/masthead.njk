@@ -1,0 +1,34 @@
+{#
+  COMPONENT: masthead — brand mark + site name + tagline + search form.
+
+  Params:
+   • siteName     (string, required) — e.g. "The Tampa Monitor"
+   • tagline      (string, required) — e.g. "Local. Matters."
+   • logoSrc      (string, required) — path to city-hall-outline.svg
+   • homeHref     (string, optional, default "/")
+   • searchAction (string, optional, default "/search/")
+   • showSearch   (bool, optional, default true) — meetings has no global search,
+                   so it passes false; tm-static keeps the default.
+#}
+{% macro masthead(siteName, tagline, logoSrc, homeHref="/", searchAction="/search/", showSearch=true) %}
+<header class="masthead">
+  <div class="wrap">
+    <a class="brand" href="{{ homeHref }}" aria-label="{{ siteName }} — home">
+      <img class="brand__mark" src="{{ logoSrc }}" alt="" width="46" height="57">
+      <span>
+        <span class="brand__name">{{ siteName }}</span>
+        <span class="brand__tag">{{ tagline }}</span>
+      </span>
+    </a>
+    {% if showSearch %}
+    <div class="masthead__tools">
+      <form class="search" role="search" action="{{ searchAction }}">
+        <label class="u-visually-hidden" for="site-search">Search {{ siteName }}</label>
+        <input id="site-search" type="search" name="q" placeholder="Search…">
+        <button type="submit">Go</button>
+      </form>
+    </div>
+    {% endif %}
+  </div>
+</header>
+{% endmacro %}

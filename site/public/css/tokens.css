@@ -1,0 +1,73 @@
+/* ============================================================================
+   TOKENS — shared design system, copied from tm-static (the Monitor build home).
+   Canonical scheme: --c-* palette + semantic roles, --s-* spacing, --step-* type.
+
+   The LEGACY ALIASES block at the bottom maps this site's older token names
+   (--color-* / --spacing-* / --max-width / --font-body) onto the canonical
+   tokens, so the existing meetings stylesheet keeps working unchanged while new
+   shared components use the canonical names. Migrate the old names over time.
+   ========================================================================== */
+@layer tokens {
+  :root {
+    /* brand palette */
+    --c-base:#F1F1E6; --c-ink:#314A59; --c-gold:#E6B45E; --c-rose:#E6A4A1;
+    --c-teal:#1D636B; --c-gray:#8A8A82; --c-paper:#F8F8F2;
+
+    /* semantic color roles */
+    --bg:var(--c-base);
+    --surface:#FFFFFF;
+    --surface-2:var(--c-paper);
+    --ink:var(--c-ink);
+    --ink-muted:#5C7280;
+    --brand:var(--c-teal);
+    --accent:var(--c-gold);
+    --highlight:var(--c-rose);
+    --line:color-mix(in srgb, var(--c-ink) 16%, transparent);
+    --line-strong:color-mix(in srgb, var(--c-ink) 30%, transparent);
+
+    /* type families */
+    --font-serif:"PT Serif", Georgia, "Times New Roman", serif;
+    --font-sans:"Libre Franklin", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+    /* fluid type scale */
+    --step--1:clamp(.78rem,.76rem + .1vw,.83rem);
+    --step-0:1rem;
+    --step-1:clamp(1.13rem,1.08rem + .25vw,1.25rem);
+    --step-2:clamp(1.33rem,1.24rem + .45vw,1.6rem);
+    --step-3:clamp(1.6rem,1.42rem + .9vw,2.1rem);
+    --step-4:clamp(1.95rem,1.62rem + 1.6vw,2.9rem);
+    --step-5:clamp(2.4rem,1.85rem + 2.7vw,4rem);
+
+    /* spacing scale */
+    --s-2xs:.25rem; --s-xs:.5rem; --s-sm:.75rem; --s-md:1rem;
+    --s-lg:1.5rem; --s-xl:2.25rem; --s-2xl:3.5rem; --s-3xl:5rem;
+
+    /* radii / elevation / measure */
+    --radius:10px; --radius-sm:6px;
+    --shadow:0 2px 10px color-mix(in srgb, var(--c-ink) 12%, transparent);
+    --measure:66ch;
+    --wrap:1180px;
+    --step-body:1.125rem;
+
+    /* ---- LEGACY ALIASES (meetings' old names → canonical) ---- */
+    --color-bg: var(--bg);
+    --color-surface: var(--surface-2);
+    --color-text: var(--ink);
+    --color-text-muted: var(--ink-muted);
+    --color-primary: var(--brand);
+    --color-primary-dark: color-mix(in srgb, var(--c-teal) 82%, #000);
+    --color-link: var(--brand);
+    --color-link-visited: #8a5a58;
+    --color-border: var(--line);
+    --color-accent-gold: var(--accent);
+    --color-accent-rose: var(--highlight);
+    --font-body: var(--font-sans);
+    --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+    --spacing-xs: var(--s-2xs);
+    --spacing-sm: var(--s-xs);
+    --spacing-md: var(--s-md);
+    --spacing-lg: var(--s-lg);
+    --spacing-xl: var(--s-xl);
+    --max-width: var(--measure);
+  }
+}

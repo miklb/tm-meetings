@@ -1,0 +1,23 @@
+{#
+  Site-wide toolbox band — currently PARKED (not included anywhere). The tool
+  lineup still needs to be organized before this ships; re-hook it in footer.njk
+  ({% include "partials/toolbox.njk" %} above the site-footer) and restore the
+  components/toolbox.css import in public/css/app.css when it's ready.
+
+  The tool icons are small bespoke inline SVGs (not the post sprite), so they live
+  here as `iconSvgBody` strings rather than in JSON — the `tool` macro drops them
+  inside a standard 24×24 stroke wrapper. Tool hrefs are placeholders until the
+  real tools land.
+#}
+{% from "components/toolbox.njk" import toolbox %}
+{% set tools = [
+  { name: "Council Meetings", href: "#", desc: "Augmented agendas, transcripts & synced video", status: "Updated weekly",
+    iconSvgBody: '<rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/>' },
+  { name: "Land Use Map", href: "/tampa-land-use-map/", desc: "Current zoning & future land use", status: "Live map",
+    iconSvgBody: '<path d="M9 3 3 6v15l6-3 6 3 6-3V3l-6 3-6-3Z"/><path d="M9 3v15M15 6v15"/>' },
+  { name: "City Budget", href: "#", desc: "Allocate the budget yourself, compare results", status: "Open tool",
+    iconSvgBody: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>' },
+  { name: "Public Records", href: "#", desc: "Requests we've filed and what came back", status: "Updated weekly",
+    iconSvgBody: '<path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/>' }
+] %}
+{{ toolbox(tools, headingId="toolbox-h", tagline="Always-on data tools that keep watch between the stories — built and maintained by the Monitor.") }}

@@ -1,0 +1,25 @@
+/* ============================================================================
+   COMPONENT: breadcrumb — navigational breadcrumb trail.
+   ========================================================================== */
+@layer components {
+  .breadcrumb {
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+    padding-block: var(--s-md) 0;
+  }
+  .breadcrumb ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .45rem;
+    align-items: center;
+  }
+  .breadcrumb li::after { content: "/"; margin-left: .45rem; color: var(--line-strong); }
+  .breadcrumb li:last-child::after { content: ""; }
+  .breadcrumb a { color: var(--brand); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink); }
+  .breadcrumb [aria-current="page"] { color: var(--ink); }
+}

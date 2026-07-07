@@ -1,0 +1,57 @@
+/* ============================================================================
+   COMPONENT: topbar — utility bar (next-meeting hook + utility nav).
+   ========================================================================== */
+@layer components {
+  .topbar {
+    background: var(--ink);
+    color: var(--c-paper);
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+  }
+  .topbar .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--s-sm) var(--s-md);
+    padding-block: .5rem;
+    flex-wrap: wrap;
+  }
+
+  /* next-meeting slot — civic hook on the left */
+  .topbar__next {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    color: var(--c-paper);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .topbar__next-icon { width: 1rem; height: 1rem; flex: none; color: var(--accent); }
+  .topbar__next-label {
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    font-size: .72rem;
+    color: color-mix(in srgb, var(--c-paper) 75%, transparent);
+  }
+  .topbar__next time { font-weight: 700; font-variant-numeric: tabular-nums; }
+  .topbar__next:hover time { color: var(--accent); }
+
+  /* utility links — paper-on-ink for AA contrast; gold only on hover + Donate CTA */
+  .topbar__meta { display: flex; align-items: center; }
+  .topbar__meta a {
+    color: var(--c-paper);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .72rem;
+    letter-spacing: .09em;
+    text-transform: uppercase;
+    padding: .2rem .8rem;
+    transition: color .15s;
+  }
+  .topbar__meta a:first-child { padding-left: 0; }
+  .topbar__meta a:last-child  { padding-right: 0; }
+  .topbar__meta a + a { border-left: 1px solid color-mix(in srgb, var(--c-paper) 20%, transparent); }
+  .topbar__meta a:hover { color: var(--accent); }
+  .topbar__meta .topbar__cta { color: color-mix(in srgb, var(--accent) 82%, #fff); font-weight: 700; }
+  .topbar__meta .topbar__cta:hover { color: #fff; }
+}

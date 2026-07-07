@@ -1,6 +1,10 @@
-<a href="/" class="back-link">&larr; All meetings</a>
+{% from "components/breadcrumb.njk" import breadcrumb %}
+{{ breadcrumb([
+  { label: "Meetings", href: "/" },
+  { label: meeting.title, current: true }
+]) }}
 
-<h1>{{ meeting.title }}
+<h1 class="meeting-title">{{ meeting.title }}
   {% if meeting.agenda_type %}
     <span class="agenda-type">{{ meeting.agenda_type }}</span>
   {% endif %}
