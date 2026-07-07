@@ -1,0 +1,130 @@
+{
+  "meeting_id": 2686,
+  "meeting_date": "2026-06-18",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "1refcsE2Q6Q",
+      "title": "Tampa City Council - 06/18/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-06-19T04:23:25Z",
+      "duration": "PT3H12M20S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-23297 - Jockey Race Winners Commendation",
+          "timestamp": "00:16:12",
+          "seconds": 972
+        },
+        {
+          "title": "Item 2: CM26-23877 - Delta Day at City Hall",
+          "timestamp": "00:34:33",
+          "seconds": 2073
+        },
+        {
+          "title": "Item 3: CM26-21836 - Sheltered Markets and Industrial Businesses",
+          "timestamp": "00:41:17",
+          "seconds": 2477
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:11:38",
+          "seconds": 4298
+        },
+        {
+          "title": "Item 4: BA26-25317 - Variance Review Board Applicants",
+          "timestamp": "02:16:35",
+          "seconds": 8195
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:28:11",
+          "seconds": 8891
+        },
+        {
+          "title": "Item 36: HN26-23865 - Officer Morris Lopez Honorary Street",
+          "timestamp": "02:30:16",
+          "seconds": 9016
+        },
+        {
+          "title": "Item 37: HN26-23863 - Phil Alessi Sr. Sign Relocation",
+          "timestamp": "02:32:12",
+          "seconds": 9132
+        },
+        {
+          "title": "Item 38: E2026-8 CH 2 - Veterans' Advisory Committee Code",
+          "timestamp": "02:33:29",
+          "seconds": 9209
+        },
+        {
+          "title": "Item 40: BF26-23512 - Brownfield: 1411 N Ashley Street",
+          "timestamp": "02:35:30",
+          "seconds": 9330
+        },
+        {
+          "title": "Item 41: BF26-23532 - Brownfield: 1125-1127 E Twiggs Street",
+          "timestamp": "02:37:11",
+          "seconds": 9431
+        },
+        {
+          "title": "Item 42: VAC-26-03 - Alley Vacation North of Virginia",
+          "timestamp": "02:38:36",
+          "seconds": 9516
+        }
+      ],
+      "offset_seconds": 382
+    },
+    {
+      "video_id": "tdsTUWK7x6g",
+      "title": "Tampa City Council - 06/18/26 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-06-19T10:21:17Z",
+      "duration": "PT3H51M25S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 43: SU1-26-33-C - Review Hearing: 2406 E Annie",
+          "timestamp": "00:04:23",
+          "seconds": 263
+        },
+        {
+          "title": "Item 44: E2026-8 CH 27 - Alcoholic Beverage Permit Suspensions",
+          "timestamp": "00:36:58",
+          "seconds": 2218
+        },
+        {
+          "title": "Marti Colon",
+          "timestamp": "01:17:19",
+          "seconds": 4639
+        },
+        {
+          "title": "Item 51: E2026-48 - City Council Procedure Rules",
+          "timestamp": "01:45:45",
+          "seconds": 6345
+        },
+        {
+          "title": "Item 50: CM25-19135 - Council Public Records Fees",
+          "timestamp": "03:06:22",
+          "seconds": 11182
+        },
+        {
+          "title": "New Business",
+          "timestamp": "03:10:24",
+          "seconds": 11424
+        }
+      ],
+      "transcript_start_time": "1:25:28PM",
+      "offset_seconds": -101
+    }
+  ]
+}

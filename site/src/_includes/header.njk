@@ -6,16 +6,35 @@
         <meta name="text-scale" content="scale">
         <title>{{ title or "Tampa City Council Meetings" }}</title>
         {% if description %}<meta name="description" content="{{ description }}">{% endif %}
-        <link rel="stylesheet" href="/css/style.css">
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="Tampa City Council Meetings">
+        <meta property="og:title" content="{{ title or 'Tampa City Council Meetings' }}">
+        {% if description %}<meta property="og:description" content="{{ description }}">{% endif %}
+        <meta property="og:url" content="https://meetings.tampamonitor.com{{ page.url }}">
+        <meta property="og:image" content="https://meetings.tampamonitor.com/img/archives_cover.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="675">
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin">
+        <link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
         <a class="skip-link" href="#main-content">Skip to content</a>
 
-        <header class="site-header">
-            <nav aria-label="Primary">
-                <a href="/" class="site-title">Tampa City Council Meetings</a>
-                <a href="/about/" class="nav-link">About</a>
-            </nav>
-        </header>
+        {# Shared Monitor chrome: topbar → masthead → mainnav, fed from site.json.
+           No global search here (showSearch=false); topbar links cross over to the
+           main Monitor site. #}
+        {% from "components/topbar.njk" import topbar %}
+        {% from "components/masthead.njk" import masthead %}
+        {% from "components/mainnav.njk" import mainnav %}
+
+        {{ topbar(links=[
+          { label: "The Tampa Monitor", href: "https://tampamonitor.com/", cta: false },
+          { label: "Donate", href: "https://tampamonitor.com/donate/", cta: true }
+        ]) }}
+        {{ masthead(siteName=site.title, tagline=site.brandTag, logoSrc=site.logo, showSearch=false) }}
+        {{ mainnav(items=site.nav, currentPath=page.url) }}
 
         <main id="main-content">

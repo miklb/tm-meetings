@@ -2,5 +2,17 @@
   "meetingId": "2833",
   "meetingDate": "2026-06-04",
   "firstSeenAt": "2026-05-30T00:57:58.003Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-06-03",
+      "mirroredAt": "2026-06-03T18:34:13.350Z",
+      "newDocuments": [
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "R/F",
+          "filename": "MEMO.BENNETT - 060426 REGULAR COUNCIL SESSION - AGENDA ITEM NO. 54.PDF"
+        }
+      ]
+    }
+  ]
 }

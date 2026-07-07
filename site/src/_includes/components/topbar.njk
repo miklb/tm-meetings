@@ -1,0 +1,39 @@
+{#
+  COMPONENT: topbar — utility bar: next-meeting civic hook + utility nav links.
+
+  The next-meeting slot sources from a meetings JSON/calendar feed at build time.
+  Utility links default to Newsletter / Donate (CTA) / Tip line.
+
+  Params:
+   • nextMeetingDate      (string, optional) — ISO 8601 date
+   • nextMeetingFormatted (string, optional) — e.g. "Thu, Jun 25"
+   • nextMeetingHref      (string, optional, default "/tampa-city-council/agendas/")
+   • links (array, optional) — [{label, href, cta: bool}]
+#}
+{% macro topbar(nextMeetingDate="", nextMeetingFormatted="", nextMeetingHref="/tampa-city-council/agendas/", links=[]) %}
+{%- set defaultLinks = [
+  { label: "Newsletter", href: "#newsletter", cta: false },
+  { label: "Donate",     href: "/donate/",    cta: true  },
+  { label: "Tip line",   href: "/tips/",      cta: false }
+] -%}
+{%- set navLinks = links if links.length else defaultLinks -%}
+<div class="topbar">
+  <div class="wrap">
+    {% if nextMeetingDate %}
+    <a class="topbar__next" href="{{ nextMeetingHref }}">
+      <svg class="topbar__next-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <rect x="3" y="4" width="18" height="17" rx="2"/>
+        <path d="M3 9h18M8 2v4M16 2v4"/>
+      </svg>
+      <span class="topbar__next-label">Next meeting</span>
+      <time datetime="{{ nextMeetingDate }}">{{ nextMeetingFormatted }}</time>
+    </a>
+    {% endif %}
+    <nav class="topbar__meta" aria-label="Utility">
+      {% for link in navLinks %}
+      <a href="{{ link.href }}"{% if link.cta %} class="topbar__cta"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+</div>
+{% endmacro %}

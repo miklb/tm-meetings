@@ -35,6 +35,62 @@ _IT_ACRONYM_NEXT = frozenset({
 # In council speech, country references almost exclusively appear as "the US".
 _US_COUNTRY_PREV = frozenset({'the'})
 
+# Role/title words that get harvested from multi-word names like "Chair Clendenin"
+# or "Board Member Maniscalco".  They must never be treated as surnames on their
+# own, or single-word lookup would capitalize every "board"/"chair"/"member".
+_NON_SURNAME_WORDS = frozenset({
+    'chair', 'vice', 'board', 'member', 'mayor', 'council', 'councilman',
+    'councilwoman', 'commissioner', 'director', 'attorney', 'officer',
+    'captain', 'chief', 'reverend', 'doctor', 'judge', 'president',
+    'secretary', 'treasurer', 'clerk', 'sergeant', 'lieutenant', 'grant',
+})
+
+# Month names that are also common English words ("may"/"march"/"august").
+# Only capitalize these when they appear in a date-like context.
+_AMBIGUOUS_MONTHS = frozenset({'may', 'march', 'august'})
+
+# Tokens preceding an ambiguous month that signal a real date reference.
+_MONTH_CONTEXT_PREV = frozenset({
+    'in', 'on', 'by', 'since', 'until', 'of', 'through', 'before', 'after',
+    'early', 'late', 'mid', 'this', 'last', 'next',
+})
+
+# Titles/roles that, when they precede a surname, signal name use rather than
+# the everyday word. Used to capitalize ambiguous common-word surnames like
+# "Young" ("councilwoman young" -> "councilwoman Young"; "young people" stays).
+_NAME_TITLE_PREV = frozenset({
+    'councilman', 'councilwoman', 'councilmember', 'councilperson', 'council',
+    'member', 'chair', 'chairman', 'chairwoman', 'chairperson', 'commissioner',
+    'mr', 'mrs', 'ms', 'miss', 'dr', 'doctor', 'vice', 'mayor', 'attorney',
+    'director', 'board', 'reverend', 'captain', 'president', 'representative',
+    'senator', 'judge', 'officer',
+})
+
+# Generic demographic nouns. A GLiNER multi-word "person" ending in one of these
+# is a description ("young lady", "young man", "business owners"), not a name.
+_GENERIC_PERSON_NOUNS = frozenset({
+    'lady', 'ladies', 'man', 'men', 'woman', 'women', 'person', 'persons',
+    'people', 'guy', 'guys', 'gentleman', 'gentlemen', 'folks', 'kid', 'kids',
+    'child', 'children', 'boy', 'boys', 'girl', 'girls', 'family', 'families',
+    'citizen', 'citizens', 'resident', 'residents', 'neighbor', 'neighbors',
+    'owner', 'owners', 'student', 'students', 'professional', 'professionals',
+})
+
+
+_COMMON_WORDS_PATH = "/usr/share/dict/words"
+
+
+def _load_common_words() -> set:
+    """Lowercase English words, used to keep common-word surnames ("Young",
+    "Dock", "Pope", "Steady") out of the standalone surname index — they would
+    otherwise capitalize every occurrence of the common word. Falls back to an
+    empty set (no filtering) if the system word list is unavailable."""
+    try:
+        with open(_COMMON_WORDS_PATH, 'r', encoding='utf-8', errors='ignore') as f:
+            return {w.strip().lower() for w in f if w.strip().isalpha()}
+    except OSError:
+        return set()
+
 
 def _load_config(config_file: str = "data/capitalization_config.json") -> dict:
     """Load acronyms, neighborhoods, and street suffixes from config file."""
@@ -51,6 +107,7 @@ class TranscriptCapitalizer:
                  standard_entities_file: str = "data/standard_entities.json",
                  hybrid_entities_file: str = "data/hybrid_entity_database.json",
                  config_file: str = "data/capitalization_config.json",
+                 roster_file: str = "data/roster_entities.json",
                  use_gliner: bool = True):
         """Initialize with entity databases and optionally GLiNER model."""
         
@@ -62,6 +119,9 @@ class TranscriptCapitalizer:
         self.neighborhoods = set(config.get('neighborhoods', []))
         self.street_suffixes = set(config.get('street_suffixes', []))
         self.skip_words = set(config.get('skip_words', []))
+        # Surnames that are dictionary words but should still capitalize alone
+        # (members/officials whose common-word sense is rare in council speech).
+        self.name_allowlist = set(w.lower() for w in config.get('name_allowlist', []))
         
         # Load standard entities
         with open(standard_entities_file, 'r') as f:
@@ -97,22 +157,65 @@ class TranscriptCapitalizer:
             proper = ' '.join(w.capitalize() for w in neighborhood.split())
             self.agenda_entities[neighborhood] = proper
         
-        # Build surname index from people names for hyphenated name matching
+        # Build the surname index from people names. Each name token is sorted
+        # into one of two buckets:
+        #   known_surnames   — capitalized unconditionally (not a common word,
+        #                      or explicitly allowlisted).
+        #   context_surnames — a common English word that is ALSO a surname
+        #                      (e.g. "Young", "Dock"); only capitalized when
+        #                      preceded by a title/role, so "councilwoman young"
+        #                      becomes "...Young" but "young people" is left alone.
+        # Role/title words from names like "Chair Clendenin", config-protected
+        # words, and ambiguous months are rejected outright.
+        _always_lower = set(w.lower() for w in self.special_rules.get('always_lowercase', []))
+        self._common_words = _load_common_words()
         self.known_surnames = {}
+        self.context_surnames = {}
+
+        def _register_surname(token: str):
+            t = token.lower().rstrip('.')
+            if (len(t) < 3 or not t.isalpha()
+                    or t in _NON_SURNAME_WORDS or t in self.skip_words
+                    or t in _always_lower or t in _AMBIGUOUS_MONTHS):
+                return
+            if t not in self._common_words or t in self.name_allowlist:
+                self.known_surnames[t] = token
+            elif t not in self.known_surnames:
+                self.context_surnames[t] = token
+
         for name in list(hybrid_data['people'].keys()):
             parts = name.split()
             if len(parts) >= 2:
                 last = parts[-1]
                 if '-' in last:
                     for hp in last.split('-'):
-                        self.known_surnames[hp.lower()] = hp
+                        _register_surname(hp)
                 else:
-                    self.known_surnames[last.lower()] = last
-                # First name too
-                self.known_surnames[parts[0].lower()] = parts[0]
-        
+                    _register_surname(last)
+                _register_surname(parts[0])
+
+        # Speaker-label roster: the authoritative list of people who actually
+        # spoke in meetings (council/CRA members, staff, recurring guests).
+        # Always loaded so their names are never left lowercase, regardless of
+        # whether they appear in any agenda. Built by build_speaker_roster.py.
+        roster_path = Path(roster_file)
+        roster_names = 0
+        if roster_path.exists():
+            with open(roster_path, 'r') as f:
+                roster = json.load(f)
+            # Full names -> agenda entities (single- and multi-word matching),
+            # and their first/last tokens -> surname buckets.
+            for key, proper in roster.get('full_names', {}).items():
+                self.agenda_entities[key] = proper
+                tokens = proper.split()
+                _register_surname(tokens[0])
+                _register_surname(tokens[-1])
+            roster_names = len(roster.get('full_names', {}))
+
         print(f"  ✓ Loaded {len(self.agenda_entities)} agenda entities")
-        print(f"  ✓ Built {len(self.known_surnames)} surname index")
+        print(f"  ✓ Built {len(self.known_surnames)} surname index "
+              f"(+{len(self.context_surnames)} title-gated)")
+        print(f"  ✓ Loaded {roster_names} roster names from speaker labels")
         
         # Load GLiNER for runtime entity detection
         self.use_gliner = use_gliner
@@ -192,6 +295,7 @@ class TranscriptCapitalizer:
         # Matches: "north franklin street", "n. tampa st", "e. twiggs street"
         self.street_pattern = re.compile(
             r'\b((?:north|south|east|west|n\.|s\.|e\.|w\.|n|s|e|w)\s+)?'
+            r'(?!the\b|a\b|an\b|on\b|at\b|to\b|from\b|by\b|of\b|in\b|for\b|and\b|or\b|with\b|about\b)'
             r'([a-z][a-z]+(?:\s+[a-z][a-z]+)?)\s+'
             r'(' + suffix_alts + r')\b',
             re.IGNORECASE
@@ -239,7 +343,7 @@ class TranscriptCapitalizer:
         
         # Step 2: Replace multi-word entities first (greedy longest match)
         for pattern in self.multiword_patterns:
-            if pattern in text_lower:
+            if pattern in text_lower.lower():
                 # Get proper casing
                 if pattern in self.multiword_standard:
                     proper = self.multiword_standard[pattern]
@@ -263,13 +367,17 @@ class TranscriptCapitalizer:
                 # Extract person and organization names from this text
                 # Process in chunks to avoid truncation (GLiNER has 384 token limit)
                 # Using 250 words per chunk to be conservative (tokens < words)
+                # Only "person" and "organization" — the broader "law"/"document"/
+                # "facility" labels caused generic phrases to be title-cased
+                # ("Laws in Place", "Required Documents", "Beautiful Park").
+                # Real acts/documents should live in the entity database instead.
                 labels = ["person", "organization"]
                 chunk_size = 250  # words (conservative to stay well under 384 token limit)
                 words = text_lower.split()
-                
+
                 for i in range(0, len(words), chunk_size):
                     chunk = ' '.join(words[i:i+chunk_size])
-                    entities = self.gliner_model.predict_entities(chunk, labels, threshold=0.4)
+                    entities = self.gliner_model.predict_entities(chunk, labels, threshold=0.55)
                     
                     # Store GLiNER-detected entities with their proper casing
                     for entity in entities:
@@ -279,15 +387,58 @@ class TranscriptCapitalizer:
                         if entity_text.lower() in self.acronyms:
                             continue
                         
+                        # Skip if it is a substring of any multi-word database entity
+                        if any(entity_text.lower() in db_pattern for db_pattern in self.multiword_patterns):
+                            continue
+
+                        # Skip generic descriptions GLiNER mislabels as people:
+                        # a multi-word phrase ending in a common demographic noun
+                        # ("young lady", "young man", "young people", "small
+                        # business owners"). A real personal name does not end in
+                        # one of these words, so genuine names are unaffected.
+                        ent_tokens = [re.sub(r"[^\w]", '', w).lower() for w in entity_text.split()]
+                        if len(ent_tokens) > 1 and ent_tokens[-1] in _GENERIC_PERSON_NOUNS:
+                            continue
+
                         # Title case the entity (capitalize each word)
-                        # Preserve hyphenated name casing
+                        # Preserve hyphenated name casing, handle acronyms/possessives, and keep common lowercase words lowercase
                         words_in_entity = entity_text.split()
                         proper_parts = []
-                        for w in words_in_entity:
-                            if '-' in w:
-                                proper_parts.append('-'.join(p.capitalize() for p in w.split('-')))
+                        for idx, w in enumerate(words_in_entity):
+                            # Separate punctuation/possessive for the word inside the entity
+                            match_w = re.match(r'^([^\w]*)(.+?)([^\w]*)$', w)
+                            if match_w:
+                                lead_w, core_w, trail_w = match_w.groups()
                             else:
-                                proper_parts.append(w.capitalize())
+                                lead_w = trail_w = ''
+                                core_w = w
+                            
+                            # Check for possessive
+                            suffix_w = ''
+                            base_w = core_w
+                            if len(core_w) > 2 and core_w.lower().endswith("'s"):
+                                suffix_w = core_w[-2:]
+                                base_w = core_w[:-2]
+                            elif len(core_w) > 1 and core_w.endswith("'"):
+                                suffix_w = "'"
+                                base_w = core_w[:-1]
+                            
+                            clean_w = re.sub(r'[^\w-]', '', base_w).lower()
+                            
+                            if clean_w in self.special_rules.get('always_lowercase', []):
+                                proper_parts.append(lead_w + clean_w + suffix_w + trail_w)
+                            elif clean_w in self.acronyms or clean_w in self.special_rules.get('always_uppercase', []):
+                                proper_parts.append(lead_w + base_w.upper() + suffix_w + trail_w)
+                            elif clean_w in self.known_surnames:
+                                # Defer to our authoritative casing so GLiNER does
+                                # not flatten intercaps names ("McCray" -> "Mccray").
+                                proper_parts.append(lead_w + self.known_surnames[clean_w] + suffix_w + trail_w)
+                            elif clean_w in self.context_surnames:
+                                proper_parts.append(lead_w + self.context_surnames[clean_w] + suffix_w + trail_w)
+                            elif '-' in clean_w:
+                                proper_parts.append(lead_w + '-'.join(p.capitalize() for p in clean_w.split('-')) + suffix_w + trail_w)
+                            else:
+                                proper_parts.append(lead_w + base_w.capitalize() + suffix_w + trail_w)
                         proper_case = ' '.join(proper_parts)
                         
                         # Store both single and multi-word entities
@@ -302,7 +453,7 @@ class TranscriptCapitalizer:
         
         # Step 2.6: Replace GLiNER multi-word entities
         for pattern, proper in sorted(gliner_multiword.items(), key=lambda x: len(x[0]), reverse=True):
-            if pattern in text_lower:
+            if pattern in text_lower.lower():
                 text_lower = re.sub(
                     r'\b' + re.escape(pattern) + r'\b',
                     proper,
@@ -324,35 +475,60 @@ class TranscriptCapitalizer:
                 leading_punct = trailing_punct = ''
                 word_core = word
             
-            # Clean word for lookup (just alphanumeric and hyphens)
-            word_clean = re.sub(r'[^\w-]', '', word_core).lower()
-
-            # Context-sensitive disambiguation: 'it'/'us' are both common pronouns
-            # and acronyms. Only uppercase when context rules out the pronoun reading.
-            if word_clean in _CONTEXT_SENSITIVE:
-                if self._is_common_word_context(word_clean, i, words):
-                    # Treat as pronoun; still respect sentence-start capitalisation
-                    if i == 0 or (i > 0 and any(p in words[i - 1] for p in ['.', '!', '?'])):
-                        result = word_clean[0].upper() + word_clean[1:]
-                    else:
-                        result = word_clean
-                    capitalized_words.append(leading_punct + result + trailing_punct)
-                    continue
-                # Not pronoun context — fall through to normal acronym/entity rules
-
-            # Check if this should be an acronym (override other capitalizations)
-            if word_clean in self.acronyms:
-                capitalized_words.append(leading_punct + word_clean.upper() + trailing_punct)
-                continue
-            
             # Check if already capitalized from multi-word replacement
             if word_core and word_core[0].isupper():
                 capitalized_words.append(word)
                 continue
+
+            # Check for possessive suffix ('s or ')
+            suffix = ''
+            base_core = word_core
             
+            if len(word_core) > 2 and word_core.lower().endswith("'s"):
+                suffix = word_core[-2:]
+                base_core = word_core[:-2]
+            elif len(word_core) > 1 and word_core.endswith("'"):
+                suffix = "'"
+                base_core = word_core[:-1]
+            
+            # Clean base word for lookup (just alphanumeric and hyphens)
+            base_clean = re.sub(r'[^\w-]', '', base_core).lower()
+
+            if not base_clean:
+                capitalized_words.append(word)
+                continue
+
+            # Context-sensitive disambiguation: 'it'/'us' are both common pronouns
+            # and acronyms. Only uppercase when context rules out the pronoun reading.
+            if base_clean in _CONTEXT_SENSITIVE:
+                if self._is_common_word_context(base_clean, i, words):
+                    # Treat as pronoun; still respect sentence-start capitalisation
+                    if i == 0 or (i > 0 and any(p in words[i - 1] for p in ['.', '!', '?'])):
+                        result = base_core[0].upper() + base_core[1:]
+                    else:
+                        result = base_core
+                    capitalized_words.append(leading_punct + result + suffix + trailing_punct)
+                    continue
+                # Not pronoun context — fall through to normal acronym/entity rules
+
+            # Check if this should be an acronym (override other capitalizations)
+            if base_clean in self.acronyms:
+                capitalized_words.append(leading_punct + base_core.upper() + suffix + trailing_punct)
+                continue
+
+            # Acronym plurals: "cras" -> "CRAs", "cacs" -> "CACs", "rfps" -> "RFPs".
+            # Stem must be at least 2 chars so common words ("is"/"as"/"us") are
+            # left alone, and the lowercase 's' is preserved as the plural marker.
+            if (len(base_clean) > 2 and base_clean.endswith('s')
+                    and base_clean[:-1] in self.acronyms):
+                capitalized_words.append(
+                    leading_punct + base_core[:-1].upper() + 's' + suffix + trailing_punct
+                )
+                continue
+
             # Rule 0: Hyphenated words — check early so sentence-start rules don't clobber names
-            if '-' in word_clean and len(word_clean) > 2:
-                parts = word_clean.split('-')
+            if '-' in base_clean and len(base_clean) > 2:
+                parts = base_clean.split('-')
                 is_name_like = any(
                     p.lower() in self.standard_lookup 
                     or p.lower() in self.agenda_entities
@@ -368,86 +544,114 @@ class TranscriptCapitalizer:
                         else:
                             fixed_parts.append(p.capitalize())
                     fixed = '-'.join(fixed_parts)
-                    capitalized_words.append(leading_punct + fixed + trailing_punct)
+                    capitalized_words.append(leading_punct + fixed + suffix + trailing_punct)
                     continue
             
             # Rule 1: First word of sentence (always capitalize)
             if i == 0:
-                # Capitalize first letter only
-                if word_clean:
-                    capitalized = word_clean[0].upper() + word_clean[1:]
-                    capitalized_words.append(leading_punct + capitalized + trailing_punct)
-                else:
-                    capitalized_words.append(word)
+                capitalized = base_core[0].upper() + base_core[1:]
+                capitalized_words.append(leading_punct + capitalized + suffix + trailing_punct)
                 continue
             
             # Rule 2: After sentence-ending punctuation
             if i > 0 and any(p in words[i-1] for p in ['.', '!', '?']):
-                # Capitalize first letter only
-                if word_clean:
-                    capitalized = word_clean[0].upper() + word_clean[1:]
-                    capitalized_words.append(leading_punct + capitalized + trailing_punct)
-                else:
-                    capitalized_words.append(word)
+                capitalized = base_core[0].upper() + base_core[1:]
+                capitalized_words.append(leading_punct + capitalized + suffix + trailing_punct)
                 continue
             
             # Rule 3: Pronoun "I"
-            if word_clean == 'i':
-                capitalized_words.append(leading_punct + 'I' + trailing_punct)
+            if base_clean == 'i':
+                capitalized_words.append(leading_punct + 'I' + suffix + trailing_punct)
                 continue
             
             # Rule 4: Always lowercase words
-            if word_clean in self.special_rules['always_lowercase']:
-                capitalized_words.append(leading_punct + word_clean + trailing_punct)
+            if base_clean in self.special_rules['always_lowercase']:
+                capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
                 continue
             
             # Rule 5: Always uppercase (acronyms)
-            if word_clean in self.special_rules['always_uppercase']:
-                capitalized_words.append(leading_punct + word_clean.upper() + trailing_punct)
+            if base_clean in self.special_rules['always_uppercase']:
+                capitalized_words.append(leading_punct + base_core.upper() + suffix + trailing_punct)
                 continue
             
             # Rule 5.5: Detect likely acronyms (2-5 uppercase letters in original)
             # If original text was ALL CAPS, check if the word is a known acronym pattern
             orig_word = text.split()[i] if i < len(text.split()) else ''
-            if (len(word_clean) >= 2 and len(word_clean) <= 5 
-                    and word_clean.isalpha() 
+            if (len(base_clean) >= 2 and len(base_clean) <= 5 
+                    and base_clean.isalpha() 
                     and orig_word.isupper()
-                    and word_clean in self.acronyms):
-                capitalized_words.append(leading_punct + word_clean.upper() + trailing_punct)
+                    and base_clean in self.acronyms):
+                capitalized_words.append(leading_punct + base_core.upper() + suffix + trailing_punct)
                 continue
             
             # Rule 6: Skip ambiguous words (common nouns that match entity names)
-            if word_clean in self.skip_words:
-                capitalized_words.append(leading_punct + word_clean + trailing_punct)
+            if base_clean in self.skip_words:
+                capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
                 continue
             
+            # Rule 6.5: Ambiguous month names ("may"/"march"/"august") are stored
+            # as standard entities but double as common words. Only let them reach
+            # the entity lookup below in a date-like context; otherwise lowercase.
+            if base_clean in _AMBIGUOUS_MONTHS:
+                def _ctx_token(j):
+                    if 0 <= j < len(words):
+                        m = re.match(r"^[^\w]*([\w']+)[^\w]*$", words[j])
+                        return m.group(1).lower() if m else ''
+                    return ''
+                nxt, prv = _ctx_token(i + 1), _ctx_token(i - 1)
+                date_like = bool(
+                    re.match(r'^\d{1,4}(st|nd|rd|th)?$', nxt)
+                    or re.match(r'^\d{4}$', prv)
+                    or prv in _MONTH_CONTEXT_PREV
+                )
+                if not date_like:
+                    capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
+                    continue
+                # date context: fall through to the standard-entity lookup -> "May"
+
             # Rule 7: Check standard entities
-            if word_clean in self.standard_lookup:
-                proper = self.standard_lookup[word_clean]
-                capitalized_words.append(leading_punct + proper + trailing_punct)
+            if base_clean in self.standard_lookup:
+                proper = self.standard_lookup[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
-            
+
             # Rule 7: Check agenda entities
-            if word_clean in self.agenda_entities:
-                proper = self.agenda_entities[word_clean]
-                capitalized_words.append(leading_punct + proper + trailing_punct)
+            if base_clean in self.agenda_entities:
+                proper = self.agenda_entities[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
-            
+
+            # Rule 7c: Known council/staff surnames used on their own,
+            # e.g. "board member clendenin" -> "board member Clendenin".
+            if base_clean in self.known_surnames:
+                proper = self.known_surnames[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
+                continue
+
+            # Rule 7d: Ambiguous common-word surnames (e.g. "Young", "Dock") only
+            # capitalize when preceded by a title/role — "councilwoman young" ->
+            # "councilwoman Young", while "young people" stays lowercase.
+            if base_clean in self.context_surnames and i > 0:
+                prev_clean = re.sub(r'[^\w]', '', words[i - 1]).lower()
+                if prev_clean in _NAME_TITLE_PREV:
+                    proper = self.context_surnames[base_clean]
+                    capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
+                    continue
+
             # Rule 8: Check GLiNER-detected entities
-            if word_clean in gliner_entities:
-                proper = gliner_entities[word_clean]
-                capitalized_words.append(leading_punct + proper + trailing_punct)
+            if base_clean in gliner_entities:
+                proper = gliner_entities[base_clean]
+                capitalized_words.append(leading_punct + proper + suffix + trailing_punct)
                 continue
             
             # Rule 9: Numeric patterns (dates, times, etc.)
-            # Keep as-is but capitalize first letter if alphabetic
-            if re.match(r'^\d', word_clean):
+            if re.match(r'^\d', base_clean):
                 capitalized_words.append(word)
                 continue
             
             # Default: Keep lowercase (conservative approach)
             # Only capitalize what we know about
-            capitalized_words.append(leading_punct + word_clean + trailing_punct)
+            capitalized_words.append(leading_punct + base_core + suffix + trailing_punct)
         
         return ' '.join(capitalized_words)
     

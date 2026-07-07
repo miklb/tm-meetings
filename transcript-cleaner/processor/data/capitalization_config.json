@@ -15,6 +15,7 @@
     "bcso",
     "blc",
     "bmp",
+    "bocc",
     "bric",
     "cac",
     "cad",
@@ -93,6 +94,7 @@
     "gps",
     "hart",
     "hbe",
+    "hc",
     "hcfr",
     "hcso",
     "hfc",
@@ -179,6 +181,8 @@
     "ta",
     "tbarta",
     "tbedc",
+    "tcc",
+    "tdt",
     "teco",
     "tfd",
     "tfr",
@@ -186,6 +190,7 @@
     "tif",
     "toc",
     "tpd",
+    "tsa",
     "uasi",
     "udt",
     "umu",
@@ -275,6 +280,11 @@
     "bond",
     "lease",
     "permit",
+    "parks",
     "award"
+  ],
+  "_name_allowlist_doc": "Surnames that are also dictionary words but should still be capitalized when used alone (they are members/officials whose common-word sense is rare in council speech). Do NOT add surnames whose common-word sense is frequent (e.g. 'young', 'cotton', 'steady') — that would capitalize the everyday word everywhere.",
+  "name_allowlist": [
+    "miranda"
   ]
 }

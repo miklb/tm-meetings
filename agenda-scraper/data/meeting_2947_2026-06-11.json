@@ -1,0 +1,57 @@
+{
+  "meetingId": "2947",
+  "meetingType": "cra",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "6/11/2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2947&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": null,
+      "agendaItemId": null,
+      "title": "Memorandum from Belix Parks, CRA Community Development Coordinator, transmitting the Vincente Ybor Project – 2914 N. Nebraska Avenue Urban ReWorx CRA Housing Funding Agreement. (To be R/F)Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving Urban Reworx, LLC, Grant Funding and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Urban Reworx, LLC (“Grant Recipient”) to construct a mixed-use project consisting of 20 units of affordable housing and 950 sf of commercial space generally described as the Vicente Ybor Development at 2914 n. Nebraska Ave, Tampa, FL 33602 on property located within the boundaries of the East Tampa Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "rawTitle": "Memorandum from Belix Parks, CRA Community Development Coordinator, transmitting the Vincente Ybor Project – 2914 N. Nebraska Avenue Urban ReWorx CRA Housing Funding Agreement. (To be R/F)Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving Urban Reworx, LLC, Grant Funding and Construction Agreement by and between said Community Redevelopment Agency (“CRA”) and Urban Reworx, LLC (“Grant Recipient”) to construct a mixed-use project consisting of 20 units of affordable housing and 950 sf of commercial space generally described as the Vicente Ybor Development at 2914 n. Nebraska Ave, Tampa, FL 33602 on property located within the boundaries of the East Tampa Community Redevelopment Area; authorizing execution of the Community Redevelopment Grant Funding Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.",
+      "fileNumber": "R/F",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "addendumSection": "walkons",
+      "continuedToDate": null
+    },
+    {
+      "number": 4,
+      "agendaItemId": null,
+      "title": "File. CRA25-19542CRA Staff to discuss not having funding limits on Special Requests, Special Projects and Funding Requests; further, to discuss how to present to the Board for evaluation on a cycle. (Original motion initiated by Clendenin-Maniscalco on November 13, 2025)(Continued from February 12, 2026)Memorandum from Dee Reed, Economic Development Coordinator, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File. CRA25-19542CRA Staff to discuss not having funding limits on Special Requests, Special Projects and Funding Requests; further, to discuss how to present to the Board for evaluation on a cycle. (Original motion initiated by Clendenin-Maniscalco on November 13, 2025)(Continued from February 12, 2026)Memorandum from Dee Reed, Economic Development Coordinator, transmitting a written report for said agenda item. (To be R/F)",
+      "fileNumber": "CRA25-19542CRA",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [],
+      "financialDetails": [],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 0,
+        "net": 0
+      },
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2026-06-11"
+}

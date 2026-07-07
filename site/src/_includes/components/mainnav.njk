@@ -1,0 +1,21 @@
+{#
+  COMPONENT: mainnav — primary site navigation bar.
+
+  Params:
+   • items       (array, required) — [{label, href}]
+   • currentPath (string, optional) — current page URL; matched against item.href
+                                      for aria-current="page"
+#}
+{% macro mainnav(items, currentPath="") %}
+<nav class="mainnav" aria-label="Sections">
+  <div class="wrap">
+    <ul>
+      {% for item in items %}
+      <li>
+        <a href="{{ item.href }}"{% if currentPath and item.href === currentPath %} aria-current="page"{% endif %}>{{ item.label }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>
+{% endmacro %}

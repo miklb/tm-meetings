@@ -1,0 +1,15 @@
+/* ============================================================================
+   COMPONENT: label — small uppercase label above a heading (replaces "kicker").
+   ========================================================================== */
+@layer components {
+  .label {
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: var(--step--1);
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin: 0;
+  }
+  .label--gold { color: var(--accent); }
+}

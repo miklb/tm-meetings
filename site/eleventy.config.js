@@ -2,6 +2,9 @@ module.exports = function (eleventyConfig) {
   // Passthrough copy for static assets
   eleventyConfig.addPassthroughCopy({ public: '.' });
 
+  // Current year — used in the shared site-footer colophon.
+  eleventyConfig.addShortcode('year', () => `${new Date().getFullYear()}`);
+
   // ---------------------------------------------------------------------------
   // Filters
   // ---------------------------------------------------------------------------

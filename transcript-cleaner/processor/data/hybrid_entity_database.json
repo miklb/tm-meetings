@@ -359,6 +359,18 @@
       "score": 1.5,
       "agendas": 3
     },
+    "Guido Maniscalco": {
+      "frequency": 1,
+      "confidence": 1.0,
+      "score": 1.0,
+      "agendas": 1
+    },
+    "Charlie Miranda": {
+      "frequency": 1,
+      "confidence": 1.0,
+      "score": 1.0,
+      "agendas": 1
+    },
     "Sal Ruggiero": {
       "frequency": 1,
       "confidence": 1.0,
@@ -665,7 +677,7 @@
       "score": 1.0,
       "agendas": 2
     },
-    "Chair Clendenin": {
+    "Clendenin": {
       "frequency": 1,
       "confidence": 1.0,
       "score": 1.0,
@@ -1409,7 +1421,7 @@
       "score": 0.5,
       "agendas": 1
     },
-    "Board member Carlson": {
+    "Carlson": {
       "frequency": 1,
       "confidence": 0.5,
       "score": 0.5,
@@ -1698,12 +1710,6 @@
       "agendas": 1
     },
     "Mario Espaillat": {
-      "frequency": 1,
-      "confidence": 0.5,
-      "score": 0.5,
-      "agendas": 1
-    },
-    "Chair of the CRA": {
       "frequency": 1,
       "confidence": 0.5,
       "score": 0.5,
@@ -8401,9 +8407,9 @@
     "extraction_method": "hybrid",
     "cleaned": true,
     "cleaning_stats": {
-      "roles_removed": 53,
+      "roles_removed": 1,
       "businesses_moved": 0,
-      "duplicates_merged": 12
+      "duplicates_merged": 0
     }
   }
 }

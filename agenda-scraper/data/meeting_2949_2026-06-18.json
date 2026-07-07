@@ -1,0 +1,77 @@
+{
+  "meetingId": "2949",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "June 18, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2949&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 7,
+      "agendaItemId": "23721",
+      "title": "File No. NCA26-23721Resolution approving an award between the City of Tampa and Nelson’s Tree Farm and Nursery, Inc. for the provision of  Delivery and Installation of Trees for Tree-Mendous Tampa Program (Sheltered Market Solicitation) in the estimated amount of $250,000 for use by the Parks and Recreation Department; authorizing the Director of Purchasing to purchase said property, supplies, materials or services; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "rawTitle": "File No. NCA26-23721Resolution approving an award between the City of Tampa and Nelson’s Tree Farm and Nursery, Inc. for the provision of  Delivery and Installation of Trees for Tree-Mendous Tampa Program (Sheltered Market Solicitation) in the estimated amount of $250,000 for use by the Parks and Recreation Department; authorizing the Director of Purchasing to purchase said property, supplies, materials or services; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "fileNumber": "NCA26-23721Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "dollarAmounts": [
+        "$250,000"
+      ],
+      "financialDetails": [
+        {
+          "amount": "$250,000",
+          "value": 250000,
+          "signedValue": 0,
+          "type": "unspecified",
+          "section": null,
+          "contexts": [
+            "File No. NCA26-23721Resolution approving an award between the City of Tampa and Nelson’s Tree Farm and Nursery, Inc. for the provision of  Delivery and Installation of Trees for Tree-Mendous Tampa Program (Sheltered Market Solicitation) in the estimated amount of $250,000 for use by the Parks and Recreation Department; authorizing the Director of Purchasing to purchase said property, supplies, materials or services; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+            "File No. NCA26-23721Resolution approving an award between the City of Tampa and Nelson’s Tree Farm and Nursery, Inc. for the provision of  Delivery and Installation of Trees for Tree-Mendous Tampa Program (Sheltered Market Solicitation) in the estimated amount of $250,000 for use by the Parks and Recreation Department; authorizing the Director of Purchasing to purchase said property, supplies, materials or services; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)"
+          ],
+          "sources": [
+            "primary",
+            "additional_0"
+          ]
+        }
+      ],
+      "financialTotals": {
+        "expenditures": 0,
+        "decreases": 0,
+        "revenues": 0,
+        "other": 250000,
+        "net": 0
+      },
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "removedFromConsent",
+      "continuedToDate": null
+    }
+  ],
+  "financialSummary": {
+    "totalAmountDiscussed": 250000,
+    "formattedTotalAmountDiscussed": "$250,000.00",
+    "itemCount": 1,
+    "range": {
+      "smallest": {
+        "number": 7,
+        "fileNumber": "NCA26-23721Res",
+        "amount": 250000,
+        "formatted": "$250,000.00"
+      },
+      "largest": {
+        "number": 7,
+        "fileNumber": "NCA26-23721Res",
+        "amount": 250000,
+        "formatted": "$250,000.00"
+      }
+    },
+    "totalExpenditures": 0,
+    "formattedTotalExpenditures": "$0.00",
+    "expenditureRange": null,
+    "expenditureItems": []
+  },
+  "formattedDate": "2026-06-18"
+}

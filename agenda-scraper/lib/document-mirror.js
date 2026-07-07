@@ -229,6 +229,13 @@ class DocumentMirror {
     // Download from OnBase
     const content = await this.downloadDocument(sourceUrl);
     
+    // Validate that we didn't receive an HTML page (like a session or internal error page)
+    // when we expected a document.
+    const preview = content.slice(0, 200).toString('ascii').trim().toLowerCase();
+    if (preview.startsWith('<!doctype html') || preview.startsWith('<html') || preview.includes('<head') || preview.includes('<body')) {
+      throw new Error(`Downloaded content is HTML, not the expected binary file (likely an OnBase session or internal error page)`);
+    }
+    
     // Calculate content hash for logging/deduplication
     const hash = crypto.createHash('sha256').update(content).digest('hex').substring(0, 12);
 

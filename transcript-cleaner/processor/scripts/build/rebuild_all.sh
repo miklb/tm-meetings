@@ -60,16 +60,24 @@ echo "2/4  Cleaning entity database..."
 echo ""
 
 # Step 3: Auto-extract acronyms from agendas into config
-echo "3/4  Extracting acronyms from agendas..."
+echo "3/5  Extracting acronyms from agendas..."
 "$VENV_PYTHON" "$SCRIPT_DIR/extract_config.py" \
     --agenda-dir "$AGENDA_DIR" \
     --config "$DATA_DIR/capitalization_config.json"
 echo ""
 
-# Step 4: Verify all data files exist
-echo "4/4  Verifying data files..."
+# Step 4: Build authoritative name roster from transcript speaker labels
+echo "4/5  Building speaker roster..."
+"$VENV_PYTHON" "$SCRIPT_DIR/build_speaker_roster.py" \
+    --transcripts "$DATA_DIR/transcripts/*.json" \
+    --config "$DATA_DIR/capitalization_config.json" \
+    --output "$DATA_DIR/roster_entities.json"
+echo ""
+
+# Step 5: Verify all data files exist
+echo "5/5  Verifying data files..."
 MISSING=0
-for f in standard_entities.json hybrid_entity_database.json capitalization_config.json; do
+for f in standard_entities.json hybrid_entity_database.json capitalization_config.json roster_entities.json; do
     if [[ -f "$DATA_DIR/$f" ]]; then
         SIZE=$(wc -c < "$DATA_DIR/$f" | tr -d ' ')
         echo "  ✓ $f ($SIZE bytes)"

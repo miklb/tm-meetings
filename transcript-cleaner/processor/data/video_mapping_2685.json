@@ -1,0 +1,68 @@
+{
+  "meeting_id": 2685,
+  "meeting_date": "2026-06-11",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "3trG94__IRM",
+      "title": "Tampa City Council PM - 06/11/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-06-12T14:18:06Z",
+      "duration": "PT3H41M34S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: AAP26-23815 - ESG Rush Funding Amendment",
+          "timestamp": "00:13:23",
+          "seconds": 803
+        },
+        {
+          "title": "Item 2: REZ-26-07 - 4201 East Osborne Avenue",
+          "timestamp": "00:19:55",
+          "seconds": 1195
+        },
+        {
+          "title": "Item 3: REZ-26-36 - North Morgan and Marion",
+          "timestamp": "00:46:35",
+          "seconds": 2795
+        },
+        {
+          "title": "Item 4: REZ-26-46 - 3705 North Darwin Avenue",
+          "timestamp": "01:58:43",
+          "seconds": 7123
+        },
+        {
+          "title": "Item 5: REZ-26-51 - 9710 and 9720 North Armenia",
+          "timestamp": "02:16:53",
+          "seconds": 8213
+        },
+        {
+          "title": "Item 6: REZ-26-53 - 3817 and 3819 Temple Street",
+          "timestamp": "02:24:33",
+          "seconds": 8673
+        },
+        {
+          "title": "Item 7: REZ-25-86 - 3101 North Nebraska Avenue",
+          "timestamp": "02:31:28",
+          "seconds": 9088
+        },
+        {
+          "title": "Item 8: REZ-25-119 - 915 East 23rd Avenue",
+          "timestamp": "02:55:53",
+          "seconds": 10553
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:29:23",
+          "seconds": 12563
+        }
+      ],
+      "offset_seconds": 685
+    }
+  ]
+}

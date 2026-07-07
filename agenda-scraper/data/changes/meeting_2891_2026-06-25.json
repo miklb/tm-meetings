@@ -1,0 +1,78 @@
+{
+  "meetingId": "2891",
+  "meetingDate": "2026-06-25",
+  "firstSeenAt": "2026-06-19T21:34:16.789Z",
+  "entries": [
+    {
+      "date": "2026-06-24",
+      "mirroredAt": "2026-06-24T01:08:49.105Z",
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "AAP26-23734",
+          "filename": "MEMO.FEELEY - 062526 EVENIGN COUNCIL SESSION - ONBASE AGENDA ITEM NO. 24823.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "AAP26-23734",
+          "filename": "FIRST PUBLIC HEARING PY2026FY2027PPT6.25PMCC.pdf"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA",
+          "filename": "CPA 26-01 - CONTINUANCE REQUEST FROM JUNE 25, 2026 TO SEPTEMBER 24, 2026.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-26-08",
+          "filename": "ORDINANCE - AB2 26-08.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-26-08",
+          "filename": "BIE - AB2 26-08.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-26-09",
+          "filename": "ORDINANCE - AB2 26-09.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-26-09",
+          "filename": "BIE - AB2 26-09.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "AB2-26-14",
+          "filename": "ORDINANCE - AB2 26-14.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "AB2-26-14",
+          "filename": "BIE AB2 26-14.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-26-28",
+          "filename": "ORDINANCE REZ 26-28.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-26-28",
+          "filename": "BIE REZ 26-28.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "AB2-26-03",
+          "filename": "BIE - AB2 26-03.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "AB2-26-03",
+          "filename": "ORDINANCE - AB2 26-03.PDF"
+        }
+      ]
+    }
+  ]
+}

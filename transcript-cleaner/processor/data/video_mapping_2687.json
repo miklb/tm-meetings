@@ -1,0 +1,38 @@
+{
+  "meeting_id": 2687,
+  "meeting_date": "2026-06-25",
+  "meeting_type": "Workshop",
+  "videos": [
+    {
+      "video_id": "FzZBs7Di9pU",
+      "title": "Tampa City Council Workshop - 06/25/26",
+      "part": 1,
+      "session": "morning",
+      "published_at": "2026-06-25T17:36:53Z",
+      "duration": "PT4H24M46S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-48 - Council Rules of Procedure",
+          "timestamp": "00:14:00",
+          "seconds": 840
+        },
+        {
+          "title": "Item 2: CM26-23875 - 33647 Response Times",
+          "timestamp": "02:27:50",
+          "seconds": 8870
+        },
+        {
+          "title": "Item 3, 4, 5: CM26-23649 - Tree Trust Fund and NRAC",
+          "timestamp": "03:01:57",
+          "seconds": 10917
+        }
+      ],
+      "offset_seconds": 502
+    }
+  ]
+}

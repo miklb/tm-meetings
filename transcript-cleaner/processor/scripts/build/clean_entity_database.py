@@ -20,10 +20,31 @@ NOT_PERSON_PATTERNS = [
     r'\b(police officers|school resources|property owner)\b',
     r'\b(inc\.|llc|corp\.|p\.c\.|l\.p\.|p\.a\.)\s*$',
     r'\b(inc|llc|corp|services|enterprises|industries|associates|consultants)\s*$',
-    r'^(the|a|an)\s',
+    r'^(the|a|an|of|for)\s',
     r'\bmayor of\b',
     r'\bcouncilmember\b',
+    # Role phrases like "Chair of the CRA" / "Board of Directors" are not people
+    r'\b(chair(?:man|woman|person)?|board|council)\s+(of|for)\b',
 ]
+
+# Leading role/title words to strip from otherwise-valid person names, e.g.
+# "Chair Clendenin" -> "Clendenin", "Board member Carlson" -> "Carlson".
+ROLE_PREFIX = re.compile(
+    r'^(?:chair(?:man|woman|person)?|vice[\s-]?chair|board\s+member|board|member|'
+    r'council\s*member|councilman|councilwoman|commissioner|interim|acting|'
+    r'deputy|assistant)\s+',
+    re.IGNORECASE,
+)
+
+
+def strip_role_prefix(name: str) -> str:
+    """Remove leading role/title words, handling stacked prefixes (Vice Chair X)."""
+    prev = None
+    out = name.strip()
+    while prev != out:
+        prev = out
+        out = ROLE_PREFIX.sub('', out).strip()
+    return out
 
 NOT_PERSON_EXACT = {
     'city clerk', 'director of purchasing', 'property owner(s)',
@@ -153,20 +174,39 @@ def clean_database(input_path: Path, output_path: Path):
     # 1. Remove non-person entries
     removed_roles = []
     moved_to_orgs = []
+    stripped_prefixes = []
     clean_people = {}
-    
+
     for name, stats in db['people'].items():
         if is_non_person(name):
             removed_roles.append(name)
-        elif is_business(name):
+            continue
+        if is_business(name):
             moved_to_orgs.append(name)
             db['organizations'][name] = stats
+            continue
+        # Strip leading role words ("Chair Clendenin" -> "Clendenin"). If nothing
+        # usable remains, or it reduces to a role phrase, it is not a person.
+        clean_name = strip_role_prefix(name)
+        if not clean_name or is_non_person(clean_name):
+            removed_roles.append(name)
+            continue
+        if clean_name != name:
+            stripped_prefixes.append((name, clean_name))
+        # Merge onto an existing entry, keeping the higher-scoring stats.
+        if clean_name in clean_people:
+            if stats.get('score', 0) > clean_people[clean_name].get('score', 0):
+                clean_people[clean_name] = stats
         else:
-            clean_people[name] = stats
-    
+            clean_people[clean_name] = stats
+
     print(f"\nRemoved {len(removed_roles)} non-person entries:")
     for r in removed_roles:
         print(f"  - {r}")
+
+    print(f"\nStripped role prefixes from {len(stripped_prefixes)} entries:")
+    for orig, fixed in stripped_prefixes:
+        print(f"  {orig!r} -> {fixed!r}")
     
     print(f"\nMoved {len(moved_to_orgs)} businesses to organizations:")
     for m in moved_to_orgs:

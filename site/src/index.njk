@@ -1,3 +1,4 @@
+{% from "components/section-head.njk" import sectionHead %}
 <h1 class="visually-hidden">Tampa City Council Meetings</h1>
 
 {# ── Latest Week (featured) ── #}
@@ -6,7 +7,7 @@
 
 {% if latestDate %}
     <section class="latest-week" aria-label="Latest meetings">
-        <h2 class="section-heading">Latest</h2>
+        {{ sectionHead("Latest") }}
         <div class="featured-grid">
             {% for meeting in latestMeetings %}
                 <article class="featured-card">
@@ -37,7 +38,7 @@
 {# ── Previous Meetings ── #}
 {% if meetings.publicDates.length > 1 %}
     <section class="previous-meetings" aria-label="Previous meetings">
-        <h2 class="section-heading">Previous Meetings</h2>
+        {{ sectionHead("Previous Meetings") }}
 
         <div class="meetings-archive" id="meetings-archive">
             {% for date in meetings.publicDates %}

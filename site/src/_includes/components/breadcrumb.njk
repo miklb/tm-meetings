@@ -1,0 +1,23 @@
+{#
+  COMPONENT: breadcrumb — navigational breadcrumb trail.
+
+  Params:
+   • items (array, required) — [{label, href, current: bool}]
+     Set current: true on the last item (the current page); it gets aria-current
+     and no link is rendered for it.
+#}
+{% macro breadcrumb(items) %}
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    {% for item in items %}
+    <li{% if item.current %} aria-current="page"{% endif %}>
+      {%- if item.href and not item.current -%}
+      <a href="{{ item.href }}">{{ item.label }}</a>
+      {%- else -%}
+      {{ item.label }}
+      {%- endif -%}
+    </li>
+    {% endfor %}
+  </ol>
+</nav>
+{% endmacro %}

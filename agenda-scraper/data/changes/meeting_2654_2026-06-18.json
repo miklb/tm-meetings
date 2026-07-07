@@ -1,0 +1,28 @@
+{
+  "meetingId": "2654",
+  "meetingDate": "2026-06-18",
+  "firstSeenAt": "2026-06-13T00:57:44.428Z",
+  "entries": [
+    {
+      "date": "2026-06-17",
+      "mirroredAt": "2026-06-17T16:18:57.100Z",
+      "newDocuments": [
+        {
+          "itemNumber": 34,
+          "itemFileNumber": "E2026-8",
+          "filename": "MEMO.CAMPBELL - 061826 REGULAR COUNCIL SESSION - AGENDA ITEM NO. 34.PDF"
+        },
+        {
+          "itemNumber": 35,
+          "itemFileNumber": "E2026-8",
+          "filename": "MEMO.CAMPBELL - 061826 REGULAR COUNCIL SESSION - AGENDA ITEM NO. 35.PDF"
+        },
+        {
+          "itemNumber": 47,
+          "itemFileNumber": "CM26-23876",
+          "filename": "MEMO.FEELEY - 061826 REGULAR COUNCIL SESSION - FILE NO. CM26-23876.PDF"
+        }
+      ]
+    }
+  ]
+}

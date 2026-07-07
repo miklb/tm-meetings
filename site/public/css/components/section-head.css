@@ -1,0 +1,26 @@
+/* ============================================================================
+   COMPONENT: section-head — section title + trailing rule (replaces "eyebrow").
+   ========================================================================== */
+@layer components {
+  .section-head {
+    display: flex;
+    align-items: center;
+    gap: var(--s-md);
+    margin-bottom: var(--s-lg);
+  }
+  .section-head__title {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    font-size: var(--step-1);
+    letter-spacing: .01em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin: 0;
+  }
+  .section-head__line {
+    flex: 1;
+    height: 1px;
+    background: var(--line);
+    display: block;
+  }
+}

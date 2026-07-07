@@ -1,0 +1,16 @@
+{#
+  COMPONENT: section-head — section title + trailing horizontal rule.
+  Replaces the "eyebrow"/"eyebrow__line" pattern from the mockup.
+
+  Params:
+   • title (string, required)
+   • id    (string, optional) — id attribute on the heading element
+   • level (number, optional, default 2) — heading level h2/h3/h4
+#}
+{% macro sectionHead(title, id="", level=2) %}
+{%- set tag = "h" + level -%}
+<div class="section-head">
+  <{{ tag }} class="section-head__title"{% if id %} id="{{ id }}"{% endif %}>{{ title }}</{{ tag }}>
+  <span class="section-head__line" aria-hidden="true"></span>
+</div>
+{% endmacro %}

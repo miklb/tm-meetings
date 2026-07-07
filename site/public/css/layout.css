@@ -1,0 +1,65 @@
+/* ============================================================================
+   LAYOUT — page-level structural primitives (not components). From the mockups.
+   ========================================================================== */
+@layer layout {
+  /* centered content rail */
+  .wrap { max-width: var(--wrap); margin-inline: auto; padding-inline: var(--s-lg); }
+
+  /* main + aside two-column shell (stacks on small screens) */
+  .layout {
+    display: grid;
+    gap: var(--s-2xl);
+    /* minmax(0,…) not 1fr: lets a wide child (data-table) scroll instead of
+       forcing the track past 100vw (mobile horizontal-scroll fix) */
+    grid-template-columns: minmax(0, 1fr);
+    padding-block: var(--s-2xl);
+  }
+  @media (min-width: 62rem) {
+    .layout {
+      grid-template-columns: minmax(0, 1fr) 21rem;
+      gap: var(--s-3xl);
+      align-items: start;
+    }
+  }
+
+  /* sidebar column: stack panels with consistent gap */
+  .aside { display: flex; flex-direction: column; gap: var(--s-xl); }
+
+  /* story card grid — used in "Latest coverage" curated section */
+  .story-grid {
+    display: grid;
+    gap: var(--s-xl);
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  }
+
+  /* feature row — two-column layout below the fold (data-card + feed) */
+  .feature-row {
+    display: grid;
+    gap: var(--s-2xl);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 62rem) {
+    .feature-row { grid-template-columns: 1.05fr .95fr; align-items: start; }
+  }
+
+  /* section wrapper — breathing room for full-width content sections */
+  .section { padding-block: var(--s-2xl); }
+
+  /* vertical rhythm helper: owl-selector stack */
+  .flow > * + * { margin-top: var(--s-lg); }
+
+  /* skip link */
+  .skip-link {
+    position: absolute;
+    left: var(--s-sm);
+    top: -3rem;
+    background: var(--c-ink);
+    color: #fff;
+    padding: .6rem 1rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--font-sans);
+    z-index: 50;
+    transition: top .15s;
+  }
+  .skip-link:focus { top: var(--s-sm); }
+}

@@ -36,6 +36,11 @@ site/.cache/
 *~
 .DS_Store
 
+# Claude Code — never commit local settings or session transcripts
+.claude/
+*.jsonl.claude
+CLAUDE.local.md
+
 # Testing
 .pytest_cache/
 .coverage
@@ -105,3 +110,7 @@ agenda-scraper/data/discovered-meetings.json
 # Wrangler local secrets
 .dev.vars
 site/.dev.vars
+
+# Planning docs — working notes, not project documentation. Put any *-PLAN
+# or scratch design doc under docs/plans/ to keep it out of version control.
+docs/plans/

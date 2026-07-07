@@ -209,7 +209,7 @@
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": "PD",
-        "requestedZoning": "M",
+        "requestedZoning": "PD",
         "futureLandUse": "R-20",
         "neighborhoodAssociations": [
           "Palma Ceia Pines",
