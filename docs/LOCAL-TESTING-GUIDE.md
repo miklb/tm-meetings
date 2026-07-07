@@ -291,9 +291,9 @@ Do **not** set `ENVIRONMENT="development"` in production — it gates the mock-e
 
 _Note: Remember to redeploy or restart the deployment for new environment variables to take effect._
 
-### 2b. Add a WAF Rate-Limiting Rule — DEFERRED (plan-gated, 2026-07-07)
+### 2b. Add a WAF Rate-Limiting Rule — ✅ done 2026-07-07
 
-The in-process IP rate limiter in `_middleware.js` is best-effort only (per-isolate, per-colo). The plan was a dashboard rate-limiting rule covering `/api/subscribe` and `/api/manage` (e.g. 10 requests per minute per IP), but the rule turned out to be gated behind a paid plan on this account. Deferred for the beta: Turnstile (fail-closed) + per-email limits in `email_rate_limits` + the middleware limiter are adequate for a small private list. Revisit at public launch or if abuse shows up in the logs.
+The in-process IP rate limiter in `_middleware.js` is best-effort only (per-isolate, per-colo), so a dashboard rule backs it up. Deployed as a **custom rule** on the tampamonitor.com zone (dashboard: zone → Security; the full "Rate limiting" product is paid-plan-gated, the custom rule tier is not) covering `/api/subscribe` + `/api/manage`, active as of 2026-07-07. Revisit sizing at public launch — and note the zone is slated for a paid-plan upgrade around the WP migration, which unlocks proper rate-limiting rules.
 
 ### 3. Configure the Dispatch Secret Locally
 
