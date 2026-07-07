@@ -1,4 +1,4 @@
-import { sha256Hex } from '../../lib/api-utils.js';
+import { sha256Hex, generateToken } from '../../lib/api-utils.js';
 
 export async function onRequestGet(context) {
   const { request, env } = context;
@@ -19,7 +19,7 @@ export async function onRequestGet(context) {
   // Tokens are stored as SHA-256 hashes; hash the presented token to look it up
   const tokenHash = await sha256Hex(token);
   const sub = await db.prepare(
-    'SELECT id, verified FROM subscriptions WHERE verification_token = ?'
+    'SELECT id, email, verified FROM subscriptions WHERE verification_token = ?'
   ).bind(tokenHash).first();
 
   if (!sub) {
@@ -42,6 +42,30 @@ export async function onRequestGet(context) {
     return new Response("Something went wrong. Please try the link again later.", { status: 500 });
   }
 
-  // Redirect to notifications page with success query param (no PII in the URL)
+  // Mint a short-lived management session so the user lands on their keyword
+  // list instead of an empty subscribe form. Same pattern as the manage.js
+  // magic link (raw token in the URL, only the hash stored); the page JS
+  // scrubs the query string from history after it loads.
+  try {
+    const sessionToken = generateToken(32);
+    const sessionTokenHash = await sha256Hex(sessionToken);
+    const expiresAt = new Date(Date.now() + 15 * 60 * 1000).toISOString();
+
+    await db.batch([
+      db.prepare(
+        'INSERT INTO session_tokens (token, subscription_id, expires_at) VALUES (?, ?, ?)'
+      ).bind(sessionTokenHash, sub.id, expiresAt),
+      db.prepare(`DELETE FROM session_tokens WHERE expires_at < datetime('now')`)
+    ]);
+
+    return Response.redirect(
+      `${url.origin}/notifications/?status=verified&email=${encodeURIComponent(sub.email)}&token=${sessionToken}`,
+      302
+    );
+  } catch (err) {
+    // Verification itself already committed — degrade to the plain confirmation
+    console.error(`verify: session token creation failed: ${err.message}`);
+  }
+
   return Response.redirect(`${url.origin}/notifications/?status=verified`, 302);
 }

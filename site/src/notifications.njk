@@ -529,9 +529,10 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       renderTags(manageTagContainer, manageKeywordsInput, manageTags);
       updateLimitHelp();
 
-      // Switch panels
+      // Switch panels. Clear stale errors, but keep a success notice —
+      // e.g. the "verified" banner when arriving from the verification link.
       switchPanel('manage');
-      showBanner(''); // clear errors
+      if (statusBanner.classList.contains('error')) showBanner('');
     } catch (err) {
       showBanner(err.message, 'error');
       switchPanel('subscribe');
