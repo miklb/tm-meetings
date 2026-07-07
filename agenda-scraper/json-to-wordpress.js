@@ -409,6 +409,10 @@ function formatStaffReportForWordPress(staffReport, agendaItemId) {
         factRows.push(`<div class="agenda-item-land-use__fact"><dt>Future land use</dt><dd>${staffReport.futureLandUse}</dd></div>`);
     }
 
+    if (staffReport.overlayDistrict) {
+        factRows.push(`<div class="agenda-item-land-use__fact"><dt>Overlay district</dt><dd>${staffReport.overlayDistrict}</dd></div>`);
+    }
+
     const assocs = Array.isArray(staffReport.neighborhoodAssociations)
         ? staffReport.neighborhoodAssociations.filter(Boolean)
         : [];

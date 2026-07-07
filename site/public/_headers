@@ -1,0 +1,6 @@
+# Security headers for all static pages. The /notifications/ page receives a
+# short-lived session token in its query string and loads the external
+# Turnstile script, so referrer leakage matters site-wide.
+/*
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Content-Type-Options: nosniff
