@@ -8,7 +8,7 @@
     "archive": "./pipeline/archive-meeting.sh",
     "build-db": "node scripts/build-db.js",
     "build-site": "cd site && npx @11ty/eleventy",
-    "deploy": "wrangler pages deploy site/_site --project-name tampa-meetings"
+    "deploy": "cd site && wrangler pages deploy --project-name tampa-meetings"
   },
   "author": "Michael Bishop (https://michaelbishop.me/)",
   "license": "MIT"

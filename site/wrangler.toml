@@ -1,10 +1,12 @@
 # Cloudflare Pages configuration for Tampa Meetings
 name = "tampa-meetings"
-pages_build_output_dir = "site/_site"
+# Relative to this file (site/) — running wrangler from site/ makes it bundle
+# the adjacent functions/ dir; deploying from the repo root silently drops it.
+pages_build_output_dir = "_site"
 compatibility_date = "2024-03-01"
 
 [vars]
-REGISTRATION_MODE = "SUPPORTERS_ONLY"
+REGISTRATION_MODE = "BETA_AND_SUPPORTERS"
 
 [[d1_databases]]
 binding = "DB"
