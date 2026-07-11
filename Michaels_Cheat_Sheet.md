@@ -47,3 +47,21 @@ npm run build-db        # rebuild SQLite (scripts/build-db.js)
 npm run build-site      # Eleventy build
 npm run deploy          # wrangler pages deploy site/_site --project-name tampa-meetings
 ```
+
+## Add beta testers
+
+When someone answers the call for testers, add them to remote D1 (takes effect
+immediately — no deploy). They then subscribe themselves at
+<https://meetings.tampamonitor.com/notifications/>.
+
+```bash
+./scripts/add-beta-tester.sh someone@example.com another@example.com
+./scripts/add-beta-tester.sh --list      # show the current list
+```
+
+Emails are lowercased/trimmed and validated; re-adding an existing tester is a
+no-op. The script prints the full list after inserting.
+
+## subscribe.js
+
+The one rule that matters: emails must be stored lowercased and trimmed.
