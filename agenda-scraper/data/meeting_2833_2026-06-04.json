@@ -5053,6 +5053,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": "Right of way is currently unimproved. Code Enforcement-  CMP-25-0002558 Abutting Homeowner Opposition VACATING HISTORY:"
@@ -6389,6 +6390,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": null

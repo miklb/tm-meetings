@@ -4802,6 +4802,7 @@
         "currentZoning": "Ybor City Commercial General (YC-5)",
         "requestedZoning": null,
         "futureLandUse": "Community Mixed Use-35",
+        "overlayDistrict": null,
         "neighborhoodAssociations": [
           "Historic Ybor Neighborhood Civic Association, Inc",
           "Ybor City Management LLC",
@@ -4889,6 +4890,7 @@
         "currentZoning": "Commercial Intensive (CI)",
         "requestedZoning": null,
         "futureLandUse": "Community Commercial 35 & Residential 20",
+        "overlayDistrict": null,
         "neighborhoodAssociations": [
           "Palma Ceia Neighborhood Association, Inc",
           "Virginia Park Neighborhood Association, Inc",
@@ -5048,6 +5050,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": "East Tampa",
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": "Right of way is currently improved. VACATING HISTORY:"

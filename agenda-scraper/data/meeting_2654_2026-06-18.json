@@ -3807,6 +3807,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": null
@@ -3870,6 +3871,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": null
@@ -3963,6 +3965,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": "Tampa Heights",
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": "Right of way is currently unimproved. VACATING HISTORY:"
@@ -4788,6 +4791,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": null
