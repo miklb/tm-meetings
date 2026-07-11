@@ -324,9 +324,10 @@ During the private beta, you can manually authorize emails in your production D1
   ```bash
   npx wrangler d1 execute tampa-meetings-notifications --remote --command="INSERT OR REPLACE INTO supporters (email, tier, source, active_until) VALUES ('user@tampamonitor.com', 'supporter', 'manual', NULL);"
   ```
-- **Add a Beta Tester**:
+- **Add a Beta Tester** — use the script (normalizes emails, prints the list after):
   ```bash
-  npx wrangler d1 execute tampa-meetings-notifications --remote --command="INSERT OR REPLACE INTO beta_testers (email) VALUES ('tester@example.com');"
+  ./scripts/add-beta-tester.sh tester@example.com [more@example.com ...]
+  ./scripts/add-beta-tester.sh --list
   ```
 
 ---
