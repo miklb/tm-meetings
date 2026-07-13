@@ -2480,8 +2480,8 @@
             "fiscalYear": null,
             "amount": "$218,622.51",
             "value": 218622.51,
-            "type": "expenditure",
-            "signedValue": 218622.51,
+            "type": "expenditure_decrease",
+            "signedValue": -218622.51,
             "subjectToAppropriation": false,
             "marker": "Expenditure Decrease",
             "description": "Wastewater Capital Construction Fund. Wastewater Department. Improvements Other Than Bldgs. H. F. Curren Advanced Wastewater Treatment Plant (AWTP) Program Project P: 1001944 O: WW-Wastewater Dept. E: CTPA Improvements Other Than Bldgs T: 30 A: 100451"

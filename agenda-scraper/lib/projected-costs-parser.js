@@ -207,7 +207,13 @@ function parseProjectedCostsRows(sectionText) {
     }
 
     const value = parseDollarValue(amountMatch[1]);
-    const { type, signedDirection } = classifyTypeMarker(markerMatch[1]);
+    // Normalize whitespace before classifying. A marker like "(Expenditure
+    // Decrease)" can wrap across a line break in the source PDF, leaving a
+    // newline inside the captured text ("Expenditure \nDecrease") that would
+    // defeat the literal-space substring checks in classifyTypeMarker and
+    // mis-type a decrease as an increase.
+    const normalizedMarker = markerMatch[1].replace(/\s+/g, ' ').trim();
+    const { type, signedDirection } = classifyTypeMarker(normalizedMarker);
     const fyStr = fyMatch ? `FY${fyMatch[1]}` : null;
     const subjectToAppropriation = Boolean(subjectMatch);
 
@@ -242,7 +248,7 @@ function parseProjectedCostsRows(sectionText) {
       type,
       signedValue: value * signedDirection,
       subjectToAppropriation,
-      marker: markerMatch[1].replace(/\s+/g, ' ').trim(),
+      marker: normalizedMarker,
       description,
     });
   }

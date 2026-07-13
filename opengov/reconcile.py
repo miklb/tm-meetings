@@ -128,19 +128,35 @@ def _compute_reallocation(
     rows: list[dict[str, Any]],
     committed_totals: dict[str, float],
 ) -> dict[str, Any] | None:
-    """Return a reallocation summary block when an item both increases and
-    decreases spending (i.e. moves money between line items).
+    """Return a reallocation summary block when an item moves money between
+    budget lines — an explicit "…Increase" into one line, funded by a decrease
+    (or a revenue increase) out of another.
 
-    Returns None when there are no decrease rows (pure new spending or revenue).
+    Returns None when:
+      * there are no decrease rows (pure new spending or revenue), or
+      * no row carries an explicit "…Increase" marker. The latter excludes
+        contract close-outs, which pair a decrease (de-obligating remaining
+        contract funds) with a plain "Expenditure" final payment — the two
+        sides are unrelated and are not meant to balance.
     """
     decreases = committed_totals.get("decreases", 0.0)
     increases = committed_totals.get("expenditures", 0.0)
-    if decreases == 0.0:
+    revenues = committed_totals.get("revenues", 0.0)
+    has_increase = any(
+        "increase" in (r.get("marker") or "").lower() for r in rows
+    )
+    if decreases == 0.0 or not has_increase:
         return None
-    imbalance = round(decreases - increases, 2)
+    # Fold revenue into the funding side: a revenue increase (e.g. reappropriating
+    # lapsed funds from fund balance) offsets an expenditure increase just as an
+    # expenditure decrease does. Comparing decreases vs increases alone would
+    # flag revenue-funded reappropriations as false imbalances. The committed
+    # net already nets all four buckets, so use it directly.
+    imbalance = round(committed_totals.get("net", 0.0), 2)
     return {
         "decreasesTotal": round(decreases, 2),
         "increasesTotal": round(increases, 2),
+        "revenuesTotal": round(revenues, 2),
         "imbalance": imbalance,
         "balanced": abs(imbalance) <= 1.0,
     }
