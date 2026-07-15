@@ -78,7 +78,8 @@
     transform: translateY(-2px);
     color: #fff;
   }
-  .tool__icon { flex: none; color: var(--accent); }
+  /* sizes live here, not on markup attrs — the FA transform emits a bare svg */
+  .tool__icon { flex: none; width: 28px; height: 28px; color: var(--accent); }
   .tool__name, .tool__desc, .tool__status { display: block; }
   .tool__name {
     font-family: var(--font-sans);

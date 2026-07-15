@@ -6,9 +6,7 @@
   body {
     background: var(--bg);
     color: var(--ink);
-    /* meetings is a data tool, not a publication: sans body, serif headings.
-       (tm-static keeps PT Serif body for long-form article prose.) */
-    font-family: var(--font-sans);
+    font-family: var(--font-serif);
     font-size: var(--step-0);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
@@ -41,5 +39,16 @@
       animation: none !important;
       scroll-behavior: auto !important;
     }
+  }
+}
+
+/* Cross-document view transitions — the browser cross-fades between pages on
+   same-origin navigations. Pure-CSS progressive enhancement (Chrome/Edge 126+,
+   Safari 18.2+; everyone else no-ops), opted out for reduced-motion readers.
+   Sits OUTSIDE @layer: @view-transition isn't a style rule, so it takes no
+   part in the cascade (same convention as @font-face in fonts.css). */
+@media not (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: auto;
   }
 }

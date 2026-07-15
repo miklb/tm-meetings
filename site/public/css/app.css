@@ -6,8 +6,10 @@
    working untouched while the shared foundation + chrome win where they overlap
    (typography, links, chrome). Migrate rules out of `legacy` over time.
 
-   Shared with tm-static via copy-now/package-later — keep these files in sync by
-   hand for now; extract a package if the duplication starts to hurt.
+   Shared with tm-static via copy-forward — tm-static is the source of truth and
+   `npm run sync-design` overwrites the shared files verbatim (see
+   scripts/sync-design.js for the manifest + the pristine-copy contract).
+   Site-specific deviations belong in local.css, never in synced files.
 
    (Runtime @import = one request per file; fine for now, concat+minify later.)
    ========================================================================== */

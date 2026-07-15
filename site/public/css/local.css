@@ -1,9 +1,41 @@
 /* ============================================================================
    local.css — meetings-specific polish that sits ABOVE the shared components
    layer (so it can override both legacy and shared rules). Keep tm-static-shared
-   files pristine; site-specific tweaks live here.
+   files pristine (scripts/sync-design.js overwrites them verbatim); site-specific
+   tweaks live here.
    ========================================================================== */
 @layer local {
+  /* ---- LEGACY ALIASES (meetings' old token names → canonical) ----
+     style.css (the `legacy` layer) still reads --color-* / --spacing-* /
+     --max-width / --font-body. Alias them onto the canonical tokens so it keeps
+     working while rules migrate out of `legacy`. Lives here, not in tokens.css,
+     so tokens.css stays a pristine tm-static copy. */
+  :root {
+    --color-bg: var(--bg);
+    --color-surface: var(--surface-2);
+    --color-text: var(--ink);
+    --color-text-muted: var(--ink-muted);
+    --color-primary: var(--brand);
+    --color-primary-dark: color-mix(in srgb, var(--c-teal) 82%, #000);
+    --color-link: var(--brand);
+    --color-link-visited: #8a5a58;
+    --color-border: var(--line);
+    --color-accent-gold: var(--accent);
+    --color-accent-rose: var(--highlight);
+    --font-body: var(--font-sans);
+    --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", monospace;
+    --spacing-xs: var(--s-2xs);
+    --spacing-sm: var(--s-xs);
+    --spacing-md: var(--s-md);
+    --spacing-lg: var(--s-lg);
+    --spacing-xl: var(--s-xl);
+    --max-width: var(--measure);
+  }
+
+  /* meetings is a data tool, not a publication: sans body, serif headings.
+     (tm-static's base.css sets PT Serif body for long-form article prose.) */
+  body { font-family: var(--font-sans); }
+
   /* The footer is a full-bleed band — override the legacy
      `.site-footer { max-width: 65ch; margin-inline: auto }` constraint that was
      boxing it in. */
