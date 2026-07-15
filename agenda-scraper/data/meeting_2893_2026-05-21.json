@@ -17,15 +17,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null,
       "addendumSection": "continuances",
@@ -42,15 +33,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null,
       "addendumSection": "continuances",
@@ -67,15 +49,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null,
       "addendumSection": "otherChanges",
@@ -92,49 +65,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$44,151.92",
-        "$24,151.92"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$44,151.92",
-          "value": 44151.92,
-          "signedValue": -44151.92,
-          "type": "revenue",
-          "section": null,
-          "contexts": [
-            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution.",
-            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution."
-          ],
-          "sources": [
-            "primary",
-            "additional_0"
-          ]
-        },
-        {
-          "amount": "$24,151.92",
-          "value": 24151.92,
-          "signedValue": -24151.92,
-          "type": "revenue",
-          "section": null,
-          "contexts": [
-            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution.",
-            "File No. DEO26-23652Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2026; approving the transfer, reallocation, and/or appropriation of $44,151.92 within the HOME Investment Partnership Program (HOME) Grant fund to appropriate Program Income for HOME Investment Partnership Program (HOME) Grant program activities providing an effective date. The Correct amount for said item is $24,151.92. The Resolution for said item is correct and does not need substitution."
-          ],
-          "sources": [
-            "primary",
-            "additional_0"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 68303.84,
-        "other": 0,
-        "net": -68303.84
-      },
       "summaryText": "",
       "projectedCosts": null,
       "addendumSection": "otherChanges",
@@ -151,15 +81,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null,
       "addendumSection": "otherChanges",
@@ -176,43 +97,11 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null,
       "addendumSection": "otherChanges",
       "continuedToDate": null
     }
   ],
-  "financialSummary": {
-    "totalAmountDiscussed": 44151.92,
-    "formattedTotalAmountDiscussed": "$44,151.92",
-    "itemCount": 1,
-    "range": {
-      "smallest": {
-        "number": 38,
-        "fileNumber": "DEO26-23652Res",
-        "amount": 44151.92,
-        "formatted": "$44,151.92"
-      },
-      "largest": {
-        "number": 38,
-        "fileNumber": "DEO26-23652Res",
-        "amount": 44151.92,
-        "formatted": "$44,151.92"
-      }
-    },
-    "totalExpenditures": 0,
-    "formattedTotalExpenditures": "$0.00",
-    "expenditureRange": null,
-    "expenditureItems": []
-  },
   "formattedDate": "2026-05-21"
 }

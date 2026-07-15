@@ -30,15 +30,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -60,15 +51,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -96,15 +78,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -119,33 +92,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$300"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$300",
-          "value": 300,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "File No. CM26-24827 In part of the review of the $300 per tree mitigation fee, Staff to explain the steps required to increase the mitigation fee. (Original motion initiated by Hurtak-Miranda on June 4, 2026)",
-            "File No. CM26-24827In part of the review of the $300 per tree mitigation fee, Staff to explain the steps required to increase the mitigation fee. (Original motion initiated by Hurtak-Miranda on June 4, 2026)"
-          ],
-          "sources": [
-            "primary",
-            "additional_0"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 300,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -160,15 +106,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -190,41 +127,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     }
   ],
-  "financialSummary": {
-    "totalAmountDiscussed": 300,
-    "formattedTotalAmountDiscussed": "$300.00",
-    "itemCount": 1,
-    "range": {
-      "smallest": {
-        "number": 4,
-        "fileNumber": "CM26-24827",
-        "amount": 300,
-        "formatted": "$300.00"
-      },
-      "largest": {
-        "number": 4,
-        "fileNumber": "CM26-24827",
-        "amount": 300,
-        "formatted": "$300.00"
-      }
-    },
-    "totalExpenditures": 0,
-    "formattedTotalExpenditures": "$0.00",
-    "expenditureRange": null,
-    "expenditureItems": []
-  },
   "formattedDate": "2026-06-25"
 }

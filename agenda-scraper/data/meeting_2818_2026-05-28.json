@@ -17,15 +17,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -47,15 +38,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -70,15 +52,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -106,15 +79,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -148,15 +112,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -171,15 +126,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     },
@@ -194,15 +140,6 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      },
       "summaryText": "",
       "projectedCosts": null
     }
