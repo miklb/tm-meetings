@@ -2,5 +2,32 @@
   "meetingId": "2815",
   "meetingDate": "2026-07-16",
   "firstSeenAt": "2026-07-11T00:44:34.872Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-07-15",
+      "mirroredAt": "2026-07-15T01:36:12.217Z",
+      "newDocuments": [
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "MAM26-25565",
+          "filename": "MEMO.FAGGART - 071626 REGULAR COUNCIL SESSION - ONBASE AGENDA ITEM NO. 25565.PDF"
+        },
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "MAM26-25565",
+          "filename": "26-X-01383_1_KENWORTH_T380 W_14_FOOT_STELLAR_UTILITY_203-26_BACKUP_REVISED.PDF"
+        },
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "MAM26-25565",
+          "filename": "26-X-01383_1_KENWORTH_T380 W_14_FOOT_STELLAR_UTILITY_203-26_RESO_REVISED.PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-25522",
+          "filename": "MEMO.RUGGIERO. - 071626 REGULAR COUNCIL SESSION - FILE NO. CM26-25522.PDF"
+        }
+      ]
+    }
+  ]
 }
