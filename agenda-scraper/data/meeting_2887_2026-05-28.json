@@ -64,6 +64,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": null
@@ -127,6 +128,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": null,
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": null

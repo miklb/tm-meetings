@@ -182,6 +182,7 @@
         "currentZoning": "RS-50",
         "requestedZoning": "PD",
         "futureLandUse": "R-10",
+        "overlayDistrict": "East Tampa",
         "neighborhoodAssociations": [
           "Armory Gardens Civic Association"
         ],
@@ -279,6 +280,7 @@
         "currentZoning": "RM-24",
         "requestedZoning": "CI",
         "futureLandUse": "CC-35",
+        "overlayDistrict": "Tampa Heights",
         "neighborhoodAssociations": [
           "Tampa Heights Civic Association, Inc",
           "Tampa Heights Civic Association land Use Committee",
@@ -371,6 +373,7 @@
         "currentZoning": null,
         "requestedZoning": null,
         "futureLandUse": "Residential-10",
+        "overlayDistrict": "Tampa Heights",
         "neighborhoodAssociations": [
           "Tampa Heights Civic Association Inc",
           "Tampa Heights Civic Association Land Use Committee",
@@ -459,6 +462,7 @@
         "currentZoning": "RO-1",
         "requestedZoning": "CN",
         "futureLandUse": "R-20",
+        "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
         "findings": "The Development Review and Compliance staff has reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances."
@@ -552,6 +556,7 @@
         "currentZoning": "RM-16",
         "requestedZoning": "RM-18",
         "futureLandUse": "R-20",
+        "overlayDistrict": "East Tampa",
         "neighborhoodAssociations": [
           "Grant Park Civic Association"
         ],
@@ -695,6 +700,7 @@
         "currentZoning": "RS-50",
         "requestedZoning": "PD",
         "futureLandUse": "R-20",
+        "overlayDistrict": "East Tampa",
         "neighborhoodAssociations": [
           "VM Ybor Neighborhood Association and Crimewatch",
           "VM Ybor Neighborhood Association",
@@ -848,6 +854,7 @@
         "currentZoning": "RS-50",
         "requestedZoning": "PD",
         "futureLandUse": "R-20",
+        "overlayDistrict": "East Tampa",
         "neighborhoodAssociations": [
           "VM Ybor Neighborhood Association and Crimewatch",
           "VM Ybor Neighborhood Association",
@@ -1009,6 +1016,7 @@
         "currentZoning": "RS-50",
         "requestedZoning": "IG",
         "futureLandUse": "TU-24",
+        "overlayDistrict": "East Tampa Overlay District",
         "neighborhoodAssociations": [
           "East Tampa 1 and Tampa Overlook Neighborhood Association"
         ],
