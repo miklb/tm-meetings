@@ -20,8 +20,7 @@ const {
   parseAgendaTable,
   parseAddendumSections,
   parseStaticAddendumItems,
-  parseSupportingDocuments,
-  formatCurrency
+  parseSupportingDocuments
 } = require('./http-utils');
 
 const {
@@ -132,14 +131,12 @@ async function fetchAgendaItemDetail(client, itemId, meetingId, config) {
  * @param {Object} client - Axios client
  * @param {Array} docs - Supporting documents
  * @param {Function} formatBackgroundText - Background formatter
- * @param {Function} parseSummaryFinancialEntries - Financial parser
  * @returns {Promise<Object>} - Summary sheet details
  */
-async function extractSummarySheetDetails(client, docs, formatBackgroundText, parseSummaryFinancialEntries) {
+async function extractSummarySheetDetails(client, docs, formatBackgroundText) {
   const result = {
     backgroundText: '',
     summaryText: '',
-    financialEntries: [],
     projectedCosts: null,
     summaryDoc: null
   };
@@ -164,9 +161,8 @@ async function extractSummarySheetDetails(client, docs, formatBackgroundText, pa
 
     result.summaryText = text;
     result.summaryDoc = summaryDoc;
-    result.financialEntries = parseSummaryFinancialEntries(text);
 
-    // New authoritative parser: extract structured rows from the
+    // Authoritative parser: extract structured rows from the
     // PROJECTED COSTS: section and the FISCAL IMPACT STATEMENT paragraph.
     // This is the only fiscal data downstream consumers should rely on.
     result.projectedCosts = parseFiscalSections(text);
@@ -246,9 +242,7 @@ function isAddendumAgenda(html) {
  * @param {Object} options.session - Existing axios session (optional)
  * @param {boolean} options.saveDebugFiles - Save HTML files to output/ (default: true)
  * @param {Function} options.extractFileNumber - File number extraction function (required)
- * @param {Function} options.extractDollarAmounts - Dollar amount extraction function (required)
  * @param {Function} options.formatBackgroundText - Background formatter (required)
- * @param {Function} options.parseSummaryFinancialEntries - Financial parser (required)
  * @returns {Promise<Object>} - Meeting data object
  */
 async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
@@ -256,13 +250,11 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     session,
     saveDebugFiles = true,
     extractFileNumber,
-    extractDollarAmounts,
-    formatBackgroundText,
-    parseSummaryFinancialEntries
+    formatBackgroundText
   } = options;
 
   // Validate required dependencies
-  if (!extractFileNumber || !extractDollarAmounts || !formatBackgroundText || !parseSummaryFinancialEntries) {
+  if (!extractFileNumber || !formatBackgroundText) {
     throw new Error('Missing required extraction functions in options');
   }
 
@@ -356,7 +348,6 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   async function processItem(item, idx) {
     if (!item.agendaItemId) {
       // No detail page available
-      const basicDollarInfo = extractDollarAmounts(item.rawText);
       return {
         number: item.number,
         agendaItemId: null,
@@ -367,10 +358,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
         supportingDocuments: [],
         folioNumbers: [], // Empty for items without details
         location: '', // Empty for items without details
-        coordinates: null, // No coordinates for items without details
-        dollarAmounts: basicDollarInfo.amounts,
-        financialDetails: basicDollarInfo.details,
-        financialTotals: basicDollarInfo.totals
+        coordinates: null // No coordinates for items without details
       };
     }
 
@@ -382,7 +370,6 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
       detailHtml = await fetchAgendaItemDetail(client, item.agendaItemId, meetingId, loadConfig);
     } catch (err) {
       console.warn(`[HTTP] Failed to fetch item ${item.number}: ${err.message}`);
-      const fallbackDollarInfo = extractDollarAmounts(item.rawText);
       return {
         number: item.number,
         agendaItemId: item.agendaItemId,
@@ -394,9 +381,6 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
         folioNumbers: [], // Empty for failed items
         location: '', // Empty for failed items
         coordinates: null, // No coordinates for failed items
-        dollarAmounts: fallbackDollarInfo.amounts,
-        financialDetails: fallbackDollarInfo.details,
-        financialTotals: fallbackDollarInfo.totals,
         error: err.message
       };
     }
@@ -416,8 +400,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     const summaryDetails = await extractSummarySheetDetails(
       client,
       supportingDocuments,
-      formatBackgroundText,
-      parseSummaryFinancialEntries
+      formatBackgroundText
     );
 
     // Get background text (prefer summary sheet)
@@ -428,13 +411,6 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
         backgroundText = formatBackgroundText(backgroundBlock);
       }
     }
-
-    // Extract financial information
-    const detailPlainText = $('#itemView').text().trim();
-    const dollarInfo = extractDollarAmounts(title, {
-      additionalTexts: [item.rawText, detailPlainText, summaryDetails.summaryText].filter(Boolean),
-      summaryEntries: summaryDetails.financialEntries
-    });
 
     // Extract folio numbers and location from TA/CPA TCC PACKET PDFs
     let folioData = { folioNumbers: [], address: '', coordinates: null };
@@ -500,12 +476,9 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
       folioNumbers: folioData.folioNumbers || [], // Array of folio numbers
       location: folioData.address || '', // First address from Location section
       coordinates: folioData.coordinates || null, // {lat, lng} or null
-      dollarAmounts: dollarInfo.amounts,
-      financialDetails: dollarInfo.details,
-      financialTotals: dollarInfo.totals,
       // Authoritative fiscal data extracted from the Summary Sheet's
-      // PROJECTED COSTS: section. Replaces the heuristic financialDetails
-      // for downstream funding manifests and rendering.
+      // PROJECTED COSTS: section — the only fiscal data downstream
+      // funding manifests and rendering rely on.
       summaryText: summaryDetails.summaryText || '',
       projectedCosts: summaryDetails.projectedCosts || null
     };
@@ -545,127 +518,6 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     sourceUrl: `${AGENDA_BASE}/Documents/ViewAgenda?meetingId=${meetingId}&type=agenda&doctype=1`,
     agendaItems: processedItems
   };
-
-  // Build simplified financial summary: total money discussed + range
-  const itemsWithDollarAmounts = processedItems.filter(item =>
-    Array.isArray(item.dollarAmounts) && item.dollarAmounts.length > 0
-  );
-
-  if (itemsWithDollarAmounts.length > 0) {
-    // Skip Part 2 items to avoid double-counting (Part 1 has the contract, Part 2 is the appropriation)
-    const part2Pattern = /\bPart\s+2\b.*\bSee\s+Item\s+\d+\b/i;
-
-    // For each item, use its largest dollar amount as the representative figure
-    const itemFinancials = itemsWithDollarAmounts
-      .filter(item => !part2Pattern.test(item.title || ''))
-      .map(item => {
-        const values = item.dollarAmounts.map(
-          a => parseFloat(a.replace(/[$,]/g, '')) || 0
-        );
-        const maxAmount = Math.max(...values);
-        return {
-          number: item.number,
-          fileNumber: item.fileNumber,
-          amount: maxAmount
-        };
-      })
-      .filter(item => item.amount > 0)
-      .sort((a, b) => a.amount - b.amount);
-
-    const totalAmountDiscussed = itemFinancials.reduce((sum, item) => sum + item.amount, 0);
-
-    let range = null;
-    if (itemFinancials.length > 0) {
-      const smallest = itemFinancials[0];
-      const largest = itemFinancials[itemFinancials.length - 1];
-      range = {
-        smallest: {
-          number: smallest.number,
-          fileNumber: smallest.fileNumber,
-          amount: smallest.amount,
-          formatted: formatCurrency(smallest.amount)
-        },
-        largest: {
-          number: largest.number,
-          fileNumber: largest.fileNumber,
-          amount: largest.amount,
-          formatted: formatCurrency(largest.amount)
-        }
-      };
-    }
-
-    // Expenditure-specific totals with section-aware deduplication.
-    // Summary sheets have a fiscal_impact total and projected_costs broken out by year.
-    // Projected costs are a breakdown of the fiscal impact — not additional money.
-    const expenditureItems = itemsWithDollarAmounts
-      .filter(item => !part2Pattern.test(item.title || ''))
-      .map(item => {
-        const expDetails = (item.financialDetails || []).filter(d => d.type === 'expenditure');
-        if (expDetails.length === 0) return null;
-
-        const fiscalImpact = expDetails.filter(d => d.section === 'fiscal_impact');
-        const projectedCosts = expDetails.filter(d => d.section === 'projected_costs');
-
-        let amount;
-        if (fiscalImpact.length > 0) {
-          // Fiscal impact has the authoritative total
-          amount = Math.max(...fiscalImpact.map(d => d.value));
-        } else if (projectedCosts.length > 0) {
-          // No fiscal impact total — sum projected costs across fiscal years
-          amount = projectedCosts.reduce((sum, d) => sum + d.value, 0);
-        } else {
-          // No section info — use max expenditure amount
-          amount = Math.max(...expDetails.map(d => d.value));
-        }
-
-        return {
-          number: item.number,
-          fileNumber: item.fileNumber,
-          amount
-        };
-      })
-      .filter(item => item && item.amount > 0)
-      .sort((a, b) => a.amount - b.amount);
-
-    const totalExpenditures = expenditureItems.reduce((sum, item) => sum + item.amount, 0);
-
-    let expenditureRange = null;
-    if (expenditureItems.length > 0) {
-      const smallest = expenditureItems[0];
-      const largest = expenditureItems[expenditureItems.length - 1];
-      expenditureRange = {
-        smallest: {
-          number: smallest.number,
-          fileNumber: smallest.fileNumber,
-          amount: smallest.amount,
-          formatted: formatCurrency(smallest.amount)
-        },
-        largest: {
-          number: largest.number,
-          fileNumber: largest.fileNumber,
-          amount: largest.amount,
-          formatted: formatCurrency(largest.amount)
-        },
-        count: expenditureItems.length
-      };
-    }
-
-    meetingData.financialSummary = {
-      totalAmountDiscussed,
-      formattedTotalAmountDiscussed: formatCurrency(totalAmountDiscussed),
-      itemCount: itemFinancials.length,
-      range,
-      totalExpenditures,
-      formattedTotalExpenditures: formatCurrency(totalExpenditures),
-      expenditureRange,
-      expenditureItems: expenditureItems.map(item => ({
-        number: item.number,
-        fileNumber: item.fileNumber,
-        amount: item.amount,
-        formatted: formatCurrency(item.amount)
-      }))
-    };
-  }
 
   console.log(`[HTTP] Meeting ${meetingId} complete: ${processedItems.length} items processed`);
   

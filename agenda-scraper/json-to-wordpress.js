@@ -665,11 +665,6 @@ function renderWhatsChangedBox(changeLog, meeting) {
             sections.push(`${para(`Item${entry.itemsRemoved.length > 1 ? 's' : ''} removed:`)}\n<!-- wp:list -->\n<ul class="wp-block-list">\n${bullets}\n</ul>\n<!-- /wp:list -->`);
         }
 
-        // Budget total changed
-        if (entry.totalChanged) {
-            sections.push(para(`Estimated budget impact changed from ${entry.totalChanged.from} to ${entry.totalChanged.to}.`));
-        }
-
         // Newly mirrored documents grouped by item
         if (entry.newDocuments && entry.newDocuments.length > 0) {
             const groups = new Map();

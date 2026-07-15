@@ -12,7 +12,6 @@
  *   //   agendaTypePromoted: { from: 'DRAFT', to: 'FINAL' } | null,
  *   //   itemsAdded:   [{ agendaItemId, number, fileNumber, shortTitle }],
  *   //   itemsRemoved: [{ agendaItemId, number, fileNumber, shortTitle }],
- *   //   totalChanged: { from: '$1,000', to: '$2,000' } | null,
  *   // }
  */
 
@@ -57,7 +56,6 @@ function itemDescriptor(item) {
  *   agendaTypePromoted: {from: string, to: string}|null,
  *   itemsAdded:   Array,
  *   itemsRemoved: Array,
- *   totalChanged: {from: string, to: string}|null,
  * }}
  */
 function computeMeetingDiff(oldData, newData) {
@@ -65,7 +63,6 @@ function computeMeetingDiff(oldData, newData) {
     agendaTypePromoted: null,
     itemsAdded: [],
     itemsRemoved: [],
-    totalChanged: null,
   };
 
   if (!oldData || !newData) return result;
@@ -92,20 +89,6 @@ function computeMeetingDiff(oldData, newData) {
     }
   }
 
-  // 3. Financial total changed
-  const oldFS = oldData.financialSummary || {};
-  const newFS = newData.financialSummary || {};
-  if (
-    oldFS.formattedTotalAmountDiscussed &&
-    newFS.formattedTotalAmountDiscussed &&
-    oldFS.formattedTotalAmountDiscussed !== newFS.formattedTotalAmountDiscussed
-  ) {
-    result.totalChanged = {
-      from: oldFS.formattedTotalAmountDiscussed,
-      to: newFS.formattedTotalAmountDiscussed,
-    };
-  }
-
   return result;
 }
 
@@ -118,8 +101,7 @@ function diffIsEmpty(diff) {
   return (
     diff.agendaTypePromoted === null &&
     diff.itemsAdded.length === 0 &&
-    diff.itemsRemoved.length === 0 &&
-    diff.totalChanged === null
+    diff.itemsRemoved.length === 0
   );
 }
 

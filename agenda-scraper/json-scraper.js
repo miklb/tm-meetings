@@ -315,273 +315,6 @@ async function extractMeetingDateFromFirstPDF(supportingDocs) {
 }
 
 /**
- * Determine the financial entry type based on contextual text
-/**
- * Convert informal dollar notation ($9.4 million) to a normalized amount string and numeric value
- */
-const DOLLAR_MAGNITUDES = { million: 1e6, billion: 1e9, trillion: 1e12 };
-function normalizeDollarMatch(match) {
-    const lower = match.toLowerCase();
-    for (const [word, mult] of Object.entries(DOLLAR_MAGNITUDES)) {
-        if (lower.includes(word)) {
-            const num = parseFloat(match.replace(/[$,]/g, '')) || 0;
-            const value = num * mult;
-            const formatted = '$' + value.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            return { amount: formatted, value };
-        }
-    }
-    const value = parseFloat(match.replace(/[$,]/g, '')) || 0;
-    return { amount: match, value };
-}
-
-/** Dollar regex: matches informal notation ($9.4 million) first, then standard amounts ($1,234.56) */
-const DOLLAR_REGEX = /\$\d+(?:\.\d+)?\s*(?:million|billion|trillion)|\$\d{1,3}(?:,\d{3})*(?:\.\d{2})?/gi;
-
-/**
- * @param {string[]} contexts - Array of contextual strings containing the amount
- * @param {string} section - Logical section name (e.g., projected_costs)
- * @returns {string} - Normalized type identifier
- */
-function inferFinancialEntryType(contexts = [], section = '') {
-    const combined = (contexts || [])
-        .filter(Boolean)
-        .join(' ')
-        .toLowerCase();
-
-    if (!combined && section === 'projected_costs') {
-        return 'expenditure';
-    }
-
-    if (combined.includes('decrease') || combined.includes('deduct') || combined.includes('credit')) {
-        return 'expenditure_decrease';
-    }
-
-    if (combined.includes('revenue') || combined.includes('income') || combined.includes('reimbursement')) {
-        return 'revenue';
-    }
-
-    if (combined.includes('expenditure') || combined.includes('expense') || combined.includes('payment') || combined.includes('appropriation') || section === 'projected_costs') {
-        return 'expenditure';
-    }
-
-    return 'unspecified';
-}
-
-/**
- * Parse the fiscal sections of a Summary Sheet PDF to extract structured entries
- * @param {string} summaryText - Full text extracted from the Summary Sheet PDF
- * @returns {Array<Object>} - Structured financial entries with amount, value, type, etc.
- */
-function parseSummaryFinancialEntries(summaryText) {
-    if (!summaryText) {
-        return [];
-    }
-
-    const lines = summaryText
-        .split('\n')
-        .map(line => line.trim())
-        .filter(line => line.length > 0);
-
-    const entries = [];
-    let currentSection = '';
-    let previousLine = '';
-
-    for (const rawLine of lines) {
-        const normalizedLine = rawLine.replace(/\s+/g, ' ');
-        const upperLine = normalizedLine.toUpperCase();
-
-        if (upperLine.startsWith('FISCAL IMPACT STATEMENT') || upperLine.startsWith('FISCAL IMPACT:')) {
-            currentSection = 'fiscal_impact';
-        } else if (upperLine.startsWith('PROJECTED COSTS')) {
-            currentSection = 'projected_costs';
-        } else if (upperLine.startsWith('FISCAL IMPACT')) {
-            currentSection = 'fiscal_impact';
-        }
-
-        const amountMatches = normalizedLine.match(DOLLAR_REGEX);
-        if (amountMatches) {
-            const contextParts = [normalizedLine];
-            if (previousLine && !/\$\d/.test(previousLine)) {
-                contextParts.push(previousLine);
-            }
-            const context = contextParts.join(' ').trim();
-            const type = inferFinancialEntryType([context], currentSection);
-
-            amountMatches.forEach(rawMatch => {
-                const { amount, value } = normalizeDollarMatch(rawMatch);
-                entries.push({
-                    amount,
-                    value: Number.isFinite(value) ? value : 0,
-                    type,
-                    section: currentSection,
-                    line: normalizedLine,
-                    context
-                });
-            });
-        }
-
-        if (normalizedLine.length > 0) {
-            previousLine = normalizedLine;
-        }
-    }
-
-    return entries;
-}
-
-/**
- * Extract dollar amounts from agenda items text
- * @param {string} text - Agenda item text
- * @returns {Array<string>} - Array of dollar amounts found
- */
-function extractDollarAmounts(text, options = {}) {
-    const {
-        additionalTexts = [],
-        summaryText = '',
-        summaryEntries = []
-    } = options || {};
-
-    // Match both standard amounts ($1,234,567.89) and informal notation ($9.4 million)
-    const dollarRegex = DOLLAR_REGEX;
-    const amountMap = new Map();
-
-    const ensureEntry = (amount) => {
-        if (!amountMap.has(amount)) {
-            amountMap.set(amount, {
-                amount,
-                value: parseFloat(amount.replace(/[$,]/g, '')) || 0,
-                type: null,
-                section: null,
-                contexts: [],
-                sources: new Set()
-            });
-        }
-        return amountMap.get(amount);
-    };
-
-    const appendDetail = (amount, detail = {}) => {
-        const entry = ensureEntry(amount);
-        if (detail.value !== undefined && Number.isFinite(detail.value)) {
-            entry.value = detail.value;
-        }
-        if (detail.type) {
-            if (!entry.type || entry.type === 'unspecified') {
-                entry.type = detail.type;
-            } else if (entry.type !== detail.type) {
-                const contextLower = (detail.context || '').toLowerCase();
-                if (contextLower.includes('expenditure decrease') || contextLower.includes('(expenditure decrease)')) {
-                    entry.type = 'expenditure_decrease';
-                } else if (contextLower.includes('(expenditure)') && !contextLower.includes('decrease')) {
-                    entry.type = 'expenditure';
-                } else if (detail.type === 'expenditure' && !contextLower.includes('decrease')) {
-                    entry.type = 'expenditure';
-                }
-            }
-        }
-        if (detail.section && !entry.section) {
-            entry.section = detail.section;
-        }
-        if (detail.context) {
-            entry.contexts.push(detail.context);
-        }
-        if (detail.source) {
-            entry.sources.add(detail.source);
-        }
-    };
-
-    const processTextBlock = (block, sourceLabel) => {
-        if (!block) return;
-        const lines = block.split('\n');
-        let previousLine = '';
-
-        for (const rawLine of lines) {
-            const line = rawLine.trim();
-            if (!line) continue;
-
-            const matches = line.match(dollarRegex);
-            if (matches) {
-                const context = `${previousLine} ${line}`.trim();
-                const inferredType = inferFinancialEntryType([context]);
-                matches.forEach(rawMatch => {
-                    const { amount, value } = normalizeDollarMatch(rawMatch);
-                    appendDetail(amount, {
-                        value,
-                        type: inferredType,
-                        context,
-                        source: sourceLabel
-                    });
-                });
-            }
-
-            previousLine = line;
-        }
-    };
-
-    let parsedSummaryEntries = Array.isArray(summaryEntries) && summaryEntries.length > 0
-        ? summaryEntries
-        : parseSummaryFinancialEntries(summaryText);
-
-    // Prioritize structured summary entries so they establish definitive types
-    parsedSummaryEntries.forEach(entry => {
-        appendDetail(entry.amount, {
-            value: entry.value,
-            type: entry.type,
-            section: entry.section,
-            context: entry.context,
-            source: 'summary'
-        });
-    });
-
-    // Process primary text and any additional blocks (e.g., descriptions, background)
-    processTextBlock(text, 'primary');
-    additionalTexts.forEach((block, index) => processTextBlock(block, `additional_${index}`));
-
-    const details = Array.from(amountMap.values()).map(entry => {
-        const contexts = entry.contexts;
-        const inferredType = entry.type || inferFinancialEntryType(contexts, entry.section);
-        const value = Number.isFinite(entry.value) ? entry.value : 0;
-        let signedValue = 0;
-
-        if (inferredType === 'expenditure') {
-            signedValue = value;
-        } else if (inferredType === 'expenditure_decrease' || inferredType === 'revenue') {
-            signedValue = -value;
-        }
-
-        return {
-            amount: entry.amount,
-            value,
-            signedValue,
-            type: inferredType,
-            section: entry.section,
-            contexts,
-            sources: Array.from(entry.sources)
-        };
-    });
-
-    const totals = details.reduce((acc, detail) => {
-        if (detail.type === 'expenditure') {
-            acc.expenditures += detail.value;
-            acc.net += detail.value;
-        } else if (detail.type === 'expenditure_decrease') {
-            acc.decreases += detail.value;
-            acc.net -= detail.value;
-        } else if (detail.type === 'revenue') {
-            acc.revenues += detail.value;
-            acc.net -= detail.value;
-        } else {
-            acc.other += detail.value;
-        }
-        return acc;
-    }, { expenditures: 0, decreases: 0, revenues: 0, other: 0, net: 0 });
-
-    return {
-        amounts: details.map(detail => detail.amount),
-        details,
-        totals
-    };
-}
-
-/**
  * Extract file number from agenda item text
  * @param {string} text - Agenda item text
  * @returns {string|null} - Extracted file number or null if not found
@@ -963,8 +696,6 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                 if (!item.agendaItemId) {
                     console.log(`Warning: No agenda item ID found for item ${item.number}: ${item.fileNumber}`);
                     
-                    const basicDollarInfo = extractDollarAmounts(item.fileNumber);
-
                     // Create basic item object for items without IDs
                     const processedItem = {
                         number: item.number,
@@ -973,10 +704,7 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                         title: item.fileNumber,
                         rawTitle: item.fileNumber,
                         background: "",
-                        supportingDocuments: [],
-                        dollarAmounts: basicDollarInfo.amounts,
-                        financialDetails: basicDollarInfo.details,
-                        financialTotals: basicDollarInfo.totals
+                        supportingDocuments: []
                     };
 
                     processedItems.push(processedItem);
@@ -1066,8 +794,6 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                     }
                 }
                 
-                const primaryDollarInfo = extractDollarAmounts(finalItemText);
-                
                 // Note: fileNo was already extracted above in the content validation section
                 
                 // Extract item ID from supporting document URLs if not already set
@@ -1091,12 +817,9 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                     title: finalItemText.trim(), // Keep title for compatibility with staff-report-parser
                     rawTitle: finalItemText.trim(), // Store raw text - will be cleaned during WordPress generation
                     background: backgroundText,
-                    supportingDocuments: docLinks,
-                    dollarAmounts: primaryDollarInfo.amounts,
-                    financialDetails: primaryDollarInfo.details,
-                    financialTotals: primaryDollarInfo.totals
+                    supportingDocuments: docLinks
                 };
-                
+
                 processedItems.push(itemObject);
                 
             } catch (err) {
@@ -1120,9 +843,6 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                     rawTitle: item.fileNumber,
                     background: '',
                     supportingDocuments: [],
-                    dollarAmounts: [],
-                    financialDetails: [],
-                    financialTotals: { expenditures: 0, decreases: 0, revenues: 0, other: 0, net: 0 },
                     processingError: err.message // Track what went wrong for debugging
                 });
             }
@@ -1157,137 +877,7 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
             sourceUrl: url,
             agendaItems: processedItems
         };
-        
-        // Build simplified financial summary: total money discussed + range
-        const itemsWithDollarAmounts = processedItems.filter(item =>
-            Array.isArray(item.dollarAmounts) && item.dollarAmounts.length > 0
-        );
 
-        if (itemsWithDollarAmounts.length > 0) {
-            const formatCurrency = (value) => {
-                if (!Number.isFinite(value)) {
-                    return null;
-                }
-                const abs = Math.abs(value);
-                const formatted = abs.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-                return `$${formatted}`;
-            };
-
-            // Skip Part 2 items to avoid double-counting (Part 1 has the contract, Part 2 is the appropriation)
-            const part2Pattern = /\bPart\s+2\b.*\bSee\s+Item\s+\d+\b/i;
-
-            // For each item, use its largest dollar amount as the representative figure
-            const itemFinancials = itemsWithDollarAmounts
-                .filter(item => !part2Pattern.test(item.title || ''))
-                .map(item => {
-                    const values = item.dollarAmounts.map(
-                        a => parseFloat(a.replace(/[$,]/g, '')) || 0
-                    );
-                    const maxAmount = Math.max(...values);
-                    return {
-                        number: item.number,
-                        fileNumber: item.fileNumber,
-                        amount: maxAmount
-                    };
-                })
-                .filter(item => item.amount > 0)
-                .sort((a, b) => a.amount - b.amount);
-
-            const totalAmountDiscussed = itemFinancials.reduce((sum, item) => sum + item.amount, 0);
-
-            let range = null;
-            if (itemFinancials.length > 0) {
-                const smallest = itemFinancials[0];
-                const largest = itemFinancials[itemFinancials.length - 1];
-                range = {
-                    smallest: {
-                        number: smallest.number,
-                        fileNumber: smallest.fileNumber,
-                        amount: smallest.amount,
-                        formatted: formatCurrency(smallest.amount)
-                    },
-                    largest: {
-                        number: largest.number,
-                        fileNumber: largest.fileNumber,
-                        amount: largest.amount,
-                        formatted: formatCurrency(largest.amount)
-                    }
-                };
-            }
-
-            // Expenditure-specific totals with section-aware deduplication.
-            // Summary sheets have a fiscal_impact total and projected_costs broken out by year.
-            // Projected costs are a breakdown of the fiscal impact — not additional money.
-            const expenditureItems = itemsWithDollarAmounts
-                .filter(item => !part2Pattern.test(item.title || ''))
-                .map(item => {
-                    const expDetails = (item.financialDetails || []).filter(d => d.type === 'expenditure');
-                    if (expDetails.length === 0) return null;
-
-                    const fiscalImpact = expDetails.filter(d => d.section === 'fiscal_impact');
-                    const projectedCosts = expDetails.filter(d => d.section === 'projected_costs');
-
-                    let amount;
-                    if (fiscalImpact.length > 0) {
-                        // Fiscal impact has the authoritative total
-                        amount = Math.max(...fiscalImpact.map(d => d.value));
-                    } else if (projectedCosts.length > 0) {
-                        // No fiscal impact total — sum projected costs across fiscal years
-                        amount = projectedCosts.reduce((sum, d) => sum + d.value, 0);
-                    } else {
-                        // No section info — use max expenditure amount
-                        amount = Math.max(...expDetails.map(d => d.value));
-                    }
-
-                    return {
-                        number: item.number,
-                        fileNumber: item.fileNumber,
-                        amount
-                    };
-                })
-                .filter(item => item && item.amount > 0)
-                .sort((a, b) => a.amount - b.amount);
-
-            const totalExpenditures = expenditureItems.reduce((sum, item) => sum + item.amount, 0);
-
-            let expenditureRange = null;
-            if (expenditureItems.length > 0) {
-                const smallest = expenditureItems[0];
-                const largest = expenditureItems[expenditureItems.length - 1];
-                expenditureRange = {
-                    smallest: {
-                        number: smallest.number,
-                        fileNumber: smallest.fileNumber,
-                        amount: smallest.amount,
-                        formatted: formatCurrency(smallest.amount)
-                    },
-                    largest: {
-                        number: largest.number,
-                        fileNumber: largest.fileNumber,
-                        amount: largest.amount,
-                        formatted: formatCurrency(largest.amount)
-                    },
-                    count: expenditureItems.length
-                };
-            }
-
-            meetingData.financialSummary = {
-                totalAmountDiscussed,
-                formattedTotalAmountDiscussed: formatCurrency(totalAmountDiscussed),
-                itemCount: itemFinancials.length,
-                range,
-                totalExpenditures,
-                formattedTotalExpenditures: formatCurrency(totalExpenditures),
-                expenditureRange,
-                expenditureItems: expenditureItems.map(item => ({
-                    number: item.number,
-                    fileNumber: item.fileNumber,
-                    amount: item.amount,
-                    formatted: formatCurrency(item.amount)
-                }))
-            };
-        }
-        
         // Process staff reports and integrate into agenda items
         await integrateStaffReportsIntoAgendaItems(meetingData);
         
@@ -1364,7 +954,6 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                             agendaTypePromoted: diff.agendaTypePromoted,
                             itemsAdded: diff.itemsAdded,
                             itemsRemoved: diff.itemsRemoved,
-                            totalChanged: diff.totalChanged,
                         });
                         saveChangeLog(changeLog);
                     }
@@ -1522,9 +1111,7 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
             session,
             saveDebugFiles: true,
             extractFileNumber,
-            extractDollarAmounts,
-            formatBackgroundText,
-            parseSummaryFinancialEntries
+            formatBackgroundText
         });
 
         // Meeting not available on server — skip without error
@@ -1556,9 +1143,6 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
         
         // Print summary
         console.log(`[HTTP] Summary: ${meetingData.agendaItems.length} items, date: ${meetingData.meetingDate}`);
-        if (meetingData.financialSummary) {
-            console.log(`[HTTP] Total discussed: ${meetingData.financialSummary.formattedTotalAmountDiscussed} across ${meetingData.financialSummary.itemCount} items (expenditures: ${meetingData.financialSummary.formattedTotalExpenditures})`);
-        }
     } catch (error) {
         console.error(`[HTTP] ❌ Failed to scrape meeting ${meetingId}:`, error.message);
         throw error;
@@ -1681,7 +1265,5 @@ module.exports = {
     scrapeWithHTTP,
     extractBackgroundFromPDFWithBrowser,
     extractFileNumber,
-    extractDollarAmounts,
-    parseSummaryFinancialEntries,
     formatBackgroundText
 };

@@ -394,20 +394,6 @@ function parseStaticAddendumItems(html, extractFileNumber) {
   return items;
 }
 
-/**
- * Format currency value
- * @param {number} value - Numeric value
- * @returns {string|null} - Formatted currency string
- */
-function formatCurrency(value) {
-  if (!Number.isFinite(value)) {
-    return null;
-  }
-  const abs = Math.abs(value);
-  const formatted = abs.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-  return `${value < 0 ? '-' : ''}$${formatted}`;
-}
-
 module.exports = {
   BASE_URL,
   ONBASE_PATH,
@@ -420,6 +406,5 @@ module.exports = {
   parseAgendaTable,
   parseAddendumSections,
   parseStaticAddendumItems,
-  parseSupportingDocuments,
-  formatCurrency
+  parseSupportingDocuments
 };

@@ -178,40 +178,7 @@ function formatSummary(oldData, newData) {
     lines.push(`**Items:** ${countPart}${changes ? ` (${changes})` : ''}\n`);
   }
 
-  // 3. Financial summary delta — compare by fileNumber, not by array index
-  const oldFS = oldData.financialSummary || {};
-  const newFS = newData.financialSummary || {};
-  const oldExpItems = oldFS.expenditureItems || [];
-  const newExpItems = newFS.expenditureItems || [];
-  const oldByFile = new Map(oldExpItems.map(i => [i.fileNumber, i]));
-  const newByFile = new Map(newExpItems.map(i => [i.fileNumber, i]));
-  const droppedFromSummary = [...oldByFile.keys()].filter(fn => !newByFile.has(fn));
-  const addedToSummary = [...newByFile.keys()].filter(fn => !oldByFile.has(fn));
-  const amountChanged = [...newByFile.keys()]
-    .filter(fn => oldByFile.has(fn) && oldByFile.get(fn).amount !== newByFile.get(fn).amount)
-    .map(fn => ({ fn, old: oldByFile.get(fn).formatted, new: newByFile.get(fn).formatted }));
-
-  const totalChanged = oldFS.formattedTotalAmountDiscussed !== newFS.formattedTotalAmountDiscussed;
-  const itemCountChanged = (oldFS.itemCount || oldExpItems.length) !== (newFS.itemCount || newExpItems.length);
-
-  if (totalChanged || itemCountChanged || droppedFromSummary.length > 0 || addedToSummary.length > 0 || amountChanged.length > 0) {
-    hasMeaningfulChange = true;
-    const totalStr = totalChanged
-      ? `${oldFS.formattedTotalAmountDiscussed} → ${newFS.formattedTotalAmountDiscussed}`
-      : (oldFS.formattedTotalAmountDiscussed || '(unknown)');
-    const oldCount = oldFS.itemCount != null ? oldFS.itemCount : oldExpItems.length;
-    const newCount = newFS.itemCount != null ? newFS.itemCount : newExpItems.length;
-    const countStr = itemCountChanged ? `${oldCount} → ${newCount}` : `${newCount}`;
-    lines.push(`**Financial summary:** ${totalStr} across ${countStr} items`);
-    lines.push(`  - Dropped from summary: ${droppedFromSummary.length > 0 ? droppedFromSummary.join(', ') : '(none)'}`);
-    lines.push(`  - Newly in summary: ${addedToSummary.length > 0 ? addedToSummary.join(', ') : '(none)'}`);
-    if (amountChanged.length > 0) {
-      lines.push(`  - Amount changed: ${amountChanged.map(c => `${c.fn} (${c.old} → ${c.new})`).join('; ')}`);
-    }
-    lines.push('');
-  }
-
-  // 4. Genuinely new/removed documents — compare by title key, not by index
+  // 3. Genuinely new/removed documents — compare by title key, not by index
   const docKey = doc => (doc.title || doc.originalText || '').trim().toUpperCase();
   const newDocsByItem = [];
 

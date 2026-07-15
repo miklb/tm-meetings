@@ -46,10 +46,6 @@ CREATE TABLE IF NOT EXISTS agenda_items (
   background TEXT,
   location TEXT,
   coordinates TEXT,
-  dollar_amounts TEXT,
-  fiscal_expenditures REAL DEFAULT 0,
-  fiscal_revenues REAL DEFAULT 0,
-  fiscal_net REAL DEFAULT 0,
   staff_report TEXT
 );
 
@@ -491,10 +487,10 @@ function main() {
   const insertItem = db.prepare(`
     INSERT INTO agenda_items
       (meeting_id, item_number, agenda_item_id, file_number, title, background,
-       location, coordinates, dollar_amounts, fiscal_expenditures, fiscal_revenues, fiscal_net, staff_report)
+       location, coordinates, staff_report)
     VALUES
       (@meeting_id, @item_number, @agenda_item_id, @file_number, @title, @background,
-       @location, @coordinates, @dollar_amounts, @fiscal_expenditures, @fiscal_revenues, @fiscal_net, @staff_report)
+       @location, @coordinates, @staff_report)
   `);
 
   const insertDoc = db.prepare(`
@@ -568,8 +564,6 @@ function main() {
       meetingCount++;
 
       for (const item of items) {
-        const financials = item.financialTotals || {};
-
         const result = insertItem.run({
           meeting_id: meetingId,
           item_number: item.number || null,
@@ -579,10 +573,6 @@ function main() {
           background: item.background || null,
           location: item.location || null,
           coordinates: item.coordinates ? JSON.stringify(item.coordinates) : null,
-          dollar_amounts: item.dollarAmounts?.length ? JSON.stringify(item.dollarAmounts) : null,
-          fiscal_expenditures: financials.expenditures || 0,
-          fiscal_revenues: financials.revenues || 0,
-          fiscal_net: financials.net || 0,
           staff_report: item.staffReport ? JSON.stringify(item.staffReport) : null,
         });
         itemCount++;

@@ -17,7 +17,6 @@
  *       agendaTypePromoted: { from: "DRAFT", to: "FINAL" } | null,
  *       itemsAdded:   [{ agendaItemId, number, fileNumber, shortTitle }],
  *       itemsRemoved: [{ agendaItemId, number, fileNumber, shortTitle }],
- *       totalChanged: { from: "$X", to: "$Y" } | null,
  *       newDocuments: [{ itemNumber, itemFileNumber, filename }]
  *     }
  *   ]
@@ -101,7 +100,6 @@ function hasMeaningfulContent(partial) {
   if (partial.agendaTypePromoted) return true;
   if (partial.itemsAdded && partial.itemsAdded.length > 0) return true;
   if (partial.itemsRemoved && partial.itemsRemoved.length > 0) return true;
-  if (partial.totalChanged) return true;
   if (partial.newDocuments && partial.newDocuments.length > 0) return true;
   return false;
 }
@@ -133,7 +131,6 @@ function appendOrMergeEntry(log, partial) {
   if (partial.agendaTypePromoted !== undefined) entry.agendaTypePromoted = partial.agendaTypePromoted;
   if (partial.itemsAdded !== undefined) entry.itemsAdded = partial.itemsAdded;
   if (partial.itemsRemoved !== undefined) entry.itemsRemoved = partial.itemsRemoved;
-  if (partial.totalChanged !== undefined) entry.totalChanged = partial.totalChanged;
 
   // Mirror fields — merge doc lists so multiple mirror runs don't clobber each other
   if (partial.mirroredAt !== undefined) entry.mirroredAt = partial.mirroredAt;
