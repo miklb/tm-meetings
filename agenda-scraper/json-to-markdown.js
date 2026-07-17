@@ -672,6 +672,10 @@ function isoLocal(now = new Date()) {
 }
 
 function buildFrontMatter({ title, slug, dateIso, excerpt, hasMap, meetingDate }) {
+    // No featuredImage: that was a WP-era requirement (hidden on the page via
+    // hideFeaturedImage); tm-static renders agenda posts fine without one.
+    // Note it also fed og:image — share cards have no image until tm-static
+    // grows a site-level fallback.
     const lines = [
         '---',
         `title: "${title}"`,
@@ -681,7 +685,6 @@ function buildFrontMatter({ title, slug, dateIso, excerpt, hasMap, meetingDate }
         'layout: post',
         `permalink: "/tampa-city-council/agendas/${slug}/"`,
         'author: "michaelb"',
-        'featuredImage: "/uploads/2025/12/agendas_cover.png"',
     ];
     if (hasMap) lines.push('hasMap: true');
     lines.push(`meetingDate: "${meetingDate}"`);
