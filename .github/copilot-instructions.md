@@ -245,14 +245,16 @@ cd agenda-scraper && ./process-agenda.sh 2025-11-06
 ```
 
 This runs in order:
-1. `json-scraper.js` — scrapes meeting JSON from OnBase
+1. `json-scraper.js` — scrapes meeting JSON from OnBase (incl. per-item `section` headers)
 2. `mirror-documents.js` — uploads documents to Cloudflare R2 and stamps `mirroredUrl` fields into the JSON
 3. `python3 -m opengov.reconcile` — reconciles PROJECTED COSTS rows against the OpenGov CoA and writes `opengov/data/reports/<meetingId>-<date>-funding-manifest.json`
-4. `json-to-wordpress.js` — generates WP HTML using the mirrored URLs and the funding manifest
+4. `json-to-markdown.js` — generates the tm-static markdown post (`docs/plans/AGENDA-MARKUP.md`) using the mirrored URLs and the funding manifest; writes `agendas/agenda_<date>.md` and updates the post in `$TM_STATIC_POSTS_DIR`
 
-**Why this matters:** Running `json-scraper.js` directly overwrites the meeting JSON and erases all `mirroredUrl` fields that `mirror-documents.js` previously stamped in. The WP output will then link to the original OnBase URLs instead of the stable R2 mirrors. Skipping the reconciliation step makes the per-item Financial impact sections silently disappear from the WP output.
+**WordPress generation was retired 2026-07-17.** `json-to-wordpress.js` still exists (frozen; the migrated posts on the WP-era site were produced by it) but is no longer in the pipeline. The markdown emitter is the sole published output.
 
-If you need to regenerate WP output only (JSON + mirrors + manifest already done): `node json-to-wordpress.js <meetingId>`
+**Why this matters:** Running `json-scraper.js` directly overwrites the meeting JSON and erases all `mirroredUrl` fields that `mirror-documents.js` previously stamped in. The agenda output will then link to the original OnBase URLs instead of the stable R2 mirrors. Skipping the reconciliation step makes the per-item Financial impact sections silently disappear from the output.
+
+If you need to regenerate the tm-static markdown post only (JSON + mirrors + manifest already done): `node json-to-markdown.js --date <YYYY-MM-DD>` (matches the existing post by slug and keeps its filename + publish date)
 
 If you need to re-mirror only (JSON already done): `node mirror-documents.js <meetingId>`
 

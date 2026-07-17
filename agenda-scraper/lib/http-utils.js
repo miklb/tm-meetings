@@ -274,6 +274,44 @@ function parseSupportingDocuments(html) {
 }
 
 /**
+ * Parse main-agenda section headers and map item numbers to their section.
+ * OnBase renders section headers as loadAgendaItem(id, true) links — the
+ * second argument marks a section row (items use false). Numbered item
+ * tables follow their section header in document order.
+ * @param {string} html - Agenda HTML
+ * @returns {Map<number, string>} Map of item number to raw section header text
+ */
+function parseAgendaSections(html) {
+  const cheerio = require('cheerio');
+  const $ = cheerio.load(html);
+  const sectionMap = new Map();
+
+  let currentSection = null;
+
+  $('a[href*="loadAgendaItem"], td').each((_, el) => {
+    const $el = $(el);
+
+    if (el.tagName === 'a') {
+      const href = $el.attr('href') || '';
+      if (!/loadAgendaItem\(\d+\s*,\s*true/.test(href)) return;
+      const text = $el.text().replace(/\s+/g, ' ').trim();
+      if (text) currentSection = text;
+      return;
+    }
+
+    // Only the first cell of a row carries the item number ("N.").
+    if ($el.index() !== 0 || !currentSection) return;
+    const numberMatch = $el.text().trim().match(/^(\d+)\./);
+    if (numberMatch) {
+      const num = parseInt(numberMatch[1], 10);
+      if (!sectionMap.has(num)) sectionMap.set(num, currentSection);
+    }
+  });
+
+  return sectionMap;
+}
+
+/**
  * Parse addendum section headers and map item numbers to their section.
  * Addendum agendas contain 4 named sections separated by bold/underlined <p> headers.
  * @param {string} html - Agenda HTML
@@ -404,6 +442,7 @@ module.exports = {
   parseLoadAgendaFromSource,
   extractLoadAgendaConfig,
   parseAgendaTable,
+  parseAgendaSections,
   parseAddendumSections,
   parseStaticAddendumItems,
   parseSupportingDocuments

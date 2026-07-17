@@ -1,15 +1,12 @@
 {
   "name": "agenda-scraper",
   "version": "3.1.0",
-  "description": "Scrape City of Tampa agendas, store as structured JSON, and generate WordPress block markup with enhanced navigation and formatting.",
+  "description": "Scrape City of Tampa agendas, store as structured JSON, and generate Markdown posts for the tm-static site.",
   "main": "json-scraper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "scrape": "node json-scraper.js",
-    "convert": "node json-to-wordpress.js",
-    "scrape-and-convert": "node json-scraper.js && node json-to-wordpress.js",
-    "process-date": "node json-scraper.js --date $DATE && node json-to-wordpress.js --date $DATE",
-    "process-weekly": "node json-scraper.js && node json-to-wordpress.js --date $(date +%Y-%m-%d)",
+    "convert": "node json-to-markdown.js",
     "process": "./process-agenda.sh"
   },
   "author": "Michael Bishop (https://michaelbishop.me/)",

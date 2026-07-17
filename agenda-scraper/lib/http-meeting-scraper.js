@@ -18,6 +18,7 @@ const {
   extractMeetingDate,
   extractLoadAgendaConfig,
   parseAgendaTable,
+  parseAgendaSections,
   parseAddendumSections,
   parseStaticAddendumItems,
   parseSupportingDocuments
@@ -505,6 +506,15 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
       item.addendumSection = sectionMap.get(item.number) ?? agendaItems[idx].addendumSection ?? null;
       const match = (item.title || '').match(CONTINUANCE_RE);
       item.continuedToDate = match ? match[1].replace(/,\s*/, ', ').trim() : null;
+    });
+  } else {
+    // Attach the main-agenda section header each item sits under (raw text,
+    // e.g. "CEREMONIAL ACTIVITIES:", "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2)")
+    // so downstream emitters can render real section headings. Additive:
+    // null when the agenda has no section rows.
+    const sectionMap = parseAgendaSections(agendaHtml);
+    processedItems.forEach(item => {
+      item.section = sectionMap.get(item.number) ?? null;
     });
   }
 

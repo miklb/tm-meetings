@@ -106,18 +106,20 @@ if [ "$EXISTING_JSON" -gt 0 ]; then
     fi
     echo ""
 
-    echo "Step 4: Converting to WordPress markup..."
-    node json-to-wordpress.js --date "$DATE"
+    echo "Step 4: Converting to Markdown post (tm-static)..."
+    # Writes agendas/agenda_<date>.md; also writes/updates the post in
+    # $TM_STATIC_POSTS_DIR (from .env) when set. This is the sole published
+    # output — WordPress generation was retired 2026-07-17.
+    node json-to-markdown.js --date "$DATE"
 
-    if [ $? -eq 0 ]; then
-        echo "✓ WordPress conversion completed successfully"
-        echo ""
-        echo "🎉 Agenda processing complete!"
-        echo "Check the agendas/ directory for your wp.html file(s)"
-    else
-        echo "❌ WordPress conversion failed"
+    if [ $? -ne 0 ]; then
+        echo "❌ Markdown conversion failed"
         exit 1
     fi
+    echo "✓ Markdown conversion completed successfully"
+    echo ""
+    echo "🎉 Agenda processing complete!"
+    echo "Check the agendas/ directory for the .md file(s)"
 else
     echo "⚠️  No JSON files found for date $DATE"
     echo "The scraper may not have found any meetings for this date."

@@ -95,10 +95,20 @@ function itemHasFinancialData(fundingItem) {
 // ------------------------------------------------------------------
 
 /**
+ * Wrap a plain HTML section for the requested emitter dialect.
+ * The WP emitter needs wp:html block comments; the markdown emitter takes
+ * the section verbatim.
+ */
+function wrapSection(html, { wpWrap = true } = {}) {
+    if (!wpWrap) return html;
+    return `<!-- wp:html -->\n${html}\n<!-- /wp:html -->`;
+}
+
+/**
  * Fallback render when projected costs exist but no account codes resolved
  * (e.g. "Controlled by Requisition" items with no CoA match).
  */
-function renderRawProjectedCosts(rawCosts) {
+function renderRawProjectedCosts(rawCosts, options = {}) {
     if (!rawCosts || !rawCosts.hasProjectedCosts) return '';
 
     const fisHtml = rawCosts.fiscalImpactStatement
@@ -117,17 +127,15 @@ function renderRawProjectedCosts(rawCosts) {
 
     if (!fisHtml && !rawHtml) return '';
 
-    return `<!-- wp:html -->
-<section class="agenda-item-financial" aria-label="Financial impact">
+    return wrapSection(`<section class="agenda-item-financial" aria-label="Financial impact">
 <h4 class="agenda-item-section__heading">Financial impact</h4>
 ${fisHtml}
 ${rawHtml}
-</section>
-<!-- /wp:html -->`;
+</section>`, options);
 }
 
-function renderItemFinancialSection(fundingItem, rawProjectedCosts) {
-    if (!itemHasResolvedFunding(fundingItem)) return renderRawProjectedCosts(rawProjectedCosts);
+function renderItemFinancialSection(fundingItem, rawProjectedCosts, options = {}) {
+    if (!itemHasResolvedFunding(fundingItem)) return renderRawProjectedCosts(rawProjectedCosts, options);
 
     const totals = fundingItem.totals || {};
     const committed = totals.committed || {};
@@ -314,16 +322,14 @@ function renderItemFinancialSection(fundingItem, rawProjectedCosts) {
 
     const warningHtml = [coaWarningHtml, imbalanceWarningHtml].filter(Boolean).join('\n');
 
-    return `<!-- wp:html -->
-<section class="agenda-item-financial" aria-labelledby="financial-${escapeHtml(fundingItem.agendaItemId)}">
+    return wrapSection(`<section class="agenda-item-financial" aria-labelledby="financial-${escapeHtml(fundingItem.agendaItemId)}">
 <h4 id="financial-${escapeHtml(fundingItem.agendaItemId)}" class="agenda-item-section__heading">Financial impact</h4>
 ${fisHtml}
 ${totalsHtml ? `<dl class="agenda-item-financial__totals">${totalsHtml}</dl>` : ''}
 ${futureHtml}
 ${sourcesHtml}
 ${warningHtml}
-</section>
-<!-- /wp:html -->`;
+</section>`, options);
 }
 
 // ------------------------------------------------------------------

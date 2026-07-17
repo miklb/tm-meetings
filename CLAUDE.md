@@ -16,7 +16,7 @@ Detailed project context for AI assistants lives in `.github/`, which Claude Cod
 
 Mistakes here corrupt data, break published pages, or get IPs banned:
 
-1. **Agenda processing** — always `cd agenda-scraper && ./process-agenda.sh <date>`. **Never run `json-scraper.js` standalone on an already-mirrored meeting**: it rewrites the meeting JSON and erases the `mirroredUrl` fields that `mirror-documents.js` stamped in, so WP output links back to OnBase instead of R2. Safe partial re-runs (regenerate WP only, re-mirror only, re-reconcile only) are listed in copilot-instructions.md.
+1. **Agenda processing** — always `cd agenda-scraper && ./process-agenda.sh <date>`. **Never run `json-scraper.js` standalone on an already-mirrored meeting**: it rewrites the meeting JSON and erases the `mirroredUrl` fields that `mirror-documents.js` stamped in, so the agenda output (`json-to-markdown.js` → tm-static post) links back to OnBase instead of R2. Safe partial re-runs (regenerate the markdown post only, re-mirror only, re-reconcile only) are listed in copilot-instructions.md. (WordPress generation was retired 2026-07-17; `json-to-wordpress.js` is frozen and out of the pipeline.)
 2. **Two separate Python venvs — never mix them:**
    - Pipeline / transcript / video work: `source pipeline/activate.sh` (venv at `transcript-cleaner/processor/venv/`)
    - OpenGov work: `source opengov/.venv/bin/activate`, then `python3 -m opengov.<module>` from the repo root
@@ -28,7 +28,7 @@ Mistakes here corrupt data, break published pages, or get IPs banned:
 ## Commands
 
 ```bash
-# Full agenda pipeline for one meeting (scrape → R2 mirror → OpenGov reconcile → WP HTML)
+# Full agenda pipeline for one meeting (scrape → R2 mirror → OpenGov reconcile → tm-static Markdown)
 cd agenda-scraper && ./process-agenda.sh <YYYY-MM-DD>
 
 # End-to-end archive of one meeting (auto-activates the venv)
@@ -63,7 +63,7 @@ scripts/build-db.js ─▶ data/meetings.db (SQLite + FTS5) ─▶ site/ (Eleven
                                               ─▶ Cloudflare Pages
 ```
 
-Key coupling to know about: `process-agenda.sh` chains scraper → mirror → reconcile → WP generation in a fixed order (see Critical rules #1); the Eleventy build reads `data/meetings.db` directly, so DB rebuild must precede site build after data changes (`pipeline/build-site.sh` does both).
+Key coupling to know about: `process-agenda.sh` chains scraper → mirror → reconcile → Markdown generation in a fixed order (see Critical rules #1); the Eleventy build reads `data/meetings.db` directly, so DB rebuild must precede site build after data changes (`pipeline/build-site.sh` does both).
 
 This repo also serves as the reference pattern for the Tampa Monitor static rebuild (`~/Sites/tm-static`); the `site/` front end is adopting that shared design system (tokens, BEM, no `wp-*` classes).
 
