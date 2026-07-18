@@ -293,7 +293,7 @@ _Note: Remember to redeploy or restart the deployment for new environment variab
 
 ### 2b. Add a WAF Rate-Limiting Rule — ✅ done 2026-07-07
 
-The in-process IP rate limiter in `_middleware.js` is best-effort only (per-isolate, per-colo), so a dashboard rule backs it up. Deployed as a **custom rule** on the tampamonitor.com zone (dashboard: zone → Security; the full "Rate limiting" product is paid-plan-gated, the custom rule tier is not) covering `/api/subscribe` + `/api/manage`, active as of 2026-07-07. Revisit sizing at public launch — and note the zone is slated for a paid-plan upgrade around the WP migration, which unlocks proper rate-limiting rules.
+The in-process IP rate limiter in `_middleware.js` is best-effort only (per-isolate, per-colo), so a dashboard rule backs it up. **Correction 2026-07-18:** the live rule is the zone's single free **rate limiting rule** (not a custom rule as originally written here — free plans include exactly one; the paid-gated product seen on 2026-07-07 was the legacy Rate Limiting version). Expression covered `/api/subscribe` + `/api/manage` on this host; at the tm-static launch it's widened to zone-wide `starts_with(http.request.uri.path, "/api/")` with Block, so the one slot backstops both meetings and tampamonitor.com APIs.
 
 ### 3. Configure the Dispatch Secret Locally
 
