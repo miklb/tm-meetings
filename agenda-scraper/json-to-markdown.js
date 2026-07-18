@@ -650,22 +650,31 @@ function renderMeeting(meeting, addenda, opts) {
 // Front matter + document assembly
 // ------------------------------------------------------------------
 
+// Established archive vocabulary (matches years of WP-era agenda slugs:
+// regular-meeting, cra-evening-land-use, workshop-evening-land-use) — not
+// the raw OnBase meeting-type names.
 const TYPE_TITLES = {
     regular: { title: 'Regular Meeting', slug: 'regular-meeting' },
-    evening: { title: 'Evening Session', slug: 'evening-session' },
-    cra: { title: 'CRA Meeting', slug: 'cra-meeting' },
+    evening: { title: 'Evening Land Use', slug: 'evening-land-use' },
+    cra: { title: 'CRA', slug: 'cra' },
     workshop: { title: 'Workshop', slug: 'workshop' },
-    special: { title: 'Special Called Meeting', slug: 'special-called' },
+    special: { title: 'Special Call', slug: 'special-call' },
 };
 
 function typeInfo(meetingType) {
     return TYPE_TITLES[(meetingType || '').toLowerCase()] || { title: 'Meeting', slug: 'meeting' };
 }
 
-/** "2026-07-23" → "7-23-26" (slug/title date token used by existing posts). */
+/** "2026-07-23" → "7-23-26" (slug date token used by existing posts). */
 function shortDateToken(formattedDate) {
     const [y, m, d] = formattedDate.split('-').map(Number);
     return `${m}-${d}-${String(y).slice(2)}`;
+}
+
+/** "2026-07-23" → "7/23/26" (display date for standardized titles). */
+function slashDateToken(formattedDate) {
+    const [y, m, d] = formattedDate.split('-').map(Number);
+    return `${m}/${d}/${String(y).slice(2)}`;
 }
 
 /** Local ISO timestamp with UTC offset, e.g. 2026-07-17T09:12:00-04:00. */
@@ -719,11 +728,15 @@ function generateMarkdownPost(meetings, options = {}) {
     const dateToken = shortDateToken(meetingDate);
     const multi = mainMeetings.length > 1;
 
-    // Title/slug from the set of meeting types on the day, e.g.
-    // "7-23-26 Regular Meeting", "12-11-25 CRA Meeting & Evening Session".
+    // Title/slug from the meeting date + the set of meeting types on the
+    // day: "7/23/26 - CRA & Evening Land Use" → 7-23-26-cra-evening-land-use.
+    // The slug leads with the meeting date (weekly meetings share type names);
+    // the tm-static filename is the ISO meeting date + type slugs (no date
+    // token twice, and never the generation date).
     const infos = mainMeetings.map(m => typeInfo(m.meetingType));
-    const title = options.title || `${dateToken} ${infos.map(i => i.title).join(' & ')}`;
+    const title = options.title || `${slashDateToken(meetingDate)} - ${infos.map(i => i.title).join(' & ')}`;
     const slug = options.slug || `${dateToken}-${infos.map(i => i.slug).join('-')}`;
+    const fileStem = `${meetingDate}-${infos.map(i => i.slug).join('-')}`;
 
     const usedSectionIds = new Set();
     // Session anchors are emitted by the output loop below — reserve them so
@@ -775,7 +788,7 @@ function generateMarkdownPost(meetings, options = {}) {
         : 'A reimagined version of the Tampa City Council agenda including mirrored supporting documents.';
 
     const body = allBlocks.map(tightBlock).filter(Boolean).join('\n\n');
-    return { title, slug, meetingDate, excerpt, hasMap, body };
+    return { title, slug, fileStem, meetingDate, excerpt, hasMap, body };
 }
 
 // ------------------------------------------------------------------
@@ -802,7 +815,8 @@ function writePost(post, destDir) {
         return;
     }
 
-    const existing = fs.readdirSync(destDir).find(f => f.endsWith(`-${post.slug}.md`));
+    const existing = fs.readdirSync(destDir).find(f =>
+        f === `${post.fileStem}.md` || f.endsWith(`-${post.slug}.md`));
     let destPath;
     if (existing) {
         destPath = path.join(destDir, existing);
@@ -814,7 +828,7 @@ function writePost(post, destDir) {
         }
         console.log(`♻️  Updating existing post: ${destPath}`);
     } else {
-        destPath = path.join(destDir, `${dateIso.slice(0, 10)}-${post.slug}.md`);
+        destPath = path.join(destDir, `${post.fileStem}.md`);
         console.log(`✨ New post: ${destPath}`);
     }
     fs.writeFileSync(destPath, `${frontMatter}\n\n${post.body}\n`);
