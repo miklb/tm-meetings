@@ -163,12 +163,13 @@ function normalizeSectionTitle(raw) {
 function groupItemsBySection(items, fallbackTitle) {
     const groups = [];
     for (const item of items) {
-        const title = normalizeSectionTitle(item.section) || fallbackTitle;
+        const scraped = normalizeSectionTitle(item.section);
+        const title = scraped || fallbackTitle;
         const last = groups[groups.length - 1];
         if (last && last.title === title) {
             last.items.push(item);
         } else {
-            groups.push({ title, items: [item] });
+            groups.push({ title, items: [item], isFallback: !scraped });
         }
     }
     return groups;
@@ -614,8 +615,14 @@ function renderMeeting(meeting, addenda, opts) {
         return id;
     };
     for (const group of groups) {
-        const id = claimId(group.title, 'agenda');
-        const inner = [`<h2 id="${id}">${escapeHtml(group.title)}</h2>`];
+        // On multi-meeting days the fallback section title IS the session
+        // label the caller already emitted as an <h2 class="agenda__session-
+        // heading"> — repeating it here duplicated both heading and id.
+        const inner = [];
+        if (!(group.isFallback && opts.suppressFallbackHeading)) {
+            const id = claimId(group.title, 'agenda');
+            inner.push(`<h2 id="${id}">${escapeHtml(group.title)}</h2>`);
+        }
         const subgroups = group.subgroups || [{ title: null, items: group.items }];
         for (const sub of subgroups) {
             if (sub.title) {
@@ -719,6 +726,12 @@ function generateMarkdownPost(meetings, options = {}) {
     const slug = options.slug || `${dateToken}-${infos.map(i => i.slug).join('-')}`;
 
     const usedSectionIds = new Set();
+    // Session anchors are emitted by the output loop below — reserve them so
+    // a scraped section can never claim the same id.
+    if (multi) {
+        usedSectionIds.add('morning-agenda');
+        usedSectionIds.add('evening-agenda');
+    }
     const allBlocks = [];
     let hasMap = false;
 
@@ -729,7 +742,7 @@ function generateMarkdownPost(meetings, options = {}) {
         const fallbackSectionTitle = multi
             ? (idx === 0 ? 'Morning Agenda' : sessionLabel(meeting))
             : 'Agenda';
-        const rendered = renderMeeting(meeting, addenda, { usedSectionIds, addendumAnchor, fallbackSectionTitle });
+        const rendered = renderMeeting(meeting, addenda, { usedSectionIds, addendumAnchor, fallbackSectionTitle, suppressFallbackHeading: multi });
         hasMap = hasMap || rendered.hasMap;
         meetingBlocks.push({ meeting, idx, blocks: rendered.blocks });
     });
