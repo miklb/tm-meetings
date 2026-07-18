@@ -577,7 +577,9 @@ function renderMeeting(meeting, addenda, opts) {
     }
 
     const agendaTypeLabel = meeting.agendaType === 'FINAL' ? 'Final' : 'Draft';
-    blocks.push(`<p class="agenda__source"><a href="${escapeHtml(onbaseMeetingUrl(meeting.sourceUrl))}">City Clerk's ${agendaTypeLabel} Agenda in Onbase</a></p>`);
+    // The doc icon rides with the link (WP-era coblocks "page" icon treatment);
+    // tm-static's FA transform swaps the <i> for a build-time sprite svg.
+    blocks.push(`<p class="agenda__source"><i class="agenda__source-icon fa-solid fa-file-lines"></i> <a href="${escapeHtml(onbaseMeetingUrl(meeting.sourceUrl))}">City Clerk's ${agendaTypeLabel} Agenda in Onbase</a></p>`);
 
     const addendumAnchor = opts.addendumAnchor;
     if (addenda.length) {
