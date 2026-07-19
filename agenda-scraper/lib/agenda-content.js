@@ -130,14 +130,27 @@ function cleanAgendaContent(content) {
 
 /**
  * Split a waiver blob ("1. foo. 2. bar. 3. baz") into individual items.
- * Splits on whitespace that precedes a cardinal number + ". " sequence, so
- * section codes like "27-284.2.5" are not treated as split points (the digit
- * there is not followed by whitespace before the period).
+ * Splits on whitespace that precedes a cardinal number + ". " sequence, but a
+ * number only starts a new item when it continues the sequence (1, 2, 3, …).
+ * That keeps sentence-final numbers ("…loading berths from 4 to 0.") and
+ * section codes like "27-284.2.5" from being treated as split points.
  */
 function splitNumberedWaivers(text) {
-    // Only attempt splitting when the text contains at least " 2. " (two waivers).
-    if (!/\s2\.\s/.test(text)) return [text.trim()].filter(Boolean);
-    return text.split(/\s+(?=\d{1,2}\.\s)/).map(s => s.trim()).filter(Boolean);
+    const chunks = text.split(/\s+(?=\d{1,2}\.\s)/).map(s => s.trim()).filter(Boolean);
+    if (!chunks.length) return [];
+    const first = chunks[0].match(/^(\d{1,2})\.\s/);
+    const items = [chunks[0]];
+    let expected = first ? Number(first[1]) + 1 : 1;
+    for (let i = 1; i < chunks.length; i++) {
+        const m = chunks[i].match(/^(\d{1,2})\.\s/);
+        if (m && Number(m[1]) === expected) {
+            items.push(chunks[i]);
+            expected++;
+        } else {
+            items[items.length - 1] += ' ' + chunks[i];
+        }
+    }
+    return items;
 }
 
 /**

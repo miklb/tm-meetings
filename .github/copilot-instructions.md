@@ -260,6 +260,8 @@ If you need to re-mirror only (JSON already done): `node mirror-documents.js <me
 
 If you need to re-reconcile only (JSON already done): `python3 -m opengov.reconcile agenda-scraper/data/meeting_<id>_<date>.json`
 
+If you need to re-parse land-use staff reports only (e.g. after improving `staff-report-parser.js`): `node scripts/reparse-staff-reports.js <meetingId>` — rewrites only the per-item `staffReport` fields (mirrors preserved), then regenerate the post with `node json-to-markdown.js --date <YYYY-MM-DD>`
+
 **Never run `json-scraper.js <meetingId>` standalone on a meeting that has already been mirrored.**
 
 ---

@@ -202,6 +202,57 @@ function parseOverlayDistrict(text) {
 }
 
 /**
+ * Running page headers/footers that PDF extraction interleaves with body text
+ * at page breaks, e.g.:
+ *   "REZONING STAFF REPORT REZ-26-  0000045"
+ *   "DEVELOPMENT COORDINATION | 2555 EAST HANNA AVENUE, TAMPA, FL 33610    Page 2"
+ * These must be skipped (not treated as content or as section boundaries) so
+ * waivers and findings that wrap across pages survive intact.
+ * @param {string} line - A trimmed line from the PDF text
+ * @returns {boolean}
+ */
+function isPageArtifactLine(line) {
+    const trimmed = line.trim();
+    if (/^[A-Z][A-Z\s]*STAFF REPORT\s+[A-Z]{2,4}-?\d/.test(trimmed)) return true;
+    if (/\|\s*2555 EAST HANNA AVENUE/.test(trimmed)) return true;
+    if (/^Page\s+\d+(\s+of\s+\d+)?$/i.test(trimmed)) return true;
+    return false;
+}
+
+/**
+ * A fully-uppercase label line like "LOCATION MAP:", "PROJECT INFORMATION:",
+ * or "RECOMMENDATION" — the start of the next report section. Body sentences
+ * are mixed-case, so requiring no lowercase letters keeps prose that mentions
+ * a section by name (e.g. "See findings from Development Coordination …")
+ * from matching.
+ * @param {string} line - A trimmed line from the PDF text
+ * @returns {boolean}
+ */
+function isSectionHeaderLine(line) {
+    const trimmed = line.trim();
+    if (!/^[A-Z]/.test(trimmed) || /[a-z]/.test(trimmed)) return false;
+    return /^[A-Z0-9\s()\/&.,'’#-]+:$/.test(trimmed) ||
+           /^(RECOMMENDATION|PREPARED BY|CONTACT\b|DEVELOPMENT COORDINATION\s*$)/.test(trimmed);
+}
+
+/**
+ * Clean PDF-extraction artifacts from a joined run of text:
+ * hyphen line-wrap gaps ("right-of  -way", "C-  8"), superscript ordinals
+ * split onto their own lines ("between 1 st and 2 nd Reading"), and runs of
+ * spaces left by justified-text extraction.
+ * @param {string} text
+ * @returns {string}
+ */
+function cleanExtractedRun(text) {
+    return text
+        .replace(/(\w)-\s{2,}(\w)/g, '$1-$2')
+        .replace(/(\w)\s{2,}-(\w)/g, '$1-$2')
+        .replace(/(\d)\s+(st|nd|rd|th)\b/g, '$1$2')
+        .replace(/\s{2,}/g, ' ')
+        .trim();
+}
+
+/**
  * Test the staff report identification with meeting 2616
  */
 function testStaffReportIdentification() {
@@ -519,33 +570,42 @@ function parseZoningData(textContent, fileNumber) {
     let inWaiverSection = false;
     let currentWaiverText = '';
     
+    const saveCurrentWaiver = () => {
+        const cleaned = cleanExtractedRun(currentWaiverText);
+        if (cleaned) {
+            extractedData.waivers.push(cleaned);
+            console.log(`   Waiver: ${cleaned.substring(0, 80)}...`);
+        }
+        currentWaiverText = '';
+    };
+
     for (let i = 0; i < lines.length; i++) {
         const line = lines[i];
         const upperLine = line.toUpperCase();
-        
+
+        // Skip running page headers/footers — they interleave with body text
+        // at page breaks and must not end up inside waivers or findings.
+        if (isPageArtifactLine(line)) {
+            continue;
+        }
+
         // Start of waiver sections
-        if (upperLine.includes('PREVIOUSLY APPROVED WAIVERS') || 
-            upperLine.includes('NEW WAIVER') || 
+        if (upperLine.includes('PREVIOUSLY APPROVED WAIVERS') ||
+            upperLine.includes('NEW WAIVER') ||
             upperLine.includes('WAIVER(S) REQUESTED')) {
-            
+
             // Save previous waiver if exists
-            if (currentWaiverText.trim()) {
-                extractedData.waivers.push(currentWaiverText.trim());
-                console.log(`   Waiver: ${currentWaiverText.trim().substring(0, 80)}...`);
-            }
-            
+            saveCurrentWaiver();
+
             inWaiverSection = true;
             currentWaiverText = line;
             continue;
         }
-        
+
         // End waiver section when we hit FINDINGS
         if (upperLine.includes('FINDINGS:')) {
             // Save current waiver
-            if (currentWaiverText.trim()) {
-                extractedData.waivers.push(currentWaiverText.trim());
-                console.log(`   Waiver: ${currentWaiverText.trim().substring(0, 80)}...`);
-            }
+            saveCurrentWaiver();
             inWaiverSection = false;
 
             // Detect two-column layout: a line like
@@ -564,30 +624,27 @@ function parseZoningData(textContent, fileNumber) {
                 }
             }
 
-            // Start collecting findings (single-column path)
+            // Start collecting findings (single-column path). Skip page
+            // headers/footers (the paragraph often wraps across a page break)
+            // and stop at the next all-caps section header ("LOCATION MAP:",
+            // "PROJECT INFORMATION:", "RECOMMENDATION", …).
             let findingsText = line + ' ';
-            for (let j = i + 1; j < lines.length; j++) {
-                const nextLine = lines[j].toUpperCase();
-                if (lines[j].trim() && 
-                    !nextLine.includes('RECOMMENDATION') &&
-                    !nextLine.includes('PREPARED BY') &&
-                    !nextLine.includes('CONTACT') &&
-                    !nextLine.includes('DEVELOPMENT COORDINATION')) {
-                    findingsText += lines[j] + ' ';
-                } else {
-                    break;
-                }
-                // Limit findings length
-                if (j > i + 15) break;
+            let collected = 0;
+            for (let j = i + 1; j < lines.length && collected < 15; j++) {
+                const nextLine = lines[j];
+                if (isPageArtifactLine(nextLine)) continue;
+                if (isSectionHeaderLine(nextLine)) break;
+                findingsText += nextLine + ' ';
+                collected++;
             }
-            
-            // Clean up common PDF artifacts from findings text
+
+            // Strip the leading "FINDINGS:" label so the field contains just the body,
+            // and drop anything that leaked in from the sections that follow.
             let cleanFindings = findingsText.trim();
-            cleanFindings = cleanFindings.replace(/\s*LOCATION MAP:\s*REZONING STAFF REPORT\s*REZ-\d{2}-\s*\d+\s*$/i, '');
-            cleanFindings = cleanFindings.replace(/\s*REZONING STAFF REPORT\s*REZ-\d{2}-\s*\d+\s*$/i, '');
-            // Strip the leading "FINDINGS:" label so the field contains just the body.
-            cleanFindings = cleanFindings.replace(/^FINDINGS:\s*/i, '').trim();
-            
+            cleanFindings = cleanFindings.replace(/^FINDINGS:\s*/i, '');
+            cleanFindings = cleanFindings.split(/\s*(?:LOCATION MAP|PROJECT INFORMATION)\s*:/)[0];
+            cleanFindings = cleanExtractedRun(cleanFindings);
+
             extractedData.findings = cleanFindings;
             console.log(`   Findings: ${cleanFindings.substring(0, 100)}...`);
             break;
@@ -600,9 +657,8 @@ function parseZoningData(textContent, fileNumber) {
     }
     
     // Clean up any remaining waiver text
-    if (currentWaiverText.trim() && !extractedData.findings) {
-        extractedData.waivers.push(currentWaiverText.trim());
-        console.log(`   Waiver: ${currentWaiverText.trim().substring(0, 80)}...`);
+    if (!extractedData.findings) {
+        saveCurrentWaiver();
     }
     
     return extractedData;
