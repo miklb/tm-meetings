@@ -62,7 +62,7 @@ immediately — no deploy). They then subscribe themselves at
 Emails are lowercased/trimmed and validated; re-adding an existing tester is a
 no-op. The script prints the full list after inserting.
 
-**Seeding is not subscribing.** `add-beta-tester.sh` only makes someone *eligible*.
+**Seeding is not subscribing.** `add-beta-tester.sh` only makes someone _eligible_.
 They get no email until they sign up at `/notifications/`, click the verification
 link, and add keywords. Check who is actually live with the preview below.
 
@@ -83,6 +83,13 @@ node scripts/preview-dispatch.js --meeting-ids=2815
 WEBHOOK_SECRET="$(grep '^WEBHOOK_SECRET=' .env | cut -d= -f2-)" \
 MEETING_IDS=2815 \
 WORDPRESS_AGENDA_URL="https://tampamonitor.com/tampa-city-council/<the-agenda-post>" \
+  node scripts/dispatch-notifications.js
+```
+
+```bash
+WEBHOOK_SECRET="$(grep '^WEBHOOK_SECRET=' .env | cut -d= -f2-)" \
+MEETING_IDS=2892,2923 \
+WORDPRESS_AGENDA_URL="https://tampamonitor.com/tampa-city-council/preview/7-23-26-preview/" \
   node scripts/dispatch-notifications.js
 ```
 
@@ -133,8 +140,8 @@ mind when reading a preview:
 
 - **Noise** — `howard` matches "**Howard** F. Curren Advanced Wastewater Treatment
   Plant" (a plant named after a person, not the street).
-- **Silent misses** — the *more specific* a keyword, the more brittle. `south howard
-  flood project` matched **nothing** on the 7/16 agenda, because the City's actual
+- **Silent misses** — the _more specific_ a keyword, the more brittle. `south howard
+flood project` matched **nothing** on the 7/16 agenda, because the City's actual
   wording is "South Howard Flood **Relief and Streetscape** Project". A zero-match
   keyword is worse than a noisy one: nothing tells the subscriber they missed items.
 
