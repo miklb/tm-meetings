@@ -2,5 +2,22 @@
   "meetingId": "2892",
   "meetingDate": "2026-07-23",
   "firstSeenAt": "2026-07-18T16:23:35.797Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-07-21",
+      "mirroredAt": "2026-07-21T00:07:34.686Z",
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "AAP26-23734",
+          "filename": "RESO AAP APPROVAL (002).PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "AAP26-23734",
+          "filename": "TAMPA PY2026 AAP FINAL DRAFT (002).PDF"
+        }
+      ]
+    }
+  ]
 }
