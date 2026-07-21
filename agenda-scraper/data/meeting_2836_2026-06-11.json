@@ -18,7 +18,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 2,
@@ -32,7 +33,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 3,
@@ -71,7 +73,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 4,
@@ -92,7 +95,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 5,
@@ -119,7 +123,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 6,
@@ -140,7 +145,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 7,
@@ -161,7 +167,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 8,
@@ -206,7 +213,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 9,
@@ -227,7 +235,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "III. REQUIRED APPROVALS:"
     }
   ],
   "formattedDate": "2026-06-11"

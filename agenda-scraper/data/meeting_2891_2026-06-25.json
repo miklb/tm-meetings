@@ -49,7 +49,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)"
     },
     {
       "number": 2,
@@ -120,7 +121,8 @@
       "location": "11315 North 46",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)"
     },
     {
       "number": 3,
@@ -167,7 +169,8 @@
       "location": "1605 North Waters C ourt",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)"
     },
     {
       "number": 4,
@@ -208,7 +211,8 @@
       "location": "1701 East 2",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)"
     },
     {
       "number": 5,
@@ -284,6 +288,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)",
       "staffReport": {
         "landUseType": "VACATION",
         "currentZoning": null,
@@ -292,7 +297,7 @@
         "overlayDistrict": null,
         "neighborhoodAssociations": [],
         "waivers": [],
-        "findings": "Right of way is currently unimproved. VACATING HISTORY:"
+        "findings": "Right of way is currently unimproved."
       }
     },
     {
@@ -357,6 +362,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 6 THROUGH 10 )",
       "staffReport": {
         "landUseType": "ALCOHOL_BEVERAGE",
         "currentZoning": "Commercial Intensive (CI)",
@@ -373,7 +379,7 @@
           "Bayshore Gardens Neighborhood Association, Inc"
         ],
         "waivers": [],
-        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-26-0000008"
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application."
       }
     },
     {
@@ -438,6 +444,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 6 THROUGH 10 )",
       "staffReport": {
         "landUseType": "ALCOHOL_BEVERAGE",
         "currentZoning": "P",
@@ -456,7 +463,7 @@
           "Ybor City Management LLC"
         ],
         "waivers": [],
-        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable City of Tampa Land Development Regulations. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application. SPECIAL USE II ALCOHOLIC BEVERAGE SALES STAFF REPORT AB2-26-0000009"
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable City of Tampa Land Development Regulations. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application."
       }
     },
     {
@@ -521,6 +528,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 6 THROUGH 10 )",
       "staffReport": {
         "landUseType": "ALCOHOL_BEVERAGE",
         "currentZoning": "P",
@@ -535,7 +543,7 @@
           "Bowman Heights"
         ],
         "waivers": [],
-        "findings": ""
+        "findings": "The Development Review and Compliance staff has reviewed the petition, and Development Coordination finds the request INCONSISTENT due to waiver requested for distance separation from other alcoholic beverage sales establishments. Site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application."
       }
     },
     {
@@ -642,6 +650,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 6 THROUGH 10 )",
       "staffReport": {
         "landUseType": "REZONING",
         "currentZoning": null,
@@ -660,7 +669,7 @@
         "waivers": [
           "WAIVER(S) REQUESTED: 1. Section 27-284.2.5: Request to remove five non-hazardous grand trees (Tree #249, #269, #536, #579 and #600) as shown on the two reasonable reconfiguration design alternatives required at the time of incremental site review. 2. Section 27-284.4.1: Request to reduce the minimum required tree retention percentage for a non- residential non-wooded land from 50% to 0% (100% reduction)."
         ],
-        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable City of Tampa Land Development Regulations. Should it be the pleasure of City Council"
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable City of Tampa Land Development Regulations. Should it be the pleasure of City Council to approve the application and waivers listed above, further modifications to the site plan must be completed by the applicant in between 1st and 2nd Reading of Ordinance as stated on the revision sheet."
       }
     },
     {
@@ -718,7 +727,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 6 THROUGH 10 )"
     }
   ],
   "formattedDate": "2026-06-25"

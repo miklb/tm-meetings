@@ -18,7 +18,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "COMMENDATIONS AND\\OR PRESENTATIONS:"
     },
     {
       "number": 2,
@@ -32,7 +33,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "COMMENDATIONS AND\\OR PRESENTATIONS:"
     },
     {
       "number": 3,
@@ -59,7 +61,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "COMMENDATIONS AND\\OR PRESENTATIONS:"
     },
     {
       "number": 4,
@@ -110,7 +113,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "BOARD AND ADMINISTRATION APPOINTMENTS"
     },
     {
       "number": 5,
@@ -165,7 +169,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Public Safety Committee (Items 5 through 6)"
     },
     {
       "number": 6,
@@ -198,7 +203,8 @@
         "rows": [],
         "hasProjectedCosts": true,
         "hasParsedRows": false
-      }
+      },
+      "section": "Public Safety Committee (Items 5 through 6)"
     },
     {
       "number": 7,
@@ -388,7 +394,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Neighborhood and Community Affairs Committee (Items 7 through 8)"
     },
     {
       "number": 8,
@@ -443,7 +450,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Neighborhood and Community Affairs Committee (Items 7 through 8)"
     },
     {
       "number": 9,
@@ -498,7 +506,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 10,
@@ -553,7 +562,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 11,
@@ -608,7 +618,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 12,
@@ -663,7 +674,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 13,
@@ -714,7 +726,8 @@
         "rows": [],
         "hasProjectedCosts": true,
         "hasParsedRows": false
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 14,
@@ -793,7 +806,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 15,
@@ -893,7 +907,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 16,
@@ -954,7 +969,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 17,
@@ -1099,7 +1115,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 18,
@@ -1175,7 +1192,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 19,
@@ -1208,7 +1226,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 20,
@@ -1247,7 +1266,8 @@
         "rows": [],
         "hasProjectedCosts": true,
         "hasParsedRows": false
-      }
+      },
+      "section": "Infrastructure Committee (Items 9 through 20)"
     },
     {
       "number": 21,
@@ -1311,7 +1331,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Finance Committee (Items 21 through 24)"
     },
     {
       "number": 22,
@@ -1350,7 +1371,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Finance Committee (Items 21 through 24)"
     },
     {
       "number": 23,
@@ -1389,7 +1411,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Finance Committee (Items 21 through 24)"
     },
     {
       "number": 24,
@@ -1422,7 +1445,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Finance Committee (Items 21 through 24)"
     },
     {
       "number": 25,
@@ -1461,7 +1485,8 @@
         "rows": [],
         "hasProjectedCosts": true,
         "hasParsedRows": false
-      }
+      },
+      "section": "Development and Economic Opportunity Committee (Items 25 through 31)"
     },
     {
       "number": 26,
@@ -1500,7 +1525,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Development and Economic Opportunity Committee (Items 25 through 31)"
     },
     {
       "number": 27,
@@ -1539,7 +1565,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Development and Economic Opportunity Committee (Items 25 through 31)"
     },
     {
       "number": 28,
@@ -1578,7 +1605,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Development and Economic Opportunity Committee (Items 25 through 31)"
     },
     {
       "number": 29,
@@ -1617,7 +1645,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "Development and Economic Opportunity Committee (Items 25 through 31)"
     },
     {
       "number": 30,
@@ -1672,7 +1701,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Development and Economic Opportunity Committee (Items 25 through 31)"
     },
     {
       "number": 31,
@@ -1721,7 +1751,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Development and Economic Opportunity Committee (Items 25 through 31)"
     },
     {
       "number": 32,
@@ -1776,7 +1807,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Mobility and Asset Management Committee (Items 32 through 33)"
     },
     {
       "number": 33,
@@ -1876,7 +1908,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "Mobility and Asset Management Committee (Items 32 through 33)"
     },
     {
       "number": 34,
@@ -1945,7 +1978,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "ITEMS BEING SET FOR PUBLIC HEARINGS BY COUNCIL CONSENT - (Items 34 through 35):"
     },
     {
       "number": 35,
@@ -2032,7 +2066,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "ITEMS BEING SET FOR PUBLIC HEARINGS BY COUNCIL CONSENT - (Items 34 through 35):"
     },
     {
       "number": 36,
@@ -2071,7 +2106,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 36 through 39) (Non-Quasi-Judicial proceedings)"
     },
     {
       "number": 37,
@@ -2110,7 +2146,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 36 through 39) (Non-Quasi-Judicial proceedings)"
     },
     {
       "number": 38,
@@ -2167,7 +2204,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 36 through 39) (Non-Quasi-Judicial proceedings)"
     },
     {
       "number": 39,
@@ -2212,7 +2250,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 36 through 39) (Non-Quasi-Judicial proceedings)"
     },
     {
       "number": 40,
@@ -2258,6 +2297,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "10:30 A.M. - PETITIONS TO VACATE AND PUBLIC HEARINGS ON LEGISLATIVE MATTERS - (Items 40 through 42)",
       "staffReport": {
         "landUseType": "OTHER",
         "currentZoning": null,
@@ -2313,6 +2353,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "10:30 A.M. - PETITIONS TO VACATE AND PUBLIC HEARINGS ON LEGISLATIVE MATTERS - (Items 40 through 42)",
       "staffReport": {
         "landUseType": "OTHER",
         "currentZoning": null,
@@ -2398,6 +2439,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
+      "section": "10:30 A.M. - PETITIONS TO VACATE AND PUBLIC HEARINGS ON LEGISLATIVE MATTERS - (Items 40 through 42)",
       "staffReport": {
         "landUseType": "VACATION",
         "currentZoning": null,
@@ -2406,7 +2448,7 @@
         "overlayDistrict": "Tampa Heights",
         "neighborhoodAssociations": [],
         "waivers": [],
-        "findings": "Right of way is currently unimproved. VACATING HISTORY:"
+        "findings": "Right of way is currently unimproved."
       }
     },
     {
@@ -2452,7 +2494,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "1:30 P.M. - PUBLIC HEARINGS ON MATTERS FOR REVIEW - (Items 43 through 44)"
     },
     {
       "number": 44,
@@ -2485,7 +2528,8 @@
         "rows": [],
         "hasProjectedCosts": false,
         "hasParsedRows": false
-      }
+      },
+      "section": "1:30 P.M. - PUBLIC HEARINGS ON MATTERS FOR REVIEW - (Items 43 through 44)"
     },
     {
       "number": 45,
@@ -2499,7 +2543,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 45 through 51)"
     },
     {
       "number": 46,
@@ -2695,7 +2740,8 @@
         ],
         "hasProjectedCosts": true,
         "hasParsedRows": true
-      }
+      },
+      "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 45 through 51)"
     },
     {
       "number": 47,
@@ -2716,7 +2762,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 45 through 51)"
     },
     {
       "number": 48,
@@ -2737,7 +2784,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 45 through 51)"
     },
     {
       "number": 49,
@@ -2758,7 +2806,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 45 through 51)"
     },
     {
       "number": 50,
@@ -2791,7 +2840,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 45 through 51)"
     },
     {
       "number": 51,
@@ -2818,7 +2868,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 45 through 51)"
     },
     {
       "number": 52,
@@ -2851,7 +2902,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WRITTEN STAFF REPORTS - (TO BE RECEIVED AND FILED WITHOUT DISCUSSION)"
     },
     {
       "number": 53,
@@ -2872,7 +2924,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WRITTEN STAFF REPORTS - (TO BE RECEIVED AND FILED WITHOUT DISCUSSION)"
     },
     {
       "number": 54,
@@ -2893,7 +2946,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WRITTEN STAFF REPORTS - (TO BE RECEIVED AND FILED WITHOUT DISCUSSION)"
     },
     {
       "number": 55,
@@ -2921,6 +2975,7 @@
       "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
+      "section": "WRITTEN STAFF REPORTS - (TO BE RECEIVED AND FILED WITHOUT DISCUSSION)",
       "staffReport": {
         "landUseType": "OTHER",
         "currentZoning": null,

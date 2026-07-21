@@ -31,7 +31,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 2,
@@ -52,7 +53,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 3,
@@ -79,7 +81,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 4,
@@ -93,7 +96,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 5,
@@ -107,7 +111,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 6,
@@ -128,7 +133,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     }
   ],
   "formattedDate": "2026-06-25"

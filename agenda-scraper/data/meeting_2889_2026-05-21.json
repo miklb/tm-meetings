@@ -18,7 +18,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 2,
@@ -39,7 +40,8 @@
       "location": "",
       "coordinates": null,
       "summaryText": "",
-      "projectedCosts": null
+      "projectedCosts": null,
+      "section": "III. REQUIRED APPROVALS:"
     }
   ],
   "formattedDate": "2026-05-21"
