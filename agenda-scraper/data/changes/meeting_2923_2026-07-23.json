@@ -2,5 +2,17 @@
   "meetingId": "2923",
   "meetingDate": "2026-07-23",
   "firstSeenAt": "2026-07-18T16:24:03.738Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-07-22",
+      "mirroredAt": "2026-07-22T00:16:00.338Z",
+      "newDocuments": [
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "CRA26-23125",
+          "filename": "TOTALCOSTOFCONSTRUCTION(FILENO.CRA26-23125;ONBASENO.25502).PDF"
+        }
+      ]
+    }
+  ]
 }
