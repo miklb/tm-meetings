@@ -1,7 +1,29 @@
 import { sha256Hex, generateToken } from '../../lib/api-utils.js';
 
+// Best-effort admin ping so Michael can gauge signup volume without any
+// subscriber PII in the email — just a count-by-inbox signal, not a report.
+async function pingAdmin(resendApiKey, adminEmail) {
+  const res = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${resendApiKey}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      from: "Tampa Monitor <notifications@tampamonitor.com>",
+      to: adminEmail,
+      subject: "New keyword-notifications signup verified",
+      text: "A new subscriber just verified their email for Tampa Monitor keyword notifications."
+    })
+  });
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`Resend API error: ${errorText}`);
+  }
+}
+
 export async function onRequestGet(context) {
-  const { request, env } = context;
+  const { request, env, waitUntil } = context;
   const db = env.DB;
 
   if (!db) {
@@ -40,6 +62,15 @@ export async function onRequestGet(context) {
   } catch (err) {
     console.error(`verify: database update failed: ${err.message}`);
     return new Response("Something went wrong. Please try the link again later.", { status: 500 });
+  }
+
+  // Fire-and-forget admin ping — never blocks or fails the user's redirect.
+  if (env.RESEND_API_KEY && env.ADMIN_NOTIFY_EMAIL) {
+    waitUntil(
+      pingAdmin(env.RESEND_API_KEY, env.ADMIN_NOTIFY_EMAIL).catch(err =>
+        console.error(`verify: admin ping failed: ${err.message}`)
+      )
+    );
   }
 
   // Mint a short-lived management session (1 hour, matching manage.js) so the

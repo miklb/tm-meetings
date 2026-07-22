@@ -10,7 +10,7 @@ import {
 
 // Anti-enumeration: every outcome that depends on whether an email is
 // registered/eligible must return this exact response.
-const UNIFORM_MESSAGE = "If your email is eligible, a verification link has been sent. Please check your inbox.";
+const UNIFORM_MESSAGE = "A verification link has been sent. Please check your inbox.";
 
 async function sendEmail(resendApiKey, message) {
   const res = await fetch("https://api.resend.com/emails", {
