@@ -11,22 +11,21 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
   <div id="subscribe-card" class="notifications-card">
     <div class="card-header">
       <h2>Keyword Notifications</h2>
-      <p class="beta-badge">Private Beta</p>
     </div>
-    
+
     <div class="card-body">
       <p class="intro-text">
         Get nightly email alerts whenever a new or updated City Council agenda matches topics you care about (e.g., <em>"rezoning", "affordable housing", "Ybor"</em>).
       </p>
 
       <div class="alert-box info">
-        <strong>Exclusive Access:</strong> During the private beta, subscriptions are limited to Tampa Monitor supporters and registered beta testers.
+        <strong>Public beta:</strong> Free for everyone — subscribe with up to 15 keywords, no account required. <a href="https://tampamonitor.com/support/">Support Tampa Monitor</a> to help keep this and other tools running.
       </div>
 
       <form id="subscribe-form" novalidate>
         <div class="form-group">
           <label for="sub-email">Email Address</label>
-          <input type="email" id="sub-email" name="email" required placeholder="Enter the email associated with your support/beta account">
+          <input type="email" id="sub-email" name="email" required placeholder="your.email@example.com">
         </div>
 
         <div class="form-group">
@@ -82,7 +81,7 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
   <div id="manage-card" class="notifications-card hidden">
     <div class="card-header">
       <h2>Manage Your Keywords</h2>
-      <span class="user-badge" id="manage-user-badge">Beta Member</span>
+      <span class="user-badge" id="manage-user-badge">Member</span>
     </div>
     
     <div class="card-body">
@@ -149,16 +148,6 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
   font-size: 1.25rem;
   margin: 0;
   color: var(--color-text);
-}
-
-.beta-badge {
-  background: var(--color-accent-gold);
-  color: #5b3e03;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.2rem 0.5rem;
-  border-radius: 12px;
-  margin: 0;
 }
 
 .user-badge {
@@ -521,7 +510,7 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
       
       // Update UI elements
       manageEmailDisplay.innerText = activeEmail;
-      manageUserBadge.innerText = keywordLimit === 15 ? 'Beta / Supporter' : 'Free Member';
+      manageUserBadge.innerText = 'Member';
       
       // Load tags
       manageTags.length = 0;
@@ -586,15 +575,18 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
     tagsArray.forEach((tagText, index) => {
       const tagEl = document.createElement('span');
       tagEl.className = 'tag';
-      tagEl.innerHTML = `
-        ${tagText}
-        <button type="button" class="tag-remove" aria-label="Remove ${tagText}">×</button>
-      `;
+      tagEl.appendChild(document.createTextNode(tagText));
 
-      tagEl.querySelector('.tag-remove').addEventListener('click', () => {
+      const removeBtn = document.createElement('button');
+      removeBtn.type = 'button';
+      removeBtn.className = 'tag-remove';
+      removeBtn.setAttribute('aria-label', `Remove ${tagText}`);
+      removeBtn.textContent = '×';
+      removeBtn.addEventListener('click', () => {
         tagsArray.splice(index, 1);
         renderTags(container, input, tagsArray);
       });
+      tagEl.appendChild(removeBtn);
 
       container.insertBefore(tagEl, input);
     });

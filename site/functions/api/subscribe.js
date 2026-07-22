@@ -76,11 +76,11 @@ export async function onRequestPost(context) {
   const cleanKeywords = [...new Set(
     keywords
       .map(k => String(k).trim().toLowerCase())
-      .filter(k => k.length >= 2 && k.length <= 50)
+      .filter(k => k.length >= 2 && k.length <= 50 && !/[<>]/.test(k))
   )];
 
   if (cleanKeywords.length === 0) {
-    return jsonResponse({ error: "Keywords must be between 2 and 50 characters." }, 400);
+    return jsonResponse({ error: "Keywords must be between 2 and 50 characters, and cannot contain < or >." }, 400);
   }
 
   const emailLower = email.trim().toLowerCase();
@@ -109,7 +109,7 @@ export async function onRequestPost(context) {
   if (!isAllowed) {
     if (regMode === 'PUBLIC') {
       isAllowed = true;
-      keywordLimit = 3;
+      keywordLimit = 15;
     } else if (regMode === 'BETA_AND_SUPPORTERS') {
       const betaTester = await db.prepare(
         'SELECT 1 FROM beta_testers WHERE email = ?'

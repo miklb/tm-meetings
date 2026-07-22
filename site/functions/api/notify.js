@@ -4,6 +4,52 @@ function escapeRegExp(string) {
   return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
+// Fuzzy street-suffix matching: lets a keyword typed as "Bayshore Blvd" match
+// agenda text that says "Bayshore Boulevard" (or "Bayshore Blvd."), and vice
+// versa, regardless of which form the subscriber typed or the source text
+// uses. Each group's bare (period-stripped) forms map to a regex alternation
+// covering every variant in that group.
+const STREET_SUFFIX_GROUPS = [
+  ['st', 'st.', 'street'],
+  ['ave', 'ave.', 'avenue'],
+  ['blvd', 'blvd.', 'boulevard'],
+  ['dr', 'dr.', 'drive'],
+  ['rd', 'rd.', 'road'],
+  ['ln', 'ln.', 'lane'],
+  ['ct', 'ct.', 'court'],
+  ['pl', 'pl.', 'place'],
+  ['cir', 'cir.', 'circle'],
+  ['pkwy', 'pkwy.', 'parkway'],
+  ['hwy', 'hwy.', 'highway'],
+  ['ter', 'ter.', 'terrace'],
+];
+
+// A trailing period can't be followed by a `\b` (a period and the space that
+// usually follows it are both non-word characters, so no boundary exists
+// between them) — only the non-abbreviated variants get a trailing boundary.
+function suffixVariantPattern(variant) {
+  const escaped = escapeRegExp(variant);
+  return variant.endsWith('.') ? `\\b${escaped}` : `\\b${escaped}\\b`;
+}
+
+const STREET_SUFFIX_LOOKUP = new Map();
+for (const group of STREET_SUFFIX_GROUPS) {
+  const pattern = `(?:${group.map(suffixVariantPattern).join('|')})`;
+  for (const variant of group) {
+    STREET_SUFFIX_LOOKUP.set(variant.replace(/\.$/, ''), pattern);
+  }
+}
+
+// Builds a regex source string for a keyword, expanding any street-suffix
+// word into an alternation matching every variant in its group; other words
+// are matched literally.
+function buildFuzzyPattern(keyword) {
+  return keyword
+    .split(/\s+/)
+    .map(word => STREET_SUFFIX_LOOKUP.get(word.replace(/\.$/, '')) || escapeRegExp(word))
+    .join('\\s+');
+}
+
 function buildTitle(type, dateStr) {
   const TYPE_LABELS = {
     regular: 'City Council',
@@ -120,7 +166,7 @@ export async function onRequestPost(context) {
     if (!isAllowed) {
       if (regMode === 'PUBLIC') {
         isAllowed = true;
-        keywordLimit = 3;
+        keywordLimit = 15;
       } else if (regMode === 'BETA_AND_SUPPORTERS' || regMode === 'SUPPORTERS_ONLY') {
         if (isBetaTester) {
           isAllowed = true;
@@ -203,13 +249,19 @@ export async function onRequestPost(context) {
     activeKeywords.filter(k => k.matchType === 'file_number').map(k => k.keyword)
   )];
 
-  const containsRegex = containsKeywords.length > 0
-    ? new RegExp(containsKeywords.map(escapeRegExp).join('|'), 'gi')
-    : null;
+  // One regex per keyword (rather than one combined alternation) so a match
+  // can be attributed straight back to the keyword that produced it — needed
+  // now that fuzzy street-suffix expansion means the matched text doesn't
+  // always equal the keyword text verbatim.
+  const containsMatchers = containsKeywords.map(kw => ({
+    keyword: kw,
+    regex: new RegExp(buildFuzzyPattern(kw), 'i')
+  }));
 
-  const exactRegex = exactKeywords.length > 0
-    ? new RegExp(`\\b(${exactKeywords.map(escapeRegExp).join('|')})\\b`, 'gi')
-    : null;
+  const exactMatchers = exactKeywords.map(kw => ({
+    keyword: kw,
+    regex: new RegExp(`\\b${buildFuzzyPattern(kw)}\\b`, 'i')
+  }));
 
   // 7. Check for duplicate notifications in notification_log
   const itemIds = [];
@@ -275,19 +327,17 @@ export async function onRequestPost(context) {
 
       const matchedKeys = new Set();
 
-      // A. Contains match
-      if (containsRegex) {
-        const matches = searchableText.match(containsRegex) || [];
-        for (const m of matches) {
-          matchedKeys.add(`contains:${m}`);
+      // A. Contains match (fuzzy street-suffix aware)
+      for (const { keyword, regex } of containsMatchers) {
+        if (regex.test(searchableText)) {
+          matchedKeys.add(`contains:${keyword}`);
         }
       }
 
-      // B. Exact phrase match
-      if (exactRegex) {
-        const matches = searchableText.match(exactRegex) || [];
-        for (const m of matches) {
-          matchedKeys.add(`exact_phrase:${m}`);
+      // B. Exact phrase match (fuzzy street-suffix aware)
+      for (const { keyword, regex } of exactMatchers) {
+        if (regex.test(searchableText)) {
+          matchedKeys.add(`exact_phrase:${keyword}`);
         }
       }
 
