@@ -1,0 +1,153 @@
+{
+  "meeting_id": 2689,
+  "meeting_date": "2026-07-16",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "XHiJrzpAYhk",
+      "title": "Tampa City Council - 07/16/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-07-17T04:43:25Z",
+      "duration": "PT3H20M11S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 2: CM26-24463 - TOBA Leadership Graduating Classes",
+          "timestamp": "00:17:30",
+          "seconds": 1050
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:26:39",
+          "seconds": 1599
+        },
+        {
+          "title": "Item 4: BA26- - Historic Preservation Commission Applicant",
+          "timestamp": "01:19:59",
+          "seconds": 4799
+        },
+        {
+          "title": "Item 5: BA26-25535 - Kimberly Fruit Reappointment",
+          "timestamp": "01:22:27",
+          "seconds": 4947
+        },
+        {
+          "title": "Item 6: BA26-25616 - Ana Wallrapp Reappointment",
+          "timestamp": "01:22:52",
+          "seconds": 4972
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:25:02",
+          "seconds": 5102
+        },
+        {
+          "title": "Item 61: TA/CPA25-19 - 4615 and 4801 East Fowler Avenue",
+          "timestamp": "01:27:17",
+          "seconds": 5237
+        },
+        {
+          "title": "Item 62: VAC-23-20 - Oak\u2013Palm Avenues, Tampa\u2013Florida Streets",
+          "timestamp": "01:29:47",
+          "seconds": 5387
+        },
+        {
+          "title": "Item 63: E2026-8 CH 14 - School Zone Camera Locations",
+          "timestamp": "01:31:12",
+          "seconds": 5472
+        },
+        {
+          "title": "Item 64: TA/CPA 25-20 - 11315 N 46th; 4801 E Fowler",
+          "timestamp": "01:53:27",
+          "seconds": 6807
+        },
+        {
+          "title": "Item 65: TA/CPA 26-02 - 1701 East 2nd Avenue",
+          "timestamp": "01:55:27",
+          "seconds": 6927
+        },
+        {
+          "title": "Item 66: VAC-26-09 - 7th Avenue, 23rd\u201324th Streets",
+          "timestamp": "01:56:42",
+          "seconds": 7002
+        },
+        {
+          "title": "Item 67: REZ-26-07 - 4201 East Osborne Avenue",
+          "timestamp": "01:59:02",
+          "seconds": 7142
+        },
+        {
+          "title": "Item 68: REZ-26-46 - 3705 North Darwin Avenue",
+          "timestamp": "02:00:52",
+          "seconds": 7252
+        },
+        {
+          "title": "Item 69: REZ-26-51 - 9710\u20139720 North Armenia Avenue",
+          "timestamp": "02:02:42",
+          "seconds": 7362
+        },
+        {
+          "title": "Item 70: REZ-26-53 - 3817\u20133819 Temple Street",
+          "timestamp": "02:04:12",
+          "seconds": 7452
+        },
+        {
+          "title": "Item 71: REZ-25-86 - 3101 North Nebraska Avenue",
+          "timestamp": "02:05:52",
+          "seconds": 7552
+        },
+        {
+          "title": "Item 72: AB2-26-08 - 2105 West Morrison Avenue",
+          "timestamp": "02:08:05",
+          "seconds": 7685
+        },
+        {
+          "title": "Item 73: AB2-26-09 - 1281 Ray Charles Boulevard",
+          "timestamp": "02:10:10",
+          "seconds": 7810
+        },
+        {
+          "title": "Item 74: AB2-26-14 - 1301 East 4th Avenue",
+          "timestamp": "02:12:10",
+          "seconds": 7930
+        },
+        {
+          "title": "Item 75: REZ-26-28 - East 4th\u201311th, North 19th\u2013CSX",
+          "timestamp": "02:14:07",
+          "seconds": 8047
+        },
+        {
+          "title": "Item 80: INF26-25629 - Fire Station 24 Construction Agreement",
+          "timestamp": "02:38:16",
+          "seconds": 9496
+        },
+        {
+          "title": "Item 81: MAM26-25566 - Citywide HVAC Services Renewal",
+          "timestamp": "02:44:06",
+          "seconds": 9846
+        },
+        {
+          "title": "Item 87: CM26-23876 - Frank Reddick Building Naming",
+          "timestamp": "02:44:21",
+          "seconds": 9861
+        },
+        {
+          "title": "Item 89: CM26-23034 - Land Development Code Update",
+          "timestamp": "02:51:31",
+          "seconds": 10291
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:05:06",
+          "seconds": 11106
+        }
+      ],
+      "offset_seconds": 357
+    }
+  ]
+}
