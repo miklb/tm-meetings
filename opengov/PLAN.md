@@ -56,17 +56,31 @@ Transparency dashboard. It is sufficient to resolve any
 | `GET /api/v1/reports/{report_id}` | Get `data_sets[]`, `coa_id`, `coa_mask_id`                  |
 | `GET /api/v1/data_sets/{ds_id}`   | Per-dataset `etag` for change detection                     |
 
-### Aggregated amounts (POST, no auth, body shape WIP)
+### Aggregated amounts (POST, no auth — body shape solved)
 
 ```
 POST https://reporting.opengov.com/api/transparency/v1/select/{coa_id}
 ```
 
-Returns `amounts` keyed by node UUID for the requested `checked_nodes`.
-Probe returned 200 but with empty `amounts` until the request body
-matches the SPA's exact shape. **Phase 3 spike:** capture a real
-request via DevTools (Network tab, filter `transparency`) and replay
-it.
+Returns `amounts` (in cents) keyed
+`amounts[account_type][node_id][data_set_id]` for the requested
+`checked_nodes`. The body shape was captured from the SPA and verified
+working; the querying client lives in a separate private research
+toolkit, not this repo. Key gotchas — the endpoint never errors, it
+returns 200 with empty `amounts` when the request is wrong:
+
+- `cache_key` must echo the value from the matching `package` response.
+- `checked_nodes` must include the depth-0 roots of the account-type
+  trees (`expenses` etc.) in addition to the breakdown nodes you want.
+- `breakdown` is a tree UUID, except account-type category breakdowns
+  which use the literal sentinel string `types`.
+- A multi-root tree (e.g. Funds: Governmental / Proprietary / Fiduciary)
+  needs one request per root — a single combined request silently drops
+  roots.
+
+Scope note: datasets are budget books (adopted/revised budgets, settled
+actuals, in-year projections) — **not** encumbrances or transaction-level
+obligation data.
 
 ### Out of scope for v1
 
@@ -139,13 +153,13 @@ for the 11 codes that collide between Departments and Liabilities.
 Trailing all-zero project segments (`0000000`) are dropped before
 lookup. CLI: `python3 -m opengov.parse_account_code "<raw>"`.
 
-> **Open: `select` endpoint amounts spike.** Implementing
+> **Resolved: `select` endpoint amounts spike.** Implementing
 > `parse_account_code.py` did **not** require resolving how to fetch
 > dollar amounts per node — Phase 3 only needed the CoA structure
-> (already supplied by `coa.py`). The `select` endpoint experiment is
-> still pending; it now blocks Phase 4 (variance / over-appropriation
-> flags) rather than Phase 3. Capture a real request via DevTools
-> (Network tab, filter `transparency`) when ready.
+> (already supplied by `coa.py`). The `select` body shape has since been
+> captured and verified (see "Aggregated amounts" above). Variance /
+> over-appropriation flags are still unbuilt in this repo; the amounts
+> client lives in a separate private research toolkit.
 
 ### Phase 4 — `reconcile.py` ✅
 

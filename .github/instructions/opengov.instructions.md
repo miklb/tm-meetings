@@ -96,7 +96,7 @@ The shell wrapper in [opengov/WP_INTEGRATION.md](opengov/WP_INTEGRATION.md) unde
 ## Things that have NOT been built yet
 
 - **Per-item card insertion in `json-to-wordpress.js`.** WP_INTEGRATION.md describes the diff but the JS is unmodified — no `fundingByItemId` lookup, no `renderFundingCard` helper. Look there before re-deriving the integration.
-- **Aggregate `select` endpoint amounts.** Phase 4 variance/over-appropriation flags are blocked on capturing the SPA's `POST /api/transparency/v1/select/{coa_id}` body shape via DevTools.
+- **Aggregate `select` endpoint amounts.** The `POST /api/transparency/v1/select/{coa_id}` body shape has been captured and solved (see PLAN.md "Aggregated amounts"), but the amounts-querying client lives in a separate private research toolkit, not in this repo. Variance/over-appropriation flags remain unbuilt here. Note the endpoint serves budget-book datasets (budgets, actuals, projections) — not encumbrances or PO-level obligation data.
 - **Fiscal-year ledger** (Phase 5.2) — not started.
 
 ## CoA cache hygiene
