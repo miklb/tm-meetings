@@ -4,6 +4,22 @@
   "firstSeenAt": "2026-07-18T16:23:35.797Z",
   "entries": [
     {
+      "date": "2026-07-23",
+      "mirroredAt": "2026-07-23T17:41:59.128Z",
+      "newDocuments": [
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-23",
+          "filename": "REZ-26-23 - CONINUANCE REQUEST.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-26-47",
+          "filename": "REZ 26-47 -CONTINUANCE REQUEST.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-07-22",
       "mirroredAt": "2026-07-22T00:15:56.795Z",
       "newDocuments": [
