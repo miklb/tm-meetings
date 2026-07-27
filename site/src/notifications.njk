@@ -30,7 +30,7 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
 
         <div class="form-group">
           <label for="sub-keywords">Keywords (up to 15)</label>
-          <p class="field-help">Separate multiple terms with commas. Case-insensitive. Matches title and background texts.</p>
+          <p class="field-help">Separate multiple terms with commas. Case-insensitive. Matches title and background texts. Keywords match inside longer words too (<em>"zoning"</em> also catches <em>"rezoning"</em>), except short keywords of 4 letters or fewer (like <em>"MOU"</em>), which match whole words only.</p>
           
           {# JS will replace this with a tag interface, fallback is plain text input #}
           <div id="tag-container" class="tag-container">

@@ -50,6 +50,19 @@ function buildFuzzyPattern(keyword) {
     .join('\\s+');
 }
 
+// Keywords this short are nearly always acronyms or proper nouns (MOU, CRA,
+// Ybor), and substring matching makes them fire inside unrelated words —
+// "mou" hits every "amount" on an agenda. They get whole-word matching
+// instead, with an optional plural s ("MOU" still catches "MOUs"). Longer
+// keywords keep plain substring semantics so stems still match ("zoning"
+// catches "rezoning").
+const SHORT_KEYWORD_MAX = 4;
+
+function containsPattern(keyword) {
+  const fuzzy = buildFuzzyPattern(keyword);
+  return keyword.length <= SHORT_KEYWORD_MAX ? `\\b${fuzzy}s?\\b` : fuzzy;
+}
+
 function buildTitle(type, dateStr) {
   const TYPE_LABELS = {
     regular: 'City Council',
@@ -255,7 +268,7 @@ export async function onRequestPost(context) {
   // always equal the keyword text verbatim.
   const containsMatchers = containsKeywords.map(kw => ({
     keyword: kw,
-    regex: new RegExp(buildFuzzyPattern(kw), 'i')
+    regex: new RegExp(containsPattern(kw), 'i')
   }));
 
   const exactMatchers = exactKeywords.map(kw => ({

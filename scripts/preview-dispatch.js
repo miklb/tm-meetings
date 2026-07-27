@@ -149,8 +149,12 @@ function main() {
           const kw = k.keyword.trim().toLowerCase();
           let hit = false;
           if (k.match_type === 'contains') {
-            // Compiled without word boundaries — a plain substring test.
-            hit = text.includes(kw);
+            // Mirrors notify.js: keywords of ≤4 chars (acronyms, short proper
+            // nouns) match whole words only, with optional plural s; longer
+            // keywords are a plain substring test.
+            hit = kw.length <= 4
+              ? new RegExp(`\\b${escapeRegExp(kw)}s?\\b`, 'i').test(text)
+              : text.includes(kw);
           } else if (k.match_type === 'exact_phrase') {
             hit = new RegExp(`\\b${escapeRegExp(kw)}\\b`, 'i').test(text);
           } else if (k.match_type === 'file_number') {
