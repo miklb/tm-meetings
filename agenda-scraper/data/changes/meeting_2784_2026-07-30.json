@@ -2,5 +2,22 @@
   "meetingId": "2784",
   "meetingDate": "2026-07-30",
   "firstSeenAt": "2026-07-25T00:04:29.494Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-07-28",
+      "mirroredAt": "2026-07-28T23:48:02.072Z",
+      "newDocuments": [
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "BA26-25994",
+          "filename": "RESO HPC APPT HOSEY 7-30-26.PDF"
+        },
+        {
+          "itemNumber": 56,
+          "itemFileNumber": "CM26-24460",
+          "filename": "MEMO.ROGERO - 073026 REGULAR COUNCIL SESSION - ONBASE AGENDA ITEM NO. 24460.pdf"
+        }
+      ]
+    }
+  ]
 }
