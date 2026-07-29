@@ -1,0 +1,1841 @@
+{
+  "meeting_id": "2690",
+  "url": "https://apps.tampagov.net/cttv_cc_webapp/Agenda.aspx?pkey=2690",
+  "meeting_title": null,
+  "meeting_date_time": "THURSDAY, JULY 23, 2026, 9:00 A.M.",
+  "disclaimer": "THIS FILE REPRESENTS AN UNEDITED VERSION OF REALTIME CAPTIONING WHICH SHOULD NEITHER BE RELIED UPON FOR COMPLETE ACCURACY NOR USED AS A VERBATIM TRANSCRIPT. ANY PERSON WHO NEEDS A VERBATIM TRANSCRIPT OF THE PROCEEDINGS MAY NEED TO HIRE A COURT REPORTER. [ SOUNDING GAVEL ]",
+  "segments": [
+    {
+      "timestamp": "9:03:54AM",
+      "speaker": "Naya Young",
+      "text": "Okay. Good morning. This meeting of the Community Redevelopment Agency is now called to order. Board member Viera is on His Way. I'm going to pass to Councilwoman Hurtak -- I mean, board member Hurtak for our moment of silence."
+    },
+    {
+      "timestamp": "9:04:09AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yes. So if everyone could stand for a moment of silence and then we'll do the pledge. [Moment of silence] thank you. [Pledge of allegiance]"
+    },
+    {
+      "timestamp": "9:04:46AM",
+      "speaker": "Naya Young",
+      "text": "Thank you, board member Hurtak. Can I have a roll call, please?"
+    },
+    {
+      "timestamp": "9:04:52AM",
+      "speaker": "Charlie Miranda",
+      "text": "Here."
+    },
+    {
+      "timestamp": "9:04:53AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Here."
+    },
+    {
+      "timestamp": "9:04:54AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Here."
+    },
+    {
+      "timestamp": "9:04:55AM",
+      "speaker": "Alan Clendenin",
+      "text": "Here."
+    },
+    {
+      "timestamp": "9:04:56AM",
+      "speaker": "Bill Carlson",
+      "text": "Here. Young?"
+    },
+    {
+      "timestamp": "9:04:59AM",
+      "speaker": "Naya Young",
+      "text": "Here."
+    },
+    {
+      "timestamp": "9:04:59AM",
+      "speaker": "The Clerk",
+      "text": "We have a physical quorum."
+    },
+    {
+      "timestamp": "9:05:01AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. Is there a motion to approve the minutes of the June 11, 2026 CRA meeting? We have a motion by board member Miranda, second from board member Maniscalco. All in favor? Any opposed? Board member Viera has Made His Way. Thank you for being here with us. District 7. Mr. McCray -- Director McCray, are there any changes to the agenda?"
+    },
+    {
+      "timestamp": "9:05:36AM",
+      "speaker": "Cedric McCray",
+      "text": "Tampa CRA director. We have requested a continuance for item 8. Everything else on the agenda will follow as written."
+    },
+    {
+      "timestamp": "9:05:52AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I move to continue item 8 to September 10, 2026."
+    },
+    {
+      "timestamp": "9:05:57AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. Motion from board member Hurtak. Second from board member Maniscalco. All in favor? Any opposed? Thank you. Public comments? Oh, board member Hurtak."
+    },
+    {
+      "timestamp": "9:06:12AM",
+      "speaker": "Lynn Hurtak",
+      "text": "We have to approve the agenda. Actually, do we need to bring anything up from required approvals? There is a powerpoint for item 12."
+    },
+    {
+      "timestamp": "9:06:34AM",
+      "speaker": "Cedric McCray",
+      "text": "Yes, that was the budget presentation."
+    },
+    {
+      "timestamp": "9:06:37AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I move to move item 12 to staff reports."
+    },
+    {
+      "timestamp": "9:06:42AM",
+      "speaker": "Naya Young",
+      "text": "We have a motion from board member Hurtak and second from board member Maniscalco. All in favor? Any opposed?"
+    },
+    {
+      "timestamp": "9:06:50AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Then I move to approve the agenda."
+    },
+    {
+      "timestamp": "9:06:53AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. Board member Hurtak, second from board member Maniscalco. All in favor? Any opposed? Thank you very much. Now we will have public comment. Oh, yes, Attorney Shepard, can you read our rules of decorum, please."
+    },
+    {
+      "timestamp": "9:07:13AM",
+      "speaker": "Cliff Shepard",
+      "text": "Yes, ma'am, I can. Members of the Public are allowed a reasonable opportunity at the beginning of the CRA meeting to address any item on the agenda before the CRA takes official action on an item. However, a three-minute time limit applies to all speakers providing public comment unless such time frame is modified by a vote of the CRA Board. Speakers and Members of the Public are also reminded that they are to refrain from disruptive behavior, including making vulgar or threatening remarks or making or causing disruptive noises or sounds or displaying signs or graphics. Speakers are also reminded to refrain from launching personal attacks. The chair Will rule out of order any person who speaks without being recognized or attempts to address the CRA from outside the speaker area at the podium. Persons failing to comply with the CRA's rules may be also ruled out of order and at the discretion of the chair may be removed from chambers from the remainder of that day's CRA meeting. Finally, CRA Board members are reminded that they should refrain from engaging a speaker under public comment. City Council rules as revised June 6, 2024, are now in effect for the CRA Board unless otherwise exempted or overridden by the CRA Board bylaws."
+    },
+    {
+      "timestamp": "9:08:20AM",
+      "speaker": "Naya Young",
+      "text": "Thank you very much, Attorney Shepard. We have one virtual public comment. Mr. Randolph. There you are. We can hear you. My name is Michael Randolph. The title of today's presentation is addressed to the CRA, the City Council and community control. The good news. Federal policy -- biggest overhaul more than a decade, creating a unified national strategy to expand housing supply, development barriers -- working families. This approach is supply driven, zoning changes streamlining -- it also modernize core programs like home, CDBG and fha multifamily and rural housing programs, Tampa and nonprofit partners more resources for affordable homes. Legislation -- multiple housing, promotes adaptive reuse for vacant, commercial building and protect against corporate ownership of family homes. Bad news, where it becomes complicated for Tampa. Florida's live local on top of senate bill 1134, bans local dei spending and nonprofits receiving public funds to certify they do not use -- at the same time, live local and federal shift power upward, away from neighborhoods and City Council. Zoning overrides reduce opportunity for the CRA to negotiate community benefits or shape density and height. The results now big corporations are able to compete with Black owned nonprofits and this is a problem. Thank you so much."
+    },
+    {
+      "timestamp": "9:11:10AM",
+      "speaker": "Naya Young",
+      "text": "Thank you, Mr. Randolph. Board member Hurtak."
+    },
+    {
+      "timestamp": "9:11:20AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I see some folks from hope today, the Hillsborough Organization for progress and equality. I want to say welcome. We're happy to have you here."
+    },
+    {
+      "timestamp": "9:11:34AM",
+      "speaker": "Naya Young",
+      "text": "If you wish to speak for public comment, would you line up against the wall, please? Start with your name and then you'll have three minutes. I came down here last week to talk about the false imprisonment That Took Place. I want to really address the fact that how is it a judge has absolute immunity for committing a crime of false imprisonment, Judge Rice had me in the county jail, Gracepoint to the county jail because on the thing that was pointed for me to go to the program said not required to come back to jail. I left Hillsborough County sheriff jail on June 24 -- June 26, 2025. I bonded out. Then I had to turn myself into Gracepoint. I turned myself into Gracepoint. 30 days later, I got kicked out and found competent on the 19th. I stayed in jail all that time, 99 days to December 2 because my bond was paid and she never lifted the hold she had on me on Gracepoint. According to the law, the law said that false imprisonment is not only a crime but also grounds for a civil action. Ain't nobody greater than other source, like, that is accountability. Some accountability -- i've been disabled. Done have a lot of stuff going on. My section 8, kicked me off section 8 because I said something about fiberglass coming through my duct system. Mr. Jerome played it off like they knew. My apartment complex and section 8 work together to get me put out. It's corrupt. Accountability. You got disabled people like me, we just want to try to make it. The thing i'm upset about, because I got out of jail like I told you, June 24 this month -- this year for the trespassing that was illegal. For us to survive like literally, the fair market rent got to match up with the Social Security disability or retirement. These people won't survive. My rent went up. Because they got a little boost in Social Security, the rent go up and now they don't even see the increase. That should be shameful in the number one economic state in the United States of America Florida. We got all the tourism you want. You can retire here and legislature with the police force to make you feel safe. I yield my time."
+    },
+    {
+      "timestamp": "9:14:22AM",
+      "speaker": "Naya Young",
+      "text": "Thank you very much, sir. Anybody else for public comment? Now that public comment is gone, Director McCray --"
+    },
+    {
+      "timestamp": "9:14:43AM",
+      "speaker": "Cedric McCray",
+      "text": "Tampa CRA director. At this time, for item 1, I would like to call up MaryBeth Williams. The Downtown CRA CAC chair. She will provide the update on the down CRA CAC. As chair of the downtown community advisory committee, i'm pleased to provide a brief update on our activities. The Downtown CAC continues to support the CRA's strategic objectives and our discussions over the past several months have focused on advancing projects in the following key priority areas. Attainable and affordable housing, a core objective of the CRA is expanding housing opportunities for residents at a variety of income levels, helping ensure that people can live close to where they work while supporting a vibrant downtown community. Ld and d encore lot 10 was the first downtown project awarded. $5.4 Million in funding agreement for 30 units, which is on today's agenda. 801 whiting, a $4 million approved project for 22 workforce housing units, serving households earning 80% to 140% AMI. This community will help build a critical -- help bridge a critical gap for Tampa's workforce and middle income residents seeking to live close by where they work. Applications are currently being accepted. The pmg Affordable Royal Street development was presented to the CRA in June. This will provide 568 units at or below 80% AMI. Connectivity and infrastructure, improving connectivity through the downtown remains another CRA objective by creating a safer, more accessible, and more navigable environment for residents and visitors. The Franklin Street action plan continues through the RFP process. The Downtown Way-finding signage project is expected to move into the construction phase bid advertisement following the approval of program changes in August. Under economic development, the CRA continues to support projects that preserve historic assets, encourage private investment and strengthen downtown's economic vitality. The jackson house funding agreement is expected before the CRA Board in August. The union station renovations continue with ongoing construction on the main station. Under quality of life, enhancing parks and public spaces and recreational amenities remains an important focus to improve the overall experience for everyone who lives, works, and visits downtown. The herman Massey project was completed and the ribbon cutting was April 21st. The Tampa Museum of Art dog park was completed with a ribbon cutting on February the 10th. Curtis hixon waterfront park renovation funds were approved February of 26. ADA enhancements at curtis hixon are expected to be completed by January of 27. Under community engagement, the Downtown CAC remains committed to engaging the public and maintaining strong partnerships with organizations that help advance the CRA's mission. We continue to hold regular CAC meetings. We continue posting our agendas and meeting recordings on the Tampa CRA youtube channel, and we maintain partnerships with organizations like the Tampa Downtown Partnership, friends of the riverwalk, and the Downtown River Arts Neighborhood Association. In closing, the Downtown CAC remains engaged in supporting the CRA's mission by providing community input and advancing projects that enhance housing opportunities, infrastructure, economic development, quality of life, and community engagement throughout downtown. Thank you. And I am happy to answer any questions should you have any."
+    },
+    {
+      "timestamp": "9:18:47AM",
+      "speaker": "Naya Young",
+      "text": "Thank you very much. Board member Hurtak."
+    },
+    {
+      "timestamp": "9:18:49AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you so much for that excellent presentation. You can stay. About all the different things that are happening in downtown. I'm particularly pleased that you started with affordable housing. That has been an issue for downtown for many years, and now we're starting to get some movement there. I want to say thank you so much for the CAC for continuing to champion this. It is so important. But i'm really thrilled to see all of the other assets and movement that we're seeing throughout the community. Thank you for continuing to do the work. I can't wait to see What Franklin Street becomes. We're just doing a lot of movement. I go down to herman Massey often to sit on the swing for a little break. It's been really, really wonderful. But i'm really pleased to see the movement with the CAC and how active and engaged they are with not only the surrounding neighborhoods but also the Downtown Partnership and all the other works around there. Thank you so much for what you're doing."
+    },
+    {
+      "timestamp": "9:19:52AM",
+      "speaker": "Naya Young",
+      "text": "Any other board members have any questions or comments? Thank you very much. That was a great report. I remember downtown at a time, and so to see all the things happening, thank you all. You're doing a great job. Thank you very much. Director McCray."
+    },
+    {
+      "timestamp": "9:20:14AM",
+      "speaker": "Cedric McCray",
+      "text": "Good morning again. I just wanted to move on to item 2. Thank you, Ms. Williams, for your report and comments. Move on to the director's report for this July 23rd meeting. We have included the customary trackers per board request, and we'll pause for any questions that you all may have."
+    },
+    {
+      "timestamp": "9:20:36AM",
+      "speaker": "Naya Young",
+      "text": "Does the Board have any questions? No questions."
+    },
+    {
+      "timestamp": "9:20:39AM",
+      "speaker": "Cedric McCray",
+      "text": "If not, we will move on to the FY '26 budget realignment. As the Board knows, customarily every year as part of the annual services agreement, we do cover the cost and share with the city for the staff, and that's across all the CRAs. So East Tampa, Drew Park, West Tampa, Tampa Heights, riverfront, ybor one, ybor two, downtown, Channel District as well. So just asking the Board's approval so that we can go ahead and reprogram those funds and transfer to the realignment for the budget. And that amount is $4,254,558."
+    },
+    {
+      "timestamp": "9:21:26AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you. For those in the public, in the backup documentation, it shows what is being moved in each area of each budget. So I move to approve."
+    },
+    {
+      "timestamp": "9:21:42AM",
+      "speaker": "Naya Young",
+      "text": "I have a motion from board member Hurtak. Second from board member Clendenin. All in favor? Any opposed? All righty."
+    },
+    {
+      "timestamp": "9:21:51AM",
+      "speaker": "Cedric McCray",
+      "text": "Thank you. The next item I would like to highlight is that there was a request from the Florida aquarium related to an extension to the condition precedent. We are working with them as a staff to meet the final few items. Hopefully we'll be able to land that plane in the next 60 to 90 days. Wanted to inform the board that the extension was granted."
+    },
+    {
+      "timestamp": "9:22:14AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I just want to reiterate this is not a monetary movement."
+    },
+    {
+      "timestamp": "9:22:20AM",
+      "speaker": "Cedric McCray",
+      "text": "No, no."
+    },
+    {
+      "timestamp": "9:22:21AM",
+      "speaker": "Lynn Hurtak",
+      "text": "This is just simply a time."
+    },
+    {
+      "timestamp": "9:22:23AM",
+      "speaker": "Cedric McCray",
+      "text": "Correct."
+    },
+    {
+      "timestamp": "9:22:23AM",
+      "speaker": "Lynn Hurtak",
+      "text": "They need more time to complete their goal."
+    },
+    {
+      "timestamp": "9:22:26AM",
+      "speaker": "Cedric McCray",
+      "text": "That is correct."
+    },
+    {
+      "timestamp": "9:22:27AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Wanted to make sure again for the public. I move to approve."
+    },
+    {
+      "timestamp": "9:22:31AM",
+      "speaker": "Naya Young",
+      "text": "Motion from board member Hurtak. Second from board member Maniscalco to approve the extension. All in favor? Any opposed?"
+    },
+    {
+      "timestamp": "9:22:40AM",
+      "speaker": "Cedric McCray",
+      "text": "Thank you. The next item, I know this is near and dear to some on the dais related to the ADA equipment features. As you know, FY '23, the board at that time approved funds for ADA -- installed across all the CRA Parks and Recreation facilities. There is a consultant that parks and rec has hired. And there is a component that the CRA will have to cover that amount. It will be coming before you as council at a future meeting, but I wanted to share that with you here as a CRA Board first so that you're not hearing it the first time at the council meeting. I believe tentatively it's going to be the July 30th meeting."
+    },
+    {
+      "timestamp": "9:23:25AM",
+      "speaker": "Naya Young",
+      "text": "Motion from board member Maniscalco. Second from board member Miranda. All in favor? Any opposed?"
+    },
+    {
+      "timestamp": "9:23:33AM",
+      "speaker": "Cedric McCray",
+      "text": "Thank you. Engines, I would like to invite Mr. Cory Robinson, our CRA arts and cultural project coordinator, to provide an update on some of the work that is being done across all of the CRAs. If you could indulge him for a few moments. If we could pull up the agenda item presentation."
+    },
+    {
+      "timestamp": "9:23:53AM",
+      "speaker": "Naya Young",
+      "text": "About how much time do you think you need?"
+    },
+    {
+      "timestamp": "9:23:57AM",
+      "speaker": "Naya Young",
+      "text": "We'll put five minutes."
+    },
+    {
+      "timestamp": "9:24:05AM",
+      "speaker": "Naya Young",
+      "text": "Start with your name and you are good to go. My name is Cory Robinson. I'm the arts and cultural project coordinator for the CRA. Thank you for your time this morning to give you a few brief updates. Our first update is Lieutenant Baldomero Lopez in Tampa Heights. The memorial remains on schedule. Artist steve dickey is expected to install the sculpture in late August in time for the centennial celebration. He worked closely with the Lopez family and judge Salcines throughout the design process to make sure it honors the legacy. Up next is the Tampa union station World War II memorial. This project received 62 artist applications and Art Selection Committee after two meetings selected Austin Weishel. Austin has extensive experience creating military and first responder memorials. Staff is currently preparing the service agreement with project kickoff plan later this year. Our next project is the Tampa Heights roundabouts. For the North Boulevard and Palm Avenue roundabout, the committee selected artist dulk from a pool of 159 application. We are currently working on the service agreement, and installation is anticipated in late 2027. Because of the district boundaries in this roundabout, the City Of Tampa is partnering on the project with a $50,000 contribution. Our next roundabout in Tampa Heights is the Highland Avenue and Palm Avenue roundabout. The committee determined that the finalist proposals did not fully represent the cultural identity of Tampa Heights. Staff and the committee is now reviewing additional artists from the original applicant pool before moving forward. Another roundabout project in East Tampa, Lake Avenue and 34th street roundabout. We received 171 applications and narrowed it down to three finalists. Art Selection Committee reviewed three finalists' presentations last night. Committee is currently finalizing the selection but we look forward to announcing the awarded artist soon and more exciting news to come on that. Next project, Salcines park mural restoration. As a part of the park renovations we invited the original artist, Michelle Sawyer to restore the existing memorial after additional wall space became available. It was completed in coordination with the park improvements. Also in West Tampa, Rey Park Community Center, to preserve the original mural while complementing the new community center, staff is working with the original muralist Karl Cowden that will be fabricated as architectural glass installation inside the new facility. Received CAC feedback as well as feedback from judge Salcines on this project. Few upcoming projects we have. Looking ahead, staff will begin the Drew Park signal box project beginning public art to five city owned signal boxes throughout the district. Following the success of West Tampa signal box, this will transform everyday infrastructure into artwork that reflects the character of the community and also acts as a pedestrian safety initiative. We are also developing the channelside gateway sculpture which will serve as signature public art feature for the new park currently being designed Along Channelside Drive. This project is intended to create a memorial gateway for visitors entering the park. Finally, as Planning continues on the new West Main Street park in West Tampa, staff is working closely with the Design Team to identify opportunities to incorporate art early in the Planning process ensuring the artwork is fully integrated into the park's overall design and visitor experience. Thank you for your time. If you have any questions."
+    },
+    {
+      "timestamp": "9:27:58AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. Board member Viera."
+    },
+    {
+      "timestamp": "9:27:59AM",
+      "speaker": "Luis Viera",
+      "text": "Thank you, madam chair. A couple of things, we're very excited about the Lieutenant Baldomero Lopez statue. That's something that is going to be great and we've been working with ej Salcines on that and always been a passion of his. I remember being, gosh, how old was I? Maybe a 33-year-old lawyer, and he heard through something at the Hispanic bar that I was interested in Lieutenant Lopez. He calls me up on my phone. I'm in the middle of a project. He goes, luis, do you have the next day available? I go, I guess so. He says i'll take to you look at Lieutenant Lopez sites. His Final Resting Place with his parents and brother, Hillsborough high, many different places, historical marker downtown that he helped do. So we're excited. Council can mark your calendar because it will be September 15. That's the date when we -- it's funny because one motion I wanted to make that i'll probably make next week. I'll do a letter to council on it. Dr. Bernard Lafayette who was a remarkable voting rights activist and social justice warrior and civil rights icon who had roots here in Ybor City. Former state representative Ed Narain when he passed on, dr. Lafayette passed on, man, some sort of memorial to him in Tampa to mark the roots. Obviously long after I leave. It's so proper for us to mark our heroes. Folks who are no longer with us. I wanted to commend you all for the work on Lieutenant Lopez. We're very excited about that."
+    },
+    {
+      "timestamp": "9:29:53AM",
+      "speaker": "Naya Young",
+      "text": "Any other comments or questions? Have a good one."
+    },
+    {
+      "timestamp": "9:30:15AM",
+      "speaker": "Belix Parks",
+      "text": "Good morning. B. Parks, Community Development Coordinator. For item number 3, it's for the ld and d agreement just for the approval of the agreement as I mentioned during the briefings. This is going to provide 30 affordable units to the downtown area, which are going to range to about 80%, up to 140% area median income. I just wanted to publicly say in our other project for 801 east whiting, the majority of the applications that are coming in to rent those units are actually 80% and below. So that is actually a good thing, even though they could go a little higher than that, a lot of need is for the 80% for rental. Again, this is just to approve the agreement. Any questions?"
+    },
+    {
+      "timestamp": "9:31:08AM",
+      "speaker": "Naya Young",
+      "text": "I have a motion from board member Maniscalco. A second from board member Hurtak. All in favor? Any opposed? Board member Hurtak."
+    },
+    {
+      "timestamp": "9:31:16AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I just wanted to say thank you again for following this. We already approved this several months ago. I'm, again, more affordable housing in downtown core is what we're working really hard on. I want to thank you again for your work on that."
+    },
+    {
+      "timestamp": "9:31:31AM",
+      "speaker": "Naya Young",
+      "text": "To echo board member Hurtak, I was doing my lightly social media scroll and see a lot of people who have grown up in Tampa that are now young adults now. One of the things that came up is they want to be able to live in the city and some are having to move out into brandon, riverview, wesley chapel area, which is nice, but they have grown up in the city. To the point of affordable housing, making sure our people who have been here can continue to live and benefit from all the great things that are happening in the city. Thank you all for your work."
+    },
+    {
+      "timestamp": "9:32:09AM",
+      "speaker": "Belix Parks",
+      "text": "I agree. Thank you so much."
+    },
+    {
+      "timestamp": "9:32:13AM",
+      "speaker": "Naya Young",
+      "text": "Director McCray."
+    },
+    {
+      "timestamp": "9:32:14AM",
+      "speaker": "Cedric McCray",
+      "text": "Good morning again. Thank you, Ms. Parks. Moving on to item 4, this is the approval for the funding agreement related to the infrastructure improvements at Curtis Hixon Waterfront Park."
+    },
+    {
+      "timestamp": "9:32:27AM",
+      "speaker": "Naya Young",
+      "text": "Any questions? Board member Hurtak."
+    },
+    {
+      "timestamp": "9:32:29AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Again, we've already approved this. This is simply the resolution."
+    },
+    {
+      "timestamp": "9:32:35AM",
+      "speaker": "Cedric McCray",
+      "text": "And the funding agreement, yes."
+    },
+    {
+      "timestamp": "9:32:37AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you again for that. I move the resolution."
+    },
+    {
+      "timestamp": "9:32:40AM",
+      "speaker": "Naya Young",
+      "text": "I have a motion from board member Hurtak. Second by board member Maniscalco. All in favor? Any opposed? Thank you. All right."
+    },
+    {
+      "timestamp": "9:32:49AM",
+      "speaker": "Belix Parks",
+      "text": "B. Parks, Community Development Coordinator. Another great affordable housing project in the east side, which is on and booming with affordable housing. This is Heritage Heights from CDC of Tampa. It's going to yield approximately 76 units. They are going to range on the lower end. 30%, 50% and 80% area median income. This is actually a great project. This is the developer's agreement in front of you all for approval today."
+    },
+    {
+      "timestamp": "9:33:25AM",
+      "speaker": "Naya Young",
+      "text": "Board Member Hurtak."
+    },
+    {
+      "timestamp": "9:33:27AM",
+      "speaker": "Lynn Hurtak",
+      "text": "We approved this, the rezoning for this, again, several months ago, and they had to cobble together several different parcels so they could apply for lihtc funding. This is exciting project. Appreciate that they are focusing on 80 percent and below. I think that is a critical need. Really excited about this."
+    },
+    {
+      "timestamp": "9:33:51AM",
+      "speaker": "Naya Young",
+      "text": "Motion from board member Maniscalco, second from board member Hurtak. All in favor? Any opposed? Again, for the public, I know we're moving kind of fast, because we have all of the documents and a lot of these things we've approved already. They are just coming back again. We always put things online so you can stay in the know with us."
+    },
+    {
+      "timestamp": "9:34:15AM",
+      "speaker": "Belix Parks",
+      "text": "Thank you. I'm Brenda Thrower. I'm the West Tampa ybor CRA manager. Today, we have a request for a strategic acquisition of 1947 West Main Street. Now, to reference this location, it is the corner of albany and Main Street. I'D like to put this up on the elmo or the wolf. I think it's called a wolf now. This location is a liquor store, actually a vacant liquor store. Earlier this year, the CAC had requested that CRA Staff work with real estate to see if we could acquire the site."
+    },
+    {
+      "timestamp": "9:35:07AM",
+      "speaker": "Naya Young",
+      "text": "You can hear everything up here."
+    },
+    {
+      "timestamp": "9:35:10AM",
+      "speaker": "Brenda Thrower",
+      "text": "Sorry. I can hear it, too."
+    },
+    {
+      "timestamp": "9:35:18AM",
+      "speaker": "Brenda Thrower",
+      "text": "Liquor store. As you know, this has been a location of several calls for services, and there's been some unfortunate incidents that Have Taken Place there just recently. So the CAC asked us to work with real estate. We did. Real estate went out and did an appraisal. They came back. They negotiated a price. The price was actually lower than the appraisal. So we would like to purchase this property for $700,000 with $12,000 of closing costs. We're just asking for your approval today."
+    },
+    {
+      "timestamp": "9:35:54AM",
+      "speaker": "Naya Young",
+      "text": "Motion by Board Member Clendenin. Second from Board Member Viera. Board Member Hurtak."
+    },
+    {
+      "timestamp": "9:36:00AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yes, if you could put the image back on and move it up a little bit. Because I think it's important to talk about what we already own. So Main Street is right there. The crosshatch is the property but we own what is directly across from albany if you want to point to that. That is the park, just above it -- I thought we had the one next to it."
+    },
+    {
+      "timestamp": "9:36:29AM",
+      "speaker": "Brenda Thrower",
+      "text": "This is a residential."
+    },
+    {
+      "timestamp": "9:36:30AM",
+      "speaker": "Lynn Hurtak",
+      "text": "We acquired the property at the corner of union and albany, so it's really exciting that we are able to control a lot of that corner. With the unfortunate death earlier this year, it's really important. This was so important to the community. I'm really thrilled. Now, I remember that this is something that board member Henderson really wanted. This was a part that was very important to her. She talked about it here on the dais. I just wanted to make sure we mentioned that this was something that she wanted as well, so i'm really, really happy that we're able to do that."
+    },
+    {
+      "timestamp": "9:37:09AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. Board Member --"
+    },
+    {
+      "timestamp": "9:37:14AM",
+      "speaker": "Bill Carlson",
+      "text": "Carlson. [ laughter ] aren't you the youngest one here?"
+    },
+    {
+      "timestamp": "9:37:24AM",
+      "speaker": "Alan Clendenin",
+      "text": "[Inaudible]"
+    },
+    {
+      "timestamp": "9:37:29AM",
+      "speaker": "Bill Carlson",
+      "text": "I just wanted to remind staff and everyone when we started acquiring property a few years ago, the idea was to build neighborhood commercial districts to build walkable environments for people and communities. Instead of driving across town to a little grocery store, they could walk to one. As this goes out for RFP or whatever it ends up being, it shouldn't end up being a one story building. Should be three, four story building with ideally affordable housing on top and retail on the bottom. So a benefit to the neighborhood and also have affordable housing in it. Also, since the hope people are here, I want to mention seven years ago, we as a CRA Board dedicated 30% of our funds across all the CRA districts to affordable housing. We didn't highlight that number when we went through the budget, but that number is bigger than the city has committed to affordable housing in at least 30, 40 years when the Housing Authority was moved out and like two or three times what the county contributed at ITs peak. What we're trying to do is effectively use that money. We get a lot of push-back because we're holding the money back and slow to get projects, but any help from the community to make sure we get the right projects and we encourage developers, especially small developers to go into projects like this and build things that are iconic. When this is done, ideally it will help to define the architectural style of the neighborhood. The facade should be built with consensus of the folks in the neighborhood about what they see as their historic look of their neighborhood and the vision for the neighborhood going forward as well as having amenities there and it should be transit ready. Thank you."
+    },
+    {
+      "timestamp": "9:39:16AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. There are amazing things happening in West Tampa. I know our West Tampa CAC has really been moving the ball. But I just wanted to acknowledge, we had an unfortunate death, Kevondre Thomas, I believe. I wanted to be sure that we honored and say his name. Thank you all for the work you're doing. It came in lower than the appraisal. Good job, guys. Whoever is on the real estate team, hope you can do that throughout the CRAs. Any other comments, questions? Thank you."
+    },
+    {
+      "timestamp": "9:39:59AM",
+      "speaker": "Naya Young",
+      "text": "I'm sorry. We didn't approve. We did the motion and the second. All in favor? Any opposed?"
+    },
+    {
+      "timestamp": "9:40:09AM",
+      "speaker": "Luis Viera",
+      "text": "I wanted to comment on the housing portion, it's so important City Council -- strike that CRA Board, the big proponents. Councilman Carlson pushed for that hard. Councilman Dingfelder, Councilman Gudes a couple of years ago at CRA to push for 30%. I think that's important because a lot of people talk about CRAs. I happen to represent an area with no CRAs. If somebody asks, which I haven't gotten that question a lot for one reason or another. Listen, this is money to go to new or North Tampa. Why going to downtown, West Tampa, Ybor City? There are some projects I couldn't justify that. I go, I wouldn't take money away from you and spend it on that. I wouldn't. I think that's unjust and some of these projects work against what CRA should be. But the housing portion, this project and other projects, I would tell people in New Tampa, North Tampa, more affluent areas, glad to take the money and use it for housing because it is the right thing to do. The projects are important because they are what CRAs should do. That 30% provision has shown itself to just produce amazing results for people, especially talk about downtown where we have been so at risk for so long making downtown for the well connected, affluent, bunch of lawyers, doctors, accountants and all this other stuff, but we're making downtown through housing affordable for firefighters, cops, teachers, nurses, welders, and everyday working people. That's what CRAs should be for in my opinion."
+    },
+    {
+      "timestamp": "9:41:53AM",
+      "speaker": "Naya Young",
+      "text": "Thank you, board member Viera. Anybody else? All right. Moving right along."
+    },
+    {
+      "timestamp": "9:42:01AM",
+      "speaker": "Cedric McCray",
+      "text": "Thank you again. Ms. Thrower. Next item is item 7 related to the monthly update for Tampa Union Station. I didn't know if you all have any questions related to the memo provided by Logistics and Asset Management."
+    },
+    {
+      "timestamp": "9:42:17AM",
+      "speaker": "Bill Carlson",
+      "text": "I read the report. Thank you for submitting that. Could you all just give like a 30 second, one minute update? This is something of great interest in the community. Also, one of my questions, one of the objectives was to shrink the amount of space that Amtrak is holding and open up the entire space for concession for a coffee shop and cowork space. I didn't see an update on that. I was wondering about that."
+    },
+    {
+      "timestamp": "9:42:45AM",
+      "speaker": "Cedric McCray",
+      "text": "I would have to yield and lean on Logistics and Asset Management Ms. Colina to follow up on that. And we can bring that back in the august report. As it relates to work being done, the facility has been tented. There is work being done on the windows and doors to rehab that. If you've driven by the entire front facade is under construction and rehab. And then also the ticket booth on the inside, there is a modular placed on one of the platforms to move those folks out so they could do the work on that internal portion of the building as well."
+    },
+    {
+      "timestamp": "9:43:19AM",
+      "speaker": "Bill Carlson",
+      "text": "Two other quick points, the report said that Amtrak finally moved to the temporary space, which is great. That gives everybody a chance to renovate the inside. Thank you to whoever finally tented it because we really need to protect it from termites. With buildings like this you never know what you'll find when you open up walls. They said they found more internal destruction than expected. They are going through carefully and evaluating that and working on it, which will take a little more time. Hopefully that also means it will be ready to be protected for the next hundred years. Thank you."
+    },
+    {
+      "timestamp": "9:43:57AM",
+      "speaker": "Naya Young",
+      "text": "Board member Clendenin."
+    },
+    {
+      "timestamp": "9:43:59AM",
+      "speaker": "Alan Clendenin",
+      "text": "I want to thank Councilman Carlson for his championship of union station and the work that you put in keeping it in the forefront of the public and also in front of the CRA Board and City Council. Important for the historic preservation of that particular facility. I think the first time I was aware of the state of it was through your public advocacy. Thank you very much."
+    },
+    {
+      "timestamp": "9:44:22AM",
+      "speaker": "Bill Carlson",
+      "text": "Thank you all for indulging that. One thing happening, important historic structure, the families that met their loved ones in World War II as the soldiers were coming back, they met and some of them found out their loved ones passed away by standing there. Incredible stories because before the airport that's where people came in and out. The other thing from a modern perspective is we have channelside moving up north. We have Ybor City and Encore moving south and east. All those developers agree that Tampa union station is the epicenter of all of it. With the cowork space, where you'll have entrepreneurs working, collaborating, drinking coffee, all that in addition to the train station, it will really make a dynamic atmosphere for the comingling of a third space for people from all those different new neighborhoods to gather."
+    },
+    {
+      "timestamp": "9:45:22AM",
+      "speaker": "Naya Young",
+      "text": "Speaking of World War II vets, I went to a birthday celebration for World War Ii Veteran. He is 102 years old. I've met two. Yesterday, 102 years old, World War Ii Veteran, Pastor Madison Murray. Very nice. Any other comments?"
+    },
+    {
+      "timestamp": "9:45:50AM",
+      "speaker": "Bill Carlson",
+      "text": "My Grandfather was in World War II. Passed away a long time ago. So sad that World War Ii Veterans were everywhere when I was a kid. We could easily talk to them and now so few of them. [ laughter ]"
+    },
+    {
+      "timestamp": "9:46:05AM",
+      "speaker": "Naya Young",
+      "text": "Anything for number 7, Director McCray? We're good?"
+    },
+    {
+      "timestamp": "9:46:10AM",
+      "speaker": "Cedric McCray",
+      "text": "We're good."
+    },
+    {
+      "timestamp": "9:46:12AM",
+      "speaker": "Naya Young",
+      "text": "Moving right along, number 8 we have continued."
+    },
+    {
+      "timestamp": "9:46:22AM",
+      "speaker": "Belix Parks",
+      "text": "My last item -- B Parks, CRA Community Development Coordinator. At the direction of board member Miranda, I developed just a memo. It's not a presentation, just of some costs associated with building. Again, I want to preface and say this is just an estimate based off of average data out there. Which, thank you, Board Member Hurtak, for the wonderful presentation from the Building Association because it did have some good data that actually came out in the memo. I believe what you were just trying to say to the public is that it is getting a little bit harder to afford housing. So i'll leave it up to you at this moment."
+    },
+    {
+      "timestamp": "9:47:10AM",
+      "speaker": "Charlie Miranda",
+      "text": "Thank you, Madam Chair. I appreciate very much your comments. I believe your numbers are quite accurate. It's becoming to me unaffordable to have affordable housing because it's almost impossible to make the payment, when you make even $25 an hour on a couple because of the cost of land. Bought it 150. Problem is in the City Of Tampa, we have less than 4% of land available for building of anything. So like you said in your opening statement that cost could be as high as 250, 300 thousand dollars a lot. When you turn in the cost of building, I think 310,000 or something like that, it's getting to the point that I don't know how we're going to handle this to make sure that the people have an opportunity and insurance cost is not going down. I don't care whether a Politician running for office, Lawyer, own the insurance company, the things they say are realistic but takes a long time for something to adjust price. I'm concerned about the people not having the ability to have affordable housing who used to have it but because of land scarcity and the cost of equipment and everything else, it's almost impossible. The job you guys are doing unbelievable because the costs keep rising and you have no control over the cost. I'm say that out as a fact. Thank you very much for your report."
+    },
+    {
+      "timestamp": "9:48:40AM",
+      "speaker": "Belix Parks",
+      "text": "Yes, sir. Thank you."
+    },
+    {
+      "timestamp": "9:48:42AM",
+      "speaker": "Naya Young",
+      "text": "Board member Carlson."
+    },
+    {
+      "timestamp": "9:48:43AM",
+      "speaker": "Bill Carlson",
+      "text": "Can you just show the slide, especially since we have people --"
+    },
+    {
+      "timestamp": "9:48:47AM",
+      "speaker": "Belix Parks",
+      "text": "It was no slides. It was just a memo provided to you."
+    },
+    {
+      "timestamp": "9:48:52AM",
+      "speaker": "Bill Carlson",
+      "text": "The memo has the chart in it with the cost. Is it possible to show that since we have people interested in affordable housing here?"
+    },
+    {
+      "timestamp": "9:49:01AM",
+      "speaker": "Belix Parks",
+      "text": "One correction to the memo, 1400 square foot, that was the example of the size of the home, not the dollar for construction. Have the wolf please. We started off with some -- okay. Move it up. Can you see it now? Just an estimation of land acquisition, could come in lower but that's what averaged between the examples that I researched. And then when we look at -- not everything is into the actual sticks and bricks of the building of the houses. It's more so site prep. That becomes an issue for the contractors, and then you see where they have to carry, insurances, build permit, impact fees, construction financing, these are just estimates. It could be more. It could be less."
+    },
+    {
+      "timestamp": "9:49:57AM",
+      "speaker": "Bill Carlson",
+      "text": "While people are kind of looking at that, I would say -- this is a single-family home, right?"
+    },
+    {
+      "timestamp": "9:50:06AM",
+      "speaker": "Belix Parks",
+      "text": "Yes. 1400 square foot."
+    },
+    {
+      "timestamp": "9:50:09AM",
+      "speaker": "Bill Carlson",
+      "text": "As my colleague, board member Hurtak has also pushed over the years, we can't just work on single-family homes. We need to also focus on multifamily because it brings the cost down, especially with the land going up. What this also shows is that the city or CRA Board cannot subsidize this completely. If something like the CDC has federal or state grants, maybe we can bring it down. But the other thing, and my colleague, board member Miranda was saying a minute ago, as the costs are going up it's getting more difficult for people to rent and more difficult for us to subsidize. And that's also why we need to as part of our portfolio help people buy homes. We're working on solutions for that for the folks in the audience. The last I checked there were 2,000 families that had gone through the hud-approved training program to buy a home but there was no inventory. We talked to the CDC and other groups about helping to build the inventory because if you help 2,000 families buy homes, then we don't have to worry about subsidizing rent into the future. Created a multigenerational asset that will transform lives of those families."
+    },
+    {
+      "timestamp": "9:51:21AM",
+      "speaker": "Naya Young",
+      "text": "Board Member Hurtak."
+    },
+    {
+      "timestamp": "9:51:24AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you. This is one of the reasons -- you can leave that on. This is one of the reasons that I champion -- of course, it completely leaves my brain -- Community Land Trusts. Where we own the land or rather it wouldn't be us. It would be a separate entity. But in buying land and putting it into a community land trust that takes the cost of land ownership out. Now it's not going to be for everyone. We have to attack this from every single angle. That's one area that I really hope the city does choose to move forward with. But, again, also to board member Carlson's point, that I have been championing for years the fact that we cannot afford to build single-family homes anymore. That's just not entry level housing for anyone. So the cost of home construction for 1400 square feet is 316,000. Well, if you can put four units on that lot, it's a lot cheaper. You can build quads and six-plexes. I've been working with Ms. Parks on trying to get a pilot project going in the CRA to do just that. We'll see what we can do. I really do appreciate you for bringing this forward. It's a really good thing to kind of get your hands and your arms around the numbers and the actual cost it takes to build. To your point about the builders association meeting, last week, it was a very eye opening about the softening of the market and how we are -- how do we respond to that? I thought the one thing that was so interesting is that it is softening in everywhere but land. Land just isn't going down. The price is staying. I see lots for sale for 300,000. It's absolutely wild. Thank you for this."
+    },
+    {
+      "timestamp": "9:53:26AM",
+      "speaker": "Charlie Miranda",
+      "text": "Thank you. I appreciate everything you said, Council Member Hurtak. Building and living in a four plex or SIX unit apartment complex or something, if it is owned by the person, they will be much better maintaining and cheaper to build because you have one roof, not SIX different roofs, so forth and so on. I understand what was going on, but I think we have to start changing our model somewhat to see if we could put more individuals in a small piece of land because that doesn't change the ability for them to own something. I don't want them to rent. I want them to own so they have a responsibility, a chance to get out and build some equity for themselves and for their families for the future. That's the Only Way you can do it. Living in a housing project is great, but you never own it."
+    },
+    {
+      "timestamp": "9:54:14AM",
+      "speaker": "Belix Parks",
+      "text": "Just one comment --"
+    },
+    {
+      "timestamp": "9:54:17AM",
+      "speaker": "Naya Young",
+      "text": "Go ahead, board member Carlson."
+    },
+    {
+      "timestamp": "9:54:19AM",
+      "speaker": "Bill Carlson",
+      "text": "Add one more thing, especially since people are here, as we're looking at the problem, the Housing Authority says there's 24, 25 thousand people waiting for homes, and then that list might be twice as big because people have given up. Let's say it's 50,000. Some of the units we subsidized a little while ago were lower amounts but some 130,000. Let's say we subsidize a hundred thousand her unit for 50,000 units, $5 billion. The entire budget of the city is just under $2 billion. What it means to completely solve the problem to provide houses for everybody, the city can't do it alone. We need the county, the state, and the federal government. Any help folks can give us. We're doing record amounts of money into affordable housing, but we need other partners because we can't do it alone."
+    },
+    {
+      "timestamp": "9:55:14AM",
+      "speaker": "Belix Parks",
+      "text": "Yes, sir."
+    },
+    {
+      "timestamp": "9:55:15AM",
+      "speaker": "Naya Young",
+      "text": "That's a very good point. I went on a missing middle housing tour, and that -- speaking of innovative ways to do different types of housing, and I think we're moving in that direction, especially with this board. I know especially with the staff you all are doing a great job. Thank you, board member Miranda, for requesting this, because I think this is good for us to know but also for the public to know to see what we're up against. When we're making these decisions and what we're thinking about. That's all I have."
+    },
+    {
+      "timestamp": "9:55:52AM",
+      "speaker": "Belix Parks",
+      "text": "Just one last comment as it relates to how we could possibly continue, and continuing to work on this crisis of affordable housing. So the three programs we have right now. Let's look at our down payment assistance. That's directly given to that end consumer to purchase that house. That's fiscally coming out of our dollars for them to purchase. So we have that available. Now, let's look at infill development. So we have land specifically in East Tampa that when we push out that request for proposal for developers and contractors to bid on that, we could control that income limit and that price limit that we want them to focus on. And then rely on our outside partners, Habitat, CDC, all the Nonprofit Developers or whoever is willing to make it work, For-Profit Developers as well, to then build that housing catered to that median income. Again, it's our land. That's another tool that we have to kind of help to lower it from what we're looking at average cost from 375,000 to about 450 is what the sales price of what we deem to be affordable right now. That's what is coming through our down payment assistance programs. And then, of course, the unit creation and conversion program that we're continuing to work on, which provides subsidy on the construction side, which makes the developers numbers work as long as they are able to guarantee that they are fiscally able to deliver that product. We have the tools. We just have to continue to amp them up and partnership is key, board member Carlson. I completely agree with you on that. Thank you. That's all I wanted to say."
+    },
+    {
+      "timestamp": "9:57:43AM",
+      "speaker": "Naya Young",
+      "text": "Any other questions or comments? All right. Moving right along. That was good, ms. Parks. Thank you."
+    },
+    {
+      "timestamp": "9:57:54AM",
+      "speaker": "Cedric McCray",
+      "text": "Moving on to item number 10, I think I alluded to this during the director's report, but there was a request to provide an update on the ADA compliant equipment at curtis hixon waterfront park. If you remember we did partner with Parks and Recreation for the installation of a piece of equipment back in February. Parks and Recreation has shared that we will -- and should -- have that work done at curtis hixon no later than January of 2027. I have placed on the elmo an example. Very similar piece of equipment that was installed at fair oaks park. So that is moving forward. I know that was something that was passionate to Mr. Viera. I wanted to provide that update and will take any questions you may have."
+    },
+    {
+      "timestamp": "9:58:53AM",
+      "speaker": "Luis Viera",
+      "text": "Thank you, madam chair. Thank you for this, cedric. You've done a great job. I pushed for this as well as Water Works Park because they are two of our seminal City Of Tampa parks. Yesterday I had here in city hall, fragile x awareness day. Very rare condition that causes intellectual disabilities. Had a family here, Kristen Winkler, austin, son cameron, SIX years old, autism, intellectually disabled, wonderful. Grandfather Frank. For families like that, this family in particular, like a lot of these families, they struggle a lot with things like child care, paid family leave. The father is a welder, mother is a nurse. Very, very hard time making ends meet and so forth. Things like this are very representative and symbolic for them that somebody cares and somebody gives a damn while they are out there struggling. This will be in January of 27. I will obviously be out of Here One Way or another. I think it's important to have, like we did for the one at Water Works Park. The mayor was there. Nice of her to come. Something similar to that. Ask sebastian, if you don't mind, to contact Mr. McCray so we can have Karen Clay, kind of our ambassador for accessibility for things here in the City Of Tampa in January. Obviously I won't be there but i'll be there in spirit. Thank you, sir. Appreciate you."
+    },
+    {
+      "timestamp": "10:00:26AM",
+      "speaker": "Naya Young",
+      "text": "Board member Carlson."
+    },
+    {
+      "timestamp": "10:00:28AM",
+      "speaker": "Bill Carlson",
+      "text": "Can you put the picture back up? I just wanted to point out, when you look at the picture, you look at the swing, but what is also equally as important is the accessibility of getting there. I just want to point out, engineers, what you see as maybe just a sidewalk and a slow ramp for those of us who are able it may not seem like that much. When you're in a wheelchair or have a friend in a wheelchair and pushing them, you realize that small, the gaps can really impact people's accessibility. Most of these swings in other parks have mulch around them and then barriers around the mulch to hold the mulch in. Those are huge barriers to people getting in. Thank you to the folks from the Parks Department for understanding not only that we need the swings, but how people can get to them."
+    },
+    {
+      "timestamp": "10:01:23AM",
+      "speaker": "Naya Young",
+      "text": "Thank you all for your work. Board Member Hurtak."
+    },
+    {
+      "timestamp": "10:01:29AM",
+      "speaker": "Lynn Hurtak",
+      "text": "If we're done with this item, I wanted to move items 11 and 13."
+    },
+    {
+      "timestamp": "10:01:35AM",
+      "speaker": "Naya Young",
+      "text": "We're finished with item 10. Okay. We have a motion from board member Hurtak, second from board member Maniscalco. All in favor? Any opposed? We just have item 12."
+    },
+    {
+      "timestamp": "10:02:04AM",
+      "speaker": "Cedric McCray",
+      "text": "If we could have the presentation for item 12."
+    },
+    {
+      "timestamp": "10:02:08AM",
+      "speaker": "Naya Young",
+      "text": "How much time do you think you need?"
+    },
+    {
+      "timestamp": "10:02:11AM",
+      "speaker": "Cedric McCray",
+      "text": "15 minutes."
+    },
+    {
+      "timestamp": "10:02:13AM",
+      "speaker": "Naya Young",
+      "text": "Okay. 15 minutes? [ laughter ]"
+    },
+    {
+      "timestamp": "10:02:33AM",
+      "speaker": "Cedric McCray",
+      "text": "Annually we normally come before you as CRA Staff to present the annual budget. I'm going to be doing the urban core CRAs in the absence of ms. Orr. We'll start. First budget we'll look at is central park CRA. It's one of the smaller districts within our CRA. Right now, there was an increase of 42.5%. Many of you know that abuts the gasworx development. Some of those units are coming online. We expect that is going to continue to increase. TIF allocation we received early last week, estimated TIF allocations are right at $2.8 Million for central park in FY '27. As you go through our budget, we made appropriate allocations. We do have some funds that we'll be rolling over. I would highlight some of the redevelopment investment funds that are there. Those are essentially the line item for our commercial grants and project approvals and the funding requests for those. Affordable housing initiatives at that 30%, right at over $800,000. And then we have some line items for capital projects and infrastructure improvements as well. Any questions?"
+    },
+    {
+      "timestamp": "10:04:11AM",
+      "speaker": "Naya Young",
+      "text": "After we do each one, we'll stop and see if the Board has any questions."
+    },
+    {
+      "timestamp": "10:04:19AM",
+      "speaker": "Cedric McCray",
+      "text": "Some of the project highlights, as we talked about and I believe Ms. Williams Mentioned The Way finding for the urban core. Central Park Way Finding program which is ongoing and also the gasworx redevelopment, which if you've been through that area, you can see the level of density that has come online in recent months in the last year."
+    },
+    {
+      "timestamp": "10:04:44AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Can you go back one slide to the actual budget? So the roll over in the budget, we could do a third column that just has the new totals, correct? So I would love to see that between now and I think September -- no, we're approving it in August, correct? In August, I would like to see what the total would be. In August, I'D love to also hear what plans are for affordable housing initiatives. Because that's $2.3 Million. Really, generally, the central park is owned by the Housing Authority mostly. So that's already affordable housing. So what are the suggestions and ideas around there? And then what are the capital projects and infrastructure? I know we have the band shell going in the park, but what other amenities, what other things can we do to improve that area? What is the CAC asking for? The central park CRA sunsets in '45? '43?"
+    },
+    {
+      "timestamp": "10:05:56AM",
+      "speaker": "Cedric McCray",
+      "text": "43. 36."
+    },
+    {
+      "timestamp": "10:06:00AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Oh, wow. We don't have a lot of time left. We really need to consider how we're going to expend these funds because we'll start getting a lot more of them. Thank you."
+    },
+    {
+      "timestamp": "10:06:25AM",
+      "speaker": "Cedric McCray",
+      "text": "We'll move on to the Channel District. There was a 3% increase. Right now the estimated TIF increment revenue is a little over $13 million. We would like to highlight the redevelopment and investment. The commercial grants funding. We've worked with the development managers and the staff to allocate funds and make it available for anticipated applications that are going to be coming through now that we completed the commercial grants policy update earlier in June. Affordable Housing Initiatives, $4.1 Million in FY '27. And then also we have some funds there for transportation and mobility as well. Some of the highlights, as you remember back in May, the board did approve the ybor harbor commercial development grant. I'm sure there will be more to come on that moving forward. The Channelside Drive and Mckay Street stormwater improvements, the East Twiggs Street neighborhood park. That is the property that we purchased for the expansion of the existing park that abuts that location. And also the Washington Street park renovations as well."
+    },
+    {
+      "timestamp": "10:07:56AM",
+      "speaker": "Naya Young",
+      "text": "Board member Clendenin."
+    },
+    {
+      "timestamp": "10:07:58AM",
+      "speaker": "Alan Clendenin",
+      "text": "Refresh my memory. We talked about the CRA and the riverwalk extension through this neighborhood. I know Councilman Carlson has been part of that discussion. Is this part of maybe a C.I.P. For the CRA?"
+    },
+    {
+      "timestamp": "10:08:20AM",
+      "speaker": "Naya Young",
+      "text": "Board member Carlson."
+    },
+    {
+      "timestamp": "10:08:21AM",
+      "speaker": "Bill Carlson",
+      "text": "About three years ago, I proposed, and I think consensus was okay, that we would go up through the middle of the -- middle of that property. For example, it would go between the parking lot and cruise terminal building."
+    },
+    {
+      "timestamp": "10:08:50AM",
+      "speaker": "Alan Clendenin",
+      "text": "I remember this discussion."
+    },
+    {
+      "timestamp": "10:08:53AM",
+      "speaker": "Bill Carlson",
+      "text": "The issue is that is a working port and only three deep water channels in the port. Any other city in the world, we desperately need more space for our port, not less. The cruise terminals may be a long-term use or short-term use but we need the working dock. The Maritime Industry wants us to have the riverwalk on Channelside Drive, and the mayor's office wants us to have it on the waterfront. Putting it on the waterfront will kill the Maritime Industry. If -- right now hundreds of high paying blue collar jobs along that corridor. Once we get rid of them, if there are condos there, we'll have low paying jobs, maintenance jobs and maid service and landscaping. Those jobs are great, but you don't have to take away high-paying, blue-collar jobs to put that there. The compromise which the Maritime Industry was okay with, the developers were okay with, is that you put it in the middle, eventually you could develop the parking lot but keep the Maritime Industry okay. Darryl Shaw and his partners are okay with it. Everybody is okay with it. What happened, the mayor did a pocket veto by telling Last Director not to pursue it. It's one of the reasons why the Last Director quit. I suggest that we propose that again because putting it on the water will be disastrous. Many cities preserve their working waterfront but still have a riverwalk. The example I gave back then was istanbul. Some of the riverwalk is along the waterfront just like ours and some of it respects the working port. People are interested in how a working port operates. Why not have it there? We can put the money in. We can put that through there and eventually it will spur development on the western half of that property which again the Maritime Industry doesn't want but better than taking away all the maritime property."
+    },
+    {
+      "timestamp": "10:10:58AM",
+      "speaker": "Alan Clendenin",
+      "text": "I think we need to definitely, especially this particular CRA, which is cash flush, I think we need to look at it more, this whole nomenclature of riverwalk sets a different tone. Look at what's happened on the west side, we call it riverwalk, but really more of a mobility project, the vast majority is not connected to the river. It's going through West Tampa and plat and doing so many other mobility projects. You look at the connectivity of a trail that is usable by our public to connect with the existing bay and riverfront property to the south and what's going to be happening in Ybor City, we have a great opportunity now in channelside to be able to have some type of mobility connection, regardless of where this thing heads. If it follows the streetcar, follows mid block like you referred to, dividing the baby in half, it's difficult to conceive because of the maritime industry -- being able to utilize that working port. I think that we as a CRA need to start seriously evaluating this and moving forward on that type of a project."
+    },
+    {
+      "timestamp": "10:12:14AM",
+      "speaker": "Naya Young",
+      "text": "Board Member Hurtak."
+    },
+    {
+      "timestamp": "10:12:15AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I just want to know why the Selmon greenway doesn't work for you all. They are just about -- THEA is just about to set out a brand-new park on the other side of meridian that will actually do that very thing. It will connect people up under the Selmon and to the space where ybor harbor is going to be. It's already built. THEA is looking to expand it. It's going to be absolutely gorgeous. I just met with Greg Slater this week to see. It's going to have ITs own water component. It's already being built and not being built by us."
+    },
+    {
+      "timestamp": "10:13:00AM",
+      "speaker": "Alan Clendenin",
+      "text": "I don't know -- it's not either-or. I think because, one, we have the capital in this particular district. Economic development. I think you can have both -- you know how you put a sidewalk and people really want to walk ten feet different, they'll walk through the grass. Same kind of thing. Folks living, playing, working, you have the aquarium, all the amenities on the east side of this that there is a demand for a mobility project in that area as well. I think supplementing what the expressway authority is doing."
+    },
+    {
+      "timestamp": "10:13:34AM",
+      "speaker": "Lynn Hurtak",
+      "text": "It's my turn and I wasn't asking you a question."
+    },
+    {
+      "timestamp": "10:13:37AM",
+      "speaker": "Alan Clendenin",
+      "text": "You did ask me a question."
+    },
+    {
+      "timestamp": "10:13:39AM",
+      "speaker": "Lynn Hurtak",
+      "text": "No."
+    },
+    {
+      "timestamp": "10:13:40AM",
+      "speaker": "Alan Clendenin",
+      "text": "You did ask me a question. You specifically asked me a question."
+    },
+    {
+      "timestamp": "10:13:44AM",
+      "speaker": "Naya Young",
+      "text": "You did kind of ask a question. You did say, why doesn't this work?"
+    },
+    {
+      "timestamp": "10:13:51AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I was talking generally, though. We do have something. So if we're building -- if we do want to build a riverwalk in this area, it needs to be more than a riverwalk because what people are really asking for in this area is park space. If we are building a riverwalk, it needs to encompass greenspace. It needs to encompass what we're hearing from channelside residents, which is park space, park space, park space. I know Developers may want to build housing there, but channelside is very dense with housing and really it preserves the openness. If later we need housing, but that would be where I would like to see some of the funding go because the great thing is, Ms. Parks brought forward to us a plan to incentive Developers using the housing funding we have in the CRA and asked us very clearly to allow the process to happen over the next year. And I know there are Developers that want to try for that money. I really believe we allow that housing money to go forward. If it doesn't work, then we have a little more money to work with. We still have a lot of money in infrastructure. All I hear from channelside is park space, park space, park space. I don't think a riverwalk is a bad idea, but it truly needs to encompass and be more of a greenspace and a community connection space, which is what we're not seeing. I would love to see an update on the Channelside Street park that we bought for an insane amount of money. One of the first things I did sitting on the CRA Board. I believe it's called -- it's not the Washington Street. It's the channelside. It's the really small -- we were moving forward for a while and then it seemed to have paused. Do you know what i'm talking about? Right across from the aquarium and right next to the parking garage. Madison. It's a tiny, tiny park. I would love in August when you bring this forward to get an update -- if you are calling It Madison Street, then the Madison Street park. I'D like to have a motion to have a quick update. It could be written on that particular park and the progress."
+    },
+    {
+      "timestamp": "10:16:22AM",
+      "speaker": "Naya Young",
+      "text": "Motion from board member Hurtak. Second from board member Maniscalco. All in favor? Any opposed?"
+    },
+    {
+      "timestamp": "10:16:33AM",
+      "speaker": "Bill Carlson",
+      "text": "Can you put the picture back up, please? You can't blow it up. Can av people blow it up? So the -- I don't know -- I can't point to what I was talking about a minute ago. But if you look toward the top of it, there is an angled piece that cuts into the water. That is the old banana docks. What the port is about to do is fill that in because we lost the banana fresh fruit business a long time ago to Manatee County. What they'll do is put cruise terminal 4 there. It will jut a little bit into Darryl's property but he I think has approved that. If you look All The Way at the bottom, bottom right is the aquarium. To the left of that is the cruise terminal 2 I think it's called. That one or where starship is, those have been there since at least the '80s. I remember going on a cruise there. Then we have two more on the right side. We're going to have the Cruise Industry is growing so fast we're going to have four. That's even with the limitations because of the skyway bridge. Again, if the cruise terminal isn't there, then we would have some other kind of maritime opportunity. The tanks that you see to the right, All The Way to the right, that is our regional supply of petroleum gasoline. When we are in a hurricane, we get gasoline faster than other areas. We used to have supply the whole region, including orlando. If we get rid of that, there'S Really No Place to move it and it is a strategic asset we need to hold on to. Whole discussion about the port. I agree with Board Member Hurtak about parks. The reason why I propose going up through the middle is because the last mayor who is trying to come back, wants to get rid of cruise terminal 2 to the left of the aquarium and have the aquarium expand there instead of in their parking lot and get rid of cruise terminals 3 and 4 and put condos all along there. The Maritime Industry is enraged about this. We'll get rid of hundreds of high paying blue collar jobs so that the riverwalk can go there. We have enough space in the aquarium parking lot that we could do a deal where there is parking nearby in the port's lots or whatever and then turn part or all of that into a park. The CRA conceivably could buy that. Right now, originally the aquarium owned that whole piece of property and then they defaulted their bonds and the city took it over. The city then sold half of it back to the port. So the city owns that parking lot. Remember, we gave a lease to the ferris wheel. But the rest of it we could convert to a park. To the north of that is the Port Authority building. That now is like 30, 40 years old. That eventually will have to be rebuilt. They have a huge parking lot. There's land around it. There's plenty of space that we could build a really beautiful park that would be an enhancement to the Cruise Industry."
+    },
+    {
+      "timestamp": "10:19:39AM",
+      "speaker": "Naya Young",
+      "text": "Board member Clendenin."
+    },
+    {
+      "timestamp": "10:19:40AM",
+      "speaker": "Alan Clendenin",
+      "text": "By the way, I don't think -- Councilwoman Hurtak, I don't think it's mutually exclusive. Next week -- [inaudible] -- linear park, very broad. A lot more public amenities. It's quite impressive. I definitely can see that vision of having, again, i'm looking at a linear -- I could definitely see a linear park there that doubles as a mobility project, slash, recreation facility. I agree with Councilman Carlson. I wouldn't mind it being next to Channelside Drive or through the property you referred to if we can work the deal with the port. The path of least resistance to get it done while we have funds available and while the CRA exists and we have flexibility of doing that. I think we're at that moment that this is an opportunity. I'm looking at the google maps of this on my phone of the overhead with satellite imaging. This is one of those moments that somebody will look back and say why didn't they do that? If we don't move something like this forward. It's an opportunity while the property is underutilized and relatively not built out that we should be able to jump on this. Please rename the cruise terminals and get them in line. Right now they are so random because of how they were developed. Hey, that has a ring to it. Not anymore. I uses it cruise all the time. Made the mistake of being elected and now don't have time. I used to go quite often out of the terminals. Do you guys have an active project or inactive project on this?"
+    },
+    {
+      "timestamp": "10:21:28AM",
+      "speaker": "Cedric McCray",
+      "text": "Currently no. But based on some of the conversations from the dais, we'll definitely -- it's going to be a layered approach."
+    },
+    {
+      "timestamp": "10:21:38AM",
+      "speaker": "Alan Clendenin",
+      "text": "I think in the next month or two, speak to council folks and get their ideas and maybe come forward with further direction from this board about how to move forward."
+    },
+    {
+      "timestamp": "10:21:47AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Is that a motion?"
+    },
+    {
+      "timestamp": "10:21:53AM",
+      "speaker": "Bill Carlson",
+      "text": "I think you ought to make a motion to bring it back in a couple of months. The only thing that stopped it last time is the mayor behind the scenes said no. Otherwise it would have been done by now."
+    },
+    {
+      "timestamp": "10:22:03AM",
+      "speaker": "Alan Clendenin",
+      "text": "I will make a motion to direct staff to coordinate with CRA Board members about vision of a north-south linear park, slash, mobility project through channelside and then report back to the CRA Board at the September 10th meeting."
+    },
+    {
+      "timestamp": "10:22:26AM",
+      "speaker": "Naya Young",
+      "text": "We have a motion from board member Clendenin. Second from board member Maniscalco. All in favor? Any opposed?"
+    },
+    {
+      "timestamp": "10:22:36AM",
+      "speaker": "Bill Carlson",
+      "text": "Thank you for your discretion. The other thing the mayor says is we need to follow the port's master plan. The port about 15 years ago re-did their master plan. Most ports when you redo the master plan, talk about the Maritime Industry. When they came back with the master plan, suddenly the only thing they talked about at first was redevelopment of the area. Where the aquarium parking lot is in terminal 3, they were going to put amphitheater and two 70 story condos. That's because the mayor at the time wanted to develop that. Now he is a lobbyist for the company that wanted to develop, by the way. The reason that is there, the former mayor sat on the Port Authority and pushed him to do that. It wasn't because the Maritime Industry wanted it. I'm just telling my colleagues, if somebody comes back and says we need to follow the master plan, the master plan of the port is how to use the port for maritime purposes. The other thing people say, why can't we move it further east? Plow over apollo beach? There's no other land. We're building dredge islands which will allow us to build more maritime land. But that land is already planned for use. In a hundred years, people will look back at us and say why were you so stupid that you built condos? By the way, you can't even build condos instead of preserving our maritime area. You'll always have to bring products in from somewhere else. You're not going to have a transporter beam or whatever that you can just move them in for a long time."
+    },
+    {
+      "timestamp": "10:24:25AM",
+      "speaker": "Bill Carlson",
+      "text": "I think it's important to protect it. By the way, because of FAA rules, Peter O. Knight, you can't build a 70 story tower anyway."
+    },
+    {
+      "timestamp": "10:24:36AM",
+      "speaker": "Naya Young",
+      "text": "Did you get all that?"
+    },
+    {
+      "timestamp": "10:24:38AM",
+      "speaker": "Cedric McCray",
+      "text": "Got it."
+    },
+    {
+      "timestamp": "10:24:39AM",
+      "speaker": "Naya Young",
+      "text": "All right. We're moving to downtown."
+    },
+    {
+      "timestamp": "10:24:55AM",
+      "speaker": "Cedric McCray",
+      "text": "Downtown CRA expected expiration of the CRA is 2043. And the increment, there was a slight decrease there, but the anticipated TIF amount is right at $29 million. Operations administration, of course, redevelopment investment. We set aside quite a bit of funds for some of the commercial grants and projects that we anticipate coming forward. We have the 30% for the affordable housing initiatives right at 7.2 Million. And capital project funds as well for FY '27, looking at 6.5 Million. Couple of things in FY '26, herman Massey park ribbon cutting. Long time cutting. 801 east whiting, which was also mentioned. We also have made contributions and compliments to some of the cultural arts institutions such as Tampa Theatre, the straz center, Union Station as well, which we spoke about earlier and the urban core multi-District Way finding as well. So that was approved by the board in recent months."
+    },
+    {
+      "timestamp": "10:26:10AM",
+      "speaker": "Naya Young",
+      "text": "Board Member Hurtak."
+    },
+    {
+      "timestamp": "10:26:11AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Could you go back one slide? Thank you. The capital projects and infrastructure, how much do we have set aside for the Ashley Unites project."
+    },
+    {
+      "timestamp": "10:26:25AM",
+      "speaker": "Cedric McCray",
+      "text": "Approved by the board was $8 million. That is there, and then that's it. Currently."
+    },
+    {
+      "timestamp": "10:26:34AM",
+      "speaker": "Lynn Hurtak",
+      "text": "8 million. Because I know that that's going to come back more. I know there's going to be -- and staff was very vague about what that was going to be when I talked to City Staff about it. I am not surprised. I really believe that they'll try to take affordable housing money to do that. So my goal is to find other ways but also to look at -- i'm really proud that we're chipping away at the affordable housing spending that we've been doing, the building that we're doing is great. I'm very interested in seeing what we can do to provide some of the affordable housing money toward this the Army Navy building. I think that's so important. They are already talking very clearly about spending or building -- the affordable housing for being 80% and below, a significant amount of that. So I believe that is a very good investment with the CRA and the City Of Tampa. That's what I would like to see is some of this money go toward -- obviously, more money is going to have to go to Ashley Unite in order to build the Army Navy complex. Some of that money needs to go toward affordable housing and keeping it more affordable in the long term. So thank you."
+    },
+    {
+      "timestamp": "10:28:00AM",
+      "speaker": "Naya Young",
+      "text": "Board member Carlson."
+    },
+    {
+      "timestamp": "10:28:03AM",
+      "speaker": "Bill Carlson",
+      "text": "Two questions. In the written version, not the powerpoint, the title is, and I don't have it in front of me, but the title says Downtown Spp. Spp is a recipient, that is the Water Street Project, recipient. Is that an intentional thing that somebody called it Downtown Spp?"
+    },
+    {
+      "timestamp": "10:28:26AM",
+      "speaker": "Cedric McCray",
+      "text": "I think because there is a portion of dollars that has been committed."
+    },
+    {
+      "timestamp": "10:28:30AM",
+      "speaker": "Bill Carlson",
+      "text": "I think we would be better off putting that As Water Street as a line item instead of having -- because then it looks like they own the CRA, which they don't. This happened before most or all of us were on the board. There was a hundred million dollars commitment to Spp. And we've now given how much? 40 million or something. So we owe about another 60 million? Is that on here somewhere?"
+    },
+    {
+      "timestamp": "10:29:00AM",
+      "speaker": "Cedric McCray",
+      "text": "No, it is not."
+    },
+    {
+      "timestamp": "10:29:06AM",
+      "speaker": "Bill Carlson",
+      "text": "Is that money set aside in a fund or come out of the regular annual revenues? Just for clarification -- martinez with Tampa CRA. Hundred million is 50 million. County 50 million. The CRA. We're giving already around, yeah, 40 million. Like maybe ten more million left."
+    },
+    {
+      "timestamp": "10:29:30AM",
+      "speaker": "Bill Carlson",
+      "text": "To be clear, the county and the CRA participated together in the CRAs, and so it's not the county giving money, correct? It's the county contributing their portions through the CRA. They have reduced their contributions in the rest of downtown to zero. The rest of their contribution in downtown is zero and the rest of them have sliding scales. It's not a separate line item for them. It was just part of their CRA contribution, right? When I get a reimbursement for spp, and I send it to Revenue and Finance for payment, they get 50% out of that invoice from the county and then they pay spp."
+    },
+    {
+      "timestamp": "10:30:11AM",
+      "speaker": "Bill Carlson",
+      "text": "Coming from CRA contribution."
+    },
+    {
+      "timestamp": "10:30:14AM",
+      "speaker": "Bill Carlson",
+      "text": "It's CRA."
+    },
+    {
+      "timestamp": "10:30:17AM",
+      "speaker": "Bill Carlson",
+      "text": "What about the other 60 million? Where is that on the budget? The other 50 million, we're not showing -- we're not giving those funds. That was the agreement, the funding agreement states that the county pays the other part."
+    },
+    {
+      "timestamp": "10:30:39AM",
+      "speaker": "Bill Carlson",
+      "text": "No, no. I think that's -- I know you didn't do that deal. I just don't think that is a Transparent Way of doing the deal because it is actually CRA money. In any other project where we're taking county money, I don't think we show It That Way. This is the only one that Shows That Way."
+    },
+    {
+      "timestamp": "10:30:56AM",
+      "speaker": "Bill Carlson",
+      "text": "It looks like our contribution was less. Anyway, how much do we owe of our part of it?"
+    },
+    {
+      "timestamp": "10:31:04AM",
+      "speaker": "Bill Carlson",
+      "text": "Is that money set aside or will it come out of revenues incurred? I think we have about five more million that we need to add to it. The total amount sitting there."
+    },
+    {
+      "timestamp": "10:31:19AM",
+      "speaker": "Lynn Hurtak",
+      "text": "If you look -- if you could please put the budget back up. I believe it says right there number 11 is debt service, and we don't have any debt. If CCTV could please put the budget back? The powerpoint, please. Thank you. Down in the corner 4.2 Million. Is that what we're paying spp this year? Convention center. Two payments we have."
+    },
+    {
+      "timestamp": "10:32:00AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I think what would be great for us to see in August, I think Councilman Carlson has a very good point. We should label that debt service with the specific debt it is and how much it is. Because this I believe is the only CRA that has that type of debt. The rest we're cash flowing."
+    },
+    {
+      "timestamp": "10:32:20AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I think that he's correct that we really should see those numbers for what they are. And it would be wonderful if you wanted to make a motion to get that number next month about exactly what we owe and the years we have left on it. I think that would be a great solution. Also, this is why i'm asking for the cash -- this is why I want the cash allowances for each month and not quarterly. I know we agreed to quarterly, but I think this is why it's very important that the board be able to see what's going in and out monthly. I know we're starting with quarterly, but the goal would be monthly so all of us could see where the money is going and when."
+    },
+    {
+      "timestamp": "10:33:07AM",
+      "speaker": "Bill Carlson",
+      "text": "Thank you. I agree with everything she just said. The debt service, though, the CRA did not sign up for debt. We're helping to pay down their debt, correct? The Convention Center's debt is with the city, not with the CRA, correct? Before my time."
+    },
+    {
+      "timestamp": "10:33:27AM",
+      "speaker": "Bill Carlson",
+      "text": "Same thing with spp. I don't think this is something -- board member Hurtak pointed out a few weeks ago -- but I don't think the CRA has ever taken on debt. I think we need to change this title altogether. It's really payments, and probably line item, obligate, convention center obligation, Water Street obligation, or something like that. Otherwise it looks like we have some big amount of debt. We do have an obligation but it's not bonded."
+    },
+    {
+      "timestamp": "10:34:10AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. Moving to Tampa Heights riverfront."
+    },
+    {
+      "timestamp": "10:34:18AM",
+      "speaker": "Cedric McCray",
+      "text": "Tampa Heights riverfront, anticipated TIF increment is 2.2 Million. There was a slight increase. As you know, 73, 74 percent of the TIF goes back to the developer for the armature works and so on and so forth. The Operations Administration, 236,000. Capital projects, we estimate for FY '$27, 2 million. And that is essentially it. We do not do the 30% allocation for housing because of the restriction on funding with Tampa Heights riverfront CRA. Some of the items we would like to highlight Are The Way finding signage, a part of the Urban Core Way finding. ADA accessibility equipment. We spoke about that earlier. Water works park. And the Tampa Heights Community Development District as a reminder. It gets 74% of those funds that are generated."
+    },
+    {
+      "timestamp": "10:35:22AM",
+      "speaker": "Lynn Hurtak",
+      "text": "If you could go back two slides to the map. I talked to you about this during my prep meeting, but I really think it is a critical thing that while we have the CRA, something we should save money for. The roundabout, there is a slip that turns on to Palm Avenue, people do not Know Which Way to go because they know how to use a roundabout -- or most people do, we're still learning -- what you're doing is confusing people by having a Slip Lane because that's what a roundabout is for. I really want mobility to work with the CRA Staff to close That Slip Lane. If it means moving land to whomever, That Slip Lane is dangerous. It needs to be one or the other. It shouldn't be both. Then we have room to make the roundabout bigger. The Slip Lane is just wildly dangerous. I'll make a motion to have that come back to us in October to hear from both mobility and CRA Staff on what we can do to fix that roundabout to get rid of the Slip Lane."
+    },
+    {
+      "timestamp": "10:36:31AM",
+      "speaker": "Naya Young",
+      "text": "Motion from board member Hurtak. A second from board member Carlson. All in favor? Any opposed?"
+    },
+    {
+      "timestamp": "10:36:40AM",
+      "speaker": "Lynn Hurtak",
+      "text": "If we have to wait for a while to carry up the money to make that happen, that's fine, but we need a plan, and then we can fund it over time. Thank you so much for the great suggestions."
+    },
+    {
+      "timestamp": "10:36:55AM",
+      "speaker": "Naya Young",
+      "text": "Anything else? All right. Moving right along to Drew Park. Felix Nu Ez for Tampa CRA. I'll talk to you about the Drew Park budget. The budget went up by 7.4 Percent to $3.88 Million. Quick overview of the budget for FY '27, standard operation administration, redevelopment investment which is the grant programs. Smaller investment. And we're willing to add more money, if we could move the grants along. Affordable housing initiatives 30% of the budget. Ms. Parks is working on new projects where we can actually spend the money in Drew Park this year. Capital projects and infrastructure, we recently in FY '26 allocated about 6.6 Million to the mobility project, which is being funded additionally this year for 1.165, Three-year total cover the whole project being implemented which is a big project in Drew Park. Probably the most transformational project going on right now. Quality of life community improvement are just small line items like maintenance of ground, things like that. Some of the big projects in Drew Park this year, lois and Grady Street project which is wrapping up. We're installing trees and bollards along lois and grady and working -- hoping that will help mitigate some of the right-of-way parking also being in Drew Park. The mobility and safety project, like I said, biggest project. Funded most of it in the last few years. Next year we hope to fund the rest of it. Hubert Avenue park project, looking to start that -- go out to bid. When is it? Probably august, September. Yeah, thank you. Drew Park gateway sign. Repaired all the Drew Park signs that were damaged and arts coordinator cory is working on looking to install four new ones on the other side of Drew Park. Any questions on Drew Park?"
+    },
+    {
+      "timestamp": "10:39:30AM",
+      "speaker": "Naya Young",
+      "text": "Board member Miranda."
+    },
+    {
+      "timestamp": "10:39:31AM",
+      "speaker": "Charlie Miranda",
+      "text": "Thank you, Madam Chair. No. I was going to say Drew Park is a throw-back to when I grew up in Ybor City. Work where you live, possibility of working where you live and so forth and so on because it has both residential and only industrial area left in the City Of Tampa."
+    },
+    {
+      "timestamp": "10:39:51AM",
+      "speaker": "Felix Nunez",
+      "text": "Any other comments? I'll move on to East Tampa."
+    },
+    {
+      "timestamp": "10:39:58AM",
+      "speaker": "Felix Nunez",
+      "text": "I don't know anything about that. I couldn't comment."
+    },
+    {
+      "timestamp": "10:40:01AM",
+      "speaker": "Naya Young",
+      "text": "Moving on to East Tampa."
+    },
+    {
+      "timestamp": "10:40:03AM",
+      "speaker": "Felix Nunez",
+      "text": "All right. East Tampa, this year's budget is $15,773,000. 7.8% Increase. Our budget this year standard operations and administration, added a little bit more money to professional services because we have a lot of different projects we're trying to launch in East Tampa. And we're going to need professional services to get that done. 2.6 -- sorry, 2,625,000 going towards redevelopment investment, which is grants programs and special projects. One of those included in is the Sanchez Y Haya project. That's wrong information. Sorry, capital projects is where Sanchez Y Haya is coming out of. Affordable housing initiatives, East Tampa is 66% of the budget this year. We continue focusing on affordable housing in East Tampa for $10.48 Million, Ms. Parks and her small but mighty team have done a wonderful job as housing manager for the CRA. Imagine what more she could do if she had a bigger staff. A lot going on in East Tampa as far as housing is concerned. Community policing, we have our Environmental Detective in East Tampa who continues to assist in improving the community through crime prevention and other items. Quality of life improvement, $90,000 is ongoing maintenance items in East Tampa, lighting and other things we have going on in East Tampa. Some of the highlights, district highlights are affordable housing developments. Ms. Parks will speak more to those later. Hrrp program, CRA down payment assistance program we expended all the money in the line items for FY '26 and hope to do the same in FY '27. Another big project is East Tampa CRP is finally done. So that is coming before the City Council for final approval in a few minutes. J.C. Newman cigar Sanchez Y Haya building, one of the transformative projects going on in East Tampa. The 22nd street pond in East Tampa, which is fully funded and we're waiting to move forward now. We have designs for it already, and we're just working with the City departments to get the maintenance agreements underway and we can move forward on that pond project. It will be a nice transformative greenspace for East Tampa, which we need some more of. That's it for the budget. Any questions?"
+    },
+    {
+      "timestamp": "10:43:01AM",
+      "speaker": "Naya Young",
+      "text": "Board Member Clendenin and then Hurtak."
+    },
+    {
+      "timestamp": "10:43:03AM",
+      "speaker": "Alan Clendenin",
+      "text": "I want to highlight 7.8% Increase, that should be an indicator that somebody is doing something right in East Tampa. I don't necessarily know that the CRA can take hundred percent credit for that but at least the leadership and direction of staff and the board shows -- is that the highest increase of all the CRAs? Who is the highest? That's right. Central park. Acre for acre, parcel for parcel -- 7.8, Central park is based on some intensive construction. This is a great indicator that either both in residential and commercial activity that we're moving in the right direction in East Tampa at a manageable rate. What I think would concern me, if it was getting too great that we end up, again, that whole gentrification argument about economic development and pushing people out, I think that's when we have to stay balanced in our approach of how we redevelop and assist East Tampa and ensuring that the improvements that we're making harkening back to some point that Councilman Carlson made earlier, I think we should encourage home ownership. That is the best guarantee for future housing for folks, secure their housing and protect themselves against inflation and against other pressures, keeping people in housing that they currently own. I love the fact that the board and the staff has helped us with that, with realigning our priorities to help people with roof repairs and doing those things for Code Enforcement. I think this is critically important for this neighborhood of ensuring that East Tampa is redeveloped for people in East Tampa and not for Developers. Our goal is to ensure that we have housing for folks that live in this community and they can stay and their kids can stay and grandkids can stay, because it is a great area. Again, I just wanted to highlight when I saw the 7.8, I think it is a great number, great indicator that something is right. I think the balance we're striking with the stuff happening on the lake, with what's happening with the haya building, all of these things are really good for the neighborhood and hopefully will continue that in '27 and beyond."
+    },
+    {
+      "timestamp": "10:45:24AM",
+      "speaker": "Naya Young",
+      "text": "Very well said. Thank you. Board member Hurtak."
+    },
+    {
+      "timestamp": "10:45:27AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you. I want to also highlight something we approved during this meeting of the transportation -- I believe, isn't it -- we have a consulting people that's coming to work on -- yeah, we have the corridor development master development project. So the CRP identified all the important corridors for East Tampa but now we're going to look at what we're going to do with the corridors. Each corridor is different and we want to make sure that we do the right job for each corridor. We have to there that in the land development code and looking at the corridors and seeing which ones need to be transit ready and can handle more density and development. Additionally, since you mentioned the ponds, I also wanted to talk about the other ponds that we have highlighted. What are -- how are those ponds going?"
+    },
+    {
+      "timestamp": "10:46:30AM",
+      "speaker": "Guido Maniscalco",
+      "text": "I'll make a motion."
+    },
+    {
+      "timestamp": "10:46:31AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Okay. Never mind. I will let board member Maniscalco handle that. Thank you so much."
+    },
+    {
+      "timestamp": "10:46:37AM",
+      "speaker": "Felix Nunez",
+      "text": "No problem."
+    },
+    {
+      "timestamp": "10:46:38AM",
+      "speaker": "Naya Young",
+      "text": "Remind me, when does the East Tampa CRA sunset?"
+    },
+    {
+      "timestamp": "10:46:43AM",
+      "speaker": "Felix Nunez",
+      "text": "2034."
+    },
+    {
+      "timestamp": "10:46:47AM",
+      "speaker": "Naya Young",
+      "text": "And the reason I asked that is because I know that there are a lot of projects for the East Tampa CRA. Not to rush you all, but to rush you a little bit, I really want to see, because there are great projects, to see those come to fruition, you know, before this CRA sunsets. Because I think we owe it to East Tampa to really make those come true. I had a question. For the community policing, the environmental detective, can you explain that to me? I know you were talking about it a little bit."
+    },
+    {
+      "timestamp": "10:47:25AM",
+      "speaker": "Felix Nunez",
+      "text": "Environmental Detective, Detective Washington, he helps with Code Enforcement issues, community safety issues, anywhere where there is an issue where TPD realizes they can step in and help with cameras and observing throughout the day what the patterns are and helping ensure that the community is safer and also with Code Enforcement and other violations."
+    },
+    {
+      "timestamp": "10:47:53AM",
+      "speaker": "Naya Young",
+      "text": "More so Code Enforcement violations."
+    },
+    {
+      "timestamp": "10:47:56AM",
+      "speaker": "Felix Nunez",
+      "text": "I would say that's more of the daily thing. As he's patrolling daily, so he helps us stay on top of Code Enforcement issues, including illegal dumping, trees even in the right-of-ways. Detective Andrew Washington."
+    },
+    {
+      "timestamp": "10:48:15AM",
+      "speaker": "Naya Young",
+      "text": "Detective Andrew Washington."
+    },
+    {
+      "timestamp": "10:48:17AM",
+      "speaker": "Felix Nunez",
+      "text": "Also cpted certified, which is community policing through environmental design. He provided a presentation -- or will provide a presentation to the board about some of the principles he's implementing in East Tampa through that form of cptd."
+    },
+    {
+      "timestamp": "10:48:41AM",
+      "speaker": "Naya Young",
+      "text": "Darlene, if you are listening, can you set a meeting with him, please?"
+    },
+    {
+      "timestamp": "10:48:49AM",
+      "speaker": "Luis Viera",
+      "text": "I have his cell number. I can give it to you off-line, if I may. I want to commend Detective Washington because he came to me on some issues that he's working on now, and he just has such a great heart for East Tampa and that community. I see him -- wonderful cop with a big, big heart. He especially has a great heart for East Tampa. He really, really does. And this idea of merging in proper Code Enforcement and maintenance of communities with an expectation that the community is going to be respected, right? Because where you have things like that, then the bad actors go, hey, we can go on in and do things. He knows that. So he has that -- a rising tide that will lift more boats there. He is a good guy. I'll give you his number."
+    },
+    {
+      "timestamp": "10:49:44AM",
+      "speaker": "Naya Young",
+      "text": "When we had the town hall in East Tampa, he was there as well. Any other comments or questions? We are moving right along."
+    },
+    {
+      "timestamp": "10:49:54AM",
+      "speaker": "Felix Nunez",
+      "text": "I forgot to mention the gator building. One of the biggest things going on in East Tampa. Approved about $9 million this year for funding for that project, our RFQ is in CAD right now, contract administration, and should be released sometime this fiscal year, before the end of the fiscal year. Thank you for that."
+    },
+    {
+      "timestamp": "10:50:21AM",
+      "speaker": "Luis Viera",
+      "text": "Let the record reflect that i'm handing to chairman Naya Young detective Washington's cell. For our attorney."
+    },
+    {
+      "timestamp": "10:50:29AM",
+      "speaker": "Naya Young",
+      "text": "Thank you."
+    },
+    {
+      "timestamp": "10:50:34AM",
+      "speaker": "Brenda Thrower",
+      "text": "Brenda Thrower. West Tampa and Ybor City development manager. I am your closer today. No pun intended. We're going to kick it off with West Tampa. Here you go. West Tampa, talk about growth. Great comment from board member Clendenin. We have 11.6 Percent increase in West Tampa. The average increase just so you know about 10% every year in West Tampa. It's been healthy, steady growth. That is directly a reflection of the private investment that's been going into the district. As we move along, here is our budget. We start off, of course, with operations and administration, which is always around 8% of the budget. Professional services, we're not putting any additional money there because we have a healthy budget. That's why you see zero in that category. Communications and outreach, as you all know, always inviting you out to ribbon cuttings and groundbreakings and I want to see more of that, we have a lot of outreach that goes on with a lot of our projects. We have a healthy budget there and we added a little additional for next year. Redevelopment investment, that is our grant programs. We already have a lot of activity going on in there with the grants team. We have allocated funding in that category as well. Affordable housing, that's your 30%. We're doing a lot of stuff there, including strategic acquisitions. And we hope to be working on the Cypress and howard project this year and start bringing you all exciting concepts on what that project can be. We're always looking for property, as you know. Capital projects and infrastructure, there is a lot of activity there. Melissa and her team have been fantastic. We are doing all sorts of projects, everything from park projects, mobility projects, and we're going to be embarking on Main Street beautification landscaping projects. Really excited about that. The community has really prioritized that project. Transportation mobility, 3.4 Million, that is the final payment for the West Tampa riverwalk. So we did that over three years, $10 million investment, and I know that project is going to be opening up soon and something to certainly celebrate with the community. Community policing, didn't add any additional money there, but that's really for innovations. Video cameras, adding something to our parks. We don't need additional money at this time, but since we have a healthy budget of 424,000. Quality of life and improvement, that category, again, has a healthy budget. That's where we would do slum and blight abatement program, like clean teams and those kind of things, as well as an area that we can reappropriate money from. And to highlight West Tampa, obviously, parks, we finished a park last year and embarking on a new park this year. Salcines is done and rey park is underway. West riverwalk project already mentioned. That one is going to be completed this year. And the Main Street commercial corridor beautification project, excited about that one. Of course, strategic actions, key redevelopment sites. Not only do we have Cypress but you all today voted on another property acquiring. Add that to our inventory. We are updating the West Tampa community redevelopment plan. We sunset 2034. We have 17 more years to do fantastic stuff for West Tampa and the community is working on having that plan to you all this year. We have a consultant on board that's been working very closely with us. Any questions on West Tampa?"
+    },
+    {
+      "timestamp": "10:54:33AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Across from rey park, we have the centro espanol, I believe. That is owned by us but rented by the Hillsborough Education Foundation."
+    },
+    {
+      "timestamp": "10:54:45AM",
+      "speaker": "Brenda Thrower",
+      "text": "Correct."
+    },
+    {
+      "timestamp": "10:54:47AM",
+      "speaker": "Lynn Hurtak",
+      "text": "But that theater needs a complete overhaul. So that is something -- that is not a space they use. It's simply a storage space. I got a tour several years ago. While we have the funds to improve some of the historic areas in West Tampa, I really believe that we need a refresh of both the exterior of that building. Every time I drive by, it breaks my heart. There used to be some, clearly some overhangs. I saw that line for historic preservation a zero there. I just really believe that while we're working over the next 17 years, we need to improve this building that we own. We need to take this time and money and effort to do that. Right across from rey park. And howard. It is absolutely a beautiful building. It's gorgeous, but it's just fallen into disrepair. The inside is great. We did some renovation. Works for Hef, but that theater really needs some renovation. Again, I think the exterior, things that we can do while the Hillsborough Education Foundation is inside, we owe it to that building and to the community to improve it so we can use it for other things as well in the future. I'D really like you to focus on that or that's something I would like to see maybe bring to the CAC and get their suggestions. If you can go back one more slide so I can take a look at the funds again. I know that we have worked on affordable housing initiatives. I really want to say and make sure that we are reaching out to the community with spanish speakers to not just do flyers, but reach out in Any Other Way to folks who speak spanish, because there is a large population there. I'm really shocked that we aren't doing more rehab in that neighborhood. We really need to be. I think that's one of the reasons we're not. If we're not already prioritizing that, working on prioritizing that, so that we can keep people in their homes because I know that is a huge need in that area."
+    },
+    {
+      "timestamp": "10:57:17AM",
+      "speaker": "Bill Carlson",
+      "text": "I wanted to second the recommendation for the theater, that the education foundation is in. Years ago I was doing some pro bono work for the Urban League when they bought that building, and it was a disaster. That theater essentially brought down -- you probably remember -- it brought down the entire Urban League and tried in the second iteration more recently, but that's back when Joanna Tokley was in charge. It's a huge issue that's going to cost a lot of money. As they got into the building, the whole building needed more than anybody expected. But the theater in particular. That's an example where the private sector, especially nonprofit sector will never be able to renovate that Theater The Way it should be."
+    },
+    {
+      "timestamp": "10:58:02AM",
+      "speaker": "Naya Young",
+      "text": "Board member Clendenin."
+    },
+    {
+      "timestamp": "10:58:03AM",
+      "speaker": "Alan Clendenin",
+      "text": "Talking about centro espanol? When you said theater, thinking old movie theater."
+    },
+    {
+      "timestamp": "10:58:12AM",
+      "speaker": "Guido Maniscalco",
+      "text": "[Inaudible]"
+    },
+    {
+      "timestamp": "10:58:14AM",
+      "speaker": "Lynn Hurtak",
+      "text": "If you haven't gotten a tour, reach out to the Centro Espanol. The rest of it they fixed, but this theater needs love. It needs money. It needs attention."
+    },
+    {
+      "timestamp": "10:58:24AM",
+      "speaker": "Alan Clendenin",
+      "text": "The building itself is in good shape. Just the theater portion."
+    },
+    {
+      "timestamp": "10:58:28AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I think the bricks need repointing. There are things that we can do right now that wouldn't interrupt drastically what the foundation is doing. And the foundation is renting that space from us. There may be a point where they don't need it anymore or there may be space that we can use. We're just not using an entity we own as a city as good as we could. While we have 17 years left, again, it's not going to happen tomorrow but something very similar to the riverwalk that we can plan to spend on. It has to be done. If we don't do it, it's not going to get done in West Tampa. The city just doesn't have the money."
+    },
+    {
+      "timestamp": "10:59:10AM",
+      "speaker": "Alan Clendenin",
+      "text": "I appreciate you bringing it to our attention. I was thinking, where is a movie theater there? I'm familiar with the building itself. I did not realize what you just highlighted for us. Good thing about these meetings. You bring joint, good information for everybody. I think that is a good thing for us to focus on and great opportunity for the CRA. Let's see where this goes. I think it's a great point to be made. Historic preservation."
+    },
+    {
+      "timestamp": "10:59:40AM",
+      "speaker": "Guido Maniscalco",
+      "text": "What is the western-most boundary of that CRA? Is it howard? Armenia?"
+    },
+    {
+      "timestamp": "10:59:46AM",
+      "speaker": "Brenda Thrower",
+      "text": "Armenia."
+    },
+    {
+      "timestamp": "10:59:47AM",
+      "speaker": "Guido Maniscalco",
+      "text": "The theater falls within the boundaries. People have asked, it's right there. Pretty big. I took multiple tours several years. Photographed the inside. Basically like storage like a home depot. Home depot has the high shelves. You can see the elements of what the theater was. I have in the guido archives at home, I have -- there is a booklet -- actually, I think I have an image of what the theater could be. People looked at restoring it several years ago. The price I got several years ago, talking before covid, $20 million to restore it as a theater and make it an equity theater, a theater that produces ITs own plays. Again, it's an issue of money. Number two, where does the Education Foundation relocate to? I've spoken to the folks there, we own the building. They do pay rent, but where do they go? I talked to private individuals. What space can you offer? What trade off can we do so we get total control of the theater and restore it to what it is. I mentioned it was the royal theater. It was a movie theater in the 1940s. Briefly. Very brief period of time but serves as Centro Espanol. If you go upstairs, they have the Centro Espanol parts where they pay homage and use as office space. I don't know. See where we are at in May because we do have elections. Something I'D like to take on. Talked with private individuals about it. I don't know what it would cost. It's complicated because again you have an existing tenant, and maybe we can work something out and restore that building. We're doing rey park. We did Salcines. That area is booming and such a busy corridor because it is the entrance and gateway to West Tampa. People come off the interstate, now see the new Salcines park, boom. They'll see the new rey park. There is a lot happening and a lot happening on Main Street. It's really exciting for West Tampa. This is a huge undertaking. I know we kicked off the restoration for the guida house yesterday. I started touring and pushing for that in 2019, maybe 2018. These things take time. Yeah, this is something I'D like to look into. It's a huge undertaking. I have a master plan from the Centro Espanol. A book they did from like the 1980s to see what we can do. Anyway, something to think about. Thank you very much."
+    },
+    {
+      "timestamp": "11:02:27AM",
+      "speaker": "Naya Young",
+      "text": "Board member Miranda."
+    },
+    {
+      "timestamp": "11:02:28AM",
+      "speaker": "Charlie Miranda",
+      "text": "I think if we have any idea of what we want to do, better start looking at the lease. That's number one. Number two, I toured that theater when we first bought it. What I wanted to do at that time and it went the Other Way, I wanted to use that as the clinic, one of two clinics we opened for location. After we did all that, I voted against my own idea because they leased it out to someone else and I wanted to put the clinic in there. The walls are so thick, you can put any x-ray machine and nothing will go through. The original ones, all concrete, really and brick. The outside, as far as I know, we had to replace the windows. I forget the cost. Going back 25, 30 years, it was like 300,000 for the windows. Everything -- these things happen. You try to help people, and we did. But now we got to help ourselves. If we're going to do -- already there, bring it up to standard and do whatever you want to do with it. West Tampa is changing. It's getting better. Never been deteriorated to any degree. Because people have kept their homes up. These are the things -- very little rentals in West Tampa. A lot of homeowners and family. Something very unique, similar to Ybor City. Lot of Hispanic people there and a lot of factories. I believe that West Tampa had more cigar factories than Ybor City. Much more. Not a little bit, but much more. So these are the things that are there, historical. These are the things that have to be maintained. Thank you very much."
+    },
+    {
+      "timestamp": "11:04:20AM",
+      "speaker": "Naya Young",
+      "text": "Attorney Shepard wants to speak."
+    },
+    {
+      "timestamp": "11:04:22AM",
+      "speaker": "Cliff Shepard",
+      "text": "I can understand why people don't like to necessarily go to cemeteries because it's never a happy occasion. Kind of like talking to the Lawyer. But let me just put the brakes on this for just a second. Understand that repair and rehabilitation is something we can do, but repair and rehabilitation typically is to exteriors. That's why we have facade grants and not interior grants. I certainly want to look at this giving it everything it needs but it's not going to be a situation where we're going to be able to rebuild the building with CRA funds. That's just simply not going to be in the cards. I don't want to get too far out of our skis without making that point."
+    },
+    {
+      "timestamp": "11:05:08AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. Board Member Hurtak."
+    },
+    {
+      "timestamp": "11:05:09AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I would like to make a motion to come back in October to find out what can be done, or to get more information about the Centro Espanol. The lease, what we, you know, possibly, if the Centro Espanol can share their plan, however old it is, and just kind of start the conversation about what we can do. Because I know we can do the outside, if nothing else. It's just every time I drive by, the wood around the windows. There are things that we can at least improve the outside and then we can discuss what can be done on the inside. It doesn't have to be a theater. We have enough theaters. What else could it be? Again, if we can't do that with the CRA, what we might want to look at for future community use if it needs to be or if the lease doesn't work, then when does the lease expire to us to help us take that time to plan so that we can be ready by the time the lease expires. My motion is basically just to come back in October with some more information and background about the Centro Espanol and the possibilities for what the CRA can do."
+    },
+    {
+      "timestamp": "11:06:26AM",
+      "speaker": "Naya Young",
+      "text": "We have a motion from board member Hurtak. A second from board member Maniscalco."
+    },
+    {
+      "timestamp": "11:06:31AM",
+      "speaker": "Charlie Miranda",
+      "text": "I would like to see the lease brought up at that time."
+    },
+    {
+      "timestamp": "11:06:36AM",
+      "speaker": "Naya Young",
+      "text": "Amend to add that?"
+    },
+    {
+      "timestamp": "11:06:37AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I had it. I talked about the lease."
+    },
+    {
+      "timestamp": "11:06:40AM",
+      "speaker": "Naya Young",
+      "text": "Okay. So we have a motion and a second. All in favor? Any opposed? Okay. We have Clendenin, then Carlson and then move to ybor."
+    },
+    {
+      "timestamp": "11:06:54AM",
+      "speaker": "Alan Clendenin",
+      "text": "Mr. Shepard, I understand what you're saying. I think along with other funds, grants, Historical Grants."
+    },
+    {
+      "timestamp": "11:07:01AM",
+      "speaker": "Cliff Shepard",
+      "text": "Exactly. Can have some partners."
+    },
+    {
+      "timestamp": "11:07:03AM",
+      "speaker": "Alan Clendenin",
+      "text": "It can work in a cooperative partnership arrangement where the CRA has a portion of the exterior and work with other organizations. Look at this as a comprehensive project. Literally I was looking at some of the history and pictures of the building and refer to like the metal awnings on the outside. The royal theater. Wonder what happened to the sign."
+    },
+    {
+      "timestamp": "11:07:27AM",
+      "speaker": "Cliff Shepard",
+      "text": "I'm not familiar with the programs that the city itself has. City doesn't have TIF restrictions but CRA does. If the city has a grant program that might work, we can partner with the city."
+    },
+    {
+      "timestamp": "11:07:38AM",
+      "speaker": "Alan Clendenin",
+      "text": "Maybe that's something we can amend your motion to work with partnership with the city."
+    },
+    {
+      "timestamp": "11:07:45AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Ms. Thrower is here. She will bring it all."
+    },
+    {
+      "timestamp": "11:07:49AM",
+      "speaker": "Brenda Thrower",
+      "text": "I'll bring it all, yeah. By the way, the CAC meets in that building. We're very familiar with it. No problem. Thank you so much for your comments and suggestions."
+    },
+    {
+      "timestamp": "11:08:02AM",
+      "speaker": "Bill Carlson",
+      "text": "This is the first I heard we couldn't do the inside. I don't want to mention names to get projects in trouble, we funded several projects that included the inside of buildings."
+    },
+    {
+      "timestamp": "11:08:12AM",
+      "speaker": "Cliff Shepard",
+      "text": "Were those before or after I got here? [ laughter ]"
+    },
+    {
+      "timestamp": "11:08:16AM",
+      "speaker": "Bill Carlson",
+      "text": "Let's talk about in off-line. You're saying there's case law that says that you can't do it --"
+    },
+    {
+      "timestamp": "11:08:22AM",
+      "speaker": "Cliff Shepard",
+      "text": "I'm talking about the way the statute is specifically written since 2019 which says TIF can, quote, only be spent on certain things and they are outlined. I can even give you the citation because I have to say it 163-387-6 c 1 through 9."
+    },
+    {
+      "timestamp": "11:08:38AM",
+      "speaker": "Bill Carlson",
+      "text": "Would you mind e-mailing it to us?"
+    },
+    {
+      "timestamp": "11:08:41AM",
+      "speaker": "Cliff Shepard",
+      "text": "I've done actual memos about it."
+    },
+    {
+      "timestamp": "11:08:49AM",
+      "speaker": "Naya Young",
+      "text": "Board member Miranda?"
+    },
+    {
+      "timestamp": "11:08:50AM",
+      "speaker": "Charlie Miranda",
+      "text": "No."
+    },
+    {
+      "timestamp": "11:08:50AM",
+      "speaker": "Naya Young",
+      "text": "We are moving to ybor."
+    },
+    {
+      "timestamp": "11:08:53AM",
+      "speaker": "Brenda Thrower",
+      "text": "Thank you so much. Can you bring the presentation up? Ybor City. Obviously Ybor City one and two. This is the first, the core of the district. There has been a small but steady growth there at 2.3% For ybor one. Moving into the budget, again, if we go through some of the line items. O and a standard, communications and outreach, we have some money there. Adding another 50,000 there. We participate with Tampa CRA on their communications. Redevelopment investment, that is the commercial grants program, so now that they are all up and running, and the policies approved, put money there to help small businesses in the historic core. Affordable housing, there is the 30%. Again, we are growing that fund, and it's another $1.3 Million that's going to be allocated this year. Capital projects and infrastructure, we have the 571. There is going to be for phase three of the bricking project, that's really our main project we've been working on. Done four blocks out of the 14 and ten more to go. So we're working along with mobility and our projects team to get that done. A little bit of money for transportation and mobility. Community policing, we do have an Ybor City Task Force Squad. So that money goes towards that community policing innovation program. Quality of life and community improvement, which takes a pretty good chunk of our money, not only our Yes Team and any slum and blight abatement programs going on in ybor but also where our district improvements are which we can reallocate money from. Going on to ybor two. I'll do both and then highlights. Ybor 2, of course, is the neighborhood that surrounds ybor one. We have a little stronger increase there with 3.3% For ybor 2. A lot of activity going on there. That should grow over time. In terms of the line item budget, again, we are putting a little money toward professional services. The neighborhood has been pretty engaged, and it's growing. There are more residents in ybor which is fantastic. They may want to do studies in the ybor 2 area, so we put money for consultant services. Communications and outreach, when we promote Ybor City, we kind of do it as one. We have little money there that can -- with ybor one money, in ybor two. Redevelopment investment, again, that's the grant programs, again, helping the small businesses in those areas. And special projects. Affordable housing, there is your 30%, $656,000 is now going to be allocated to that. And then capital projects and infrastructure, you're seeing a big number there. That is neighborhood sidewalks. They want sidewalks and landscaping. Everything a neighborhood would want. We're working with them. Already met with mobility and prioritizing what corridors we'll start with. So the neighborhood is excited about that. Community policing, that's mainly because we're also patrolling those parking lots that are down in the neighborhood. So we do have Code Enforcement that goes out and patrols those over and beyond what they normally would do. Quality of life and community improvement, we have money there, that is the Yes Team as well as some district improvement money that we can use. So in terms of highlights, ybor one, big project is going to be the continuation of the bricking program. Ybor 2 will be those neighborhood sidewalks that they are wanting. In terms of affordable housing and strategic acquisitions, I just want you all to realize that it is a priority. It's always been a priority. But it is a challenge. In both of the CRAs. We're working with that still. I know you all said we could look at maybe doing a study, so the community advisory committee is interested in doing that. Of course, the Yes Team and community policing is a very popular program and very well embraced by the community. The Yes Team contract is up for one more year with block by block, and we will be bidding that out next year because it sunsets or the contract is up in 2027. And then, again, Ybor City community redevelopment plan update. I'm doing two plans. West Tampa and Ybor City. There's been a lot of stakeholder engagement with this. We have another consultant on board with this. We sunset in 2034 for both of the CRAs. This plan will probably be the plan that takes us to the finish line here. That's it for Ybor City. Any questions?"
+    },
+    {
+      "timestamp": "11:13:58AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I wanted to highlight the sidewalks and the street trees because that is what i've been hearing about so much. I do understand that this is a CRA where housing is hard to spend. I'm not opposed to looking and hearing what the CAC has to say about moving that money to where it could move. But I do believe that ybor 2 has a lot of houses that need rehab. Every time I drive through the area, there's great housing, but it definitely needs some help. That is just something I would really love to see highlighted a bit more, maybe in CRA 1 that's harder to do, but can we transition that to the things people are asking for, more sidewalks, the street trees. I do understand that historically 7th avenue was palm trees, but climate change is real. It's happening. I know it's historic, but they just don't provide the shade that we need to get more people on 7th avenue spending money, just Walking The Street. I can't do it in the summer during the day. It's just too hot. What are we doing? How can we really actually Put Reasonable Street trees in there? And throughout the rest of the district. That's what I hear more and more for everything. I would love to see more trees planted that provide shade throughout ybor with some of this money. If we end up moving it from housing for CRA or for ybor 1, that needs to be one of the priorities because that's what i'm hearing from the community. Thank you."
+    },
+    {
+      "timestamp": "11:15:48AM",
+      "speaker": "Naya Young",
+      "text": "Board member Carlson and then Miranda."
+    },
+    {
+      "timestamp": "11:15:51AM",
+      "speaker": "Bill Carlson",
+      "text": "After the incident where folks were killed by the car a year ago whenever that was, we talked about a number of different challenges. One of the things we talked about was bollards. The mayor initially was against it but then TPD recommended it, so she accepted it. I don't know the status of that. I -- we just finished council vacation. I traveled a bunch of places in asia. Last year I had been to london and I showed their historic -- they are new but historic-looking bollards. Didn't look like they were very much money but look like they are made out of iron and strong. Nothing is perfect. If somebody is going a hundred miles an hour might not protect them but a lot of other reasons to have bollards. Every Place I went in asia the last month, they have bollards everywhere. Every downtown has bollards everywhere. Mostly the big steel ones that pop up out of the ground. Maybe there are some places where we should do that. I think we should really look at creating bollards all along 7th avenue at least. It would look historic and nice but also help protect people, people feel safer walking up and Down The Street. Besides the trees, maybe talking to building owners about canopies. There is a common canopy that goes block and block, and maybe shouldn't do that in ybor because not historic, but at least talk to owners about creating continuous canopies, at least it would protect people from rain."
+    },
+    {
+      "timestamp": "11:17:34AM",
+      "speaker": "Charlie Miranda",
+      "text": "I wasn't going to bring up trees but trees were brought up. Ybor City when I was a young man had a lot of trees. Also big wide sidewalks. What i'm saying is sometimes you need to plant trees in Ybor City. I want to make sure that we get something out of it. If that's what we can do, that's what we can do. Still 10% of 20% is something that's better than zero. That's how I look at it. Thank you all very much."
+    },
+    {
+      "timestamp": "11:18:03AM",
+      "speaker": "Naya Young",
+      "text": "Board member Clendenin."
+    },
+    {
+      "timestamp": "11:18:04AM",
+      "speaker": "Alan Clendenin",
+      "text": "Reference the pedestrian, one, I think accelerating the bricking, I think it would be popular with the CAC as well in the neighborhood of getting 7th avenue project which also is a speed reduction project and will help with 7th. On the bollard things we had a one-off, one of the places that I think we're most vulnerable isn't Ybor City, it's around the raymond james stadium, we don't have the pedestrian bridges. You have cars flying down dale mabry and we're herding literally thousands of people Along That Road. That's where our vulnerability is. Part of my excitement about potential redevelopment of that area is getting those pedestrian overpasses so we don't herd people -- on dale mabry. While I think that the bollards may be in certain strategic areas might be an interesting idea, again, if I invest money, I would look at a couple of other areas in town where we have some higher speeds and a lot of pedestrian traffic. You look at benchmark arena and the convention center and how many people are coming out of the things and pedestrians along the roads and people are flying. That unfortunate incident in Ybor City definitely highlighted a vulnerability. I don't know if we do a risk analysis of all of the areas if that would even rate in the top ten. I think where we could take That Historic Street, rebrick and do some other policy changes, which I think they already talked about with the Florida Highway Patrol and Tampa PD, effect more positive change. Thank you."
+    },
+    {
+      "timestamp": "11:20:02AM",
+      "speaker": "Naya Young",
+      "text": "I would just say i'm excited to see about the patrolling of the parking lots because I know with the residents that has been something that has come up in conversations that i've had as well. That's all. Thank you."
+    },
+    {
+      "timestamp": "11:20:20AM",
+      "speaker": "Brenda Thrower",
+      "text": "You're welcome. Thank you so much. I'll hand it over to Ms. B. Parks to talk a little more about housing."
+    },
+    {
+      "timestamp": "11:20:29AM",
+      "speaker": "Belix Parks",
+      "text": "B. Parks, CRA community development coordinator. Can you please put up the presentation? All righty. So this is the affordable housing 30% investment. Once we go through each one quickly, central park, I heard you, Ms. Hurtak, when you mentioned what will be the plan for that. Rollover of 1.5, Our budget for FY '27 is around 864. So that puts a total of 2.3 Million in that pot to assist. March 5 when we presented in front of the board the special meeting at hanna, I did discuss the recommendations of releasing those funds in the unit creation and conversion program to see what projects could be Pitched Our Way. Channel CRA rollover amount of 14 million with the 30% allocation for FY '27 around 4.1 Million, brings a total of $18 million to that pot. Again, one of those recommendations at the March 5 meeting was to release those with unit creation and conversion. Downtown CRA, I hear you loud and clear about the conversation about the army navy lot. Downtown has about 22 million that will be rolling over with 30% budget for FY '27 around the 7.2 Million, which brings the grand total at 29 million. Again, one of the recommendations at that March 5 was to release those with the unit creation and conversion and see what Comes Our Way. Drew Park CRA rollover will be at around 4.2 Million. FY '27, we have about 1.165. So total for Drew Park is around 5.4 Million. We own a couple of lots in Drew Park. We're excited that we could look at releasing some infill lots for some development there and see what other initiatives we can assist in in that area. East Tampa is almost like a well-oiled machine as it relates to affordable housing. Around 1.6 Rollover with the FY '27 budget commitment of $10 million. That covers all of our active unit creation and conversion programs. So all of the projects that came before you all this year, examples, the heritage height budget, the ashley budget, all those that went for unit creation, that is that budget and it will cover that. And then the total amount is at that 12 million. We are rapidly spending in this area. The two major programs that go to either existing residents, which is through the housing rehab and renovation program, I am running -- actually, i'm done with FY '26. Right now i'm focusing on trying to budget for FY '27 and I still need a couple of dollars for FY '27. Down payment assistance is the Same Way. FY '26 we're just rounding out with a couple hundred thousand that's left. But that is the number one request is for down payment assistance for the East Tampa CRA. Tampa Heights can't really do any movement for that. One of the recommendations, again, proposed in the March 5 meeting was to just let it sit to see if we could start Planning what could be there, but see if it can accumulate or if we could do anything or we just say, hey, let's forget about the 30% for affordable housing for that area and just continue on, being that 74% is going into that TIF. West Tampa CRA, we have a rollover of 8 million. The FY '27 budget is set at 3.3 Million. So it totals about 11 million. I want to give some good news in West Tampa, we are ramping up our rehab efforts there. Meaning we are getting more applications coming in for rehab assistance. I'm actually the only bilingual one on my staff so I answer all of the bilingual questions with that Hispanic community. I am Hispanic as well. I support my own kind. As we move forward with the cypress and howard project, that's going to be really exciting, along with making sure we provide down payment assistance. We do have a couple of partners in the area that is building new construction, so we're able to partner our dollars with them to get individuals from that community. I'm always talking about individuals from that specific community being able to stay there. So that's exciting. Momentum is building up in West Tampa. We could always, of course, use more help with community outreach. Ybor CRA One and Two, they are the ones that actually asked for the housing study, working on the scope for that. If -- i'm proceeding with that scope, get some feedback. We have a couple of applications for rehab in ybor 2. Again, community outreach, making sure that we're able to rely on our partners that call us. Neighborhood Associations have been very active in contacting us as well with some residents. We are running into it being over our program limits. For example, the repairs being -- we're maxed right now 150 per house for rehab, and these are wood-frame houses. So let's just be transparent. Structural issues, environmental issues. So it does bring it over that 150 cap. Again, that's what we're seeing in the ybor side as well as the east side and on the west side. This is the pattern we're seeing. That brings the grand total of $86 million to our affordable housing from the Tampa CRA. So that is amazing. On the next screen, I just want to again give kudos constantly to the East Tampa CAC that they are always focused on affordable housing, so, again, felix already mentioned about the 66, 66 of that budget is for affordable housing and they have the most forward-facing programs. And then again, why nothing got budgeted for Tampa Heights is because of the restriction of that big 74% that goes into that TIF. Any other questions about affordable housing? I know that is a topic of conversation these days. I just want to again reference the March 5 meeting which i'll come and do more research, but re-present that information about the recommendations. I just ask the board, when I come before you all to explain the unit creation and conversion program and it's approved, that we could release these, try to see what's out there so we can actually say, hey, we tried everything we can and we can't produce in some of the areas that are harder to produce in. Any questions? Wow, no questions. Thank you."
+    },
+    {
+      "timestamp": "11:28:04AM",
+      "speaker": "Naya Young",
+      "text": "Well, that was 15 minutes. [ laughter ] motion from board member Maniscalco, second from board member Miranda, all in favor? Any opposed? All righty. Anything else, Director McCray?"
+    },
+    {
+      "timestamp": "11:28:21AM",
+      "speaker": "Cedric McCray",
+      "text": "Yes, I wanted to, as we close out that portion of the agenda, highlight we will go back and make the suggested changes and updates. The goal is for the budget for the services agreement and Attorney Shepard's contract to be dovetailed into September for approval. So that's the direction we're going."
+    },
+    {
+      "timestamp": "11:28:41AM",
+      "speaker": "Naya Young",
+      "text": "Thank you. All right. That concludes our business for today. Do any of our board members have any new business? Board member Clendenin and then Carlson."
+    },
+    {
+      "timestamp": "11:28:57AM",
+      "speaker": "Alan Clendenin",
+      "text": "I would like the CRA Chair to work with CRA Staff for these agendas to have a consent agenda for expeditious use of our time. Come up with a process that you guys could work together to have that for future meetings."
+    },
+    {
+      "timestamp": "11:29:22AM",
+      "speaker": "Naya Young",
+      "text": "Is that a motion?"
+    },
+    {
+      "timestamp": "11:29:24AM",
+      "speaker": "Alan Clendenin",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "11:29:25AM",
+      "speaker": "Naya Young",
+      "text": "We have a motion from board member Clendenin. A second from board member Viera."
+    },
+    {
+      "timestamp": "11:29:31AM",
+      "speaker": "Lynn Hurtak",
+      "text": "The only thing i'll say to that is that we put a Policy In Place that anything over a million dollars is not on the consent agenda. And that's why we had all these. I think what we could do is similar to what we do during our regular sessions where our Chair could go through and say, do we need staff? If not, we can approve those. I think it's more of a procedural thing because our rule is it comes to us if it's over a million dollars. I don't know that we necessarily need a motion for that. I think we can work on procedure."
+    },
+    {
+      "timestamp": "11:30:10AM",
+      "speaker": "Alan Clendenin",
+      "text": "A procedure for just going -- how would you differentiate, having to go through every single item?"
+    },
+    {
+      "timestamp": "11:30:18AM",
+      "speaker": "Lynn Hurtak",
+      "text": "No, if we have done our prep, we know what the costs are. For three and four, we didn't --"
+    },
+    {
+      "timestamp": "11:30:25AM",
+      "speaker": "Alan Clendenin",
+      "text": "When I was doing my first prep, I said why aren't these things on a consent agenda?"
+    },
+    {
+      "timestamp": "11:30:32AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Because it's more than one million dollars. That's our rule."
+    },
+    {
+      "timestamp": "11:30:35AM",
+      "speaker": "Naya Young",
+      "text": "Would you like more procedure like how we do with our regular meetings? Do we need staff, yes or no?"
+    },
+    {
+      "timestamp": "11:30:44AM",
+      "speaker": "Alan Clendenin",
+      "text": "Why don't we try that. If that doesn't work, we'll go back and maybe revisit the amount. I'll rescind my motion and ask you --"
+    },
+    {
+      "timestamp": "11:30:56AM",
+      "speaker": "Naya Young",
+      "text": "For next meeting, we'll do procedure and see how that is. Board member Carlson."
+    },
+    {
+      "timestamp": "11:31:06AM",
+      "speaker": "Bill Carlson",
+      "text": "I sent around a memo last night, just to read it to the public, a month ago I made a motion that CRA Board which you all approved unanimously to say that the CRA Board request for Hillsborough County and the Tampa Bay Rays to negotiate directly with the CRA Board concerning their development. We have as a placeholder on the August 20th CRA agenda an item, CRA 26-24681 to talk about the rays' proposal. We are on vacation, by the way, after that motion that afternoon I called the county and called the rays and had conversation with them. Since then, I can't talk to you guys outside the meetings so I don't know how many of you have been part of the negotiation, the Chief of Staff sent a memo to us the other day offering to brief us, but that's different than being involved in negotiation. I would like to make a motion to remove that item off the August 20th agenda and reschedule it at a time when the rays have negotiated with us and prepared to put it on the agenda."
+    },
+    {
+      "timestamp": "11:32:18AM",
+      "speaker": "Naya Young",
+      "text": "I have a motion from board member Carlson, a second from board member Hurtak."
+    },
+    {
+      "timestamp": "11:32:24AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I agree with this because I got one call after I think the last time we talked about this on the dais. So there has been no negotiation from my perspective either. But i'm still concerned like overall about this. So I appreciate that you brought this forward. Because I don't see how we get a solution by August, but also i'm very concerned that we haven't been consulted. I don't even know that our attorney is really as involved. Quite frankly, we haven't chosen him to represent us and he can't. You're speaking to our interests but there is a difference between speaking for our interest and negotiating for us. And I don't know --"
+    },
+    {
+      "timestamp": "11:33:14AM",
+      "speaker": "Cliff Shepard",
+      "text": "They don't like talking to me."
+    },
+    {
+      "timestamp": "11:33:17AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Of course, they don't like talking to you because you added all sorts of wonderful things that protected us. I don't disagree with you. I really appreciate and support this. But while we're here, Mr. Shepard, what Is The Way? We're asking simply for the rays to negotiate with each of us."
+    },
+    {
+      "timestamp": "11:33:39AM",
+      "speaker": "Cliff Shepard",
+      "text": "I don't know. They might feel that that's unwieldy. I can't speak for them because I literally heard nothing from them since the past meeting. I don't know. But in terms of other things, I don't know what is influencing their decisions because we haven't discussed it. If you look at what's coming up in November, if I was in the rays' camp, I would say I think we got to park this thing until November because otherwise we're whistling in the wind. Maybe that's what's happening."
+    },
+    {
+      "timestamp": "11:34:11AM",
+      "speaker": "Naya Young",
+      "text": "Board member Carlson."
+    },
+    {
+      "timestamp": "11:34:12AM",
+      "speaker": "Bill Carlson",
+      "text": "We had this discussion last time, in case somebody new is watching this time, CRA Board is separate legal entity from the city. The city the mayor can negotiate on behalf of the city and then present something to the City Council. That would be the city's part of it. But on the CRA, the mayor is not involved. The mayor and her staff are not authorized to negotiate on our behalf. So there's no mechanism other than going through our Executive Director who at least last I checked was not consulted either. I had conversation with them and they all understood it would require a simple conversation with each of us. By the way, I also recommended, my view on negotiation is not that we should use a barter negotiation. We should use interest. I follow the book getting ds. After I talked to the county, they bought a bunch of the books for everybody to read. I recommended the same thing for the rays. This should be a robust community-oriented negotiation. To get our votes, they need to do things for the CRA Board that help us get our supporters in line. We have to answer to our constituents. If there are problems in our districts that the constituency are not being handled, they are going to wonder why we're doing this. Gave them a bunch of ideas. There are things if they talk to us, they could understand. My point is we're not ready to have a conversation. The next meeting, whole bunch of people will show up to advocate for this. That will be too late to change the date. Why not take it off this calendar and we'll address it when they are ready."
+    },
+    {
+      "timestamp": "11:35:52AM",
+      "speaker": "Naya Young",
+      "text": "Board member Clendenin and then Miranda."
+    },
+    {
+      "timestamp": "11:35:56AM",
+      "speaker": "Alan Clendenin",
+      "text": "Well, I don't get it because it's just a place holder. Why Take The Place holder off other than -- it doesn't cost us anything leaving it there. There are things happening. I believe they have been briefing some council members working with council, at least a couple of councilpersons. I know they have talked to other councilpersons about things. In fact, it's interesting. I do believe they are running with one of your ideas on this, Councilman Carlson. I think that's part of what they are Planning on bringing to us at the august meeting is adopting one of your ideas. Are you familiar with that?"
+    },
+    {
+      "timestamp": "11:36:37AM",
+      "speaker": "Bill Carlson",
+      "text": "By the way, I got a briefing from Scott Steady, city attorney. Told me the current proposal and one of the representatives of the rays and I have been playing phone tag. Difference between being briefed and involved in negotiation. As I explained to them, that was an idea from SIX to eight months ago. I think board member Hurtak said she had a similar idea. That was an idea from months ago. That's not where we are right now. There are things that we would do differently. By the way, in talking to the county, what they are proposing is a home rule TIF that would replace the Drew Park CRA when the Drew Park CRA expires. But the county admits that would require more votes of City Council and CRA Board, not less. It still will involve city money. This is really complicated. For the sake of the community, there should be robust conversations going on."
+    },
+    {
+      "timestamp": "11:37:38AM",
+      "speaker": "Alan Clendenin",
+      "text": "Having this on the agenda kind of facilitates that conversation. Removing it from the agenda doesn't."
+    },
+    {
+      "timestamp": "11:37:45AM",
+      "speaker": "Bill Carlson",
+      "text": "We can put it on the agenda when They are ready. Right now They are obviously not ready."
+    },
+    {
+      "timestamp": "11:37:49AM",
+      "speaker": "Alan Clendenin",
+      "text": "Let's have it on the agenda, have the conversation, move forward or stop. We can Vote Any Way we want or not have any votes. At least it is on the agenda for the conversation."
+    },
+    {
+      "timestamp": "11:37:59AM",
+      "speaker": "Bill Carlson",
+      "text": "200 baseball people and 200 anti-people show up."
+    },
+    {
+      "timestamp": "11:38:03AM",
+      "speaker": "Alan Clendenin",
+      "text": "We know how to handle that. I don't think this is -- this is a no-cost thing. Let's leave it there. It works, it works. It doesn't. It doesn't. I think it's important we at least send a signal that we are cooperative trying to figure out and leaving the door open for discussion and having community input, having people show up at Council Chambers to have that conversation. Further opportunity to come up here and have the conversation."
+    },
+    {
+      "timestamp": "11:38:38AM",
+      "speaker": "Naya Young",
+      "text": "Board member Miranda and then Viera."
+    },
+    {
+      "timestamp": "11:38:41AM",
+      "speaker": "Charlie Miranda",
+      "text": "This all started in 1996. The Public has gotten smarter. Elected Officials have gotten smarter. Well, some. Some don't know they are here. Anyway, what i'm saying, when the Public gets smarter and selected officials get smarter, whoever wants it will get a tougher deal than what they think they'll get. First of all, reminds me of a tv show when I was a kid. I got a secret. Reason I say that, somebody has a secret because nobody tells us anything. Some time ago, my hobby is to read want ads. A month ago I saw a want ad for water. I started reading it. In fact, I called people at S.W.F.W.M.D., They told me I could go online and get it. Asked aide how many pages. 500. No, I don't want -- water at same location, something they needed preconstruction. Two weeks ago I saw another one. For the rays. I said, so they have two. That one was request for proposals from a developer, whoever is interested in building the stadium. So I said how can they do all this when all these things have never been discussed. That's why \"I got a secret\" comes in. The secret is theirs, not ours. I keep looking at the thing, keep looking, keep looking. Tonight i'll bring stuff up that i've been keeping, memorizing what happened, how we got to where we are at today."
+    },
+    {
+      "timestamp": "11:40:21AM",
+      "speaker": "Alan Clendenin",
+      "text": "You've been keeping a secret."
+    },
+    {
+      "timestamp": "11:40:23AM",
+      "speaker": "Charlie Miranda",
+      "text": "I keep a lot of secrets. Mucho secretos. That's two languages in case you missed the first one. Really a joke what's happening. If you want new college HC, and say about them, like they are paying for it. I'm saying, what is wrong with us? What is wrong with them? I don't know. We've got to see through things that we're doing. You have seven different ideas, perfect. That's how government should run. Makes no difference what it is, but sooner or later, until that November vote is taken, we should discuss nothing because we don't know what's going to happen in November. If that ad valorem tax is decreased how they say it will be possibly by the people who are paying for it, what's going to happen to everything we do? If we pass something now, you're going to be stuck to something you can't pay for. I'm sorry. My time is up."
+    },
+    {
+      "timestamp": "11:41:28AM",
+      "speaker": "Naya Young",
+      "text": "Board member Viera and then Hurtak."
+    },
+    {
+      "timestamp": "11:41:30AM",
+      "speaker": "Luis Viera",
+      "text": "Right now, we're debating the merits of the issue when the real issue before us is the reasonableness of having a place-saver for what is the biggest issue to certainly in my nine and a half years of public office by far and away that has come before us. For me, removing it would be unreasonable. Keeping it would be reasonable. We may very well remove it. We may very well go forward. Something may very well come where it ultimately gets removed. Why take it off to preclude us from discussing when things are moving forward. I've said this many times that my perspective on talking with the rays, if I have an issue, I call them and I have done that. I did it for police. I did it for fire. I had major concerns on public safety issues. They worked with the Unions and addressed a lot of my concerns. I went to them on it. I've been a civil litigator 23 years. Something called time limited demand in the injury world where as a Plaintiff, insurance company, you go, I want your policy limits of hundred thousand dollars. You've got to do all these things. Got to get me the -- the Plaintiff attorney does nothing. They just sit there and wait for the insurance company to comply strictly with the time-limited demand. That's not what this is, right? We have a duty to reach out to them on things that concern us. I've always taken that philosophy on this. We have to be actively -- the biggest issue we're going to vote on. Again, we're debating the merits of it which we shouldn't. I say keep it on. It's fine."
+    },
+    {
+      "timestamp": "11:43:17AM",
+      "speaker": "Naya Young",
+      "text": "Board Member Hurtak."
+    },
+    {
+      "timestamp": "11:43:18AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you. Thank you for putting a timer on us. I appreciate you. I agree that there's no reason to have this on unless there's something to talk about. Quite frankly, I haven't heard anything either. Maybe they just know it's not worth negotiating with me, but I think that is a dumb idea. If they don't want to negotiate with each of us, only negotiate with the people they think are listening to them, that is a really dumb idea. But that seems to be what's happening. I really don't think it is a good idea to have 400 people come here. You say you think that is a good idea and i'm not asking you to respond. I'm just saying it's not a good idea -- because in the public, this is what we've heard. Read any media, oh, the august date is the date. It is the one. We have to do it. We've heard that before. Quite frankly, i'm not interested in that. I keep coming back to the phrase of just because it's your emergency doesn't make it mine. If you aren't coming to me and negotiating with me and working with me and showing me reasonable progress for reasonable things, as board member Miranda said, they are making all these plans for something they don't even have plans for yet. I really do believe they are putting the CART before the horse and they are hoping we'll take the bait. I won't do that. Has to Work The Way it's worked for every other entity that's come in front of us. No, i'm not okay with it. The problem is, we can't take it off. If it makes everybody else feel better, we can move it to September and then move it again in August to October. Do whatever, if you really have to keep it on. But we're not going to discuss this in August, so why have it on the agenda?"
+    },
+    {
+      "timestamp": "11:45:22AM",
+      "speaker": "Naya Young",
+      "text": "We had a motion from board member Carlson and a second from board member Hurtak. We've had some discussion. Do we need to do a roll call? Roll call vote, please. Could you restate the motion, please?"
+    },
+    {
+      "timestamp": "11:45:45AM",
+      "speaker": "Bill Carlson",
+      "text": "Regarding the motion that we made a month ago to ask the Rays and the county to negotiate directly with us since this is a separate legal entity, I move to remove file number CRA 26-24681 from the August 20 CRA agenda. And reschedule it when the Rays are ready."
+    },
+    {
+      "timestamp": "11:46:10AM",
+      "speaker": "Naya Young",
+      "text": "That's the motion. Second from board member Hurtak."
+    },
+    {
+      "timestamp": "11:46:17AM",
+      "speaker": "Charlie Miranda",
+      "text": "What is it we're going to negotiate individually?"
+    },
+    {
+      "timestamp": "11:46:24AM",
+      "speaker": "Lynn Hurtak",
+      "text": "That's not germane to the question."
+    },
+    {
+      "timestamp": "11:46:26AM",
+      "speaker": "Charlie Miranda",
+      "text": "The motion you said specifically, tell me what the idea is."
+    },
+    {
+      "timestamp": "11:46:30AM",
+      "speaker": "Bill Carlson",
+      "text": "Right now, I was referencing the motion from last month, but the only motion now is to remove it from the August 20 CRA agenda and then we can put it on when the rays are ready."
+    },
+    {
+      "timestamp": "11:46:42AM",
+      "speaker": "Naya Young",
+      "text": "The motion is to remove it from the August 20 agenda and put it back on when the rays are ready. Board member Clendenin."
+    },
+    {
+      "timestamp": "11:46:54AM",
+      "speaker": "Alan Clendenin",
+      "text": "When the rays are ready, what if the rays are ready before August, how do we get it back on the august agenda? Let's keep it on the august agenda, if it has to come off, if They are not ready, it comes off. We can always remove. More difficult to put it back on. Let's leave it there. If They are not ready, it comes off. If They are ready, They are ready. If They are not, They are not. This is the last opportunity to keep it there."
+    },
+    {
+      "timestamp": "11:47:28AM",
+      "speaker": "Naya Young",
+      "text": "Roll call. To remove the agenda item from the August 20th agenda."
+    },
+    {
+      "timestamp": "11:47:36AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "11:47:37AM",
+      "speaker": "Luis Viera",
+      "text": "No."
+    },
+    {
+      "timestamp": "11:47:39AM",
+      "speaker": "Bill Carlson",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "11:47:39AM",
+      "speaker": "Charlie Miranda",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "11:47:42AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "11:47:43AM",
+      "speaker": "Alan Clendenin",
+      "text": "No."
+    },
+    {
+      "timestamp": "11:47:44AM",
+      "speaker": "Naya Young",
+      "text": "Yes."
+    },
+    {
+      "timestamp": "11:47:46AM",
+      "speaker": "The Clerk",
+      "text": "Motion passes with Viera and Clendenin voting no."
+    },
+    {
+      "timestamp": "11:47:51AM",
+      "speaker": "Bill Carlson",
+      "text": "Can I say one more thing? Without naming names, we had a clerk who had a tragedy in the family. We're all praying for her. All love her family and praying for her."
+    },
+    {
+      "timestamp": "11:48:06AM",
+      "speaker": "Naya Young",
+      "text": "That is -- are you done with New Business? Board member Clendenin, any New Business?"
+    },
+    {
+      "timestamp": "11:48:15AM",
+      "speaker": "Alan Clendenin",
+      "text": "No, I think i'm good."
+    },
+    {
+      "timestamp": "11:48:17AM",
+      "speaker": "Luis Viera",
+      "text": "Not to make motions, i'm going to do a memo, I Mentioned On Dr. Bernard Lafayette on doing something through the CRA just so that everybody knows to the extent know who he is, a memo detailing his life and have a vote on that next month for something similar to what we're doing for Lieutenant Lopez and everything like that. That's it. I was going to mention something else, but that's all. Thank you."
+    },
+    {
+      "timestamp": "11:48:47AM",
+      "speaker": "Naya Young",
+      "text": "Board Member Hurtak, you had a question."
+    },
+    {
+      "timestamp": "11:48:49AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yes, I do have a question. We have a policy for how to do that. Are you going to follow the policy?"
+    },
+    {
+      "timestamp": "11:48:56AM",
+      "speaker": "Luis Viera",
+      "text": "Those are for renamings. This would be a memorial, which I think is distinct."
+    },
+    {
+      "timestamp": "11:49:02AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Great, thank you. I don't have anything."
+    },
+    {
+      "timestamp": "11:49:07AM",
+      "speaker": "Naya Young",
+      "text": "Board member Maniscalco."
+    },
+    {
+      "timestamp": "11:49:08AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Yes, I have a motion and then I have a question for the board. First motion, as we know, hope is here in the audience. Seems like everywhere I go, hope is there. My wife is jewish and her hebrew name is tiqvah, which is hope in hebrew. Literally everywhere I go. Motion I would like to make is for us to include in this FY '2027 budget, the improvements. I know we talk about what is green infrastructure, but based on our policy, I think Tampa in general only strives for green infrastructure or going green or being more environmentally friendly. But for the remaining five ponds in East Tampa, East Tampa CRA, it was mentioned earlier 22nd street, but the remaining five ponds for funding. I talked with Director McCray about this, Chelsea Street, 19th avenue, 40th street, Bay Street, and Williams. To continue with our, again, green infrastructure policy utilize, but to look to see where we have and what kind of funding we can allocate for these ponds. Council Member Hurtak is there and another Council Member join us, but we make our commitment to hope. It's a very large and broad organization. These are the promises that i've made that we invest in these stormwater ponds."
+    },
+    {
+      "timestamp": "11:50:34AM",
+      "speaker": "Naya Young",
+      "text": "We have a motion from board member Maniscalco. A second from board member Hurtak."
+    },
+    {
+      "timestamp": "11:50:38AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yes. I just want to say maybe if what we can do is allocate that money toward Planning so that we can at least get it started for the plans. I think that is a really good and as we have money to implement them. Because I think some plans are going to be simpler and some more complicated."
+    },
+    {
+      "timestamp": "11:50:58AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Some are much smaller. You're right. With those plans we could see a dollar amount. But I don't want these to fall off the radar. I want to stick to my commitment. 22nd street we talked about today. Huge chunk of money. But these are not as much."
+    },
+    {
+      "timestamp": "11:51:12AM",
+      "speaker": "Lynn Hurtak",
+      "text": "So Planning."
+    },
+    {
+      "timestamp": "11:51:14AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Planning is fine."
+    },
+    {
+      "timestamp": "11:51:17AM",
+      "speaker": "Naya Young",
+      "text": "We have a motion and second. All in favor? Any opposed? Okay."
+    },
+    {
+      "timestamp": "11:51:22AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Another thing, this is for City Council tonight. I'D like to make a motion -- i'm not making the motion now, but the Sons of the American Revolution, I don't see any controversy. I googled, before I make a motion, August 29 they are planting what is called a liberty tree at julian b. Lane park at 10 a.m. I spoke with one member of the Local Chapter, president of the Local Chapter, to see about giving him a commendation because it is the 250th anniversary of our country for the united states. Is there any issue with that? Anybody -- Sons of the American Revolution. I got to overthink everything and make sure -- I don't want to put anybody in a bad position. I'll bring that up tonight. That was it. Off-site. Yeah, take it to them at that event."
+    },
+    {
+      "timestamp": "11:52:14AM",
+      "speaker": "Naya Young",
+      "text": "Anything else? Board member Miranda?"
+    },
+    {
+      "timestamp": "11:52:19AM",
+      "speaker": "Charlie Miranda",
+      "text": "Nothing."
+    },
+    {
+      "timestamp": "11:52:20AM",
+      "speaker": "Naya Young",
+      "text": "I have something. It's not bad. One, I would like to say thank you to the East Tampa constituent, Christopher Lewis. I don't know if you remember, we had pretty bad storms a couple of weeks ago in East Tampa and there were some trees and branches that fell, kind of in the way of the street. He went out himself and cut up the tree and helped to remove them. Always just kind of want to recognize. Chelsea Street. Recognize those constituents that go above and beyond just to kind of help the community without even being asked. He had the tools and he went out and did it. Also had the opportunity to visit them but ladies of Sigma Gamma Rho Sorority are in town. I may be leaving early this evening to give greetings. They have having a community meeting tonight. If you watched, we did have our TCC karaoke and I was a winner. I have to gloat. Very, very fun. Very nervous. It was a really great time."
+    },
+    {
+      "timestamp": "11:53:43AM",
+      "speaker": "Naya Young",
+      "text": "I did my girl by the temptations. Little snippet of it online. You can look it up. And then I also -- homeowner rehab is available. If your home, if you got destruction during Helene and milton, applications are open. They had a community info session in Sulphur Springs. I went there. Please apply, see if you are eligible and take advantage of that program. Lastly, I thought her last day was tomorrow but one of my interns, Kendall, today is her last day with me, with us. Kendall, can you come up to the podium, please. I have three interns with me this summer. Kendall is my student. From American University. She will be going back to school. It is her senior year, but today is her last day. She won't be here this evening. I just wanted to recognize you, Kendall, and thank you for all the amazing work that you have done. No one has seen my office before, but when Kendall got there, it actually looks like someone is doing good work in there. I really appreciate you, Kendall. Do you want to tell us what your plans are? Record, Kendall Henderson. I'm going back to play soccer. This is my last season. Get preseason out of the way. My plan is to go to law school. Thank you. [ applause ]"
+    },
+    {
+      "timestamp": "11:55:33AM",
+      "speaker": "Naya Young",
+      "text": "For those that don't remember, Kendall, can you tell everyone what you're studying in school right now?"
+    },
+    {
+      "timestamp": "11:55:45AM",
+      "speaker": "Naya Young",
+      "text": "Very smart. Board member Maniscalco."
+    },
+    {
+      "timestamp": "11:55:48AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Thanks for joining us. We're really proud of you. Just what you mentioned, what you are studying and what your future plans are, this is what I love about the youth. We're all young up here. But you have a very -- we have a very, very bright future. Very impressive in what you're studying. You go above and beyond. We're glad to have met you and wish you all the best in the future."
+    },
+    {
+      "timestamp": "11:56:16AM",
+      "speaker": "Luis Viera",
+      "text": "Where are you -- have you applied to law school yet? Either Notre Dame or Texas A&m."
+    },
+    {
+      "timestamp": "11:56:32AM",
+      "speaker": "Luis Viera",
+      "text": "What kind of law? This definitely piqued my interest, internship in public policy, but i'm not too sure. I do like the international side and human rights but not too sure yet."
+    },
+    {
+      "timestamp": "11:56:44AM",
+      "speaker": "Luis Viera",
+      "text": "Congratulations."
+    },
+    {
+      "timestamp": "11:56:47AM",
+      "speaker": "Bill Carlson",
+      "text": "Two things real fast, a story a couple of days ago, Heads of State Around the World are getting their kids to study chinese. You are right on track. I was in asia, chinese are exporting their services all over the world now. If you want to be able to do business in the future, probably have to speak mandarin. Second is that I did spend time talking to you and said this privately, say publicly, we need you to come back to Tampa. We need smart, capable people. More and more need of international relations. Please come back and help us make that happen."
+    },
+    {
+      "timestamp": "11:57:23AM",
+      "speaker": "Alan Clendenin",
+      "text": "It's been such a joy having you in the back side of Council Chambers. You always have a smile on your face. Obviously, you are an incredibly talented and intellectual. I just can't imagine what your future is. It will be interesting to see as you move forward and where you land and what a great opportunity for someone like you to enter the field. It's been a pleasure for Councilwoman Young to bring these bright, intelligent young women into the office and have that back there and the vibe, just been really, really pleasant. Really appreciate what you brought to Council Chambers."
+    },
+    {
+      "timestamp": "11:58:01AM",
+      "speaker": "Naya Young",
+      "text": "My other two, can you two ladies stand up? Don't be shy. These are my three interns. I still have two that will be with me."
+    },
+    {
+      "timestamp": "11:58:14AM",
+      "speaker": "Charlie Miranda",
+      "text": "Thank you. Kendall, Yourself and the other two that are very nice like Yourself always have a smile always working. Every time I come by the office, always working on some subject matter. When you go to Law School you're going to ace everything and be a fantastic person. You already are a fantastic person. Met Your Father the other day. He raised everybody in the family right. It's a wonder and honor to have you around."
+    },
+    {
+      "timestamp": "11:58:49AM",
+      "speaker": "Bill Carlson",
+      "text": "When Chair Young brought the three of them in, I just want to say for the record she told all of us, immediately looked us in the eye and said you can't steal any of them. [ laughter ] she's good at picking people."
+    },
+    {
+      "timestamp": "11:59:02AM",
+      "speaker": "Naya Young",
+      "text": "They have been awesome. Everywhere we go, we've gotten lots of compliments. I'm very happy. I know you'll do amazing things and we'll make sure and keep in touch. Make sure you send, when you graduate --"
+    },
+    {
+      "timestamp": "11:59:19AM",
+      "speaker": "Naya Young",
+      "text": "I wanted to recognize Kendall. Thank you all so much. [ applause ] motion from board member Maniscalco, second board member Miranda, all in favor? Any opposed? Thank you. This meeting is adjourned. Disclaimer: this file represents an unedited version of realtime captioning which should neither be relied upon for complete accuracy nor used as a verbatim transcript. Any person who needs a verbatim transcript of the proceedings may need to hire a court reporter. ▶ meeting video the information contained in these pages represents an unedited version of realtime captioning which should neither be relied upon for complete accuracy nor used as a verbatim transcript. Persons requiring a verbatim transcript may need to hire a court reporter. © - City Of Tampa (813) 274-8211"
+    }
+  ],
+  "segment_count": 366,
+  "scraped_at": "2026-07-29T17:25:40.529856"
+}
