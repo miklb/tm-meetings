@@ -31,7 +31,8 @@ for arg in "$@"; do
 done
 
 # Check if JSON already exists for this date
-EXISTING_JSON=$(find data -name "*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
+# -maxdepth 1 keeps data/changes/ stubs out (same basename as real meeting files)
+EXISTING_JSON=$(find data -maxdepth 1 -name "*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
 
 if [ "$EXISTING_JSON" -gt 0 ] && [ "$FORCE" = "false" ]; then
     echo "✓ Found $EXISTING_JSON existing JSON file(s) for $DATE — skipping scrape"
@@ -59,7 +60,7 @@ else
     sleep 1
 
     # Re-check after scrape
-    EXISTING_JSON=$(find data -name "*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
+    EXISTING_JSON=$(find data -maxdepth 1 -name "*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
 fi
 
 if [ "$EXISTING_JSON" -gt 0 ]; then
@@ -84,7 +85,9 @@ if [ "$EXISTING_JSON" -gt 0 ]; then
     # which render-funding.js reads to build the per-item Financial impact
     # sections. Without this step, financial sections silently disappear.
     REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-    MEETING_FILES=$(find "$REPO_ROOT/agenda-scraper/data" -name "*${DATE}*.json" -not -name "*.bak.*" 2>/dev/null)
+    # -maxdepth 1: data/changes/ stubs share the same basename and would
+    # clobber the real funding manifest with an empty one
+    MEETING_FILES=$(find "$REPO_ROOT/agenda-scraper/data" -maxdepth 1 -name "*${DATE}*.json" -not -name "*.bak.*" 2>/dev/null)
     if [ -n "$MEETING_FILES" ]; then
         if [ -f "$REPO_ROOT/.venv/bin/python3" ]; then
             (
