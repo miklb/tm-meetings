@@ -81,7 +81,7 @@ node scripts/preview-dispatch.js --meeting-ids=2815
 
 # 3. Send. dispatch-notifications.js does NOT read .env, so pass the secret in.
 WEBHOOK_SECRET="$(grep '^WEBHOOK_SECRET=' .env | cut -d= -f2-)" \
-MEETING_IDS=2815 \
+MEETING_IDS=2784 \
 WORDPRESS_AGENDA_URL="https://tampamonitor.com/tampa-city-council/<the-agenda-post>" \
   node scripts/dispatch-notifications.js
 ```

@@ -8,7 +8,8 @@
 # After activation, `python` and `python3` resolve to the processor venv
 # with all dependencies (requests, beautifulsoup4, gliner, whisper, etc.).
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# ${BASH_SOURCE[0]} is bash-only; ${(%):-%x} is the zsh equivalent when sourced
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]:-${(%):-%x}}")" && pwd)"
 PROJECT_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 VENV_DIR="$PROJECT_ROOT/transcript-cleaner/processor/venv"
 
