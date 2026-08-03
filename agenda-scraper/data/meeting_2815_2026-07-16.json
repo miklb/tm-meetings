@@ -3816,14 +3816,8 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        5/22/2026\nRequested Meeting Date: 6/11/2026\nType of Request:                                                  Public Hearing\nContactChristopher DeManche 274-3319\nSubjectApplication of Tiffany Oaks II LLC request to rezone property generally located \nat 9710 and 9720 North Armenia Avenue from RO-1 to CN.\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-51\nPublic Hearing on application of Tiffany Oaks II LLC request to rezone \nproperty generally located at 9710 and 9720 North Armenia Avenue from RO-\n1 to CN.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock5/22/2026 3:17:30 PMSubmitter\nLaChone Dock5/22/2026 3:17:35 PMDepartment Head",
-      "projectedCosts": {
-        "fiscalImpactStatement": "",
-        "projectedCostsRaw": "",
-        "rows": [],
-        "hasProjectedCosts": false,
-        "hasParsedRows": false
-      },
+      "summaryText": "",
+      "projectedCosts": null,
       "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 67 through 75)",
       "staffReport": {
         "landUseType": "REZONING",
