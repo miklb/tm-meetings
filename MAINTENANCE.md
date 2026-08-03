@@ -64,8 +64,7 @@ Node 20 in July 2026.
 | `axios-cookiejar-support` | `agenda-scraper/`    | Cookie session support      | same                                     |
 | `cheerio`                 | `agenda-scraper/`    | HTML parsing                | same                                     |
 | `@aws-sdk/client-s3`      | `agenda-scraper/`    | R2 document mirroring       | same                                     |
-| `@llamaindex/liteparse`   | `agenda-scraper/`    | PDF text extraction         | same                                     |
-| `pdf-parse` / `pdfreader` | `agenda-scraper/`    | PDF parsing fallbacks       | same                                     |
+| `pdf-parse` / `pdfreader` | `agenda-scraper/`    | PDF text extraction         | same                                     |
 | `selenium-webdriver`      | `agenda-scraper/`    | Legacy Selenium scrape path | same                                     |
 | `tough-cookie`            | `agenda-scraper/`    | Cookie jar                  | same                                     |
 | `dotenv`                  | `agenda-scraper/`    | Environment variables       | same                                     |
@@ -103,7 +102,6 @@ Node 20 in July 2026.
 - [ ] `source pipeline/activate.sh && pip list --outdated` — review and apply safe upgrades
 - [ ] Review Node.js minor/patch: `nvm ls-remote 26 | tail -5` — update `.nvmrc` to latest `26.x.x` if desired
 - [ ] Review `@11ty/eleventy` for minor/major releases (breaking changes common on majors)
-- [ ] Review `@llamaindex/liteparse` — active development, check changelog before upgrading
 
 ### Annually (October — aligns with Node LTS activation)
 

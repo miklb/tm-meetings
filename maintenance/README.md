@@ -25,7 +25,7 @@ Gaps it didn't cover (addressed by the checklists here):
 2. **No trigger mechanism / "last done" tracking.** A policy `.md` never
    pings you. Same NotePlan integration as toolshed (below).
 3. **Un-cadenced npm surface.** Three package dirs with fast-movers
-   (`@llamaindex/liteparse`, `selenium-webdriver`, `yt-dlp`) need a real
+   (`selenium-webdriver`, `yt-dlp`) need a real
    monthly `npm outdated` / `npm audit` rhythm — cleared to zero findings
    July 2026, needs the cadence to stay there.
 4. **Version drift vs. toolshed.** Node was 20 (EOL) vs. 26; Python pins
@@ -35,7 +35,9 @@ Gaps it didn't cover (addressed by the checklists here):
 
 Logged July 2026 when the patch/minor backlog was cleared:
 
-- `@llamaindex/liteparse` 1.5 → 2.x — active dev, PDF extraction core path
+- ~~`@llamaindex/liteparse` 1.5 → 2.x~~ — dropped Aug 2026: the A/B experiment
+  ended with pdf-parse staying the default, and the unused dep carried
+  high-severity sharp/libvips CVEs
 - `pdf-parse` 1.1 → 2.x — evaluating this could also replace `pdfreader`,
   which needs a `pdf2json: ^4` override in `agenda-scraper/package.json`
   (v3 bundles a vulnerable `@xmldom/xmldom`; don't drop the override)

@@ -24,10 +24,8 @@ Jan / Apr / Jul / Oct. ~30 min. Runs *with* that month's monthly checklist.
 ## Majors watch (changelogs, not auto-bumps)
 
 - [ ] `@11ty/eleventy` minor/major released? Breaking changes common
-- [ ] `@llamaindex/liteparse` — active development, core PDF path
 - [ ] Major-version backlog review: maintenance/README.md → "Major-version
-      backlog" (liteparse 2.x, pdf-parse 2.x, axios-cookiejar-support 7,
-      tough-cookie 6)
+      backlog" (pdf-parse 2.x, axios-cookiejar-support 7, tough-cookie 6)
 
 ## Cloudflare
 

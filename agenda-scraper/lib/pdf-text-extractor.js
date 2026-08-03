@@ -1,13 +1,5 @@
 /**
- * Unified PDF text extraction wrapper.
- *
- * Two backends:
- *   - pdfparse  (legacy, default — same behavior as before)
- *   - liteparse (new, https://github.com/run-llama/liteparse)
- *
- * Switch with the PDF_PARSER env var (PDF_PARSER=liteparse), or pass
- * `{ backend: 'liteparse' }` per call. This lets us A/B test before
- * making liteparse the default.
+ * Unified PDF text extraction wrapper (pdf-parse backend).
  *
  * All entry points return: { text, pages, backend }
  *   - text  : extracted plain text
@@ -18,25 +10,9 @@
 const fs = require('fs');
 const axios = require('axios');
 
-const DEFAULT_BACKEND = (process.env.PDF_PARSER || 'pdfparse').toLowerCase();
+const DEFAULT_BACKEND = 'pdfparse';
 const DEFAULT_USER_AGENT =
   'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36';
-
-let liteParseInstancePromise = null;
-
-async function getLiteParse(options = {}) {
-  if (!liteParseInstancePromise) {
-    // ESM-only package; load via dynamic import.
-    liteParseInstancePromise = (async () => {
-      const { LiteParse } = await import('@llamaindex/liteparse');
-      return new LiteParse({
-        ocrEnabled: options.ocrEnabled === true, // default off; we don't want surprise Tesseract downloads
-        ...options,
-      });
-    })();
-  }
-  return liteParseInstancePromise;
-}
 
 /**
  * Silence chatty stdout/stderr while running a function.
@@ -57,18 +33,7 @@ async function withSilencedOutput(fn) {
   }
 }
 
-async function extractWithLiteParse(buffer, opts = {}) {
-  const parser = await getLiteParse({ ocrEnabled: opts.ocrEnabled });
-  const result = await withSilencedOutput(() => parser.parse(buffer));
-  return {
-    text: result.text || '',
-    pages: Array.isArray(result.pages) ? result.pages.length : null,
-    backend: 'liteparse',
-    raw: result, // pages[].bboxes available for callers that want spatial info
-  };
-}
-
-async function extractWithPdfParse(buffer, opts = {}) {
+async function extractTextFromBuffer(buffer, opts = {}) {
   // eslint-disable-next-line global-require
   const pdfParse = require('pdf-parse');
   const data = await withSilencedOutput(() =>
@@ -80,12 +45,6 @@ async function extractWithPdfParse(buffer, opts = {}) {
     backend: 'pdfparse',
     raw: data,
   };
-}
-
-async function extractTextFromBuffer(buffer, opts = {}) {
-  const backend = (opts.backend || DEFAULT_BACKEND).toLowerCase();
-  if (backend === 'liteparse') return extractWithLiteParse(buffer, opts);
-  return extractWithPdfParse(buffer, opts);
 }
 
 async function extractTextFromUrl(url, opts = {}) {
