@@ -59,6 +59,12 @@ export async function verifyTurnstile(token, secretKey, ip) {
     body: JSON.stringify({ secret: secretKey, response: token, remoteip: ip })
   });
   const data = await res.json();
+  if (data.success !== true) {
+    // e.g. missing-input-response = empty token (widget never rendered/blocked),
+    // timeout-or-duplicate = expired or reused token. Visible via
+    // `wrangler pages deployment tail` and Workers Logs.
+    console.error(`turnstile: siteverify failed [${(data['error-codes'] || []).join(', ')}] token=${token ? 'present' : 'empty'} ip=${ip}`);
+  }
   return data.success === true;
 }
 

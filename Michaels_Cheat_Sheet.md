@@ -48,6 +48,17 @@ npm run build-site      # Eleventy build
 npm run deploy          # wrangler pages deploy site/_site --project-name tampa-meetings
 ```
 
+After any deploy that rebuilt the site, smoke-check the notifications signup form
+still has its Turnstile widget (build-time injected; without it every signup gets
+"Bot verification failed" — this bit us in Aug 2026):
+
+```bash
+curl -s https://meetings.tampamonitor.com/notifications/ | grep -c data-sitekey   # expect 2
+```
+
+The Turnstile *site* key is committed in `site/src/_data/turnstile.js` (public by
+design); only `TURNSTILE_SECRET_KEY` is a Pages secret.
+
 ## Add beta testers
 
 When someone answers the call for testers, add them to remote D1 (takes effect

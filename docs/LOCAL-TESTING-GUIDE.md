@@ -46,10 +46,13 @@ Invite the real beta list. On a live agenda night, run dispatch **after the WP p
 
 ### Known gaps before a testing night
 
-- **Turnstile keys** not set up yet — needed before Phase 2/3 or the production form rejects everyone.
-  `TURNSTILE_SITE_KEY` is read from the **shell environment at Eleventy build time**
-  (`site/src/_data/turnstile.js`), so the production build must run with it exported —
-  it is not a Pages secret. `TURNSTILE_SECRET_KEY` _is_ a Pages secret.
+- **Turnstile keys** *(resolved Aug 2026)* — the site key is now **committed as the
+  default** in `site/src/_data/turnstile.js` (public by design, domain-locked;
+  `TURNSTILE_SITE_KEY` env var overrides it for testing). It used to be
+  shell-env-only at Eleventy build time, which meant routine deploys silently
+  shipped a widget-less page that rejected every signup with "Bot verification
+  failed". The data file now throws if the key resolves empty.
+  `TURNSTILE_SECRET_KEY` _is_ a Pages secret.
 - **`WEBHOOK_SECRET`** still needs generating (`openssl rand -hex 24`) and placing in both the Worker secret and your local `.env`.
 
 ### Production probe findings (2026-07-05)
