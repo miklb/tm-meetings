@@ -1,0 +1,93 @@
+{
+  "meeting_id": 2692,
+  "meeting_date": "2026-07-30",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "6px8Ny7k51E",
+      "title": "Tampa City Council - 07/30/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-07-31T04:54:27Z",
+      "duration": "PT3H26M30S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "File No. CM26-24466 Commendation to Doug Trent",
+          "timestamp": "00:15:05",
+          "seconds": 905
+        },
+        {
+          "title": "File No. CM26-24462  Scientific Olympics national competition winners",
+          "timestamp": "00:21:21",
+          "seconds": 1281
+        },
+        {
+          "title": "File No. CM25-20203 Downtown fire station tragedy",
+          "timestamp": "00:30:35",
+          "seconds": 1835
+        },
+        {
+          "title": "File No. B2027-2 Fiscal Year 2027 Budget",
+          "timestamp": "00:44:58",
+          "seconds": 2698
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:44:08",
+          "seconds": 6248
+        },
+        {
+          "title": "File No. BA26-25995 Architectural Review Commission Applicant",
+          "timestamp": "02:29:04",
+          "seconds": 8944
+        },
+        {
+          "title": "File No. BA26-25994 HPC Applicant",
+          "timestamp": "02:33:51",
+          "seconds": 9231
+        },
+        {
+          "title": "File No. CM26-25621 K-Bar Ranch Cut Through",
+          "timestamp": "02:34:53",
+          "seconds": 9293
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:41:41",
+          "seconds": 9701
+        },
+        {
+          "title": "File No. BF26-25533 Robles Park Brownfield area",
+          "timestamp": "02:44:50",
+          "seconds": 9890
+        },
+        {
+          "title": "File No. VAC-26-08 43rd Ave lying North of Ellicott St",
+          "timestamp": "02:46:40",
+          "seconds": 10000
+        },
+        {
+          "title": "File No. DEO26-25883  2932 N. 22nd Street",
+          "timestamp": "02:53:15",
+          "seconds": 10395
+        },
+        {
+          "title": "File No. CM26-25624 Tree Report",
+          "timestamp": "03:02:22",
+          "seconds": 10942
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:17:03",
+          "seconds": 11823
+        }
+      ],
+      "offset_seconds": 306
+    }
+  ]
+}
