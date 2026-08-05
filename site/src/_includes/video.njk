@@ -51,8 +51,18 @@
                                     {{ video.part }}</p>
                             {% endif %}
                             {% for ch in video.chapters %}
-                                <button class="chapter-item" type="button" onclick="seekToChapter({{ ch.seconds }}, {{ video.part }})" aria-label="Jump to chapter: {{ ch.title }}">
-                                    <span class="chapter-timestamp">{{ ch.timestamp }}</span>
+                                {# The 00:00:00 "Start of Meeting" chapter is the video
+                                   start (pre-roll music), not the meeting start —
+                                   re-point it to the measured speech offset. #}
+                                {% if ch.seconds == 0 and video.offset_seconds %}
+                                    {% set chSeconds = video.offset_seconds %}
+                                    {% set chTimestamp = chSeconds | hms %}
+                                {% else %}
+                                    {% set chSeconds = ch.seconds %}
+                                    {% set chTimestamp = ch.timestamp %}
+                                {% endif %}
+                                <button class="chapter-item" type="button" onclick="seekToChapter({{ chSeconds }}, {{ video.part }})" aria-label="Jump to chapter: {{ ch.title }}">
+                                    <span class="chapter-timestamp">{{ chTimestamp }}</span>
                                     <span class="chapter-title">{{ ch.title }}</span>
                                 </button>
                             {% endfor %}

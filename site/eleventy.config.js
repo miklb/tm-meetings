@@ -58,6 +58,15 @@ module.exports = function (eleventyConfig) {
     return str && str.trim().length > 0;
   });
 
+  /** Format a video position in seconds as HH:MM:SS. */
+  eleventyConfig.addFilter('hms', (sec) => {
+    sec = Math.max(0, Math.round(sec || 0));
+    const h = String(Math.floor(sec / 3600)).padStart(2, '0');
+    const m = String(Math.floor((sec % 3600) / 60)).padStart(2, '0');
+    const s = String(sec % 60).padStart(2, '0');
+    return `${h}:${m}:${s}`;
+  });
+
   /**
    * Parse a transcript wall-clock timestamp like "9:15:50AM" or "01:02:10PM"
    * into seconds since midnight.

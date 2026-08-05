@@ -105,7 +105,7 @@ python3 scripts/build/process_video.py <pkey> <date>
 | Flag                  | Default     | Purpose                                                 |
 | --------------------- | ----------- | ------------------------------------------------------- |
 | `--meeting-type TYPE` | auto-detect | Override: CRA, Workshop, Evening, City Council          |
-| `--model NAME`        | `base`      | Whisper model: tiny, base, small, medium                |
+| `--model NAME`        | `small`     | Whisper model: tiny, base, small, medium                |
 | `--min-gap N`         | 60          | Gap detection threshold in minutes                      |
 | `--dry-run`           | off         | Show plan without making API calls or downloading audio |
 | `--skip-fetch`        | off         | Use existing video mapping only (no YouTube API call)   |

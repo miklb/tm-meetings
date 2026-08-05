@@ -7,7 +7,7 @@ Just downloads audio, transcribes it, and saves the result.
 """
 
 import logging
-import whisper
+from faster_whisper import WhisperModel
 import sys
 import json
 import shutil
@@ -51,9 +51,13 @@ def download_audio_sample(video_id, duration=300, start=0):
         '--audio-format', 'mp3',
         '--audio-quality', '5',
         '--download-sections', f'*{start}-{end}',
-        '-o', audio_path,
-        url
     ]
+    if start > 0:
+        # Without this, yt-dlp cuts at the nearest keyframe BEFORE the
+        # requested start, so the extracted audio leads the requested time by
+        # up to ~10s and every shifted timestamp inherits that error.
+        cmd.append('--force-keyframes-at-cuts')
+    cmd += ['-o', audio_path, url]
 
     subprocess.run(cmd, check=True, capture_output=True)
     return audio_path
@@ -72,9 +76,12 @@ def transcribe_video(video_id, duration=300, model_name='base', start=0):
                absolute video time (not time-since-extraction-start).
     
     Returns list of segments with:
-    - start: seconds from video start (absolute)
+    - start: seconds from video start (absolute); snapped to the first
+      word's aligned timestamp when word timestamps are available
     - end: seconds from video start (absolute)
     - text: transcribed text
+    - no_speech_prob: probability the segment is not speech
+    - words: per-word {start, end, word} timing (when available)
     """
     if start > 0:
         logger.info("Downloading %ds of audio from %s (starting at %ds / %d:%02d)...",
@@ -83,22 +90,47 @@ def transcribe_video(video_id, duration=300, model_name='base', start=0):
         logger.info("Downloading first %ds of audio from %s...", duration, video_id)
     audio_path = download_audio_sample(video_id, duration, start)
 
-    logger.info("Loading Whisper model '%s'...", model_name)
-    model = whisper.load_model(model_name)
+    logger.info("Loading faster-whisper model '%s' (cpu/int8)...", model_name)
+    model = WhisperModel(model_name, device="cpu", compute_type="int8")
 
     logger.info("Transcribing %s...", audio_path)
-    result = model.transcribe(audio_path, word_timestamps=False)
+    seg_iter, _info = model.transcribe(
+        audio_path,
+        word_timestamps=True,
+        vad_filter=True,
+    )
+
+    segments = []
+    for seg in seg_iter:
+        entry = {
+            'start': seg.start,
+            'end': seg.end,
+            'text': seg.text,
+            'no_speech_prob': seg.no_speech_prob,
+        }
+        if seg.words:
+            # Word timestamps come from acoustic alignment and are far more
+            # precise than segment boundaries, which drift after music/silence.
+            entry['start'] = seg.words[0].start
+            entry['end'] = seg.words[-1].end
+            entry['words'] = [
+                {'start': w.start, 'end': w.end, 'word': w.word}
+                for w in seg.words
+            ]
+        segments.append(entry)
 
     # Clean up
     os.remove(audio_path)
 
     # Shift timestamps to absolute video time when audio was extracted
     # from a non-zero start point
-    segments = result['segments']
     if start > 0:
         for seg in segments:
             seg['start'] += start
             seg['end'] += start
+            for w in seg.get('words', []):
+                w['start'] += start
+                w['end'] += start
         logger.info("  Shifted %d segment timestamps by +%ds", len(segments), start)
 
     return segments

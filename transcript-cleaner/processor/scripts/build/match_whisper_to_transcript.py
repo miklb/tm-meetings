@@ -22,6 +22,7 @@ import sys
 import subprocess
 import re
 from collections import namedtuple
+from difflib import SequenceMatcher
 from pathlib import Path
 from datetime import datetime
 
@@ -140,13 +141,19 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
     and Whisper processing time.
 
     Part 1 logic (transcript-based):
-        estimated_speech_time = PRE_ROLL + speech_delay
-        If estimated_speech_time > DEFAULT_DURATION (10 min):
-            start  = estimated_speech_time − SKIP_MARGIN
-            duration = SKIP_MARGIN + MATCH_BUFFER   (8 min clip around speech)
-        Otherwise:
+        estimated_speech_time = PRE_ROLL + speech_delay, capped at chapter[1]
+        (speech has started *by* the first agenda-item marker — call to order,
+        invocation, and roll call come before it).
+
+        Always capture from the video start:
             start  = 0
-            duration = max(DEFAULT_DURATION, estimated_speech_time + MATCH_BUFFER)
+            duration = clamp(estimated_speech_time + MATCH_BUFFER,
+                             DEFAULT_DURATION, MAX_PART1_DURATION)
+
+        Sampling from 0 lets the word-anchor matcher pin the transcript's
+        opening segments — anchoring segment 0 measures the offset with no
+        clerk-latency differential.  The VAD filter strips pre-roll music
+        before transcription, so dead air costs download time only.
 
         Morning meetings (8 AM–noon):  schedule = 9:00 AM
         Evening meetings (≥ 5 PM):     schedule = 5:00 PM
@@ -166,11 +173,11 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
         (seconds into the video) and *duration* is how many seconds to capture.
     """
     DEFAULT_DURATION = 600                # 10-min minimum
+    MAX_PART1_DURATION = 900              # 15-min ceiling for Part 1 capture
     PART2_NO_CHAPTERS_DURATION = 900      # 15-min fallback for Part 2+
     CHAPTER_BUFFER = 120                  # 2-min buffer past first content chapter
     PRE_ROLL = 300                        # 5 min — video starts before scheduled time
     MATCH_BUFFER = 180                    # 3 min — enough speech for Whisper matching
-    SKIP_MARGIN = 300                     # 5 min — margin before expected speech when skipping
 
     # Schedule windows (seconds from midnight)
     MORNING_WINDOW_START = 8 * 3600       # 8:00 AM
@@ -231,35 +238,30 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
                 # Chapter semantics:
                 #   chapter[0] is always 0:00 = video start (NOT speech start)
                 #     — always ignored.
-                #   chapter[1] is the first real agenda-item marker
-                #     — a ceiling/upper bound, since speech has started by then.
-                # Use chapter[1] to raise the estimate if our schedule-based
-                # estimate is too low (rare, but protects us when the video
-                # has long pre-roll).
+                #   chapter[1] is the first real agenda-item marker. Speech has
+                #     started *by* then (call to order, invocation, and roll
+                #     call come before the first agenda item), so it is a
+                #     CEILING on speech start — never an estimate of it.
                 if len(chapters) > 1:
                     first_chapter_secs = chapters[1].get('seconds', 0)
-                    if first_chapter_secs > estimated_speech:
+                    if 0 < first_chapter_secs < estimated_speech:
                         estimated_speech = first_chapter_secs
 
-                if estimated_speech > DEFAULT_DURATION:
-                    # Speech is far enough in to benefit from skipping b-roll
-                    start = estimated_speech - SKIP_MARGIN
-                    duration = SKIP_MARGIN + MATCH_BUFFER
-                    delay_min = speech_delay / 60
-                    reason = (f"Part 1 {session_label} — skip to {start}s, "
-                              f"first speech ~{delay_min:.0f}m after schedule "
-                              f"(est. {estimated_speech}s into video)")
-                else:
-                    start = 0
-                    duration = max(DEFAULT_DURATION,
-                                   estimated_speech + MATCH_BUFFER)
-                    delay_min = speech_delay / 60
-                    reason = (f"Part 1 {session_label} — first speech "
-                              f"{delay_min:.0f}m after schedule + "
-                              f"{PRE_ROLL // 60}m pre-roll + "
-                              f"{MATCH_BUFFER // 60}m match buffer")
-                    if duration == DEFAULT_DURATION:
-                        reason += f" (clamped to {DEFAULT_DURATION}s minimum)"
+                # Always capture from the video start so the word-anchor
+                # matcher can pin the transcript's opening segments —
+                # anchoring segment 0 measures the offset with no
+                # clerk-latency differential.  The VAD filter strips
+                # pre-roll music before transcription, so the dead air
+                # costs download time only.
+                start = 0
+                duration = int(min(max(DEFAULT_DURATION,
+                                       estimated_speech + MATCH_BUFFER),
+                                   MAX_PART1_DURATION))
+                delay_min = speech_delay / 60
+                reason = (f"Part 1 {session_label} — capture from 0 through "
+                          f"est. speech at {estimated_speech:.0f}s "
+                          f"(~{delay_min:.0f}m after schedule) + "
+                          f"{MATCH_BUFFER // 60}m match buffer")
             else:
                 duration = DEFAULT_DURATION
                 reason = "Part 1 — non-standard meeting time, using default"
@@ -442,6 +444,145 @@ def find_match_position(whisper_content_words, official_content_words):
 
     position_frac = best_pos / (o_len - w_len) if o_len > w_len else 0.0
     return position_frac, best_overlap
+
+
+# ── Word-anchor offset calculation ─────────────────────────────────────────────
+# Official transcript timestamps mark where each segment *begins*, so a
+# segment's opening words are pinned to a known transcript time.  When the
+# Whisper output carries word-level timestamps (faster-whisper), locating those
+# opening words in the word stream reads the offset directly — no intra-segment
+# position interpolation.  Each anchored segment is an independent measurement;
+# the median of the agreeing measurements is the offset.
+
+ANCHOR_PHRASE_WORDS = 8    # official opening words per anchor
+ANCHOR_MIN_RATIO = 0.75    # SequenceMatcher ratio to accept a position
+ANCHOR_TOLERANCE = 15      # seconds — agreeing anchors cluster within this
+ANCHOR_MIN_SUPPORT = 3     # independent anchors required for a result
+
+
+def _anchor_words(text):
+    """Normalized word list for anchor matching, minus [bracketed] annotations."""
+    text = re.sub(r'\[[^\]]*\]', ' ', text)
+    return normalize_text(text).split()
+
+
+def calculate_offset_by_anchors(whisper_segments, official_segments, first_seconds):
+    """Calculate offset by anchoring official segment openings in Whisper words.
+
+    Returns the median offset in seconds, or None when inconclusive (no word
+    timestamps, too few anchors, or no agreement) — callers should fall back
+    to n-gram cluster matching.
+    """
+    # Flatten the Whisper word stream. A single Whisper word can normalize to
+    # multiple tokens ("it's" → IT S); emit each with the same start time so
+    # both sides tokenize identically.
+    stream = []
+    for seg in whisper_segments:
+        for w in seg.get('words', []):
+            for token in normalize_text(w['word']).split():
+                stream.append((w['start'], token))
+
+    if len(stream) < ANCHOR_PHRASE_WORDS:
+        logger.info("  Anchor matching: no word-level timestamps in Whisper output")
+        return None
+
+    word_list = [t for _, t in stream]
+
+    # Same ~20-minute search window as the n-gram matcher
+    cutoff_secs = first_seconds + 20 * 60
+    anchors = []
+    skipped_ambiguous = 0
+
+    for o_idx, o_seg in enumerate(official_segments[:100]):
+        o_ts = o_seg.get('timestamp')
+        o_text = o_seg.get('text', '')
+        if not o_ts or not o_text:
+            continue
+        o_secs = parse_timestamp_to_seconds(o_ts)
+        if o_secs > cutoff_secs:
+            break
+
+        o_words = _anchor_words(o_text)[:ANCHOR_PHRASE_WORDS]
+        # Require enough distinctive material to anchor on
+        if len(o_words) < 5 or sum(1 for w in o_words if len(w) >= 4) < 3:
+            continue
+
+        n = len(o_words)
+        hits = []  # (ratio, stream position)
+        for i in range(len(word_list) - n + 1):
+            ratio = SequenceMatcher(None, o_words, word_list[i:i + n]).ratio()
+            if ratio >= ANCHOR_MIN_RATIO:
+                hits.append((ratio, i))
+        if not hits:
+            continue
+
+        # If positions above threshold imply offsets further apart than the
+        # tolerance, the phrase repeats in the audio — unusable as an anchor.
+        implied = [stream[i][0] - (o_secs - first_seconds) for _, i in hits]
+        if max(implied) - min(implied) > ANCHOR_TOLERANCE:
+            skipped_ambiguous += 1
+            continue
+
+        ratio, i = max(hits)
+        anchors.append({
+            'official_index': o_idx,
+            'timestamp': o_ts,
+            'ratio': ratio,
+            'whisper_time': stream[i][0],
+            'offset': stream[i][0] - (o_secs - first_seconds),
+            'phrase': ' '.join(o_words),
+        })
+
+    if not anchors:
+        logger.info("  Anchor matching: no official segment openings found in "
+                    "Whisper words (%d ambiguous skipped)", skipped_ambiguous)
+        return None
+
+    # Cluster anchors by offset; the largest agreeing cluster wins
+    anchors.sort(key=lambda a: a['offset'])
+    clusters = []
+    current = [anchors[0]]
+    for a in anchors[1:]:
+        if a['offset'] - current[0]['offset'] <= ANCHOR_TOLERANCE:
+            current.append(a)
+        else:
+            clusters.append(current)
+            current = [a]
+    clusters.append(current)
+    clusters.sort(key=len, reverse=True)
+    best = clusters[0]
+
+    logger.info("\n  Word-anchor matching: %d anchor(s), %d cluster(s)%s",
+                len(anchors), len(clusters),
+                f", {skipped_ambiguous} ambiguous skipped" if skipped_ambiguous else "")
+    for a in best[:8]:
+        logger.info("    ⚓ seg %d %s → %.1fs  offset %.1fs  (ratio %.2f)  \"%s\"",
+                    a['official_index'], a['timestamp'], a['whisper_time'],
+                    a['offset'], a['ratio'], a['phrase'][:60])
+    if len(best) > 8:
+        logger.info("    … and %d more in cluster", len(best) - 8)
+
+    if len(best) < ANCHOR_MIN_SUPPORT:
+        logger.info("  Anchor matching: only %d agreeing anchor(s) (<%d) — inconclusive",
+                    len(best), ANCHOR_MIN_SUPPORT)
+        return None
+
+    # Prefer a strong anchor on the baseline segment itself: its timestamp IS
+    # the baseline, so its offset carries no clerk-latency differential.
+    seg0 = next((a for a in best
+                 if a['official_index'] == 0 and a['ratio'] >= 0.85), None)
+    if seg0 is not None:
+        logger.info("  ✓ %d agreeing anchors; baseline segment anchored directly "
+                    "— offset %.1fs (ratio %.2f)",
+                    len(best), seg0['offset'], seg0['ratio'])
+        return seg0['offset']
+
+    offsets = sorted(a['offset'] for a in best)
+    median = offsets[len(offsets) // 2]
+    spread = offsets[-1] - offsets[0]
+    logger.info("  ✓ %d agreeing anchors, median offset %.1fs (spread %.1fs)",
+                len(best), median, spread)
+    return median
 
 
 def find_best_match(whisper_segments, official_segments, first_seconds=None):
@@ -846,7 +987,19 @@ def calculate_offset(whisper_json_file, official_transcript_file,
 
     first_seconds = parse_timestamp_to_seconds(first_timestamp)
     logger.info("  First official timestamp: %s (baseline)", first_timestamp)
-    
+
+    # Word-anchor pass — interpolation-free, available when the Whisper output
+    # has word-level timestamps. Falls through to n-gram matching otherwise.
+    anchor_offset = calculate_offset_by_anchors(whisper_segments,
+                                                official_segments,
+                                                first_seconds)
+    if anchor_offset is not None:
+        logger.info("\n✅ OFFSET: %.1f seconds (%d:%02d) — word-anchor method",
+                    anchor_offset, int(anchor_offset // 60),
+                    int(anchor_offset % 60))
+        return anchor_offset
+    logger.info("  Falling back to n-gram cluster matching…")
+
     # Find match (pass baseline for cross-validation)
     match = find_best_match(whisper_segments, official_segments,
                             first_seconds=first_seconds)
