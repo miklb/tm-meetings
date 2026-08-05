@@ -2,5 +2,22 @@
   "meetingId": "2880",
   "meetingDate": "2026-08-06",
   "firstSeenAt": "2026-08-01T01:22:24.361Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-08-05",
+      "mirroredAt": "2026-08-05T01:26:04.554Z",
+      "newDocuments": [
+        {
+          "itemNumber": 42,
+          "itemFileNumber": "NCA26-25637",
+          "filename": "MEMO.RUGGIERO - 080626 REGULAR COUNCIL SESSION - FILE NO. NCA26-25637.PDF"
+        },
+        {
+          "itemNumber": 48,
+          "itemFileNumber": "CM26-25618",
+          "filename": "UNDERLINE &AMP; STRIKETHROUGH VERSION OF RULES OF PROCEDURE REVISIONS 8-6-26 MEETING.PDF"
+        }
+      ]
+    }
+  ]
 }
