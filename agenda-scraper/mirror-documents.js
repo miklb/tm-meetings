@@ -95,7 +95,7 @@ Examples:
 function findFilesForDate(date) {
   const dataDir = path.join(__dirname, 'data');
   return fs.readdirSync(dataDir)
-    .filter(f => f.endsWith('.json') && f.includes(date))
+    .filter(f => f.startsWith('meeting_') && f.endsWith('.json') && f.includes(date))
     .map(f => path.join(dataDir, f));
 }
 

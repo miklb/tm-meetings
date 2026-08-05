@@ -1,10 +1,12 @@
 #!/bin/bash
 
 # Tampa City Council Agenda Processing Script
-# Usage: ./process-agenda.sh [date] [--force] [--skip-mirror]
+# Usage: ./process-agenda.sh [date] [--force] [--skip-mirror] [--id MEETING_ID]
 # If no date provided, uses today's date
 # --force    Re-scrape even if a JSON file for the date already exists
 # --skip-mirror  Skip mirroring documents to R2
+# --id N     Scrape a specific OnBase meeting ID (required for historical
+#            meetings — the scraper's date mode only sees the current list)
 
 SKIP_MIRROR=false
 FORCE=false
@@ -21,6 +23,8 @@ else
 fi
 
 # Parse flags
+MEETING_ID=""
+PREV_ARG=""
 for arg in "$@"; do
     if [ "$arg" = "--skip-mirror" ]; then
         SKIP_MIRROR=true
@@ -28,11 +32,22 @@ for arg in "$@"; do
     if [ "$arg" = "--force" ]; then
         FORCE=true
     fi
+    if [ "$PREV_ARG" = "--id" ]; then
+        MEETING_ID="$arg"
+    fi
+    PREV_ARG="$arg"
 done
 
-# Check if JSON already exists for this date
-# -maxdepth 1 keeps data/changes/ stubs out (same basename as real meeting files)
-EXISTING_JSON=$(find data -maxdepth 1 -name "*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
+# Check if JSON already exists for this date (or this specific meeting when
+# --id is given — historical meetings aren't on the current OnBase list, so
+# they can only be scraped by ID)
+# -maxdepth 1 keeps data/changes/ stubs out (same basename as real meeting files);
+# meeting_ prefix keeps other per-date JSON (e.g. minutes) from matching
+if [ -n "$MEETING_ID" ]; then
+    EXISTING_JSON=$(find data -maxdepth 1 -name "meeting_${MEETING_ID}_*.json" 2>/dev/null | wc -l | tr -d ' ')
+else
+    EXISTING_JSON=$(find data -maxdepth 1 -name "meeting_*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
+fi
 
 if [ "$EXISTING_JSON" -gt 0 ] && [ "$FORCE" = "false" ]; then
     echo "✓ Found $EXISTING_JSON existing JSON file(s) for $DATE — skipping scrape"
@@ -45,7 +60,11 @@ else
         echo "Step 1: Running JSON scraper..."
     fi
     echo "⏳ This may take several minutes for agendas with many supporting documents..."
-    node json-scraper.js --date "$DATE"
+    if [ -n "$MEETING_ID" ]; then
+        node json-scraper.js "$MEETING_ID"
+    else
+        node json-scraper.js --date "$DATE"
+    fi
 
     if [ $? -ne 0 ]; then
         echo "❌ JSON scraper failed"
@@ -86,8 +105,9 @@ if [ "$EXISTING_JSON" -gt 0 ]; then
     # sections. Without this step, financial sections silently disappear.
     REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
     # -maxdepth 1: data/changes/ stubs share the same basename and would
-    # clobber the real funding manifest with an empty one
-    MEETING_FILES=$(find "$REPO_ROOT/agenda-scraper/data" -maxdepth 1 -name "*${DATE}*.json" -not -name "*.bak.*" 2>/dev/null)
+    # clobber the real funding manifest with an empty one; meeting_ prefix
+    # keeps other per-date JSON (e.g. minutes) from doing the same
+    MEETING_FILES=$(find "$REPO_ROOT/agenda-scraper/data" -maxdepth 1 -name "meeting_*${DATE}*.json" -not -name "*.bak.*" 2>/dev/null)
     if [ -n "$MEETING_FILES" ]; then
         if [ -f "$REPO_ROOT/.venv/bin/python3" ]; then
             (

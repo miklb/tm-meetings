@@ -51,6 +51,7 @@ SKIP_VIDEO=false
 SKIP_SITE=false
 DRY_RUN=false
 MEETING_TYPE=""
+LOOKUP_PAGES=1
 
 # ── Parse args ─────────────────────────────────────────────────────────────────
 if [[ $# -lt 1 ]]; then
@@ -61,6 +62,8 @@ if [[ $# -lt 1 ]]; then
     echo "  --skip-video       Skip YouTube video matching / Whisper offset"
     echo "  --skip-site        Skip DB rebuild and Eleventy build"
     echo "  --meeting-type T   Override meeting type (CRA, workshop, evening, regular)"
+    echo "  --pages N          Transcript index pages to search for the date (default: 1;"
+    echo "                     use more for older meetings, e.g. 8 reaches back ~1 year)"
     echo "  --dry-run          Show what would be done without executing"
     exit 1
 fi
@@ -89,6 +92,7 @@ while [[ $# -gt 0 ]]; do
         --skip-site)   SKIP_SITE=true; shift ;;
         --dry-run)     DRY_RUN=true; shift ;;
         --meeting-type) MEETING_TYPE="$2"; shift 2 ;;
+        --pages)       LOOKUP_PAGES="$2"; shift 2 ;;
         *)
             echo "Unknown option: $1"
             exit 1
@@ -135,7 +139,7 @@ fi
 # ── Resolve pkey from date if needed ───────────────────────────────────────────
 if [[ -z "$PKEY" ]]; then
     echo "Looking up transcript pkey for $DATE..."
-    PKEYS=$("$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" --pkey-only 2>/dev/null)
+    PKEYS=$("$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" --pkey-only --pages "$LOOKUP_PAGES" 2>/dev/null)
     PKEY_COUNT=$(echo "$PKEYS" | grep -c . || true)
 
     if [[ "$PKEY_COUNT" -eq 0 ]] || [[ -z "$PKEYS" ]]; then
