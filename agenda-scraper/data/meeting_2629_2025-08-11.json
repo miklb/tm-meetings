@@ -1,0 +1,79 @@
+{
+  "meetingId": "2629",
+  "meetingType": "regular",
+  "agendaType": "FINAL",
+  "isAddendum": false,
+  "meetingDate": "August 11, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2629&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "16618",
+      "title": "File No. B2026-2\nReview and discuss the Recommended Fiscal Year 2026 Budget for the City of Tampa.",
+      "rawTitle": "File No. B2026-2\nReview and discuss the Recommended Fiscal Year 2026 Budget for the City of Tampa.",
+      "fileNumber": "B2026-2",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
+    },
+    {
+      "number": 2,
+      "agendaItemId": "16617",
+      "title": "File No. CM25-14485 \nStaff to identify any large non-profit organizations that need City funding for their grant matching. (Original motion initiated by Hurtak-Viera on April 24, 2025)(Continued from August 4, 2025)",
+      "rawTitle": "File No. CM25-14485 \nStaff to identify any large non-profit organizations that need City funding for their grant matching. (Original motion initiated by Hurtak-Viera on April 24, 2025)(Continued from August 4, 2025)",
+      "fileNumber": "CM25-14485",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
+    },
+    {
+      "number": 3,
+      "agendaItemId": "16616",
+      "title": "File No. CM25-16616\nCouncil to have discussion on Social Actions and Arts Funding. (Original motion initiated by Maniscalco-Hurtak on August 4, 2025)",
+      "rawTitle": "File No. CM25-16616\nCouncil to have discussion on Social Actions and Arts Funding. (Original motion initiated by Maniscalco-Hurtak on August 4, 2025)",
+      "fileNumber": "CM25-16616",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
+    },
+    {
+      "number": 4,
+      "agendaItemId": "16439",
+      "title": "File No. CM25-16439\nAdministration to provide a written report on their position on utilizing funds for the disability internship program from the SAAF fund to the general fund. (Original motion initiated by Viera-Maniscalco on July 31, 2025)\n\nMemorandum from Ocea J. Wynn, MPA, CPM, Administrator of Neighborhood & Community Affairs, notifying City Council that said topic was addressed on August 7, 2025 via a memorandum that was submitted. (To be R/F)",
+      "rawTitle": "File No. CM25-16439\nAdministration to provide a written report on their position on utilizing funds for the disability internship program from the SAAF fund to the general fund. (Original motion initiated by Viera-Maniscalco on July 31, 2025)\n\nMemorandum from Ocea J. Wynn, MPA, CPM, Administrator of Neighborhood & Community Affairs, notifying City Council that said topic was addressed on August 7, 2025 via a memorandum that was submitted. (To be R/F)",
+      "fileNumber": "CM25-16439",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "MEMO.WYNN - 081125 SPECIAL CALL BUDGET WORKSHP - FILE NO. CM25-16439 - AGENDA ITEM NO. 4.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.WYNN%20-%20081125%20SPECIAL%20CALL%20BUDGET%20WORKSHP%20-%20FILE%20NO.%20CM25-16439%20-%20AGEND.pdf?documentType=1&meetingId=2629&itemId=16439&publishId=134637&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO.WYNN - 081125 SPECIAL CALL BUDGET WORKSHP - FILE NO. CM25-16439 - AGENDA ITEM NO. 4.PDF in a new tab",
+          "originalText": "MEMO.WYNN - 081125 SPECIAL CALL BUDGET WORKSHP - FILE NO. CM25-16439 - AGENDA ITEM NO. 4.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-11/meeting-2629/16439/memo.wynn-081125-special-call-budget-workshp-file-no.-cm25-16439-agenda-item-no.-4.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WRITTEN STAFF REPORTS"
+    }
+  ],
+  "formattedDate": "2025-08-11"
+}

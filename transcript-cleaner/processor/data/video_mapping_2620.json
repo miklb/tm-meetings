@@ -1,0 +1,150 @@
+{
+  "meeting_id": 2620,
+  "meeting_date": "2025-07-17",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "b4aw0HQx4Tw",
+      "title": "Tampa City Council - 07/17/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-07-18T05:00:09Z",
+      "duration": "PT3H28M30S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 2: E2025-15 - Police Officer Of The Month",
+          "timestamp": "00:13:51",
+          "seconds": 831
+        },
+        {
+          "title": "Item 1: B2026-2 - FY25 Budget Presentation",
+          "timestamp": "00:28:01",
+          "seconds": 1681
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "02:14:31",
+          "seconds": 8071
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "03:20:49",
+          "seconds": 12049
+        }
+      ],
+      "offset_seconds": 333
+    },
+    {
+      "video_id": "76CrB2UDXsw",
+      "title": "Tampa City Council - 07/17/25 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-07-18T08:51:58Z",
+      "duration": "PT3H7M36S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 49: VAC-24-19 - Alley Vacation Near I-275",
+          "timestamp": "00:14:28",
+          "seconds": 868
+        },
+        {
+          "title": "Item 50: Z03-77 - Correcting Rezoning Ordinance",
+          "timestamp": "00:16:48",
+          "seconds": 1008
+        },
+        {
+          "title": "Item 51: REZ-24-114 - 206 W Columbus Dr",
+          "timestamp": "00:17:28",
+          "seconds": 1048
+        },
+        {
+          "title": "Item 52: REZ-25-17 - 7602 N Nebraska Ave",
+          "timestamp": "00:19:18",
+          "seconds": 1158
+        },
+        {
+          "title": "Item 53: REZ-25-34 - 3305 W Oakellar Ave",
+          "timestamp": "00:20:48",
+          "seconds": 1248
+        },
+        {
+          "title": "Item 54: REZ-25-38 - Dale Mabry Clinic",
+          "timestamp": "00:22:38",
+          "seconds": 1358
+        },
+        {
+          "title": "Item 55: REZ-25-44 - 2509 N 54th St",
+          "timestamp": "00:28:38",
+          "seconds": 1718
+        },
+        {
+          "title": "Item 56: REZ-25-47 - 2511 W St Isabel St",
+          "timestamp": "00:29:58",
+          "seconds": 1798
+        },
+        {
+          "title": "Item 57: REZ-25-03 - 614 E 7th Ave",
+          "timestamp": "00:31:18",
+          "seconds": 1878
+        },
+        {
+          "title": "Item 58: PH25-14870 - Empedrado Water Main Hearing",
+          "timestamp": "00:32:58",
+          "seconds": 1978
+        },
+        {
+          "title": "Item 59: VAC-24-12 - Vacation North Of Interbay",
+          "timestamp": "00:35:38",
+          "seconds": 2138
+        },
+        {
+          "title": "Item 60: VAC-25-07 - Alley Vacation Near Dewey St",
+          "timestamp": "00:53:54",
+          "seconds": 3234
+        },
+        {
+          "title": "Item 61: VAC-25-10 - Alley Vacation Near Ivy St",
+          "timestamp": "01:09:34",
+          "seconds": 4174
+        },
+        {
+          "title": "Item 62: HN25-15718 - Naming Forest Hills Field",
+          "timestamp": "01:49:47",
+          "seconds": 6587
+        },
+        {
+          "title": "Item 64: MAM25-15433 - Ford Vehicle Maintenance Contracts",
+          "timestamp": "01:54:47",
+          "seconds": 6887
+        },
+        {
+          "title": "Item 68: E2025-8 CH 27 - Add Channel District To CBD",
+          "timestamp": "01:55:07",
+          "seconds": 6907
+        },
+        {
+          "title": "Item 69: CM24-4303 - Land Code Reform Report",
+          "timestamp": "02:09:23",
+          "seconds": 7763
+        },
+        {
+          "title": "Information Reports & New Business",
+          "timestamp": "02:39:06",
+          "seconds": 9546
+        }
+      ],
+      "transcript_start_time": "01:38:21PM",
+      "offset_seconds": 775
+    }
+  ]
+}

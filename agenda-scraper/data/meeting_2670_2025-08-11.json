@@ -1,0 +1,26 @@
+{
+  "meetingId": "2670",
+  "meetingType": "regular",
+  "agendaType": "FINAL",
+  "isAddendum": false,
+  "meetingDate": "August 11, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2670&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "16659",
+      "title": "File No. B2026-2\nReview and discuss the Fiscal Year 2026 Stormwater Budget",
+      "rawTitle": "File No. B2026-2\nReview and discuss the Fiscal Year 2026 Stormwater Budget",
+      "fileNumber": "B2026-2",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
+    }
+  ],
+  "formattedDate": "2025-08-11"
+}

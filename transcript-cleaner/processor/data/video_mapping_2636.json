@@ -1,0 +1,58 @@
+{
+  "meeting_id": 2636,
+  "meeting_date": "2025-09-25",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "GCnJa_4faL8",
+      "title": "Tampa City Council PM - 09/25/25",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2025-09-26T10:31:05Z",
+      "duration": "PT1H25M6S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 2: TA/CPA25-03 - Channel District CRA Area",
+          "timestamp": "00:16:02",
+          "seconds": 962
+        },
+        {
+          "title": "Item 3: TA/CPA25-05 - 1300 E Harbor & Channelside",
+          "timestamp": "00:26:55",
+          "seconds": 1615
+        },
+        {
+          "title": "Item 5: TA/CPA25-08 - 2306 North Boulevard",
+          "timestamp": "00:47:22",
+          "seconds": 2842
+        },
+        {
+          "title": "Item 7: TA/CPA25-12 - 3618 West Euclid Avenue",
+          "timestamp": "00:55:55",
+          "seconds": 3355
+        },
+        {
+          "title": "Item 8: AB2-25-06 - 1616 East 7th Avenue",
+          "timestamp": "01:02:34",
+          "seconds": 3754
+        },
+        {
+          "title": "Item 10: AB2-25-18 - 4121 Henderson Boulevard",
+          "timestamp": "01:11:44",
+          "seconds": 4304
+        },
+        {
+          "title": "Information Reports  and New Business",
+          "timestamp": "01:19:35",
+          "seconds": 4775
+        }
+      ],
+      "offset_seconds": 614
+    }
+  ]
+}

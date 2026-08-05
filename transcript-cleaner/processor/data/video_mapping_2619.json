@@ -1,0 +1,43 @@
+{
+  "meeting_id": 2619,
+  "meeting_date": "2025-08-04",
+  "meeting_type": "Workshop",
+  "videos": [
+    {
+      "video_id": "n5Tg32N39Ws",
+      "title": "Tampa City Council Special Call - 08/04/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-08-04T21:18:01Z",
+      "duration": "PT4H6M56S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: B2026-2 - FY2026 Budget Discussion",
+          "timestamp": "00:04:53",
+          "seconds": 293
+        },
+        {
+          "title": "Approval of the Agenda and Addendum to the Agenda",
+          "timestamp": "00:05:13",
+          "seconds": 313
+        },
+        {
+          "title": "item 3: F25-14353 - Amended Capital Improvement Resolution",
+          "timestamp": "00:07:04",
+          "seconds": 424
+        },
+        {
+          "title": "Item 1: B2026-2 - FY2026 Budget Discussion",
+          "timestamp": "00:07:23",
+          "seconds": 443
+        }
+      ],
+      "offset_seconds": 261
+    }
+  ]
+}

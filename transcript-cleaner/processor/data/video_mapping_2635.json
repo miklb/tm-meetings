@@ -1,0 +1,58 @@
+{
+  "meeting_id": 2635,
+  "meeting_date": "2025-09-25",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "shoB-RE7NCc",
+      "title": "Tampa City Council Workshop - 09/25/25",
+      "part": 1,
+      "session": "morning",
+      "published_at": "2025-09-25T17:47:21Z",
+      "duration": "PT4H34M5S",
+      "chapters": [
+        {
+          "title": "Item 1: CM25-16253 - Hispanic Heritage Month Presentation",
+          "timestamp": "00:11:47",
+          "seconds": 707
+        },
+        {
+          "title": "Item 5: CM25-16804/CM25-16805 - Coastal Plan & Tampa Hope Report",
+          "timestamp": "00:16:51",
+          "seconds": 1011
+        },
+        {
+          "title": "Item 2: CM25-17656 - Multi-Modal Fee Increase Workshop",
+          "timestamp": "00:49:37",
+          "seconds": 2977
+        },
+        {
+          "title": "Item 4: CM25-16803 - Housing Needs Assessment Presentation",
+          "timestamp": "01:30:11",
+          "seconds": 5411
+        },
+        {
+          "title": "Item 5: CM25-16804/CM25-16805 - Coastal Plan & Tampa Hope Report",
+          "timestamp": "02:30:11",
+          "seconds": 9011
+        },
+        {
+          "title": "Item 3: CM25-16436 - Senate Bill 180 Discussion",
+          "timestamp": "03:05:47",
+          "seconds": 11147
+        },
+        {
+          "title": "Item 6: CM25-16806 - Live Local Act Update",
+          "timestamp": "04:22:18",
+          "seconds": 15738
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "04:30:18",
+          "seconds": 16218
+        }
+      ],
+      "offset_seconds": 421
+    }
+  ]
+}
