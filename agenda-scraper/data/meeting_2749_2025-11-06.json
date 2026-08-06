@@ -1,0 +1,27 @@
+{
+  "meetingId": "2749",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "November 6, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2749&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 2,
+      "agendaItemId": "18932",
+      "title": "File No. BA25-18932 (3-minute presentation per applicant)Presentation of applicants expressing an interest in being appointed to a position on the Hillsborough County City-County Planning Commission. Shirley Foxx-Knowles, City Clerk, transmitting eight (8) applications expressing an interest in being considered for an appointment for a position on the Hillsborough County City-County Planning Commission. (To be R/F)",
+      "rawTitle": "File No. BA25-18932 (3-minute presentation per applicant)Presentation of applicants expressing an interest in being appointed to a position on the Hillsborough County City-County Planning Commission. Shirley Foxx-Knowles, City Clerk, transmitting eight (8) applications expressing an interest in being considered for an appointment for a position on the Hillsborough County City-County Planning Commission. (To be R/F)",
+      "fileNumber": "BA25-18932",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "walkons",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2025-11-06"
+}

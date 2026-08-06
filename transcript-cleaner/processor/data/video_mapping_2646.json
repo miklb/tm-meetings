@@ -1,0 +1,134 @@
+{
+  "meeting_id": 2646,
+  "meeting_date": "2025-11-20",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "6sozNp1_Z9I",
+      "title": "Tampa City Council - 11/20/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-11-21T07:16:14Z",
+      "duration": "PT2H7M50S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM25-17434 - Commendation For Valerie Soberon",
+          "timestamp": "00:25:21",
+          "seconds": 1521
+        },
+        {
+          "title": "Item 2: CM25-17585 - Planning Commission 2026 Redistricting",
+          "timestamp": "00:34:02",
+          "seconds": 2042
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:47:58",
+          "seconds": 2878
+        },
+        {
+          "title": "Item 3: BA25-19219 - Appoint Rick Kugler To Planning",
+          "timestamp": "01:45:28",
+          "seconds": 6328
+        },
+        {
+          "title": "Item 4: BA25-18932 - Planning Commission Applicant Presentations",
+          "timestamp": "01:46:02",
+          "seconds": 6362
+        }
+      ],
+      "offset_seconds": 521
+    },
+    {
+      "video_id": "qzEIjT5agGU",
+      "title": "Tampa City Council - 11/20/25 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-11-20T23:07:36Z",
+      "duration": "PT4H25M26S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "00:06:08",
+          "seconds": 368
+        },
+        {
+          "title": "Item 57: CIP-CIS FY26-30 - Capital Improvement Schedule",
+          "timestamp": "00:08:47",
+          "seconds": 527
+        },
+        {
+          "title": "Item 58: TA/CPA25-09 - Multiple 7th Avenue Addresses",
+          "timestamp": "00:10:31",
+          "seconds": 631
+        },
+        {
+          "title": "Item 61: AB2-25-21 - 218 & 220 East Davis Boulevard",
+          "timestamp": "00:13:59",
+          "seconds": 839
+        },
+        {
+          "title": "Item 59: AB2-25-15 - 2905 North 50th Street",
+          "timestamp": "00:16:23",
+          "seconds": 983
+        },
+        {
+          "title": "Item 60: AB2-25-20 - 340 East Davis Boulevard",
+          "timestamp": "00:18:43",
+          "seconds": 1123
+        },
+        {
+          "title": "Item 65: DE2-25-14-C - 505 West Ross Avenue",
+          "timestamp": "00:55:41",
+          "seconds": 3341
+        },
+        {
+          "title": "Item 62: E2025-8 CH 27 - Seminole Heights Zoning Updates",
+          "timestamp": "00:55:47",
+          "seconds": 3347
+        },
+        {
+          "title": "Item 66: E2025-8 CH 16 & 23.5 - City Parks Trail Regulation",
+          "timestamp": "01:22:58",
+          "seconds": 4978
+        },
+        {
+          "title": "Item 74: CM25-17928 - Inclusive Playground Equipment Rollout",
+          "timestamp": "02:25:10",
+          "seconds": 8710
+        },
+        {
+          "title": "Item 72: CM25-17464 - Hurricane Stormwater Assessment Report",
+          "timestamp": "02:39:50",
+          "seconds": 9590
+        },
+        {
+          "title": "Item 73: CM25-12212 - Stormwater Master Plan Update",
+          "timestamp": "03:14:23",
+          "seconds": 11663
+        },
+        {
+          "title": "Item 75: CM25-17656 - Multi-Modal Impact Fee Workshop",
+          "timestamp": "03:27:57",
+          "seconds": 12477
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "04:00:00",
+          "seconds": 14400
+        }
+      ],
+      "offset_seconds": -199
+    }
+  ]
+}

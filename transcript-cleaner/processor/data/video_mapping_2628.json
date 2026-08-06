@@ -1,0 +1,48 @@
+{
+  "meeting_id": 2628,
+  "meeting_date": "2025-08-28",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "8gOk_LZSijo",
+      "title": "Tampa City Council PM - 08/28/25",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2025-08-29T02:34:45Z",
+      "duration": "PT5H19M38S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: TA/CPA24-04 - 2045 Future Land Use Workshop",
+          "timestamp": "00:18:20",
+          "seconds": 1100
+        },
+        {
+          "title": "Recess",
+          "timestamp": "01:58:47",
+          "seconds": 7127
+        },
+        {
+          "title": "Item 1: TA/CPA24-04 - 2045 Future Land Use Workshop",
+          "timestamp": "02:14:18",
+          "seconds": 8058
+        },
+        {
+          "title": "Recess",
+          "timestamp": "04:30:31",
+          "seconds": 16231
+        },
+        {
+          "title": "Item 1: TA/CPA24-04 - 2045 Future Land Use Workshop",
+          "timestamp": "04:50:43",
+          "seconds": 17443
+        }
+      ],
+      "offset_seconds": 529
+    }
+  ]
+}

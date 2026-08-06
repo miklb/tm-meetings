@@ -1,0 +1,140 @@
+{
+  "meeting_id": 2621,
+  "meeting_date": "2025-08-07",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "okncGdbsWWw",
+      "title": "Tampa City Council - 08/07/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-08-08T04:32:10Z",
+      "duration": "PT3H11M5S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2025-15 - Police Employee of the Month",
+          "timestamp": "00:30:44",
+          "seconds": 1844
+        },
+        {
+          "title": "Item 2: E2025-15 - ATU Employee of the Month",
+          "timestamp": "00:40:44",
+          "seconds": 2444
+        },
+        {
+          "title": "Administration Update",
+          "timestamp": "00:53:43",
+          "seconds": 3223
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:54:59",
+          "seconds": 3299
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:01:20",
+          "seconds": 7280
+        },
+        {
+          "title": "Item 44: VAC-24-12 - Switzer Ave & Green Ave",
+          "timestamp": "02:05:41",
+          "seconds": 7541
+        },
+        {
+          "title": "Item 45: VAC-25-07 - Abdella & Dewey St Area",
+          "timestamp": "02:07:49",
+          "seconds": 7669
+        },
+        {
+          "title": "Item 46: HN25-15718 - Naming Forest Hills Park to honor Roland Paz, Sr.",
+          "timestamp": "02:09:40",
+          "seconds": 7780
+        },
+        {
+          "title": "Item 48: E2025-8 CH 21 - Stormwater Service Assessment",
+          "timestamp": "02:11:30",
+          "seconds": 7890
+        },
+        {
+          "title": "Item 49: E2025-8 CH 21 - Stormwater Capital Assessment",
+          "timestamp": "02:16:14",
+          "seconds": 8174
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:26:38",
+          "seconds": 8798
+        },
+        {
+          "title": "Item 52: CM25-15693 - TPD Impound Project Update",
+          "timestamp": "02:52:38",
+          "seconds": 10358
+        }
+      ],
+      "offset_seconds": 531
+    },
+    {
+      "video_id": "uDy89LQOadk",
+      "title": "Tampa City Council - 08/07/25 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-08-08T07:38:04Z",
+      "duration": "PT1H54M",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 53: CM25-13759 - Office for Returning Citizens",
+          "timestamp": "00:08:19",
+          "seconds": 499
+        },
+        {
+          "title": "Item 54: CM25-15201 - Leonard and George Levy Street Naming",
+          "timestamp": "00:09:13",
+          "seconds": 553
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "00:17:52",
+          "seconds": 1072
+        },
+        {
+          "title": "Item 53: CM25-13759 - Office for Returning Citizens",
+          "timestamp": "00:33:26",
+          "seconds": 2006
+        },
+        {
+          "title": "Item 56: CM24-8549 - Apprenticeship Ordinance Report",
+          "timestamp": "00:45:33",
+          "seconds": 2733
+        },
+        {
+          "title": "Item 58: CM25-13970 - Charter Review Themes Discussion",
+          "timestamp": "00:50:47",
+          "seconds": 3047
+        },
+        {
+          "title": "Item 57: CM25-13970 - Charter Review Ordinance Draft",
+          "timestamp": "00:57:02",
+          "seconds": 3422
+        },
+        {
+          "title": "Information Reports & New Business",
+          "timestamp": "01:36:26",
+          "seconds": 5786
+        }
+      ],
+      "transcript_start_time": "01:34:57PM",
+      "offset_seconds": 463
+    }
+  ]
+}

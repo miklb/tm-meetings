@@ -1,0 +1,78 @@
+{
+  "meeting_id": 2649,
+  "meeting_date": "2025-12-11",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "UEIWcAlzbpo",
+      "title": "Tampa City Council PM - 12/11/25",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2025-12-12T03:57:40Z",
+      "duration": "PT5H46M11S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: BG25-18610 - HUD Performance Report",
+          "timestamp": "00:21:04",
+          "seconds": 1264
+        },
+        {
+          "title": "Item 4: REZ-25-76 - 901\u2013911 E Ellicott St",
+          "timestamp": "00:27:04",
+          "seconds": 1624
+        },
+        {
+          "title": "Item 5: REZ-25-88 - 2316 W North B St",
+          "timestamp": "01:12:00",
+          "seconds": 4320
+        },
+        {
+          "title": "Item 2: VAC-25-15 - 15th Ave & 31st St Area",
+          "timestamp": "02:42:40",
+          "seconds": 9760
+        },
+        {
+          "title": "Item 6: REZ-25-97 - 3105 E Columbus Dr & 15th Ave",
+          "timestamp": "02:48:35",
+          "seconds": 10115
+        },
+        {
+          "title": "Item 7: REZ-25-104 - 4311 W Gray St",
+          "timestamp": "04:01:01",
+          "seconds": 14461
+        },
+        {
+          "title": "Item 8: REZ-25-105 - 1112 W La Salle St",
+          "timestamp": "04:13:31",
+          "seconds": 15211
+        },
+        {
+          "title": "Item 9: REZ-25-123 - 3215 W Santiago St",
+          "timestamp": "04:22:12",
+          "seconds": 15732
+        },
+        {
+          "title": "Item 10: REZ-25-128 - 3812 Pinewood St",
+          "timestamp": "04:54:39",
+          "seconds": 17679
+        },
+        {
+          "title": "Item 11: REZ-26-01 - 1942\u20131948 W Spruce St",
+          "timestamp": "05:16:18",
+          "seconds": 18978
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "05:36:34",
+          "seconds": 20194
+        }
+      ],
+      "offset_seconds": 680
+    }
+  ]
+}

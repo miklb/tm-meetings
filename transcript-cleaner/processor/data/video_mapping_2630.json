@@ -1,0 +1,104 @@
+{
+  "meeting_id": 2630,
+  "meeting_date": "2025-09-04",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "JUR4OIldME0",
+      "title": "Tampa City Council - 09/04/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-09-05T05:11:12Z",
+      "duration": "PT3H57M26S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1. File No. E2025-15Police Officer of the Month",
+          "timestamp": "00:15:25",
+          "seconds": 925
+        },
+        {
+          "title": "Item 2: File No. E2025-15 Firefighter of the Quarter",
+          "timestamp": "00:25:24",
+          "seconds": 1524
+        },
+        {
+          "title": "Item 3: File No. CM25-16212 Ccommendation to Jace Kohan",
+          "timestamp": "00:40:11",
+          "seconds": 2411
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:57:40",
+          "seconds": 3460
+        },
+        {
+          "title": "Item 4: File No. BA25-17227 HPC Appointment",
+          "timestamp": "01:31:42",
+          "seconds": 5502
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:34:35",
+          "seconds": 5675
+        },
+        {
+          "title": "Item 25: File No. AB2-25-11 2301 North Albany Avenue",
+          "timestamp": "01:46:25",
+          "seconds": 6385
+        },
+        {
+          "title": "Item 26 File No. BLC-22-185-C 1411 N. 17th Street",
+          "timestamp": "01:49:55",
+          "seconds": 6595
+        },
+        {
+          "title": "Item 34: File No. CM24-9090 Sulphur Springs budget",
+          "timestamp": "02:33:50",
+          "seconds": 9230
+        },
+        {
+          "title": "Item 37: File No. CM24-4303 Land Development Code Reform",
+          "timestamp": "02:34:50",
+          "seconds": 9290
+        },
+        {
+          "title": "Walk On Item : Parking Garages",
+          "timestamp": "02:51:18",
+          "seconds": 10278
+        }
+      ],
+      "offset_seconds": 341
+    },
+    {
+      "video_id": "-dVf1L2oHZY",
+      "title": "Tampa City Council - 09/04/25 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-09-04T19:37:36Z",
+      "duration": "PT2H5M29S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 27: File No. E2025-8 CH 27 suspension of alcoholic beverage permit hearings",
+          "timestamp": "00:17:52",
+          "seconds": 1072
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:59:20",
+          "seconds": 7160
+        }
+      ],
+      "transcript_start_time": "01:41:02PM"
+    }
+  ]
+}

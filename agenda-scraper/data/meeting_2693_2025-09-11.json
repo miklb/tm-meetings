@@ -1,0 +1,25 @@
+{
+  "meetingId": "2693",
+  "meetingType": "evening",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "September 11, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2693&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": null,
+      "agendaItemId": null,
+      "title": "Resolution of the City Council of the City of Tampa, Florida, setting two workshop meetings of the City Council of the City of Tampa on a proposed increase to the Multi-Modal Transportation Impact Fee; providing for public notice of the public workshop meetings; providing an effective date.",
+      "rawTitle": "Resolution of the City Council of the City of Tampa, Florida, setting two workshop meetings of the City Council of the City of Tampa on a proposed increase to the Multi-Modal Transportation Impact Fee; providing for public notice of the public workshop meetings; providing an effective date.",
+      "fileNumber": "Multi-Modal",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "addendumSection": "walkons",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2025-09-11"
+}

@@ -1,0 +1,27 @@
+{
+  "meetingId": "2676",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "August 7, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2676&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 20,
+      "agendaItemId": "16108",
+      "title": "File No. INF25-16108Resolution authorizing an Agreement for Consultant Services in the amount of $141,825 between the City of Tampa and Wilder Architecture, Inc. in connection with Contract 24-C-00040 New Fire Fleet Maintenance Building Assessment; authorizing the Mayor of the City of Tampa to execute same; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "rawTitle": "File No. INF25-16108Resolution authorizing an Agreement for Consultant Services in the amount of $141,825 between the City of Tampa and Wilder Architecture, Inc. in connection with Contract 24-C-00040 New Fire Fleet Maintenance Building Assessment; authorizing the Mayor of the City of Tampa to execute same; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "fileNumber": "INF25-16108Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "removedFromConsent",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2025-08-07"
+}

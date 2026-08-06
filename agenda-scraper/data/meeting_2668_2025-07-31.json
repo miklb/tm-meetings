@@ -1,0 +1,43 @@
+{
+  "meetingId": "2668",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "July 31, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2668&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 32,
+      "agendaItemId": "15877",
+      "title": "File No. INF25-15877Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $2,500,000 for credit card fee expenses for use by Parking Department and Water Department within the Consumer Services Fund and Parking Operations Fund; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "rawTitle": "File No. INF25-15877Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $2,500,000 for credit card fee expenses for use by Parking Department and Water Department within the Consumer Services Fund and Parking Operations Fund; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "fileNumber": "INF25-15877Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "removedFromConsent",
+      "continuedToDate": null
+    },
+    {
+      "number": 51,
+      "agendaItemId": "15892",
+      "title": "File No. DEO25-15892Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $12,000,000 for use by the Mobility Department and Development & Growth Management Department within the Utilities Services Tax Fund, Stormwater Special Revenue Fund, Local Option Gas Tax Capital Projects Fund, and the Housing Program Fund for stormwater maintenance, street resurfacing, sidewalks, and housing flooding assistance; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "rawTitle": "File No. DEO25-15892Resolution making certain changes in the budget of the City of Tampa for the fiscal year ending September 30, 2025; approving the transfer, reallocation, and/or appropriation of $12,000,000 for use by the Mobility Department and Development & Growth Management Department within the Utilities Services Tax Fund, Stormwater Special Revenue Fund, Local Option Gas Tax Capital Projects Fund, and the Housing Program Fund for stormwater maintenance, street resurfacing, sidewalks, and housing flooding assistance; providing an effective date. Memorandum from Councilmember Hurtak, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "fileNumber": "DEO25-15892Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "removedFromConsent",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2025-07-31"
+}

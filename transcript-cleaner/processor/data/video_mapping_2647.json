@@ -1,0 +1,190 @@
+{
+  "meeting_id": 2647,
+  "meeting_date": "2025-12-04",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "Rj-OrI_LXLs",
+      "title": "Tampa City Council - 12/04/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-12-05T06:01:15Z",
+      "duration": "PT3H35M36S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2025-15 - Police Officer Commendation",
+          "timestamp": "00:27:45",
+          "seconds": 1665
+        },
+        {
+          "title": "Item 2: E2025-15 - Firefighter Commendation",
+          "timestamp": "00:41:24",
+          "seconds": 2484
+        },
+        {
+          "title": "Item 3: E2025-15 - ATU Employee Commendation",
+          "timestamp": "01:02:20",
+          "seconds": 3740
+        },
+        {
+          "title": "Item 64: CM25-18611 - Stormwater Funds Use Review",
+          "timestamp": "01:40:45",
+          "seconds": 6045
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "02:50:14",
+          "seconds": 10214
+        }
+      ],
+      "offset_seconds": 421
+    },
+    {
+      "video_id": "Rur7-fB3B70",
+      "title": "Tampa City Council - 12-4-25- Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-12-05T00:42:15Z",
+      "duration": "PT5H58M46S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:08:44",
+          "seconds": 524
+        },
+        {
+          "title": "Item 4: BA25-19546 - Code Enforcement Board Re-Appoint",
+          "timestamp": "00:20:52",
+          "seconds": 1252
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "00:23:56",
+          "seconds": 1436
+        },
+        {
+          "title": "Item 36: E2025-8 CH 9 - Code Enforcement Ordinance",
+          "timestamp": "00:25:38",
+          "seconds": 1538
+        },
+        {
+          "title": "Item 37: HTX25-18470 - 2234 E. 7th Avenue",
+          "timestamp": "00:43:04",
+          "seconds": 2584
+        },
+        {
+          "title": "Item 38: VAC-25-06 - W. Dryad Street",
+          "timestamp": "00:44:54",
+          "seconds": 2694
+        },
+        {
+          "title": "Item 39: E2025-8 CH 27 - Seminole Heights Zoning",
+          "timestamp": "01:34:09",
+          "seconds": 5649
+        },
+        {
+          "title": "Item 40: E2025-8 CH 27 - Grand Tree Removal",
+          "timestamp": "01:37:49",
+          "seconds": 5869
+        },
+        {
+          "title": "Item 41: E2025-8 CH 27 - Special Uses Regulation",
+          "timestamp": "01:39:27",
+          "seconds": 5967
+        },
+        {
+          "title": "Item 52: DA25-19011 - USF Campus Boundaries",
+          "timestamp": "01:40:27",
+          "seconds": 6027
+        },
+        {
+          "title": "Item 42: REZ-25-45 - 302 N. Oregon Ave. A & B",
+          "timestamp": "01:57:56",
+          "seconds": 7076
+        },
+        {
+          "title": "Item 43: REZ-25-89 - 2012 Linsey Street",
+          "timestamp": "02:00:06",
+          "seconds": 7206
+        },
+        {
+          "title": "Item 44: REZ-25-92 - 1541 W. La Salle Street",
+          "timestamp": "02:01:40",
+          "seconds": 7300
+        },
+        {
+          "title": "Item 45: REZ-25-98 - 1302 N. Oregon Avenue",
+          "timestamp": "02:00:43",
+          "seconds": 7243
+        },
+        {
+          "title": "Item 46: REZ-25-108 - 5705\u20132905 E. Henry Ave.",
+          "timestamp": "02:04:20",
+          "seconds": 7460
+        },
+        {
+          "title": "Item 47: REZ-25-24 - 3075 N. Rocky Point Dr.",
+          "timestamp": "02:07:10",
+          "seconds": 7630
+        },
+        {
+          "title": "Item 48: DRI25-14823 - Rocky Point Harbor DRI",
+          "timestamp": "02:09:00",
+          "seconds": 7740
+        },
+        {
+          "title": "Item 49: AB2-25-20 - 340 E. Davis Boulevard",
+          "timestamp": "02:10:30",
+          "seconds": 7830
+        },
+        {
+          "title": "Item 50: AB2-25-21 - 218 & 220 E. Davis Blvd.",
+          "timestamp": "03:00:30",
+          "seconds": 10830
+        },
+        {
+          "title": "Item 51: BF25-18179 - 1921 N. 53rd & 1810 N. 57th",
+          "timestamp": "04:10:34",
+          "seconds": 15034
+        },
+        {
+          "title": "Item 53: VAC-25-19 - N. of 7th, S. of 9th Ave.",
+          "timestamp": "04:12:54",
+          "seconds": 15174
+        },
+        {
+          "title": "Item 55: DE1-25-127-C - 2805 Old Bayshore Way",
+          "timestamp": "04:18:44",
+          "seconds": 15524
+        },
+        {
+          "title": "Item 56: E2025-8 CH 25 - Multi-Modal Fee Amendment",
+          "timestamp": "04:55:59",
+          "seconds": 17759
+        },
+        {
+          "title": "Item 63: CM25-16988 - Sidewalk Provision Suggestions",
+          "timestamp": "05:14:31",
+          "seconds": 18871
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "05:21:11",
+          "seconds": 19271
+        }
+      ],
+      "transcript_start_time": "01:34:31PM",
+      "offset_seconds": 492
+    }
+  ]
+}

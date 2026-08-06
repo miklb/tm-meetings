@@ -1,0 +1,63 @@
+{
+  "meeting_id": 2632,
+  "meeting_date": "2025-09-11",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "pZGeAgmiJyM",
+      "title": "Tampa City Council PM - 09/11/25",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2025-09-12T10:56:28Z",
+      "duration": "PT1H51M1S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: REZ-25-10 - 4202 N. Seminole Avenue",
+          "timestamp": "00:11:00",
+          "seconds": 660
+        },
+        {
+          "title": "Item 2: REZ-25-57 - 5101 N. 34th Street",
+          "timestamp": "00:20:54",
+          "seconds": 1254
+        },
+        {
+          "title": "Item 3: REZ-25-59 - Sterling & Himes Avenue",
+          "timestamp": "00:30:32",
+          "seconds": 1832
+        },
+        {
+          "title": "Item 4: REZ-25-70 - 703 E. Floribraska Avenue",
+          "timestamp": "00:40:01",
+          "seconds": 2401
+        },
+        {
+          "title": "Item 5: REZ-25-74 - 1318 W. Arch Street",
+          "timestamp": "00:47:37",
+          "seconds": 2857
+        },
+        {
+          "title": "Item 6: REZ-25-78 - 801 E. 26th Avenue",
+          "timestamp": "00:55:18",
+          "seconds": 3318
+        },
+        {
+          "title": "Item 7: REZ-25-80 - 801 E. Saint Clair Street",
+          "timestamp": "01:05:06",
+          "seconds": 3906
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:44:00",
+          "seconds": 6240
+        }
+      ],
+      "offset_seconds": 312
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "meeting_id": 2618,
+  "meeting_date": "2025-07-31",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "e-OXyhpWTUk",
+      "title": "Tampa City Council PM - 07/31/25",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2025-08-01T13:02:56Z",
+      "duration": "PT3H26M35S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: TA/CPA25-01 - Map Amendment Bay to Bay",
+          "timestamp": "00:10:10",
+          "seconds": 610
+        },
+        {
+          "title": "Item 2: TA/CPA25-03 - Bonus Density in Channel CRA",
+          "timestamp": "00:36:05",
+          "seconds": 2165
+        },
+        {
+          "title": "Item 3: AB2-25-04 - 1301 West Cass Street",
+          "timestamp": "01:06:41",
+          "seconds": 4001
+        },
+        {
+          "title": "Item 4: AB2-25-07 - 2234 East 7th Avenue",
+          "timestamp": "01:26:46",
+          "seconds": 5206
+        },
+        {
+          "title": "Item 5: AB2-25-11 - 2301 North Albany Avenue",
+          "timestamp": "02:29:16",
+          "seconds": 8956
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:11:45",
+          "seconds": 11505
+        }
+      ],
+      "offset_seconds": 559
+    }
+  ]
+}

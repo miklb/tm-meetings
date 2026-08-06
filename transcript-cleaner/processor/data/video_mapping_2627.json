@@ -1,0 +1,148 @@
+{
+  "meeting_id": 2627,
+  "meeting_date": "2025-08-28",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "5l8BdOsa56U",
+      "title": "Tampa City Council - 08/28/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-08-28T17:21:00Z",
+      "duration": "PT4H11M39S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM25-16020 - Project Focus Proposal",
+          "timestamp": "00:16:28",
+          "seconds": 988
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:37:24",
+          "seconds": 2244
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:40:54",
+          "seconds": 6054
+        },
+        {
+          "title": "Item 50: TA/CPA25-01 - Comp Plan Amendment: R-20",
+          "timestamp": "01:44:54",
+          "seconds": 6294
+        },
+        {
+          "title": "Item 51: REZ-25-37 - 4911 E 10th Ave",
+          "timestamp": "01:46:44",
+          "seconds": 6404
+        },
+        {
+          "title": "Item 52: REZ-25-43 - 4904 W Paul Ave",
+          "timestamp": "01:48:34",
+          "seconds": 6514
+        },
+        {
+          "title": "Item 53: REZ-25-46 - 1901 W Platt St",
+          "timestamp": "01:50:24",
+          "seconds": 6624
+        },
+        {
+          "title": "Item 54: REZ-25-52 - 2801 N Tampa St",
+          "timestamp": "01:52:14",
+          "seconds": 6734
+        },
+        {
+          "title": "Item 55: REZ-25-55 - 2318 W North B St",
+          "timestamp": "01:53:24",
+          "seconds": 6804
+        },
+        {
+          "title": "Item 56: AB2-25-04 - 1301 W Cass St",
+          "timestamp": "01:55:14",
+          "seconds": 6914
+        },
+        {
+          "title": "Item 57: AB2-25-11 - 2301 N Albany Ave",
+          "timestamp": "01:56:54",
+          "seconds": 7014
+        },
+        {
+          "title": "Item 58: E2025-8 CH 24 - Streetcar Project Assessment",
+          "timestamp": "01:58:24",
+          "seconds": 7104
+        },
+        {
+          "title": "Item 59: E2025-8 CH 24 - Westshore Assessment",
+          "timestamp": "02:05:54",
+          "seconds": 7554
+        },
+        {
+          "title": "Item 60: E2025-8 CH 24 - Downtown Assessment",
+          "timestamp": "02:09:34",
+          "seconds": 7774
+        },
+        {
+          "title": "Item 61: CRP25-16014 - Modify Central Park CRA Plan",
+          "timestamp": "02:16:14",
+          "seconds": 8174
+        },
+        {
+          "title": "Item 62: CRP25-16015 - Modify Tampa Heights CRA Plan",
+          "timestamp": "02:25:44",
+          "seconds": 8744
+        },
+        {
+          "title": "Item 63: CRP25-16016 - Modify Downtown CRA Plan",
+          "timestamp": "02:26:44",
+          "seconds": 8804
+        },
+        {
+          "title": "Item 64: VAC-24-13 - Extend Vacating: 4th Ave.",
+          "timestamp": "02:27:44",
+          "seconds": 8864
+        },
+        {
+          "title": "Item 65: VAC-25-16 - Vacate: Alcolu Ave. Segment",
+          "timestamp": "02:30:24",
+          "seconds": 9024
+        },
+        {
+          "title": "Item 66: E2025-8 CH 9 - Code Enforcement Revisions",
+          "timestamp": "02:34:34",
+          "seconds": 9274
+        },
+        {
+          "title": "Item 67: E2025-8 CH 1 - Charter Review Commission Setup",
+          "timestamp": "02:35:14",
+          "seconds": 9314
+        },
+        {
+          "title": "Item 66: E2025-8 CH 9 - Code Enforcement Revisions",
+          "timestamp": "02:36:54",
+          "seconds": 9414
+        },
+        {
+          "title": "Item 69: F25-14353 - Update Reimbursement Resolution",
+          "timestamp": "02:51:44",
+          "seconds": 10304
+        },
+        {
+          "title": "Item 74: CM25-12212 - Stormwater Master Plan Update",
+          "timestamp": "03:22:14",
+          "seconds": 12134
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:43:34",
+          "seconds": 13414
+        }
+      ],
+      "offset_seconds": 404
+    }
+  ]
+}

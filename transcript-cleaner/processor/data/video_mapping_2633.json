@@ -1,0 +1,130 @@
+{
+  "meeting_id": 2633,
+  "meeting_date": "2025-09-18",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "Vv1RL4FQ_Qo",
+      "title": "Tampa City Council - 09/18/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-09-19T04:34:18Z",
+      "duration": "PT3H9M37S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:28:47",
+          "seconds": 1727
+        },
+        {
+          "title": "Item 48: E2025-8 CH1 - Charter Review Commission Ordinance",
+          "timestamp": "01:14:30",
+          "seconds": 4470
+        },
+        {
+          "title": "Item 49: VAC-24-13 - Extend Water Condition Deadline",
+          "timestamp": "01:16:27",
+          "seconds": 4587
+        },
+        {
+          "title": "Item 51: REZ-25-40 - Rezoning for High-Rise Development",
+          "timestamp": "01:20:31",
+          "seconds": 4831
+        },
+        {
+          "title": "Item 52: REZ-14-42 - Rezoning for Townhomes Approval",
+          "timestamp": "01:22:41",
+          "seconds": 4961
+        },
+        {
+          "title": "Item 55: REZ-25-63 - Rezoning for Professional Office",
+          "timestamp": "01:28:52",
+          "seconds": 5332
+        },
+        {
+          "title": "Item 56: REZ-25-66 - Rezoning for Retail and Hotel",
+          "timestamp": "01:30:14",
+          "seconds": 5414
+        },
+        {
+          "title": "Item 58: REZ-25-68 - Rezoning for Semi-Detached Housing",
+          "timestamp": "01:34:47",
+          "seconds": 5687
+        },
+        {
+          "title": "Item 59: REZ-25-69 - Rezoning for Multifamily Housing",
+          "timestamp": "01:36:20",
+          "seconds": 5780
+        },
+        {
+          "title": "Item 60: REZ-25-79 - Rezoning to RM-18 Approved",
+          "timestamp": "01:38:37",
+          "seconds": 5917
+        },
+        {
+          "title": "Item 61: REZ-24-68 - Rezoning to Single-Family Detached",
+          "timestamp": "01:40:13",
+          "seconds": 6013
+        },
+        {
+          "title": "Item 62: VAC-25-18 - Vacate Alley North of Twiggs",
+          "timestamp": "01:52:38",
+          "seconds": 6758
+        },
+        {
+          "title": "item 70: CM25-12001 - Stormwater System Report",
+          "timestamp": "02:17:44",
+          "seconds": 8264
+        },
+        {
+          "title": "Item 64: HS25-17257 - Levy Street Sign Designation",
+          "timestamp": "02:22:36",
+          "seconds": 8556
+        },
+        {
+          "title": "Item 72: CM25-16988 - Hurricane Fee Waiver Discussion",
+          "timestamp": "02:25:31",
+          "seconds": 8731
+        }
+      ],
+      "offset_seconds": 234
+    },
+    {
+      "video_id": "WtgfIGVru_M",
+      "title": "Tampa City Council - 09/18/25 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-09-19T06:53:35Z",
+      "duration": "PT1H19M51S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 69: CM24-5717 - Fire Station 24 Update",
+          "timestamp": "00:04:40",
+          "seconds": 280
+        },
+        {
+          "title": "Item 63: FDN 25-36-C - Twiggs Property Order Hearing",
+          "timestamp": "00:28:35",
+          "seconds": 1715
+        },
+        {
+          "title": "Information Reports & New Business",
+          "timestamp": "01:06:15",
+          "seconds": 3975
+        }
+      ],
+      "transcript_start_time": "01:30:18PM",
+      "offset_seconds": 251
+    }
+  ]
+}

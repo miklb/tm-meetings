@@ -1,0 +1,27 @@
+{
+  "meetingId": "2758",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "December 4, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2758&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 32,
+      "agendaItemId": "19315",
+      "title": "File No. DEO25-19315Resolution approving a Development Agreement by and between the City of Tampa and CB Capital Resources INC., d/b/a TRU Construction; providing for the conveyance of a City Infill lot located at 1526 N. Nebraska Avenue, Tampa, Florida 33602, and the development, construction, and sale/ rental of such property for use as an affordable single-family attached or single-family detached residential dwelling unit(s) by an income-qualified buyer or renter as part of the City’s Infill III Program; authorizing the Mayor to execute and the City Clerk to attest said agreement and exhibits thereto; providing an effective date. Memorandum from Chair Clendenin, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "rawTitle": "File No. DEO25-19315Resolution approving a Development Agreement by and between the City of Tampa and CB Capital Resources INC., d/b/a TRU Construction; providing for the conveyance of a City Infill lot located at 1526 N. Nebraska Avenue, Tampa, Florida 33602, and the development, construction, and sale/ rental of such property for use as an affordable single-family attached or single-family detached residential dwelling unit(s) by an income-qualified buyer or renter as part of the City’s Infill III Program; authorizing the Mayor to execute and the City Clerk to attest said agreement and exhibits thereto; providing an effective date. Memorandum from Chair Clendenin, requesting that said agenda item be pulled for discussion. (To be R/F)",
+      "fileNumber": "DEO25-19315Res",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "removedFromConsent",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2025-12-04"
+}

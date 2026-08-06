@@ -1,0 +1,93 @@
+{
+  "meeting_id": 2617,
+  "meeting_date": "2025-07-31",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "aQGv_iOb7cQ",
+      "title": "Tampa City Council - 07/31/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-07-31T17:19:01Z",
+      "duration": "PT4H8M41S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Recognition of Mary Bryan",
+          "timestamp": "00:29:03",
+          "seconds": 1743
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:41:40",
+          "seconds": 2500
+        },
+        {
+          "title": "Item 1: BA25-15780 - Reappointment To Housing Authority",
+          "timestamp": "01:37:57",
+          "seconds": 5877
+        },
+        {
+          "title": "Item 2: BA25-15878 - Reappointment To Building Board",
+          "timestamp": "01:39:07",
+          "seconds": 5947
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:48:14",
+          "seconds": 6494
+        },
+        {
+          "title": "Administration Update",
+          "timestamp": "01:58:04",
+          "seconds": 7084
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:07:40",
+          "seconds": 7660
+        },
+        {
+          "title": "Item 73: INF25-15849 - Dissolved Air Reactor Rehab",
+          "timestamp": "02:35:30",
+          "seconds": 9330
+        },
+        {
+          "title": "Item 74: AR25-15819 - Stormwater Audit Work Plan",
+          "timestamp": "02:40:00",
+          "seconds": 9600
+        },
+        {
+          "title": "Item 75: CM25-14494 - Disability Internship Program Report",
+          "timestamp": "02:50:10",
+          "seconds": 10210
+        },
+        {
+          "title": "Item 76: CM25-12733 - Kiley Gardens Damage Update",
+          "timestamp": "03:06:17",
+          "seconds": 11177
+        },
+        {
+          "title": "Item 77: CM25-12001 - Stormwater Maintenance Monthly Report",
+          "timestamp": "03:17:00",
+          "seconds": 11820
+        },
+        {
+          "title": "Item 78: CM25-16022 - $1.8M Hurricane Relief Timeline",
+          "timestamp": "03:34:30",
+          "seconds": 12870
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:52:18",
+          "seconds": 13938
+        }
+      ],
+      "offset_seconds": 969
+    }
+  ]
+}

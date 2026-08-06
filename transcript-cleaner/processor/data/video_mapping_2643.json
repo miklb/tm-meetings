@@ -1,0 +1,150 @@
+{
+  "meeting_id": 2643,
+  "meeting_date": "2025-11-06",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "YorjvRrv1O8",
+      "title": "Tampa City Council - 11/06/25",
+      "part": 1,
+      "session": null,
+      "published_at": "2025-11-07T05:54:07Z",
+      "duration": "PT3H35M30S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2025-15 - Police Officer of the Month",
+          "timestamp": "00:23:52",
+          "seconds": 1432
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:37:32",
+          "seconds": 2252
+        },
+        {
+          "title": "Item 3: BA25-18605 - Babcock Appointment to ARC",
+          "timestamp": "01:41:41",
+          "seconds": 6101
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:42:36",
+          "seconds": 6156
+        },
+        {
+          "title": "Item 43: VAC-25-14 - Alley North of 29th Ave",
+          "timestamp": "01:47:52",
+          "seconds": 6472
+        },
+        {
+          "title": "Item 44: REZ-25-93 - 3801-3819 N. 29th St Area",
+          "timestamp": "01:50:02",
+          "seconds": 6602
+        },
+        {
+          "title": "Item 45: REZ-25-30 - 2741-2747 W. Green Street",
+          "timestamp": "01:56:15",
+          "seconds": 6975
+        },
+        {
+          "title": "Item 46: REZ-25-82 - 6008 S. 6th Street",
+          "timestamp": "01:58:20",
+          "seconds": 7100
+        },
+        {
+          "title": "Item 47: REZ-25-83 - 6307 S. Main Avenue",
+          "timestamp": "02:00:05",
+          "seconds": 7205
+        },
+        {
+          "title": "Item 48: REZ-25-84 - 5802-5804 N. Florida Ave Area",
+          "timestamp": "02:01:40",
+          "seconds": 7300
+        },
+        {
+          "title": "Item 49: REZ-25-85 - 3802-3804 S. Dale Mabry Area",
+          "timestamp": "02:05:47",
+          "seconds": 7547
+        },
+        {
+          "title": "Item 50: REZ-25-95 - 2802 W. Kennedy Boulevard",
+          "timestamp": "02:07:52",
+          "seconds": 7672
+        },
+        {
+          "title": "Item 51: REZ-25-101 - 1501 W. Grace Street",
+          "timestamp": "02:09:57",
+          "seconds": 7797
+        },
+        {
+          "title": "Item 52: BF25-17961 - 1002 N. Howard, 2315-2331 W. Cypress",
+          "timestamp": "02:12:57",
+          "seconds": 7977
+        },
+        {
+          "title": "Item 53: BF25-17962 - 4801-4803 E. Hillsborough, 4710 Shadowlawn",
+          "timestamp": "02:14:11",
+          "seconds": 8051
+        },
+        {
+          "title": "Item 54: VAC-25-06 - West Dryad St, Sunset Camp",
+          "timestamp": "02:15:36",
+          "seconds": 8136
+        }
+      ],
+      "offset_seconds": 464
+    },
+    {
+      "video_id": "tw9A6DZpvmI",
+      "title": "Tampa City Council - 11/06/25 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2025-11-07T10:38:32Z",
+      "duration": "PT3H46M31S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 55: E2025-8 CH 9 - Code Enforcement Revisions",
+          "timestamp": "00:08:01",
+          "seconds": 481
+        },
+        {
+          "title": "Item 56: HTX25-18470 - 2234 E. 7th Avenue",
+          "timestamp": "01:27:14",
+          "seconds": 5234
+        },
+        {
+          "title": "Item 64: CM25-17932 - Henry & Ola Park Updates",
+          "timestamp": "01:32:55",
+          "seconds": 5575
+        },
+        {
+          "title": "Item 62: CM25-14049 - Autism Police Interaction Card",
+          "timestamp": "02:08:51",
+          "seconds": 7731
+        },
+        {
+          "title": "Item 63: CM25-15694 - Tree Trust Fund Report",
+          "timestamp": "02:31:16",
+          "seconds": 9076
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:32:38",
+          "seconds": 12758
+        }
+      ],
+      "transcript_start_time": "01:34:53PM",
+      "offset_seconds": 451
+    }
+  ]
+}

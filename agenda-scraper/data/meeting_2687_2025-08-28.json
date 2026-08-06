@@ -1,0 +1,43 @@
+{
+  "meetingId": "2687",
+  "meetingType": "regular",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "August 28, 2025",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2687&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 57,
+      "agendaItemId": "16914",
+      "title": "File No. AB2-25-11 (UNAN)(Ordinance being presented for second reading and adoption) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – large venue (consumption on-premises only) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 2301 North Albany Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance No. 2022-55; providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Maniscalco-Miranda on July 31, 2025) Email from Debbie Crawford, Legal Secretary, transmitting a substitute ordinance for said agenda item. (To be R/F)(Title of substitute ordinance listed below) (Substitute ordinance being presented for second reading and adoption) - An ordinance approving a special use permit (SU-2) for alcoholic beverage sales – large venue (consumption on-premises and package sales/off-premises consumption) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 2301 North Albany Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance no. 2022-55; providing an effective date",
+      "rawTitle": "File No. AB2-25-11 (UNAN)(Ordinance being presented for second reading and adoption) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – large venue (consumption on-premises only) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 2301 North Albany Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance No. 2022-55; providing an effective date. (Original motion to approve said ordinance on first reading was initiated by Maniscalco-Miranda on July 31, 2025) Email from Debbie Crawford, Legal Secretary, transmitting a substitute ordinance for said agenda item. (To be R/F)(Title of substitute ordinance listed below) (Substitute ordinance being presented for second reading and adoption) - An ordinance approving a special use permit (SU-2) for alcoholic beverage sales – large venue (consumption on-premises and package sales/off-premises consumption) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 2301 North Albany Avenue, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance no. 2022-55; providing an effective date",
+      "fileNumber": "AB2-25-11",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    },
+    {
+      "number": 66,
+      "agendaItemId": "16455",
+      "title": "File No. E2025-8 CH 9(Ordinance being presented for first reading consideration) - An Ordinance of the City of Tampa, Florida, making comprehensive revisions to City of Tampa Code of Ordinances, Chapter 9, Code Enforcement; repealing all ordinances or parts of ordinances in conflict therewith; providing for severability; providing an effective date. Memorandum from Camaria Pettis-Mackle, Assistant City Attorney, transmitting a substitute ordinance for said agenda item. (To be R/F)(Title of substitute ordinance listed below) (Substitute ordinance being presented for second reading and adoption) - An Ordinance of the City of Tampa, Florida, making comprehensive revisions to City of Tampa Code of Ordinances, Chapter 9, Code Enforcement; repealing all ordinances or parts of ordinances in conflict therewith; providing for severability; providing an effective date.",
+      "rawTitle": "File No. E2025-8 CH 9(Ordinance being presented for first reading consideration) - An Ordinance of the City of Tampa, Florida, making comprehensive revisions to City of Tampa Code of Ordinances, Chapter 9, Code Enforcement; repealing all ordinances or parts of ordinances in conflict therewith; providing for severability; providing an effective date. Memorandum from Camaria Pettis-Mackle, Assistant City Attorney, transmitting a substitute ordinance for said agenda item. (To be R/F)(Title of substitute ordinance listed below) (Substitute ordinance being presented for second reading and adoption) - An Ordinance of the City of Tampa, Florida, making comprehensive revisions to City of Tampa Code of Ordinances, Chapter 9, Code Enforcement; repealing all ordinances or parts of ordinances in conflict therewith; providing for severability; providing an effective date.",
+      "fileNumber": "E2025-8",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2025-08-28"
+}

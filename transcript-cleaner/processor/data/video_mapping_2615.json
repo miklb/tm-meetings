@@ -1,0 +1,30 @@
+{
+  "meeting_id": 2615,
+  "meeting_date": "2025-07-24",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "YmIBJG_c4jo",
+      "title": "Community Redevelopment Agency - 07/24/25",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2025-07-25T11:13:06Z",
+      "duration": "PT3H8M19S",
+      "chapters": [],
+      "url": "https://www.youtube.com/watch?v=YmIBJG_c4jo",
+      "offset_seconds": 382
+    },
+    {
+      "video_id": "f-GD8l7B2Sg",
+      "title": "Community Redevelopment Agency - 07/24/25 - Part 2",
+      "part": 2,
+      "session": "evening",
+      "published_at": "2025-07-25T11:13:06Z",
+      "duration": "PT1H36M40S",
+      "chapters": [],
+      "url": "https://www.youtube.com/watch?v=f-GD8l7B2Sg",
+      "transcript_start_time": "1:38:39PM",
+      "offset_seconds": 707
+    }
+  ]
+}
