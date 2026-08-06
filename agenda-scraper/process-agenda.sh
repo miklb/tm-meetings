@@ -7,6 +7,8 @@
 # --skip-mirror  Skip mirroring documents to R2
 # --id N     Scrape a specific OnBase meeting ID (required for historical
 #            meetings — the scraper's date mode only sees the current list)
+# --type T   Meeting type for --id scrapes (regular|evening|cra|workshop|special);
+#            historical IDs can't be type-looked-up and default to regular
 
 SKIP_MIRROR=false
 FORCE=false
@@ -24,6 +26,7 @@ fi
 
 # Parse flags
 MEETING_ID=""
+MEETING_TYPE=""
 PREV_ARG=""
 for arg in "$@"; do
     if [ "$arg" = "--skip-mirror" ]; then
@@ -34,6 +37,9 @@ for arg in "$@"; do
     fi
     if [ "$PREV_ARG" = "--id" ]; then
         MEETING_ID="$arg"
+    fi
+    if [ "$PREV_ARG" = "--type" ]; then
+        MEETING_TYPE="$arg"
     fi
     PREV_ARG="$arg"
 done
@@ -60,7 +66,9 @@ else
         echo "Step 1: Running JSON scraper..."
     fi
     echo "⏳ This may take several minutes for agendas with many supporting documents..."
-    if [ -n "$MEETING_ID" ]; then
+    if [ -n "$MEETING_ID" ] && [ -n "$MEETING_TYPE" ]; then
+        node json-scraper.js "$MEETING_ID" --type "$MEETING_TYPE"
+    elif [ -n "$MEETING_ID" ]; then
         node json-scraper.js "$MEETING_ID"
     else
         node json-scraper.js --date "$DATE"

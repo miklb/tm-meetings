@@ -1163,10 +1163,15 @@ async function main() {
     const dateArgIndex = args.indexOf('--date');
     const targetDate = dateArgIndex !== -1 ? args[dateArgIndex + 1] : null;
 
+    // Check for --type <regular|evening|cra|workshop|special> flag — needed for
+    // historical meetings, whose type can't be looked up from the current list
+    const typeArgIndex = args.indexOf('--type');
+    const typeOverride = typeArgIndex !== -1 ? args[typeArgIndex + 1] : null;
+
     const filteredArgs = args.filter((arg, i) => {
         if (arg === '--selenium') return false;
-        if (arg === '--date') return false;
-        if (i > 0 && args[i - 1] === '--date') return false;
+        if (arg === '--date' || arg === '--type') return false;
+        if (i > 0 && (args[i - 1] === '--date' || args[i - 1] === '--type')) return false;
         return true;
     });
     const specificMeetingId = filteredArgs[0];
@@ -1206,10 +1211,17 @@ async function main() {
         
         if (specificMeetingId) {
             // For specific meeting ID, fetch its type from the meeting list
-            console.log(`[HTTP] Fetching meeting type for ID ${specificMeetingId}...`);
-            const meetings = await fetchMeetingList({ session });
-            const meetingInfo = meetings.find(m => m.id === specificMeetingId);
-            const meetingType = meetingInfo ? meetingInfo.type : 'regular';
+            // (or take --type, since historical meetings aren't on the list)
+            let meetingType;
+            if (typeOverride) {
+                meetingType = typeOverride;
+                console.log(`[HTTP] Using type override for ID ${specificMeetingId}: ${meetingType}`);
+            } else {
+                console.log(`[HTTP] Fetching meeting type for ID ${specificMeetingId}...`);
+                const meetings = await fetchMeetingList({ session });
+                const meetingInfo = meetings.find(m => m.id === specificMeetingId);
+                meetingType = meetingInfo ? meetingInfo.type : 'regular';
+            }
             
             // Process single meeting
             await scrapeWithHTTP(specificMeetingId, meetingType, session);

@@ -1285,6 +1285,9 @@ def main():
 
         # Gap detection — find multi-part video boundaries
         if detect_gaps and video_mapping_file:
+            # Standalone runs execute from the processor dir but don't have it
+            # on sys.path (process_video normally handles that)
+            sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
             from src.transcript_gap_detector import detect_gaps as find_gaps, save_gaps_to_mapping
             print(f"\n{'='*70}")
             print(f"DETECTING TRANSCRIPT GAPS")
