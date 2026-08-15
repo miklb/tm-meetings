@@ -46,14 +46,20 @@ module.exports = function () {
   }
 
   // ------------------------------------------------------------------
-  // Public meetings: 2026+ only, for the homepage listing
-  // (older meetings still exist as detail pages, just hidden from index)
+  // Archive = everything except the latest date (featured on the homepage),
+  // grouped by year for the homepage year nav.
+  // Pre-2025 transcript-only imports are hidden until re-processed.
   // ------------------------------------------------------------------
-  const PUBLIC_CUTOFF = '2026-01-01';
-  const publicDates = dates.filter((d) => d >= PUBLIC_CUTOFF);
-  const publicByDate = {};
-  for (const d of publicDates) {
-    publicByDate[d] = byDate[d];
+  const ARCHIVE_CUTOFF = '2025-01-01';
+  const archiveYears = [];
+  const archiveByYear = {};
+  for (const d of dates.slice(1).filter((d) => d >= ARCHIVE_CUTOFF)) {
+    const y = d.slice(0, 4);
+    if (!archiveByYear[y]) {
+      archiveByYear[y] = [];
+      archiveYears.push(y);
+    }
+    archiveByYear[y].push(d);
   }
 
   // ------------------------------------------------------------------
@@ -116,6 +122,6 @@ module.exports = function () {
 
   db.close();
 
-  return { all, byDate, dates, publicDates, publicByDate, details };
+  return { all, byDate, dates, archiveYears, archiveByYear, details };
 };
 

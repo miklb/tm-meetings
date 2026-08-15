@@ -2,8 +2,8 @@
 <h1 class="visually-hidden">Tampa City Council Meetings</h1>
 
 {# ── Latest Week (featured) ── #}
-{% set latestDate = meetings.publicDates[0] %}
-{% set latestMeetings = meetings.publicByDate[latestDate] %}
+{% set latestDate = meetings.dates[0] %}
+{% set latestMeetings = meetings.byDate[latestDate] %}
 
 {% if latestDate %}
     <section class="latest-week" aria-label="Latest meetings">
@@ -36,19 +36,32 @@
 {% endif %}
 
 {# ── Previous Meetings ── #}
-{% if meetings.publicDates.length > 1 %}
+{% if meetings.archiveYears.length > 0 %}
     <section class="previous-meetings" aria-label="Previous meetings">
         {{ sectionHead("Previous Meetings") }}
 
-        <div class="meetings-archive" id="meetings-archive">
-            {% for date in meetings.publicDates %}
-                {% if loop.index0 > 0 %}
-                    <div class="date-group{% if loop.index0 > 10 %} archive-hidden{% endif %}">
-                        <h3 class="date-heading">
+        {% if meetings.archiveYears.length > 1 %}
+            <nav class="year-nav" aria-label="Jump to year">
+                <ul class="year-nav__list" role="list">
+                    {% for year in meetings.archiveYears %}
+                        <li>
+                            <a class="year-nav__link" href="#year-{{ year }}">{{ year }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+        {% endif %}
+
+        {% for year in meetings.archiveYears %}
+            <section class="year-group" aria-labelledby="year-{{ year }}">
+                {{ sectionHead(year, id="year-" + year, level=3) }}
+                {% for date in meetings.archiveByYear[year] %}
+                    <div class="date-group">
+                        <h4 class="date-heading">
                             <time datetime="{{ date }}">{{ date | readableDate }}</time>
-                        </h3>
+                        </h4>
                         <ul class="meeting-list" role="list">
-                            {% for meeting in meetings.publicByDate[date] %}
+                            {% for meeting in meetings.byDate[date] %}
                                 <li class="meeting-row">
                                     <a href="/meetings/{{ meeting.id }}/" class="meeting-row-link">
                                         {% if meeting.video_id %}
@@ -69,29 +82,8 @@
                             {% endfor %}
                         </ul>
                     </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-
-        {% if meetings.publicDates.length > 11 %}
-            <button class="show-more-btn" id="show-more-btn" type="button">
-                Show More Meetings
-            </button>
-            <script>
-                (function () {
-                    var btn = document.getElementById('show-more-btn');
-                    var archive = document.getElementById('meetings-archive');
-                    btn.addEventListener('click', function () {
-                        var hidden = archive.querySelectorAll('.archive-hidden');
-                        for (var i = 0; i < hidden.length; i++) {
-                            hidden[i]
-                                .classList
-                                .remove('archive-hidden');
-                        }
-                        btn.remove();
-                    });
-                })();
-            </script>
-        {% endif %}
+                {% endfor %}
+            </section>
+        {% endfor %}
     </section>
 {% endif %}

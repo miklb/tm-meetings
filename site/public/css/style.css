@@ -331,33 +331,43 @@ main {
   margin-block-start: 2px;
 }
 
-/* ---------- Pagination / Show More ---------- */
+/* ---------- Year navigation ---------- */
 
-.archive-hidden {
-  display: none;
+.year-nav {
+  margin-block-end: var(--spacing-lg);
 }
 
-.show-more-btn {
-  display: block;
-  width: 100%;
-  padding: var(--spacing-md);
-  margin-block-start: var(--spacing-md);
+.year-nav__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding-inline-start: 0;
+  margin: 0;
+}
+
+.year-nav__link {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background: var(--color-surface);
   color: var(--color-primary);
-  font: inherit;
   font-weight: 600;
-  cursor: pointer;
-  text-align: center;
+  text-decoration: none;
   transition:
     background 0.15s,
     border-color 0.15s;
 }
 
-.show-more-btn:hover {
+.year-nav__link:hover,
+.year-nav__link:focus-visible {
   background: #f0f4f8;
   border-color: var(--color-primary);
+}
+
+.year-group .section-head__title {
+  scroll-margin-block-start: var(--spacing-lg);
 }
 
 /* ---------- Meeting Detail ---------- */
