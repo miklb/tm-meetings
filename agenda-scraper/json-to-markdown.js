@@ -733,8 +733,8 @@ function generateMarkdownPost(meetings, options = {}) {
     // Title/slug from the meeting date + the set of meeting types on the
     // day: "7/23/26 - CRA & Evening Land Use" → 7-23-26-cra-evening-land-use.
     // The slug leads with the meeting date (weekly meetings share type names);
-    // the tm-static filename is the ISO meeting date + type slugs (no date
-    // token twice, and never the generation date).
+    // the tm-static filename is <year>/<slug>.md (fileStem kept only to
+    // recognize pre-reorg date-prefixed files on re-runs).
     const infos = mainMeetings.map(m => typeInfo(m.meetingType));
     const title = options.title || `${slashDateToken(meetingDate)} - ${infos.map(i => i.title).join(' & ')}`;
     const slug = options.slug || `${dateToken}-${infos.map(i => i.slug).join('-')}`;
@@ -817,11 +817,18 @@ function writePost(post, destDir) {
         return;
     }
 
-    const existing = fs.readdirSync(destDir).find(f =>
-        f === `${post.fileStem}.md` || f.endsWith(`-${post.slug}.md`));
+    // tm-static posts nest by year with slug-only filenames
+    // (src/posts/<year>/<slug>.md, reorg 2026-08) — the slug already leads
+    // with the short meeting-date token, so weekly type-name repeats can't
+    // collide within a year.
+    const yearDir = path.join(destDir, post.meetingDate.slice(0, 4));
+    fs.mkdirSync(yearDir, { recursive: true });
+
+    const existing = fs.readdirSync(yearDir).find(f =>
+        f === `${post.slug}.md` || f === `${post.fileStem}.md` || f.endsWith(`-${post.slug}.md`));
     let destPath;
     if (existing) {
-        destPath = path.join(destDir, existing);
+        destPath = path.join(yearDir, existing);
         // Keep the original publish date on re-runs.
         const prev = fs.readFileSync(destPath, 'utf8');
         const prevDate = prev.match(/^date:\s*(.+)$/m);
@@ -830,7 +837,7 @@ function writePost(post, destDir) {
         }
         console.log(`♻️  Updating existing post: ${destPath}`);
     } else {
-        destPath = path.join(destDir, `${post.fileStem}.md`);
+        destPath = path.join(yearDir, `${post.slug}.md`);
         console.log(`✨ New post: ${destPath}`);
     }
     fs.writeFileSync(destPath, `${frontMatter}\n\n${post.body}\n`);
