@@ -103,8 +103,10 @@ CREATE INDEX IF NOT EXISTS idx_videos_meeting ON videos(meeting_id);
 // ---------------------------------------------------------------------------
 
 /**
- * Map video_mapping.meeting_type values → meetings.meeting_type slugs.
- * The video mapping uses display names; the DB uses slug form.
+ * Map video_mapping.meeting_type values and OnBase meetingType display names
+ * → meetings.meeting_type slugs. OnBase uses names like "Council Evening" /
+ * "CRA Regular"; the video mapping uses "City Council" / "Evening"; the DB
+ * uses slug form.
  */
 const VIDEO_MEETING_TYPE_MAP = {
   'city council': 'regular',
@@ -112,6 +114,11 @@ const VIDEO_MEETING_TYPE_MAP = {
   'evening': 'evening',
   'cra': 'cra',
   'special': 'special',
+  'council regular': 'regular',
+  'council evening': 'evening',
+  'council workshop': 'workshop',
+  'council special': 'special',
+  'cra regular': 'cra',
 };
 
 /** Map meetingType from JSON to a human-readable title. */
@@ -232,8 +239,18 @@ function matchTranscripts(db) {
   const updateTranscriptId = db.prepare(
     'UPDATE meetings SET transcript_source_id = ? WHERE id = ?'
   );
+  const updateType = db.prepare(
+    'UPDATE meetings SET meeting_type = ?, title = ? WHERE id = ?'
+  );
   const findMeeting = db.prepare(
     'SELECT id FROM meetings WHERE date = ? AND meeting_type = ? ORDER BY item_count DESC LIMIT 1'
+  );
+  // Fallback: agenda meetings on a date that no transcript claimed in pass 1.
+  // Type inference disagrees between the two pipelines for special-call /
+  // budget meetings (e.g. agenda says "evening", video mapping says
+  // "Special"), so an unambiguous same-date leftover is the same meeting.
+  const findUnclaimed = db.prepare(
+    'SELECT id, meeting_type FROM meetings WHERE date = ? AND transcript_source_id IS NULL AND id < 1000000'
   );
   // Stub rows use a synthetic ID outside the OnBase ID range (OnBase IDs ~2400-2900)
   const insertStub = db.prepare(`
@@ -258,6 +275,9 @@ function matchTranscripts(db) {
   let stubbed = 0;
   let skipped = 0;
 
+  // Pass 1: exact (date, meeting_type) matches. Leftovers go to pass 2.
+  const unmatchedTranscripts = [];
+
   for (const f of transcriptFiles) {
     const filename = path.basename(f);
     // Date and transcript ID are reliable in the filename
@@ -280,6 +300,30 @@ function matchTranscripts(db) {
     const agendaMeeting = findMeeting.get(transcriptDate, meetingType);
     if (agendaMeeting) {
       updateTranscriptId.run(transcriptId, agendaMeeting.id);
+      matched++;
+    } else {
+      unmatchedTranscripts.push({ transcriptId, transcriptDate, meetingType });
+    }
+  }
+
+  // Pass 2: date-only fallback. If exactly one agenda meeting on the date is
+  // still unclaimed, it's the same meeting under a different type label.
+  // Ambiguous dates (0 or 2+ unclaimed agendas) fall through to a stub row.
+  for (const { transcriptId, transcriptDate, meetingType } of unmatchedTranscripts) {
+    const candidates = findUnclaimed.all(transcriptDate);
+    if (candidates.length === 1) {
+      const agenda = candidates[0];
+      updateTranscriptId.run(transcriptId, agenda.id);
+      // The agenda side defaults to 'regular' when nothing on the agenda
+      // signals a type; the transcript side (video title, time of day) is
+      // better informed there. Non-regular agenda types are kept.
+      if (agenda.meeting_type === 'regular' && meetingType !== 'regular') {
+        updateType.run(meetingType, buildTitle(meetingType, transcriptDate), agenda.id);
+      }
+      console.log(
+        `  Date-matched transcript ${transcriptId} → meeting ${agenda.id} ` +
+        `(transcript type '${meetingType}', agenda type '${agenda.meeting_type}')`
+      );
       matched++;
     } else {
       // No matching agenda — insert stub so transcript data has a home

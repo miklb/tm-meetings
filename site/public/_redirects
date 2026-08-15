@@ -1,0 +1,14 @@
+# Retired stub meeting pages. Before 2026-08, transcripts whose inferred
+# meeting type disagreed with the agenda's got synthetic "1_000_000 + id"
+# meeting rows instead of matching their agenda (fixed in scripts/build-db.js
+# two-pass matching). These URLs were live and may have been shared; point
+# them at the merged canonical meeting pages.
+/meetings/1002615/ /meetings/2638/ 301
+/meetings/1002619/ /meetings/2619/ 301
+/meetings/1002624/ /meetings/2629/ 301
+/meetings/1002625/ /meetings/2647/ 301
+/meetings/1002629/ /meetings/2630/ 301
+/meetings/1002634/ /meetings/2631/ 301
+/meetings/1002648/ /meetings/2650/ 301
+/meetings/1002654/ /meetings/2674/ 301
+/meetings/1002659/ /meetings/2714/ 301
