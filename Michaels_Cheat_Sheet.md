@@ -162,3 +162,43 @@ keywords are theirs — surface it in messaging, don't rewrite them.
 ## subscribe.js
 
 The one rule that matters: emails must be stored lowercased and trimmed.
+
+
+## Rerun transcript sync
+
+```
+venv/bin/python scripts/build/resync_offsets.py --dry-run          # see what's pending
+venv/bin/python scripts/build/resync_offsets.py --limit 10         # ~1 hour chunk
+venv/bin/python scripts/build/resync_offsets.py --since 2025-10-01 # FY26 only
+```
+
+## 2025 backfill — meetings to cross-check
+
+Spot-check these archive pages before deploying (the sync had something
+unusual; everything else matched with tight anchor agreement):
+
+- **11/20/25 (pkey 2646), Part 2** `qzEIjT5agGU` — offset came out **−199s with
+  no transcript_start_time**. This is the known dropped-stream meeting: the
+  restart re-covers late-morning content, which is why the anchors landed
+  there. Decide how the two parts should split the transcript.
+- **12/11/25 CRA (2648)** `JUpAqaMaey8` — RESOLVED: offset 1848s (30:48 of
+  pre-roll, found via a targeted window). Spot-check a link.
+- **9/4/25 (2630), Part 2** `-dVf1L2oHZY` — **no offset yet.** The video is fine
+  (test download works); whisper's download failed twice, likely the yt-dlp
+  "no JS runtime" flakiness. Plain retry:
+  `./pipeline/archive-meeting.sh 2630 2025-09-04 --skip-site`
+- **8/11/25 AM workshop (2624)** — offset −65s: the video starts ~1 min *after*
+  the call to order, so the earliest transcript links clamp to t=0. Expected,
+  but glance at it.
+- **7/17/25 budget presentation (2620)** — two parts with a 72-min lunch gap
+  (Part 2 starts 1:38 PM). Check a link on each side of the gap.
+- **7/24/25 CRA (2615)** — RESOLVED: two-part CRA video, P1=382s, P2=707s with
+  transcript_start_time 1:38:39 PM from fresh gap detection. Verify a Part 2
+  link or two.
+- **CRA remaps** — 8/21 (2625), 9/11 (2631), 12/11 (2648): videos manually
+  reassigned to "Community Redevelopment Agency – MM/DD/25" titles that the
+  "City Council" search can't find. Confirm the right video plays.
+- **11/10/25 Special Call** — permanent gap: tampagov never published a
+  transcript. Agenda-only; nothing to fix.
+- **9/18/25 regular (2666)** — agenda JSON is an old-format scrape (no
+  sourceUrl). Fine in the DB; only matters if the page looks off.
