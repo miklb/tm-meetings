@@ -13,6 +13,7 @@ import json
 import shutil
 import subprocess
 import tempfile
+import time
 import os
 from pathlib import Path
 
@@ -59,8 +60,24 @@ def download_audio_sample(video_id, duration=300, start=0):
         cmd.append('--force-keyframes-at-cuts')
     cmd += ['-o', audio_path, url]
 
-    subprocess.run(cmd, check=True, capture_output=True)
-    return audio_path
+    # YouTube 403s the client yt-dlp falls back to on an intermittent,
+    # per-URL basis; a fresh attempt re-resolves the download URL and
+    # usually lands (observed 2026-08-17: same command failing and
+    # succeeding minutes apart).
+    attempts = 3
+    for attempt in range(1, attempts + 1):
+        try:
+            subprocess.run(cmd, check=True, capture_output=True)
+            return audio_path
+        except subprocess.CalledProcessError as e:
+            stderr_tail = '\n'.join(
+                e.stderr.decode(errors='replace').strip().splitlines()[-4:]
+            )
+            if attempt == attempts:
+                print(f"yt-dlp failed after {attempts} attempts; last stderr:\n{stderr_tail}")
+                raise
+            print(f"yt-dlp attempt {attempt}/{attempts} failed (retrying in 30s):\n{stderr_tail}")
+            time.sleep(30)
 
 
 def transcribe_video(video_id, duration=300, model_name='base', start=0):

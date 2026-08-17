@@ -112,6 +112,16 @@ python3 scripts/build/process_video.py <pkey> <date>
 
 **Output:** `data/video_mapping_<id>.json` with `offset_seconds` and (for multi-part) `transcript_start_time` populated.
 
+**YouTube download dependency (2026-08):** the audio-sample download requires
+yt-dlp **nightly** (`venv/bin/pip install -U --pre yt-dlp`), the
+`bgutil-ytdlp-pot-provider` pip plugin (same venv), its token-generator
+checkout at `~/bgutil-ytdlp-pot-provider`, and node ≥20 on PATH (configured in
+`~/.config/yt-dlp/config`). Without PO tokens YouTube 403s downloads
+intermittently. Health check:
+`venv/bin/yt-dlp -v --simulate <url> 2>&1 | grep "PO Token Providers"` →
+must list `bgutil:script-node-… (external)`. Update commands are in
+[Michaels_Cheat_Sheet.md](../../Michaels_Cheat_Sheet.md) ("yt-dlp maintenance").
+
 ### 4. Rebuild Database and Site
 
 After processing transcripts and/or video mappings, rebuild the SQLite database and Eleventy site so changes appear on the published site. This is automatic when using `archive-meeting.sh`, but must be run manually when you've processed videos individually or fixed data by hand.

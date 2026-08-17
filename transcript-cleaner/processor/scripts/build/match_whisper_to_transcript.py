@@ -1174,13 +1174,14 @@ def main():
             # Run transcription
             cmd = [
                 sys.executable, 'scripts/build/transcribe_with_whisper.py',
-                video_id,
                 '--duration', str(duration),
                 '--model', model,
                 '--output', cache_file
             ]
             if audio_start > 0:
                 cmd.extend(['--start', str(audio_start)])
+            # '--' so a video ID with a leading dash isn't parsed as a flag
+            cmd.extend(['--', video_id])
 
             result = subprocess.run(cmd)
             
@@ -1223,10 +1224,10 @@ def main():
         # Transcribe 10 minutes
         result = subprocess.run([
             sys.executable, 'scripts/build/transcribe_with_whisper.py',
-            video_id,
             '--duration', '600',
             '--model', model,
-            '--output', longer_cache
+            '--output', longer_cache,
+            '--', video_id
         ])
         
         if result.returncode == 0:
@@ -1256,11 +1257,11 @@ def main():
             if not (use_cache and Path(retry_cache).exists()):
                 result = subprocess.run([
                     sys.executable, 'scripts/build/transcribe_with_whisper.py',
-                    video_id,
                     '--start', str(retry_start),
                     '--duration', str(retry_duration),
                     '--model', model,
-                    '--output', retry_cache
+                    '--output', retry_cache,
+                    '--', video_id
                 ])
                 if result.returncode != 0:
                     print("    ⚠️ Retry transcription failed, trying next window")

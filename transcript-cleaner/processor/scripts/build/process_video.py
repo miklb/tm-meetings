@@ -220,7 +220,6 @@ def process_single_video(
         cmd = [
             sys.executable,
             "scripts/build/transcribe_with_whisper.py",
-            video_id,
             "--duration", str(duration),
             "--model", model,
             "--output", str(cache_file),
@@ -228,6 +227,9 @@ def process_single_video(
         ]
         if audio_start > 0:
             cmd.extend(["--start", str(audio_start)])
+        # '--' so a video ID with a leading dash (e.g. -dVf1L2oHZY) isn't
+        # parsed as a flag by argparse
+        cmd.extend(["--", video_id])
 
         logger.debug("--- Launching transcribe_with_whisper for Part %d (%s) ---", part, video_id)
         transcribe_result = subprocess.run(
