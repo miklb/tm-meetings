@@ -98,7 +98,8 @@
           "seconds": 7160
         }
       ],
-      "transcript_start_time": "01:41:02PM"
+      "transcript_start_time": "01:41:02PM",
+      "offset_seconds": 1037
     }
   ]
 }
