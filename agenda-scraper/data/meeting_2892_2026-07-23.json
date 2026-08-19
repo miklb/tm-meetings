@@ -121,7 +121,10 @@
         "109054.1000"
       ],
       "location": "4002 North Dale Mabry Highway",
-      "coordinates": null,
+      "coordinates": {
+        "lat": 27.97684,
+        "lng": -82.50946
+      },
       "summaryText": "",
       "projectedCosts": null,
       "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 2)"
