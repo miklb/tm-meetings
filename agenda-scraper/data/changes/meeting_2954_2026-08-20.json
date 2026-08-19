@@ -2,5 +2,57 @@
   "meetingId": "2954",
   "meetingDate": "2026-08-20",
   "firstSeenAt": "2026-08-15T13:46:53.401Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-08-18",
+      "mirroredAt": "2026-08-18T14:56:46.733Z",
+      "newDocuments": [
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-42",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-42.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-42",
+          "filename": "REZ 26-42 DESIGN GUIDELINES BOOK....PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-42",
+          "filename": "REZ 26-42 PDA SITE PLAN....PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-26-48",
+          "filename": "REZ-26-48 SITE PLAN_06.18.0226............PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-26-55",
+          "filename": "REZ-26-55 SITE PLAN......PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-57",
+          "filename": "1-WRITTEN COMMENTS REZ-26-57.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-26-75",
+          "filename": "REZ-26-75 STAFF REPORT FINAL.....PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-26-77",
+          "filename": "REZ-26-77 SITE PLAN...PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "REZ-26-41",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-41.PDF"
+        }
+      ]
+    }
+  ]
 }
