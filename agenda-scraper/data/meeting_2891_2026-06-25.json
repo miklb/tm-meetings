@@ -119,10 +119,7 @@
         "140513.0000"
       ],
       "location": "11315 North 46",
-      "coordinates": {
-        "lat": 28.051507,
-        "lng": -82.408558
-      },
+      "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
       "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)"
@@ -170,10 +167,7 @@
         "198709.0000"
       ],
       "location": "1605 North Waters C ourt",
-      "coordinates": {
-        "lat": 27.95949,
-        "lng": -82.4504
-      },
+      "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
       "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)"
@@ -215,10 +209,7 @@
         "189871.0050"
       ],
       "location": "1701 East 2",
-      "coordinates": {
-        "lat": 27.9563,
-        "lng": -82.439744
-      },
+      "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
       "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 5)"

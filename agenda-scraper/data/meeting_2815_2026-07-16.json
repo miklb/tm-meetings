@@ -3312,10 +3312,7 @@
         "140483.0000"
       ],
       "location": "4615 East Fowler Avenue",
-      "coordinates": {
-        "lat": 28.05326,
-        "lng": -82.40774
-      },
+      "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
       "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 61 through 66) (Non-Quasi-Judicial proceedings)"
@@ -3473,10 +3470,7 @@
         "140513.0000"
       ],
       "location": "11315 North 46",
-      "coordinates": {
-        "lat": 28.051507,
-        "lng": -82.408558
-      },
+      "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
       "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 61 through 66) (Non-Quasi-Judicial proceedings)"
@@ -3518,10 +3512,7 @@
         "189871.0050"
       ],
       "location": "1701 East 2",
-      "coordinates": {
-        "lat": 27.9563,
-        "lng": -82.439744
-      },
+      "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
       "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 61 through 66) (Non-Quasi-Judicial proceedings)"
