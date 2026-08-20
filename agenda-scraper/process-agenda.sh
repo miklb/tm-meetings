@@ -13,6 +13,15 @@
 SKIP_MIRROR=false
 FORCE=false
 
+# The R2 mirror step (@aws-sdk) needs Node 20+. Non-interactive shells can
+# resolve to the stale system node in /usr/local/bin, which crashes mid-run.
+NODE_MAJOR=$(node --version 2>/dev/null | sed 's/^v//' | cut -d. -f1)
+if [ -z "$NODE_MAJOR" ] || [ "$NODE_MAJOR" -lt 20 ]; then
+    echo "❌ node $(node --version 2>/dev/null || echo '(not found)') is too old — need 20+."
+    echo "   Fix: export PATH=\"\$HOME/.nvm/versions/node/v26.1.0/bin:\$PATH\""
+    exit 1
+fi
+
 # Set the date - use provided argument or today's date
 # Support both "2026-04-02" and "--2026-04-02" (npm run process -- 2026-04-02 or npm run process --2026-04-02)
 ARG1="${1#--}"  # strip leading -- if present
