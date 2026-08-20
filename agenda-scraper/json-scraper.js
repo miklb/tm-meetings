@@ -1102,21 +1102,29 @@ async function scrapeMeetingIds(url) {
  * @param {Object} session - Axios session (optional)
  * @returns {Promise<void>}
  */
-async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null) {
+async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null, targetDate = null) {
     console.log(`\n[HTTP] Starting scrape for meeting ${meetingId} (${meetingType})`);
-    
+
     try {
         // Fetch meeting data using HTTP module
         const meetingData = await fetchMeeting(meetingId, meetingType, {
             session,
             saveDebugFiles: true,
             extractFileNumber,
-            formatBackgroundText
+            formatBackgroundText,
+            targetDate,
+            normalizeDate: formatDateForFilename
         });
 
         // Meeting not available on server — skip without error
         if (meetingData === null) {
             console.log(`[HTTP] Meeting ${meetingId} skipped (not available on server).`);
+            return;
+        }
+
+        // Meeting is on a different date than requested — nothing written,
+        // so its existing JSON (and mirroredUrl stamps) stay untouched
+        if (meetingData.skipped) {
             return;
         }
 
@@ -1250,7 +1258,7 @@ async function main() {
             const meeting = meetings[i];
             console.log(`[HTTP] Processing meeting ${i + 1}/${meetings.length}: ${meeting.id} (${meeting.type})`);
             try {
-                await scrapeWithHTTP(meeting.id, meeting.type, session);
+                await scrapeWithHTTP(meeting.id, meeting.type, session, targetDate);
             } catch (err) {
                 console.error(`[HTTP] ⚠️  Skipping meeting ${meeting.id} after error: ${err.message}`);
                 failed.push(meeting.id);

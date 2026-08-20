@@ -251,7 +251,9 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     session,
     saveDebugFiles = true,
     extractFileNumber,
-    formatBackgroundText
+    formatBackgroundText,
+    targetDate = null,
+    normalizeDate = null
   } = options;
 
   // Validate required dependencies
@@ -301,6 +303,19 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     console.log(`[HTTP] Saved agenda HTML: output/http_agenda_${meetingId}.html`);
   }
 
+  // Extract the meeting date before anything expensive — when scraping by
+  // date this lets us stop before the per-item fetches, and before the
+  // caller could write a JSON that clobbers another meeting's mirrored data.
+  const meetingDate = extractMeetingDate(html) || extractMeetingDate(agendaHtml) || '';
+  console.log(`[HTTP] Meeting date: ${meetingDate || '[unknown]'}`);
+  if (targetDate && normalizeDate) {
+    const isoDate = normalizeDate(meetingDate);
+    if (isoDate && isoDate !== targetDate) {
+      console.log(`[HTTP] Meeting ${meetingId} is dated ${isoDate}, not ${targetDate} — skipping.`);
+      return { skipped: true, meetingId, meetingDate };
+    }
+  }
+
   // Parse agenda table
   let agendaItems = parseAgendaTable(agendaHtml, extractFileNumber);
   console.log(`[HTTP] Found ${agendaItems.length} agenda items`);
@@ -323,18 +338,11 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
       meetingType,
       agendaType: extractAgendaType(agendaHtml),
       isAddendum,
-      meetingDate: extractMeetingDate(html) || extractMeetingDate(agendaHtml) || '',
+      meetingDate,
       sourceUrl: `${AGENDA_BASE}/Documents/ViewAgenda?meetingId=${meetingId}&type=agenda&doctype=1`,
       agendaItems: []
     };
   }
-
-  // Extract meeting date
-  let meetingDate = extractMeetingDate(html);
-  if (!meetingDate) {
-    meetingDate = extractMeetingDate(agendaHtml);
-  }
-  console.log(`[HTTP] Meeting date: ${meetingDate || '[unknown]'}`);
 
   // Extract agenda type (DRAFT or FINAL)
   const agendaType = extractAgendaType(agendaHtml);

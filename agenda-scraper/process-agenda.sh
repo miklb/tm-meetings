@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Tampa City Council Agenda Processing Script
-# Usage: ./process-agenda.sh [date] [--force] [--skip-mirror] [--id MEETING_ID]
+# Usage: ./process-agenda.sh [date] [--skip-mirror] [--id MEETING_ID]
 # If no date provided, uses today's date
-# --force    Re-scrape even if a JSON file for the date already exists
+# Always re-scrapes: date runs only write meetings matching the date (the
+# scraper skips others before fetching their items), and the mirror step
+# re-stamps mirroredUrl right after, so a re-scrape is always safe here.
 # --skip-mirror  Skip mirroring documents to R2
 # --id N     Scrape a specific OnBase meeting ID (required for historical
 #            meetings — the scraper's date mode only sees the current list)
@@ -11,7 +13,6 @@
 #            historical IDs can't be type-looked-up and default to regular
 
 SKIP_MIRROR=false
-FORCE=false
 
 # The R2 mirror step (@aws-sdk) needs Node 20+. Non-interactive shells can
 # resolve to the stale system node in /usr/local/bin, which crashes mid-run.
@@ -41,9 +42,6 @@ for arg in "$@"; do
     if [ "$arg" = "--skip-mirror" ]; then
         SKIP_MIRROR=true
     fi
-    if [ "$arg" = "--force" ]; then
-        FORCE=true
-    fi
     if [ "$PREV_ARG" = "--id" ]; then
         MEETING_ID="$arg"
     fi
@@ -53,51 +51,30 @@ for arg in "$@"; do
     PREV_ARG="$arg"
 done
 
-# Check if JSON already exists for this date (or this specific meeting when
-# --id is given — historical meetings aren't on the current OnBase list, so
-# they can only be scraped by ID)
-# -maxdepth 1 keeps data/changes/ stubs out (same basename as real meeting files);
-# meeting_ prefix keeps other per-date JSON (e.g. minutes) from matching
-if [ -n "$MEETING_ID" ]; then
-    EXISTING_JSON=$(find data -maxdepth 1 -name "meeting_${MEETING_ID}_*.json" 2>/dev/null | wc -l | tr -d ' ')
+echo "Step 1: Running JSON scraper..."
+echo "⏳ This may take several minutes for agendas with many supporting documents..."
+if [ -n "$MEETING_ID" ] && [ -n "$MEETING_TYPE" ]; then
+    node json-scraper.js "$MEETING_ID" --type "$MEETING_TYPE"
+elif [ -n "$MEETING_ID" ]; then
+    node json-scraper.js "$MEETING_ID"
 else
-    EXISTING_JSON=$(find data -maxdepth 1 -name "meeting_*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
+    node json-scraper.js --date "$DATE"
 fi
 
-if [ "$EXISTING_JSON" -gt 0 ] && [ "$FORCE" = "false" ]; then
-    echo "✓ Found $EXISTING_JSON existing JSON file(s) for $DATE — skipping scrape"
-    echo "  (use --force to re-scrape)"
-    echo ""
-else
-    if [ "$FORCE" = "true" ] && [ "$EXISTING_JSON" -gt 0 ]; then
-        echo "Step 1: Re-scraping (--force)..."
-    else
-        echo "Step 1: Running JSON scraper..."
-    fi
-    echo "⏳ This may take several minutes for agendas with many supporting documents..."
-    if [ -n "$MEETING_ID" ] && [ -n "$MEETING_TYPE" ]; then
-        node json-scraper.js "$MEETING_ID" --type "$MEETING_TYPE"
-    elif [ -n "$MEETING_ID" ]; then
-        node json-scraper.js "$MEETING_ID"
-    else
-        node json-scraper.js --date "$DATE"
-    fi
-
-    if [ $? -ne 0 ]; then
-        echo "❌ JSON scraper failed"
-        echo "Check the scraper output above for error details"
-        exit 1
-    fi
-
-    echo "✓ JSON scraper completed successfully"
-    echo ""
-
-    # Give a brief moment for file system to catch up
-    sleep 1
-
-    # Re-check after scrape
-    EXISTING_JSON=$(find data -maxdepth 1 -name "*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
+if [ $? -ne 0 ]; then
+    echo "❌ JSON scraper failed"
+    echo "Check the scraper output above for error details"
+    exit 1
 fi
+
+echo "✓ JSON scraper completed successfully"
+echo ""
+
+# Give a brief moment for file system to catch up
+sleep 1
+
+# -maxdepth 1 keeps data/changes/ stubs out (same basename as real meeting files)
+EXISTING_JSON=$(find data -maxdepth 1 -name "*${DATE}*.json" 2>/dev/null | wc -l | tr -d ' ')
 
 if [ "$EXISTING_JSON" -gt 0 ]; then
     echo "Found $EXISTING_JSON JSON file(s) for date $DATE"

@@ -14,12 +14,11 @@ Note the `--` separator: without it npm swallows the args.
 
 ```bash
 git pull
-npm run agenda -- YYYY-MM-DD                  # convert + mirror using existing JSON (no re-scrape)
-npm run agenda -- YYYY-MM-DD --force          # re-scrape, then convert + mirror
+npm run agenda -- YYYY-MM-DD                  # re-scrape, then convert + mirror
 npm run agenda -- YYYY-MM-DD --skip-mirror    # skip R2 mirroring
 ```
 
-If a JSON for the date already exists (e.g. from the nightly GH Action), the scrape step is skipped. Use `--force` to re-scrape anyway.
+Always re-scrapes (no `--force` needed since 2026-08-20): date runs only touch meetings on that date — other meetings' JSONs and their `mirroredUrl` stamps are left alone — and the mirror step re-stamps right after.
 
 Output: mirrored PDFs on R2, `agenda-scraper/agendas/agenda_YYYY-MM-DD.md` (record copy), and the tm-static post written/updated in `~/Sites/tm-static/src/posts/<year>/` — commit + push tm-static to publish.
 
