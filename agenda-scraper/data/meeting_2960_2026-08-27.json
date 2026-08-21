@@ -1,0 +1,26 @@
+{
+  "meetingId": "2960",
+  "meetingType": "special",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "August 27, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2960&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "26570",
+      "title": "File No. CRA26-26570\nCRA Board to consider action for an agreement involving The Tampa Bay Rays. (Original motion initiated by Clendenin-Viera on August 20, 2026)",
+      "rawTitle": "File No. CRA26-26570\nCRA Board to consider action for an agreement involving The Tampa Bay Rays. (Original motion initiated by Clendenin-Viera on August 20, 2026)",
+      "fileNumber": "CRA26-26570",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "I. PUBLIC COMMENTS:"
+    }
+  ],
+  "formattedDate": "2026-08-27"
+}
