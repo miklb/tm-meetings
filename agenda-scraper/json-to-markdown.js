@@ -554,7 +554,12 @@ const SESSION_LABELS = {
 };
 
 function sessionLabel(meeting) {
-    return SESSION_LABELS[(meeting.meetingType || '').toLowerCase()] || 'Additional Agenda';
+    // "Special Call" alone hides what was specially called (a CRA special
+    // call and a council special call both carry meetingType 'special'), so
+    // prefer the clerk's own name there when the scraper captured it.
+    const type = (meeting.meetingType || '').toLowerCase();
+    if (type === 'special' && meeting.meetingName) return `${meeting.meetingName} Agenda`;
+    return SESSION_LABELS[type] || 'Additional Agenda';
 }
 
 /**
@@ -663,8 +668,15 @@ const TYPE_TITLES = {
     special: { title: 'Special Call', slug: 'special-call' },
 };
 
-function typeInfo(meetingType) {
-    return TYPE_TITLES[(meetingType || '').toLowerCase()] || { title: 'Meeting', slug: 'meeting' };
+// The weekly types keep the archive vocabulary; 'special' is too generic to
+// stand alone, so it takes the clerk's name ("CRA Special Call") when the
+// scraper captured one (meetingName — absent on pre-2026-08 scrapes).
+function typeInfo(meeting) {
+    const type = (meeting.meetingType || '').toLowerCase();
+    if (type === 'special' && meeting.meetingName) {
+        return { title: meeting.meetingName, slug: slugify(meeting.meetingName) };
+    }
+    return TYPE_TITLES[type] || { title: 'Meeting', slug: 'meeting' };
 }
 
 /** "2026-07-23" → "7-23-26" (slug date token used by existing posts). */
@@ -735,10 +747,14 @@ function generateMarkdownPost(meetings, options = {}) {
     // The slug leads with the meeting date (weekly meetings share type names);
     // the tm-static filename is <year>/<slug>.md (fileStem kept only to
     // recognize pre-reorg date-prefixed files on re-runs).
-    const infos = mainMeetings.map(m => typeInfo(m.meetingType));
+    const infos = mainMeetings.map(typeInfo);
     const title = options.title || `${slashDateToken(meetingDate)} - ${infos.map(i => i.title).join(' & ')}`;
     const slug = options.slug || `${dateToken}-${infos.map(i => i.slug).join('-')}`;
     const fileStem = `${meetingDate}-${infos.map(i => i.slug).join('-')}`;
+    // Slug as computed before meetingName existed (enum labels only), so a
+    // re-run can find a post written by the older emitter instead of
+    // creating a second file beside it.
+    const legacySlug = `${dateToken}-${mainMeetings.map(m => typeInfo({ meetingType: m.meetingType }).slug).join('-')}`;
 
     const usedSectionIds = new Set();
     // Session anchors are emitted by the output loop below — reserve them so
@@ -790,7 +806,7 @@ function generateMarkdownPost(meetings, options = {}) {
         : 'A reimagined version of the Tampa City Council agenda including mirrored supporting documents.';
 
     const body = allBlocks.map(tightBlock).filter(Boolean).join('\n\n');
-    return { title, slug, fileStem, meetingDate, excerpt, hasMap, body };
+    return { title, slug, legacySlug, fileStem, meetingDate, excerpt, hasMap, body };
 }
 
 // ------------------------------------------------------------------
@@ -824,17 +840,25 @@ function writePost(post, destDir) {
     const yearDir = path.join(destDir, post.meetingDate.slice(0, 4));
     fs.mkdirSync(yearDir, { recursive: true });
 
+    const slugs = [post.slug, post.legacySlug].filter(Boolean);
     const existing = fs.readdirSync(yearDir).find(f =>
-        f === `${post.slug}.md` || f === `${post.fileStem}.md` || f.endsWith(`-${post.slug}.md`));
+        f === `${post.fileStem}.md` || slugs.some(s => f === `${s}.md` || f.endsWith(`-${s}.md`)));
     let destPath;
     if (existing) {
         destPath = path.join(yearDir, existing);
-        // Keep the original publish date on re-runs.
+        // Keep the original publish date and slug/permalink on re-runs — the
+        // URL may already be live (and may have been set with --slug). Delete
+        // the file first if you really want a fresh slug.
         const prev = fs.readFileSync(destPath, 'utf8');
         const prevDate = prev.match(/^date:\s*(.+)$/m);
-        if (prevDate) {
-            frontMatter = buildFrontMatter({ ...post, dateIso: prevDate[1].trim() });
+        const prevSlug = prev.match(/^slug:\s*"?([^"\n]+)"?\s*$/m);
+        const keep = {};
+        if (prevDate) keep.dateIso = prevDate[1].trim();
+        if (prevSlug && prevSlug[1].trim() !== post.slug) {
+            keep.slug = prevSlug[1].trim();
+            console.log(`   Keeping existing slug "${keep.slug}" (computed: "${post.slug}")`);
         }
+        frontMatter = buildFrontMatter({ ...post, ...keep, dateIso: keep.dateIso || dateIso });
         console.log(`♻️  Updating existing post: ${destPath}`);
     } else {
         destPath = path.join(yearDir, `${post.slug}.md`);

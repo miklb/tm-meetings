@@ -197,6 +197,18 @@ agenda-scraper/
 - `agenda-styles.css` - Frontend WordPress styles
 - `editor-agenda-styles.css` - WordPress editor styles
 
+## Meeting JSON fields of note
+
+- `meetingType` — 5-value enum (`regular|evening|cra|workshop|special`) derived
+  from the OnBase type; drives ordering, slugs, and the site's type badge.
+- `meetingName` — the clerk's own name for the meeting, read from the OnBase
+  meeting page `<title>` (e.g. `"CRA Special Call"`, `"City Council FY27 Budget
+  Workshop"`). The enum loses this ("CRA Special" → `special`), so the post
+  title/session label and the DB `clerk_title` column use `meetingName` for
+  `special` meetings. Absent on pre-2026-08 scrapes; backfill from the saved
+  `output/http_meeting_<id>.html` pages with
+  `node scripts/backfill-meeting-names.js` (safe — only adds the one field).
+
 ## Output Examples
 
 ### Single Meeting Output

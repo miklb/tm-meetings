@@ -25,6 +25,7 @@ def load_agenda_metadata(filepath: Path) -> Dict:
     return {
         'meetingId': data.get('meetingId'),
         'meetingType': data.get('meetingType'),
+        'meetingName': data.get('meetingName'),
         'meetingDate': data.get('meetingDate'),
         'sourceUrl': data.get('sourceUrl'),
         'agendaItemCount': len(data.get('agendaItems', []))
@@ -51,6 +52,7 @@ def generate_metadata(agendas_dir: Path) -> List[Dict]:
                 'meetingId': meeting_id,
                 'date': date_str,
                 'meetingType': agenda_meta.get('meetingType', 'unknown'),
+                'meetingName': agenda_meta.get('meetingName'),
                 'meetingDateFull': agenda_meta.get('meetingDate'),
                 'agendaItemCount': agenda_meta.get('agendaItemCount', 0),
                 'sourceUrl': agenda_meta.get('sourceUrl'),

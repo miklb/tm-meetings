@@ -30,6 +30,7 @@ CREATE TABLE IF NOT EXISTS meetings (
   date TEXT NOT NULL,
   meeting_type TEXT NOT NULL,
   title TEXT,
+  clerk_title TEXT,
   agenda_type TEXT,
   source_url TEXT,
   item_count INTEGER DEFAULT 0,
@@ -473,8 +474,13 @@ function importVideos(db) {
   console.log(`  Videos: ${totalVideos} inserted, ${totalChapters} chapters`);
 }
 
-function buildTitle(type, dateStr) {
-  const label = TYPE_LABELS[type] || type;
+/**
+ * Display title. The weekly types keep the fixed labels; 'special' is too
+ * generic on its own (a CRA special call and a council special call both
+ * map to it), so it uses the clerk's name when the scraper captured one.
+ */
+function buildTitle(type, dateStr, clerkTitle = null) {
+  const label = (type === 'special' && clerkTitle) ? clerkTitle : (TYPE_LABELS[type] || type);
   const d = new Date(dateStr + 'T12:00:00');
   const formatted = d.toLocaleDateString('en-US', {
     year: 'numeric',
@@ -524,8 +530,8 @@ function main() {
 
   // Prepare insert statements
   const insertMeeting = db.prepare(`
-    INSERT OR REPLACE INTO meetings (id, date, meeting_type, title, agenda_type, source_url, item_count)
-    VALUES (@id, @date, @meeting_type, @title, @agenda_type, @source_url, @item_count)
+    INSERT OR REPLACE INTO meetings (id, date, meeting_type, title, clerk_title, agenda_type, source_url, item_count)
+    VALUES (@id, @date, @meeting_type, @title, @clerk_title, @agenda_type, @source_url, @item_count)
   `);
 
   const insertItem = db.prepare(`
@@ -600,7 +606,8 @@ function main() {
         id: meetingId,
         date,
         meeting_type: meetingType,
-        title: buildTitle(meetingType, date),
+        title: buildTitle(meetingType, date, data.meetingName),
+        clerk_title: data.meetingName || null,
         agenda_type: data.agendaType || null,
         source_url: data.sourceUrl || null,
         item_count: items.length,

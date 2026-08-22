@@ -4,9 +4,13 @@ Meeting Type Detector
 Detects meeting type from transcript data to enable automatic YouTube video matching.
 
 The detector checks multiple signals in priority order:
+0. The clerk's own meeting name from the agenda scrape (agenda-scraper/data/
+   meeting_<id>_*.json → meetingName, e.g. "CRA Special Call") — authoritative
+   when present; absent on pre-2026-08 scrapes.
 1. meeting_title field (e.g., "TAMPA CITY COUNCIL WORKSHOPS")
 2. meeting_date_time field (e.g., contains "5:01 P.M." for evening)
 3. First 5 transcript segments text (e.g., "WELCOME TO THE CRA MEETING")
+4. meetings_metadata.json lookup
 
 Returns a MeetingType with both a canonical label and the YouTube search term
 needed by youtube_fetcher.py's title-matching filter.
@@ -87,17 +91,27 @@ LEGACY_SEARCH_TERMS = {
     "Evening": ["TCC"],
 }
 
-# Map the inconsistent meetingType values from meetings_metadata.json
+# Map the inconsistent meetingType values from meetings_metadata.json / the
+# agenda-scraper JSON. Covers both the scraper's 5-value enum (regular,
+# evening, cra, workshop, special) and the raw OnBase type names older
+# scrapes stored verbatim.
 METADATA_TYPE_MAP = {
     "regular": "City Council",
     "council regular": "City Council",
+    "special": "Special",
     "council special": "Special",
+    "cra": "CRA",
     "cra regular": "CRA",
+    "cra special": "CRA",
     "council evening": "Evening",
     "evening": "Evening",
     "workshop": "Workshop",
     "council workshop": "Workshop",
+    "council calendar": "Workshop",
 }
+
+# agenda-scraper/data relative to this file (src → processor → transcript-cleaner → repo)
+DEFAULT_AGENDA_DIR = Path(__file__).resolve().parents[3] / "agenda-scraper" / "data"
 
 
 def detect_meeting_type(
@@ -105,11 +119,13 @@ def detect_meeting_type(
     transcript_data: Optional[dict] = None,
     meeting_id: Optional[int] = None,
     metadata_path: str = "data/meetings_metadata.json",
+    agenda_dir: Optional[Path] = None,
 ) -> MeetingType:
     """
-    Detect meeting type from transcript data.
+    Detect meeting type from the agenda scrape and transcript data.
 
     Checks multiple signals in priority order:
+    0. Clerk's meeting name from agenda-scraper JSON (if meeting_id provided)
     1. meeting_title field
     2. meeting_date_time field (time-of-day hints)
     3. First 5 segment texts
@@ -119,12 +135,25 @@ def detect_meeting_type(
     Args:
         transcript_path: Path to transcript JSON file (raw or processed).
         transcript_data: Already-loaded transcript dict (avoids re-reading file).
-        meeting_id: Meeting ID for metadata lookup.
+        meeting_id: Meeting ID for the agenda JSON / metadata lookups.
         metadata_path: Path to meetings_metadata.json.
+        agenda_dir: Directory of agenda-scraper meeting_<id>_<date>.json files
+            (defaults to the repo's agenda-scraper/data).
 
     Returns:
         MeetingType with label and youtube_search_term.
     """
+    # Signal 0: the clerk's own name for the meeting, scraped from OnBase.
+    # This is what the meeting *is*; the transcript signals below are
+    # inferences from how it was transcribed.
+    if meeting_id is not None:
+        detected = _lookup_agenda_json(meeting_id, agenda_dir or DEFAULT_AGENDA_DIR)
+        if detected:
+            logger.info(
+                f"Detected meeting type '{detected.label}' from agenda scrape meetingName"
+            )
+            return detected
+
     if transcript_data is None and transcript_path is not None:
         path = Path(transcript_path)
         if path.exists():
@@ -221,6 +250,52 @@ def _match_rules(text: str, field: str) -> Optional[MeetingType]:
     return None
 
 
+def _type_from_record(record: dict) -> Optional[MeetingType]:
+    """Resolve a MeetingType from a scraped meeting record (agenda JSON or
+    meetings_metadata.json entry): the clerk's meetingName first, then the
+    meetingType enum."""
+    name = record.get("meetingName") or ""
+    if name:
+        detected = _match_rules(name, field="title")
+        if detected:
+            return detected
+
+    raw_type = (record.get("meetingType") or "").lower().strip()
+    canonical = METADATA_TYPE_MAP.get(raw_type)
+    if canonical:
+        for rule in MEETING_TYPE_RULES:
+            if rule["label"] == canonical:
+                return MeetingType(
+                    label=canonical,
+                    youtube_search_term=rule["youtube_search_term"],
+                )
+    return None
+
+
+def _lookup_agenda_json(meeting_id: int, agenda_dir: Path) -> Optional[MeetingType]:
+    """Look up meeting type from the agenda scrape (meeting_<id>_<date>.json).
+
+    Only the clerk's meetingName counts here — the enum alone is what the
+    transcript signals and meetings_metadata.json already cover, and
+    pre-2026-08 scrapes carry no name.
+    """
+    agenda_dir = Path(agenda_dir)
+    if not agenda_dir.is_dir():
+        return None
+
+    for path in sorted(agenda_dir.glob(f"meeting_{meeting_id}_*.json")):
+        if ".bak" in path.name:
+            continue
+        try:
+            with open(path, "r") as f:
+                record = json.load(f)
+        except (json.JSONDecodeError, IOError):
+            continue
+        if record.get("meetingName"):
+            return _type_from_record({"meetingName": record["meetingName"]})
+    return None
+
+
 def _lookup_metadata(
     meeting_id: int, metadata_path: str
 ) -> Optional[MeetingType]:
@@ -237,16 +312,6 @@ def _lookup_metadata(
 
     for meeting in metadata.get("meetings", []):
         if str(meeting.get("meetingId")) == str(meeting_id):
-            raw_type = meeting.get("meetingType", "").lower().strip()
-            canonical = METADATA_TYPE_MAP.get(raw_type)
-            if canonical:
-                # Find the matching rule to get the youtube_search_term
-                for rule in MEETING_TYPE_RULES:
-                    if rule["label"] == canonical:
-                        return MeetingType(
-                            label=canonical,
-                            youtube_search_term=rule["youtube_search_term"],
-                        )
-            break
+            return _type_from_record(meeting)
 
     return None

@@ -16,6 +16,7 @@ const {
   AGENDA_BASE,
   absoluteUrl,
   extractMeetingDate,
+  extractMeetingName,
   extractLoadAgendaConfig,
   parseAgendaTable,
   parseAgendaSections,
@@ -244,6 +245,8 @@ function isAddendumAgenda(html) {
  * @param {boolean} options.saveDebugFiles - Save HTML files to output/ (default: true)
  * @param {Function} options.extractFileNumber - File number extraction function (required)
  * @param {Function} options.formatBackgroundText - Background formatter (required)
+ * @param {string} options.meetingName - Clerk's meeting name from the list page
+ *   (optional fallback when the meeting page <title> carries none)
  * @returns {Promise<Object>} - Meeting data object
  */
 async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
@@ -253,7 +256,8 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     extractFileNumber,
     formatBackgroundText,
     targetDate = null,
-    normalizeDate = null
+    normalizeDate = null,
+    meetingName: listMeetingName = null
   } = options;
 
   // Validate required dependencies
@@ -316,6 +320,11 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     }
   }
 
+  // The clerk's own name for the meeting ("CRA Special Call", "City Council
+  // FY27 Budget Workshop") — meetingType is a 5-value enum and loses this.
+  const meetingName = extractMeetingName(html) || listMeetingName || null;
+  console.log(`[HTTP] Meeting name: ${meetingName || '[unknown]'}`);
+
   // Parse agenda table
   let agendaItems = parseAgendaTable(agendaHtml, extractFileNumber);
   console.log(`[HTTP] Found ${agendaItems.length} agenda items`);
@@ -336,6 +345,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     return {
       meetingId,
       meetingType,
+      meetingName,
       agendaType: extractAgendaType(agendaHtml),
       isAddendum,
       meetingDate,
@@ -530,6 +540,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   const meetingData = {
     meetingId,
     meetingType,
+    meetingName,
     agendaType,
     isAddendum,
     meetingDate,
@@ -579,7 +590,9 @@ async function fetchMeetingList(options = {}) {
     // Only include meetings that have an agenda available
     if (!m.IsAgendaAvailable) continue;
 
-    const name = (m.Name || '').toLowerCase();
+    // Clerk's display name ("CRA Special Call") — carried through so the
+    // per-meeting scrape has a fallback when the page <title> lacks it.
+    const name = (m.Name || '').replace(/\s+/g, ' ').trim() || null;
     const typeName = (m.MeetingTypeName || '').toLowerCase();
 
     // Skip non-council meetings. Use an allowlist keyed on MeetingTypeName so that
@@ -616,6 +629,7 @@ async function fetchMeetingList(options = {}) {
     meetings.push({
       id: String(m.ID),
       type: meetingType,
+      name,
       href: `${AGENDA_BASE}/Meetings/ViewMeeting?id=${m.ID}&doctype=1`,
       date
     });
@@ -692,6 +706,7 @@ function fetchMeetingListFromHTML(html) {
     meetings.push({
       id: meetingId,
       type: meetingType,
+      name: null, // v221 rows carry no clerk name; fetchMeeting reads the page <title>
       href: agendaLink.length > 0 ? absoluteUrl(agendaLink.attr('href')) : null,
       date
     });

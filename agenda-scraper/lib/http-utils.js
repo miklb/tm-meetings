@@ -85,6 +85,27 @@ function extractMeetingDate(html) {
 }
 
 /**
+ * Extract the clerk's name for the meeting from the OnBase meeting page
+ * <title>, e.g. "CRA Special Call - August 27, 2026 - 8/27/2026 10:00:00 AM
+ * - OnBase Agenda Online" → "CRA Special Call". This is the only place the
+ * clerk's own label survives (the list page collapses it to a type enum),
+ * and it is present on historical meetings too, which the list page is not.
+ * Older pages titled just "View Meeting" carry no name → ''.
+ * @param {string} html - Meeting page HTML
+ * @returns {string} - Clerk's meeting name or empty string
+ */
+function extractMeetingName(html) {
+  const match = String(html || '').match(/<title>([^<]*)<\/title>/i);
+  if (!match) return '';
+  const title = match[1].replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+  const name = title.split(' - ')[0].trim();
+  if (!name || /^(view meeting|error)$/i.test(name) || /onbase agenda online/i.test(name)) {
+    return '';
+  }
+  return name;
+}
+
+/**
  * Parse loadAgendaItem function from JavaScript source
  * @param {string} source - JavaScript source code
  * @returns {Object|null} - Parsed configuration or null
@@ -439,6 +460,7 @@ module.exports = {
   absoluteUrl,
   convertToDirectPDFUrl,
   extractMeetingDate,
+  extractMeetingName,
   parseLoadAgendaFromSource,
   extractLoadAgendaConfig,
   parseAgendaTable,

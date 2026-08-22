@@ -80,7 +80,8 @@ CREATE TABLE meetings (
   id INTEGER PRIMARY KEY,          -- OnBase meeting ID
   date TEXT NOT NULL,
   meeting_type TEXT NOT NULL,      -- 'regular', 'evening', 'cra', 'workshop', 'special'
-  title TEXT,
+  title TEXT,                      -- synthetic "<label> — <date>" (clerk_title for 'special')
+  clerk_title TEXT,                -- clerk's own name, e.g. 'CRA Special Call' (NULL on pre-2026-08 scrapes)
   agenda_type TEXT,                -- 'DRAFT' or 'FINAL'
   source_url TEXT,
   item_count INTEGER DEFAULT 0

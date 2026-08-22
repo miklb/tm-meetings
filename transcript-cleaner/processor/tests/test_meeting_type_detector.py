@@ -160,6 +160,73 @@ def test_metadata_lookup():
         Path(tmp_path).unlink()
 
 
+def test_agenda_json_lookup():
+    """The clerk's meetingName in the agenda scrape beats every transcript signal."""
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        agenda_dir = Path(tmp_dir)
+        # "CRA Special Call": the scraper's enum says 'special', the clerk says CRA
+        (agenda_dir / "meeting_9996_2026-08-27.json").write_text(json.dumps({
+            "meetingId": "9996", "meetingType": "special",
+            "meetingName": "CRA Special Call", "agendaItems": [],
+        }))
+        # Pre-2026-08 scrape: no meetingName → agenda JSON is not a signal
+        (agenda_dir / "meeting_9995_2025-01-01.json").write_text(json.dumps({
+            "meetingId": "9995", "meetingType": "cra", "agendaItems": [],
+        }))
+
+        # Transcript title says generic City Council; clerk name wins
+        data = {"meeting_title": "TAMPA CITY COUNCIL", "segments": []}
+        result = detect_meeting_type(
+            transcript_data=data, meeting_id=9996, agenda_dir=agenda_dir,
+            metadata_path=str(agenda_dir / "none.json"),
+        )
+        assert result.label == "CRA", f"Expected CRA, got {result.label}"
+        assert result.youtube_search_term == "Community Redevelopment"
+        print("  PASS: Agenda JSON meetingName 'CRA Special Call' → CRA")
+
+        # No meetingName: falls through to the transcript signals as before
+        result = detect_meeting_type(
+            transcript_data=data, meeting_id=9995, agenda_dir=agenda_dir,
+            metadata_path=str(agenda_dir / "none.json"),
+        )
+        assert result.label == "City Council", f"Expected City Council, got {result.label}"
+        print("  PASS: Agenda JSON without meetingName is ignored")
+
+        # Unknown ID / missing dir: no crash, normal fallback
+        result = detect_meeting_type(
+            meeting_id=1, agenda_dir=agenda_dir / "missing",
+            metadata_path=str(agenda_dir / "none.json"),
+        )
+        assert result.label == "City Council"
+        print("  PASS: Missing agenda dir → default")
+
+
+def test_metadata_enum_values():
+    """The scraper's bare enum values ('cra', 'special') resolve via metadata."""
+    metadata = {
+        "meetings": [
+            {"meetingId": 9994, "meetingType": "cra"},
+            {"meetingId": 9993, "meetingType": "special"},
+            {"meetingId": 9992, "meetingType": "special", "meetingName": "CRA Special Call Session"},
+        ]
+    }
+    with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
+        json.dump(metadata, f)
+        tmp_path = f.name
+
+    try:
+        missing = Path(tmp_path).parent / "no-agenda-dir"
+        result = detect_meeting_type(meeting_id=9994, metadata_path=tmp_path, agenda_dir=missing)
+        assert result.label == "CRA", f"Expected CRA, got {result.label}"
+        result = detect_meeting_type(meeting_id=9993, metadata_path=tmp_path, agenda_dir=missing)
+        assert result.label == "Special", f"Expected Special, got {result.label}"
+        result = detect_meeting_type(meeting_id=9992, metadata_path=tmp_path, agenda_dir=missing)
+        assert result.label == "CRA", f"Expected CRA from meetingName, got {result.label}"
+        print("  PASS: Metadata enum 'cra'/'special' and meetingName resolve")
+    finally:
+        Path(tmp_path).unlink()
+
+
 # ---------------------------------------------------------------------------
 # Offset auto-save
 # ---------------------------------------------------------------------------
@@ -244,6 +311,8 @@ if __name__ == "__main__":
     test_detect_from_real_transcript()
     test_legacy_search_terms()
     test_metadata_lookup()
+    test_agenda_json_lookup()
+    test_metadata_enum_values()
 
     print("\n=== Offset Auto-Save Tests ===\n")
     test_save_offset_to_mapping()

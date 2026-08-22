@@ -1100,9 +1100,11 @@ async function scrapeMeetingIds(url) {
  * @param {string} meetingId - Meeting ID
  * @param {string} meetingType - Meeting type
  * @param {Object} session - Axios session (optional)
+ * @param {string} targetDate - YYYY-MM-DD; skip the meeting if it's on another date
+ * @param {string} meetingName - Clerk's meeting name from the list page (optional)
  * @returns {Promise<void>}
  */
-async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null, targetDate = null) {
+async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null, targetDate = null, meetingName = null) {
     console.log(`\n[HTTP] Starting scrape for meeting ${meetingId} (${meetingType})`);
 
     try {
@@ -1113,6 +1115,7 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
             extractFileNumber,
             formatBackgroundText,
             targetDate,
+            meetingName,
             normalizeDate: formatDateForFilename
         });
 
@@ -1221,6 +1224,7 @@ async function main() {
             // For specific meeting ID, fetch its type from the meeting list
             // (or take --type, since historical meetings aren't on the list)
             let meetingType;
+            let meetingName = null;
             if (typeOverride) {
                 meetingType = typeOverride;
                 console.log(`[HTTP] Using type override for ID ${specificMeetingId}: ${meetingType}`);
@@ -1229,10 +1233,11 @@ async function main() {
                 const meetings = await fetchMeetingList({ session });
                 const meetingInfo = meetings.find(m => m.id === specificMeetingId);
                 meetingType = meetingInfo ? meetingInfo.type : 'regular';
+                meetingName = meetingInfo ? meetingInfo.name : null;
             }
-            
+
             // Process single meeting
-            await scrapeWithHTTP(specificMeetingId, meetingType, session);
+            await scrapeWithHTTP(specificMeetingId, meetingType, session, null, meetingName);
             return;
         }
         
@@ -1258,7 +1263,7 @@ async function main() {
             const meeting = meetings[i];
             console.log(`[HTTP] Processing meeting ${i + 1}/${meetings.length}: ${meeting.id} (${meeting.type})`);
             try {
-                await scrapeWithHTTP(meeting.id, meeting.type, session, targetDate);
+                await scrapeWithHTTP(meeting.id, meeting.type, session, targetDate, meeting.name);
             } catch (err) {
                 console.error(`[HTTP] ⚠️  Skipping meeting ${meeting.id} after error: ${err.message}`);
                 failed.push(meeting.id);
