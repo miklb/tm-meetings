@@ -201,24 +201,29 @@ const FILE_NUMBER_PATTERN = /([A-Z]{2,4})(\d{2})-(\d{4})/;
 ## Keyword Notifications Dispatch
 
 Keyword notifications are **manually triggered from your machine** — they are not part of the nightly scrape and there is no GitHub Action. Dispatch after:
-1. The WordPress agenda post is published
+1. The agenda post is published on tampamonitor.com (tm-static; the WordPress post it replaced)
 2. The Monday morning newsletter has gone out
 
-### Run the dispatch script
+### Preview first, then dispatch
+
+`dispatch-notifications.js` has **no dry-run** — it emails every matching verified subscriber. Always preview (read-only against remote D1; mirrors the matching engine and the deployed `REGISTRATION_MODE`):
 
 ```bash
-WEBHOOK_SECRET=<secret> \
-MEETING_IDS=2591 \
-WORDPRESS_AGENDA_URL=https://tampamonitor.com/agendas/2025-11-06/ \
+node scripts/preview-dispatch.js --meeting-ids=2884,2960
+```
+
+It lists who would get which items and each subscriber's zero-match keywords. Noisy or dead keywords are information for Michael to relay — never edit a subscriber's keywords.
+
+```bash
+WEBHOOK_SECRET=$(grep '^WEBHOOK_SECRET=' .env | cut -d= -f2-) \
+MEETING_IDS=2884,2960 \
+WORDPRESS_AGENDA_URL=https://tampamonitor.com/tampa-city-council/agendas/8-27-26-regular-meeting-cra-special-call/ \
 node scripts/dispatch-notifications.js
 ```
 
-For multiple meetings on the same agenda day (e.g., Council + CRA), pass a comma-separated list:
-```bash
-MEETING_IDS=2591,2592
-```
+For multiple meetings on the same agenda day (e.g., Council + CRA), pass a comma-separated list. The script does **not** load `.env` itself — pass `WEBHOOK_SECRET` inline as above.
 
-The `WORDPRESS_AGENDA_URL` is optional — if omitted, email links fall back to the static site. It is passed to all meeting IDs in the batch. `WEBHOOK_SECRET` is kept in your local `.env` (never committed) and matches the Worker secret.
+`WORDPRESS_AGENDA_URL` (name kept from the WP era) is the post the digest links to — use the tm-static permalink. It is optional (links fall back to the static site) and applies to every meeting in the batch. Re-sending for a meeting requires deleting its rows from `notification_log` (dedupe key is subscriber + item + keyword).
 
 When the worker runs with `ENVIRONMENT="development"` and no `RESEND_API_KEY`, it logs emails instead of sending them; in production both `WEBHOOK_SECRET` and `RESEND_API_KEY` are required (the endpoint fails closed).
 

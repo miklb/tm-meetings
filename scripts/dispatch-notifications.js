@@ -69,9 +69,23 @@ async function main() {
       process.exit(1);
     }
 
+    // notify.js titles each digest section from meetingType ("Special
+    // Meeting — <date>"), which hides what was specially called. When the
+    // scrape carried the clerk's name, send it as meetingTitle for 'special'
+    // meetings — same rule as json-to-markdown.js / build-db.js.
+    let meetingTitle;
+    if ((data.meetingType || '') === 'special' && data.meetingName && data.formattedDate) {
+      const d = new Date(`${data.formattedDate}T12:00:00`);
+      const longDate = isNaN(d.getTime()) ? null :
+        d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+      meetingTitle = longDate ? `${data.meetingName} — ${longDate}` : data.meetingName;
+      console.log(`Meeting title: ${meetingTitle}`);
+    }
+
     meetings.push({
       meetingId: data.meetingId,
       meetingType: data.meetingType || 'regular',
+      ...(meetingTitle ? { meetingTitle } : {}),
       meetingDate: data.meetingDate,
       wordpressUrl: wordpressUrl || null,
       agendaItems: (data.agendaItems || []).map(item => ({

@@ -14,7 +14,10 @@
  *   node scripts/preview-dispatch.js --meeting-ids=2815
  *   MEETING_IDS=2815 node scripts/preview-dispatch.js
  *
- * Assumes REGISTRATION_MODE=BETA_AND_SUPPORTERS (the beta setting).
+ * Registration mode is read from site/wrangler.toml (the deployed config) so
+ * eligibility and keyword limits mirror notify.js step 4 for whichever mode
+ * is live: PUBLIC admits every verified subscriber at 15 keywords; the
+ * gated modes admit supporters and beta testers only.
  */
 
 const fs = require('fs');
@@ -24,7 +27,26 @@ const { execFileSync } = require('child_process');
 const DB_NAME = 'tampa-meetings-notifications';
 const REPO_ROOT = path.resolve(__dirname, '..');
 const SITE_DIR = path.join(REPO_ROOT, 'site');
-const KEYWORD_LIMIT = 15; // supporters and beta testers alike, in this mode
+
+/** REGISTRATION_MODE from site/wrangler.toml (falls back like notify.js). */
+function registrationMode() {
+  try {
+    const toml = fs.readFileSync(path.join(SITE_DIR, 'wrangler.toml'), 'utf8');
+    const m = toml.match(/^\s*REGISTRATION_MODE\s*=\s*"([^"]+)"/m);
+    if (m) return m[1];
+  } catch { /* fall through */ }
+  return 'SUPPORTERS_ONLY';
+}
+
+/** Mirror notify.js step 4: { allowed, limit } for one verified subscriber row. */
+function eligibility(row, regMode, now) {
+  const isSupporter = row.supporter_email !== null &&
+    (row.supporter_active_until === null || new Date(row.supporter_active_until) > now);
+  if (isSupporter) return { allowed: true, limit: 15 };
+  if (regMode === 'PUBLIC') return { allowed: true, limit: 15 };
+  if (row.is_beta_tester === 1) return { allowed: true, limit: 15 };
+  return { allowed: false, limit: 3 };
+}
 
 function escapeRegExp(s) {
   return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -102,13 +124,16 @@ function main() {
     LEFT JOIN beta_testers bt ON s.email = bt.email
     WHERE s.verified = 1;`.replace(/\s+/g, ' '));
 
-  // Mirror step 4: BETA_AND_SUPPORTERS admits active supporters and beta testers.
+  // Mirror step 4: eligibility + keyword limit for the deployed registration mode.
+  const regMode = registrationMode();
   const now = new Date();
-  const allowed = subRows.filter(r => {
-    const isSupporter = r.supporter_email !== null &&
-      (r.supporter_active_until === null || new Date(r.supporter_active_until) > now);
-    return isSupporter || r.is_beta_tester === 1;
-  });
+  const allowed = [];
+  for (const r of subRows) {
+    const e = eligibility(r, regMode, now);
+    if (e.allowed) allowed.push({ ...r, limit: e.limit });
+    else console.log(`Not eligible in ${regMode} mode (would not send): ${r.email}`);
+  }
+  console.log(`Registration mode: ${regMode} — ${allowed.length} of ${subRows.length} verified subscriber(s) eligible\n`);
 
   if (allowed.length === 0) {
     console.log('No verified subscribers meet the registration-mode requirements. Nothing would send.');
@@ -135,7 +160,7 @@ function main() {
   let wouldEmail = 0;
 
   for (const sub of allowed) {
-    const keywords = (kwBySub[sub.sub_id] || []).slice(0, KEYWORD_LIMIT);
+    const keywords = (kwBySub[sub.sub_id] || []).slice(0, sub.limit);
     const perKeyword = new Map(keywords.map(k => [k.keyword.trim().toLowerCase(), []]));
     const fresh = [];   // would send now
     const dedup = [];   // matched, but already emailed
