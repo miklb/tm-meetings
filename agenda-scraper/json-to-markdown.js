@@ -310,6 +310,11 @@ function renderItem(item, ctx) {
     const description = itemDescription(item);
     if (description) parts.push(`<p>${escapeHtml(description)}</p>`);
 
+    // Index entry for the preamble's featured-item card (see renderFeatured).
+    if (ctx.itemIndex) {
+        ctx.itemIndex.set(String(item.number), { anchorId, number: item.number, headLabel, description });
+    }
+
     // --- Item details drawer: financial impact, background, land use ---
     const drawerParts = [];
     const fundingItem = ctx.fundingByItemId[String(item.agendaItemId)] || null;
@@ -601,6 +606,7 @@ function renderMeeting(meeting, addenda, opts) {
 
     // Funding manifest for the Item details drawers
     const fundingManifest = loadFundingManifest(meeting.meetingId, meeting.formattedDate);
+    const itemIndex = new Map();
     const ctx = {
         meetingId: meeting.meetingId,
         fundingByItemId: buildFundingByItemId(fundingManifest),
@@ -608,6 +614,7 @@ function renderMeeting(meeting, addenda, opts) {
         continuedItems,
         updatedItemNums,
         addendumAnchor,
+        itemIndex,
     };
 
     // Sections of items (committee-report runs grouped under Consent Agenda)
@@ -626,9 +633,11 @@ function renderMeeting(meeting, addenda, opts) {
         // label the caller already emitted as an <h2 class="agenda__session-
         // heading"> — repeating it here duplicated both heading and id.
         const inner = [];
+        let section = null;
         if (!(group.isFallback && opts.suppressFallbackHeading)) {
             const id = claimId(group.title, 'agenda');
             inner.push(`<h2 id="${id}">${escapeHtml(group.title)}</h2>`);
+            section = { id, title: group.title };
         }
         const subgroups = group.subgroups || [{ title: null, items: group.items }];
         for (const sub of subgroups) {
@@ -640,6 +649,8 @@ function renderMeeting(meeting, addenda, opts) {
                     inner.push(mapData.html);
                 }
                 inner.push(renderItem(item, ctx));
+                const entry = itemIndex.get(String(item.number));
+                if (entry) entry.section = section;
             }
         }
         blocks.push(`<section class="agenda__section">\n${inner.join('\n')}\n</section>`);
@@ -650,7 +661,67 @@ function renderMeeting(meeting, addenda, opts) {
         if (addendumSection) blocks.push(addendumSection);
     }
 
-    return { blocks, hasMap: Boolean(mapData) };
+    return { blocks, hasMap: Boolean(mapData), itemIndex };
+}
+
+// ------------------------------------------------------------------
+// Featured item(s) — the preamble card
+// ------------------------------------------------------------------
+
+// `--feature` tokens: "80" (first/morning session) or "evening:3" /
+// "morning:80" (session-qualified — item numbers restart per session).
+function parseFeatureToken(token) {
+    const m = String(token).trim().match(/^(?:(morning|evening):)?(\d+)$/i);
+    if (!m) return null;
+    return { session: (m[1] || 'morning').toLowerCase(), number: m[2] };
+}
+
+/**
+ * Resolve feature tokens against the rendered sessions. Returns the matched
+ * entries (with their normalized token) and warns on misses.
+ */
+function resolveFeatured(tokens, meetingBlocks, multi) {
+    const out = [];
+    for (const raw of tokens) {
+        const t = parseFeatureToken(raw);
+        if (!t) { console.warn(`⚠️  --feature "${raw}": expected <n> or morning:<n> / evening:<n>`); continue; }
+        const idx = t.session === 'evening' ? 1 : 0;
+        const mb = meetingBlocks[idx];
+        const entry = mb && mb.itemIndex.get(t.number);
+        if (!entry) { console.warn(`⚠️  --feature "${raw}": no item ${t.number} in the ${t.session} session`); continue; }
+        const token = multi ? `${t.session}:${t.number}` : t.number;
+        if (out.some(f => f.token === token)) continue;
+        out.push({ ...entry, token, sessionLabel: multi ? mb.label : null });
+    }
+    return out;
+}
+
+/**
+ * The featured card: a preamble <aside> (no h2 — tm-static's sponsor split
+ * cuts before the first h2) listing the items an editor flagged with
+ * --feature, each with the number chip, file number, where-it-sits line,
+ * the description, and a jump link.
+ */
+function renderFeatured(featured) {
+    if (!featured.length) return '';
+    const label = featured.length === 1 ? 'Featured item' : 'Featured items';
+    const items = featured.map(f => {
+        const where = [];
+        if (f.sessionLabel) where.push(escapeHtml(f.sessionLabel));
+        if (f.section) where.push(`<a href="#${f.section.id}">${escapeHtml(f.section.title)}</a>`);
+        const whereHtml = where.length ? ` <span class="agenda__featured-where">${where.join(' · ')}</span>` : '';
+        const desc = f.description ? `\n<p class="agenda__featured-desc">${escapeHtml(f.description)}</p>` : '';
+        return `<li class="agenda__featured-item">
+<p class="agenda__featured-head"><a class="agenda-item__anchor" href="#${f.anchorId}">${f.number}</a> <span class="agenda__featured-file">${f.headLabel}</span>${whereHtml}</p>${desc}
+<p class="agenda__featured-jump"><a href="#${f.anchorId}">Jump to item ${f.number} ↓</a></p>
+</li>`;
+    });
+    return `<aside class="agenda__featured" aria-labelledby="featured-items">
+<p class="agenda__featured-label" id="featured-items"><i class="agenda__featured-icon fa-solid fa-star"></i> ${label}</p>
+<ul class="agenda__featured-list">
+${items.join('\n')}
+</ul>
+</aside>`;
 }
 
 // ------------------------------------------------------------------
@@ -701,7 +772,7 @@ function isoLocal(now = new Date()) {
         `${sign}${pad(Math.trunc(off / 60))}:${pad(off % 60)}`;
 }
 
-function buildFrontMatter({ title, slug, dateIso, excerpt, hasMap, meetingDate }) {
+function buildFrontMatter({ title, slug, dateIso, excerpt, hasMap, meetingDate, featuredItems }) {
     // No featuredImage: that was a WP-era requirement (hidden on the page via
     // hideFeaturedImage); tm-static renders agenda posts fine without one.
     // Note it also fed og:image — share cards have no image until tm-static
@@ -718,6 +789,10 @@ function buildFrontMatter({ title, slug, dateIso, excerpt, hasMap, meetingDate }
     ];
     if (hasMap) lines.push('hasMap: true');
     lines.push(`meetingDate: "${meetingDate}"`);
+    // Editor's featured item(s) — kept so addendum re-runs don't drop them.
+    if (featuredItems && featuredItems.length) {
+        lines.push(`featuredItems: [${featuredItems.map(t => `"${t}"`).join(', ')}]`);
+    }
     lines.push('categories:', '  - name: "Agendas"', '    slug: "agendas"', '    parent: true');
     lines.push('---');
     return lines.join('\n');
@@ -763,6 +838,7 @@ function generateMarkdownPost(meetings, options = {}) {
         usedSectionIds.add('morning-agenda');
         usedSectionIds.add('evening-agenda');
     }
+    usedSectionIds.add('featured-items');
     const allBlocks = [];
     let hasMap = false;
 
@@ -775,7 +851,8 @@ function generateMarkdownPost(meetings, options = {}) {
             : 'Agenda';
         const rendered = renderMeeting(meeting, addenda, { usedSectionIds, addendumAnchor, fallbackSectionTitle, suppressFallbackHeading: multi });
         hasMap = hasMap || rendered.hasMap;
-        meetingBlocks.push({ meeting, idx, blocks: rendered.blocks });
+        const label = idx === 0 ? 'Morning Agenda' : sessionLabel(meeting);
+        meetingBlocks.push({ meeting, idx, label, blocks: rendered.blocks, itemIndex: rendered.itemIndex });
     });
 
     // Preamble: intro paragraph(s) only — tm-static splits the post before
@@ -787,9 +864,17 @@ function generateMarkdownPost(meetings, options = {}) {
         `<p>This is a reimagined version of the Tampa City Council agenda. It removes legalese from the descriptions, parses Background details from the Summary Sheet when available, and links to supporting documents.${mapSentence} Document links point to our mirrored copies for long-term stability. For original documents, refer to the official ${agendaTypeLower} agenda from the clerk in Onbase.</p>`
     );
 
+    // Featured item(s) sit above the quick-nav: the one thing most readers
+    // came for, findable before they scroll.
+    const featured = resolveFeatured(options.featured || [], meetingBlocks, multi);
+    const featuredHtml = renderFeatured(featured);
+    if (featuredHtml) allBlocks.push(featuredHtml);
+
     if (multi) {
         const secondaryLabel = sessionLabel(mainMeetings[1]);
-        allBlocks.push(`<p class="agenda__nav"><strong>Quick navigation:</strong> <a href="#morning-agenda">Morning Agenda</a> · <a href="#evening-agenda">${secondaryLabel}</a></p>`);
+        // A real <nav> of pill links (no text separators — tm-static styles
+        // the links as pills with flex gap).
+        allBlocks.push(`<nav class="agenda__nav" aria-label="Agenda sessions"><span class="agenda__nav-label">Quick navigation</span> <a class="agenda__nav-link" href="#morning-agenda">Morning Agenda</a> <a class="agenda__nav-link" href="#evening-agenda">${escapeHtml(secondaryLabel)}</a></nav>`);
     }
 
     for (const { meeting, idx, blocks } of meetingBlocks) {
@@ -806,7 +891,8 @@ function generateMarkdownPost(meetings, options = {}) {
         : 'A reimagined version of the Tampa City Council agenda including mirrored supporting documents.';
 
     const body = allBlocks.map(tightBlock).filter(Boolean).join('\n\n');
-    return { title, slug, legacySlug, fileStem, meetingDate, excerpt, hasMap, body };
+    const featuredItems = featured.map(f => f.token);
+    return { title, slug, legacySlug, fileStem, meetingDate, excerpt, hasMap, featuredItems, body };
 }
 
 // ------------------------------------------------------------------
@@ -840,12 +926,8 @@ function writePost(post, destDir) {
     const yearDir = path.join(destDir, post.meetingDate.slice(0, 4));
     fs.mkdirSync(yearDir, { recursive: true });
 
-    const slugs = [post.slug, post.legacySlug].filter(Boolean);
-    const existing = fs.readdirSync(yearDir).find(f =>
-        f === `${post.fileStem}.md` || slugs.some(s => f === `${s}.md` || f.endsWith(`-${s}.md`)));
-    let destPath;
-    if (existing) {
-        destPath = path.join(yearDir, existing);
+    let destPath = findExistingPost(destDir, post);
+    if (destPath) {
         // Keep the original publish date and slug/permalink on re-runs — the
         // URL may already be live (and may have been set with --slug). Delete
         // the file first if you really want a fresh slug.
@@ -867,13 +949,31 @@ function writePost(post, destDir) {
     fs.writeFileSync(destPath, `${frontMatter}\n\n${post.body}\n`);
 }
 
+/** Path of the tm-static post this meeting already has (slug-matched), or null. */
+function findExistingPost(destDir, post) {
+    const yearDir = path.join(destDir, post.meetingDate.slice(0, 4));
+    if (!fs.existsSync(yearDir)) return null;
+    const slugs = [post.slug, post.legacySlug].filter(Boolean);
+    const existing = fs.readdirSync(yearDir).find(f =>
+        f === `${post.fileStem}.md` || slugs.some(s => f === `${s}.md` || f.endsWith(`-${s}.md`)));
+    return existing ? path.join(yearDir, existing) : null;
+}
+
+/** `featuredItems: ["80", "evening:1"]` from an existing post's front matter. */
+function readFeaturedItems(postPath) {
+    const src = fs.readFileSync(postPath, 'utf8');
+    const m = src.match(/^featuredItems:\s*\[(.*)\]\s*$/m);
+    if (!m) return [];
+    return m[1].split(',').map(t => t.trim().replace(/^["']|["']$/g, '')).filter(Boolean);
+}
+
 // ------------------------------------------------------------------
 // CLI
 // ------------------------------------------------------------------
 
 function parseArguments() {
     const args = process.argv.slice(2);
-    const options = { meetingIds: [], date: null, dest: undefined, slug: null, title: null, help: false };
+    const options = { meetingIds: [], date: null, dest: undefined, slug: null, title: null, featured: [], clearFeatured: false, help: false };
     for (let i = 0; i < args.length; i++) {
         const arg = args[i];
         if (arg === '--help' || arg === '-h') options.help = true;
@@ -881,6 +981,11 @@ function parseArguments() {
         else if (arg === '--dest') options.dest = args[++i];
         else if (arg === '--slug') options.slug = args[++i];
         else if (arg === '--title') options.title = args[++i];
+        else if (arg === '--feature' || arg === '-f') {
+            const val = args[++i] || '';
+            if (val.toLowerCase() === 'none') options.clearFeatured = true;
+            else options.featured.push(...val.split(',').map(t => t.trim()).filter(Boolean));
+        }
         else if (/^\d{4}-\d{2}-\d{2}$/.test(arg)) options.date = arg;
         else if (/^\d+$/.test(arg)) options.meetingIds.push(arg);
     }
@@ -900,6 +1005,11 @@ Options:
       --dest <dir>        tm-static posts dir (default: $TM_STATIC_POSTS_DIR)
       --slug <slug>       Override the generated post slug
       --title <title>     Override the generated post title
+  -f, --feature <item>    Feature an item in the preamble card: "80", or
+                          "evening:3" on two-session days (repeatable, or
+                          comma-separated). Kept across re-runs via the
+                          post's featuredItems front matter; --feature none
+                          clears it.
   -h, --help              Show this help
 
 Always writes agendas/agenda_<date>.md; also writes/updates the tm-static
@@ -925,10 +1035,21 @@ function main() {
         process.exit(1);
     }
 
-    const post = generateMarkdownPost(meetings, options);
+    let post = generateMarkdownPost(meetings, options);
     if (!post) process.exit(1);
 
     const destDir = options.dest !== undefined ? options.dest : (process.env.TM_STATIC_POSTS_DIR || null);
+
+    // Re-runs (addenda, re-scrapes) keep the editor's featured item(s)
+    // unless this run names its own or clears them.
+    if (destDir && !options.featured.length && !options.clearFeatured) {
+        const existing = findExistingPost(destDir, post);
+        const kept = existing ? readFeaturedItems(existing) : [];
+        if (kept.length) {
+            console.log(`⭐ Keeping featured item(s) from existing post: ${kept.join(', ')}`);
+            post = generateMarkdownPost(meetings, { ...options, featured: kept });
+        }
+    }
     writePost(post, destDir);
 
     const itemCount = meetings.reduce((n, m) => n + (m.agendaItems?.length || 0), 0);
