@@ -13,6 +13,66 @@
 'use strict';
 
 /**
+ * File-number token as the clerk writes it: "CM26-26209", "REZ-26-12",
+ * "AB2-25-11", "SU1-26-08-C", "TA/CPA26-3", "E2026-8", "CM26-1/CM26-2".
+ * Bounded (no greedy [A-Z0-9-]+) so a title glued straight onto the number
+ * — "PS26-25956Resolution", "VAC-26-07Public" — doesn't swallow the word.
+ */
+const FILE_NUMBER_TOKEN = String.raw`(?:TA\/CPA|[A-Z]{1,5})\d{0,4}-?\d{1,6}(?:-\d{1,6})?(?:-[A-Z])?(?:\/[A-Z]{1,5}\d{0,4}-\d{1,6})?`;
+// "File No. X" anywhere, or a bare / "File. X" number at the head of the text.
+const GLUED_FILE_NUMBER_RE = new RegExp(String.raw`(File No\. ${FILE_NUMBER_TOKEN}|^\s*(?:File\.?\s*)?${FILE_NUMBER_TOKEN})(?=[A-Za-z])`, 'gi');
+const LEADING_FILE_NUMBER_RE = new RegExp(String.raw`^\s*(?:File\.?\s*(?:No\.?\s*)?)?(${FILE_NUMBER_TOKEN})(?![A-Za-z0-9\-\/])`, 'i');
+
+/**
+ * Memo / email transmission sentences ("Memorandum from X, Title, transmitting
+ * … for said agenda item. (To be R/F)"). cleanAgendaContent strips these from
+ * item descriptions; extractTransmittalNotes pulls them out for the addendum
+ * digest, where the memo IS the news.
+ */
+const TRANSMITTAL_PATTERNS = [
+    /\s*Memorandum from [^.]*?(?:,\s*(?:notifying|transmitting|advising|requesting|recommending)[^.]*)+\.\s*(?:\(To be R\/F\))?/gi,
+    /\s*Email from [^.]*?(?:,\s*(?:notifying|transmitting|advising|requesting|recommending)[^.]*)+\.\s*(?:\(To be R\/F\))?/gi,
+    // Fallback: multi-clause sentences, terminated by "for said item" or "(To be R/F)"
+    /\s*Memorandum from [^]*?(?:for said (?:agenda )?(?:item|public hearing)|To be R\/F)[^.]*\.?\s*(?:\(To be R\/F\))?/gi,
+    /\s*Email from [^]*?(?:for said (?:agenda )?(?:item|public hearing)|To be R\/F)[^.]*\.?\s*(?:\(To be R\/F\))?/gi,
+];
+
+/**
+ * The file number at the head of raw agenda text ("File No. PS26-25956…"),
+ * bounded by FILE_NUMBER_TOKEN so glued titles don't leak in. Null if the
+ * text doesn't start with one.
+ * @param {string} content
+ * @returns {string|null}
+ */
+function leadingFileNumber(content) {
+    const m = (content || '').replace(GLUED_FILE_NUMBER_RE, '$1 ').match(LEADING_FILE_NUMBER_RE);
+    return m ? m[1] : null;
+}
+
+/**
+ * Return the memo/email transmission sentences in raw agenda text, cleaned
+ * of "(To be R/F)" / "(Title of … listed below)" tags. Empty array if none.
+ * @param {string} content
+ * @returns {string[]}
+ */
+function extractTransmittalNotes(content) {
+    const notes = [];
+    let rest = content || '';
+    for (const pattern of TRANSMITTAL_PATTERNS) {
+        rest = rest.replace(pattern, (match) => {
+            const note = match
+                .replace(/\(To be R\/F\)/gi, '')
+                .replace(/\(Title of [^)]*listed below\)/gi, '')
+                .replace(/\s+/g, ' ')
+                .trim();
+            if (note) notes.push(/[.?!]$/.test(note) ? note : note + '.');
+            return ' ';
+        });
+    }
+    return notes;
+}
+
+/**
  * Strip legal boilerplate and transmission memos from raw agenda item text.
  * @param {string} content - Raw agenda item text
  * @returns {string} - Cleaned text (file numbers marked with **bold**)
@@ -25,6 +85,8 @@ function cleanAgendaContent(content) {
 
     // First preserve file numbers with proper formatting
     let cleaned = content
+        // Un-glue a title jammed onto the file number ("PS26-25956Resolution")
+        .replace(GLUED_FILE_NUMBER_RE, '$1 ')
         // Format file numbers consistently
         .replace(/(File No\. [A-Za-z0-9\/\-]+)/gi, '**$1**')
         // Also handle bare file numbers at start of text (e.g., "TA/CPA25-20 Transmittal...")
@@ -45,6 +107,21 @@ function cleanAgendaContent(content) {
 
         // Normalize spacing
         .replace(/\s+/g, ' ').trim()
+
+        // "(Title of [substitute] resolution/ordinance listed below)" + the
+        // full legal title(s) that follow: a clerk's convention for attaching
+        // a substitute or companion instrument. When the item already has a
+        // description, the restated title only duplicates it (and can triple
+        // the length — 8/27/26 item 80 grew three resolution titles). Keep
+        // the tail only when it is the item's sole description.
+        .replace(/\s*\(Title of [^)]*listed below\)\s*([^]*)$/i, (m, tail, offset, str) => {
+            const before = str.slice(0, offset)
+                .replace(/\*\*[^*]*\*\*/g, '')
+                .replace(/\([^)]*\)/g, '')
+                .replace(/[\s\-–—:;,.]+/g, ' ')
+                .trim();
+            return before.length >= 40 ? '' : ' ' + tail;
+        })
 
         // Remove parenthetical notes - these don't change meaning
         // Also remove any preceding dash/hyphen before the parenthetical
@@ -71,6 +148,10 @@ function cleanAgendaContent(content) {
         .replace(/\(Amended motion[^)]*\)/gi, '')
         .replace(/\(Next [^)]*\)/gi, '')
         .replace(/\(First (discussion|public hearing)[^)]*\)/gi, '')
+
+        // The ending-phrase rules below are $-anchored; a parenthetical
+        // removed above leaves trailing whitespace that would defeat them.
+        .replace(/\s+$/, '')
 
         // Remove ONLY standard ending phrases - these are truly boilerplate
         .replace(/;\s*providing an effective date\.?$/gi, '.')
@@ -263,6 +344,8 @@ function formatChangeLogDate(dateKey) {
 
 module.exports = {
     cleanAgendaContent,
+    extractTransmittalNotes,
+    leadingFileNumber,
     splitNumberedWaivers,
     formatStaffReportSection,
     formatChangeLogDate,

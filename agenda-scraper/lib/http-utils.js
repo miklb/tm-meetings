@@ -19,6 +19,23 @@ function absoluteUrl(relativeOrAbsolute) {
 }
 
 /**
+ * Text content of a cheerio node with block boundaries preserved as
+ * newlines. cheerio's .text() concatenates adjacent <p>/<h4> runs with no
+ * separator, so "File No. PS26-25956</p><p>Resolution…" comes out glued as
+ * "PS26-25956Resolution" — which then poisons file-number extraction and
+ * every downstream cleaner. Blank-line runs collapse to a single "\n".
+ * @param {Object} $el - cheerio selection
+ * @returns {string}
+ */
+function blockText($el) {
+  if (!$el || $el.length === 0) return '';
+  const $clone = $el.clone();
+  $clone.find('br').replaceWith('\n');
+  $clone.find('p, div, h1, h2, h3, h4, h5, h6, li, tr').append('\n');
+  return $clone.text().replace(/\r/g, '').replace(/[ \t]*\n[ \t\n]*/g, '\n').trim();
+}
+
+/**
  * Convert DownloadFile URLs to DownloadFileBytes for direct PDF access
  * @param {string} downloadFileUrl - Original download URL
  * @returns {string} - Direct PDF URL
@@ -244,7 +261,7 @@ function parseAgendaTable(html, extractFileNumber) {
 
     if (link.length === 0) return;
 
-    const contentText = contentCell.text().trim();
+    const contentText = blockText(contentCell);
     let agendaItemId = null;
     let hrefId = null;
 
@@ -433,7 +450,7 @@ function parseStaticAddendumItems(html, extractFileNumber) {
     if ($cells.length < 2) return;
 
     const label = $cells.eq(0).text().trim();
-    const contentText = $cells.eq(1).text().trim();
+    const contentText = blockText($cells.eq(1));
     if (!contentText) return;
 
     const numberMatch = label.match(/^(\d+)\./);
@@ -458,6 +475,7 @@ module.exports = {
   ONBASE_PATH,
   AGENDA_BASE,
   absoluteUrl,
+  blockText,
   convertToDirectPDFUrl,
   extractMeetingDate,
   extractMeetingName,

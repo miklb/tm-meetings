@@ -15,6 +15,7 @@ const {
   BASE_URL,
   AGENDA_BASE,
   absoluteUrl,
+  blockText,
   extractMeetingDate,
   extractMeetingName,
   extractLoadAgendaConfig,
@@ -405,7 +406,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     }
 
     const $ = cheerio.load(detailHtml);
-    const title = $('.item-view-title-text').text().trim() || item.rawText;
+    const title = blockText($('.item-view-title-text')) || item.rawText;
     
     // Parse supporting documents
     const supportingDocuments = parseSupportingDocuments(detailHtml).map(doc => ({

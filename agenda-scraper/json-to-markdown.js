@@ -38,6 +38,8 @@ const {
 const { loadChangeLog } = require('./lib/change-log');
 const {
     cleanAgendaContent,
+    extractTransmittalNotes,
+    leadingFileNumber,
     formatStaffReportSection,
     formatChangeLogDate,
 } = require('./lib/agenda-content');
@@ -264,6 +266,10 @@ function itemDescription(item) {
         const esc = item.fileNumber.replace(/[.*+?^${}()|[\]\\\/]/g, '\\$&');
         cleaned = cleaned.replace(new RegExp(`\\*\\*File No\\. ${esc}[^*]*\\*\\*[\\s,.:;–—-]*`, 'i'), '');
     }
+    // A leading file number the scraper mis-parsed (e.g. glued "PS26-25956Res")
+    // won't match above; the heading carries the number, so drop it anyway.
+    // Keep it when a secondary number follows ("CM26-22117 / CM25-18955").
+    cleaned = cleaned.replace(/^\*\*File No\. [^*]*\*\*(?!\s*\/)[\s,.:;–—-]*/i, '');
     // Unbold anything left (secondary file-number references stay inline).
     cleaned = cleaned.replace(/\*\*([^*]+)\*\*/g, '$1');
     return cleaned.trim();
@@ -505,6 +511,14 @@ const ADDENDUM_LABELS = {
     otherChanges: 'Other Changes',
 };
 
+/** First ~max chars of a description, cut at a word boundary. */
+function truncateTitle(text, max) {
+    const t = (text || '').replace(/\s+/g, ' ').trim();
+    if (t.length <= max) return t;
+    const cut = t.slice(0, max - 1);
+    return cut.slice(0, Math.max(cut.lastIndexOf(' '), 40)).replace(/[\s\-–—:;,.]+$/, '') + '…';
+}
+
 function renderAddendumSection(addenda, anchorId) {
     const sections = { walkons: [], removedFromConsent: [], continuances: [], otherChanges: [] };
     for (const addendum of addenda) {
@@ -526,8 +540,29 @@ function renderAddendumSection(addenda, anchorId) {
         parts.push('<ul>');
         for (const item of items) {
             const rawText = item.rawTitle || item.title || '';
-            const text = cleanAgendaContent(rawText).replace(/\*\*([^*]+)\*\*/g, '$1').trim();
-            let li = `<p>${escapeHtml(text)}</p>`;
+            // Same cleaning as the main agenda, but the digest leads with the
+            // item link and the memo (the actual change) rather than the
+            // full re-stated item title. Walk-ons have no main-agenda item
+            // to point at, so they keep the full cleaned description.
+            const fileNumber = leadingFileNumber(rawText) || item.fileNumber;
+            const description = itemDescription({ rawTitle: rawText, fileNumber });
+            const notes = extractTransmittalNotes(rawText);
+            const isExisting = item.number != null && key !== 'walkons';
+            let li;
+            if (isExisting) {
+                const label = `Item ${item.number}${fileNumber ? ` — ${escapeHtml(fileNumber)}` : ''}`;
+                const linked = item.agendaItemId ? `<a href="#item-${item.agendaItemId}">${label}</a>` : label;
+                const short = truncateTitle(description, 90);
+                li = `<p><strong>${linked}</strong>${short ? ` · <span class="agenda__changes-title">${escapeHtml(short)}</span>` : ''}</p>`;
+                if (notes.length) {
+                    li += notes.map(n => `\n<p class="agenda__addendum-note">${escapeHtml(n)}</p>`).join('');
+                } else if (!short) {
+                    li += `\n<p>${escapeHtml(description)}</p>`;
+                }
+            } else {
+                li = `<p>${escapeHtml(description)}</p>`;
+                if (notes.length) li += notes.map(n => `\n<p class="agenda__addendum-note">${escapeHtml(n)}</p>`).join('');
+            }
             if (item.continuedToDate) {
                 li += `\n<p class="agenda__addendum-continued">⚠️ <strong>Continued to ${escapeHtml(item.continuedToDate)}</strong></p>`;
             }
