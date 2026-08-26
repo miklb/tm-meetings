@@ -10,7 +10,8 @@
       "published_at": "2022-11-02T08:59:53Z",
       "duration": "PT3H23M44S",
       "chapters": [],
-      "offset_seconds": 295
+      "offset_seconds": 132,
+      "transcript_start_time": "1:16:50PM"
     },
     {
       "video_id": "JhLSLEN6AUc",
@@ -20,7 +21,7 @@
       "published_at": "2022-11-02T04:20:21Z",
       "duration": "PT3H12M37S",
       "chapters": [],
-      "offset_seconds": 284.0
+      "offset_seconds": 279
     }
   ]
 }

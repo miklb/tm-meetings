@@ -10,7 +10,8 @@
       "published_at": "2022-11-04T09:57:37Z",
       "duration": "PT2H21M57S",
       "chapters": [],
-      "offset_seconds": 0
+      "offset_seconds": -55,
+      "transcript_start_time": "3:27:20PM"
     },
     {
       "video_id": "CJWUphmVWbk",
@@ -20,7 +21,8 @@
       "published_at": "2022-11-04T06:58:45Z",
       "duration": "PT1H21M47S",
       "chapters": [],
-      "offset_seconds": 0
+      "offset_seconds": -1,
+      "transcript_start_time": "1:31:59PM"
     },
     {
       "video_id": "IYMsYZFCo8A",
@@ -30,7 +32,7 @@
       "published_at": "2022-11-04T04:12:26Z",
       "duration": "PT3H41S",
       "chapters": [],
-      "offset_seconds": 14.0
+      "offset_seconds": -20
     }
   ]
 }

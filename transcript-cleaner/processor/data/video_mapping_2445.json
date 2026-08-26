@@ -10,7 +10,8 @@
       "published_at": "2023-01-06T08:08:09Z",
       "duration": "PT1H30M24S",
       "chapters": [],
-      "offset_seconds": 65
+      "offset_seconds": 68,
+      "transcript_start_time": "1:32:30PM"
     },
     {
       "video_id": "b9151AjHj2M",
@@ -20,7 +21,7 @@
       "published_at": "2023-01-06T05:53:47Z",
       "duration": "PT3H39M32S",
       "chapters": [],
-      "offset_seconds": 365
+      "offset_seconds": 360
     }
   ]
 }

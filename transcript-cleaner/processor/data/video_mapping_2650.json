@@ -41,7 +41,8 @@
           "timestamp": "01:52:08",
           "seconds": 6728
         }
-      ]
+      ],
+      "offset_seconds": 526
     },
     {
       "video_id": "k6bK2rIh6WI",
@@ -137,7 +138,8 @@
           "seconds": 11569
         }
       ],
-      "transcript_start_time": "01:35:26PM"
+      "transcript_start_time": "01:35:26PM",
+      "offset_seconds": 649
     }
   ]
 }

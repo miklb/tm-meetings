@@ -243,8 +243,11 @@ function matchTranscripts(db) {
   const updateType = db.prepare(
     'UPDATE meetings SET meeting_type = ?, title = ? WHERE id = ?'
   );
+  // Only unclaimed meetings: two transcripts inferred as the same type on the
+  // same date (4/9/26: the near-empty CRA pkey 2669 and the real evening pkey
+  // 2670 both said "Evening") used to overwrite each other in glob order.
   const findMeeting = db.prepare(
-    'SELECT id FROM meetings WHERE date = ? AND meeting_type = ? ORDER BY item_count DESC LIMIT 1'
+    'SELECT id FROM meetings WHERE date = ? AND meeting_type = ? AND transcript_source_id IS NULL ORDER BY item_count DESC LIMIT 1'
   );
   // Fallback: agenda meetings on a date that no transcript claimed in pass 1.
   // Type inference disagrees between the two pipelines for special-call /
@@ -291,6 +294,15 @@ function matchTranscripts(db) {
       transcriptData = JSON.parse(fs.readFileSync(f, 'utf-8'));
     } catch {
       console.warn(`  Skipping ${filename}: parse error`);
+      skipped++;
+      continue;
+    }
+
+    // An empty transcript (source page had no timestamped speaker lines)
+    // must never claim a meeting — it would shadow the real one and publish
+    // a blank transcript page.
+    if (!Array.isArray(transcriptData.segments) || transcriptData.segments.length === 0) {
+      console.warn(`  Skipping ${filename}: 0 segments`);
       skipped++;
       continue;
     }
