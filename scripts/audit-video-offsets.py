@@ -9,8 +9,13 @@ the offset_seconds/transcript_start_time stored in data/meetings.db.
 
 Read-only. Prints a table sorted by severity. Does not modify any files.
 
-Usage: python3 scripts/audit-video-offsets.py
+Usage: python3 scripts/audit-video-offsets.py                # every mapping file
+       python3 scripts/audit-video-offsets.py --tid 2697     # one meeting (skips the DB
+                                                             # comparison — used as a
+                                                             # pre-DB-rebuild gate)
+       ... --strict                                          # exit 1 if anything is flagged
 """
+import argparse
 import glob
 import json
 import os
@@ -88,9 +93,13 @@ def load_db_videos():
     return result
 
 
-def audit():
-    db_videos = load_db_videos()
-    mapping_files = sorted(glob.glob(os.path.join(MAPPING_DIR, 'video_mapping_*.json')))
+def audit(tid=None, check_db=True):
+    db_videos = load_db_videos() if check_db else None
+    pattern = f'video_mapping_{tid}.json' if tid else 'video_mapping_*.json'
+    mapping_files = sorted(glob.glob(os.path.join(MAPPING_DIR, pattern)))
+    if tid and not mapping_files:
+        print(f'no mapping file for transcript {tid} ({pattern})')
+        return 1
 
     rows = []  # each: dict of computed fields + flags list
 
@@ -197,9 +206,11 @@ def audit():
                 flags.append('NO transcript segments matched to this part (baseline/boundary problem)')
                 severity += 3
 
-            # DB comparison
-            db_entry = db_videos.get(video_id)
-            if db_entry is None:
+            # DB comparison (skipped in --tid gate mode: the DB is rebuilt after)
+            db_entry = db_videos.get(video_id) if db_videos is not None else False
+            if db_entry is False:
+                pass
+            elif db_entry is None:
                 flags.append('NOT IN DB (videos table) — DB rebuild needed?')
                 severity += 2
             else:
@@ -254,7 +265,13 @@ def audit():
         print(f"  transcript_{r['tid']} ({r.get('date','?')}) part {r.get('part','?')} "
               f"video={r.get('video_id','?')}  offset={r.get('offset')}  span={r.get('span')}  "
               f"duration={r.get('duration_secs')}")
+    return 1 if flagged else 0
 
 
 if __name__ == '__main__':
-    audit()
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument('--tid', type=int, default=None, help='audit one meeting only (skips DB comparison)')
+    ap.add_argument('--strict', action='store_true', help='exit 1 if any part is flagged')
+    args = ap.parse_args()
+    rc = audit(tid=args.tid, check_db=args.tid is None)
+    sys.exit(rc if args.strict else 0)

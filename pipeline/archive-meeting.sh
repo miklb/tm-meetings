@@ -53,6 +53,7 @@ PROCESSED_DIR="$PROCESSOR_DIR/data/processed"
 # ── Defaults ───────────────────────────────────────────────────────────────────
 SKIP_VIDEO=false
 SKIP_SITE=false
+SKIP_VERIFY=false
 SKIP_AGENDA=false
 DRY_RUN=false
 MEETING_TYPE=""
@@ -65,6 +66,7 @@ if [[ $# -lt 1 ]]; then
     echo ""
     echo "Options:"
     echo "  --skip-video       Skip YouTube video matching / Whisper offset"
+    echo "  --skip-verify      Skip the empirical offset verification gate (Step 3b)"
     echo "  --skip-site        Skip DB rebuild and Eleventy build"
     echo "  --skip-agenda      Skip the post-meeting agenda re-check (late docs / mirror audit)"
     echo "  --meeting-type T   Override meeting type (CRA, workshop, evening, regular)"
@@ -95,6 +97,7 @@ fi
 while [[ $# -gt 0 ]]; do
     case "$1" in
         --skip-video)  SKIP_VIDEO=true; shift ;;
+        --skip-verify) SKIP_VERIFY=true; shift ;;
         --skip-site)   SKIP_SITE=true; shift ;;
         --skip-agenda) SKIP_AGENDA=true; shift ;;
         --dry-run)     DRY_RUN=true; shift ;;
@@ -191,6 +194,7 @@ if [[ -z "$PKEY" ]]; then
             echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
             MULTI_ARGS=("$MULTI_PKEY" "$DATE" "--skip-site")
             $SKIP_VIDEO && MULTI_ARGS+=("--skip-video")
+            $SKIP_VERIFY && MULTI_ARGS+=("--skip-verify")
             [[ -n "$MEETING_TYPE" ]] && MULTI_ARGS+=("--meeting-type" "$MEETING_TYPE")
             $DRY_RUN && MULTI_ARGS+=("--dry-run")
 
@@ -297,6 +301,36 @@ else
         run "$VENV_PYTHON" scripts/build/process_video.py "${VIDEO_ARGS[@]}"
     )
     echo "Done ($(elapsed "$STEP_START"))"
+fi
+
+# ── Step 3b: Verify offsets (structural audit + empirical audio check) ────────
+# The Whisper matcher can lock onto the wrong phrase and save a confidently
+# wrong offset (2026-08-26: seven archived meetings were off by 2–140 min).
+# Check its output before it reaches the DB: audit-video-offsets.py catches
+# overshoot / missing part boundaries; verify-offset.py transcribes a
+# mid-meeting window and measures actual drift for every video part.
+if $SKIP_VIDEO || $SKIP_VERIFY; then
+    step 3b "Verify offsets — SKIPPED"
+else
+    step 3b "Verify offsets (audit + empirical drift check)"
+    STEP_START=$(date +%s)
+    VERIFY_FAILED=false
+    if ! run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/audit-video-offsets.py" --tid "$PKEY" --strict; then
+        VERIFY_FAILED=true
+    fi
+    if ! run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/verify-offset.py" --tid "$PKEY" --strict; then
+        VERIFY_FAILED=true
+    fi
+    echo "Done ($(elapsed "$STEP_START"))"
+    if $VERIFY_FAILED; then
+        echo ""
+        echo "ERROR: offset verification failed for transcript $PKEY — not rebuilding the DB/site."
+        echo "  Mapping:            $PROCESSOR_DIR/data/video_mapping_${PKEY}.json"
+        echo "  Measure at a time:  $PROJECT_ROOT/scripts/verify-offset.py --tid $PKEY --at 11:05:00AM"
+        echo "  Re-run the matcher: cd $PROCESSOR_DIR && venv/bin/python scripts/build/match_whisper_to_transcript.py <video_id> data/processed/processed_transcript_${PKEY}_*.json --video-mapping data/video_mapping_${PKEY}.json"
+        echo "  Bypass (not recommended): --skip-verify"
+        exit 1
+    fi
 fi
 
 # ── Step 4: Rebuild database ──────────────────────────────────────────────────

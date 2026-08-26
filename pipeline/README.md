@@ -69,6 +69,7 @@ Chains all pipeline steps for one meeting:
 1. **Scrape** — Download ALL CAPS transcript from tampagov.net
 2. **Capitalize** — Convert to sentence case with NER (2-5 min, loads GLiNER)
 3. **Video** — YouTube search → Whisper offset → gap detection
+3b. **Verify offsets** — `scripts/audit-video-offsets.py --tid` (span vs. duration, part boundaries) then `scripts/verify-offset.py --tid` (transcribes a mid-meeting window per video part and measures real drift). Fails the run (no DB/site rebuild) if any part is WRONG/NO-MATCH or SUSPECT (>15s). The matcher can save a confidently wrong offset — 2026-08-26 found seven archived meetings off by 2–140 min — so this is the check that keeps bad `?t=` links off the site. `--skip-verify` to opt out.
 4. **Database** — Rebuild SQLite from all agenda + transcript data
 5. **Site** — Regenerate Eleventy HTML
 
@@ -78,6 +79,9 @@ npm run archive -- 2025-11-13
 
 # Skip video step (no YouTube key, or video not posted yet)
 npm run archive -- 2025-11-13 --skip-video
+
+# Skip the offset verification gate (Step 3b) — only if you've checked by hand
+npm run archive -- 2025-11-13 --skip-verify
 
 # Skip site rebuild (batch processing — rebuild once at end)
 npm run archive -- 2025-11-13 --skip-site

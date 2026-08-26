@@ -33,6 +33,7 @@ Options:
 
 ```bash
 npm run archive -- YYYY-MM-DD --skip-video          # no YouTube match / offset
+npm run archive -- YYYY-MM-DD --skip-verify         # no Step 3b offset verification gate
 npm run archive -- YYYY-MM-DD --skip-site           # no DB + site rebuild
 npm run archive -- YYYY-MM-DD --skip-agenda         # no Step 0 agenda re-check
 npm run archive -- YYYY-MM-DD --meeting-type CRA    # override auto-detection
@@ -139,6 +140,25 @@ venv/bin/python scripts/build/resync_offsets.py --limit 10         # ~1 hour chu
 venv/bin/python scripts/build/resync_offsets.py --since 2025-10-01 # FY26 only
 ```
 
-One open item from the 2025 backfill: how the 11/20/25 dropped-stream meeting's
-two parts should split the transcript — details in
-[Michaels_Notes.md](Michaels_Notes.md).
+Heads-up: `data/offset_resync_state.json` shows the Aug 5 resync only completed
+**2 videos** before stopping, which is why so many pre-Aug-5 offsets were still
+stale on 2026-08-26 (seven were wrong by 2–140 min). The 11/20/25 dropped-stream
+split is resolved: part 2 starts at transcript `01:36:33PM`, offset 366s.
+
+## Verify offsets (are the `?t=` links right?)
+
+The matcher can be confidently wrong, so check its output — `npm run archive`
+now does this automatically as Step 3b and refuses to rebuild the DB if a part
+drifts >15s. By hand (pipeline venv, from repo root):
+
+```
+python3 scripts/verify-offset.py --tid 2680                 # every video part: predicted vs. heard
+python3 scripts/verify-offset.py --tid 2680 --at 3:51:00PM  # measure at a specific transcript time
+python3 scripts/audit-video-offsets.py                       # structural audit of ALL mapping files
+python3 scripts/run-offset-verification.py                   # empirical sweep of everything (~1.5h)
+```
+
+Fix = re-run the matcher for that video (see "Rerun transcript sync"); for a
+part ≥2, set its `transcript_start_time` in the mapping first. Results are
+only as good as the transcript: an empty processed transcript (2669) or missing
+part boundaries can't be verified.

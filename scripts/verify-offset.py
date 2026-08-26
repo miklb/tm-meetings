@@ -4,10 +4,16 @@ Empirically verify one video_mapping offset by downloading a short audio
 window from YouTube, transcribing it with faster-whisper, and fuzzy-aligning
 a candidate official-transcript segment against the whisper output.
 
-Usage:
-    python3 scripts/verify-offset.py <TID> <video_id> [--part N] [--frac F] [--keep-wav]
+Usage (pipeline venv):
+    python3 scripts/verify-offset.py --tid <TID>                       # every part
+    python3 scripts/verify-offset.py --tid <TID> --video-id=<ID>       # one video
+    python3 scripts/verify-offset.py --tid <TID> --at 11:05:19AM       # measure at a time
+    python3 scripts/verify-offset.py --tid <TID> --strict              # exit code for CI/pipeline gates
 
-Prints one JSON line with the result (also human-readable summary to stderr).
+Prints one JSON line per part (human-readable summary to stderr).
+Verdicts: OK (<=15s) / SUSPECT (<=60s) / WRONG / NO-MATCH / UNCHECKED.
+Skips procedural boilerplate (roll calls, motions) when choosing anchors —
+those phrases recur all meeting and fuzzy-match the wrong occurrence.
 Read-only: never modifies any mapping/transcript files.
 """
 import argparse
@@ -135,6 +141,31 @@ def part_context(mapping, segments, part_num):
     return baseline, part_segs, videos_sorted[idx]
 
 
+# Procedural boilerplate recurs dozens of times per meeting (roll calls,
+# motions, "all in favor"), so a 12-word anchor drawn from it can fuzzy-match
+# the WRONG occurrence and report a phantom drift. Skip segments whose
+# opening words are dominated by this language.
+GENERIC_RE = re.compile(
+    r'\b(motion|second(ed)?|all (those )?in favor|opposed|ayes? have it|roll call|'
+    r'motion carries|so moved|please call the roll|item (number|no\.?) \d+|'
+    r'good morning|good afternoon|welcome back|thank you(,)? (mr|ms|madam|council))\b',
+    re.I)
+MIN_UNIQUE_RATIO = 0.6     # distinct words / total words in the anchor phrase
+
+
+def is_generic(seg):
+    words = seg['text'].split()
+    if len(words) < 25:
+        return True
+    head = ' '.join(words[:ANCHOR_WORDS + 4])
+    if len(GENERIC_RE.findall(head)) >= 2:
+        return True
+    anchor = normalize_words(seg['text'])[:ANCHOR_WORDS]
+    if anchor and len(set(anchor)) / len(anchor) < MIN_UNIQUE_RATIO:
+        return True
+    return False
+
+
 def pick_candidate(part_segs, frac, exclude=None):
     exclude = exclude or set()
     if not part_segs:
@@ -146,9 +177,17 @@ def pick_candidate(part_segs, frac, exclude=None):
         if i in exclude:
             continue
         seg = part_segs[i]
-        words = seg['text'].split()
-        if len(words) >= 25:
+        if not is_generic(seg):
             return i, seg
+    return None
+
+
+def pick_at(part_segs, at_secs):
+    """Nearest non-generic segment at/after a requested transcript time."""
+    order = sorted(range(len(part_segs)), key=lambda i: abs(part_segs[i]['secs'] - at_secs))
+    for i in order:
+        if not is_generic(part_segs[i]):
+            return i, part_segs[i]
     return None
 
 
@@ -259,71 +298,96 @@ def run_candidate(mapping_video, baseline, seg, clip_dir, keep_wav, url):
             'segment_text': seg['text'][:120]}
 
 
-def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument('--tid', type=int, required=True)
-    ap.add_argument('--video-id', dest='video_id', required=True)
-    ap.add_argument('--part', type=int, default=None)
-    ap.add_argument('--keep-wav', action='store_true')
-    args = ap.parse_args()
-
-    mapping = load_mapping(args.tid)
-    video = next((v for v in mapping.get('videos', [])
-                  if v.get('video_id') == args.video_id
-                  and (args.part is None or v.get('part') == args.part)), None)
-    if video is None:
-        print(json.dumps({'ok': False, 'tid': args.tid, 'video_id': args.video_id,
-                           'reason': 'video entry not found in mapping'}))
-        return
-
+def verify_part(mapping, segments, video, keep_wav=False, at=None):
+    """Verify one video part. Returns a result dict (always has ok/verdict)."""
     part_num = video.get('part', 1)
-    segments = load_segments(args.tid)
-    if not segments:
-        print(json.dumps({'ok': False, 'tid': args.tid, 'video_id': args.video_id, 'part': part_num,
-                           'reason': 'no usable transcript segments'}))
-        return
+    base = {'tid': mapping.get('meeting_id'), 'video_id': video.get('video_id'), 'part': part_num}
 
+    def fail(reason, **extra):
+        return {**base, 'ok': False, 'verdict': 'UNCHECKED', 'reason': reason, **extra}
+
+    if not segments:
+        return fail('no usable transcript segments')
     ctx = part_context(mapping, segments, part_num)
     if ctx is None:
-        print(json.dumps({'ok': False, 'tid': args.tid, 'video_id': args.video_id, 'part': part_num,
-                           'reason': 'part not found in mapping'}))
-        return
+        return fail('part not found in mapping')
     if ctx == 'AMBIGUOUS':
-        print(json.dumps({'ok': False, 'tid': args.tid, 'video_id': args.video_id, 'part': part_num,
-                           'reason': 'ambiguous part boundary: multi-part file with transcript_start_time '
-                                     'missing on this/a sibling part; cannot reliably assign segments'}))
-        return
+        return fail('ambiguous part boundary: multi-part file with transcript_start_time '
+                    'missing on this/a sibling part; cannot reliably assign segments')
     baseline, part_segs, _ = ctx
     if not part_segs:
-        print(json.dumps({'ok': False, 'tid': args.tid, 'video_id': args.video_id, 'part': part_num,
-                           'reason': 'no segments assigned to this part'}))
-        return
+        return fail('no segments assigned to this part')
     if video.get('offset_seconds') is None:
-        print(json.dumps({'ok': False, 'tid': args.tid, 'video_id': args.video_id, 'part': part_num,
-                           'reason': 'no offset_seconds set on this part (offset never computed)'}))
-        return
+        return fail('no offset_seconds set on this part (offset never computed)')
 
     url, fmt = get_direct_url(video['video_id'])
     if not url:
-        result = {'ok': False, 'reason': 'yt-dlp: no playable stream (video unavailable)'}
-    else:
-        with tempfile.TemporaryDirectory() as clip_dir:
-            tried = set()
-            result = None
-            for frac in (0.5, 0.25, 0.7):
-                cand = pick_candidate(part_segs, frac, exclude=tried)
-                if cand is None:
-                    continue
-                idx, seg = cand
-                tried.add(idx)
-                result = run_candidate(video, baseline, seg, clip_dir, args.keep_wav, url)
-                if result.get('ok'):
-                    break
-            if result is None:
-                result = {'ok': False, 'reason': 'no candidate segment with >=25 words found'}
+        return fail('yt-dlp: no playable stream (video unavailable)')
 
-    result.update({'tid': args.tid, 'video_id': args.video_id, 'part': part_num})
-    print(json.dumps(result))
+    with tempfile.TemporaryDirectory() as clip_dir:
+        tried = set()
+        result = None
+        if at is not None:
+            plan = [('at', at)]
+        else:
+            plan = [('frac', f) for f in (0.5, 0.25, 0.7)]
+        for kind, val in plan:
+            cand = pick_at(part_segs, val) if kind == 'at' else pick_candidate(part_segs, val, exclude=tried)
+            if cand is None:
+                continue
+            idx, seg = cand
+            tried.add(idx)
+            result = run_candidate(video, baseline, seg, clip_dir, keep_wav, url)
+            if result.get('ok'):
+                break
+        if result is None:
+            return fail('no non-generic candidate segment with >=25 words found')
+    if not result.get('ok'):
+        result.setdefault('verdict', 'NO-MATCH')
+    return {**base, **result}
+
+
+def main():
+    ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    ap.add_argument('--tid', type=int, required=True)
+    ap.add_argument('--video-id', dest='video_id', default=None,
+                    help='verify only this video (default: every part in the mapping)')
+    ap.add_argument('--part', type=int, default=None)
+    ap.add_argument('--at', default=None,
+                    help='transcript timestamp (e.g. 11:05:19AM) to measure at, instead of auto-picking')
+    ap.add_argument('--keep-wav', action='store_true')
+    ap.add_argument('--strict', action='store_true',
+                    help='exit 1 if any part is WRONG/NO-MATCH, exit 2 if any is SUSPECT/UNCHECKED')
+    args = ap.parse_args()
+
+    mapping = load_mapping(args.tid)
+    mapping.setdefault('meeting_id', args.tid)
+    videos = [v for v in sorted(mapping.get('videos', []), key=lambda v: v.get('part', 1))
+              if (args.video_id is None or v.get('video_id') == args.video_id)
+              and (args.part is None or v.get('part') == args.part)]
+    if not videos:
+        print(json.dumps({'ok': False, 'tid': args.tid, 'video_id': args.video_id,
+                           'verdict': 'UNCHECKED', 'reason': 'video entry not found in mapping'}))
+        sys.exit(2 if args.strict else 0)
+
+    segments = load_segments(args.tid)
+    at_secs = parse_ts_to_seconds(args.at) if args.at else None
+    worst = 0
+    for video in videos:
+        result = verify_part(mapping, segments, video, keep_wav=args.keep_wav, at=at_secs)
+        print(json.dumps(result), flush=True)
+        v = result.get('verdict')
+        if v in ('WRONG', 'NO-MATCH'):
+            worst = max(worst, 2)
+        elif v in ('SUSPECT', 'UNCHECKED'):
+            worst = max(worst, 1)
+        drift = result.get('drift')
+        summary = (f"{result['video_id']} part {result['part']}: {v}"
+                   + (f" (drift {drift:+.1f}s, conf {result.get('confidence', 0):.2f})" if drift is not None
+                      else f" ({result.get('reason', '')})"))
+        print(summary, file=sys.stderr)
+    if args.strict:
+        sys.exit({0: 0, 1: 2, 2: 1}[worst])
 
 
 if __name__ == '__main__':
