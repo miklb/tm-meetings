@@ -128,7 +128,8 @@
           "seconds": 14400
         }
       ],
-      "offset_seconds": -199
+      "offset_seconds": 366,
+      "transcript_start_time": "01:36:33PM"
     }
   ]
 }
