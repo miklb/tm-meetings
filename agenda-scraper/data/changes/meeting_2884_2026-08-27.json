@@ -2,5 +2,52 @@
   "meetingId": "2884",
   "meetingDate": "2026-08-27",
   "firstSeenAt": "2026-08-22T17:52:40.995Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-08-26",
+      "mirroredAt": "2026-08-26T18:16:27.230Z",
+      "newDocuments": [
+        {
+          "itemNumber": 46,
+          "itemFileNumber": "F26-26054",
+          "filename": "MEMO.BAIRD - 082726 REGULAR COUNCIL SESSION - FILE NO. F26-26054.PDF"
+        },
+        {
+          "itemNumber": 66,
+          "itemFileNumber": "REZ-26-31",
+          "filename": "1-WRITTEN COMMENTS  REZ-26-31.PDF"
+        },
+        {
+          "itemNumber": 72,
+          "itemFileNumber": "E2026-8",
+          "filename": "1-WRITTEN COMMENT - EC2026-8 CH 24.PDF"
+        },
+        {
+          "itemNumber": 75,
+          "itemFileNumber": "E2026-8",
+          "filename": "SUSAN BRAUN - RCVD 8-18-26.PDF"
+        },
+        {
+          "itemNumber": 76,
+          "itemFileNumber": "E2026-8",
+          "filename": "SUSAN BRAUN - RCVD 8-18-26.PDF"
+        },
+        {
+          "itemNumber": 77,
+          "itemFileNumber": "VAC-26-07",
+          "filename": "VAC-26-07 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "itemNumber": 82,
+          "itemFileNumber": "INF26-26401",
+          "filename": "MEMO.BAIRD - 082726 REGULAR COUNCIL SESSION-ONBASE AGENDA ITEM NO.82 - FILE NO. INF26-26401.PDF"
+        },
+        {
+          "itemNumber": 82,
+          "itemFileNumber": "INF26-26401",
+          "filename": "24-C-0009_V3HALF.PDF"
+        }
+      ]
+    }
+  ]
 }
