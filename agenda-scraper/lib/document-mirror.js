@@ -355,7 +355,8 @@ class DocumentMirror {
     const meetingDate = meetingData.formattedDate || this.formatDate(meetingData.meetingDate);
     const meetingId = meetingData.meetingId;
 
-    console.log(`\nMirroring documents for meeting ${meetingId} (${meetingDate})`);
+    const label = meetingData.meetingName ? ` — ${meetingData.meetingName}` : "";
+    console.log(`\nMirroring documents for meeting ${meetingId} (${meetingDate})${label}`);
     console.log('='.repeat(60));
 
     const results = {
@@ -379,7 +380,11 @@ class DocumentMirror {
       }
     }
 
-    console.log(`Found ${results.totalDocuments} documents across ${results.itemsWithDocs} items\n`);
+    if (meetingData.isAddendum && results.totalDocuments === 0) {
+      console.log(`Addendum with ${results.totalItems} item(s) — no documents expected (they attach to the main agenda)\n`);
+    } else {
+      console.log(`Found ${results.totalDocuments} documents across ${results.itemsWithDocs} items\n`);
+    }
 
     // Process items with rate limiting
     for (const item of meetingData.agendaItems) {
