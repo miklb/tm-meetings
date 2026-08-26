@@ -34,6 +34,7 @@ Options:
 ```bash
 npm run archive -- YYYY-MM-DD --skip-video          # no YouTube match / offset
 npm run archive -- YYYY-MM-DD --skip-site           # no DB + site rebuild
+npm run archive -- YYYY-MM-DD --skip-agenda         # no Step 0 agenda re-check
 npm run archive -- YYYY-MM-DD --meeting-type CRA    # override auto-detection
 npm run archive -- YYYY-MM-DD --dry-run             # show what would run
 ```

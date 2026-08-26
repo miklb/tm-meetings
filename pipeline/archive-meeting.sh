@@ -24,6 +24,10 @@
 #   # Skip the site rebuild step
 #   npm run archive -- 2025-11-13 --skip-site
 #
+#   # Skip the post-meeting agenda re-check (Step 0: re-scrape → mirror →
+#   # reconcile → markdown, then report late-added / unmirrored documents)
+#   npm run archive -- 2025-11-13 --skip-agenda
+#
 #   # Dry run — show what would be done without executing
 #   npm run archive -- 2025-11-13 --dry-run
 #
@@ -49,6 +53,7 @@ PROCESSED_DIR="$PROCESSOR_DIR/data/processed"
 # ── Defaults ───────────────────────────────────────────────────────────────────
 SKIP_VIDEO=false
 SKIP_SITE=false
+SKIP_AGENDA=false
 DRY_RUN=false
 MEETING_TYPE=""
 LOOKUP_PAGES=1
@@ -61,6 +66,7 @@ if [[ $# -lt 1 ]]; then
     echo "Options:"
     echo "  --skip-video       Skip YouTube video matching / Whisper offset"
     echo "  --skip-site        Skip DB rebuild and Eleventy build"
+    echo "  --skip-agenda      Skip the post-meeting agenda re-check (late docs / mirror audit)"
     echo "  --meeting-type T   Override meeting type (CRA, workshop, evening, regular)"
     echo "  --pages N          Transcript index pages to search for the date (default: 1;"
     echo "                     use more for older meetings, e.g. 8 reaches back ~1 year)"
@@ -90,6 +96,7 @@ while [[ $# -gt 0 ]]; do
     case "$1" in
         --skip-video)  SKIP_VIDEO=true; shift ;;
         --skip-site)   SKIP_SITE=true; shift ;;
+        --skip-agenda) SKIP_AGENDA=true; shift ;;
         --dry-run)     DRY_RUN=true; shift ;;
         --meeting-type) MEETING_TYPE="$2"; shift 2 ;;
         --pages)       LOOKUP_PAGES="$2"; shift 2 ;;
@@ -137,6 +144,27 @@ if ! command -v node &>/dev/null; then
 fi
 
 # ── Resolve pkey from date if needed ───────────────────────────────────────────
+# ── Step 0: Agenda final check (date mode only — runs once per date) ──────────
+# Catches documents the clerk attached after the last weekday agenda run, so
+# the DB/site rebuild below and the tm-static post reflect the final agenda.
+# Legacy pkey+date invocations (including the per-pkey recursion for
+# multi-transcript dates) skip this so it never runs twice.
+if [[ -z "$PKEY" ]]; then
+    if $SKIP_AGENDA; then
+        step 0 "Agenda final check — SKIPPED (--skip-agenda)"
+    else
+        step 0 "Agenda final check (re-scrape → mirror → reconcile → markdown)"
+        STEP_START=$(date +%s)
+        AGENDA_ARGS=("$DATE")
+        $DRY_RUN && AGENDA_ARGS+=("--dry-run")
+        if ! bash "$PROJECT_ROOT/pipeline/agenda-final-check.sh" "${AGENDA_ARGS[@]}"; then
+            echo "WARNING: agenda final check failed — continuing with transcript archive."
+            echo "         Re-run by hand: ./pipeline/agenda-final-check.sh $DATE"
+        fi
+        echo "Done ($(elapsed "$STEP_START"))"
+    fi
+fi
+
 if [[ -z "$PKEY" ]]; then
     echo "Looking up transcript pkey for $DATE..."
     PKEYS=$("$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" --pkey-only --pages "$LOOKUP_PAGES" 2>/dev/null)
@@ -201,6 +229,7 @@ echo "  Project root:  $PROJECT_ROOT"
 echo "  Processor dir: $PROCESSOR_DIR"
 echo "  Skip video:    $SKIP_VIDEO"
 echo "  Skip site:     $SKIP_SITE"
+echo "  Skip agenda:   $SKIP_AGENDA"
 echo "  Dry run:       $DRY_RUN"
 [[ -n "$MEETING_TYPE" ]] && echo "  Meeting type:  $MEETING_TYPE" || true
 

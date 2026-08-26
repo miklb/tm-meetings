@@ -173,7 +173,7 @@ def calculate_smart_duration(video_mapping_file: str, transcript_file: str, vide
         (seconds into the video) and *duration* is how many seconds to capture.
     """
     DEFAULT_DURATION = 600                # 10-min minimum
-    MAX_PART1_DURATION = 900              # 15-min ceiling for Part 1 capture
+    MAX_PART1_DURATION = 1500             # 25-min ceiling for Part 1 capture (late starts — 2697 spoke at ~16m)
     PART2_NO_CHAPTERS_DURATION = 900      # 15-min fallback for Part 2+
     CHAPTER_BUFFER = 120                  # 2-min buffer past first content chapter
     PRE_ROLL = 300                        # 5 min — video starts before scheduled time

@@ -181,15 +181,25 @@ function formatSummary(oldData, newData) {
   // 3. Genuinely new/removed documents — compare by title key, not by index
   const docKey = doc => (doc.title || doc.originalText || '').trim().toUpperCase();
   const newDocsByItem = [];
+  const removedDocsByItem = [];
 
   for (const [id, newItem] of newById) {
     if (!oldById.has(id)) continue; // brand-new item — already reported above
     const oldItem = oldById.get(id);
-    const oldDocKeys = new Set((oldItem.supportingDocuments || []).map(docKey).filter(k => k));
+    const oldDocs = oldItem.supportingDocuments || [];
+    const oldDocKeys = new Set(oldDocs.map(docKey).filter(k => k));
     const newDocs = newItem.supportingDocuments || [];
+    const newDocKeys = new Set(newDocs.map(docKey).filter(k => k));
     const genuinelyNew = newDocs.filter(doc => {
       const key = docKey(doc);
       return key && !oldDocKeys.has(key);
+    });
+    // Documents the clerk pulled (e.g. a presentation removed after the
+    // meeting). These vanish from the regenerated post, so they must be
+    // reported — a mirrored copy may still exist on R2.
+    const removed = oldDocs.filter(doc => {
+      const key = docKey(doc);
+      return key && !newDocKeys.has(key);
     });
     newDocs.forEach(doc => {
       const key = docKey(doc);
@@ -198,6 +208,22 @@ function formatSummary(oldData, newData) {
     if (genuinelyNew.length > 0) {
       newDocsByItem.push({ id, item: newItem, docs: genuinelyNew });
     }
+    if (removed.length > 0) {
+      removedDocsByItem.push({ id, item: newItem, docs: removed });
+    }
+  }
+
+  if (removedDocsByItem.length > 0) {
+    hasMeaningfulChange = true;
+    lines.push('**Removed documents:**');
+    for (const { id, item, docs } of removedDocsByItem) {
+      const label = item.fileNumber ? item.fileNumber : `agendaItemId=${id}`;
+      lines.push(`  - ${label} (agendaItemId=${id}): ${docs.length} document${docs.length !== 1 ? 's' : ''} removed`);
+      for (const doc of docs) {
+        lines.push(`    - ${docKey(doc)}${doc.mirroredUrl ? ` (mirrored copy: ${doc.mirroredUrl})` : ''}`);
+      }
+    }
+    lines.push('');
   }
 
   if (newDocsByItem.length > 0) {

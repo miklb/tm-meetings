@@ -1,0 +1,68 @@
+{
+  "meeting_id": 2697,
+  "meeting_date": "2026-08-20",
+  "meeting_type": "CRA",
+  "videos": [
+    {
+      "video_id": "d-1Eu9rdXRI",
+      "title": "Community Redevelopment Agency - 08/20/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-08-21T04:36:13Z",
+      "duration": "PT3H26S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:17:46",
+          "seconds": 1066
+        },
+        {
+          "title": "Item 1: CRA24-2242 - Tampa Heights CAC Verbal Report",
+          "timestamp": "01:03:01",
+          "seconds": 3781
+        },
+        {
+          "title": "Item 2: CRA24-2241 - CRA Director Monthly Report",
+          "timestamp": "01:05:39",
+          "seconds": 3939
+        },
+        {
+          "title": "Item 3: CRA26-26253 - Jackson House Museum Restoration Grant",
+          "timestamp": "01:13:05",
+          "seconds": 4385
+        },
+        {
+          "title": "Item 4: CRA26-26349 - Multi-District Wayfinding Program Change",
+          "timestamp": "02:17:14",
+          "seconds": 8234
+        },
+        {
+          "title": "Item 5: CRA25-19842 - Tampa Union Station Monthly Update",
+          "timestamp": "02:18:35",
+          "seconds": 8315
+        },
+        {
+          "title": "Item 6: CRA26-24166 - Small Cultural Venues Preservation Discussion",
+          "timestamp": "02:20:24",
+          "seconds": 8424
+        },
+        {
+          "title": "Item 10: CRA26-26351 - Ybor City CAC Appointment",
+          "timestamp": "02:47:30",
+          "seconds": 10050
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "02:48:51",
+          "seconds": 10131
+        }
+      ],
+      "offset_seconds": 929
+    }
+  ]
+}

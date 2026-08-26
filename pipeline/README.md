@@ -65,6 +65,7 @@ Invoke via `npm run archive -- <date>` from the project root, or call the script
 
 Chains all pipeline steps for one meeting:
 
+0. **Agenda final check** — re-runs `agenda-scraper/process-agenda.sh <date>` (scrape → R2 mirror → reconcile → Markdown) and reports what changed since the last weekday run plus any supporting document still lacking a `mirroredUrl`. Catches documents the clerk attaches around/after the meeting. Date mode only; `--skip-agenda` to opt out; standalone: `./pipeline/agenda-final-check.sh <date>`.
 1. **Scrape** — Download ALL CAPS transcript from tampagov.net
 2. **Capitalize** — Convert to sentence case with NER (2-5 min, loads GLiNER)
 3. **Video** — YouTube search → Whisper offset → gap detection
