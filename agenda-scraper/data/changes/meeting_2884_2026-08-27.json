@@ -1,17 +1,15 @@
 {
   "meetingId": "2884",
   "meetingDate": "2026-08-27",
-  "firstSeenAt": "2026-08-22T17:52:40.995Z",
+  "firstSeenAt": "2026-08-21T23:12:45Z",
   "entries": [
     {
       "date": "2026-08-26",
-      "mirroredAt": "2026-08-26T20:57:47.599Z",
+      "scrapedAt": "2026-08-26T16:58:04-04:00",
+      "agendaTypePromoted": null,
+      "itemsAdded": [],
+      "itemsRemoved": [],
       "newDocuments": [
-        {
-          "itemNumber": 46,
-          "itemFileNumber": "F26-26054",
-          "filename": "MEMO.BAIRD - 082726 REGULAR COUNCIL SESSION - FILE NO. F26-26054.PDF"
-        },
         {
           "itemNumber": 66,
           "itemFileNumber": "REZ-26-31",
@@ -31,21 +29,6 @@
           "itemNumber": 76,
           "itemFileNumber": "E2026-8",
           "filename": "SUSAN BRAUN - RCVD 8-18-26.PDF"
-        },
-        {
-          "itemNumber": 77,
-          "itemFileNumber": "VAC-26-07",
-          "filename": "VAC-26-07 AFFIDAVIT OF COMPLIANCE.PDF"
-        },
-        {
-          "itemNumber": 82,
-          "itemFileNumber": "INF26-26401",
-          "filename": "MEMO.BAIRD - 082726 REGULAR COUNCIL SESSION-ONBASE AGENDA ITEM NO.82 - FILE NO. INF26-26401.PDF"
-        },
-        {
-          "itemNumber": 82,
-          "itemFileNumber": "INF26-26401",
-          "filename": "24-C-0009_V3HALF.PDF"
         },
         {
           "itemNumber": 4,
@@ -96,6 +79,38 @@
           "itemNumber": 80,
           "itemFileNumber": "DEO26-26571",
           "filename": "STADIUM DEVELOPMENT AND FUNDING AGREEMENT - TAMPA BAY RAYS 2026  REDLINE COMPARE CITY VS CLEAN (8-26-2026).PDF"
+        }
+      ]
+    },
+    {
+      "date": "2026-08-25",
+      "scrapedAt": "2026-08-25T23:13:17Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 46,
+          "itemFileNumber": "F26-26054",
+          "filename": "MEMO.BAIRD - 082726 REGULAR COUNCIL SESSION - FILE NO. F26-26054.PDF"
+        },
+        {
+          "itemNumber": 77,
+          "itemFileNumber": "VAC-26-07",
+          "filename": "VAC-26-07 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "itemNumber": 82,
+          "itemFileNumber": "INF26-26401",
+          "filename": "MEMO.BAIRD - 082726 REGULAR COUNCIL SESSION-ONBASE AGENDA ITEM NO.82 - FILE NO. INF26-26401.PDF"
+        },
+        {
+          "itemNumber": 82,
+          "itemFileNumber": "INF26-26401",
+          "filename": "24-C-0009_V3HALF.PDF"
         }
       ]
     }

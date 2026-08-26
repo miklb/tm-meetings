@@ -954,6 +954,7 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
                             agendaTypePromoted: diff.agendaTypePromoted,
                             itemsAdded: diff.itemsAdded,
                             itemsRemoved: diff.itemsRemoved,
+                            newDocuments: diff.documentsAdded,
                         });
                         saveChangeLog(changeLog);
                     }

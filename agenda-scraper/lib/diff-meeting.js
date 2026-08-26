@@ -12,6 +12,7 @@
  *   //   agendaTypePromoted: { from: 'DRAFT', to: 'FINAL' } | null,
  *   //   itemsAdded:   [{ agendaItemId, number, fileNumber, shortTitle }],
  *   //   itemsRemoved: [{ agendaItemId, number, fileNumber, shortTitle }],
+ *   //   documentsAdded: [{ itemNumber, itemFileNumber, filename }],
  *   // }
  */
 
@@ -63,6 +64,7 @@ function computeMeetingDiff(oldData, newData) {
     agendaTypePromoted: null,
     itemsAdded: [],
     itemsRemoved: [],
+    documentsAdded: [],
   };
 
   if (!oldData || !newData) return result;
@@ -89,6 +91,27 @@ function computeMeetingDiff(oldData, newData) {
     }
   }
 
+  // 3. Supporting documents added to items present in both versions. Logged
+  //    at scrape time so the nightly dates them the day they appeared on
+  //    OnBase, not the day someone ran the mirror. Same {itemNumber,
+  //    itemFileNumber, filename} shape the mirror step used to write.
+  const docKey = (doc) => String(doc.title || doc.originalText || '').replace(/\s+/g, ' ').trim().toUpperCase();
+  for (const [id, item] of newById) {
+    const oldItem = oldById.get(id);
+    if (!oldItem) continue; // whole item is new — covered by itemsAdded
+    const oldDocs = new Set((oldItem.supportingDocuments || []).map(docKey));
+    for (const doc of item.supportingDocuments || []) {
+      const key = docKey(doc);
+      if (key && !oldDocs.has(key)) {
+        result.documentsAdded.push({
+          itemNumber: item.number,
+          itemFileNumber: item.fileNumber || '',
+          filename: doc.title || doc.originalText || 'Document',
+        });
+      }
+    }
+  }
+
   return result;
 }
 
@@ -101,7 +124,8 @@ function diffIsEmpty(diff) {
   return (
     diff.agendaTypePromoted === null &&
     diff.itemsAdded.length === 0 &&
-    diff.itemsRemoved.length === 0
+    diff.itemsRemoved.length === 0 &&
+    (diff.documentsAdded || []).length === 0
   );
 }
 

@@ -84,11 +84,31 @@ function saveChangeLog(log) {
 }
 
 /**
- * Return today's date as YYYY-MM-DD in UTC.
+ * Return today's date as YYYY-MM-DD in Tampa local time. The log is a
+ * public "what changed on which day" record, so the day boundary has to be
+ * the reader's — a 9 PM local run is still that day, not tomorrow UTC.
  * @returns {string}
  */
-function todayUTC() {
-  return new Date().toISOString().slice(0, 10);
+function todayLocal() {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit',
+  }).format(new Date());
+}
+
+/**
+ * Identity key for a logged document: item number + filename with
+ * whitespace/case normalised and the extension dropped (the mirror step
+ * may swap ".DOCX" for ".DO.pdf" per OnBase's converted download URL).
+ * @param {{itemNumber: number|string, filename: string}} doc
+ * @returns {string}
+ */
+function documentKey(doc) {
+  const name = String(doc.filename || '')
+    .replace(/\.[a-z0-9.]+$/i, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toUpperCase();
+  return `${doc.itemNumber}::${name}`;
 }
 
 /**
@@ -110,15 +130,25 @@ function hasMeaningfulContent(partial) {
  * one entry instead of producing duplicates.
  *
  * Only appends/updates when `partial` contains at least one non-empty field.
+ * Documents already logged under *any* day are skipped, so a document the
+ * nightly scraper dated on Tuesday isn't re-dated when it is mirrored on
+ * Wednesday.
  *
  * @param {Object} log       The log object (mutated in place).
  * @param {Object} partial   Fields to add/update for today's entry.
+ * @param {string} [dateKey] YYYY-MM-DD to file under (default: today, local).
  * @returns {boolean}        True when the log was actually modified.
  */
-function appendOrMergeEntry(log, partial) {
+function appendOrMergeEntry(log, partial, dateKey = todayLocal()) {
+  if (partial.newDocuments && partial.newDocuments.length > 0) {
+    const seen = new Set();
+    for (const e of log.entries) {
+      for (const d of e.newDocuments || []) seen.add(documentKey(d));
+    }
+    partial = { ...partial, newDocuments: partial.newDocuments.filter(d => !seen.has(documentKey(d))) };
+  }
   if (!hasMeaningfulContent(partial)) return false;
 
-  const dateKey = todayUTC();
   let entry = log.entries.find(e => e.date === dateKey);
 
   if (!entry) {
@@ -139,9 +169,9 @@ function appendOrMergeEntry(log, partial) {
       entry.newDocuments = [];
     }
     // De-duplicate by itemNumber+filename
-    const existing = new Set(entry.newDocuments.map(d => `${d.itemNumber}::${d.filename}`));
+    const existing = new Set(entry.newDocuments.map(documentKey));
     for (const doc of partial.newDocuments) {
-      const key = `${doc.itemNumber}::${doc.filename}`;
+      const key = documentKey(doc);
       if (!existing.has(key)) {
         entry.newDocuments.push(doc);
         existing.add(key);

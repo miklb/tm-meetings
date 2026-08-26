@@ -15,7 +15,7 @@ const path = require('path');
 require('dotenv').config();
 
 const { DocumentMirror } = require('./lib/document-mirror');
-const { loadChangeLog, saveChangeLog, appendOrMergeEntry } = require('./lib/change-log');
+const { loadChangeLog, saveChangeLog } = require('./lib/change-log');
 
 /**
  * Parse command line arguments
@@ -250,22 +250,16 @@ async function main() {
       force: options.force,
     });
 
-    // Record newly-uploaded documents in the change log.
-    // Only record on *subsequent* mirror runs — the first run establishes the
-    // baseline. If firstSeenAt is null this is the first time we've mirrored
-    // this meeting, so set the baseline timestamp and skip the "new docs" entry.
+    // Change-log bookkeeping. New documents are logged by the scraper's diff
+    // (lib/diff-meeting.js) the day they appear on OnBase — the nightly runs
+    // that, this step usually runs a day later by hand, so logging uploads
+    // here would date everything to the mirror run. Only the first-seen
+    // baseline is set here, for meetings whose log the scraper didn't start.
     if (results.uploadedDocuments && results.uploadedDocuments.length > 0) {
       try {
         const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
         if (!changeLog.firstSeenAt) {
-          // First mirror run — record baseline timestamp, no change entry.
           changeLog.firstSeenAt = new Date().toISOString();
-          saveChangeLog(changeLog);
-        } else {
-          appendOrMergeEntry(changeLog, {
-            mirroredAt: new Date().toISOString(),
-            newDocuments: results.uploadedDocuments,
-          });
           saveChangeLog(changeLog);
         }
       } catch (changeLogErr) {
