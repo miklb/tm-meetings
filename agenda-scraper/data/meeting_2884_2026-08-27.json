@@ -4605,19 +4605,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
-      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 63 through 69)",
-      "staffReport": {
-        "landUseType": "REZONING",
-        "currentZoning": "RS-50",
-        "requestedZoning": "IG",
-        "futureLandUse": "TU-24",
-        "overlayDistrict": "East Tampa Overlay District",
-        "neighborhoodAssociations": [
-          "East Tampa 1 and Tampa Overlook Neighborhood Association"
-        ],
-        "waivers": [],
-        "findings": "The Development Review and Compliance staff has reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances."
-      }
+      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 63 through 69)"
     },
     {
       "number": 68,
@@ -4907,17 +4895,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
-      "section": "10:30 A.M. - PETITIONS TO VACATE AND PUBLIC HEARINGS ON LEGISLATIVE MATTERS - (Items 70 through 77)",
-      "staffReport": {
-        "landUseType": "OTHER",
-        "currentZoning": null,
-        "requestedZoning": null,
-        "futureLandUse": null,
-        "overlayDistrict": null,
-        "neighborhoodAssociations": [],
-        "waivers": [],
-        "findings": null
-      }
+      "section": "10:30 A.M. - PETITIONS TO VACATE AND PUBLIC HEARINGS ON LEGISLATIVE MATTERS - (Items 70 through 77)"
     },
     {
       "number": 71,
