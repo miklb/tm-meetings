@@ -913,69 +913,7 @@ async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
         
         const outputFileName = path.join(outputDir, `${fileName}.json`);
 
-        // Preserve mirroredUrl values from existing JSON so re-scrapes
-        // don't wipe out R2 links (OnBase publishId URLs change but R2 is permanent)
-        if (fs.existsSync(outputFileName)) {
-            try {
-                const existing = JSON.parse(fs.readFileSync(outputFileName, 'utf8'));
-                const mirrorMap = new Map();
-                for (const item of existing.agendaItems || []) {
-                    for (const doc of item.supportingDocuments || []) {
-                        if (doc.mirroredUrl && item.agendaItemId) {
-                            const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
-                            mirrorMap.set(key, doc.mirroredUrl);
-                        }
-                    }
-                }
-                if (mirrorMap.size > 0) {
-                    let restored = 0;
-                    for (const item of meetingData.agendaItems) {
-                        for (const doc of item.supportingDocuments || []) {
-                            const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
-                            const existing = mirrorMap.get(key);
-                            if (existing) {
-                                doc.mirroredUrl = existing;
-                                restored++;
-                            }
-                        }
-                    }
-                    if (restored > 0) {
-                        console.log(`Preserved ${restored} mirrored document URLs from previous scrape`);
-                    }
-                }
-
-                // Capture meaningful diff for the public change-log
-                try {
-                    const diff = computeMeetingDiff(existing, meetingData);
-                    if (!diffIsEmpty(diff)) {
-                        const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
-                        appendOrMergeEntry(changeLog, {
-                            scrapedAt: new Date().toISOString(),
-                            agendaTypePromoted: diff.agendaTypePromoted,
-                            itemsAdded: diff.itemsAdded,
-                            itemsRemoved: diff.itemsRemoved,
-                            newDocuments: diff.documentsAdded,
-                        });
-                        saveChangeLog(changeLog);
-                    }
-                } catch (changeLogErr) {
-                    console.warn(`Warning: change-log update failed: ${changeLogErr.message}`);
-                }
-            } catch (e) {
-                // Existing file unreadable — proceed without merge
-            }
-        } else {
-            // First scrape — initialise the log with firstSeenAt so we have a baseline
-            try {
-                const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
-                if (!changeLog.firstSeenAt) {
-                    changeLog.firstSeenAt = new Date().toISOString();
-                    saveChangeLog(changeLog);
-                }
-            } catch (changeLogErr) {
-                console.warn(`Warning: change-log initialisation failed: ${changeLogErr.message}`);
-            }
-        }
+        preserveMirrorsAndLogChanges(outputFileName, meetingData);
 
         fs.writeFileSync(outputFileName, JSON.stringify(meetingData, null, 2));
         
@@ -1105,6 +1043,76 @@ async function scrapeMeetingIds(url) {
  * @param {string} meetingName - Clerk's meeting name from the list page (optional)
  * @returns {Promise<void>}
  */
+/**
+ * Runs in both scrape paths, right before the meeting JSON is written.
+ * Preserves mirroredUrl values from the existing JSON so re-scrapes don't
+ * wipe out R2 links (OnBase publishId URLs change but R2 is permanent),
+ * and records the meaningful diff in the public change-log.
+ */
+function preserveMirrorsAndLogChanges(outputFileName, meetingData) {
+    if (fs.existsSync(outputFileName)) {
+        try {
+            const existing = JSON.parse(fs.readFileSync(outputFileName, 'utf8'));
+            const mirrorMap = new Map();
+            for (const item of existing.agendaItems || []) {
+                for (const doc of item.supportingDocuments || []) {
+                    if (doc.mirroredUrl && item.agendaItemId) {
+                        const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
+                        mirrorMap.set(key, doc.mirroredUrl);
+                    }
+                }
+            }
+            if (mirrorMap.size > 0) {
+                let restored = 0;
+                for (const item of meetingData.agendaItems) {
+                    for (const doc of item.supportingDocuments || []) {
+                        const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
+                        const preserved = mirrorMap.get(key);
+                        if (preserved) {
+                            doc.mirroredUrl = preserved;
+                            restored++;
+                        }
+                    }
+                }
+                if (restored > 0) {
+                    console.log(`Preserved ${restored} mirrored document URLs from previous scrape`);
+                }
+            }
+
+            // Capture meaningful diff for the public change-log
+            try {
+                const diff = computeMeetingDiff(existing, meetingData);
+                if (!diffIsEmpty(diff)) {
+                    const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
+                    appendOrMergeEntry(changeLog, {
+                        scrapedAt: new Date().toISOString(),
+                        agendaTypePromoted: diff.agendaTypePromoted,
+                        itemsAdded: diff.itemsAdded,
+                        itemsRemoved: diff.itemsRemoved,
+                        newDocuments: diff.documentsAdded,
+                    });
+                    saveChangeLog(changeLog);
+                }
+            } catch (changeLogErr) {
+                console.warn(`Warning: change-log update failed: ${changeLogErr.message}`);
+            }
+        } catch (e) {
+            // Existing file unreadable — proceed without merge
+        }
+    } else {
+        // First scrape — initialise the log with firstSeenAt so we have a baseline
+        try {
+            const changeLog = loadChangeLog(meetingData.meetingId, meetingData.formattedDate);
+            if (!changeLog.firstSeenAt) {
+                changeLog.firstSeenAt = new Date().toISOString();
+                saveChangeLog(changeLog);
+            }
+        } catch (changeLogErr) {
+            console.warn(`Warning: change-log initialisation failed: ${changeLogErr.message}`);
+        }
+    }
+}
+
 async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null, targetDate = null, meetingName = null) {
     console.log(`\n[HTTP] Starting scrape for meeting ${meetingId} (${meetingType})`);
 
@@ -1149,6 +1157,8 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
         if (!fs.existsSync(path.join(__dirname, 'data'))) {
             fs.mkdirSync(path.join(__dirname, 'data'));
         }
+
+        preserveMirrorsAndLogChanges(filename, meetingData);
 
         fs.writeFileSync(filename, JSON.stringify(meetingData, null, 2));
         console.log(`[HTTP] ✅ Meeting ${meetingId} saved to: ${filename}`);
