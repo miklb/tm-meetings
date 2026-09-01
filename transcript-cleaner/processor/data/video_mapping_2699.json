@@ -1,0 +1,158 @@
+{
+  "meeting_id": 2699,
+  "meeting_date": "2026-08-27",
+  "meeting_type": "City council",
+  "videos": [
+    {
+      "video_id": "ZtGA9ABNhFA",
+      "title": "Tampa City Council - 08/27/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-08-27T23:18:06Z",
+      "duration": "PT9H56M11S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-24465 - Florida Aquarium Commendation",
+          "timestamp": "00:24:45",
+          "seconds": 1485
+        },
+        {
+          "title": "Item 2: CM26-25594 - Jamal Jefferson Commendation",
+          "timestamp": "00:32:11",
+          "seconds": 1931
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:40:59",
+          "seconds": 2459
+        },
+        {
+          "title": "Item 3: BA26-23088 - Natural Resources Committee Appointments",
+          "timestamp": "01:33:47",
+          "seconds": 5627
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:37:31",
+          "seconds": 5851
+        },
+        {
+          "title": "Item 59: E2026-8 CH 26.5 - Strategic Business Development Ordinance",
+          "timestamp": "01:42:52",
+          "seconds": 6172
+        },
+        {
+          "title": "Item 60: VAC-26-08 - 43rd Street",
+          "timestamp": "02:07:09",
+          "seconds": 7629
+        },
+        {
+          "title": "Item 61: HTX26-25646 - 905 N Florida Avenue",
+          "timestamp": "02:09:13",
+          "seconds": 7753
+        },
+        {
+          "title": "Item 62: E2026-8 CH 11 & 18",
+          "timestamp": "02:11:33",
+          "seconds": 7893
+        },
+        {
+          "title": "Item 63: REZ-26-10 - 2111 East Busch Boulevard",
+          "timestamp": "02:12:00",
+          "seconds": 7920
+        },
+        {
+          "title": "Item 62: E2026-8 CH 11 & 18",
+          "timestamp": "02:13:55",
+          "seconds": 8035
+        },
+        {
+          "title": "Item 64: REZ-26-12 - 1704 West North B Street",
+          "timestamp": "02:17:22",
+          "seconds": 8242
+        },
+        {
+          "title": "Item 65: REZ-26-14 - 1732 West Saint Louis Street",
+          "timestamp": "02:19:12",
+          "seconds": 8352
+        },
+        {
+          "title": "Item 67: REZ-26-43 - 5024 North 30th Street",
+          "timestamp": "02:20:37",
+          "seconds": 8437
+        },
+        {
+          "title": "Item 68: REZ-26-45 - 2404 and 2408 Stuart Street",
+          "timestamp": "02:24:47",
+          "seconds": 8687
+        },
+        {
+          "title": "Item 69: REZ-25-116 - 3101 North Florida Avenue",
+          "timestamp": "02:26:06",
+          "seconds": 8766
+        },
+        {
+          "title": "Item 80: DEO26-26571 - Tampa Bay Rays Development Agreement",
+          "timestamp": "02:27:51",
+          "seconds": 8871
+        },
+        {
+          "title": "Item 70: BF26-25564 - N 46th St & E Fletcher Ave",
+          "timestamp": "09:11:45",
+          "seconds": 33105
+        },
+        {
+          "title": "Item 72: E2026-8 CH 24 - Downtown Special Services Assessment",
+          "timestamp": "09:13:30",
+          "seconds": 33210
+        },
+        {
+          "title": "Item 73: E2026-8 CH 24 - Westshore Special Services Assessment",
+          "timestamp": "09:16:55",
+          "seconds": 33415
+        },
+        {
+          "title": "Item 74: E2026-8 CH 24 - Tampa-Ybor Streetcar Assessment",
+          "timestamp": "09:18:50",
+          "seconds": 33530
+        },
+        {
+          "title": "Item 75: E2026-8 CH 24 - Stormwater Service Assessment",
+          "timestamp": "09:20:00",
+          "seconds": 33600
+        },
+        {
+          "title": "Item 76: E2026-8 CH 24 - Stormwater Capital Improvement Assessment",
+          "timestamp": "09:27:30",
+          "seconds": 34050
+        },
+        {
+          "title": "Item 78: E2026-8 CH 2, 14 & 16 - Firearms Code Revisions",
+          "timestamp": "09:33:20",
+          "seconds": 34400
+        },
+        {
+          "title": "Item 86: CM26-25618 - City Council Rules Amendments",
+          "timestamp": "09:35:30",
+          "seconds": 34530
+        },
+        {
+          "title": "Item 84: CM26-25628 - Tree Mitigation Fee Study",
+          "timestamp": "09:39:35",
+          "seconds": 34775
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "09:46:00",
+          "seconds": 35160
+        }
+      ],
+      "offset_seconds": 354
+    }
+  ]
+}
