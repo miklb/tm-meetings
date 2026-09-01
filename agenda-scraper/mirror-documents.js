@@ -292,6 +292,13 @@ async function main() {
     console.log(`  Uploaded: ${summary.uploaded}`);
     console.log(`  Already existed: ${summary.skipped}`);
     console.log(`  Failed: ${summary.failed}`);
+
+    if (options.force && summary.uploaded > 0) {
+      console.log('');
+      console.log('⚠️  --force overwrote existing objects. Cloudflare edge-caches PDFs on the');
+      console.log('   custom domain (GETs can serve the old object for up to a year, while HEAD');
+      console.log('   shows the new one) — purge the cache for these URLs or the zone.');
+    }
   }
 
   if (summary.failed > 0) {

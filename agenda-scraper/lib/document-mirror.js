@@ -8,6 +8,7 @@ const { S3Client, PutObjectCommand, HeadObjectCommand } = require('@aws-sdk/clie
 const axios = require('axios');
 const path = require('path');
 const crypto = require('crypto');
+const { ONBASE_PATH } = require('./http-utils');
 
 class DocumentMirror {
   /**
@@ -226,16 +227,33 @@ class DocumentMirror {
       };
     }
 
+    // Refuse stale instance URLs: Hyland bumps the instance path over time
+    // (221agendaonline → 251agendaonline → ...), and a dead instance can serve
+    // its error page with HTTP 200 — the 2026-03-19 run archived that page over
+    // ~1,800 documents. A URL from another instance means the meeting JSON
+    // predates the current instance and must be re-scraped first.
+    const instanceMatch = sourceUrl.match(/\/(\d+agendaonline)\//);
+    if (instanceMatch && instanceMatch[1] !== ONBASE_PATH) {
+      throw new Error(`Stale OnBase instance URL (${instanceMatch[1]}, current is ${ONBASE_PATH}) — re-scrape this meeting to get fresh document URLs before mirroring`);
+    }
+
     // Download from OnBase
     const content = await this.downloadDocument(sourceUrl);
-    
+
     // Validate that we didn't receive an HTML page (like a session or internal error page)
     // when we expected a document.
     const preview = content.slice(0, 200).toString('ascii').trim().toLowerCase();
     if (preview.startsWith('<!doctype html') || preview.startsWith('<html') || preview.includes('<head') || preview.includes('<body')) {
       throw new Error(`Downloaded content is HTML, not the expected binary file (likely an OnBase session or internal error page)`);
     }
-    
+
+    // A key ending in .pdf must actually contain a PDF (the %PDF marker sits in
+    // the first 1024 bytes per spec). Catches non-HTML junk the guard above
+    // misses — truncated bodies, JSON error payloads, plain-text notices.
+    if (key.toLowerCase().endsWith('.pdf') && !content.slice(0, 1024).includes('%PDF-')) {
+      throw new Error(`Downloaded content is not a PDF (no %PDF header) — refusing to mirror`);
+    }
+
     // Calculate content hash for logging/deduplication
     const hash = crypto.createHash('sha256').update(content).digest('hex').substring(0, 12);
 
