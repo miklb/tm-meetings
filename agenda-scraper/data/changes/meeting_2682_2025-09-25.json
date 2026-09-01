@@ -1,0 +1,155 @@
+{
+  "meetingId": "2682",
+  "meetingDate": "2025-09-25",
+  "firstSeenAt": "2026-09-01T21:41:56.650Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:40:09.873Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [
+        {
+          "agendaItemId": "16993",
+          "number": 9,
+          "fileNumber": "AB2-25-12",
+          "shortTitle": "File No. AB2-25-12\nPublic Hearing on application of Ehlers Enterprises LLP re…"
+        }
+      ],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-18",
+          "filename": "1-WRITTEN COMMENT TA CPA 24-18.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-18",
+          "filename": "2-WRITTEN COMMENT TA CPA 24-18.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-03",
+          "filename": "CPA25-03 ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-03",
+          "filename": "CPA25-03 PC BRIEFING 1.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-03",
+          "filename": "CPA25-03 PC RESOLUTION 1.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-03",
+          "filename": "CPA25-03 PC STAFF REPORT 1.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-03",
+          "filename": "1-WRITTEN COMMENT TA CPA 25-03.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-05",
+          "filename": "CPA25-05 - ORDINANCE 1.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-05",
+          "filename": "CPA25-05 PC BRIEFING 1.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-05",
+          "filename": "CPA25-05 PC RESOLUTION 1.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-05",
+          "filename": "CPA25-05 PC STAFF REPORT 1 (1).PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-07",
+          "filename": "CPA25-07 - ORDINANCE 1.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-07",
+          "filename": "CPA25-07 PC BRIEFING 1.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-07",
+          "filename": "CPA25-07 PC RESOLUTION 1.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-07",
+          "filename": "CPA25-07 PC STAFF REPORT 1.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-07",
+          "filename": "CPA 25-07 REQUEST FOR WITHDRAW.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "TA/CPA25-08",
+          "filename": "CPA25-08 - ORDINANCE 1.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "TA/CPA25-08",
+          "filename": "CPA25-08 PC BRIEFING 1.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "TA/CPA25-08",
+          "filename": "CPA25-08 PC RESOLUTION 1.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "TA/CPA25-08",
+          "filename": "CPA25-08 PC STAFF REPORT 1.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "TA/CPA25-12",
+          "filename": "CPA25-12 - ORDINANCE (2).PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "TA/CPA25-12",
+          "filename": "CPA25-12 PC BRIEFING.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "TA/CPA25-12",
+          "filename": "CPA25-12 PC RESOLUTION.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "TA/CPA25-12",
+          "filename": "CPA25-12 PC STAFF REPORT.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "AB2-25-06",
+          "filename": "AB2-25-06 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "AB2-25-18",
+          "filename": "AB2-25-18 - ORDINANCE.PDF"
+        }
+      ]
+    }
+  ]
+}

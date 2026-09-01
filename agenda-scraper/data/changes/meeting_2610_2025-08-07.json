@@ -1,0 +1,71 @@
+{
+  "meetingId": "2610",
+  "meetingDate": "2025-08-07",
+  "firstSeenAt": "2026-09-01T21:02:16.628Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T20:56:50.877Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [
+        {
+          "agendaItemId": "16262",
+          "number": 1,
+          "fileNumber": "E2025-15",
+          "shortTitle": "File No. E2025-15\nPresentation of Commendation to the Police Officer of the M…"
+        },
+        {
+          "agendaItemId": "16263",
+          "number": 2,
+          "fileNumber": "E2025-15",
+          "shortTitle": "File No. E2025-15\nPresentation of Commendation to the ATU Local 1464 Employee…"
+        },
+        {
+          "agendaItemId": "16264",
+          "number": 51,
+          "fileNumber": "Administration Update",
+          "shortTitle": "Administration Update"
+        },
+        {
+          "agendaItemId": "15693",
+          "number": 52,
+          "fileNumber": "CM25-15693",
+          "shortTitle": "File No. CM25-15693\nStaff to provide an in-person progress report on the TPD …"
+        },
+        {
+          "agendaItemId": "16582",
+          "number": 65,
+          "fileNumber": "CM25-14952",
+          "shortTitle": "File No. CM25-14952\nHagar Kopesky, City Council Budget Analyst, and Staff to …"
+        }
+      ],
+      "itemsRemoved": [
+        {
+          "agendaItemId": "",
+          "number": 52,
+          "fileNumber": "CM25-15693",
+          "shortTitle": "File No. CM25-15693\nStaff to provide an in-person progress report on the TPD …"
+        }
+      ],
+      "newDocuments": [
+        {
+          "itemNumber": 15,
+          "itemFileNumber": "INF25-15784",
+          "filename": "MEMO RE REQUEST FOR SUBSTITUTION OF AGENDA ITEM NO. 15 ON THE AUGUST 7, 2025 REGULAR COUNCIL SESSION (FILE NO. INF25-15784).PDF"
+        },
+        {
+          "itemNumber": 20,
+          "itemFileNumber": "INF25-16108",
+          "filename": "HURTAK MEMO080625.PDF"
+        },
+        {
+          "itemNumber": 57,
+          "itemFileNumber": "CM25-13970",
+          "filename": "DRAFT ORDINANCE ESTABLISHING 2025 CHARTER REVIEW ADVISORY COMMISSION.DOCX"
+        }
+      ]
+    }
+  ]
+}

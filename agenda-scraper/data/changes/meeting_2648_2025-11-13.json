@@ -1,0 +1,33 @@
+{
+  "meetingId": "2648",
+  "meetingDate": "2025-11-13",
+  "firstSeenAt": "2026-09-01T21:12:16.102Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:11:13.755Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "CRA25-17612",
+          "filename": "COMMERCIALGRANTPOLICY(FILENO.CRA25-17612.ONBASENO.17612).PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "CRA25-17612",
+          "filename": "COMMERCIALGRANTPOLICYMEMO(FILENO.CRA25-17612.ONBASENO.17612).PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "CRA25-17612",
+          "filename": "COMMERCIALGRANTPOLICYPPT(FILENO.CRA25-17612.ONBASENO.17612).PDF"
+        }
+      ]
+    }
+  ]
+}

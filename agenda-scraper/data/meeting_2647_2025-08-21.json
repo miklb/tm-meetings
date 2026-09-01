@@ -1,367 +1,638 @@
 {
   "meetingId": "2647",
-  "meetingType": "CRA Regular",
+  "meetingType": "cra",
+  "meetingName": "CRA Regular",
+  "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "August 21, 2025",
-  "formattedDate": "2025-08-21",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2647&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2647&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
-      "agendaItemId": null,
-      "fileNumber": "CRA24-2242",
-      "title": "File No. CRA24-2242 West Tampa CAC Chair, Joseph Robinson, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - .",
+      "agendaItemId": "16255",
+      "title": "File No. CRA24-2242\nWest Tampa CAC Chair, Joseph Robinson, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
       "rawTitle": "File No. CRA24-2242\nWest Tampa CAC Chair, Joseph Robinson, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "fileNumber": "CRA24-2242",
       "background": "",
       "supportingDocuments": [],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 2,
       "agendaItemId": "16256",
+      "title": "File No. CRA24-2241\nCRA Director's Monthly Report\nMemorandum from Cedric McCray, CRA Director, transmitting August Projects Tracking Report and Commercial Grants Tracking Report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\nMemorandum from Cedric McCray, CRA Director, transmitting August Projects Tracking Report and Commercial Grants Tracking Report for said agenda item. (To be R/F)",
       "fileNumber": "CRA24-2241",
-      "title": "File No. CRA24-2241 CRA Director's Monthly Report Memorandum from Cedric McCray, CRA Director, transmitting August Projects Tracking Report and Commercial Grants Tracking Report for said agenda item. ",
-      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting August Projects Tracking Report and Commercial Grants Tracking Report for said agenda item. (To be R/F)",
       "background": "",
-      "supportingDocuments": [
-        {
-          "title": "Directorreport(onbaseno.16256.fileno.cra24-2241)8.21.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DIRECTORREPORT(ONBASENO.16256.FILENO.CRA24-2241)8.21.PDF.pdf?documentType=1&meetingId=2647&itemId=16256&publishId=137224&isSection=False&isAttachment=True",
-          "originalText": "DIRECTORREPORT(ONBASENO.16256.FILENO.CRA24-2241)8.21.PDF",
-          "originalTitle": "Download DIRECTORREPORT(ONBASENO.16256.FILENO.CRA24-2241)8.21.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16256/directorreportonbaseno.16256.fileno.cra24-22418.21.pdf"
-        }
-      ],
-      "dollarAmounts": []
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 3,
       "agendaItemId": "15401",
+      "title": "File No. CRA25-12420\nCory Robinson, CRA Arts and Cultural Project Coordinator, to work with Robin Nigh, Arts and Cultural Affairs Director, and Judge Emiliano Jose Salcines on a perspective monument within the CRA to honor the late Lt. Baldomero Lopez and provide update. (Original motion initiated by Viera-Maniscalco on February 13, 2025)(Continued from June 12, 2025)\nMemorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-12420\nCory Robinson, CRA Arts and Cultural Project Coordinator, to work with Robin Nigh, Arts and Cultural Affairs Director, and Judge Emiliano Jose Salcines on a perspective monument within the CRA to honor the late Lt. Baldomero Lopez and provide update. (Original motion initiated by Viera-Maniscalco on February 13, 2025)(Continued from June 12, 2025)\nMemorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-12420",
-      "title": "File No. CRA25-12420 Cory Robinson, CRA Arts and Cultural Project Coordinator, to work with Robin Nigh, Arts and Cultural Affairs Director, and Judge Emiliano Jose Salcines on a perspective monument within the CRA to honor the late Lt. Baldomero Lopez and provide update.  Memorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting a written report for said agenda item. ",
-      "rawTitle": "File No. CRA25-12420\nCory Robinson, CRA Arts and Cultural Project Coordinator, to work with Robin Nigh, Arts and Cultural Affairs Director, and Judge Emiliano Jose Salcines on a perspective monument within the CRA to honor the late Lt. Baldomero Lopez and provide update. (Original motion initiated by Viera-Maniscalco on February 13, 2025)(Continued from June 12, 2025)\n\nMemorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting a written report for said agenda item. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Craartsproject(fileno.cra25-12420,onbaseno.12420).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRAARTSPROJECT(FILENO.CRA25-12420%2cONBASENO.12420).PDF.pdf?documentType=1&meetingId=2647&itemId=15401&publishId=137225&isSection=False&isAttachment=True",
+          "title": "CRAARTSPROJECT(FILENO.CRA25-12420,ONBASENO.12420).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRAARTSPROJECT(FILENO.CRA25-12420%2cONBASENO.12420).PDF.pdf?documentType=1&meetingId=2647&itemId=15401&publishId=137416&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRAARTSPROJECT(FILENO.CRA25-12420,ONBASENO.12420).PDF in a new tab",
           "originalText": "CRAARTSPROJECT(FILENO.CRA25-12420,ONBASENO.12420).PDF",
-          "originalTitle": "Download CRAARTSPROJECT(FILENO.CRA25-12420,ONBASENO.12420).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/15401/craartsprojectfileno.cra25-12420onbaseno.12420.pdf"
         },
         {
-          "title": "Baldomero(onbaseno.15401.fileno.cra25-12420).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/BALDOMERO(ONBASENO.15401.FILENO.CRA25-12420).PDF.pdf?documentType=1&meetingId=2647&itemId=15401&publishId=137226&isSection=False&isAttachment=True",
+          "title": "BALDOMERO(ONBASENO.15401.FILENO.CRA25-12420).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BALDOMERO(ONBASENO.15401.FILENO.CRA25-12420).PDF.pdf?documentType=1&meetingId=2647&itemId=15401&publishId=137417&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of BALDOMERO(ONBASENO.15401.FILENO.CRA25-12420).PDF in a new tab",
           "originalText": "BALDOMERO(ONBASENO.15401.FILENO.CRA25-12420).PDF",
-          "originalTitle": "Download BALDOMERO(ONBASENO.15401.FILENO.CRA25-12420).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/15401/baldomeroonbaseno.15401.fileno.cra25-12420.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 4,
       "agendaItemId": "15400",
+      "title": "File No. CRA25-12421\nCRA Staff to speak with Barbara Tripp, Fire Chief, and the Firefighter’s Union to determine a proposed estimate budget for a Downtown fire station and/or the renovation of Station 1 and necessary equipment. Also, to ask CRA staff to work with Clifford Shepard, CRA Attorney, on a proposed amendment that could be presented to the county; further, for approval of the amendment and budget to be presented to the county for approval. (Original motion initiated by Carlson-Maniscalco on February 13, 2024)(Continued from March 13, 2025 and June 12, 2025)\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-12421\nCRA Staff to speak with Barbara Tripp, Fire Chief, and the Firefighter’s Union to determine a proposed estimate budget for a Downtown fire station and/or the renovation of Station 1 and necessary equipment. Also, to ask CRA staff to work with Clifford Shepard, CRA Attorney, on a proposed amendment that could be presented to the county; further, for approval of the amendment and budget to be presented to the county for approval. (Original motion initiated by Carlson-Maniscalco on February 13, 2024)(Continued from March 13, 2025 and June 12, 2025)\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-12421",
-      "title": "File No. CRA25-12421 CRA Staff to speak with Barbara Tripp, Fire Chief, and the Firefighter’s Union to determine a proposed estimate budget for a Downtown fire station and/or the renovation of Station 1 and necessary equipment. Also, to ask CRA staff to work with Clifford Shepard, CRA Attorney, on a proposed amendment that could be presented to the county; further, for approval of the amendment and budget to be presented to the county for approval.  Memorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. ",
-      "rawTitle": "File No. CRA25-12421\nCRA Staff to speak with Barbara Tripp, Fire Chief, and the Firefighter’s Union to determine a proposed estimate budget for a Downtown fire station and/or the renovation of Station 1 and necessary equipment. Also, to ask CRA staff to work with Clifford Shepard, CRA Attorney, on a proposed amendment that could be presented to the county; further, for approval of the amendment and budget to be presented to the county for approval. (Original motion initiated by Carlson-Maniscalco on February 13, 2024)(Continued from March 13, 2025 and June 12, 2025)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Downtown Fire Station (onbase#12421.fileno.cra25-12421).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWN%20FIRE%20STATION%20(ONBASE_12421.FILENO.CRA25-12421).PDF.pdf?documentType=1&meetingId=2647&itemId=15400&publishId=137227&isSection=False&isAttachment=True",
+          "title": "DOWNTOWN FIRE STATION (ONBASE#12421.FILENO.CRA25-12421).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWN%20FIRE%20STATION%20(ONBASE_12421.FILENO.CRA25-12421).PDF.pdf?documentType=1&meetingId=2647&itemId=15400&publishId=137418&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWN FIRE STATION (ONBASE#12421.FILENO.CRA25-12421).PDF in a new tab",
           "originalText": "DOWNTOWN FIRE STATION (ONBASE#12421.FILENO.CRA25-12421).PDF",
-          "originalTitle": "Download DOWNTOWN FIRE STATION (ONBASE#12421.FILENO.CRA25-12421).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/15400/downtown-fire-station-onbase12421.fileno.cra25-12421.pdf"
         },
         {
-          "title": "Firestation(fileno.cra25-12421, Onbaseno.13180).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FIRESTATION(FILENO.CRA25-12421%2c%20ONBASENO.13180).PDF.pdf?documentType=1&meetingId=2647&itemId=15400&publishId=137228&isSection=False&isAttachment=True",
+          "title": "FIRESTATION(FILENO.CRA25-12421, ONBASENO.13180).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FIRESTATION(FILENO.CRA25-12421%2c%20ONBASENO.13180).PDF.pdf?documentType=1&meetingId=2647&itemId=15400&publishId=137419&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FIRESTATION(FILENO.CRA25-12421, ONBASENO.13180).PDF in a new tab",
           "originalText": "FIRESTATION(FILENO.CRA25-12421, ONBASENO.13180).PDF",
-          "originalTitle": "Download FIRESTATION(FILENO.CRA25-12421, ONBASENO.13180).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/15400/firestationfileno.cra25-12421-onbaseno.13180.pdf"
         },
         {
-          "title": "Downtownfirestation(onbaseno.15400.fileno.cra25-12421) (1).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNFIRESTATION(ONBASENO.15400.FILENO.CRA25-12421)%20(1).PDF.pdf?documentType=1&meetingId=2647&itemId=15400&publishId=137229&isSection=False&isAttachment=True",
+          "title": "DOWNTOWNFIRESTATION(ONBASENO.15400.FILENO.CRA25-12421) (1).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWNFIRESTATION(ONBASENO.15400.FILENO.CRA25-12421)%20(1).PDF.pdf?documentType=1&meetingId=2647&itemId=15400&publishId=137420&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWNFIRESTATION(ONBASENO.15400.FILENO.CRA25-12421) (1).PDF in a new tab",
           "originalText": "DOWNTOWNFIRESTATION(ONBASENO.15400.FILENO.CRA25-12421) (1).PDF",
-          "originalTitle": "Download DOWNTOWNFIRESTATION(ONBASENO.15400.FILENO.CRA25-12421) (1).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/15400/downtownfirestationonbaseno.15400.fileno.cra25-12421-1.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 5,
       "agendaItemId": "15386",
+      "title": "File No. CRA25-15386\nCRA Staff to work with the Parks and Recreation Department on the demolition of the structures at Borrell Park. (Original motion initiated by Hurtak-Maniscalco on June 12, 2025)\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-15386\nCRA Staff to work with the Parks and Recreation Department on the demolition of the structures at Borrell Park. (Original motion initiated by Hurtak-Maniscalco on June 12, 2025)\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-15386",
-      "title": "File No. CRA25-15386 CRA Staff to work with the Parks and Recreation Department on the demolition of the structures at Borrell Park.  Memorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. ",
-      "rawTitle": "File No. CRA25-15386\nCRA Staff to work with the Parks and Recreation Department on the demolition of the structures at Borrell Park. (Original motion initiated by Hurtak-Maniscalco on June 12, 2025)\n\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Borrellpark(cra25-15386.onbaseno.15386)8.21.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/BORRELLPARK(CRA25-15386.ONBASENO.15386)8.21.PDF.pdf?documentType=1&meetingId=2647&itemId=15386&publishId=137230&isSection=False&isAttachment=True",
+          "title": "BORRELLPARK(CRA25-15386.ONBASENO.15386)8.21.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BORRELLPARK(CRA25-15386.ONBASENO.15386)8.21.PDF.pdf?documentType=1&meetingId=2647&itemId=15386&publishId=137421&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of BORRELLPARK(CRA25-15386.ONBASENO.15386)8.21.PDF in a new tab",
           "originalText": "BORRELLPARK(CRA25-15386.ONBASENO.15386)8.21.PDF",
-          "originalTitle": "Download BORRELLPARK(CRA25-15386.ONBASENO.15386)8.21.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/15386/borrellparkcra25-15386.onbaseno.153868.21.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 6,
       "agendaItemId": "16610",
+      "title": "File No. CRA25-16610\nEast Tampa CRA Memorial Park Cemetery Monument\nMemorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-16610\nEast Tampa CRA Memorial Park Cemetery Monument\nMemorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-16610",
-      "title": "File No. CRA25-16610 East Tampa CRA Memorial Park Cemetary Monument Memorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting additional information for said agenda item. ",
-      "rawTitle": "File No. CRA25-16610\nEast Tampa CRA Memorial Park Cemetary Monument\n\nMemorandum from Cory Robinson, CRA Arts and Cultural Project Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Memorial Cemetary Monument Images.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MEMORIAL%20CEMETARY%20MONUMENT%20IMAGES.PDF.pdf?documentType=1&meetingId=2647&itemId=16610&publishId=137231&isSection=False&isAttachment=True",
+          "title": "MEMORIAL CEMETARY MONUMENT IMAGES.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMORIAL%20CEMETARY%20MONUMENT%20IMAGES.PDF.pdf?documentType=1&meetingId=2647&itemId=16610&publishId=137422&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMORIAL CEMETARY MONUMENT IMAGES.PDF in a new tab",
           "originalText": "MEMORIAL CEMETARY MONUMENT IMAGES.PDF",
-          "originalTitle": "Download MEMORIAL CEMETARY MONUMENT IMAGES.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16610/memorial-cemetary-monument-images.pdf"
         },
         {
-          "title": "Rla_City of Tampa_Memorial Park Cemetery_Txproposal_May2025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RLA_CITY%20OF%20TAMPA_MEMORIAL%20PARK%20CEMETERY_TXPROPOSAL_MAY2025.PDF.pdf?documentType=1&meetingId=2647&itemId=16610&publishId=137232&isSection=False&isAttachment=True",
+          "title": "RLA_CITY OF TAMPA_MEMORIAL PARK CEMETERY_TXPROPOSAL_MAY2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RLA_CITY%20OF%20TAMPA_MEMORIAL%20PARK%20CEMETERY_TXPROPOSAL_MAY2025.PDF.pdf?documentType=1&meetingId=2647&itemId=16610&publishId=137423&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RLA_CITY OF TAMPA_MEMORIAL PARK CEMETERY_TXPROPOSAL_MAY2025.PDF in a new tab",
           "originalText": "RLA_CITY OF TAMPA_MEMORIAL PARK CEMETERY_TXPROPOSAL_MAY2025.PDF",
-          "originalTitle": "Download RLA_CITY OF TAMPA_MEMORIAL PARK CEMETERY_TXPROPOSAL_MAY2025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16610/rla_city-of-tampa_memorial-park-cemetery_txproposal_may2025.pdf"
         },
         {
-          "title": "Memorialparkmonument(fileno.cra25-16610.onbaseno.16610).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MEMORIALPARKMONUMENT(FILENO.CRA25-16610.ONBASENO.16610).PDF.pdf?documentType=1&meetingId=2647&itemId=16610&publishId=137233&isSection=False&isAttachment=True",
+          "title": "MEMORIALPARKMONUMENT(FILENO.CRA25-16610.ONBASENO.16610).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMORIALPARKMONUMENT(FILENO.CRA25-16610.ONBASENO.16610).PDF.pdf?documentType=1&meetingId=2647&itemId=16610&publishId=137424&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMORIALPARKMONUMENT(FILENO.CRA25-16610.ONBASENO.16610).PDF in a new tab",
           "originalText": "MEMORIALPARKMONUMENT(FILENO.CRA25-16610.ONBASENO.16610).PDF",
-          "originalTitle": "Download MEMORIALPARKMONUMENT(FILENO.CRA25-16610.ONBASENO.16610).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16610/memorialparkmonumentfileno.cra25-16610.onbaseno.16610.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 7,
       "agendaItemId": "16602",
+      "title": "File No. CRA25-16602\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the West Tampa Community Redevelopment Area located at 1712 N. Albany Avenue, Tampa, Florida, for community redevelopment purposes at a purchase price of $460,000 together with closing costs in the approximate amount of $10,000, Pursuant to a contract for sale and purchase between the city of Tampa, as Purchaser, and JPAC Trust, as Seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the West Tampa Community Redevelopment Agency Fund; providing an effective date.\nMemorandum from Brenda Thrower, CRA Development Manager, and Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-16602\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the West Tampa Community Redevelopment Area located at 1712 N. Albany Avenue, Tampa, Florida, for community redevelopment purposes at a purchase price of $460,000 together with closing costs in the approximate amount of $10,000, Pursuant to a contract for sale and purchase between the city of Tampa, as Purchaser, and JPAC Trust, as Seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the West Tampa Community Redevelopment Agency Fund; providing an effective date.\nMemorandum from Brenda Thrower, CRA Development Manager, and Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-16602",
-      "title": "File No. CRA25-16602 Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the West Tampa Community Redevelopment Area located at 1712 N. Albany Avenue, Tampa, Florida, for community redevelopment purposes at a purchase price of $460,000 together with closing costs in the approximate amount of $10,000, Pursuant to a contract for sale and purchase between the city of Tampa, as Purchaser, and JPAC Trust, as Seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the West Tampa Community Redevelopment Agency Fund; providing an effective date. Memorandum from Brenda Thrower, CRA Development Manager, and Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. ",
-      "rawTitle": "File No. CRA25-16602\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the purchase of real property in the West Tampa Community Redevelopment Area located at 1712 N. Albany Avenue, Tampa, Florida, for community redevelopment purposes at a purchase price of $460,000 together with closing costs in the approximate amount of $10,000, Pursuant to a contract for sale and purchase between the city of Tampa, as Purchaser, and JPAC Trust, as Seller; authorizing payment of the purchase price and closing costs associated with the purchase of said parcel of real property with proceeds from the West Tampa Community Redevelopment Agency Fund; providing an effective date.\n\nMemorandum from Brenda Thrower, CRA Development Manager, and Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "background": "Staff respectfully request Tampa CRA Board’s approval to purchase 1712 N. Albany for the purchase price of $460,000, together with closing costs in the approximate amount of $10,000 for the future development of mixed use (residential/commercial) or neighborhood commercial use. The West Tampa CRA budget has funds to support this property acquisition in their Affordable Housing Strategic Acquisition Land Assemblage budget line item.",
       "supportingDocuments": [
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16602&publishId=137234&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16602&publishId=137425&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16602/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "1712 N Albany Ave RESO &amp;amp; Contract Agreement.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/1712%20N%20ALBANY%20AVE%20RESO%20_AMP%3bAMP%3b%20CONTRACT%20AGREEMENT.PDF.pdf?documentType=1&meetingId=2647&itemId=16602&publishId=137235&isSection=False&isAttachment=True",
+          "title": "1712 N ALBANY AVE RESO &AMP;AMP; CONTRACT AGREEMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1712%20N%20ALBANY%20AVE%20RESO%20_AMP%3bAMP%3b%20CONTRACT%20AGREEMENT.PDF.pdf?documentType=1&meetingId=2647&itemId=16602&publishId=137426&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1712 N ALBANY AVE RESO &AMP;AMP; CONTRACT AGREEMENT.PDF in a new tab",
           "originalText": "1712 N ALBANY AVE RESO &AMP;AMP; CONTRACT AGREEMENT.PDF",
-          "originalTitle": "Download 1712 N ALBANY AVE RESO &AMP;AMP; CONTRACT AGREEMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16602/1712-n-albany-ave-reso-ampamp-contract-agreement.pdf"
         },
         {
-          "title": "Wtproperty1712n.albany(onbaseno.16602)8.21.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WTPROPERTY1712N.ALBANY(ONBASENO.16602)8.21.PDF.pdf?documentType=1&meetingId=2647&itemId=16602&publishId=137236&isSection=False&isAttachment=True",
+          "title": "WTPROPERTY1712N.ALBANY(ONBASENO.16602)8.21.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WTPROPERTY1712N.ALBANY(ONBASENO.16602)8.21.PDF.pdf?documentType=1&meetingId=2647&itemId=16602&publishId=137427&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WTPROPERTY1712N.ALBANY(ONBASENO.16602)8.21.PDF in a new tab",
           "originalText": "WTPROPERTY1712N.ALBANY(ONBASENO.16602)8.21.PDF",
-          "originalTitle": "Download WTPROPERTY1712N.ALBANY(ONBASENO.16602)8.21.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16602/wtproperty1712n.albanyonbaseno.166028.21.pdf"
         }
       ],
-      "dollarAmounts": [
-        "$460,000",
-        "$10,000"
-      ]
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        8/06/2025\nRequested Meeting Date: 8/21/2025\nType of Request:                                                  CRA Resolution\nContactMia Dorton 8132748643\nSubjectCRA25-16602 - CRA Staff seeks approval of a land acquisition for the West \nTampa property located at 1712 N. Albany Ave.\nResolution / \nOrdinance \nTitle\nFile No. CRA25-16602\nResolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, approving the purchase of real property in the West Tampa \nCommunity Redevelopment Area located at 1712 N. Albany Avenue, Tampa, \nFlorida, for community redevelopment purposes at a purchase price of \n$460,000 together with closing costs in the approximate amount of $10,000, \nPursuant to a contract for sale and purchase between the city of Tampa, as \nPurchaser, and JPAC Trust, as Seller; authorizing payment of the purchase \nprice and closing costs associated with the purchase of said parcel of real \nproperty with proceeds from the West Tampa Community Redevelopment \nAgency Fund; providing an effective date.\nMemorandum from Brenda Thrower, CRA Development Manager, and Belix \nParks, CRA Community Development Coordinator, transmitting additional \ninformation for said agenda item. (To be R/F)\nBACKGROUND:\nStaff respectfully request Tampa CRA Board’s approval to purchase 1712 N. Albany for the \npurchase price of $460,000, together with closing costs in the approximate amount of \n$10,000 for the future development of mixed use (residential/commercial) or neighborhood \ncommercial use. The West Tampa CRA budget has funds to support this property acquisition \nin their Affordable Housing Strategic Acquisition Land Assemblage budget line item.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution provides for the land acquisition of property located at 1712 N. Albany Avenue \nin the amount of $470,000 for the West Tampa CRA within the West Tampa CRA Fund.\nPROJECTED COSTS: 62350 213830 561000 $470,000 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Strategic Acquisitions\nApproverTimestampRole\nNicole Frey8/8/2025 12:11:39 PMSubmitter\nSherri Scott8/8/2025 2:23:42 PMDepartment Head\nSherri Scott8/8/2025 3:03:42 PMCommunity and Redevelopment Agency\n\nAstonah Turner8/11/2025 1:07:29 PMAttorney Coordinator\nMorris Massey8/12/2025 4:12:34 PMAssistant City Attorney\nAndrea Zelman8/12/2025 4:37:16 PMCity Attorney\nSusan Gobble8/13/2025 8:18:05 AMFinance Coordinator\nSusan Gobble8/14/2025 10:14:34 AMFinance Fiscal and Lead Analyst\nTy Hawthorne8/14/2025 11:01:00 AMBudget Operating Manager\nMichael Perry8/14/2025 12:24:47 PMBudget Officer\nDennis Rogero8/15/2025 10:32:51 AMChief Financial Officer\nPhyllis Ho-Zuhars8/15/2025 3:37:17 PMChief of Staff\nJOHN BENNETT8/15/2025 4:25:24 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for the land acquisition of property located at 1712 N. Albany Avenue in the amount of $470,000 for the West Tampa CRA within the West Tampa CRA Fund.",
+        "projectedCostsRaw": "62350 213830 561000 $470,000 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Strategic Acquisitions",
+        "rows": [
+          {
+            "accountCode": "62350.213830.561000",
+            "fund": "62350",
+            "department": "213830",
+            "object": "561000",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$470,000",
+            "value": 470000,
+            "type": "expenditure",
+            "signedValue": 470000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "West Tampa CRA Fund. CRA Dept. Strategic Acquisitions"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 8,
       "agendaItemId": "16599",
+      "title": "File No. CRA25-16599\nYbor City CRA 1 Program Change - 7th Ave. Bricking Project\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-16599\nYbor City CRA 1 Program Change - 7th Ave. Bricking Project\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-16599",
-      "title": "File No. CRA25-16599 Ybor City CRA 1 Program Change - 7th Ave. Bricking Project Memorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. ",
-      "rawTitle": "File No. CRA25-16599\nYbor City CRA 1 Program Change - 7th Ave. Bricking Project\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ybor I - 7th Avenue Bricking Project - August 2025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/YBOR%20I%20-%207TH%20AVENUE%20BRICKING%20PROJECT%20-%20AUGUST%202025.PDF.pdf?documentType=1&meetingId=2647&itemId=16599&publishId=137237&isSection=False&isAttachment=True",
+          "title": "YBOR I - 7TH AVENUE BRICKING PROJECT - AUGUST 2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/YBOR%20I%20-%207TH%20AVENUE%20BRICKING%20PROJECT%20-%20AUGUST%202025.PDF.pdf?documentType=1&meetingId=2647&itemId=16599&publishId=137428&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of YBOR I - 7TH AVENUE BRICKING PROJECT - AUGUST 2025.PDF in a new tab",
           "originalText": "YBOR I - 7TH AVENUE BRICKING PROJECT - AUGUST 2025.PDF",
-          "originalTitle": "Download YBOR I - 7TH AVENUE BRICKING PROJECT - AUGUST 2025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16599/ybor-i-7th-avenue-bricking-project-august-2025.pdf"
         },
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16599&publishId=137238&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16599&publishId=137429&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16599/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "Yborbrickingprogramchange(onbaseno.16599.fileno.cra25-16599).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/YBORBRICKINGPROGRAMCHANGE(ONBASENO.16599.FILENO.CRA25-16599).PDF.pdf?documentType=1&meetingId=2647&itemId=16599&publishId=137239&isSection=False&isAttachment=True",
+          "title": "YBORBRICKINGPROGRAMCHANGE(ONBASENO.16599.FILENO.CRA25-16599).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/YBORBRICKINGPROGRAMCHANGE(ONBASENO.16599.FILENO.CRA25-16599).PDF.pdf?documentType=1&meetingId=2647&itemId=16599&publishId=137430&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of YBORBRICKINGPROGRAMCHANGE(ONBASENO.16599.FILENO.CRA25-16599).PDF in a new tab",
           "originalText": "YBORBRICKINGPROGRAMCHANGE(ONBASENO.16599.FILENO.CRA25-16599).PDF",
-          "originalTitle": "Download YBORBRICKINGPROGRAMCHANGE(ONBASENO.16599.FILENO.CRA25-16599).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16599/yborbrickingprogramchangeonbaseno.16599.fileno.cra25-16599.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        8/06/2025\nRequested Meeting Date: 8/21/2025\nType of Request:                                                  Motion\nContactMia Dorton 8132748643\nSubjectPhase 2 estimate for bricking from 17th to 19th Streets is $907,000. Available \nFY25 balance is $407,000. To commence the project, staff request to realign \nfunds by moving $500,000 from District Improvements in the Ybor City CRA I \nbudget.\nResolution / \nOrdinance \nTitle\nYbor City CRA 1 Program Change - 7th Ave. Bricking Project\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton8/7/2025 11:53:16 AMSubmitter\nSherri Scott8/7/2025 11:58:54 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 9,
       "agendaItemId": "16665",
+      "title": "File No. CRA25-16665\nProposed Grants and Funding Policy Update - At the March 21, 2024, meeting, the CRA Board approved the discontinuation of all existing commercial grants. Subsequently, at the June 13, 2024, meeting, the Board adopted a new Commercial Grants Policy and portfolio of grants. As with the implementation of any new process, staff began identifying several areas for improvement during the initial rollout.  Staff maintained a comprehensive list of identified deficiencies throughout the implementation process and developed the proposed updates to address the unintended consequences.\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-16665\nProposed Grants and Funding Policy Update - At the March 21, 2024, meeting, the CRA Board approved the discontinuation of all existing commercial grants. Subsequently, at the June 13, 2024, meeting, the Board adopted a new Commercial Grants Policy and portfolio of grants. As with the implementation of any new process, staff began identifying several areas for improvement during the initial rollout.  Staff maintained a comprehensive list of identified deficiencies throughout the implementation process and developed the proposed updates to address the unintended consequences.\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-16665",
-      "title": "File No. CRA25-16665 Proposed Grants and Funding Policy Update - At the March 21, 2024, meeting, the CRA Board approved the discontinuation of all existing commercial grants. Subsequently, at the June 13, 2024, meeting, the Board adopted a new Commercial Grants Policy and portfolio of grants. As with the implementation of any new process, staff began identifying several areas for improvement during the initial rollout. Staff maintained a comprehensive list of identified deficiencies throughout the implementation process and developed the proposed updates to address the unintended consequences. Memorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. ",
-      "rawTitle": "File No. CRA25-16665\nProposed Grants and Funding Policy Update - At the March 21, 2024, meeting, the CRA Board approved the discontinuation of all existing commercial grants. Subsequently, at the June 13, 2024, meeting, the Board adopted a new Commercial Grants Policy and portfolio of grants. As with the implementation of any new process, staff began identifying several areas for improvement during the initial rollout.  Staff maintained a comprehensive list of identified deficiencies throughout the implementation process and developed the proposed updates to address the unintended consequences.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137240&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137431&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "Grantfundingpolicyupdate(fileno.cra25-16665.fileno.16665).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/GRANTFUNDINGPOLICYUPDATE(FILENO.CRA25-16665.FILENO.16665).PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137241&isSection=False&isAttachment=True",
+          "title": "GRANTFUNDINGPOLICYUPDATE(FILENO.CRA25-16665.FILENO.16665).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/GRANTFUNDINGPOLICYUPDATE(FILENO.CRA25-16665.FILENO.16665).PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137432&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of GRANTFUNDINGPOLICYUPDATE(FILENO.CRA25-16665.FILENO.16665).PDF in a new tab",
           "originalText": "GRANTFUNDINGPOLICYUPDATE(FILENO.CRA25-16665.FILENO.16665).PDF",
-          "originalTitle": "Download GRANTFUNDINGPOLICYUPDATE(FILENO.CRA25-16665.FILENO.16665).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/grantfundingpolicyupdatefileno.cra25-16665.fileno.16665.pdf"
         },
         {
-          "title": "Funding Request Descriptions.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FUNDING%20REQUEST%20DESCRIPTIONS.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137242&isSection=False&isAttachment=True",
+          "title": "FUNDING REQUEST DESCRIPTIONS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FUNDING%20REQUEST%20DESCRIPTIONS.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137433&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FUNDING REQUEST DESCRIPTIONS.PDF in a new tab",
           "originalText": "FUNDING REQUEST DESCRIPTIONS.PDF",
-          "originalTitle": "Download FUNDING REQUEST DESCRIPTIONS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/funding-request-descriptions.pdf"
         },
         {
-          "title": "Pre-Development Grant Description.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PRE-DEVELOPMENT%20GRANT%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137243&isSection=False&isAttachment=True",
+          "title": "PRE-DEVELOPMENT GRANT DESCRIPTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/PRE-DEVELOPMENT%20GRANT%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137434&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of PRE-DEVELOPMENT GRANT DESCRIPTION.PDF in a new tab",
           "originalText": "PRE-DEVELOPMENT GRANT DESCRIPTION.PDF",
-          "originalTitle": "Download PRE-DEVELOPMENT GRANT DESCRIPTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/pre-development-grant-description.pdf"
         },
         {
-          "title": "Grants &amp;amp; Funding Policy.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/GRANTS%20_AMP%3bAMP%3b%20FUNDING%20POLICY.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137244&isSection=False&isAttachment=True",
+          "title": "GRANTS &AMP;AMP; FUNDING POLICY.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/GRANTS%20_AMP%3bAMP%3b%20FUNDING%20POLICY.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137435&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of GRANTS &AMP;AMP; FUNDING POLICY.PDF in a new tab",
           "originalText": "GRANTS &AMP;AMP; FUNDING POLICY.PDF",
-          "originalTitle": "Download GRANTS &AMP;AMP; FUNDING POLICY.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/grants-ampamp-funding-policy.pdf"
         },
         {
-          "title": "Commercial Exterior Grant Description.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/COMMERCIAL%20EXTERIOR%20GRANT%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137245&isSection=False&isAttachment=True",
+          "title": "COMMERCIAL EXTERIOR GRANT DESCRIPTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/COMMERCIAL%20EXTERIOR%20GRANT%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137436&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of COMMERCIAL EXTERIOR GRANT DESCRIPTION.PDF in a new tab",
           "originalText": "COMMERCIAL EXTERIOR GRANT DESCRIPTION.PDF",
-          "originalTitle": "Download COMMERCIAL EXTERIOR GRANT DESCRIPTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/commercial-exterior-grant-description.pdf"
         },
         {
-          "title": "Commercial Interior Grant Description.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/COMMERCIAL%20INTERIOR%20GRANT%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137246&isSection=False&isAttachment=True",
+          "title": "COMMERCIAL INTERIOR GRANT DESCRIPTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/COMMERCIAL%20INTERIOR%20GRANT%20DESCRIPTION.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137437&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of COMMERCIAL INTERIOR GRANT DESCRIPTION.PDF in a new tab",
           "originalText": "COMMERCIAL INTERIOR GRANT DESCRIPTION.PDF",
-          "originalTitle": "Download COMMERCIAL INTERIOR GRANT DESCRIPTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/commercial-interior-grant-description.pdf"
         },
         {
-          "title": "Special Projects Grant Descriptions.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SPECIAL%20PROJECTS%20GRANT%20DESCRIPTIONS.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137247&isSection=False&isAttachment=True",
+          "title": "SPECIAL PROJECTS GRANT DESCRIPTIONS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/SPECIAL%20PROJECTS%20GRANT%20DESCRIPTIONS.PDF.pdf?documentType=1&meetingId=2647&itemId=16665&publishId=137438&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of SPECIAL PROJECTS GRANT DESCRIPTIONS.PDF in a new tab",
           "originalText": "SPECIAL PROJECTS GRANT DESCRIPTIONS.PDF",
-          "originalTitle": "Download SPECIAL PROJECTS GRANT DESCRIPTIONS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16665/special-projects-grant-descriptions.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        8/07/2025\nRequested Meeting Date: 8/21/2025\nType of Request:                                                  Motion\nContactMia Dorton 8132748643\nSubjectStaff recommend that the CRA Board approve the proposed updates with an \neffective date of October 1, 2025. Staff also request a September 2, 2025, \ndeadline for applications to be submitted and deemed complete to qualify \nunder the current policy.\nResolution / \nOrdinance \nTitle\nProposed Grants and Funding Policy Update - At the March 21, 2024, \nmeeting, the CRA Board approved the discontinuation of all existing \ncommercial grants. Subsequently, at the June 13, 2024, meeting, the Board \nadopted a new Commercial Grants Policy and portfolio of grants. As with the \nimplementation of any new process, staff began identifying several areas for \nimprovement during the initial rollout.  Staff maintained a comprehensive list of \nidentified deficiencies throughout the implementation process and developed \nthe proposed updates to address the unintended consequences.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton8/7/2025 1:07:14 PMSubmitter\nSherri Scott8/7/2025 3:07:07 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 10,
       "agendaItemId": "16778",
-      "fileNumber": "CRA25-16778",
-      "title": "File No. CRA25-16778 Resolution of the Community Redevelopment agency of the City of Tampa, Florida, approving the execution by the Chair of the CRA to execute a joinder to a Fourth amendment to Agreement (Jackson House) between the City of Tampa and Accardi Properties, LLC; providing for the conveyance to the City of Tampa by Accardi Properties, LLC of a portion of property located adjacent to 851 E Zack Street, and the potential vacation by the City of Tampa of property located at Nebraska avenue at the corner of Nebraska Avenue and Twiggs Street, and the alley located to the west of Nebraska avenue and between Twiggs Street and Zack Street; amending the conditions of closing to provide for a payment of $1,200,000.00 by the City or the CRA in the event that the Nebraska rights of way cannot be vacated.",
+      "title": "File No. CRA25-16778\nResolution of the Community Redevelopment agency of the City of Tampa, Florida, approving the execution by the Chair of the CRA to execute a joinder to a Fourth amendment to Agreement (Jackson House) between the City of Tampa and Accardi Properties, LLC; providing for the conveyance to the City of Tampa by Accardi Properties, LLC of a portion of property located adjacent to 851 E Zack Street, and the potential vacation by the City of Tampa of property located at Nebraska avenue at the corner of Nebraska Avenue and Twiggs Street, and the alley located to the west of Nebraska avenue and between Twiggs Street and Zack Street; amending the conditions of closing to provide for a payment of $1,200,000.00 by the City or the CRA in the event that the Nebraska rights of way cannot be vacated; providing an effective date.",
       "rawTitle": "File No. CRA25-16778\nResolution of the Community Redevelopment agency of the City of Tampa, Florida, approving the execution by the Chair of the CRA to execute a joinder to a Fourth amendment to Agreement (Jackson House) between the City of Tampa and Accardi Properties, LLC; providing for the conveyance to the City of Tampa by Accardi Properties, LLC of a portion of property located adjacent to 851 E Zack Street, and the potential vacation by the City of Tampa of property located at Nebraska avenue at the corner of Nebraska Avenue and Twiggs Street, and the alley located to the west of Nebraska avenue and between Twiggs Street and Zack Street; amending the conditions of closing to provide for a payment of $1,200,000.00 by the City or the CRA in the event that the Nebraska rights of way cannot be vacated; providing an effective date.",
+      "fileNumber": "CRA25-16778",
       "background": "The Jackson House, which is located at 851 E. Zack Street (“Jackson House”) is a historic property, and is in need of repairs and maintenance in order to be preserved.  Adjacent property needs to be acquired so it can be utilized for such repairs and maintenance and to provide a side yard for the Jackson House in order to protect the health and safety of the Jackson House, surrounding properties, and the public.  The City has entered into an agreement with Accardi Properties, LLC to obtain 10-foot strips adjacent to the Jackson House.  The closing on the 10-foot strips is contingent upon the vacation of certain rights of way, including rights of way at the intersection of Twiggs Street and Nebraska Avenue, which requires FDOT approval.  Accardi Properties has agreed to extend the Outside Closing Date in order to give the City additional time to get the vacation, and also has agreed to provide an alternative in the event that the City cannot obtain FDOT approval of the Nebraska Rights of Way (subject to approval by the City’s Community Redevelopment Agency).  The CRA has allocated $1.2 million for improvements to the Nebraska Ave./Twiggs St. intersection.  If those improvements are not approved by FDOT or not made by August 1, 2027, this Amendment provides that the $1.2 million will be paid to Accardi Properties as additional consideration for the conveyance of the two-parcels of land adjacent to the Jackson House.  The 4th Amendment was approved by City Council on July 31, 2025 as Resolution No. 2025-671.",
       "supportingDocuments": [
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137248&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137439&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16778/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "4th Amendment to Jackson House Cra RESO &amp;amp; Agmt.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/4TH%20AMENDMENT%20TO%20JACKSON%20HOUSE%20CRA%20RESO%20_AMP%3bAMP%3b%20AGMT.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137249&isSection=False&isAttachment=True",
+          "title": "4TH AMENDMENT TO JACKSON HOUSE CRA RESO &AMP;AMP; AGMT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/4TH%20AMENDMENT%20TO%20JACKSON%20HOUSE%20CRA%20RESO%20_AMP%3bAMP%3b%20AGMT.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137440&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 4TH AMENDMENT TO JACKSON HOUSE CRA RESO &AMP;AMP; AGMT.PDF in a new tab",
           "originalText": "4TH AMENDMENT TO JACKSON HOUSE CRA RESO &AMP;AMP; AGMT.PDF",
-          "originalTitle": "Download 4TH AMENDMENT TO JACKSON HOUSE CRA RESO &AMP;AMP; AGMT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16778/4th-amendment-to-jackson-house-cra-reso-ampamp-agmt.pdf"
         },
         {
-          "title": "Cc RESO 2025-671 - 4th Amendment to Jackson House.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CC%20RESO%202025-671%20-%204TH%20AMENDMENT%20TO%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137250&isSection=False&isAttachment=True",
+          "title": "CC RESO 2025-671 - 4TH AMENDMENT TO JACKSON HOUSE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CC%20RESO%202025-671%20-%204TH%20AMENDMENT%20TO%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137441&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CC RESO 2025-671 - 4TH AMENDMENT TO JACKSON HOUSE.PDF in a new tab",
           "originalText": "CC RESO 2025-671 - 4TH AMENDMENT TO JACKSON HOUSE.PDF",
-          "originalTitle": "Download CC RESO 2025-671 - 4TH AMENDMENT TO JACKSON HOUSE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16778/cc-reso-2025-671-4th-amendment-to-jackson-house.pdf"
         },
         {
-          "title": "RESO 2023-979 Org. Agmt Jackson House.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%202023-979%20ORG.%20AGMT%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137251&isSection=False&isAttachment=True",
+          "title": "RESO 2023-979 ORG. AGMT JACKSON HOUSE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RESO%202023-979%20ORG.%20AGMT%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137442&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RESO 2023-979 ORG. AGMT JACKSON HOUSE.PDF in a new tab",
           "originalText": "RESO 2023-979 ORG. AGMT JACKSON HOUSE.PDF",
-          "originalTitle": "Download RESO 2023-979 ORG. AGMT JACKSON HOUSE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16778/reso-2023-979-org.-agmt-jackson-house.pdf"
         },
         {
-          "title": "Fully_Executed_First_Amendment_-_Jh.pdf.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FULLY_EXECUTED_FIRST_AMENDMENT_-_JH.PDF.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137252&isSection=False&isAttachment=True",
+          "title": "FULLY_EXECUTED_FIRST_AMENDMENT_-_JH.PDF.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FULLY_EXECUTED_FIRST_AMENDMENT_-_JH.PDF.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137443&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FULLY_EXECUTED_FIRST_AMENDMENT_-_JH.PDF.PDF in a new tab",
           "originalText": "FULLY_EXECUTED_FIRST_AMENDMENT_-_JH.PDF.PDF",
-          "originalTitle": "Download FULLY_EXECUTED_FIRST_AMENDMENT_-_JH.PDF.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16778/fully_executed_first_amendment_-_jh.pdf"
         },
         {
-          "title": "RESO 2024-255 2nd Agmt Jackson House.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%202024-255%202ND%20AGMT%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137253&isSection=False&isAttachment=True",
+          "title": "RESO 2024-255 2ND AGMT JACKSON HOUSE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RESO%202024-255%202ND%20AGMT%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137444&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RESO 2024-255 2ND AGMT JACKSON HOUSE.PDF in a new tab",
           "originalText": "RESO 2024-255 2ND AGMT JACKSON HOUSE.PDF",
-          "originalTitle": "Download RESO 2024-255 2ND AGMT JACKSON HOUSE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16778/reso-2024-255-2nd-agmt-jackson-house.pdf"
         },
         {
-          "title": "RESO 2024-646 3rd Agmt Jackson House.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RESO%202024-646%203RD%20AGMT%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137254&isSection=False&isAttachment=True",
+          "title": "RESO 2024-646 3RD AGMT JACKSON HOUSE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RESO%202024-646%203RD%20AGMT%20JACKSON%20HOUSE.PDF.pdf?documentType=1&meetingId=2647&itemId=16778&publishId=137445&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RESO 2024-646 3RD AGMT JACKSON HOUSE.PDF in a new tab",
           "originalText": "RESO 2024-646 3RD AGMT JACKSON HOUSE.PDF",
-          "originalTitle": "Download RESO 2024-646 3RD AGMT JACKSON HOUSE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16778/reso-2024-646-3rd-agmt-jackson-house.pdf"
         }
       ],
-      "dollarAmounts": [
-        "$1,200,000.00"
-      ]
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: City Attorney\nCRA Regular\nSubmittal Date:                        8/11/2025\nRequested Meeting Date: 9/11/2025\nType of Request:                                                  CRA Resolution\nContactErin Bradley 4-7312\nSubjectA resolution approving the execution by the CRA Chair and attestation by the \nCRA Clerk of a Fourth Amendment to Agreement (Jackson House) between \nthe CRA agency of the City of Tampa and Accardi Properties, LLC.\nResolution / \nOrdinance \nTitle\nFile No. CRA25-16778\nResolution of the Community Redevelopment agency of the City of Tampa, \nFlorida, approving the execution by the Chair of the CRA to execute a joinder \nto a Fourth amendment to Agreement (Jackson House) between the City of \nTampa and Accardi Properties, LLC; providing for the conveyance to the City \nof Tampa by Accardi Properties, LLC of a portion of property located adjacent \nto 851 E Zack Street, and the potential vacation by the City of Tampa of \nproperty located at Nebraska avenue at the corner of Nebraska Avenue and \nTwiggs Street, and the alley located to the west of Nebraska avenue and \nbetween Twiggs Street and Zack Street; amending the conditions of closing to \nprovide for a payment of $1,200,000.00 by the City or the CRA in the event \nthat the Nebraska rights of way cannot be vacated; providing an effective \ndate.\nBACKGROUND:\nThe Jackson House, which is located at 851 E. Zack Street (“Jackson House”) is a historic \nproperty, and is in need of repairs and maintenance in order to be preserved.  Adjacent \nproperty needs to be acquired so it can be utilized for such repairs and maintenance and to \nprovide a side yard for the Jackson House in order to protect the health and safety of the \nJackson House, surrounding properties, and the public.  The City has entered into an \nagreement with Accardi Properties, LLC to obtain 10-foot strips adjacent to the Jackson \nHouse.  The closing on the 10-foot strips is contingent upon the vacation of certain rights of \nway, including rights of way at the intersection of Twiggs Street and Nebraska Avenue, which \nrequires FDOT approval.  Accardi Properties has agreed to extend the Outside Closing Date \nin order to give the City additional time to get the vacation, and also has agreed to provide an \nalternative in the event that the City cannot obtain FDOT approval of the Nebraska Rights of \nWay (subject to approval by the City’s Community Redevelopment Agency).  The CRA has \nallocated $1.2 million for improvements to the Nebraska Ave./Twiggs St. intersection.  If those \nimprovements are not approved by FDOT or not made by August 1, 2027, this Amendment \nprovides that the $1.2 million will be paid to Accardi Properties as additional consideration for \nthe conveyance of the two-parcels of land adjacent to the Jackson House.  The 4th \nAmendment was approved by City Council on July 31, 2025 as Resolution No. 2025-671.\nFISCAL IMPACT: Yes\n\nFISCAL IMPACT STATEMENT:\nThis resolution provides for the Fourth Amendment to the Agreement for the Jackson House \nRoadway Improvements Project between the City of Tampa and Accardi Properties, LLC for \nthe Downtown CRA within the Downtown CRA Fund.\nPROJECTED COSTS: 62200 213800 563001 1002649 $1,200,000 (Expenditure) \nDowntown CRA Fund. CRA Dept. Improve. Other than Bldg. Jackson House Roadway \nImprove. \nProject P-1002649, O - CRA Dept., E - CTPA Improve. Other than Bldgs., T - 30, A - 100202\nApproverTimestampRole\nErin Bradley8/11/2025 9:17:13 AMSubmitter\nErin Bradley8/11/2025 9:19:37 AMDepartment Head\nSherri Scott8/12/2025 2:19:22 PMCommunity and Redevelopment Agency\nAstonah Turner8/12/2025 4:07:33 PMAttorney Coordinator\nMorris Massey8/12/2025 4:11:03 PMAssistant City Attorney\nAndrea Zelman8/12/2025 4:35:56 PMCity Attorney\nSusan Gobble8/13/2025 8:18:31 AMFinance Coordinator\nSusan Gobble8/13/2025 8:25:12 AMFinance Fiscal and Lead Analyst\nTy Hawthorne8/13/2025 11:05:16 AMBudget Operating Manager\nMichael Perry8/13/2025 11:10:15 AMBudget Officer\nDennis Rogero8/15/2025 2:55:24 PMChief Financial Officer\nPhyllis Ho-Zuhars8/15/2025 3:36:34 PMChief of Staff\nJOHN BENNETT8/15/2025 4:25:20 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for the Fourth Amendment to the Agreement for the Jackson House Roadway Improvements Project between the City of Tampa and Accardi Properties, LLC for the Downtown CRA within the Downtown CRA Fund.",
+        "projectedCostsRaw": "62200 213800 563001 1002649 $1,200,000 (Expenditure) \nDowntown CRA Fund. CRA Dept. Improve. Other than Bldg. Jackson House Roadway \nImprove. \nProject P-1002649, O - CRA Dept., E - CTPA Improve. Other than Bldgs., T - 30, A - 100202",
+        "rows": [
+          {
+            "accountCode": "62200.213800.563001.1002649",
+            "fund": "62200",
+            "department": "213800",
+            "object": "563001",
+            "project": "1002649",
+            "fiscalYear": null,
+            "amount": "$1,200,000",
+            "value": 1200000,
+            "type": "expenditure",
+            "signedValue": 1200000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Downtown CRA Fund. CRA Dept. Improve. Other than Bldg. Jackson House Roadway Improve. Project P-1002649, O - CRA Dept., E - CTPA Improve. Other than Bldgs., T - 30, A - 100202"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 11,
       "agendaItemId": "16848",
+      "title": "File No. CRA25-16848\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, adopting a budget for the 2026 fiscal year, beginning October 1, 2025, and ending September 30, 2026, for said Community Redevelopment Agency; providing funding for the separate redevelopment trust funds administered by the Community Redevelopment Agency; recommending to Tampa City Council that said 2026 fiscal year Community Redevelopment Agency budget be included in the City of Tampa 2026 fiscal year general operating budget; approving the supplementary material received relating to said 2026 fiscal year Community Redevelopment Agency budget; making findings; requiring that the 2026 fiscal year community redevelopment agency budget together with the approved supplementary material be submitted to the Hillsborough County Board of County Commissioners within 10-days after the final adoption of the 2026 fiscal year Community Redevelopment Agency budget; authorizing adjustments for the carry-over 2025 tax increment revenues consistent with the adopted budget; providing an effective date.",
+      "rawTitle": "File No. CRA25-16848\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, adopting a budget for the 2026 fiscal year, beginning October 1, 2025, and ending September 30, 2026, for said Community Redevelopment Agency; providing funding for the separate redevelopment trust funds administered by the Community Redevelopment Agency; recommending to Tampa City Council that said 2026 fiscal year Community Redevelopment Agency budget be included in the City of Tampa 2026 fiscal year general operating budget; approving the supplementary material received relating to said 2026 fiscal year Community Redevelopment Agency budget; making findings; requiring that the 2026 fiscal year community redevelopment agency budget together with the approved supplementary material be submitted to the Hillsborough County Board of County Commissioners within 10-days after the final adoption of the 2026 fiscal year Community Redevelopment Agency budget; authorizing adjustments for the carry-over 2025 tax increment revenues consistent with the adopted budget; providing an effective date.",
       "fileNumber": "CRA25-16848",
-      "title": "File No. CRA25-16848 Resolution of the Community Redevelopment Agency of the City of Tampa, Florida, adopting a budget for the 2026 fiscal year, beginning October 1, 2025, and ending September 30, 2026, for said Community Redevelopment Agency; providing funding for the separate redevelopment trust funds administered by the Community Redevelopment Agency; recommending to Tampa City Council that said 2026 fiscal year Community Redevelopment Agency budget be included in the City of Tampa 2026 fiscal year general operating budget; approving the supplementary material received relating to said 2026 fiscal year Community Redevelopment Agency budget; making findings; requiring that the 2026 fiscal year community redevelopment agency budget together with the approved supplementary material be submitted to the Hillsborough County Board of County Commissioners within 10-days after the final adoption of the 2026 fiscal year Community Redevelopment Agency budget; authorizing adjustments for the carry-over 2025 tax increment revenues consistent with the adopted budget.",
-      "rawTitle": "File No. CRA25-16848 \nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, adopting a budget for the 2026 fiscal year, beginning October 1, 2025, and ending September 30, 2026, for said Community Redevelopment Agency; providing funding for the separate redevelopment trust funds administered by the Community Redevelopment Agency; recommending to Tampa City Council that said 2026 fiscal year Community Redevelopment Agency budget be included in the City of Tampa 2026 fiscal year general operating budget; approving the supplementary material received relating to said 2026 fiscal year Community Redevelopment Agency budget; making findings; requiring that the 2026 fiscal year community redevelopment agency budget together with the approved supplementary material be submitted to the Hillsborough County Board of County Commissioners within 10-days after the final adoption of the 2026 fiscal year Community Redevelopment Agency budget; authorizing adjustments for the carry-over 2025 tax increment revenues consistent with the adopted budget; providing an effective date.",
       "background": "In accordance with Part III of Chapter 163, Florida Statutes (the “Community Redevelopment Act”), Tampa City Council created the Community Redevelopment Agency of the City of Tampa, Florida (the “Agency”), and then appointed the members of Tampa City Council as the governing body of the Agency pursuant to Tampa City Council Resolution No. 2119-H adopted by Tampa City Council on or about September 9, 1982. The Agency is required to adopt a budget in compliance with both the Community Redevelopment Act and the Special Districts Act each fiscal year by resolution and recommend to Tampa City Council that said Agency budget be included in the City of Tampa “General” or “Operating” Budget for the upcoming fiscal year to be adopted by Tampa City Council.",
       "supportingDocuments": [
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16848&publishId=137255&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2647&itemId=16848&publishId=137446&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16848/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "Fy26 Cra Budget Adoption RESO with Exhibit a and B.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY26%20CRA%20BUDGET%20ADOPTION%20RESO%20WITH%20EXHIBIT%20A%20AND%20B.PDF.pdf?documentType=1&meetingId=2647&itemId=16848&publishId=137256&isSection=False&isAttachment=True",
+          "title": "FY26 CRA BUDGET ADOPTION RESO WITH EXHIBIT A AND B.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY26%20CRA%20BUDGET%20ADOPTION%20RESO%20WITH%20EXHIBIT%20A%20AND%20B.PDF.pdf?documentType=1&meetingId=2647&itemId=16848&publishId=137447&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY26 CRA BUDGET ADOPTION RESO WITH EXHIBIT A AND B.PDF in a new tab",
           "originalText": "FY26 CRA BUDGET ADOPTION RESO WITH EXHIBIT A AND B.PDF",
-          "originalTitle": "Download FY26 CRA BUDGET ADOPTION RESO WITH EXHIBIT A AND B.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-21/meeting-2647/16848/fy26-cra-budget-adoption-reso-with-exhibit-a-and-b.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        8/12/2025\nRequested Meeting Date: 9/11/2025\nType of Request:                                                  CRA Resolution\nContactMia Dorton 8132748643\nSubjectA CRA Resolution adopting the 2026 Fiscal Year CRA Budget.\nResolution / \nOrdinance \nTitle\nFile No. CRA25-16848 \nResolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, adopting a budget for the 2026 fiscal year, beginning October 1, 2025, \nand ending September 30, 2026, for said Community Redevelopment Agency; \nproviding funding for the separate redevelopment trust funds administered by \nthe Community Redevelopment Agency; recommending to Tampa City \nCouncil that said 2026 fiscal year Community Redevelopment Agency budget \nbe included in the City of Tampa 2026 fiscal year general operating budget; \napproving the supplementary material received relating to said 2026 fiscal \nyear Community Redevelopment Agency budget; making findings; requiring \nthat the 2026 fiscal year community redevelopment agency budget together \nwith the approved supplementary material be submitted to the Hillsborough \nCounty Board of County Commissioners within 10-days after the final adoption \nof the 2026 fiscal year Community Redevelopment Agency budget; \nauthorizing adjustments for the carry-over 2025 tax increment revenues \nconsistent with the adopted budget; providing an effective date.\nBACKGROUND:\nIn accordance with Part III of Chapter 163, Florida Statutes (the “Community Redevelopment\nAct”), Tampa City Council created the Community Redevelopment Agency of the City of\nTampa, Florida (the “Agency”), and then appointed the members of Tampa City Council as\nthe governing body of the Agency pursuant to Tampa City Council Resolution No. 2119-H\nadopted by Tampa City Council on or about September 9, 1982. The Agency is required to\nadopt a budget in compliance with both the Community Redevelopment Act and the Special\nDistricts Act each fiscal year by resolution and recommend to Tampa City Council that said\nAgency budget be included in the City of Tampa\n“General” or “Operating” Budget for the upcoming fiscal year to be adopted by Tampa City\nCouncil.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution adopts the Fiscal Year 2026 annual Community Redevelopment Agency \nbudget in the amount of $91,687,714 in accordance with requirements set forth under Florida \nStatutes Chapter 163, Part III. within the Community Redevelopment and General Fund.\nPROJECTED COSTS: 61800213801319100$2,015,250    (Revenue)\n\nCentral Park CRA Fund. CRA Dept.  Tax Increment Revenue\n61900 213801 319100 $13,461,774 (Revenue)\nChannel District CRA Fund. CRA Dept.  Tax Increment Revenue\n62100 213801 319100 $8,448,602 (Revenue)\nDowntown Core CRA Fund. CRA Dept.  Tax Increment Revenue\n62200 213801 319100 $21,476,251 (Revenue)\nDowntown Non Core CRA Fund. CRA Dept.  Tax Increment Revenue\n62300 213801 319100 $3,617,252 (Revenue)\nDrew Park CRA Fund. CRA Dept.  Tax Increment Revenue\n63350 213801 319100 $9,688,479 (Revenue)\nWest Tampa CRA Fund. CRA Dept.  Tax Increment Revenue\n62400 213801 319100 $14,627,447 (Revenue)\nEast Tampa CRA Fund. CRA Dept.  Tax Increment Revenue\n62500 213801 319100 $2,230,971 (Revenue)\nTampa Heights Riverfront CRA Fund. CRA Dept.  Tax Increment Revenue\n62600 213801 319100 $4,270,475 (Revenue)\nYbor I CRA Fund. CRA Dept.  Tax Increment Revenue\n62700 213801 319100 $2,108,157 (Revenue)\nYbor II CRA Fund. CRA Dept.  Tax Increment Revenue\n61800 213801 361101  68,700  (Revenue)\nCentral Park CRA Fund. CRA Dept.  Interest Earnings\n61900 213801 361101  949,300  (Revenue)\nChannel District CRA Fund. CRA Dept.  Interest Earnings\n62100 213801 361101  383,100  (Revenue)\nDowntown Core CRA Fund. CRA Dept.  Interest Earnings\n62200 213801 361101  1,298,400  (Revenue)\nDowntown Non Core CRA Fund. CRA Dept.  Interest Earnings\n62300 213801 361101  354,900  (Revenue)\nDrew Park CRA Fund. CRA Dept.  Interest Earnings\n63350 213801 361101  1,096,500  (Revenue)\nWest Tampa CRA Fund. CRA Dept.  Interest Earnings\n62400 213801 361101  995,100  (Revenue)\nEast Tampa CRA Fund. CRA Dept.  Interest Earnings\n62500 213801 361101  49,500  (Revenue)\nTampa Heights Riverfront CRA Fund. CRA Dept.  Interest Earnings\n62600 213801 361101  233,600  (Revenue)\nYbor I CRA Fund. CRA Dept.  Interest Earnings\n62700 213801 361101  112,700  (Revenue)\nYbor II CRA Fund. CRA Dept.  Interest Earnings\n63700 213814 361101 $154,400 (Revenue)\nDowntown SPP Fund. CRA Dept.  Interest Earnings\n01100 213801 381000 $4,046,856 (Revenue)\nGeneral Fund. CRA Dept. Transfer In\nApproverTimestampRole\nMia Dorton8/12/2025 1:28:23 PMSubmitter\nSherri Scott8/12/2025 2:19:58 PMDepartment Head\nSherri Scott8/13/2025 1:26:07 PMCommunity and Redevelopment Agency\nAstonah Turner8/13/2025 1:56:20 PMAttorney Coordinator\n\nMorris Massey8/13/2025 2:37:15 PMAssistant City Attorney\nCate Wells8/13/2025 3:00:59 PMCity Attorney\nJennifer Seth8/14/2025 7:01:03 AMFinance Coordinator\nSusan Gobble8/14/2025 12:05:02 PMFinance Fiscal and Lead Analyst\nTy Hawthorne8/14/2025 12:28:24 PMBudget Operating Manager\nTy Hawthorne8/14/2025 12:56:32 PMBudget Officer\nDennis Rogero8/15/2025 2:39:35 PMChief Financial Officer\nPhyllis Ho-Zuhars8/15/2025 3:36:49 PMChief of Staff\nJOHN BENNETT8/15/2025 4:25:16 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution adopts the Fiscal Year 2026 annual Community Redevelopment Agency budget in the amount of $91,687,714 in accordance with requirements set forth under Florida Statutes Chapter 163, Part III. within the Community Redevelopment and General Fund.",
+        "projectedCostsRaw": "61800213801319100$2,015,250    (Revenue)\n\nCentral Park CRA Fund. CRA Dept.  Tax Increment Revenue\n61900 213801 319100 $13,461,774 (Revenue)\nChannel District CRA Fund. CRA Dept.  Tax Increment Revenue\n62100 213801 319100 $8,448,602 (Revenue)\nDowntown Core CRA Fund. CRA Dept.  Tax Increment Revenue\n62200 213801 319100 $21,476,251 (Revenue)\nDowntown Non Core CRA Fund. CRA Dept.  Tax Increment Revenue\n62300 213801 319100 $3,617,252 (Revenue)\nDrew Park CRA Fund. CRA Dept.  Tax Increment Revenue\n63350 213801 319100 $9,688,479 (Revenue)\nWest Tampa CRA Fund. CRA Dept.  Tax Increment Revenue\n62400 213801 319100 $14,627,447 (Revenue)\nEast Tampa CRA Fund. CRA Dept.  Tax Increment Revenue\n62500 213801 319100 $2,230,971 (Revenue)\nTampa Heights Riverfront CRA Fund. CRA Dept.  Tax Increment Revenue\n62600 213801 319100 $4,270,475 (Revenue)\nYbor I CRA Fund. CRA Dept.  Tax Increment Revenue\n62700 213801 319100 $2,108,157 (Revenue)\nYbor II CRA Fund. CRA Dept.  Tax Increment Revenue\n61800 213801 361101  68,700  (Revenue)\nCentral Park CRA Fund. CRA Dept.  Interest Earnings\n61900 213801 361101  949,300  (Revenue)\nChannel District CRA Fund. CRA Dept.  Interest Earnings\n62100 213801 361101  383,100  (Revenue)\nDowntown Core CRA Fund. CRA Dept.  Interest Earnings\n62200 213801 361101  1,298,400  (Revenue)\nDowntown Non Core CRA Fund. CRA Dept.  Interest Earnings\n62300 213801 361101  354,900  (Revenue)\nDrew Park CRA Fund. CRA Dept.  Interest Earnings\n63350 213801 361101  1,096,500  (Revenue)\nWest Tampa CRA Fund. CRA Dept.  Interest Earnings\n62400 213801 361101  995,100  (Revenue)\nEast Tampa CRA Fund. CRA Dept.  Interest Earnings\n62500 213801 361101  49,500  (Revenue)\nTampa Heights Riverfront CRA Fund. CRA Dept.  Interest Earnings\n62600 213801 361101  233,600  (Revenue)\nYbor I CRA Fund. CRA Dept.  Interest Earnings\n62700 213801 361101  112,700  (Revenue)\nYbor II CRA Fund. CRA Dept.  Interest Earnings\n63700 213814 361101 $154,400 (Revenue)\nDowntown SPP Fund. CRA Dept.  Interest Earnings\n01100 213801 381000 $4,046,856 (Revenue)\nGeneral Fund. CRA Dept. Transfer In",
+        "rows": [
+          {
+            "accountCode": "61900.213801.319100",
+            "fund": "61900",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$13,461,774",
+            "value": 13461774,
+            "type": "revenue",
+            "signedValue": -13461774,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Channel District CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "62100.213801.319100",
+            "fund": "62100",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$8,448,602",
+            "value": 8448602,
+            "type": "revenue",
+            "signedValue": -8448602,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Downtown Core CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "62200.213801.319100",
+            "fund": "62200",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$21,476,251",
+            "value": 21476251,
+            "type": "revenue",
+            "signedValue": -21476251,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Downtown Non Core CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "62300.213801.319100",
+            "fund": "62300",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$3,617,252",
+            "value": 3617252,
+            "type": "revenue",
+            "signedValue": -3617252,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Drew Park CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "63350.213801.319100",
+            "fund": "63350",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$9,688,479",
+            "value": 9688479,
+            "type": "revenue",
+            "signedValue": -9688479,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "West Tampa CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "62400.213801.319100",
+            "fund": "62400",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$14,627,447",
+            "value": 14627447,
+            "type": "revenue",
+            "signedValue": -14627447,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "East Tampa CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "62500.213801.319100",
+            "fund": "62500",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$2,230,971",
+            "value": 2230971,
+            "type": "revenue",
+            "signedValue": -2230971,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Tampa Heights Riverfront CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "62600.213801.319100",
+            "fund": "62600",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$4,270,475",
+            "value": 4270475,
+            "type": "revenue",
+            "signedValue": -4270475,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Ybor I CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "62700.213801.319100",
+            "fund": "62700",
+            "department": "213801",
+            "object": "319100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$2,108,157",
+            "value": 2108157,
+            "type": "revenue",
+            "signedValue": -2108157,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Ybor II CRA Fund. CRA Dept. Tax Increment Revenue"
+          },
+          {
+            "accountCode": "63700.213814.361101",
+            "fund": "63700",
+            "department": "213814",
+            "object": "361101",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$154,400",
+            "value": 154400,
+            "type": "revenue",
+            "signedValue": -154400,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "Downtown SPP Fund. CRA Dept. Interest Earnings"
+          },
+          {
+            "accountCode": "01100.213801.381000",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381000",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$4,046,856",
+            "value": 4046856,
+            "type": "revenue",
+            "signedValue": -4046856,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer In"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      },
+      "section": "III. REQUIRED APPROVALS:"
     }
   ],
-  "totalDollarAmount": 1670000,
-  "formattedTotalDollarAmount": "$1,670,000"
+  "formattedDate": "2025-08-21"
 }

@@ -1,0 +1,34 @@
+{
+  "meetingId": "2650",
+  "meetingDate": "2025-12-11",
+  "firstSeenAt": "2026-09-01T21:13:17.408Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:12:33.307Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "CRA25-16847",
+          "filename": "DOCUMENT SUBMITTED BY CARLSON- SERVICE AGREEMENT.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "CRA25-19568",
+          "filename": "ASHLEY EAST TAMPA LLC FUNDING AGREEMENT - FINAL.DOCX"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "CRA25-19452",
+          "filename": "ET WAYFINDINGSIGNAGE(ONBASENO.19452.FILENO.CRA25-19452).PPTX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "meetingId": "2589",
+  "meetingDate": "2025-07-31",
+  "firstSeenAt": "2026-09-01T20:54:24.429Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T20:48:31.805Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [
+        {
+          "agendaItemId": "16171",
+          "number": 69,
+          "fileNumber": "Administration Update",
+          "shortTitle": "Administration Update"
+        },
+        {
+          "agendaItemId": "16022",
+          "number": 78,
+          "fileNumber": "CM25-16022",
+          "shortTitle": "File No. CM25-16022\nAdministration to provide a report regarding the timeline…"
+        }
+      ],
+      "itemsRemoved": [
+        {
+          "agendaItemId": "",
+          "number": 77,
+          "fileNumber": "CM25-16022",
+          "shortTitle": "File No. CM25-16022\nAdministration to provide a report regarding the timeline…"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "meetingId": "2669",
+  "meetingDate": "2025-09-11",
+  "firstSeenAt": "2026-09-01T21:31:59.250Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:30:44.250Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "REZ-25-10",
+          "filename": "REZ25-10 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "REZ-25-57",
+          "filename": "REZ25-57 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-25-59",
+          "filename": "REZ25-59 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-25-70",
+          "filename": "REZ25-70 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-74",
+          "filename": "1-WRITTEN COMMENTS REZ-25-74.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-74",
+          "filename": "REZ25-74 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-74",
+          "filename": "2-WRITTEN COMMENT REZ-25-74.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-74",
+          "filename": "3-WRITTEN COMMENT REZ-25-74.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-25-78",
+          "filename": "REZ25-78 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-80",
+          "filename": "1-WRITTEN COMMENT REZ-25-80.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-80",
+          "filename": "REZ25-80 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-80",
+          "filename": "2-WRITTEN COMMENT REZ-25-80.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-80",
+          "filename": "3-WRITTEN COMMENT REZ-25-80.PDF"
+        }
+      ]
+    }
+  ]
+}

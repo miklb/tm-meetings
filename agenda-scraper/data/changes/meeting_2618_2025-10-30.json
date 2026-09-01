@@ -1,0 +1,35 @@
+{
+  "meetingId": "2618",
+  "meetingDate": "2025-10-30",
+  "firstSeenAt": "2026-09-01T21:05:53.193Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:05:46.501Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [
+        {
+          "agendaItemId": "15691",
+          "number": 1,
+          "fileNumber": "CM25-15691",
+          "shortTitle": "File No. CM25-15691\nGeneral Remo Butler and Roy Caldwood to speak to City Cou…"
+        },
+        {
+          "agendaItemId": "18153",
+          "number": 2,
+          "fileNumber": "CM25-17656",
+          "shortTitle": "File No. CM25-17656 Second workshop on a proposed increase to the Multi-Modal…"
+        },
+        {
+          "agendaItemId": "13541",
+          "number": 5,
+          "fileNumber": "CM24-9967",
+          "shortTitle": "File No. CM24-9967\nLegal Department to appear and discuss the possibility of …"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "meetingId": "2611",
+  "meetingDate": "2025-09-04",
+  "firstSeenAt": "2026-09-01T20:35:14.196Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T20:32:10.091Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "E2025-15",
+          "filename": "FFOQ CAPT EICHHOLZ TK1A 3RD QUARTER 2025.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "F25-16982",
+          "filename": "TPD - FILE NO. F25-16982 AND FILE NO. F25-16983.PDF"
+        },
+        {
+          "itemNumber": 14,
+          "itemFileNumber": "F25-16983",
+          "filename": "TPD - FILE NO. F25-16982 AND FILE NO. F25-16983.PDF"
+        },
+        {
+          "itemNumber": 15,
+          "itemFileNumber": "F25-16985",
+          "filename": "ATU - FILE NO. F25-16985.PDF"
+        }
+      ]
+    }
+  ]
+}

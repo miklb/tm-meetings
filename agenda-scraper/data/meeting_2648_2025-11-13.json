@@ -1,71 +1,54 @@
 {
   "meetingId": "2648",
   "meetingType": "cra",
+  "meetingName": "CRA Regular",
+  "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "November 13, 2025",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Documents/ViewAgenda?meetingId=2648&type=agenda&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2648&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
       "agendaItemId": "17608",
-      "title": "File No. CRA24-2242\n Tampa Heights, CAC Chair, Ray Patel, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
-      "rawTitle": "File No. CRA24-2242\n Tampa Heights, CAC Chair, Ray Patel, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "title": "File No. CRA24-2242\nTampa Heights, CAC Chair, Ray Patel, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
+      "rawTitle": "File No. CRA24-2242\nTampa Heights, CAC Chair, Ray Patel, to appear and provide a verbal report outlining activities and/or concerns of said CAC. - (Original Motion, requesting said monthly report, initiated by Saul-Sena/Miranda on December 11, 2008)",
       "fileNumber": "CRA24-2242",
       "background": "",
       "supportingDocuments": [],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 2,
       "agendaItemId": "17611",
-      "title": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting November Project Tracking Report, Commercial Grants Tracking Report and Ybor City Resident and Worker Survey Study for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\n\nMemorandum from Cedric McCray, CRA Director, transmitting November Project Tracking Report, Commercial Grants Tracking Report and Ybor City Resident and Worker Survey Study for said agenda item. (To be R/F)",
+      "title": "File No. CRA24-2241\nCRA Director's Monthly Report\nMemorandum from Cedric McCray, CRA Director, transmitting November Project Tracking Report, Commercial Grants Tracking Report and Ybor City Resident and Worker Survey Study for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA24-2241\nCRA Director's Monthly Report\nMemorandum from Cedric McCray, CRA Director, transmitting November Project Tracking Report, Commercial Grants Tracking Report and Ybor City Resident and Worker Survey Study for said agenda item. (To be R/F)",
       "fileNumber": "CRA24-2241",
       "background": "",
-      "supportingDocuments": [
-        {
-          "title": "DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO.17611).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO.17611).PDF.pdf?documentType=1&meetingId=2648&itemId=17611&publishId=155210&isSection=False&isAttachment=True",
-          "originalTitle": "Download DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO.17611).PDF",
-          "originalText": "DIRECTORSREPORT(FILENO.CRA24-2241.ONBASENO.17611).PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17611/directorsreportfileno.cra24-2241.onbaseno.17611.pdf"
-        }
-      ],
+      "supportingDocuments": [],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 3,
       "agendaItemId": "16997",
-      "title": "File No. CRA25-16997\nCRA Staff to provide a written report on the status of the timeline of the Lt. Baldomero Lopez monument, its exact location in Water Works and final cost estimate. (Original motion initiated by Viera-Maniscalco on August 21, 2025)\n\nMemorandum from Cory Robinson, Arts & Cultural Project Coordinator, transmitting a written report for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-16997\nCRA Staff to provide a written report on the status of the timeline of the Lt. Baldomero Lopez monument, its exact location in Water Works and final cost estimate. (Original motion initiated by Viera-Maniscalco on August 21, 2025)\n\nMemorandum from Cory Robinson, Arts & Cultural Project Coordinator, transmitting a written report for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-16997\nCRA Staff to provide a written report on the status of the timeline of the Lt. Baldomero Lopez monument, its exact location in Water Works and final cost estimate. (Original motion initiated by Viera-Maniscalco on August 21, 2025)\nMemorandum from Cory Robinson, Arts & Cultural Project Coordinator, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-16997\nCRA Staff to provide a written report on the status of the timeline of the Lt. Baldomero Lopez monument, its exact location in Water Works and final cost estimate. (Original motion initiated by Viera-Maniscalco on August 21, 2025)\nMemorandum from Cory Robinson, Arts & Cultural Project Coordinator, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-16997",
       "background": "",
       "supportingDocuments": [
         {
           "title": "BALDOMEROLOPEZMONUMENT(ONBASENO.16997.FILENO.CRA25-16997).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/BALDOMEROLOPEZMONUMENT(ONBASENO.16997.FILENO.CRA25-16997).PDF.pdf?documentType=1&meetingId=2648&itemId=16997&publishId=155211&isSection=False&isAttachment=True",
-          "originalTitle": "Download BALDOMEROLOPEZMONUMENT(ONBASENO.16997.FILENO.CRA25-16997).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BALDOMEROLOPEZMONUMENT(ONBASENO.16997.FILENO.CRA25-16997).PDF.pdf?documentType=1&meetingId=2648&itemId=16997&publishId=155785&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of BALDOMEROLOPEZMONUMENT(ONBASENO.16997.FILENO.CRA25-16997).PDF in a new tab",
           "originalText": "BALDOMEROLOPEZMONUMENT(ONBASENO.16997.FILENO.CRA25-16997).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/16997/baldomerolopezmonumentonbaseno.16997.fileno.cra25-16997.pdf"
         }
@@ -73,28 +56,22 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 4,
       "agendaItemId": "15387",
-      "title": "File No. CRA25-15387\nCRA Staff to provide a report on the possibility of building an amphitheater or a band shell at Perry Harvey Park. (Original motion initiated by Maniscalco-Miranda on June 12, 2025)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-15387\nCRA Staff to provide a report on the possibility of building an amphitheater or a band shell at Perry Harvey Park. (Original motion initiated by Maniscalco-Miranda on June 12, 2025)\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-15387\nCRA Staff to provide a report on the possibility of building an amphitheater or a band shell at Perry Harvey Park. (Original motion initiated by Maniscalco-Miranda on June 12, 2025)\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-15387\nCRA Staff to provide a report on the possibility of building an amphitheater or a band shell at Perry Harvey Park. (Original motion initiated by Maniscalco-Miranda on June 12, 2025)\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-15387",
       "background": "",
       "supportingDocuments": [
         {
           "title": "PERRYHARVEY(FILENO.CRA25-15387.ONBASENO.15387).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PERRYHARVEY(FILENO.CRA25-15387.ONBASENO.15387).PDF.pdf?documentType=1&meetingId=2648&itemId=15387&publishId=155212&isSection=False&isAttachment=True",
-          "originalTitle": "Download PERRYHARVEY(FILENO.CRA25-15387.ONBASENO.15387).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/PERRYHARVEY(FILENO.CRA25-15387.ONBASENO.15387).PDF.pdf?documentType=1&meetingId=2648&itemId=15387&publishId=155786&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of PERRYHARVEY(FILENO.CRA25-15387.ONBASENO.15387).PDF in a new tab",
           "originalText": "PERRYHARVEY(FILENO.CRA25-15387.ONBASENO.15387).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/15387/perryharveyfileno.cra25-15387.onbaseno.15387.pdf"
         }
@@ -102,49 +79,43 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 5,
       "agendaItemId": "17614",
-      "title": "File No. CRA25-14619\nCRA Staff to talk to the community and look at the grants to see if there are some special categories that can be created for individuals or companies that have a difficult time self-funding the start of projects and return with recommendations. (Original motion initiated by Carlson-Maniscalco on May 8, 2025)(Continued from July 24, 2025 and September 11, 2025)\n\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item.",
-      "rawTitle": "File No. CRA25-14619\nCRA Staff to talk to the community and look at the grants to see if there are some special categories that can be created for individuals or companies that have a difficult time self-funding the start of projects and return with recommendations. (Original motion initiated by Carlson-Maniscalco on May 8, 2025)(Continued from July 24, 2025 and September 11, 2025)\n\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item.",
+      "title": "File No. CRA25-14619\nCRA Staff to talk to the community and look at the grants to see if there are some special categories that can be created for individuals or companies that have a difficult time self-funding the start of projects and return with recommendations. (Original motion initiated by Carlson-Maniscalco on May 8, 2025)(Continued from July 24, 2025 and September 11, 2025)\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item.",
+      "rawTitle": "File No. CRA25-14619\nCRA Staff to talk to the community and look at the grants to see if there are some special categories that can be created for individuals or companies that have a difficult time self-funding the start of projects and return with recommendations. (Original motion initiated by Carlson-Maniscalco on May 8, 2025)(Continued from July 24, 2025 and September 11, 2025)\nMemorandum from Cedric McCray, CRA Director, transmitting a written report for said agenda item.",
       "fileNumber": "CRA25-14619",
       "background": "",
       "supportingDocuments": [
         {
           "title": "FILENO.CRA25-14619ONBASENO.14619SPECIALGRANTCATEGORIES.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FILENO.CRA25-14619ONBASENO.14619SPECIALGRANTCATEGORIES.PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155213&isSection=False&isAttachment=True",
-          "originalTitle": "Download FILENO.CRA25-14619ONBASENO.14619SPECIALGRANTCATEGORIES.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FILENO.CRA25-14619ONBASENO.14619SPECIALGRANTCATEGORIES.PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155787&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FILENO.CRA25-14619ONBASENO.14619SPECIALGRANTCATEGORIES.PDF in a new tab",
           "originalText": "FILENO.CRA25-14619ONBASENO.14619SPECIALGRANTCATEGORIES.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17614/fileno.cra25-14619onbaseno.14619specialgrantcategories.pdf"
         },
         {
           "title": "SPECIALGRANTCATEGORIES(ONBASENO.16259.FILENO.CRA25-14619).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SPECIALGRANTCATEGORIES(ONBASENO.16259.FILENO.CRA25-14619).PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155214&isSection=False&isAttachment=True",
-          "originalTitle": "Download SPECIALGRANTCATEGORIES(ONBASENO.16259.FILENO.CRA25-14619).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/SPECIALGRANTCATEGORIES(ONBASENO.16259.FILENO.CRA25-14619).PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155788&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of SPECIALGRANTCATEGORIES(ONBASENO.16259.FILENO.CRA25-14619).PDF in a new tab",
           "originalText": "SPECIALGRANTCATEGORIES(ONBASENO.16259.FILENO.CRA25-14619).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17614/specialgrantcategoriesonbaseno.16259.fileno.cra25-14619.pdf"
         },
         {
           "title": "MEETING FLYER SUBMITTED BY CEDRIC MCCRAY.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/MEETING%20FLYER%20SUBMITTED%20BY%20CEDRIC%20MCCRAY.PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155215&isSection=False&isAttachment=True",
-          "originalTitle": "Download MEETING FLYER SUBMITTED BY CEDRIC MCCRAY.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEETING%20FLYER%20SUBMITTED%20BY%20CEDRIC%20MCCRAY.PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155789&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEETING FLYER SUBMITTED BY CEDRIC MCCRAY.PDF in a new tab",
           "originalText": "MEETING FLYER SUBMITTED BY CEDRIC MCCRAY.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17614/meeting-flyer-submitted-by-cedric-mccray.pdf"
         },
         {
           "title": "SPECIALGRANTCATEGORIES(FILENO.CRA25-14619.ONBASENO.17614).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SPECIALGRANTCATEGORIES(FILENO.CRA25-14619.ONBASENO.17614).PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155216&isSection=False&isAttachment=True",
-          "originalTitle": "Download SPECIALGRANTCATEGORIES(FILENO.CRA25-14619.ONBASENO.17614).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/SPECIALGRANTCATEGORIES(FILENO.CRA25-14619.ONBASENO.17614).PDF.pdf?documentType=1&meetingId=2648&itemId=17614&publishId=155790&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of SPECIALGRANTCATEGORIES(FILENO.CRA25-14619.ONBASENO.17614).PDF in a new tab",
           "originalText": "SPECIALGRANTCATEGORIES(FILENO.CRA25-14619.ONBASENO.17614).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17614/specialgrantcategoriesfileno.cra25-14619.onbaseno.17614.pdf"
         }
@@ -152,49 +123,59 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 6,
       "agendaItemId": "17612",
-      "title": "File No. CRA25-17612 \nCRA Staff to provide an update on the Commercial Grant Policy. (Original motion initiated by Hurtak-Clendenin on September 11, 2025)",
-      "rawTitle": "File No. CRA25-17612 \nCRA Staff to provide an update on the Commercial Grant Policy. (Original motion initiated by Hurtak-Clendenin on September 11, 2025)",
+      "title": "File No. CRA25-17612\nCRA Staff to provide an update on the Commercial Grant Policy. (Original motion initiated by Hurtak-Clendenin on September 11, 2025)\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-17612\nCRA Staff to provide an update on the Commercial Grant Policy. (Original motion initiated by Hurtak-Clendenin on September 11, 2025)\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-17612",
       "background": "",
-      "supportingDocuments": [],
+      "supportingDocuments": [
+        {
+          "title": "COMMERCIALGRANTPOLICY(FILENO.CRA25-17612.ONBASENO.17612).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/COMMERCIALGRANTPOLICY(FILENO.CRA25-17612.ONBASENO.17612).PDF.pdf?documentType=1&meetingId=2648&itemId=17612&publishId=155791&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of COMMERCIALGRANTPOLICY(FILENO.CRA25-17612.ONBASENO.17612).PDF in a new tab",
+          "originalText": "COMMERCIALGRANTPOLICY(FILENO.CRA25-17612.ONBASENO.17612).PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17612/commercialgrantpolicyfileno.cra25-17612.onbaseno.17612.pdf"
+        },
+        {
+          "title": "COMMERCIALGRANTPOLICYMEMO(FILENO.CRA25-17612.ONBASENO.17612).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/COMMERCIALGRANTPOLICYMEMO(FILENO.CRA25-17612.ONBASENO.17612).PDF.pdf?documentType=1&meetingId=2648&itemId=17612&publishId=155792&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of COMMERCIALGRANTPOLICYMEMO(FILENO.CRA25-17612.ONBASENO.17612).PDF in a new tab",
+          "originalText": "COMMERCIALGRANTPOLICYMEMO(FILENO.CRA25-17612.ONBASENO.17612).PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17612/commercialgrantpolicymemofileno.cra25-17612.onbaseno.17612.pdf"
+        },
+        {
+          "title": "COMMERCIALGRANTPOLICYPPT(FILENO.CRA25-17612.ONBASENO.17612).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/COMMERCIALGRANTPOLICYPPT(FILENO.CRA25-17612.ONBASENO.17612).PDF.pdf?documentType=1&meetingId=2648&itemId=17612&publishId=155793&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of COMMERCIALGRANTPOLICYPPT(FILENO.CRA25-17612.ONBASENO.17612).PDF in a new tab",
+          "originalText": "COMMERCIALGRANTPOLICYPPT(FILENO.CRA25-17612.ONBASENO.17612).PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17612/commercialgrantpolicypptfileno.cra25-17612.onbaseno.17612.pdf"
+        }
+      ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 7,
       "agendaItemId": "17610",
-      "title": "File No. CRA25-17610\nCRA Board move to approve the concept for the proposed Application Cycle Structure and Process; further, that staff be requested to report back with a draft program for discussion. (Original motion initiated by Hurtak-Maniscalco on September 11, 2025)\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-17610\nCRA Board move to approve the concept for the proposed Application Cycle Structure and Process; further, that staff be requested to report back with a draft program for discussion. (Original motion initiated by Hurtak-Maniscalco on September 11, 2025)\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-17610\nCRA Board move to approve the concept for the proposed Application Cycle Structure and Process; further, that staff be requested to report back with a draft program for discussion. (Original motion initiated by Hurtak-Maniscalco on September 11, 2025)\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-17610\nCRA Board move to approve the concept for the proposed Application Cycle Structure and Process; further, that staff be requested to report back with a draft program for discussion. (Original motion initiated by Hurtak-Maniscalco on September 11, 2025)\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-17610",
       "background": "",
       "supportingDocuments": [
         {
           "title": "APPLICATIONCYCLESTRUCTURE(ONBASENO.17610.FILENO.CRA25-17610).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/APPLICATIONCYCLESTRUCTURE(ONBASENO.17610.FILENO.CRA25-17610).PDF.pdf?documentType=1&meetingId=2648&itemId=17610&publishId=155217&isSection=False&isAttachment=True",
-          "originalTitle": "Download APPLICATIONCYCLESTRUCTURE(ONBASENO.17610.FILENO.CRA25-17610).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/APPLICATIONCYCLESTRUCTURE(ONBASENO.17610.FILENO.CRA25-17610).PDF.pdf?documentType=1&meetingId=2648&itemId=17610&publishId=155794&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of APPLICATIONCYCLESTRUCTURE(ONBASENO.17610.FILENO.CRA25-17610).PDF in a new tab",
           "originalText": "APPLICATIONCYCLESTRUCTURE(ONBASENO.17610.FILENO.CRA25-17610).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17610/applicationcyclestructureonbaseno.17610.fileno.cra25-17610.pdf"
         }
@@ -202,63 +183,57 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 8,
       "agendaItemId": "18726",
-      "title": "File No. CRA25-18726 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nCRA Downtown - Curtis Hixon Special Project Funding Request - Funding Request in the amount of $5.5 million for proposed renovations to Curtis Hixon Waterfront Park. Park enhancements include site prep/demo; site furniture; event lawn and terrace drainage; irrigation improvements; reinforced concrete pavement; addition of canopy trees/palms; and new sod/soil.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18726 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nCRA Downtown - Curtis Hixon Special Project Funding Request - Funding Request in the amount of $5.5 million for proposed renovations to Curtis Hixon Waterfront Park. Park enhancements include site prep/demo; site furniture; event lawn and terrace drainage; irrigation improvements; reinforced concrete pavement; addition of canopy trees/palms; and new sod/soil.\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18726 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nCRA Downtown - Curtis Hixon Special Project Funding Request - Funding Request in the amount of $5.5 million for proposed renovations to Curtis Hixon Waterfront Park. Park enhancements include site prep/demo; site furniture; event lawn and terrace drainage; irrigation improvements; reinforced concrete pavement; addition of canopy trees/palms; and new sod/soil.\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18726 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nCRA Downtown - Curtis Hixon Special Project Funding Request - Funding Request in the amount of $5.5 million for proposed renovations to Curtis Hixon Waterfront Park. Park enhancements include site prep/demo; site furniture; event lawn and terrace drainage; irrigation improvements; reinforced concrete pavement; addition of canopy trees/palms; and new sod/soil.\nMemorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18726",
       "background": "",
       "supportingDocuments": [
         {
           "title": "2025-09-24_DETAILED SCOPE OF WORK.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/2025-09-24_DETAILED%20SCOPE%20OF%20WORK.PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155218&isSection=False&isAttachment=True",
-          "originalTitle": "Download 2025-09-24_DETAILED SCOPE OF WORK.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2025-09-24_DETAILED%20SCOPE%20OF%20WORK.PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155795&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2025-09-24_DETAILED SCOPE OF WORK.PDF in a new tab",
           "originalText": "2025-09-24_DETAILED SCOPE OF WORK.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18726/2025-09-24_detailed-scope-of-work.pdf"
         },
         {
           "title": "CRA AWARD-MAKING PROCESS CHECKLIST-CURTIS HIXON.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20AWARD-MAKING%20PROCESS%20CHECKLIST-CURTIS%20HIXON.PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155219&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA AWARD-MAKING PROCESS CHECKLIST-CURTIS HIXON.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20AWARD-MAKING%20PROCESS%20CHECKLIST-CURTIS%20HIXON.PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155796&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA AWARD-MAKING PROCESS CHECKLIST-CURTIS HIXON.PDF in a new tab",
           "originalText": "CRA AWARD-MAKING PROCESS CHECKLIST-CURTIS HIXON.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18726/cra-award-making-process-checklist-curtis-hixon.pdf"
         },
         {
           "title": "RFP WAIVER MEMO CURTIS HIXON PARK (MM).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/RFP%20WAIVER%20MEMO%20CURTIS%20HIXON%20PARK%20(MM).PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155220&isSection=False&isAttachment=True",
-          "originalTitle": "Download RFP WAIVER MEMO CURTIS HIXON PARK (MM).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RFP%20WAIVER%20MEMO%20CURTIS%20HIXON%20PARK%20(MM).PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155797&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of RFP WAIVER MEMO CURTIS HIXON PARK (MM).PDF in a new tab",
           "originalText": "RFP WAIVER MEMO CURTIS HIXON PARK (MM).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18726/rfp-waiver-memo-curtis-hixon-park-mm.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155221&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155798&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18726/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "CURTISHIXONSPECIALPROJECT(ONBASENO.18726.FILENO.CRA25-18726).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CURTISHIXONSPECIALPROJECT(ONBASENO.18726.FILENO.CRA25-18726).PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155222&isSection=False&isAttachment=True",
-          "originalTitle": "Download CURTISHIXONSPECIALPROJECT(ONBASENO.18726.FILENO.CRA25-18726).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CURTISHIXONSPECIALPROJECT(ONBASENO.18726.FILENO.CRA25-18726).PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155799&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CURTISHIXONSPECIALPROJECT(ONBASENO.18726.FILENO.CRA25-18726).PDF in a new tab",
           "originalText": "CURTISHIXONSPECIALPROJECT(ONBASENO.18726.FILENO.CRA25-18726).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18726/curtishixonspecialprojectonbaseno.18726.fileno.cra25-18726.pdf"
         },
         {
           "title": "CURTISHIXONSPECIALPROJECTPPT(ONBASENO.18726.FILENO.CRA25-18726).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CURTISHIXONSPECIALPROJECTPPT(ONBASENO.18726.FILENO.CRA25-18726).PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155223&isSection=False&isAttachment=True",
-          "originalTitle": "Download CURTISHIXONSPECIALPROJECTPPT(ONBASENO.18726.FILENO.CRA25-18726).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CURTISHIXONSPECIALPROJECTPPT(ONBASENO.18726.FILENO.CRA25-18726).PDF.pdf?documentType=1&meetingId=2648&itemId=18726&publishId=155800&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CURTISHIXONSPECIALPROJECTPPT(ONBASENO.18726.FILENO.CRA25-18726).PDF in a new tab",
           "originalText": "CURTISHIXONSPECIALPROJECTPPT(ONBASENO.18726.FILENO.CRA25-18726).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18726/curtishixonspecialprojectpptonbaseno.18726.fileno.cra25-18726.pdf"
         }
@@ -266,82 +241,42 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$5",
-        "$3"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$5",
-          "value": 5,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "Funding Request in the amount of $5.5 million. If approved, the FY26 funding SubjectStaff requests approval of the Curtis Hixon Waterfront Park Special Projects",
-            "Request in the amount of $5.5 million for proposed renovations to Curtis Hixon CRA Downtown - Curtis Hixon Special Project Funding Request - Funding",
-            "File No. CRA25-18726 (Placed under Staff Reports pursuant to a motion made by the CRA.) CRA Downtown - Curtis Hixon Special Project Funding Request - Funding Request in the amount of $5.5 million for proposed renovations to Curtis Hixon Waterfront Park. Park enhancements include site prep/demo; site furniture; event lawn and terrace drainage; irrigation improvements; reinforced concrete pavement; addition of canopy trees/palms; and new sod/soil.",
-            "File No. CRA25-18726 (Placed under Staff Reports pursuant to a motion made by the CRA.)CRA Downtown - Curtis Hixon Special Project Funding Request - Funding Request in the amount of $5.5 million for proposed renovations to Curtis Hixon Waterfront Park. Park enhancements include site prep/demo; site furniture; event lawn and terrace drainage; irrigation improvements; reinforced concrete pavement; addition of canopy trees/palms; and new sod/soil. Memorandum from Courtney Orr, CRA Development Manager, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-            "SubjectStaff requests approval of the Curtis Hixon Waterfront Park Special Projects Funding Request in the amount of $5.5 million. If approved, the FY26 funding",
-            "CRA Downtown - Curtis Hixon Special Project Funding Request - Funding Request in the amount of $5.5 million for proposed renovations to Curtis Hixon"
-          ],
-          "sources": [
-            "summary",
-            "primary",
-            "additional_0",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$3",
-          "value": 3,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "reprogramming in the amount of $3 million will be requested from the CRA",
-            "Funding Request in the amount of $5.5 million. If approved, the FY26 funding reprogramming in the amount of $3 million will be requested from the CRA"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 8,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectStaff requests approval of the Curtis Hixon Waterfront Park Special Projects \nFunding Request in the amount of $5.5 million. If approved, the FY26 funding \nreprogramming in the amount of $3 million will be requested from the CRA \nBoard on Dec.13, 2025.\nResolution / \nOrdinance \nTitle\nCRA Downtown - Curtis Hixon Special Project Funding Request - Funding \nRequest in the amount of $5.5 million for proposed renovations to Curtis Hixon \nWaterfront Park. Park enhancements include site prep/demo; site furniture; \nevent lawn and terrace drainage; irrigation improvements; reinforced concrete \npavement; addition of canopy trees/palms; and new sod/soil.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 2:38:54 PMSubmitter\nSherri Scott10/30/2025 4:49:31 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 9,
       "agendaItemId": "18657",
-      "title": "File No. CRA25-18657 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Affordable Housing - Clonts Properties. Clonts Properties Inc. has applied for a developer subsidy in the amount of $2.5 million for their upcoming East Tampa Affordable housing development project located at 3812 – 3816 Temple Street, Tampa, FL 33619, within the Grant Park neighborhood of the East Tampa Community Redevelopment Area (CRA). This area is a key focus in the ongoing revitalization efforts of Tampa.\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18657 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Affordable Housing - Clonts Properties. Clonts Properties Inc. has applied for a developer subsidy in the amount of $2.5 million for their upcoming East Tampa Affordable housing development project located at 3812 – 3816 Temple Street, Tampa, FL 33619, within the Grant Park neighborhood of the East Tampa Community Redevelopment Area (CRA). This area is a key focus in the ongoing revitalization efforts of Tampa.\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18657 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Affordable Housing - Clonts Properties. Clonts Properties Inc. has applied for a developer subsidy in the amount of $2.5 million for their upcoming East Tampa Affordable housing development project located at 3812 – 3816 Temple Street, Tampa, FL 33619, within the Grant Park neighborhood of the East Tampa Community Redevelopment Area (CRA). This area is a key focus in the ongoing revitalization efforts of Tampa.\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18657 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Affordable Housing - Clonts Properties. Clonts Properties Inc. has applied for a developer subsidy in the amount of $2.5 million for their upcoming East Tampa Affordable housing development project located at 3812 – 3816 Temple Street, Tampa, FL 33619, within the Grant Park neighborhood of the East Tampa Community Redevelopment Area (CRA). This area is a key focus in the ongoing revitalization efforts of Tampa.\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18657",
       "background": "",
       "supportingDocuments": [
         {
           "title": "GRANT PARK AFH FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/GRANT%20PARK%20AFH%20FINAL.PDF.pdf?documentType=1&meetingId=2648&itemId=18657&publishId=155224&isSection=False&isAttachment=True",
-          "originalTitle": "Download GRANT PARK AFH FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/GRANT%20PARK%20AFH%20FINAL.PDF.pdf?documentType=1&meetingId=2648&itemId=18657&publishId=155801&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of GRANT PARK AFH FINAL.PDF in a new tab",
           "originalText": "GRANT PARK AFH FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18657/grant-park-afh-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18657&publishId=155225&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18657&publishId=155802&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18657/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "CLONTSPROPERTIESMEMO(ONBASENO.18657FILENO.CRA25-18657).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CLONTSPROPERTIESMEMO(ONBASENO.18657FILENO.CRA25-18657).PDF.pdf?documentType=1&meetingId=2648&itemId=18657&publishId=155226&isSection=False&isAttachment=True",
-          "originalTitle": "Download CLONTSPROPERTIESMEMO(ONBASENO.18657FILENO.CRA25-18657).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CLONTSPROPERTIESMEMO(ONBASENO.18657FILENO.CRA25-18657).PDF.pdf?documentType=1&meetingId=2648&itemId=18657&publishId=155803&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CLONTSPROPERTIESMEMO(ONBASENO.18657FILENO.CRA25-18657).PDF in a new tab",
           "originalText": "CLONTSPROPERTIESMEMO(ONBASENO.18657FILENO.CRA25-18657).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18657/clontspropertiesmemoonbaseno.18657fileno.cra25-18657.pdf"
         }
@@ -349,96 +284,42 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$1,750,000",
-        "$145,833",
-        "$2"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$1,750,000",
-          "value": 1750000,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "and budget availability, CRA staff recommend providing $1,750,000 which SubjectFollowing review of the project scope, alignment with CRA housing objectives,",
-            "SubjectFollowing review of the project scope, alignment with CRA housing objectives, and budget availability, CRA staff recommend providing $1,750,000 which"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$145,833",
-          "value": 145833,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "equals $145,833 dollars per unit in construction funding assistance to support",
-            "and budget availability, CRA staff recommend providing $1,750,000 which equals $145,833 dollars per unit in construction funding assistance to support"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$2",
-          "value": 2,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "Inc. has applied for a developer subsidy in the amount of $2.5 million for their CRA East Tampa Affordable Housing - Clonts Properties. Clonts Properties",
-            "File No. CRA25-18657 (Placed under Staff Reports pursuant to a motion made by the CRA.) East Tampa Affordable Housing - Clonts Properties. Clonts Properties Inc. has applied for a developer subsidy in the amount of $2.5 million for their upcoming East Tampa Affordable housing development project located at 3812 – 3816 Temple Street, Tampa, FL 33619, within the Grant Park neighborhood of the East Tampa Community Redevelopment Area (CRA). This area is a key focus in the ongoing revitalization efforts of Tampa.",
-            "File No. CRA25-18657 (Placed under Staff Reports pursuant to a motion made by the CRA.)East Tampa Affordable Housing - Clonts Properties. Clonts Properties Inc. has applied for a developer subsidy in the amount of $2.5 million for their upcoming East Tampa Affordable housing development project located at 3812 – 3816 Temple Street, Tampa, FL 33619, within the Grant Park neighborhood of the East Tampa Community Redevelopment Area (CRA). This area is a key focus in the ongoing revitalization efforts of Tampa. Memorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-            "CRA East Tampa Affordable Housing - Clonts Properties. Clonts Properties Inc. has applied for a developer subsidy in the amount of $2.5 million for their"
-          ],
-          "sources": [
-            "summary",
-            "primary",
-            "additional_0",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 1895835,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectFollowing review of the project scope, alignment with CRA housing objectives, \nand budget availability, CRA staff recommend providing $1,750,000 which \nequals $145,833 dollars per unit in construction funding assistance to support \nthe development.\nResolution / \nOrdinance \nTitle\nCRA East Tampa Affordable Housing - Clonts Properties. Clonts Properties \nInc. has applied for a developer subsidy in the amount of $2.5 million for their \nupcoming East Tampa Affordable housing development project located at \n3812 – 3816 Temple Street, Tampa, FL 33619, within the Grant Park \nneighborhood of the East Tampa Community Redevelopment Area (CRA). \nThis area is a key focus in the ongoing revitalization efforts of Tampa.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:03:17 PMSubmitter\nSherri Scott10/30/2025 4:50:00 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 10,
       "agendaItemId": "18659",
-      "title": "File No. CRA25-18659 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Heritage Heights on 29th Funding Request - The CDC of Tampa has submitted a request for funding in the amount of $5,000,000 to support the development of an attainable housing project located at Lake and 29th Street in East Tampa. The proposed project aims to produce 79 affordable and workforce housing units.\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18659 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Heritage Heights on 29th Funding Request - The CDC of Tampa has submitted a request for funding in the amount of $5,000,000 to support the development of an attainable housing project located at Lake and 29th Street in East Tampa. The proposed project aims to produce 79 affordable and workforce housing units.\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18659 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Heritage Heights on 29th Funding Request - The CDC of Tampa has submitted a request for funding in the amount of $5,000,000 to support the development of an attainable housing project located at Lake and 29th Street in East Tampa. The proposed project aims to produce 79 affordable and workforce housing units.\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18659 (Placed under Staff Reports pursuant to a motion made by the CRA.)\nEast Tampa Heritage Heights on 29th Funding Request - The CDC of Tampa has submitted a request for funding in the amount of $5,000,000 to support the development of an attainable housing project located at Lake and 29th Street in East Tampa. The proposed project aims to produce 79 affordable and workforce housing units.\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18659",
       "background": "",
       "supportingDocuments": [
         {
           "title": "HERITAGE HEIGHTS ON 29TH FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/HERITAGE%20HEIGHTS%20ON%2029TH%20FINAL.PDF.pdf?documentType=1&meetingId=2648&itemId=18659&publishId=155227&isSection=False&isAttachment=True",
-          "originalTitle": "Download HERITAGE HEIGHTS ON 29TH FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/HERITAGE%20HEIGHTS%20ON%2029TH%20FINAL.PDF.pdf?documentType=1&meetingId=2648&itemId=18659&publishId=155804&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of HERITAGE HEIGHTS ON 29TH FINAL.PDF in a new tab",
           "originalText": "HERITAGE HEIGHTS ON 29TH FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18659/heritage-heights-on-29th-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18659&publishId=155228&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18659&publishId=155805&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18659/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "HERITAGEHEIGHTSMEMO(FILENO.CRA25-18659.ONBASENO.18659).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/HERITAGEHEIGHTSMEMO(FILENO.CRA25-18659.ONBASENO.18659).PDF.pdf?documentType=1&meetingId=2648&itemId=18659&publishId=155229&isSection=False&isAttachment=True",
-          "originalTitle": "Download HERITAGEHEIGHTSMEMO(FILENO.CRA25-18659.ONBASENO.18659).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/HERITAGEHEIGHTSMEMO(FILENO.CRA25-18659.ONBASENO.18659).PDF.pdf?documentType=1&meetingId=2648&itemId=18659&publishId=155806&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of HERITAGEHEIGHTSMEMO(FILENO.CRA25-18659.ONBASENO.18659).PDF in a new tab",
           "originalText": "HERITAGEHEIGHTSMEMO(FILENO.CRA25-18659.ONBASENO.18659).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18659/heritageheightsmemofileno.cra25-18659.onbaseno.18659.pdf"
         }
@@ -446,82 +327,42 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$5,000,000",
-        "$63,291"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$5,000,000",
-          "value": 5000000,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "and budget availability, CRA staff recommends providing $5,000,000, which SubjectFollowing review of the project scope, alignment with CRA housing objectives,",
-            "Tampa has submitted a request for funding in the amount of $5,000,000 to CRA - East Tampa Heritage Heights on 29th Funding Request - The CDC of",
-            "File No. CRA25-18659 (Placed under Staff Reports pursuant to a motion made by the CRA.) East Tampa Heritage Heights on 29th Funding Request - The CDC of Tampa has submitted a request for funding in the amount of $5,000,000 to support the development of an attainable housing project located at Lake and 29th Street in East Tampa. The proposed project aims to produce 79 affordable and workforce housing units.",
-            "File No. CRA25-18659 (Placed under Staff Reports pursuant to a motion made by the CRA.)East Tampa Heritage Heights on 29th Funding Request - The CDC of Tampa has submitted a request for funding in the amount of $5,000,000 to support the development of an attainable housing project located at Lake and 29th Street in East Tampa. The proposed project aims to produce 79 affordable and workforce housing units. Memorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-            "SubjectFollowing review of the project scope, alignment with CRA housing objectives, and budget availability, CRA staff recommends providing $5,000,000, which",
-            "CRA - East Tampa Heritage Heights on 29th Funding Request - The CDC of Tampa has submitted a request for funding in the amount of $5,000,000 to"
-          ],
-          "sources": [
-            "summary",
-            "primary",
-            "additional_0",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$63,291",
-          "value": 63291,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "equals $63,291 dollars per unit in construction funding assistance to support",
-            "and budget availability, CRA staff recommends providing $5,000,000, which equals $63,291 dollars per unit in construction funding assistance to support"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 5063291,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectFollowing review of the project scope, alignment with CRA housing objectives, \nand budget availability, CRA staff recommends providing $5,000,000, which \nequals $63,291 dollars per unit in construction funding assistance to support \nthe development.\nResolution / \nOrdinance \nTitle\nCRA - East Tampa Heritage Heights on 29th Funding Request - The CDC of \nTampa has submitted a request for funding in the amount of $5,000,000 to \nsupport the development of an attainable housing project located at Lake and \n29th Street in East Tampa. The proposed project aims to produce 79 \naffordable and workforce housing units.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:02:22 PMSubmitter\nSherri Scott10/30/2025 12:57:41 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 11,
       "agendaItemId": "18681",
-      "title": "File No. CRA25-18681 (Placed under Staff Reports pursuant to a motion made by the CRA.) - CRA- Downtown 801 Whiting LLC Unit Conversion Affordable Housing Project Funding Request- Staff have been working collaboratively with the applicant, 801 Whiting LLC, to incorporate workforce housing within the proposed development located at 801 Whiting Street. This project would introduce 22 rental units consisting of studio and one-bedroom apartments designed to provide attainable housing options for individuals and households.\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18681 (Placed under Staff Reports pursuant to a motion made by the CRA.) - CRA- Downtown 801 Whiting LLC Unit Conversion Affordable Housing Project Funding Request- Staff have been working collaboratively with the applicant, 801 Whiting LLC, to incorporate workforce housing within the proposed development located at 801 Whiting Street. This project would introduce 22 rental units consisting of studio and one-bedroom apartments designed to provide attainable housing options for individuals and households.\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18681 (Placed under Staff Reports pursuant to a motion made by the CRA.) - CRA- Downtown 801 Whiting LLC Unit Conversion Affordable Housing Project Funding Request- Staff have been working collaboratively with the applicant, 801 Whiting LLC, to incorporate workforce housing within the proposed development located at 801 Whiting Street. This project would introduce 22 rental units consisting of studio and one-bedroom apartments designed to provide attainable housing options for individuals and households.\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18681 (Placed under Staff Reports pursuant to a motion made by the CRA.) - CRA- Downtown 801 Whiting LLC Unit Conversion Affordable Housing Project Funding Request- Staff have been working collaboratively with the applicant, 801 Whiting LLC, to incorporate workforce housing within the proposed development located at 801 Whiting Street. This project would introduce 22 rental units consisting of studio and one-bedroom apartments designed to provide attainable housing options for individuals and households.\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting a written report and a PowerPoint presentation for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18681",
       "background": "",
       "supportingDocuments": [
         {
           "title": "801 EAST WHITING ST CRA PRESENTATION.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/801%20EAST%20WHITING%20ST%20CRA%20PRESENTATION.PDF.pdf?documentType=1&meetingId=2648&itemId=18681&publishId=155230&isSection=False&isAttachment=True",
-          "originalTitle": "Download 801 EAST WHITING ST CRA PRESENTATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/801%20EAST%20WHITING%20ST%20CRA%20PRESENTATION.PDF.pdf?documentType=1&meetingId=2648&itemId=18681&publishId=155807&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 801 EAST WHITING ST CRA PRESENTATION.PDF in a new tab",
           "originalText": "801 EAST WHITING ST CRA PRESENTATION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18681/801-east-whiting-st-cra-presentation.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18681&publishId=155231&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18681&publishId=155808&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18681/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "DOWNTOWNWHITINGMEMO(ONBASENO.18681.FILENO.CRA25-18681).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOWNTOWNWHITINGMEMO(ONBASENO.18681.FILENO.CRA25-18681).PDF.pdf?documentType=1&meetingId=2648&itemId=18681&publishId=155232&isSection=False&isAttachment=True",
-          "originalTitle": "Download DOWNTOWNWHITINGMEMO(ONBASENO.18681.FILENO.CRA25-18681).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOWNTOWNWHITINGMEMO(ONBASENO.18681.FILENO.CRA25-18681).PDF.pdf?documentType=1&meetingId=2648&itemId=18681&publishId=155809&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOWNTOWNWHITINGMEMO(ONBASENO.18681.FILENO.CRA25-18681).PDF in a new tab",
           "originalText": "DOWNTOWNWHITINGMEMO(ONBASENO.18681.FILENO.CRA25-18681).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18681/downtownwhitingmemoonbaseno.18681.fileno.cra25-18681.pdf"
         }
@@ -529,69 +370,35 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$4,000,000",
-        "$181,818.18"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$4,000,000",
-          "value": 4000000,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "SubjectStaff recommends the funding request of $4,000,000 or $181,818.18 per unit ContactMia Dorton 813-274-8643",
-            "ContactMia Dorton 813-274-8643 SubjectStaff recommends the funding request of $4,000,000 or $181,818.18 per unit"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$181,818.18",
-          "value": 181818.18,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "SubjectStaff recommends the funding request of $4,000,000 or $181,818.18 per unit ContactMia Dorton 813-274-8643",
-            "ContactMia Dorton 813-274-8643 SubjectStaff recommends the funding request of $4,000,000 or $181,818.18 per unit"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 4181818.18,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectStaff recommends the funding request of $4,000,000 or $181,818.18 per unit \nto support the development of the 22-unit workforce housing component within \nthe 801 Whiting LLC project.\nResolution / \nOrdinance \nTitle\nCRA- Downtown 801 Whiting LLC Unit Conversion Affordable Housing Project \nFunding Request- Staff have been working collaboratively with the applicant, \n801 Whiting LLC, to incorporate workforce housing within the proposed \ndevelopment located at 801 Whiting Street. This project would introduce 22 \nrental units consisting of studio and one-bedroom apartments designed to \nprovide attainable housing options for individuals and households.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:01:26 PMSubmitter\nSherri Scott10/30/2025 12:56:24 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "II. STAFF REPORTS:"
     },
     {
       "number": 12,
       "agendaItemId": "19132",
-      "title": "File No. CRA25-19132\nDomain Homes West Tampa Affordable Homeownership Project-Tampa CRA Housing Staff is seeking to partner with Domain Homes to develop several vacant lots along Spruce Street in the West Tampa CRA as potential sites for affordable housing. Domain is a local builder with a proven record of delivering affordable housing in partnership with the City of Tampa. CRA Staff is interested in collaboration to produce new single-family homes targeted at families earning up to 140% of the Area Median Income (AMI).\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-19132\nDomain Homes West Tampa Affordable Homeownership Project-Tampa CRA Housing Staff is seeking to partner with Domain Homes to develop several vacant lots along Spruce Street in the West Tampa CRA as potential sites for affordable housing. Domain is a local builder with a proven record of delivering affordable housing in partnership with the City of Tampa. CRA Staff is interested in collaboration to produce new single-family homes targeted at families earning up to 140% of the Area Median Income (AMI).\n\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-19132\nDomain Homes West Tampa Affordable Homeownership Project-Tampa CRA Housing Staff is seeking to partner with Domain Homes to develop several vacant lots along Spruce Street in the West Tampa CRA as potential sites for affordable housing. Domain is a local builder with a proven record of delivering affordable housing in partnership with the City of Tampa. CRA Staff is interested in collaboration to produce new single-family homes targeted at families earning up to 140% of the Area Median Income (AMI).\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-19132\nDomain Homes West Tampa Affordable Homeownership Project-Tampa CRA Housing Staff is seeking to partner with Domain Homes to develop several vacant lots along Spruce Street in the West Tampa CRA as potential sites for affordable housing. Domain is a local builder with a proven record of delivering affordable housing in partnership with the City of Tampa. CRA Staff is interested in collaboration to produce new single-family homes targeted at families earning up to 140% of the Area Median Income (AMI).\nMemorandum from Belix Parks, CRA Community Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-19132",
       "background": "",
       "supportingDocuments": [
         {
           "title": "WTCRAAFFORDABLEHOUSINGDOMAINHOMES(FILENO.CRA25-19132.ONBASENO.19132).PPTX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WTCRAAFFORDABLEHOUSINGDOMAINHOMES(FILENO.CRA25-19132.ONBASENO.19132).PPTX.pdf?documentType=1&meetingId=2648&itemId=19132&publishId=155233&isSection=False&isAttachment=True",
-          "originalTitle": "Download WTCRAAFFORDABLEHOUSINGDOMAINHOMES(FILENO.CRA25-19132.ONBASENO.19132).PPTX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WTCRAAFFORDABLEHOUSINGDOMAINHOMES(FILENO.CRA25-19132.ONBASENO.19132).PPTX.pdf?documentType=1&meetingId=2648&itemId=19132&publishId=155810&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WTCRAAFFORDABLEHOUSINGDOMAINHOMES(FILENO.CRA25-19132.ONBASENO.19132).PPTX in a new tab",
           "originalText": "WTCRAAFFORDABLEHOUSINGDOMAINHOMES(FILENO.CRA25-19132.ONBASENO.19132).PPTX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/19132/wtcraaffordablehousingdomainhomesfileno.cra25-19132.onbaseno.19132.pptx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/19132/wtcraaffordablehousingdomainhomesfileno.cra25-19132.onbaseno.19132.pdf"
         },
         {
           "title": "WTCRAAFFORDABLEHOUSINGDOMAIN(ONBASENO.19132.FILENO.CRA25-19132).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/WTCRAAFFORDABLEHOUSINGDOMAIN(ONBASENO.19132.FILENO.CRA25-19132).PDF.pdf?documentType=1&meetingId=2648&itemId=19132&publishId=155234&isSection=False&isAttachment=True",
-          "originalTitle": "Download WTCRAAFFORDABLEHOUSINGDOMAIN(ONBASENO.19132.FILENO.CRA25-19132).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/WTCRAAFFORDABLEHOUSINGDOMAIN(ONBASENO.19132.FILENO.CRA25-19132).PDF.pdf?documentType=1&meetingId=2648&itemId=19132&publishId=155811&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of WTCRAAFFORDABLEHOUSINGDOMAIN(ONBASENO.19132.FILENO.CRA25-19132).PDF in a new tab",
           "originalText": "WTCRAAFFORDABLEHOUSINGDOMAIN(ONBASENO.19132.FILENO.CRA25-19132).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/19132/wtcraaffordablehousingdomainonbaseno.19132.fileno.cra25-19132.pdf"
         }
@@ -599,15 +406,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 13,
@@ -619,308 +420,354 @@
       "supportingDocuments": [
         {
           "title": "CRA RESOLUTION - FY26 SERVICES AGREEMENT WITH CITY OF TAMPA.DOC-COMBINED.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20-%20FY26%20SERVICES%20AGREEMENT%20WITH%20CITY%20OF%20TAMPA.DOC-COMBINED.PDF.pdf?documentType=1&meetingId=2648&itemId=17615&publishId=155235&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA RESOLUTION - FY26 SERVICES AGREEMENT WITH CITY OF TAMPA.DOC-COMBINED.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20RESOLUTION%20-%20FY26%20SERVICES%20AGREEMENT%20WITH%20CITY%20OF%20TAMPA.DOC-COMBINED.PDF.pdf?documentType=1&meetingId=2648&itemId=17615&publishId=155812&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA RESOLUTION - FY26 SERVICES AGREEMENT WITH CITY OF TAMPA.DOC-COMBINED.PDF in a new tab",
           "originalText": "CRA RESOLUTION - FY26 SERVICES AGREEMENT WITH CITY OF TAMPA.DOC-COMBINED.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17615/cra-resolution-fy26-services-agreement-with-city-of-tampa.doc-combined.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=17615&publishId=155236&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=17615&publishId=155813&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17615/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "CRA SEPT 11 MEMO- CONTINUANCE.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA%20SEPT%2011%20MEMO-%20CONTINUANCE.DOCX.pdf?documentType=1&meetingId=2648&itemId=17615&publishId=155237&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA SEPT 11 MEMO- CONTINUANCE.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA%20SEPT%2011%20MEMO-%20CONTINUANCE.DOCX.pdf?documentType=1&meetingId=2648&itemId=17615&publishId=155814&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA SEPT 11 MEMO- CONTINUANCE.DOCX in a new tab",
           "originalText": "CRA SEPT 11 MEMO- CONTINUANCE.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17615/cra-sept-11-memo-continuance.docx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/17615/cra-sept-11-memo-continuance.pdf"
         }
       ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$4,254,558",
-        "$99,557",
-        "$664,897",
-        "$1,478,316",
-        "$178,471",
-        "$478,337",
-        "$722,363",
-        "$110,075",
-        "$210,837",
-        "$104,003",
-        "$177,702",
-        "$10,000",
-        "$20,000",
-        "$900,065",
-        "$230,837",
-        "$114,003"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$4,254,558",
-          "value": 4254558,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": "fiscal_impact",
-          "contexts": [
-            "This resolution provides for the services agreement in the amount of $4,254,558 between the FISCAL IMPACT STATEMENT:",
-            "FISCAL IMPACT STATEMENT: This resolution provides for the services agreement in the amount of $4,254,558 between the"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$99,557",
-          "value": 99557,
-          "signedValue": 99557,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "PROJECTED COSTS: 01100 213801 381618 $99,557 (Revenue) budget and appropriation within the CRA Funds.",
-            "61800 213801 591011 $99,557 (Expenditure) General Fund. Neighborhood Enhancement. Transfer from Ybor II CRA",
-            "budget and appropriation within the CRA Funds. PROJECTED COSTS: 01100 213801 381618 $99,557 (Revenue)",
-            "General Fund. Neighborhood Enhancement. Transfer from Ybor II CRA 61800 213801 591011 $99,557 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$664,897",
-          "value": 664897,
-          "signedValue": 664897,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 213801 381619 $664,897 (Revenue) General Fund. CRA Dept. Transfer from Central Park CRA",
-            "61900 213801 591011 $664,897 (Expenditure) Central Park CRA Fund. CRA Dept. Transfer to General Fund",
-            "General Fund. CRA Dept. Transfer from Central Park CRA 01100 213801 381619 $664,897 (Revenue)",
-            "Central Park CRA Fund. CRA Dept. Transfer to General Fund 61900 213801 591011 $664,897 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$1,478,316",
-          "value": 1478316,
-          "signedValue": 1478316,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 213801 381621 $1,478,316 (Revenue) General Fund. CRA Dept. Transfer from Channel District CRA",
-            "62100 213801 591011 $1,478,316 (Expenditure) Channel District CRA Fund. CRA Dept. Transfer to General Fund",
-            "General Fund. CRA Dept. Transfer from Channel District CRA 01100 213801 381621 $1,478,316 (Revenue)",
-            "Channel District CRA Fund. CRA Dept. Transfer to General Fund 62100 213801 591011 $1,478,316 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$178,471",
-          "value": 178471,
-          "signedValue": 178471,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 213801 381623 $178,471 (Revenue) General Fund. CRA Dept. Transfer from Downtown CRA",
-            "62300 213801 591011 $178,471 (Expenditure) Downtown CRA Fund. CRA Dept. Transfer to General Fund",
-            "General Fund. CRA Dept. Transfer from Downtown CRA 01100 213801 381623 $178,471 (Revenue)",
-            "Downtown CRA Fund. CRA Dept. Transfer to General Fund 62300 213801 591011 $178,471 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$478,337",
-          "value": 478337,
-          "signedValue": 478337,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 213801 381628 $478,337 (Revenue) General Fund. CRA Dept. Transfer from Drew Park CRA",
-            "62350 213801 591011 $478,337 (Expenditure) West Tampa CRA Fund. CRA Dept. Transfer to General Fund",
-            "General Fund. CRA Dept. Transfer from Drew Park CRA 01100 213801 381628 $478,337 (Revenue)",
-            "West Tampa CRA Fund. CRA Dept. Transfer to General Fund 62350 213801 591011 $478,337 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$722,363",
-          "value": 722363,
-          "signedValue": -722363,
-          "type": "revenue",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 213801 381624 $722,363 (Revenue) General Fund. CRA Dept. Transfer from West Tampa CRA",
-            "General Fund. CRA Dept. Transfer from West Tampa CRA 01100 213801 381624 $722,363 (Revenue)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$110,075",
-          "value": 110075,
-          "signedValue": 110075,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 213801 381625 $110,075 (Revenue) General Fund. CRA Dept. Transfer from East Tampa CRA",
-            "62500 213801 591011 $110,075 (Expenditure) East Tampa CRA Fund. CRA Dept. Transfer to General Fund",
-            "General Fund. CRA Dept. Transfer from East Tampa CRA 01100 213801 381625 $110,075 (Revenue)",
-            "East Tampa CRA Fund. CRA Dept. Transfer to General Fund 62500 213801 591011 $110,075 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$210,837",
-          "value": 210837,
-          "signedValue": -210837,
-          "type": "revenue",
-          "section": "projected_costs",
-          "contexts": [
-            "01110 213801 381626 $210,837 (Revenue) General Fund. CRA Dept. Transfer from Tampa Heights Riverfront CRA",
-            "General Fund. CRA Dept. Transfer from Tampa Heights Riverfront CRA 01110 213801 381626 $210,837 (Revenue)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$104,003",
-          "value": 104003,
-          "signedValue": -104003,
-          "type": "revenue",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 213801 381627 $104,003 (Revenue) General Fund. CRA Dept. Transfer from Ybor I CRA",
-            "General Fund. CRA Dept. Transfer from Ybor I CRA 01100 213801 381627 $104,003 (Revenue)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$177,702",
-          "value": 177702,
-          "signedValue": -177702,
-          "type": "revenue",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 230400 381624 $177,702 (Revenue) General Fund. CRA Dept. Transfer from Ybor II CRA",
-            "General Fund. CRA Dept. Transfer from Ybor II CRA 01100 230400 381624 $177,702 (Revenue)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$10,000",
-          "value": 10000,
-          "signedValue": -10000,
-          "type": "revenue",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 220700 381626 $10,000 (Revenue) General Fund. Police SSD. Transfer from East Tampa CRA",
-            "General Fund. Police SSD. Transfer from East Tampa CRA 01100 220700 381626 $10,000 (Revenue)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$20,000",
-          "value": 20000,
-          "signedValue": -20000,
-          "type": "revenue",
-          "section": "projected_costs",
-          "contexts": [
-            "01100 220700 381627 $20,000 (Revenue) General Fund. Neighborhood Enhancement. Transfer from Ybor I CRA",
-            "General Fund. Neighborhood Enhancement. Transfer from Ybor I CRA 01100 220700 381627 $20,000 (Revenue)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$900,065",
-          "value": 900065,
-          "signedValue": 900065,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "62400 213801 591011 $900,065 (Expenditure) West Tampa CRA Fund. CRA Dept. Transfer to General Fund",
-            "West Tampa CRA Fund. CRA Dept. Transfer to General Fund 62400 213801 591011 $900,065 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$230,837",
-          "value": 230837,
-          "signedValue": 230837,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "62600 213801 591011 $230,837 (Expenditure) Tampa Heights Riverfront CRA Fund. CRA Dept. Transfer to General Fund",
-            "Tampa Heights Riverfront CRA Fund. CRA Dept. Transfer to General Fund 62600 213801 591011 $230,837 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        },
-        {
-          "amount": "$114,003",
-          "value": 114003,
-          "signedValue": 114003,
-          "type": "expenditure",
-          "section": "projected_costs",
-          "contexts": [
-            "62700 213801 591011 $114,003 (Expenditure) Ybor I CRA Fund. CRA Dept. Transfer to General Fund",
-            "Ybor I CRA Fund. CRA Dept. Transfer to General Fund 62700 213801 591011 $114,003 (Expenditure)"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 4254558,
-        "decreases": 0,
-        "revenues": 1244905,
-        "other": 4254558,
-        "net": 3009653
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        8/12/2025\nRequested Meeting Date: 9/11/2025\nType of Request:                                                  CRA Resolution\nContactMia Dorton 8132748643\nSubjectAnnual renewal of the Agreement between the CRA and the City of Tampa, \nsubject to budget appropriation.\nResolution / \nOrdinance \nTitle\nA Resolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, approving the services agreement by and between said Community \nRedevelopment Agency and the City of Tampa for fiscal years 2026, subject \nto budget and appropriation; Providing an effective date.\nBACKGROUND:\nThe CRA is requesting that the Services Agreement by and between the Community \nRedevelopment Agency of the City of Tampa, Florida, and the City of Tampa, Florida, a \nmunicipal corporation organized and existing under the laws of the State of Florida, for fiscal \nyear 2026 commencing October 1, 2025, be approved in the form attached hereto or \nsubstantially similar form, subject to the proper budget and appropriation of the tax increment \nfunds available for the Redevelopment Areas during the 2026 fiscal year.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution provides for the services agreement in the amount of $4,254,558 between the \nCommunity Redevelopment Agency and the City of Tampa for fiscal years 2026, subject to \nbudget and appropriation within the CRA Funds.\nPROJECTED COSTS: 01100 213801 381618 $99,557 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Central Park CRA\n01100 213801 381619 $664,897 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Channel District CRA\n01100 213801 381621 $1,478,316 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Downtown CRA\n01100 213801 381623 $178,471 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Drew Park CRA\n01100 213801 381628 $478,337 (Revenue)\nGeneral Fund. CRA Dept. Transfer from West Tampa CRA\n01100 213801 381624 $722,363 (Revenue)\nGeneral Fund. CRA Dept. Transfer from East Tampa CRA\n01100 213801 381625 $110,075 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Tampa Heights Riverfront CRA\n01110 213801 381626 $210,837 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Ybor I CRA\n01100 213801 381627 $104,003 (Revenue)\n\nGeneral Fund. CRA Dept. Transfer from Ybor II CRA\n01100 230400 381624 $177,702 (Revenue)\nGeneral Fund. Police SSD. Transfer from East Tampa CRA\n01100 220700 381626 $10,000 (Revenue)\nGeneral Fund. Neighborhood Enhancement. Transfer from Ybor I CRA\n01100 220700 381627 $20,000 (Revenue)\nGeneral Fund. Neighborhood Enhancement. Transfer from Ybor II CRA\n61800 213801 591011 $99,557 (Expenditure)\nCentral Park CRA Fund. CRA Dept. Transfer to General Fund\n61900 213801 591011 $664,897 (Expenditure)\nChannel District CRA Fund. CRA Dept. Transfer to General Fund\n62100 213801 591011 $1,478,316 (Expenditure)\nDowntown CRA Fund. CRA Dept. Transfer to General Fund\n62300 213801 591011 $178,471 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Transfer to General Fund\n62350 213801 591011 $478,337 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Transfer to General Fund\n62400 213801 591011 $900,065 (Expenditure)\nEast Tampa CRA Fund. CRA Dept. Transfer to General Fund\n62500 213801 591011 $110,075 (Expenditure)\nTampa Heights Riverfront CRA Fund. CRA Dept. Transfer to General Fund\n62600 213801 591011 $230,837 (Expenditure)\nYbor I CRA Fund. CRA Dept. Transfer to General Fund\n62700 213801 591011 $114,003 (Expenditure)\nYbor II CRA Fund. CRA Dept. Transfer to General Fund\nApproverTimestampRole\nMia Dorton8/28/2025 3:17:04 PMSubmitter\nSherri Scott8/28/2025 3:19:27 PMDepartment Head\nCedric McCray9/2/2025 10:21:15 AMCommunity and Redevelopment Agency\nAstonah Turner9/2/2025 10:25:35 AMAttorney Coordinator\nMorris Massey9/2/2025 10:39:35 AMAssistant City Attorney\nErin Bradley9/2/2025 1:26:49 PMCity Attorney\nSusan Gobble9/2/2025 1:32:05 PMFinance Coordinator\nSusan Gobble9/2/2025 5:00:15 PMFinance Fiscal and Lead Analyst\nTy Hawthorne9/3/2025 7:22:15 AMBudget Operating Manager\nMichael Perry9/3/2025 7:32:15 AMBudget Officer\nLori Hernandez9/3/2025 11:18:58 AMChief Financial Officer\nJOHN BENNETT9/3/2025 1:37:12 PMChief of Staff\nJANE CASTOR9/3/2025 2:44:47 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution provides for the services agreement in the amount of $4,254,558 between the Community Redevelopment Agency and the City of Tampa for fiscal years 2026, subject to budget and appropriation within the CRA Funds.",
+        "projectedCostsRaw": "01100 213801 381618 $99,557 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Central Park CRA\n01100 213801 381619 $664,897 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Channel District CRA\n01100 213801 381621 $1,478,316 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Downtown CRA\n01100 213801 381623 $178,471 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Drew Park CRA\n01100 213801 381628 $478,337 (Revenue)\nGeneral Fund. CRA Dept. Transfer from West Tampa CRA\n01100 213801 381624 $722,363 (Revenue)\nGeneral Fund. CRA Dept. Transfer from East Tampa CRA\n01100 213801 381625 $110,075 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Tampa Heights Riverfront CRA\n01110 213801 381626 $210,837 (Revenue)\nGeneral Fund. CRA Dept. Transfer from Ybor I CRA\n01100 213801 381627 $104,003 (Revenue)\n\nGeneral Fund. CRA Dept. Transfer from Ybor II CRA\n01100 230400 381624 $177,702 (Revenue)\nGeneral Fund. Police SSD. Transfer from East Tampa CRA\n01100 220700 381626 $10,000 (Revenue)\nGeneral Fund. Neighborhood Enhancement. Transfer from Ybor I CRA\n01100 220700 381627 $20,000 (Revenue)\nGeneral Fund. Neighborhood Enhancement. Transfer from Ybor II CRA\n61800 213801 591011 $99,557 (Expenditure)\nCentral Park CRA Fund. CRA Dept. Transfer to General Fund\n61900 213801 591011 $664,897 (Expenditure)\nChannel District CRA Fund. CRA Dept. Transfer to General Fund\n62100 213801 591011 $1,478,316 (Expenditure)\nDowntown CRA Fund. CRA Dept. Transfer to General Fund\n62300 213801 591011 $178,471 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Transfer to General Fund\n62350 213801 591011 $478,337 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Transfer to General Fund\n62400 213801 591011 $900,065 (Expenditure)\nEast Tampa CRA Fund. CRA Dept. Transfer to General Fund\n62500 213801 591011 $110,075 (Expenditure)\nTampa Heights Riverfront CRA Fund. CRA Dept. Transfer to General Fund\n62600 213801 591011 $230,837 (Expenditure)\nYbor I CRA Fund. CRA Dept. Transfer to General Fund\n62700 213801 591011 $114,003 (Expenditure)\nYbor II CRA Fund. CRA Dept. Transfer to General Fund",
+        "rows": [
+          {
+            "accountCode": "01100.213801.381618",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381618",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$99,557",
+            "value": 99557,
+            "type": "revenue",
+            "signedValue": -99557,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from Central Park CRA"
+          },
+          {
+            "accountCode": "01100.213801.381619",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381619",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$664,897",
+            "value": 664897,
+            "type": "revenue",
+            "signedValue": -664897,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from Channel District CRA"
+          },
+          {
+            "accountCode": "01100.213801.381621",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381621",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$1,478,316",
+            "value": 1478316,
+            "type": "revenue",
+            "signedValue": -1478316,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from Downtown CRA"
+          },
+          {
+            "accountCode": "01100.213801.381623",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381623",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$178,471",
+            "value": 178471,
+            "type": "revenue",
+            "signedValue": -178471,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from Drew Park CRA"
+          },
+          {
+            "accountCode": "01100.213801.381628",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381628",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$478,337",
+            "value": 478337,
+            "type": "revenue",
+            "signedValue": -478337,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from West Tampa CRA"
+          },
+          {
+            "accountCode": "01100.213801.381624",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381624",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$722,363",
+            "value": 722363,
+            "type": "revenue",
+            "signedValue": -722363,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from East Tampa CRA"
+          },
+          {
+            "accountCode": "01100.213801.381625",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381625",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$110,075",
+            "value": 110075,
+            "type": "revenue",
+            "signedValue": -110075,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from Tampa Heights Riverfront CRA"
+          },
+          {
+            "accountCode": "01110.213801.381626",
+            "fund": "01110",
+            "department": "213801",
+            "object": "381626",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$210,837",
+            "value": 210837,
+            "type": "revenue",
+            "signedValue": -210837,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from Ybor I CRA"
+          },
+          {
+            "accountCode": "01100.213801.381627",
+            "fund": "01100",
+            "department": "213801",
+            "object": "381627",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$104,003",
+            "value": 104003,
+            "type": "revenue",
+            "signedValue": -104003,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. CRA Dept. Transfer from Ybor II CRA"
+          },
+          {
+            "accountCode": "01100.230400.381624",
+            "fund": "01100",
+            "department": "230400",
+            "object": "381624",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$177,702",
+            "value": 177702,
+            "type": "revenue",
+            "signedValue": -177702,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. Police SSD. Transfer from East Tampa CRA"
+          },
+          {
+            "accountCode": "01100.220700.381626",
+            "fund": "01100",
+            "department": "220700",
+            "object": "381626",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$10,000",
+            "value": 10000,
+            "type": "revenue",
+            "signedValue": -10000,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. Neighborhood Enhancement. Transfer from Ybor I CRA"
+          },
+          {
+            "accountCode": "01100.220700.381627",
+            "fund": "01100",
+            "department": "220700",
+            "object": "381627",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$20,000",
+            "value": 20000,
+            "type": "revenue",
+            "signedValue": -20000,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund. Neighborhood Enhancement. Transfer from Ybor II CRA"
+          },
+          {
+            "accountCode": "61800.213801.591011",
+            "fund": "61800",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$99,557",
+            "value": 99557,
+            "type": "expenditure",
+            "signedValue": 99557,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Central Park CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "61900.213801.591011",
+            "fund": "61900",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$664,897",
+            "value": 664897,
+            "type": "expenditure",
+            "signedValue": 664897,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Channel District CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "62100.213801.591011",
+            "fund": "62100",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$1,478,316",
+            "value": 1478316,
+            "type": "expenditure",
+            "signedValue": 1478316,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Downtown CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "62300.213801.591011",
+            "fund": "62300",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$178,471",
+            "value": 178471,
+            "type": "expenditure",
+            "signedValue": 178471,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "West Tampa CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "62350.213801.591011",
+            "fund": "62350",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$478,337",
+            "value": 478337,
+            "type": "expenditure",
+            "signedValue": 478337,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "West Tampa CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "62400.213801.591011",
+            "fund": "62400",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$900,065",
+            "value": 900065,
+            "type": "expenditure",
+            "signedValue": 900065,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "East Tampa CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "62500.213801.591011",
+            "fund": "62500",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$110,075",
+            "value": 110075,
+            "type": "expenditure",
+            "signedValue": 110075,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Tampa Heights Riverfront CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "62600.213801.591011",
+            "fund": "62600",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$230,837",
+            "value": 230837,
+            "type": "expenditure",
+            "signedValue": 230837,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Ybor I CRA Fund. CRA Dept. Transfer to General Fund"
+          },
+          {
+            "accountCode": "62700.213801.591011",
+            "fund": "62700",
+            "department": "213801",
+            "object": "591011",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$114,003",
+            "value": 114003,
+            "type": "expenditure",
+            "signedValue": 114003,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Ybor II CRA Fund. CRA Dept. Transfer to General Fund"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 14,
@@ -932,15 +779,15 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18637&publishId=155238&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18637&publishId=155815&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18637/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "CRA_RESOFY26_MEETING_SCHEDULE_.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CRA_RESOFY26_MEETING_SCHEDULE_.PDF.pdf?documentType=1&meetingId=2648&itemId=18637&publishId=155239&isSection=False&isAttachment=True",
-          "originalTitle": "Download CRA_RESOFY26_MEETING_SCHEDULE_.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CRA_RESOFY26_MEETING_SCHEDULE_.PDF.pdf?documentType=1&meetingId=2648&itemId=18637&publishId=155816&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CRA_RESOFY26_MEETING_SCHEDULE_.PDF in a new tab",
           "originalText": "CRA_RESOFY26_MEETING_SCHEDULE_.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18637/cra_resofy26_meeting_schedule_.pdf"
         }
@@ -948,42 +795,42 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  CRA Resolution\nContactMia Dorton 8132748643\nSubjectThis resolution establishes the 2026 Calendar for the CRA Board Meetings.\nResolution / \nOrdinance \nTitle\nFile No. CRA25-18637\nResolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, formally approving its annual schedule of Community Redevelopment \nAgency regular meetings for the 2026 fiscal year; directing the Secretary of \nthe Community Redevelopment Agency to file said schedule with Tampa City \nCouncil and to publish said schedule in the manner provided in chapter 50, \nFlorida statutes; providing an effective date.\nBACKGROUND:\nAnnually, the CRA establishes its meeting schedule and submits it for CRA Board Approval \nand Public Notice.\nFISCAL IMPACT: No\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:38:29 PMSubmitter\nSherri Scott10/30/2025 12:49:17 PMDepartment Head\nCedric McCray10/31/2025 2:31:55 PMCommunity and Redevelopment Agency\nAstonah Turner10/31/2025 2:47:35 PMAttorney Coordinator\nMorris Massey10/31/2025 4:21:33 PMAssistant City Attorney\nCate Wells10/31/2025 4:31:17 PMCity Attorney\nErin Bradley11/6/2025 1:31:05 PMFinance Coordinator\nSusan Gobble11/6/2025 1:35:28 PMFinance Fiscal and Lead Analyst\nTy Hawthorne11/6/2025 1:39:46 PMBudget Operating Manager\nTy Hawthorne11/6/2025 1:40:29 PMBudget Officer\nSuling Lucas-Harris11/6/2025 3:57:34 PMChief Financial Officer\nJOHN BENNETT11/6/2025 4:18:42 PMChief of Staff\nJOHN BENNETT11/6/2025 4:18:54 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 15,
       "agendaItemId": "18650",
-      "title": "File No. CRA25-18650 - Channel District Infrastructure Stormwater Improvements Project - November 2025 Program Change\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18650 - Channel District Infrastructure Stormwater Improvements Project - November 2025 Program Change\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18650 - Channel District Infrastructure Stormwater Improvements Project - November 2025 Program Change\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18650 - Channel District Infrastructure Stormwater Improvements Project - November 2025 Program Change\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18650-Channel",
       "background": "",
       "supportingDocuments": [
         {
           "title": "CD CRA PROGRAM CHANGE - STORMWATER IMPROVEMENTS PROJECT - NOV 2025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CD%20CRA%20PROGRAM%20CHANGE%20-%20STORMWATER%20IMPROVEMENTS%20PROJECT%20-%20NOV%202025.PDF.pdf?documentType=1&meetingId=2648&itemId=18650&publishId=155240&isSection=False&isAttachment=True",
-          "originalTitle": "Download CD CRA PROGRAM CHANGE - STORMWATER IMPROVEMENTS PROJECT - NOV 2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CD%20CRA%20PROGRAM%20CHANGE%20-%20STORMWATER%20IMPROVEMENTS%20PROJECT%20-%20NOV%202025.PDF.pdf?documentType=1&meetingId=2648&itemId=18650&publishId=155817&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CD CRA PROGRAM CHANGE - STORMWATER IMPROVEMENTS PROJECT - NOV 2025.PDF in a new tab",
           "originalText": "CD CRA PROGRAM CHANGE - STORMWATER IMPROVEMENTS PROJECT - NOV 2025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18650/cd-cra-program-change-stormwater-improvements-project-nov-2025.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18650&publishId=155241&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18650&publishId=155818&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18650/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "CDPROGRAMCHANGE(ONBASENO.18650FILENO.CRA25-18650).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CDPROGRAMCHANGE(ONBASENO.18650FILENO.CRA25-18650).PDF.pdf?documentType=1&meetingId=2648&itemId=18650&publishId=155242&isSection=False&isAttachment=True",
-          "originalTitle": "Download CDPROGRAMCHANGE(ONBASENO.18650FILENO.CRA25-18650).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CDPROGRAMCHANGE(ONBASENO.18650FILENO.CRA25-18650).PDF.pdf?documentType=1&meetingId=2648&itemId=18650&publishId=155819&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CDPROGRAMCHANGE(ONBASENO.18650FILENO.CRA25-18650).PDF in a new tab",
           "originalText": "CDPROGRAMCHANGE(ONBASENO.18650FILENO.CRA25-18650).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18650/cdprogramchangeonbaseno.18650fileno.cra25-18650.pdf"
         }
@@ -991,74 +838,56 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$1,389,918"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$1,389,918",
-          "value": 1389918,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "SubjectThis program change requests realignment of $1,389,918 from the Channel ContactMia Dorton 8132748643",
-            "ContactMia Dorton 8132748643 SubjectThis program change requests realignment of $1,389,918 from the Channel"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 1389918,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 8132748643\nSubjectThis program change requests realignment of $1,389,918 from the Channel \nDistrict Neighborhood Infrastructure and\nImprovements Project to the Channel District Stormwater Improvements on \nChannelside Drive project within the\nChannel District CRA Fund.\nResolution / \nOrdinance \nTitle\nCRA Channel District Infrastructure Stormwater Improvements Project - \nNovember 2025 Program Change\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:36:40 PMSubmitter\nSherri Scott10/30/2025 12:39:47 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 16,
       "agendaItemId": "18652",
-      "title": "File No. CRA25-18652\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Special Projects Grant Agreement by and between said Community Redevelopment Agency and the Tampa Firefighters Museum, Inc. To restore and renovate the building on property located at 720 East Zack Street, Tampa, Florida within the boundaries of the Downtown Community Redevelopment Area; authorizing execution of the Special Projects Grant Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18652\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Special Projects Grant Agreement by and between said Community Redevelopment Agency and the Tampa Firefighters Museum, Inc. To restore and renovate the building on property located at 720 East Zack Street, Tampa, Florida within the boundaries of the Downtown Community Redevelopment Area; authorizing execution of the Special Projects Grant Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18652\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Special Projects Grant Agreement by and between said Community Redevelopment Agency and the Tampa Firefighters Museum, Inc. To restore and renovate the building on property located at 720 East Zack Street, Tampa, Florida within the boundaries of the Downtown Community Redevelopment Area; authorizing execution of the Special Projects Grant Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18652\nResolution of the Community Redevelopment Agency of the City of Tampa, Florida, approving the Special Projects Grant Agreement by and between said Community Redevelopment Agency and the Tampa Firefighters Museum, Inc. To restore and renovate the building on property located at 720 East Zack Street, Tampa, Florida within the boundaries of the Downtown Community Redevelopment Area; authorizing execution of the Special Projects Grant Agreement by the Chair of the CRA and attestation by the CRA Secretary; providing an effective date.\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information and a PowerPoint presentation for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18652",
       "background": "",
       "supportingDocuments": [
         {
           "title": "AWARD-MAKING PROCESS CHECKLIST_CRA ATTORNEY REVIEWED.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AWARD-MAKING%20PROCESS%20CHECKLIST_CRA%20ATTORNEY%20REVIEWED.PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155243&isSection=False&isAttachment=True",
-          "originalTitle": "Download AWARD-MAKING PROCESS CHECKLIST_CRA ATTORNEY REVIEWED.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AWARD-MAKING%20PROCESS%20CHECKLIST_CRA%20ATTORNEY%20REVIEWED.PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155820&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AWARD-MAKING PROCESS CHECKLIST_CRA ATTORNEY REVIEWED.PDF in a new tab",
           "originalText": "AWARD-MAKING PROCESS CHECKLIST_CRA ATTORNEY REVIEWED.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18652/award-making-process-checklist_cra-attorney-reviewed.pdf"
         },
         {
           "title": "TAMPA FIREFIGHTERS MUSEUM_PRESENTATION.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TAMPA%20FIREFIGHTERS%20MUSEUM_PRESENTATION.PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155244&isSection=False&isAttachment=True",
-          "originalTitle": "Download TAMPA FIREFIGHTERS MUSEUM_PRESENTATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TAMPA%20FIREFIGHTERS%20MUSEUM_PRESENTATION.PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155821&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TAMPA FIREFIGHTERS MUSEUM_PRESENTATION.PDF in a new tab",
           "originalText": "TAMPA FIREFIGHTERS MUSEUM_PRESENTATION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18652/tampa-firefighters-museum_presentation.pdf"
         },
         {
           "title": "FINAL- FIRE MUSEUM RESO-AGREEMENT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FINAL-%20FIRE%20MUSEUM%20RESO-AGREEMENT.PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155245&isSection=False&isAttachment=True",
-          "originalTitle": "Download FINAL- FIRE MUSEUM RESO-AGREEMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FINAL-%20FIRE%20MUSEUM%20RESO-AGREEMENT.PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155822&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FINAL- FIRE MUSEUM RESO-AGREEMENT.PDF in a new tab",
           "originalText": "FINAL- FIRE MUSEUM RESO-AGREEMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18652/final-fire-museum-reso-agreement.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155246&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155823&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18652/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "DTSPECIALPROJECTGRANTFIRE(ONBASE18652).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DTSPECIALPROJECTGRANTFIRE(ONBASE18652).PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155247&isSection=False&isAttachment=True",
-          "originalTitle": "Download DTSPECIALPROJECTGRANTFIRE(ONBASE18652).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DTSPECIALPROJECTGRANTFIRE(ONBASE18652).PDF.pdf?documentType=1&meetingId=2648&itemId=18652&publishId=155824&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DTSPECIALPROJECTGRANTFIRE(ONBASE18652).PDF in a new tab",
           "originalText": "DTSPECIALPROJECTGRANTFIRE(ONBASE18652).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18652/dtspecialprojectgrantfireonbase18652.pdf"
         }
@@ -1066,35 +895,35 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 8132748643\nSubjectThe Tampa Firefighters Museum seeks funding for rehabilitation to its \nstructure at 720 E. Zack Street, which was designated as a Historical \nLandmark in 2002.\nResolution / \nOrdinance \nTitle\nA Resolution of the Community Redevelopment Agency of the City of Tampa, \nFlorida, approving the Special Projects Grant Agreement by and between said \nCommunity Redevelopment Agency and the Tampa Firefighters Museum, Inc. \nTo restore and renovate the building on property located at 720 East Zack \nStreet, Tampa, Florida within the boundaries of the Downtown Community \nRedevelopment Area; authorizing execution of the Special Projects Grant \nAgreement by the Chair of the CRA and attestation by the CRA Secretary; \nproviding an effective date.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:39:30 PMSubmitter\nSherri Scott10/30/2025 4:53:11 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 17,
       "agendaItemId": "18653",
-      "title": "File No. CRA25-18653\nCRA East Tampa Commercial Grant Waiver - (Hargrett) 2409 E. Lake Ave.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18653\nCRA East Tampa Commercial Grant Waiver - (Hargrett) 2409 E. Lake Ave.\n\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18653\nCRA East Tampa Commercial Grant Waiver - (Hargrett) 2409 E. Lake Ave.\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18653\nCRA East Tampa Commercial Grant Waiver - (Hargrett) 2409 E. Lake Ave.\nMemorandum from Dee Reed, Economic Development Coordinator, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18653",
       "background": "",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18653&publishId=155248&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18653&publishId=155825&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18653/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "ETCOMMERCIALGRANTWAIVER2409E.LAKE(ONBASENO.18653).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ETCOMMERCIALGRANTWAIVER2409E.LAKE(ONBASENO.18653).PDF.pdf?documentType=1&meetingId=2648&itemId=18653&publishId=155249&isSection=False&isAttachment=True",
-          "originalTitle": "Download ETCOMMERCIALGRANTWAIVER2409E.LAKE(ONBASENO.18653).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ETCOMMERCIALGRANTWAIVER2409E.LAKE(ONBASENO.18653).PDF.pdf?documentType=1&meetingId=2648&itemId=18653&publishId=155826&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ETCOMMERCIALGRANTWAIVER2409E.LAKE(ONBASENO.18653).PDF in a new tab",
           "originalText": "ETCOMMERCIALGRANTWAIVER2409E.LAKE(ONBASENO.18653).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18653/etcommercialgrantwaiver2409e.lakeonbaseno.18653.pdf"
         }
@@ -1102,42 +931,42 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 8132748643\nSubjectDue to the delay in Board approval of the updated Grants and Funding Policy \nand updates to the Commercial Exterior Grant, the applicant is experiencing \nhardship by the extended delay in commencing work. Staff recommends \napproval the requested waiver.\nResolution / \nOrdinance \nTitle\nCRA - East Tampa Commercial Grant Waiver - (Hargrett) 2409 E. Lake Ave.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 2:32:57 PMSubmitter\nSherri Scott10/30/2025 4:51:57 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 18,
       "agendaItemId": "18654",
-      "title": "File No. CRA25-18654 \nTampa Heights Riverfront for Baldomero Lopez Program Change\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18654 \nTampa Heights Riverfront for Baldomero Lopez Program Change\n\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18654\nTampa Heights Riverfront for Baldomero Lopez Program Change\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18654\nTampa Heights Riverfront for Baldomero Lopez Program Change\nMemorandum from Courtney Orr, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18654",
       "background": "",
       "supportingDocuments": [
         {
           "title": "THR CRA PROGRAM CHANGE - PUBLIC ART REALIGNMENT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/THR%20CRA%20PROGRAM%20CHANGE%20-%20PUBLIC%20ART%20REALIGNMENT.PDF.pdf?documentType=1&meetingId=2648&itemId=18654&publishId=155250&isSection=False&isAttachment=True",
-          "originalTitle": "Download THR CRA PROGRAM CHANGE - PUBLIC ART REALIGNMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/THR%20CRA%20PROGRAM%20CHANGE%20-%20PUBLIC%20ART%20REALIGNMENT.PDF.pdf?documentType=1&meetingId=2648&itemId=18654&publishId=155827&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of THR CRA PROGRAM CHANGE - PUBLIC ART REALIGNMENT.PDF in a new tab",
           "originalText": "THR CRA PROGRAM CHANGE - PUBLIC ART REALIGNMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18654/thr-cra-program-change-public-art-realignment.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18654&publishId=155251&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18654&publishId=155828&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18654/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "THPROGRAMCHANGE(ONBASENO.18654).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/THPROGRAMCHANGE(ONBASENO.18654).PDF.pdf?documentType=1&meetingId=2648&itemId=18654&publishId=155252&isSection=False&isAttachment=True",
-          "originalTitle": "Download THPROGRAMCHANGE(ONBASENO.18654).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/THPROGRAMCHANGE(ONBASENO.18654).PDF.pdf?documentType=1&meetingId=2648&itemId=18654&publishId=155829&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of THPROGRAMCHANGE(ONBASENO.18654).PDF in a new tab",
           "originalText": "THPROGRAMCHANGE(ONBASENO.18654).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18654/thprogramchangeonbaseno.18654.pdf"
         }
@@ -1145,67 +974,49 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$100,000"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$100,000",
-          "value": 100000,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "SubjectThis program change requests realignment of $100,000 from the Tampa ContactMia Dorton 8132748643",
-            "ContactMia Dorton 8132748643 SubjectThis program change requests realignment of $100,000 from the Tampa"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 100000,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 8132748643\nSubjectThis program change requests realignment of $100,000 from the Tampa \nHeights Riverfront (THR) CRA Historic Soulwalk\nTrail project to the THR CRA Public Art Project for the Baldomero Lopez \nstatue within the Tampa Heights Riverfront CRA\nFund.\nResolution / \nOrdinance \nTitle\nCRA - Tampa Heights Riverfront for Baldomero Lopez Program Change\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:05:19 PMSubmitter\nSherri Scott10/30/2025 12:33:27 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 19,
       "agendaItemId": "18750",
-      "title": "File No. CRA25-18750 \nCRA Ybor City - Community Advisory Committee (CAC) Appointments - Cynthia Tamargo and Rich Simmons\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18750 \nCRA Ybor City - Community Advisory Committee (CAC) Appointments - Cynthia Tamargo and Rich Simmons\n\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18750\nCRA Ybor City - Community Advisory Committee (CAC) Appointments - Cynthia Tamargo and Rich Simmons\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18750\nCRA Ybor City - Community Advisory Committee (CAC) Appointments - Cynthia Tamargo and Rich Simmons\nMemorandum from Brenda Thrower, CRA Development Manager, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18750",
       "background": "",
       "supportingDocuments": [
         {
           "title": "YCCAC APPLICATION FOR CYNTHIA TAMARGO.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/YCCAC%20APPLICATION%20FOR%20CYNTHIA%20TAMARGO.PDF.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155253&isSection=False&isAttachment=True",
-          "originalTitle": "Download YCCAC APPLICATION FOR CYNTHIA TAMARGO.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/YCCAC%20APPLICATION%20FOR%20CYNTHIA%20TAMARGO.PDF.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155830&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of YCCAC APPLICATION FOR CYNTHIA TAMARGO.PDF in a new tab",
           "originalText": "YCCAC APPLICATION FOR CYNTHIA TAMARGO.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18750/yccac-application-for-cynthia-tamargo.pdf"
         },
         {
           "title": "YC CAC APPLICATION - RICH SIMMONS.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/YC%20CAC%20APPLICATION%20-%20RICH%20SIMMONS.PDF.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155254&isSection=False&isAttachment=True",
-          "originalTitle": "Download YC CAC APPLICATION - RICH SIMMONS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/YC%20CAC%20APPLICATION%20-%20RICH%20SIMMONS.PDF.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155831&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of YC CAC APPLICATION - RICH SIMMONS.PDF in a new tab",
           "originalText": "YC CAC APPLICATION - RICH SIMMONS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18750/yc-cac-application-rich-simmons.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155255&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155832&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18750/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "YBORCAC(ONBASENO.18750).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/YBORCAC(ONBASENO.18750).PDF.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155256&isSection=False&isAttachment=True",
-          "originalTitle": "Download YBORCAC(ONBASENO.18750).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/YBORCAC(ONBASENO.18750).PDF.pdf?documentType=1&meetingId=2648&itemId=18750&publishId=155833&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of YBORCAC(ONBASENO.18750).PDF in a new tab",
           "originalText": "YBORCAC(ONBASENO.18750).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18750/yborcaconbaseno.18750.pdf"
         }
@@ -1213,42 +1024,42 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/30/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectCRA Ybor City - Community Advisory Committee (CAC) Appointments - \nCynthia Tamargo and Rich Simmons\nResolution / \nOrdinance \nTitle\nCRA Ybor City - Community Advisory Committee (CAC) Appointments - \nCynthia Tamargo and Rich Simmons\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:00:35 PMSubmitter\nSherri Scott10/30/2025 12:54:34 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     },
     {
       "number": 20,
       "agendaItemId": "18656",
-      "title": "File No. CRA25-18656 \nCRA Drew Park - Hubert Park Program Change\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CRA25-18656 \nCRA Drew Park - Hubert Park Program Change\n\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "title": "File No. CRA25-18656\nCRA Drew Park - Hubert Park Program Change\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CRA25-18656\nCRA Drew Park - Hubert Park Program Change\nMemorandum from Cedric McCray, CRA Director, transmitting additional information for said agenda item. (To be R/F)",
       "fileNumber": "CRA25-18656",
       "background": "",
       "supportingDocuments": [
         {
           "title": "DP CRA PROGRAM CHANGES - DREW PARK NEIGHBORHOOD PARK ON HUBERT AVENUE - NOV 2025 (004).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DP%20CRA%20PROGRAM%20CHANGES%20-%20DREW%20PARK%20NEIGHBORHOOD%20PARK%20ON%20HUBERT%20AVENUE%20-%20NO.pdf?documentType=1&meetingId=2648&itemId=18656&publishId=155257&isSection=False&isAttachment=True",
-          "originalTitle": "Download DP CRA PROGRAM CHANGES - DREW PARK NEIGHBORHOOD PARK ON HUBERT AVENUE - NOV 2025 (004).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DP%20CRA%20PROGRAM%20CHANGES%20-%20DREW%20PARK%20NEIGHBORHOOD%20PARK%20ON%20HUBERT%20AVENUE%20-%20NO.pdf?documentType=1&meetingId=2648&itemId=18656&publishId=155834&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DP CRA PROGRAM CHANGES - DREW PARK NEIGHBORHOOD PARK ON HUBERT AVENUE - NOV 2025 (004).PDF in a new tab",
           "originalText": "DP CRA PROGRAM CHANGES - DREW PARK NEIGHBORHOOD PARK ON HUBERT AVENUE - NOV 2025 (004).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18656/dp-cra-program-changes-drew-park-neighborhood-park-on-hubert-avenue-nov-2025-004.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18656&publishId=155258&isSection=False&isAttachment=True",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2648&itemId=18656&publishId=155835&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18656/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "DREWPARKPROGRAMCHANGE(ONBASENO.18656).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DREWPARKPROGRAMCHANGE(ONBASENO.18656).PDF.pdf?documentType=1&meetingId=2648&itemId=18656&publishId=155259&isSection=False&isAttachment=True",
-          "originalTitle": "Download DREWPARKPROGRAMCHANGE(ONBASENO.18656).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DREWPARKPROGRAMCHANGE(ONBASENO.18656).PDF.pdf?documentType=1&meetingId=2648&itemId=18656&publishId=155836&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DREWPARKPROGRAMCHANGE(ONBASENO.18656).PDF in a new tab",
           "originalText": "DREWPARKPROGRAMCHANGE(ONBASENO.18656).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-11-13/meeting-2648/18656/drewparkprogramchangeonbaseno.18656.pdf"
         }
@@ -1256,48 +1067,16 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [
-        "$2,067,477.00"
-      ],
-      "financialDetails": [
-        {
-          "amount": "$2,067,477.00",
-          "value": 2067477,
-          "signedValue": 0,
-          "type": "unspecified",
-          "section": null,
-          "contexts": [
-            "amount of $2,067,477.00. This reallocation will provide funding for Improvements to the Drew Park Neighborhood Park on Hubert Ave. in the",
-            "Improvements to the Drew Park Neighborhood Park on Hubert Ave. in the amount of $2,067,477.00. This reallocation will provide funding for"
-          ],
-          "sources": [
-            "summary",
-            "additional_1"
-          ]
-        }
-      ],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 2067477,
-        "net": 0
-      }
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Community and Redevelopment Agency\nCRA Regular\nSubmittal Date:                        10/29/2025\nRequested Meeting Date: 11/13/2025\nType of Request:                                                  Motion\nContactMia Dorton 813-274-8643\nSubjectStaff request a program change from the Neighborhood Infrastructure \nImprovements to the Drew Park Neighborhood Park on Hubert Ave. in the \namount of $2,067,477.00. This reallocation will provide funding for \nconstruction of the new park on Hubert Ave.\nResolution / \nOrdinance \nTitle\nCRA Drew Park - Hubert Park Program Change\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nMia Dorton10/30/2025 12:04:11 PMSubmitter\nSherri Scott10/30/2025 12:31:59 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "III. REQUIRED APPROVALS:"
     }
   ],
-  "financialSummary": {
-    "expenditures": 4254558,
-    "decreases": 0,
-    "revenues": 1244905,
-    "other": 18952905.18,
-    "net": 3009653,
-    "formatted": {
-      "expenditures": "$4,254,558.00",
-      "decreases": "$0.00",
-      "revenues": "-$1,244,905.00",
-      "other": "$18,952,905.18",
-      "net": "$3,009,653.00"
-    }
-  },
   "formattedDate": "2025-11-13"
 }

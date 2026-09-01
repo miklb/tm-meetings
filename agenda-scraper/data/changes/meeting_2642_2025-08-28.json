@@ -1,0 +1,63 @@
+{
+  "meetingId": "2642",
+  "meetingDate": "2025-08-28",
+  "firstSeenAt": "2026-09-01T21:09:45.117Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:08:02.452Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "1-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "2-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "3-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "4-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "5-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "6-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "7-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "8-WRITTEN COMMENTS TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "9-WRITTEN COMMENTS TACPA 24-04.PDF"
+        }
+      ]
+    }
+  ]
+}

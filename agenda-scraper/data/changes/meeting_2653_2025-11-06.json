@@ -1,0 +1,110 @@
+{
+  "meetingId": "2653",
+  "meetingDate": "2025-11-06",
+  "firstSeenAt": "2026-09-01T21:21:35.118Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:15:18.773Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [
+        {
+          "agendaItemId": "17463",
+          "number": 66,
+          "fileNumber": "CM24-9966",
+          "shortTitle": "File No. CM24-9966\nStaff to provide a written report on the Tree Canopy Study…"
+        }
+      ],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "E2025-15",
+          "filename": "OFFICER OF THE MONTH - NOVEMBER 2025 - OFC. GREYSON VETTER SIGNED.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "BA25-18932",
+          "filename": "HCC PLANNING COMMISSION UPDATED..PDF"
+        },
+        {
+          "itemNumber": 19,
+          "itemFileNumber": "F25-16860",
+          "filename": "MEMO.ROGERO - 110625 REGULAR COUNCIL SESSION - FILE NO. F25-16860.PDF"
+        },
+        {
+          "itemNumber": 23,
+          "itemFileNumber": "F25-18599",
+          "filename": "HURTAK MEMO11525.PDF"
+        },
+        {
+          "itemNumber": 26,
+          "itemFileNumber": "F25-18618",
+          "filename": "HURTAK MEMO11525.PDF"
+        },
+        {
+          "itemNumber": 26,
+          "itemFileNumber": "F25-18618",
+          "filename": "MEMO.ROGERO - 110625 REGULAR COUNCIL SESSION - FILE NO. F25-18618.PDF"
+        },
+        {
+          "itemNumber": 28,
+          "itemFileNumber": "DEO25-16917",
+          "filename": "MEMO.FEELEY - 110625 REGULAR COUNCIL SESSION - FILE NO. DEO25-16917.PDF"
+        },
+        {
+          "itemNumber": 42,
+          "itemFileNumber": "SU1-25-77-C",
+          "filename": "SU1-25-0000077-C AUTHORIZE AGENT FORM.PDF"
+        },
+        {
+          "itemNumber": 51,
+          "itemFileNumber": "REZ-25-101",
+          "filename": "5-WRITTEN COMMENT - REZ-25-101.PDF"
+        },
+        {
+          "itemNumber": 52,
+          "itemFileNumber": "BF25-17961",
+          "filename": "CYPRESS HOUSING PROJECT DESIGNATION RESO_FINAL.PDF"
+        },
+        {
+          "itemNumber": 53,
+          "itemFileNumber": "BF25-17962",
+          "filename": "EAST HILLS. DESIGNATION RESO_FINAL (1).PDF"
+        },
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "VAC-25-06",
+          "filename": "6-WRITTEN COMMENT - VAC 25-06.PDF"
+        },
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "VAC-25-06",
+          "filename": "7-WRITTEN COMMENTS - VAC 25-06.PDF"
+        },
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "VAC-25-06",
+          "filename": "8-WRITTEN COMMENT - VAC 25-06.PDF"
+        },
+        {
+          "itemNumber": 54,
+          "itemFileNumber": "VAC-25-06",
+          "filename": "9-WRITTEN COMMENT - VAC 25-06.PDF"
+        },
+        {
+          "itemNumber": 63,
+          "itemFileNumber": "CM25-15694/CM24-9966",
+          "filename": "POST-STORM ANALYSIS 11-6-2025-FINAL.PPTX"
+        },
+        {
+          "itemNumber": 63,
+          "itemFileNumber": "CM25-15694/CM24-9966",
+          "filename": "1-WRITTEN COMMENTS - CM25-15694 CM24-9966.PDF"
+        }
+      ]
+    }
+  ]
+}

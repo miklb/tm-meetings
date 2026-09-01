@@ -1,0 +1,113 @@
+{
+  "meetingId": "2665",
+  "meetingDate": "2025-10-23",
+  "firstSeenAt": "2026-09-01T21:30:04.771Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:23:42.229Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "BA25-17034",
+          "filename": "TAMPA+HOUSING+AUTHORITY+BOARD+APP HEMANI.PDF"
+        },
+        {
+          "itemNumber": 61,
+          "itemFileNumber": "DA25-18100",
+          "filename": "RESO FOR DEVELOPMENT AGMT WOW.PDF"
+        },
+        {
+          "itemNumber": 64,
+          "itemFileNumber": "E2025-8",
+          "filename": "MEMO CM CARLSON OCTOBER 21ST.DOCX"
+        },
+        {
+          "itemNumber": 64,
+          "itemFileNumber": "E2025-8",
+          "filename": "1-WIRTTEN COMMENTS - E2025-8 CH 2.PDF"
+        },
+        {
+          "itemNumber": 64,
+          "itemFileNumber": "E2025-8",
+          "filename": "2-WIRTTEN COMMENT - E2025-8 CH 2.PDF"
+        },
+        {
+          "itemNumber": 66,
+          "itemFileNumber": "MAM25-18253",
+          "filename": "EARLY WORKS EXHIBIT 9.12.2025.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "VIRGINIA PARK.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "BAYSHORE GANDY.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "W. TYSON AVE @ WESTSHORE BLVD.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "SNS_NORTH ROCKY POINT  - SIGNI MARKING - FINAL PLANS 1.10.25 6.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "W. AZEELE ST.(BEACH PARK).PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "YUKON - 30TH ST. TO 40TH ST.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "WOODLAWN AVE @ HIMES AVE.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "NORTH BOULEVARD PHASE 1.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "SNS_NORTH ROCKY POINT  - SIGNI MARKING - FINAL PLANS 1.10.25 5.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "GOMEZ- COLUMBUS TO TAMPA BAY.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "LINEBAUGH- N12TH ST TO FLORIDA.PDF"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM24-3585",
+          "filename": "E.WATERS- RIVERHILLS TO NEBRASKA.PDF"
+        },
+        {
+          "itemNumber": 73,
+          "itemFileNumber": "CM24-9964",
+          "filename": "CM24-9964 LOWER PEN CAPITAL IMPROVEMENTS PRESENTATION 10.23.25 FINAL.PPTX"
+        }
+      ]
+    }
+  ]
+}

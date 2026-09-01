@@ -1,6 +1,7 @@
 {
   "meetingId": "2592",
   "meetingType": "workshop",
+  "meetingName": "City Council Workshop",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "February 26, 2026",
@@ -25,15 +26,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 2,
@@ -46,15 +41,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 3,
@@ -82,21 +71,15 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 4,
       "agendaItemId": "21477",
-      "title": "File No. CM26-21477\nA discussion regarding the inclusion of a text amendment in the January 2026 Amendment Cycle a revision to the land development code to consider allowing a portion of the permitted electronic message sign dwell time to be activated not to exceed 15 seconds per message cycle -- limited to properties with principal use of an area, stadium or civic event venue. (Original motion initiated by Viera-Mansicalco on February 5, 2026)\n\nMemorandum from Morris Massey, Deputy City Attorney, transmitting a written report for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CM26-21477\nA discussion regarding the inclusion of a text amendment in the January 2026 Amendment Cycle a revision to the land development code to consider allowing a portion of the permitted electronic message sign dwell time to be activated not to exceed 15 seconds per message cycle -- limited to properties with principal use of an area, stadium or civic event venue. (Original motion initiated by Viera-Mansicalco on February 5, 2026)\n\nMemorandum from Morris Massey, Deputy City Attorney, transmitting a written report for said agenda item. (To be R/F)",
+      "title": "File No. CM26-21477\nA discussion regarding the inclusion of a text amendment in the January 2026 Amendment Cycle a revision to the land development code to consider allowing a portion of the permitted electronic message sign dwell time to be activated not to exceed 15 seconds per message cycle -- limited to properties with principal use of an area, stadium or civic event venue. (Original motion initiated by Viera-Mansicalco on February 5, 2026)\nMemorandum from Morris Massey, Deputy City Attorney, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM26-21477\nA discussion regarding the inclusion of a text amendment in the January 2026 Amendment Cycle a revision to the land development code to consider allowing a portion of the permitted electronic message sign dwell time to be activated not to exceed 15 seconds per message cycle -- limited to properties with principal use of an area, stadium or civic event venue. (Original motion initiated by Viera-Mansicalco on February 5, 2026)\nMemorandum from Morris Massey, Deputy City Attorney, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CM26-21477",
       "background": "",
       "supportingDocuments": [
@@ -111,15 +94,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 5,
@@ -147,15 +124,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 6,
@@ -168,15 +139,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 7,
@@ -189,21 +154,15 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     },
     {
       "number": 8,
       "agendaItemId": "18954",
-      "title": "File No. CM25-18954\nLegal to provide a written report of a list of currently approved and active digital signs allowed downtown, copies of the contract or approval documents and a description of who and how they were signed. (Original motion initiated by Carlson-Hurtak on October 30, 2025)\n\nMemorandum from Morris Massey, Deputy City Attorney and Susan Johnson-Velez, Senior Assistant City Attorney, transmitting a written report for said agenda item. (To be R/F)",
-      "rawTitle": "File No. CM25-18954\nLegal to provide a written report of a list of currently approved and active digital signs allowed downtown, copies of the contract or approval documents and a description of who and how they were signed. (Original motion initiated by Carlson-Hurtak on October 30, 2025)\n\nMemorandum from Morris Massey, Deputy City Attorney and Susan Johnson-Velez, Senior Assistant City Attorney, transmitting a written report for said agenda item. (To be R/F)",
+      "title": "File No. CM25-18954\nLegal to provide a written report of a list of currently approved and active digital signs allowed downtown, copies of the contract or approval documents and a description of who and how they were signed. (Original motion initiated by Carlson-Hurtak on October 30, 2025)\nMemorandum from Morris Massey, Deputy City Attorney and Susan Johnson-Velez, Senior Assistant City Attorney, transmitting a written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM25-18954\nLegal to provide a written report of a list of currently approved and active digital signs allowed downtown, copies of the contract or approval documents and a description of who and how they were signed. (Original motion initiated by Carlson-Hurtak on October 30, 2025)\nMemorandum from Morris Massey, Deputy City Attorney and Susan Johnson-Velez, Senior Assistant City Attorney, transmitting a written report for said agenda item. (To be R/F)",
       "fileNumber": "CM25-18954",
       "background": "",
       "supportingDocuments": [
@@ -218,15 +177,9 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
-      }
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
     }
   ],
   "formattedDate": "2026-02-26"

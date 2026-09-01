@@ -1,0 +1,118 @@
+{
+  "meetingId": "2616",
+  "meetingDate": "2025-08-21",
+  "firstSeenAt": "2026-09-01T21:05:37.971Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:03:11.573Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "REZ-25-40",
+          "filename": "REZ25-40 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-25-42",
+          "filename": "REZ25-42 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-25-49",
+          "filename": "REZ25-49 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-25-49",
+          "filename": "1-WRITTEN COMMENTS - REZ-25-49.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-53",
+          "filename": "2-WRITTEN COMMENT REZ-25-53.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-53",
+          "filename": "3-WRITTEN COMMENT REZ-25-53.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-53",
+          "filename": "REZ25-53 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-53",
+          "filename": "4-WRITTEN COMMENT REZ-25-53.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-25-63",
+          "filename": "REZ25-63 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-66",
+          "filename": "REZ25-66 - ORDINANCE (003).PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-25-67",
+          "filename": "REZ25-67 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-68",
+          "filename": "2-WRITTEN COMMENT REZ-25-68.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-68",
+          "filename": "REZ25-68 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-68",
+          "filename": "3-WRITTEN COMMENT REZ-25-68.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-69",
+          "filename": "REZ-25-69 CERTIFIED APP FINAL_VERSION2.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-69",
+          "filename": "REZ25-69 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "REZ-25-79",
+          "filename": "REZ-25-79 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "REZ-25-79",
+          "filename": "REZ25-79 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "REZ-24-68",
+          "filename": "3-WRITTEN COMMENT REZ-24-68.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "REZ-24-68",
+          "filename": "TAREPORTZ24-68_REVISED 082125.PDF"
+        }
+      ]
+    }
+  ]
+}

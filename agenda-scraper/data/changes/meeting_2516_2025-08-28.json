@@ -1,0 +1,33 @@
+{
+  "meetingId": "2516",
+  "meetingDate": "2025-08-28",
+  "firstSeenAt": "2026-09-01T20:46:33.312Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T20:38:38.223Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 57,
+          "itemFileNumber": "AB2-25-11",
+          "filename": "AB2-25-11 - SUBSTITUTE ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 66,
+          "itemFileNumber": "E2025-8",
+          "filename": "MEMO RE SUBSTITUTE ORD. REV. TO CHP. 9 CITY OF TAMPA CODE - AUGUST 28 REGULAR CITY COUNCIL - FILE NO. E2025-8 (ITEM NO. 66).PDF"
+        },
+        {
+          "itemNumber": 73,
+          "itemFileNumber": "MAM25-16846",
+          "filename": "2025-174 BT AL HILLSBOROUGH COUNTY TRAFFIC IMPROVEMENT AGREEMENT.PDF"
+        }
+      ]
+    }
+  ]
+}

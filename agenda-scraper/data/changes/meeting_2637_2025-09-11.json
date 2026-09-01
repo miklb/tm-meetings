@@ -1,0 +1,16 @@
+{
+  "meetingId": "2637",
+  "meetingDate": "2025-09-11",
+  "firstSeenAt": "2026-09-01T21:07:33.672Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:07:07.596Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": []
+    }
+  ]
+}

@@ -1,52 +1,86 @@
 {
   "meetingId": "2630",
-  "meetingType": "Council Evening",
+  "meetingType": "evening",
+  "meetingName": "City Council Budget Evening Session",
+  "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "September 3, 2025",
-  "formattedDate": "2025-09-03",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2630&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2630&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
       "agendaItemId": "16865",
-      "fileNumber": "B2026-2First public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 16, 2025 at 5:01 p.m.) (Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; Providing an effective date.",
-      "title": "File No. B2026-2First public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 16, 2025 at 5:01 p.m.) (Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; Providing an effective date.",
-      "rawTitle": "File No. B2026-2First public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 16, 2025 at 5:01 p.m.) (Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; Providing an effective date.",
-      "background": "",
-      "supportingDocuments": [],
-      "dollarAmounts": [],
-      "processingError": "Wait timed out after 20065ms"
+      "title": "File No. B2026-2\nFirst public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 16, 2025 at 5:01 p.m.)\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; Providing an effective date.",
+      "rawTitle": "File No. B2026-2\nFirst public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 16, 2025 at 5:01 p.m.)\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; Providing an effective date.",
+      "fileNumber": "B2026-2",
+      "background": "This ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements set forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.\n\nIt should be noted that the property tax yield of $380,255,500 represents 95% of taxable value as required under F.S. 200.065(2).",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2630&itemId=16865&publishId=142334&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-03/meeting-2630/16865/summary-sheet-cover-sheet.pdf"
+        },
+        {
+          "title": "FY2026 BUDGET ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2026%20BUDGET%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2630&itemId=16865&publishId=142335&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2026 BUDGET ORDINANCE.PDF in a new tab",
+          "originalText": "FY2026 BUDGET ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-03/meeting-2630/16865/fy2026-budget-ordinance.pdf"
+        },
+        {
+          "title": "FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2026%20RECOMMENDED%20BUDGET%20SUPPLEMENT.PDF.pdf?documentType=1&meetingId=2630&itemId=16865&publishId=142336&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF in a new tab",
+          "originalText": "FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-03/meeting-2630/16865/fy2026-recommended-budget-supplement.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Evening\nSubmittal Date:                        8/14/2025\nRequested Meeting Date: 9/03/2025\nType of Request:                                                  Council Ordinance\nContactGiannina Carballa 813-274-8087\nSubjectAn ordinance adopting the budget of the City of Tampa for the fiscal year \nbeginning October 1, 2025 and ending September 30, 2026; Providing for the \nlevy as provided by law of a tax on all taxable property in the City of Tampa \nand fixing the millage.\nResolution / \nOrdinance \nTitle\nAn ordinance adopting the budget of the City of Tampa for the fiscal year \nbeginning October 1, 2025 and ending September 30, 2026; Providing for the \nlevy as provided by law of a tax on all taxable property in the City of Tampa \nand fixing the millage within said City; Making appropriations in accordance \nwith the provisions of said budget; Authorizing and directing the Mayor and \nCity Clerk, as the proper authorities of the City of Tampa to certify to the \nProperty Appraiser of Hillsborough County, Florida, the millage to be levied for \nall purposes for the Fiscal Year 2026, in the City of Tampa; Providing an \neffective date.\nBACKGROUND:\nThis ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements \nset forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.  \nIt should be noted that the property tax yield of $380,255,500 represents 95% of taxable \nvalue as required under F.S. 200.065(2).\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements \nset forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.  \nIt should be noted that the property tax yield of $380,255,500 represents 95% of taxable \nvalue as required under F.S. 200.065(2).\nPROJECTED COSTS: 01100 220900 311100 $380,255,500 (Revenue) General Fund – Non \nDepartmental Admin – Property Tax Current Ad Valorem\nApproverTimestampRole\nGiannina Carballa8/21/2025 11:19:12 AMSubmitter\nTy Hawthorne8/21/2025 11:41:48 AMDepartment Head\nAstonah Turner8/21/2025 11:50:38 AMAttorney Coordinator\nJustin Vaske8/21/2025 1:52:55 PMAssistant City Attorney\nCate Wells8/22/2025 9:21:01 AMCity Attorney\nAndy Waitman8/22/2025 10:21:30 AMFinance Coordinator\nGiannina Carballa8/22/2025 11:13:31 AMFinance Fiscal and Lead Analyst\n\nTy Hawthorne8/22/2025 11:24:33 AMBudget Operating Manager\nMichael Perry8/22/2025 11:51:02 AMBudget Officer\nDennis Rogero8/26/2025 9:01:13 AMChief Financial Officer\nJOHN BENNETT8/26/2025 4:04:05 PMChief of Staff\nJANE CASTOR8/26/2025 7:15:40 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements set forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances. It should be noted that the property tax yield of $380,255,500 represents 95% of taxable value as required under F.S. 200.065(2).",
+        "projectedCostsRaw": "01100 220900 311100 $380,255,500 (Revenue) General Fund – Non \nDepartmental Admin – Property Tax Current Ad Valorem",
+        "rows": [
+          {
+            "accountCode": "01100.220900.311100",
+            "fund": "01100",
+            "department": "220900",
+            "object": "311100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$380,255,500",
+            "value": 380255500,
+            "type": "revenue",
+            "signedValue": -380255500,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund – Non Departmental Admin – Property Tax Current Ad Valorem"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 2)"
     },
     {
       "number": 2,
       "agendaItemId": "17079",
+      "title": "File No. B2026-2\nPublic hearing regarding the Capital Improvement Budget, Fiscal Year 2026.",
+      "rawTitle": "File No. B2026-2\nPublic hearing regarding the Capital Improvement Budget, Fiscal Year 2026.",
       "fileNumber": "B2026-2",
-      "title": "File No. B2026-2\nFirst public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 16, 2025 at 5:01 p.m.)\n\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; Providing an effective date.",
-      "rawTitle": "File No. B2026-2\nFirst public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 16, 2025 at 5:01 p.m.)\n\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; Providing an effective date.",
-      "background": "This ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements set forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.\n\nIt should be noted that the property tax yield of $380,255,500 represents 95% of taxable value as required under F.S. 200.065(2).",
-      "supportingDocuments": [
-        {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2630&itemId=16865&publishId=140346&isSection=False&isAttachment=True",
-          "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-03/meeting-2630/17079/summary-sheet-cover-sheet.pdf"
-        },
-        {
-          "title": "Fy2026 Budget Ordinance.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY2026%20BUDGET%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2630&itemId=16865&publishId=140347&isSection=False&isAttachment=True",
-          "originalText": "FY2026 BUDGET ORDINANCE.PDF",
-          "originalTitle": "Download FY2026 BUDGET ORDINANCE.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-03/meeting-2630/17079/fy2026-budget-ordinance.pdf"
-        },
-        {
-          "title": "Fy2026 Recommended Budget Supplement.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY2026%20RECOMMENDED%20BUDGET%20SUPPLEMENT.PDF.pdf?documentType=1&meetingId=2630&itemId=16865&publishId=140348&isSection=False&isAttachment=True",
-          "originalText": "FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF",
-          "originalTitle": "Download FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-03/meeting-2630/17079/fy2026-recommended-budget-supplement.pdf"
-        }
-      ],
-      "dollarAmounts": []
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 2)"
     }
-  ]
+  ],
+  "formattedDate": "2025-09-03"
 }

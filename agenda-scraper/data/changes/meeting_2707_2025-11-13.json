@@ -1,0 +1,133 @@
+{
+  "meetingId": "2707",
+  "meetingDate": "2025-11-13",
+  "firstSeenAt": "2026-09-01T21:50:57.266Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:48:42.030Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA",
+          "filename": "1-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA",
+          "filename": "2-WRITTEN COMMENTS - TACPA 24-11.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "VAC-25-0000008",
+          "filename": "1-WRITTEN COMMENTS - VAC 25-08.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "VAC-25-0000008",
+          "filename": "2-WRITTEN COMMENTS - VAC 25-08.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-25-45",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-45.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-25-45",
+          "filename": "REZ25-45 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-48",
+          "filename": "1-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-48",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-48.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-48",
+          "filename": "REZ25-48 - PA ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-48",
+          "filename": "2-WRITTEN COMMENTS - REZ-25-48.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-25-89",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-89.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-25-89",
+          "filename": "REZ25-89 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-92",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-92.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-92",
+          "filename": "REZ25-92 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-25-98",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-98.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-25-98",
+          "filename": "REZ25-98 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-108",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-108.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-108",
+          "filename": "REZ25-108 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-112",
+          "filename": "1-WRITTEN COMMENTS - REZ-25-112.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-112",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-112.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-112",
+          "filename": "REZ25-112 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-112",
+          "filename": "2-WRITTEN COMMENTS - REZ-25-112.PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "REZ-25-24",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - REZ25-24.PDF"
+        }
+      ]
+    }
+  ]
+}

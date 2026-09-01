@@ -1,0 +1,168 @@
+{
+  "meetingId": "2703",
+  "meetingDate": "2025-10-30",
+  "firstSeenAt": "2026-09-01T21:44:14.910Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:42:36.129Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CIP-CIS",
+          "filename": "ORDINANCE 2025_CIP_CIS.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CIP-CIS",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM -CIP-CIS.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-09",
+          "filename": "CPA25-09 - ORDINANCE 1.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-09",
+          "filename": "CPA25-09 PC BRIEFING.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-09",
+          "filename": "CPA25-09 PC RESOLUTION.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-09",
+          "filename": "CPA25-09 PC STAFF REPORT.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "TA/CPA25-09",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM -CPA25-09.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-10",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM -CPA25-10.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-10",
+          "filename": "CPA25-10 PC BRIEFING.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-10",
+          "filename": "CPA25-10 PC RESOLUTION.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-10",
+          "filename": "CPA25-10 PC STAFF REPORT.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA25-10",
+          "filename": "CPA25-10 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-06",
+          "filename": "CPA25-06 PC BRIEFING.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-06",
+          "filename": "CPA25-06 PC RESOLUTION.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA25-06",
+          "filename": "CPA25-06 PC STAFF REPORT.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "AB2-25-15",
+          "filename": "AB2-25-15 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "AB2-25-15",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - AB2-25-15.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-25-20",
+          "filename": "1-WRITTEN COMMENTS AB2-25-20.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-25-20",
+          "filename": "AB2-25-20 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-25-20",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - AB2-25-20.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-25-20",
+          "filename": "2-WRITTEN COMMENT AB2-25-20.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-25-20",
+          "filename": "3-WRITTEN COMMENTS AB2-25-20.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-25-20",
+          "filename": "4-WRITTEN COMMENTS AB2-25-20.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "AB2-25-20",
+          "filename": "5-WRITTEN COMMENTS AB2-25-20.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-25-21",
+          "filename": "AB2-25-21 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-25-21",
+          "filename": "BUSINESS IMPACT ESTIMATE FORM - AB2-25-21.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-25-21",
+          "filename": "1-WRITTEN COMMENT AB2-25-21.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-25-21",
+          "filename": "2-WRITTEN COMMENT AB2-25-21.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-25-21",
+          "filename": "3-WRITTEN COMMENT AB2-25-21.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "AB2-25-21",
+          "filename": "4-WRITTEN COMMENTS AB2-25-21.PDF"
+        }
+      ]
+    }
+  ]
+}

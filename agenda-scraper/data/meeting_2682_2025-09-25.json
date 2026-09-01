@@ -1,360 +1,780 @@
 {
   "meetingId": "2682",
-  "meetingType": "Council Evening",
+  "meetingType": "evening",
+  "meetingName": "City Council Evening",
+  "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "September 25, 2025",
-  "formattedDate": "2025-09-25",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2682&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2682&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
       "agendaItemId": "17820",
+      "title": "File No. TA/CPA24-18\nPublic hearing on a privately initiated map amendment for property located at 84 Davis Boulevard, from Residential-50 (R-50) to Community Mixed Use-35 (CMU-35).\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to January 15, 2026. (To be R/F)",
+      "rawTitle": "File No. TA/CPA24-18\nPublic hearing on a privately initiated map amendment for property located at 84 Davis Boulevard, from Residential-50 (R-50) to Community Mixed Use-35 (CMU-35).\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to January 15, 2026. (To be R/F)",
       "fileNumber": "TA/CPA24-18",
-      "title": "File No. TA/CPA24-18\nPublic hearing on a privately initiated map amendment for property located at 84 Davis Boulevard, from Residential-50 (R-50) to Community Mixed Use-35 (CMU-35).\n\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to January 15, 2026. (To be R/F)",
-      "rawTitle": "File No. TA/CPA24-18\nPublic hearing on a privately initiated map amendment for property located at 84 Davis Boulevard, from Residential-50 (R-50) to Community Mixed Use-35 (CMU-35).\n\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to January 15, 2026. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=145446&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=146106&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/17820/tcc-transmittal-letter_09252025.pdf"
         },
         {
-          "title": "Ta Cpa 24-18 Tcc Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-18%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=145447&isSection=False&isAttachment=True",
+          "title": "TA CPA 24-18 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-18%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=146107&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 24-18 TCC PACKET.PDF in a new tab",
           "originalText": "TA CPA 24-18 TCC PACKET.PDF",
-          "originalTitle": "Download TA CPA 24-18 TCC PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/17820/ta-cpa-24-18-tcc-packet.pdf"
         },
         {
-          "title": "Ta Cpa 24-18 Legal Description.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-18%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=145448&isSection=False&isAttachment=True",
+          "title": "TA CPA 24-18 LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-18%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=146108&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 24-18 LEGAL DESCRIPTION.DOCX in a new tab",
           "originalText": "TA CPA 24-18 LEGAL DESCRIPTION.DOCX",
-          "originalTitle": "Download TA CPA 24-18 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/17820/ta-cpa-24-18-legal-description.docx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/17820/ta-cpa-24-18-legal-description.pdf"
         },
         {
-          "title": "Continuance Request_ Ta_Cpa 24-18.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CONTINUANCE%20REQUEST_%20TA_CPA%2024-18.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=145449&isSection=False&isAttachment=True",
+          "title": "CONTINUANCE REQUEST_ TA_CPA 24-18.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CONTINUANCE%20REQUEST_%20TA_CPA%2024-18.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=146109&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CONTINUANCE REQUEST_ TA_CPA 24-18.PDF in a new tab",
           "originalText": "CONTINUANCE REQUEST_ TA_CPA 24-18.PDF",
-          "originalTitle": "Download CONTINUANCE REQUEST_ TA_CPA 24-18.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/17820/continuance-request_-ta_cpa-24-18.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENT TA CPA 24-18.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20TA%20CPA%2024-18.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=146110&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENT TA CPA 24-18.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENT TA CPA 24-18.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/17820/1-written-comment-ta-cpa-24-18.pdf"
+        },
+        {
+          "title": "2-WRITTEN COMMENT TA CPA 24-18.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENT%20TA%20CPA%2024-18.PDF.pdf?documentType=1&meetingId=2682&itemId=17820&publishId=146111&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2-WRITTEN COMMENT TA CPA 24-18.PDF in a new tab",
+          "originalText": "2-WRITTEN COMMENT TA CPA 24-18.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/17820/2-written-comment-ta-cpa-24-18.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [
+        "194880.0000"
+      ],
+      "location": "84 Davis Boulevard",
+      "coordinates": {
+        "lat": 27.931745,
+        "lng": -82.457015
+      },
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 7)"
     },
     {
       "number": 2,
       "agendaItemId": "16901",
+      "title": "File No. TA/CPA25-03\nPublic Hearing on a privately initiated request for a text amendment to the Future Land Use Section to offer an additional bonus for projects located within the Channel District CRA boundaries as of January 1, 2025.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use section, to offer an additional bonus for projects located within the Channel District Community Redevelopment Area (CRA) boundaries as of January 1, 2025; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA25-03\nPublic Hearing on a privately initiated request for a text amendment to the Future Land Use Section to offer an additional bonus for projects located within the Channel District CRA boundaries as of January 1, 2025.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use section, to offer an additional bonus for projects located within the Channel District Community Redevelopment Area (CRA) boundaries as of January 1, 2025; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
       "fileNumber": "TA/CPA25-03",
-      "title": "File No. TA/CPA25-03\nPublic Hearing on a publicly initiated request for a text amendment to the Future Land Use Section to offer an additional bonus for projects located within the Channel District CRA boundaries as of January 1, 2025.",
-      "rawTitle": "File No. TA/CPA25-03\nPublic Hearing on a publicly initiated request for a text amendment to the Future Land Use Section to offer an additional bonus for projects located within the Channel District CRA boundaries as of January 1, 2025.",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ta Cpa25-03 Tampa 25-01esr FDOT.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20TAMPA%2025-01ESR%20FDOT.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=145450&isSection=False&isAttachment=True",
+          "title": "TA CPA25-03 TAMPA 25-01ESR FDOT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20TAMPA%2025-01ESR%20FDOT.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146112&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA25-03 TAMPA 25-01ESR FDOT.PDF in a new tab",
           "originalText": "TA CPA25-03 TAMPA 25-01ESR FDOT.PDF",
-          "originalTitle": "Download TA CPA25-03 TAMPA 25-01ESR FDOT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/ta-cpa25-03-tampa-25-01esr-fdot.pdf"
         },
         {
-          "title": "Ta Cpa25-03 Tampa 25-01esr Dep.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20TAMPA%2025-01ESR%20DEP.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=145451&isSection=False&isAttachment=True",
+          "title": "TA CPA25-03 TAMPA 25-01ESR DEP.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20TAMPA%2025-01ESR%20DEP.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146113&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA25-03 TAMPA 25-01ESR DEP.PDF in a new tab",
           "originalText": "TA CPA25-03 TAMPA 25-01ESR DEP.PDF",
-          "originalTitle": "Download TA CPA25-03 TAMPA 25-01ESR DEP.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/ta-cpa25-03-tampa-25-01esr-dep.pdf"
         },
         {
-          "title": "Ta Cpa25-03 Tampa 25-01esr Ack Letter.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20TAMPA%2025-01ESR%20ACK%20LETTER.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=145452&isSection=False&isAttachment=True",
+          "title": "TA CPA25-03 TAMPA 25-01ESR ACK LETTER.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20TAMPA%2025-01ESR%20ACK%20LETTER.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146114&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA25-03 TAMPA 25-01ESR ACK LETTER.PDF in a new tab",
           "originalText": "TA CPA25-03 TAMPA 25-01ESR ACK LETTER.PDF",
-          "originalTitle": "Download TA CPA25-03 TAMPA 25-01ESR ACK LETTER.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/ta-cpa25-03-tampa-25-01esr-ack-letter.pdf"
         },
         {
-          "title": "Ta Cpa25-03 Floridadoc Transmittal Package_Ta Cpa 25-03.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20FLORIDADOC%20TRANSMITTAL%20PACKAGE_TA%20CPA%2025-03.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=145453&isSection=False&isAttachment=True",
+          "title": "TA CPA25-03 FLORIDADOC TRANSMITTAL PACKAGE_TA CPA 25-03.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20FLORIDADOC%20TRANSMITTAL%20PACKAGE_TA%20CPA%2025-03.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146115&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA25-03 FLORIDADOC TRANSMITTAL PACKAGE_TA CPA 25-03.PDF in a new tab",
           "originalText": "TA CPA25-03 FLORIDADOC TRANSMITTAL PACKAGE_TA CPA 25-03.PDF",
-          "originalTitle": "Download TA CPA25-03 FLORIDADOC TRANSMITTAL PACKAGE_TA CPA 25-03.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/ta-cpa25-03-floridadoc-transmittal-package_ta-cpa-25-03.pdf"
         },
         {
-          "title": "Ta Cpa25-03 Cty. Tampa 25-01esr (p) (1).PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20CTY.%20TAMPA%2025-01ESR%20(P)%20(1).PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=145454&isSection=False&isAttachment=True",
+          "title": "TA CPA25-03 CTY. TAMPA 25-01ESR (P) (1).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA25-03%20CTY.%20TAMPA%2025-01ESR%20(P)%20(1).PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146116&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA25-03 CTY. TAMPA 25-01ESR (P) (1).PDF in a new tab",
           "originalText": "TA CPA25-03 CTY. TAMPA 25-01ESR (P) (1).PDF",
-          "originalTitle": "Download TA CPA25-03 CTY. TAMPA 25-01ESR (P) (1).PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/ta-cpa25-03-cty.-tampa-25-01esr-p-1.pdf"
         },
         {
-          "title": "Ta Cpa 25-03 Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-03%20TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=145455&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-03 TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-03%20TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146117&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-03 TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TA CPA 25-03 TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TA CPA 25-03 TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/ta-cpa-25-03-tcc-transmittal-letter_09252025.pdf"
         },
         {
-          "title": "Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=145456&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146118&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/tcc-transmittal-letter_09252025.pdf"
+        },
+        {
+          "title": "CPA25-03 ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-03%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146119&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-03 ORDINANCE.PDF in a new tab",
+          "originalText": "CPA25-03 ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/cpa25-03-ordinance.pdf"
+        },
+        {
+          "title": "CPA25-03 PC BRIEFING 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-03%20PC%20BRIEFING%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146120&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-03 PC BRIEFING 1.PDF in a new tab",
+          "originalText": "CPA25-03 PC BRIEFING 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/cpa25-03-pc-briefing-1.pdf"
+        },
+        {
+          "title": "CPA25-03 PC RESOLUTION 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-03%20PC%20RESOLUTION%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146121&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-03 PC RESOLUTION 1.PDF in a new tab",
+          "originalText": "CPA25-03 PC RESOLUTION 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/cpa25-03-pc-resolution-1.pdf"
+        },
+        {
+          "title": "CPA25-03 PC STAFF REPORT 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-03%20PC%20STAFF%20REPORT%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146122&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-03 PC STAFF REPORT 1.PDF in a new tab",
+          "originalText": "CPA25-03 PC STAFF REPORT 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/cpa25-03-pc-staff-report-1.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENT TA CPA 25-03.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20TA%20CPA%2025-03.PDF.pdf?documentType=1&meetingId=2682&itemId=16901&publishId=146123&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENT TA CPA 25-03.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENT TA CPA 25-03.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16901/1-written-comment-ta-cpa-25-03.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 7)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     },
     {
       "number": 3,
       "agendaItemId": "16902",
+      "title": "File No. TA/CPA25-05\nPublic Hearing on a privately initiated map amendment for property located at 1300 East Harbor Street and Channelside Drive, assigning Public/Semi-Public Future Land Use Designation.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 1300 East Harbor Street and Channelside Drive, assigning public/semi-public (P/SP) future land use designation; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA25-05\nPublic Hearing on a privately initiated map amendment for property located at 1300 East Harbor Street and Channelside Drive, assigning Public/Semi-Public Future Land Use Designation.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 1300 East Harbor Street and Channelside Drive, assigning public/semi-public (P/SP) future land use designation; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
       "fileNumber": "TA/CPA25-05",
-      "title": "File No. TA/CPA25-05\nPublic Hearing on a privately initiated map amendment for property located at 1300 East Harbor Street and Channelside Drive, assigning Public/Semi-Public Future Land Use Designation.",
-      "rawTitle": "File No. TA/CPA25-05\nPublic Hearing on a privately initiated map amendment for property located at 1300 East Harbor Street and Channelside Drive, assigning Public/Semi-Public Future Land Use Designation.",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ta Cpa 25-05 Tcc Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-05%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=145457&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-05 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-05%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=146124&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-05 TCC PACKET.PDF in a new tab",
           "originalText": "TA CPA 25-05 TCC PACKET.PDF",
-          "originalTitle": "Download TA CPA 25-05 TCC PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/ta-cpa-25-05-tcc-packet.pdf"
         },
         {
-          "title": "Ta Cpa 25-05 Legal Description.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-05%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=145458&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-05 LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-05%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=146125&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-05 LEGAL DESCRIPTION.DOCX in a new tab",
           "originalText": "TA CPA 25-05 LEGAL DESCRIPTION.DOCX",
-          "originalTitle": "Download TA CPA 25-05 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/ta-cpa-25-05-legal-description.docx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/ta-cpa-25-05-legal-description.pdf"
         },
         {
-          "title": "Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=145459&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=146126&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/tcc-transmittal-letter_09252025.pdf"
+        },
+        {
+          "title": "CPA25-05 - ORDINANCE 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-05%20-%20ORDINANCE%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=146127&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-05 - ORDINANCE 1.PDF in a new tab",
+          "originalText": "CPA25-05 - ORDINANCE 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/cpa25-05-ordinance-1.pdf"
+        },
+        {
+          "title": "CPA25-05 PC BRIEFING 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-05%20PC%20BRIEFING%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=146128&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-05 PC BRIEFING 1.PDF in a new tab",
+          "originalText": "CPA25-05 PC BRIEFING 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/cpa25-05-pc-briefing-1.pdf"
+        },
+        {
+          "title": "CPA25-05 PC RESOLUTION 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-05%20PC%20RESOLUTION%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=146129&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-05 PC RESOLUTION 1.PDF in a new tab",
+          "originalText": "CPA25-05 PC RESOLUTION 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/cpa25-05-pc-resolution-1.pdf"
+        },
+        {
+          "title": "CPA25-05 PC STAFF REPORT 1 (1).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-05%20PC%20STAFF%20REPORT%201%20(1).PDF.pdf?documentType=1&meetingId=2682&itemId=16902&publishId=146130&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-05 PC STAFF REPORT 1 (1).PDF in a new tab",
+          "originalText": "CPA25-05 PC STAFF REPORT 1 (1).PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16902/cpa25-05-pc-staff-report-1-1.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [
+        "189555.5500"
+      ],
+      "location": "1300 Harbor and Channelside Street",
+      "coordinates": {
+        "lat": 28.007003,
+        "lng": -82.393421
+      },
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 7)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     },
     {
       "number": 4,
       "agendaItemId": "16903",
+      "title": "File No. TA/CPA25-07\nPublic Hearing on a privately initiated map amendment for property located at 3714 North 39th Street, from Transitional Use-24 (TU-24) and Light Industrial (LI) to Heavy Industrial (HI).\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 3714 North 39th Street, from Transitional Use-24 (TU-24) and Light Industrial (LI) to Heavy Industrial (HI); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA25-07\nPublic Hearing on a privately initiated map amendment for property located at 3714 North 39th Street, from Transitional Use-24 (TU-24) and Light Industrial (LI) to Heavy Industrial (HI).\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 3714 North 39th Street, from Transitional Use-24 (TU-24) and Light Industrial (LI) to Heavy Industrial (HI); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
       "fileNumber": "TA/CPA25-07",
-      "title": "File No. TA/CPA25-07\nPublic Hearing on a privately initiated map amendment for property located at 3714 North 39th Street, from Transitional Use-24 (TU-24) and Light Industrial (LI) to Heavy Industrial (HI).",
-      "rawTitle": "File No. TA/CPA25-07\nPublic Hearing on a privately initiated map amendment for property located at 3714 North 39th Street, from Transitional Use-24 (TU-24) and Light Industrial (LI) to Heavy Industrial (HI).",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ta Cpa 25-07 Legal Description.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-07%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=145460&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-07 LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-07%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146131&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-07 LEGAL DESCRIPTION.DOCX in a new tab",
           "originalText": "TA CPA 25-07 LEGAL DESCRIPTION.DOCX",
-          "originalTitle": "Download TA CPA 25-07 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/ta-cpa-25-07-legal-description.docx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/ta-cpa-25-07-legal-description.pdf"
         },
         {
-          "title": "Ta Cpa 25-07 Planning Commission Letter to Tcc.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-07%20PLANNING%20COMMISSION%20LETTER%20TO%20TCC.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=145461&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-07 PLANNING COMMISSION LETTER TO TCC.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-07%20PLANNING%20COMMISSION%20LETTER%20TO%20TCC.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146132&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-07 PLANNING COMMISSION LETTER TO TCC.PDF in a new tab",
           "originalText": "TA CPA 25-07 PLANNING COMMISSION LETTER TO TCC.PDF",
-          "originalTitle": "Download TA CPA 25-07 PLANNING COMMISSION LETTER TO TCC.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/ta-cpa-25-07-planning-commission-letter-to-tcc.pdf"
         },
         {
-          "title": "Ta Cpa 25-07 Tcc Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-07%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=145462&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-07 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-07%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146133&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-07 TCC PACKET.PDF in a new tab",
           "originalText": "TA CPA 25-07 TCC PACKET.PDF",
-          "originalTitle": "Download TA CPA 25-07 TCC PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/ta-cpa-25-07-tcc-packet.pdf"
         },
         {
-          "title": "Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=145463&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146134&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/tcc-transmittal-letter_09252025.pdf"
+        },
+        {
+          "title": "CPA25-07 - ORDINANCE 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-07%20-%20ORDINANCE%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146135&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-07 - ORDINANCE 1.PDF in a new tab",
+          "originalText": "CPA25-07 - ORDINANCE 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/cpa25-07-ordinance-1.pdf"
+        },
+        {
+          "title": "CPA25-07 PC BRIEFING 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-07%20PC%20BRIEFING%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146136&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-07 PC BRIEFING 1.PDF in a new tab",
+          "originalText": "CPA25-07 PC BRIEFING 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/cpa25-07-pc-briefing-1.pdf"
+        },
+        {
+          "title": "CPA25-07 PC RESOLUTION 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-07%20PC%20RESOLUTION%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146137&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-07 PC RESOLUTION 1.PDF in a new tab",
+          "originalText": "CPA25-07 PC RESOLUTION 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/cpa25-07-pc-resolution-1.pdf"
+        },
+        {
+          "title": "CPA25-07 PC STAFF REPORT 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-07%20PC%20STAFF%20REPORT%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146138&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-07 PC STAFF REPORT 1.PDF in a new tab",
+          "originalText": "CPA25-07 PC STAFF REPORT 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/cpa25-07-pc-staff-report-1.pdf"
+        },
+        {
+          "title": "CPA 25-07 REQUEST FOR WITHDRAW.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2025-07%20REQUEST%20FOR%20WITHDRAW.PDF.pdf?documentType=1&meetingId=2682&itemId=16903&publishId=146139&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 25-07 REQUEST FOR WITHDRAW.PDF in a new tab",
+          "originalText": "CPA 25-07 REQUEST FOR WITHDRAW.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16903/cpa-25-07-request-for-withdraw.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [
+        "175164.0000"
+      ],
+      "location": "3714 North 39",
+      "coordinates": {
+        "lat": 27.97901,
+        "lng": -82.41562
+      },
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 7)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     },
     {
       "number": 5,
       "agendaItemId": "16904",
+      "title": "File No. TA/CPA25-08\nPublic Hearing on a privately initiated map amendment for property located at 2306 North Boulevard, from Residential-10 (R-10) to Residential-20 (R-20).\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 2306 North Boulevard, from Residential-10 (R-10) to Residential-20 (R-20); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA25-08\nPublic Hearing on a privately initiated map amendment for property located at 2306 North Boulevard, from Residential-10 (R-10) to Residential-20 (R-20).\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 2306 North Boulevard, from Residential-10 (R-10) to Residential-20 (R-20); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
       "fileNumber": "TA/CPA25-08",
-      "title": "File No. TA/CPA25-08\nPublic Hearing on a privately initiated map amendment for property located at 2306 North Boulevard, from Residential-10 (R-10) to Residential-20 (R-20).",
-      "rawTitle": "File No. TA/CPA25-08\nPublic Hearing on a privately initiated map amendment for property located at 2306 North Boulevard, from Residential-10 (R-10) to Residential-20 (R-20).",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=145464&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=146140&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/tcc-transmittal-letter_09252025.pdf"
         },
         {
-          "title": "Ta Cpa 25-08 Tcc Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-08%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=145465&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-08 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-08%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=146141&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-08 TCC PACKET.PDF in a new tab",
           "originalText": "TA CPA 25-08 TCC PACKET.PDF",
-          "originalTitle": "Download TA CPA 25-08 TCC PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/ta-cpa-25-08-tcc-packet.pdf"
         },
         {
-          "title": "Ta Cpa 25-08 Legal Description.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-08%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=145466&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-08 LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-08%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=146142&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-08 LEGAL DESCRIPTION.DOCX in a new tab",
           "originalText": "TA CPA 25-08 LEGAL DESCRIPTION.DOCX",
-          "originalTitle": "Download TA CPA 25-08 LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/ta-cpa-25-08-legal-description.docx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/ta-cpa-25-08-legal-description.pdf"
+        },
+        {
+          "title": "CPA25-08 - ORDINANCE 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-08%20-%20ORDINANCE%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=146143&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-08 - ORDINANCE 1.PDF in a new tab",
+          "originalText": "CPA25-08 - ORDINANCE 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/cpa25-08-ordinance-1.pdf"
+        },
+        {
+          "title": "CPA25-08 PC BRIEFING 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-08%20PC%20BRIEFING%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=146144&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-08 PC BRIEFING 1.PDF in a new tab",
+          "originalText": "CPA25-08 PC BRIEFING 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/cpa25-08-pc-briefing-1.pdf"
+        },
+        {
+          "title": "CPA25-08 PC RESOLUTION 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-08%20PC%20RESOLUTION%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=146145&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-08 PC RESOLUTION 1.PDF in a new tab",
+          "originalText": "CPA25-08 PC RESOLUTION 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/cpa25-08-pc-resolution-1.pdf"
+        },
+        {
+          "title": "CPA25-08 PC STAFF REPORT 1.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-08%20PC%20STAFF%20REPORT%201.PDF.pdf?documentType=1&meetingId=2682&itemId=16904&publishId=146146&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-08 PC STAFF REPORT 1.PDF in a new tab",
+          "originalText": "CPA25-08 PC STAFF REPORT 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16904/cpa25-08-pc-staff-report-1.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [
+        "183385.0000"
+      ],
+      "location": "2306 North Boulevard",
+      "coordinates": {
+        "lat": 27.964621,
+        "lng": -82.467923
+      },
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 7)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     },
     {
       "number": 6,
       "agendaItemId": "16906",
+      "title": "File No. TA/CPA25-10\nPublic Hearing on a privately initiated map amendment for property located at 2602, 2625 and 2801 East 4th Avenue, 2701, 2702 and 2710 East 5th Avenue and Folio Numbers 189483-0005, 189516-0010 and 189508-0100, from Heavy Industrial (HI) to Urban Mixed Use-60 (UMU-60).\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to October 30th, 2025. (To be R/F)",
+      "rawTitle": "File No. TA/CPA25-10\nPublic Hearing on a privately initiated map amendment for property located at 2602, 2625 and 2801 East 4th Avenue, 2701, 2702 and 2710 East 5th Avenue and Folio Numbers 189483-0005, 189516-0010 and 189508-0100, from Heavy Industrial (HI) to Urban Mixed Use-60 (UMU-60).\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to October 30th, 2025. (To be R/F)",
       "fileNumber": "TA/CPA25-10",
-      "title": "File No. TA/CPA25-10\nPublic Hearing on a privately initiated map amendment for property located at 2602, 2625 and 2801 East 4th Avenue, 2701, 2702 and 2710 East 5th Avenue and Folio Numbers 189483-0005, 189516-0010 and 189508-0100, from Heavy Industrial (HI) to Urban Mixed Use-60 (UMU-60).\n\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to October 30th, 2025. (To be R/F)",
-      "rawTitle": "File No. TA/CPA25-10\nPublic Hearing on a privately initiated map amendment for property located at 2602, 2625 and 2801 East 4th Avenue, 2701, 2702 and 2710 East 5th Avenue and Folio Numbers 189483-0005, 189516-0010 and 189508-0100, from Heavy Industrial (HI) to Urban Mixed Use-60 (UMU-60).\n\nEmail from Alex Schaler, applicant's representative, requesting that said public hearing be continued to October 30th, 2025. (To be R/F)",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=145467&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=146147&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16906/tcc-transmittal-letter_09252025.pdf"
         },
         {
-          "title": "Ta Cpa 25-10 Tcc Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=145468&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-10 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=146148&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-10 TCC PACKET.PDF in a new tab",
           "originalText": "TA CPA 25-10 TCC PACKET.PDF",
-          "originalTitle": "Download TA CPA 25-10 TCC PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16906/ta-cpa-25-10-tcc-packet.pdf"
         },
         {
-          "title": "Ta Cpa 25-10 - Legal Descriptions.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20-%20LEGAL%20DESCRIPTIONS.DOCX.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=145469&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-10%20-%20LEGAL%20DESCRIPTIONS.DOCX.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=146149&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX in a new tab",
           "originalText": "TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX",
-          "originalTitle": "Download TA CPA 25-10 - LEGAL DESCRIPTIONS.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16906/ta-cpa-25-10-legal-descriptions.docx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16906/ta-cpa-25-10-legal-descriptions.pdf"
         },
         {
-          "title": "Continuance Request_ Ta_Cpa 25-10.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CONTINUANCE%20REQUEST_%20TA_CPA%2025-10.PDF.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=145470&isSection=False&isAttachment=True",
+          "title": "CONTINUANCE REQUEST_ TA_CPA 25-10.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CONTINUANCE%20REQUEST_%20TA_CPA%2025-10.PDF.pdf?documentType=1&meetingId=2682&itemId=16906&publishId=146150&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CONTINUANCE REQUEST_ TA_CPA 25-10.PDF in a new tab",
           "originalText": "CONTINUANCE REQUEST_ TA_CPA 25-10.PDF",
-          "originalTitle": "Download CONTINUANCE REQUEST_ TA_CPA 25-10.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16906/continuance-request_-ta_cpa-25-10.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [
+        "176067.0000",
+        "189478.0000",
+        "189482.0000",
+        "189483.0000",
+        "189483.0005",
+        "189497.0000",
+        "189498.0000",
+        "189507.0000",
+        "189508.0000",
+        "189508.0100",
+        "189516.0010"
+      ],
+      "location": "2801 East 4",
+      "coordinates": {
+        "lat": 27.95757,
+        "lng": -82.428893
+      },
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 7)"
     },
     {
       "number": 7,
       "agendaItemId": "16905",
+      "title": "File No. TA/CPA25-12\nPublic Hearing on a privately initiated map amendment for property located at 3618 West Euclid Avenue, from Residential-20 (R-20) to Community Mixed Use-35 (CMU-35).\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 3618 West Euclid Avenue, from Residential-20 (R-20) to Community Mixed Use-35 (CMU-35); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA25-12\nPublic Hearing on a privately initiated map amendment for property located at 3618 West Euclid Avenue, from Residential-20 (R-20) to Community Mixed Use-35 (CMU-35).\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, future land use element, future land use map, for the property located at 3618 West Euclid Avenue, from Residential-20 (R-20) to Community Mixed Use-35 (CMU-35); providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
       "fileNumber": "TA/CPA25-12",
-      "title": "File No. TA/CPA25-12\nPublic Hearing on a privately initiated map amendment for property located at 3618 West Euclid Avenue, from Residential-20 (R-20) to Community Mixed Use-35 (CMU-35).",
-      "rawTitle": "File No. TA/CPA25-12\nPublic Hearing on a privately initiated map amendment for property located at 3618 West Euclid Avenue, from Residential-20 (R-20) to Community Mixed Use-35 (CMU-35).",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Tcc Transmittal Letter_09252025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=145471&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL LETTER_09252025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL%20LETTER_09252025.PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=146151&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL LETTER_09252025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL LETTER_09252025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL LETTER_09252025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/tcc-transmittal-letter_09252025.pdf"
         },
         {
-          "title": "Ta Cpa 25-12  Legal Description.DOCX",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-12%20%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=145472&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-12  LEGAL DESCRIPTION.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-12%20%20LEGAL%20DESCRIPTION.DOCX.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=146152&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-12  LEGAL DESCRIPTION.DOCX in a new tab",
           "originalText": "TA CPA 25-12  LEGAL DESCRIPTION.DOCX",
-          "originalTitle": "Download TA CPA 25-12  LEGAL DESCRIPTION.DOCX",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/ta-cpa-25-12-legal-description.docx"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/ta-cpa-25-12-legal-description.pdf"
         },
         {
-          "title": "Ta Cpa 25-12 Tcc Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-12%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=145473&isSection=False&isAttachment=True",
+          "title": "TA CPA 25-12 TCC PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2025-12%20TCC%20PACKET.PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=146153&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 25-12 TCC PACKET.PDF in a new tab",
           "originalText": "TA CPA 25-12 TCC PACKET.PDF",
-          "originalTitle": "Download TA CPA 25-12 TCC PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/ta-cpa-25-12-tcc-packet.pdf"
+        },
+        {
+          "title": "CPA25-12 - ORDINANCE (2).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-12%20-%20ORDINANCE%20(2).PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=146154&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-12 - ORDINANCE (2).PDF in a new tab",
+          "originalText": "CPA25-12 - ORDINANCE (2).PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/cpa25-12-ordinance-2.pdf"
+        },
+        {
+          "title": "CPA25-12 PC BRIEFING.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-12%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=146155&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-12 PC BRIEFING.PDF in a new tab",
+          "originalText": "CPA25-12 PC BRIEFING.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/cpa25-12-pc-briefing.pdf"
+        },
+        {
+          "title": "CPA25-12 PC RESOLUTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-12%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=146156&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-12 PC RESOLUTION.PDF in a new tab",
+          "originalText": "CPA25-12 PC RESOLUTION.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/cpa25-12-pc-resolution.pdf"
+        },
+        {
+          "title": "CPA25-12 PC STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA25-12%20PC%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2682&itemId=16905&publishId=146157&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA25-12 PC STAFF REPORT.PDF in a new tab",
+          "originalText": "CPA25-12 PC STAFF REPORT.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16905/cpa25-12-pc-staff-report.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [
+        "125289.0000"
+      ],
+      "location": "3618 West Euclid Avenue",
+      "coordinates": {
+        "lat": 27.908429,
+        "lng": -82.503788
+      },
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 7)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     },
     {
       "number": 8,
       "agendaItemId": "16992",
+      "title": "File No. AB2-25-06\nPublic Hearing on application of Ybor Pedroso LLC requesting a Special Use 2 for a Small Venue; Beer & Wine (Consumption on Premises Only) generally located at 1616 East 7th Avenue Unit # 1624.\n(Ordinance being presented for first reading consideration) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – small venue (consumption on premises only) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 1616 East 7th Avenue, Unit 1624, (second floor only) Tampa, Florida, as more particularly described in Section 2; providing that all ordinances or parts of ordinances in conflict are repealed; providing an effective date.",
+      "rawTitle": "File No. AB2-25-06\nPublic Hearing on application of Ybor Pedroso LLC requesting a Special Use 2 for a Small Venue; Beer & Wine (Consumption on Premises Only) generally located at 1616 East 7th Avenue Unit # 1624.\n(Ordinance being presented for first reading consideration) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – small venue (consumption on premises only) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 1616 East 7th Avenue, Unit 1624, (second floor only) Tampa, Florida, as more particularly described in Section 2; providing that all ordinances or parts of ordinances in conflict are repealed; providing an effective date.",
       "fileNumber": "AB2-25-06",
-      "title": "File No. AB2-25-06\nPublic Hearing on application of Ybor Pedroso LLC requesting a Special Use 2 for a Small Venue; Beer & Wine (Consumption on Premises Only) generally located at 1616 East 7th Avenue Unit # 1624.",
-      "rawTitle": "File No. AB2-25-06\nPublic Hearing on application of Ybor Pedroso LLC requesting a Special Use 2 for a Small Venue; Beer & Wine (Consumption on Premises Only) generally located at 1616 East 7th Avenue Unit # 1624.",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ab2-25-06 - 1616 E 7th Ave - Certified Application.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-06%20-%201616%20E%207TH%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=145474&isSection=False&isAttachment=True",
+          "title": "AB2-25-06 - 1616 E 7TH AVE - CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-06%20-%201616%20E%207TH%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=146158&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-06 - 1616 E 7TH AVE - CERTIFIED APPLICATION.PDF in a new tab",
           "originalText": "AB2-25-06 - 1616 E 7TH AVE - CERTIFIED APPLICATION.PDF",
-          "originalTitle": "Download AB2-25-06 - 1616 E 7TH AVE - CERTIFIED APPLICATION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16992/ab2-25-06-1616-e-7th-ave-certified-application.pdf"
         },
         {
-          "title": "Ab2-25-6  Affidavit  Sept 25 2025  501pm.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-6%20%20AFFIDAVIT%20%20SEPT%2025%202025%20%20501PM.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=145475&isSection=False&isAttachment=True",
+          "title": "AB2-25-6  AFFIDAVIT  SEPT 25 2025  501PM.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-6%20%20AFFIDAVIT%20%20SEPT%2025%202025%20%20501PM.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=146159&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-6  AFFIDAVIT  SEPT 25 2025  501PM.PDF in a new tab",
           "originalText": "AB2-25-6  AFFIDAVIT  SEPT 25 2025  501PM.PDF",
-          "originalTitle": "Download AB2-25-6  AFFIDAVIT  SEPT 25 2025  501PM.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16992/ab2-25-6-affidavit-sept-25-2025-501pm.pdf"
         },
         {
-          "title": "Ab2-25-06 - Site Plan.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-06%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=145476&isSection=False&isAttachment=True",
+          "title": "AB2-25-06 - SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-06%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=146160&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-06 - SITE PLAN.PDF in a new tab",
           "originalText": "AB2-25-06 - SITE PLAN.PDF",
-          "originalTitle": "Download AB2-25-06 - SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16992/ab2-25-06-site-plan.pdf"
         },
         {
-          "title": "Ab2-25-06 Staff Report.docx.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-06%20STAFF%20REPORT.DOCX.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=145477&isSection=False&isAttachment=True",
+          "title": "AB2-25-06 STAFF REPORT.DOCX.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-06%20STAFF%20REPORT.DOCX.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=146161&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-06 STAFF REPORT.DOCX.PDF in a new tab",
           "originalText": "AB2-25-06 STAFF REPORT.DOCX.PDF",
-          "originalTitle": "Download AB2-25-06 STAFF REPORT.DOCX.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16992/ab2-25-06-staff-report.pdf"
+        },
+        {
+          "title": "AB2-25-06 - ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-06%20-%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2682&itemId=16992&publishId=146162&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-06 - ORDINANCE.PDF in a new tab",
+          "originalText": "AB2-25-06 - ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16992/ab2-25-06-ordinance.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 8 THROUGH 10 )",
+      "staffReport": {
+        "landUseType": "ALCOHOL_BEVERAGE",
+        "currentZoning": "Ybor City Central Commercial Core (YC-1)",
+        "requestedZoning": null,
+        "futureLandUse": "Urban Mixed Use-60",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [
+          "Historic Ybor Neighborhood Civic Association",
+          "Ybor City Management LLC",
+          "David Bailey",
+          "Hyde Park Spanishtown Creek Civic Association",
+          "Bowman Heights"
+        ],
+        "waivers": [],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and Development Coordination finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations due to distance separation waiver requested. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application."
+      }
     },
     {
       "number": 9,
-      "agendaItemId": "16994",
-      "fileNumber": "AB2-25-18",
-      "title": "File No. AB2-25-18\nPublic hearing on application of Fanourios Ferderigos requesting a Special Use 2 for a Small Venue Beer & Wine (Consumption on Premises and Package Sales; Off-Premises Consumption) generally located at 4121 Henderson Boulevard.",
-      "rawTitle": "File No. AB2-25-18\nPublic hearing on application of Fanourios Ferderigos requesting a Special Use 2 for a Small Venue Beer & Wine (Consumption on Premises and Package Sales; Off-Premises Consumption) generally located at 4121 Henderson Boulevard.",
+      "agendaItemId": "16993",
+      "title": "File No. AB2-25-12\nPublic Hearing on application of Ehlers Enterprises LLP requesting a Special Use 2 for a Bar/Lounge/Nightclub Beer, Wine & Liquor (Consumption on Premises Only) generally located at 1625 East 7th Avenue.\nEmail from Stephen Michelini, applicant's representative, requesting that said public hearing be continued to January 29, 2026. (To be R/F)",
+      "rawTitle": "File No. AB2-25-12\nPublic Hearing on application of Ehlers Enterprises LLP requesting a Special Use 2 for a Bar/Lounge/Nightclub Beer, Wine & Liquor (Consumption on Premises Only) generally located at 1625 East 7th Avenue.\nEmail from Stephen Michelini, applicant's representative, requesting that said public hearing be continued to January 29, 2026. (To be R/F)",
+      "fileNumber": "AB2-25-12",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ab2-25-18 - 4121 Henderson Blvd - Certified Application.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-18%20-%204121%20HENDERSON%20BLVD%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=145483&isSection=False&isAttachment=True",
+          "title": "AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-1625%20E%207TH%20AVE%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2682&itemId=16993&publishId=146163&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF in a new tab",
+          "originalText": "AB2-25-12 -1625 E 7TH AVE - CERTIFIED APPLICATION.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16993/ab2-25-12-1625-e-7th-ave-certified-application.pdf"
+        },
+        {
+          "title": "AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20AFFIDAVIT%20%20SEPT%2025%202025%20%20501PM%20(002).PDF.pdf?documentType=1&meetingId=2682&itemId=16993&publishId=146164&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF in a new tab",
+          "originalText": "AB2-25-12 AFFIDAVIT  SEPT 25 2025  501PM (002).PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16993/ab2-25-12-affidavit-sept-25-2025-501pm-002.pdf"
+        },
+        {
+          "title": "(AB2-25-0000012) CONTINUANCE REQUEST.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/(AB2-25-0000012)%20CONTINUANCE%20REQUEST.PDF.pdf?documentType=1&meetingId=2682&itemId=16993&publishId=146165&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of (AB2-25-0000012) CONTINUANCE REQUEST.PDF in a new tab",
+          "originalText": "(AB2-25-0000012) CONTINUANCE REQUEST.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16993/ab2-25-0000012-continuance-request.pdf"
+        },
+        {
+          "title": "AB2-25-12 - SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2682&itemId=16993&publishId=146166&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 - SITE PLAN.PDF in a new tab",
+          "originalText": "AB2-25-12 - SITE PLAN.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16993/ab2-25-12-site-plan.pdf"
+        },
+        {
+          "title": "AB2-25-12 STAFF REPORT.DOCX.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-12%20STAFF%20REPORT.DOCX.PDF.pdf?documentType=1&meetingId=2682&itemId=16993&publishId=146167&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-12 STAFF REPORT.DOCX.PDF in a new tab",
+          "originalText": "AB2-25-12 STAFF REPORT.DOCX.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16993/ab2-25-12-staff-report.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENT AB2-25-12.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20AB2-25-12.PDF.pdf?documentType=1&meetingId=2682&itemId=16993&publishId=146168&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENT AB2-25-12.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENT AB2-25-12.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16993/1-written-comment-ab2-25-12.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 8 THROUGH 10 )",
+      "staffReport": {
+        "landUseType": "ALCOHOL_BEVERAGE",
+        "currentZoning": "Ybor City Central Commercial Core (YC-1)",
+        "requestedZoning": null,
+        "futureLandUse": "Urban Mixed Use-60",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [
+          "Historic Ybor Neighborhood Civic Association, Inc",
+          "Ybor City Management LLC",
+          "David Bailey",
+          "Hyde Park Spanishtown Creek Civic Association",
+          "Bowman Heights"
+        ],
+        "waivers": [],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and Development Coordination finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations due to the distance separation waiver requested. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application."
+      }
+    },
+    {
+      "number": 10,
+      "agendaItemId": "16994",
+      "title": "File No. AB2-25-18\nPublic hearing on application of Fanourios Ferderigos requesting a Special Use 2 for a Small Venue Beer & Wine (Consumption on Premises and Package Sales; Off-Premises Consumption) generally located at 4121 Henderson Boulevard.\n(Ordinance being presented for first reading consideration) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – small venue (consumption on premises and package sales/off-premises consumption) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 4121 Henderson Boulevard, Tampa, Florida, as more particularly described in Section 2; providing that all ordinances or parts of ordinances in conflict are repealed; providing an effective date.",
+      "rawTitle": "File No. AB2-25-18\nPublic hearing on application of Fanourios Ferderigos requesting a Special Use 2 for a Small Venue Beer & Wine (Consumption on Premises and Package Sales; Off-Premises Consumption) generally located at 4121 Henderson Boulevard.\n(Ordinance being presented for first reading consideration) - An ordinance approving a Special Use Permit (SU-2) for alcoholic beverage sales – small venue (consumption on premises and package sales/off-premises consumption) and making lawful the sale of beer and wine at or from that certain lot, plot or tract of land located at 4121 Henderson Boulevard, Tampa, Florida, as more particularly described in Section 2; providing that all ordinances or parts of ordinances in conflict are repealed; providing an effective date.",
+      "fileNumber": "AB2-25-18",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "AB2-25-18 - 4121 HENDERSON BLVD - CERTIFIED APPLICATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-18%20-%204121%20HENDERSON%20BLVD%20-%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=146169&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-18 - 4121 HENDERSON BLVD - CERTIFIED APPLICATION.PDF in a new tab",
           "originalText": "AB2-25-18 - 4121 HENDERSON BLVD - CERTIFIED APPLICATION.PDF",
-          "originalTitle": "Download AB2-25-18 - 4121 HENDERSON BLVD - CERTIFIED APPLICATION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16994/ab2-25-18-4121-henderson-blvd-certified-application.pdf"
         },
         {
-          "title": "Ab2-25-18 Affidavit Sept 25 2025 501pm.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-18%20AFFIDAVIT%20SEPT%2025%202025%20501PM.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=145484&isSection=False&isAttachment=True",
+          "title": "AB2-25-18 AFFIDAVIT SEPT 25 2025 501PM.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-18%20AFFIDAVIT%20SEPT%2025%202025%20501PM.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=146170&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-18 AFFIDAVIT SEPT 25 2025 501PM.PDF in a new tab",
           "originalText": "AB2-25-18 AFFIDAVIT SEPT 25 2025 501PM.PDF",
-          "originalTitle": "Download AB2-25-18 AFFIDAVIT SEPT 25 2025 501PM.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16994/ab2-25-18-affidavit-sept-25-2025-501pm.pdf"
         },
         {
-          "title": "Ab2-25-18 - Site Plan.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-18%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=145485&isSection=False&isAttachment=True",
+          "title": "AB2-25-18 - SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-18%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=146171&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-18 - SITE PLAN.PDF in a new tab",
           "originalText": "AB2-25-18 - SITE PLAN.PDF",
-          "originalTitle": "Download AB2-25-18 - SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16994/ab2-25-18-site-plan.pdf"
         },
         {
-          "title": "Ab2-25-18 Staff Report.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AB2-25-18%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=145486&isSection=False&isAttachment=True",
+          "title": "AB2-25-18 STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-18%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=146172&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-18 STAFF REPORT.PDF in a new tab",
           "originalText": "AB2-25-18 STAFF REPORT.PDF",
-          "originalTitle": "Download AB2-25-18 STAFF REPORT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16994/ab2-25-18-staff-report.pdf"
+        },
+        {
+          "title": "AB2-25-18 - ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-25-18%20-%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2682&itemId=16994&publishId=146173&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AB2-25-18 - ORDINANCE.PDF in a new tab",
+          "originalText": "AB2-25-18 - ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-25/meeting-2682/16994/ab2-25-18-ordinance.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 8 THROUGH 10 )",
+      "staffReport": {
+        "landUseType": "ALCOHOL_BEVERAGE",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": "GENERAL REQUIREMENTS OF CODE/STAFF FINDINGS: Development Coordination Site Plan Modifications: • Revise the site plan to reflect the correct AB2 record number: AB2-25-18. • Update the classification information in the site data table by removing the word “only” from consumption on premises. • Remove the waiver request to reduce the required distance separation from community uses from 500 feet to 411 feet. • Revise the site data table to show the existing use as Vacant Commercial. • Include the Future Land Use Designation: CMU-35 in the site data table. Inconsistent Transportation Consistent"
+      }
     }
-  ]
+  ],
+  "formattedDate": "2025-09-25"
 }

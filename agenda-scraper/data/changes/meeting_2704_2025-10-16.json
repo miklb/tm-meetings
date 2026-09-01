@@ -1,0 +1,161 @@
+{
+  "meetingId": "2704",
+  "meetingDate": "2025-10-16",
+  "firstSeenAt": "2026-09-01T21:47:45.382Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:45:16.909Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [
+        {
+          "agendaItemId": "18390",
+          "number": 2,
+          "fileNumber": "BF25-17961",
+          "shortTitle": "File No. BF25-17961\nFirst public hearing to consider the proposed designation…"
+        },
+        {
+          "agendaItemId": "18391",
+          "number": 3,
+          "fileNumber": "BF25-17962",
+          "shortTitle": "File No. BF25-17962\nFirst public hearing to consider the proposed designation…"
+        }
+      ],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-25-93",
+          "filename": "REZ25-93 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-25-30",
+          "filename": "REZ25-30 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-25-30",
+          "filename": "1-WRITTEN COMMENTS REZ-25-30.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-25-82",
+          "filename": "REZ25-82 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-25-83",
+          "filename": "REZ25-83 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-84",
+          "filename": "REZ25-84 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-84",
+          "filename": "MEMO RE FOR SUBSTITUTION RESOLUTION AND BONUS PROVISION AGMT FOR REZ25-84 - AGENDA ITEM NO. 9 - OCTOBER 17 2025 EVENING COUNCIL AGENDA.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-84",
+          "filename": "REZ-25-84 FINAL SITE PLANS 10.15.25.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-25-84",
+          "filename": "1-WRITTEN COMMENTS REZ-25-84.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-85",
+          "filename": "REZ25-85 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-85",
+          "filename": "1-WRITTEN COMMENT REZ-25-85.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-85",
+          "filename": "2-WRITTEN COMMENT REZ-25-85.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-85",
+          "filename": "3-WRITTEN COMMENTS REZ-25-85.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-25-85",
+          "filename": "4-WRITTEN COMMENT REZ-25-85.PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "REZ-25-95",
+          "filename": "REZ25-95 - ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "REZ-25-101",
+          "filename": "REZ25-101 - ORDINANCE-NO SITE PLAN.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "REZ-25-101",
+          "filename": "1-WRITTEN COMMENTS REZ-25-101.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "REZ-25-101",
+          "filename": "2-WRITTEN COMMENT REZ-25-101.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "REZ-25-101",
+          "filename": "3-WRITTEN COMMENT REZ-25-101.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "REZ-25-101",
+          "filename": "4-WRITTEN COMMENT REZ-25-101.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "REZ-25-20",
+          "filename": "2-WRITTEN COMMENTS REZ-25-20.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "REZ-25-20",
+          "filename": "3-WRITTEN COMMENTS REZ-25-20.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "REZ-25-20",
+          "filename": "4-WRITTEN COMMENTS REZ-25-20.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "REZ-25-20",
+          "filename": "5-WRITTEN COMMENTS REZ-25-20.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "REZ-25-20",
+          "filename": "6-WRITTEN COMMENTS REZ-25-20.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "REZ-25-20",
+          "filename": "7-WRITTEN COMMENTS REZ-25-20.PDF"
+        }
+      ]
+    }
+  ]
+}

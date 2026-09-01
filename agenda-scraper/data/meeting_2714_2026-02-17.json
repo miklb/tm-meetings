@@ -1,6 +1,7 @@
 {
   "meetingId": "2714",
   "meetingType": "evening",
+  "meetingName": "City Council Special Call Evening",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "February 17, 2026",
@@ -214,14 +215,18 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 3)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Hillsborough County City-County Planning Commission. Jurisdictional areas",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
       }
     },
     {
@@ -306,14 +311,18 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 3)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
       }
     },
     {
@@ -398,14 +407,18 @@
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
-      "dollarAmounts": [],
-      "financialDetails": [],
-      "financialTotals": {
-        "expenditures": 0,
-        "decreases": 0,
-        "revenues": 0,
-        "other": 0,
-        "net": 0
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 3)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
       }
     }
   ],

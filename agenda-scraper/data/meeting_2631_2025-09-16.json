@@ -1,193 +1,315 @@
 {
   "meetingId": "2631",
-  "meetingType": "Council Evening",
+  "meetingType": "evening",
+  "meetingName": "City Council Budget Evening Session",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
   "meetingDate": "September 16, 2025",
-  "formattedDate": "2025-09-16",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2631&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2631&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
       "agendaItemId": "17443",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2\nSecond public hearing regarding the Fiscal Year 2026 Budget. (Reading of the second public hearing statement concerning the proposed millage rate.)(First public hearing was held on Wednesday, September 3, 2025 at 5:01 p.m.)",
       "rawTitle": "File No. B2026-2\nSecond public hearing regarding the Fiscal Year 2026 Budget. (Reading of the second public hearing statement concerning the proposed millage rate.)(First public hearing was held on Wednesday, September 3, 2025 at 5:01 p.m.)",
+      "fileNumber": "B2026-2",
       "background": "",
-      "supportingDocuments": [],
-      "dollarAmounts": []
+      "supportingDocuments": [
+        {
+          "title": "DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DEAR%20COUNCIL%20MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX.pdf?documentType=1&meetingId=2631&itemId=17443&publishId=144767&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX in a new tab",
+          "originalText": "DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17443/dear-council-members.2026budget.scottdefraties.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 2,
       "agendaItemId": "17447",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2\nStaff to provide a written or in-person report to specify what part of the funds (1001419, City ADA Improvements) goes to actual disability improvements. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
       "rawTitle": "File No. B2026-2\nStaff to provide a written or in-person report to specify what part of the funds (1001419, City ADA Improvements) goes to actual disability improvements. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
+      "fileNumber": "B2026-2",
       "background": "",
       "supportingDocuments": [],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 3,
       "agendaItemId": "17449",
-      "fileNumber": "B2026-2",
-      "title": "File No. B2026-2\nStaff to provide a written or in-person report to specify what part of the funds (1001419, City ADA Improvements) goes to actual disability improvements. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
-      "rawTitle": "File No. B2026-2\nStaff to provide a written or in-person report to specify what part of the funds (1001419, City ADA Improvements) goes to actual disability improvements. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
+      "title": "File No. CM24-9090\nAdministration to appear on what they intend to put in the fiscal year’s budget for the Sulphur Springs area. (Original motion initiated by Viera-Miranda on September 19, 2024)(Continued from May 1, 2025) (Motion to reschedule from June 26, 2025 to September 4, 2025 initiated by, Viera-Maniscalco, on May 22, 2025)(Continued from September 4, 2025)",
+      "rawTitle": "File No. CM24-9090\nAdministration to appear on what they intend to put in the fiscal year’s budget for the Sulphur Springs area. (Original motion initiated by Viera-Miranda on September 19, 2024)(Continued from May 1, 2025) (Motion to reschedule from June 26, 2025 to September 4, 2025 initiated by, Viera-Maniscalco, on May 22, 2025)(Continued from September 4, 2025)",
+      "fileNumber": "CM24-9090",
       "background": "",
-      "supportingDocuments": [],
-      "dollarAmounts": []
+      "supportingDocuments": [
+        {
+          "title": "CM VIERA MEMO 4-28-25.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CM%20VIERA%20MEMO%204-28-25.PDF.pdf?documentType=1&meetingId=2631&itemId=17449&publishId=144768&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CM VIERA MEMO 4-28-25.PDF in a new tab",
+          "originalText": "CM VIERA MEMO 4-28-25.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17449/cm-viera-memo-4-28-25.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 4,
       "agendaItemId": "17352",
-      "fileNumber": "CM25-17352",
       "title": "File No. CM25-17352\nStaff to provide a presentation on the purposed FY26 Housing Budget. (Original motion initiated by Hurtak-Miranda on September 4, 2025)",
       "rawTitle": "File No. CM25-17352\nStaff to provide a presentation on the purposed FY26 Housing Budget. (Original motion initiated by Hurtak-Miranda on September 4, 2025)",
+      "fileNumber": "CM25-17352",
       "background": "",
       "supportingDocuments": [],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 5,
       "agendaItemId": "17444",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2\nHagar Kopesky, City Council Budget Analyst, to work with Dennis Rogero, Chief Financial Officer, and provide a report to move items to the specific departments, to the extent that items from the non-profit budget could go into other areas, to include but not limited to Returning Citizens, Ybor City Museum, and the NAACP, specifically items that align with the specific goals of the City. (Original motion initiated by Viera-Hurtak on September 3, 2025)",
       "rawTitle": "File No. B2026-2\nHagar Kopesky, City Council Budget Analyst, to work with Dennis Rogero, Chief Financial Officer, and provide a report to move items to the specific departments, to the extent that items from the non-profit budget could go into other areas, to include but not limited to Returning Citizens, Ybor City Museum, and the NAACP, specifically items that align with the specific goals of the City. (Original motion initiated by Viera-Hurtak on September 3, 2025)",
+      "fileNumber": "B2026-2",
       "background": "",
       "supportingDocuments": [],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 6,
       "agendaItemId": "17445",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2\nHagar Kopesky, City Council Budget Analyst, to work with Dennis Rogero, Chief Financial Officer, and report on finding funds for the following: apprenticeship program, Tampa Fire Fighters Museum, the Skills Center, the Portico Housing, and the special needs internship. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
       "rawTitle": "File No. B2026-2\nHagar Kopesky, City Council Budget Analyst, to work with Dennis Rogero, Chief Financial Officer, and report on finding funds for the following: apprenticeship program, Tampa Fire Fighters Museum, the Skills Center, the Portico Housing, and the special needs internship. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
+      "fileNumber": "B2026-2",
       "background": "",
       "supportingDocuments": [],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 7,
       "agendaItemId": "17446",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2\nHagar Kopesky, City Council Budget Analyst, to work with Dennis Rogero, Chief Financial Officer,to provide a report in addition of the apprenticeship program, Tampa Fire Fighters Museum, the Skills Center, the Portico Housing, and the special needs internship, to work on funds to increase the allocation amount by 25 percent up to $1.25 million. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
       "rawTitle": "File No. B2026-2\nHagar Kopesky, City Council Budget Analyst, to work with Dennis Rogero, Chief Financial Officer,to provide a report in addition of the apprenticeship program, Tampa Fire Fighters Museum, the Skills Center, the Portico Housing, and the special needs internship, to work on funds to increase the allocation amount by 25 percent up to $1.25 million. (Original motion initiated by Viera-Maniscalco on September 3, 2025)",
+      "fileNumber": "B2026-2",
       "background": "",
       "supportingDocuments": [],
-      "dollarAmounts": [
-        "$1.25"
-      ]
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 8,
       "agendaItemId": "17017",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2\nResolution levying an Ad Valorem Tax at the rate of six and two thousand, seventy-six ten thousandths (6.2076) mills upon all real and personal taxable property in the City of Tampa for the fiscal year 2026; Authorizing the Mayor and City Clerk, to certify such millage; Providing an effective date.",
       "rawTitle": "File No. B2026-2\nResolution levying an Ad Valorem Tax at the rate of six and two thousand, seventy-six ten thousandths (6.2076) mills upon all real and personal taxable property in the City of Tampa for the fiscal year 2026; Authorizing the Mayor and City Clerk, to certify such millage; Providing an effective date.",
+      "fileNumber": "B2026-2",
       "background": "This is a resolution levying an ad valorem tax of 6.2076 mills upon all real and personal taxable property in the City of Tampa for fiscal year 2026.  This resolution must be approved by the governing body in order to levy millage per F.S. 200.065(2). It should be noted that the property tax yield of $380,255,500 represents 95% of taxable value as required under F.S.\n\n200.065(2).",
       "supportingDocuments": [
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2631&itemId=17017&publishId=143954&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2631&itemId=17017&publishId=144769&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17017/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "Fy2026 Ad Valorem Millage Resolution.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY2026%20AD%20VALOREM%20MILLAGE%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2631&itemId=17017&publishId=143955&isSection=False&isAttachment=True",
+          "title": "FY2026 AD VALOREM MILLAGE RESOLUTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2026%20AD%20VALOREM%20MILLAGE%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2631&itemId=17017&publishId=144770&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2026 AD VALOREM MILLAGE RESOLUTION.PDF in a new tab",
           "originalText": "FY2026 AD VALOREM MILLAGE RESOLUTION.PDF",
-          "originalTitle": "Download FY2026 AD VALOREM MILLAGE RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17017/fy2026-ad-valorem-millage-resolution.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Evening\nSubmittal Date:                        8/26/2025\nRequested Meeting Date: 9/16/2025\nType of Request:                                                  Council Resolution\nContactGiannina Carballa 813-274-8087\nSubjectA Resolution levying an Ad Valorem Tax at the rate of 6.2076 mills upon all \nreal and personal taxable property in the City of Tampa for the fiscal year \n2026; Authorizing the Mayor and City Clerk, to certify such millage.\nResolution / \nOrdinance \nTitle\nA Resolution levying an Ad Valorem Tax at the rate of six and two thousand, \nseventy-six ten thousandths (6.2076) mills upon all real and personal taxable \nproperty in the City of Tampa for the fiscal year 2026; Authorizing the Mayor \nand City Clerk, to certify such millage; Providing an effective date.\nBACKGROUND:\nThis is a resolution levying an ad valorem tax of 6.2076 mills upon all real and personal \ntaxable property in the City of Tampa for fiscal year 2026.  This resolution must be approved \nby the governing body in order to levy millage per F.S. 200.065(2). It should be noted that the \nproperty tax yield of $380,255,500 represents 95% of taxable value as required under F.S. \n200.065(2).\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis is a resolution levying an ad valorem tax of 6.2076 mills upon all real and personal \ntaxable property in the City of Tampa for fiscal year 2026.  This resolution must be approved \nby the governing body in order to levy millage per F.S. 200.065(2). It should be noted that the \nproperty tax yield of $380,255,500 represents 95% of taxable value as required under F.S. \n200.065(2).\nPROJECTED COSTS: 01100 220900 311100 $380,255,500 (Revenue) General Fund – Non \nDepartmental Admin – Property Tax Current Ad Valorem\nApproverTimestampRole\nGiannina Carballa8/26/2025 10:08:16 AMSubmitter\nTy Hawthorne8/26/2025 10:34:25 AMDepartment Head\nAstonah Turner8/26/2025 10:39:51 AMAttorney Coordinator\nJustin Vaske8/26/2025 10:44:40 AMAssistant City Attorney\nCate Wells8/26/2025 10:54:12 AMCity Attorney\nJennifer Seth8/26/2025 11:05:53 AMFinance Coordinator\nGiannina Carballa8/26/2025 11:17:49 AMFinance Fiscal and Lead Analyst\nTy Hawthorne8/26/2025 11:45:15 AMBudget Operating Manager\nMichael Perry9/8/2025 1:03:31 PMBudget Officer\nDennis Rogero9/9/2025 1:27:42 PMChief Financial Officer\nJOHN BENNETT9/10/2025 12:04:52 PMChief of Staff\n\nJANE CASTOR9/10/2025 1:38:17 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This is a resolution levying an ad valorem tax of 6.2076 mills upon all real and personal taxable property in the City of Tampa for fiscal year 2026. This resolution must be approved by the governing body in order to levy millage per F.S. 200.065(2). It should be noted that the property tax yield of $380,255,500 represents 95% of taxable value as required under F.S. 200.065(2).",
+        "projectedCostsRaw": "01100 220900 311100 $380,255,500 (Revenue) General Fund – Non \nDepartmental Admin – Property Tax Current Ad Valorem",
+        "rows": [
+          {
+            "accountCode": "01100.220900.311100",
+            "fund": "01100",
+            "department": "220900",
+            "object": "311100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$380,255,500",
+            "value": 380255500,
+            "type": "revenue",
+            "signedValue": -380255500,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund – Non Departmental Admin – Property Tax Current Ad Valorem"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      },
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 9,
       "agendaItemId": "17442",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2 (UNAN)\n(Ordinance being presented for second reading and adoption) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; providing an effective date. (Original motion to approve said ordinance on first reading initiated by Miranda-Maniscalco on September 3, 2025)",
       "rawTitle": "File No. B2026-2 (UNAN)\n(Ordinance being presented for second reading and adoption) - An ordinance adopting the budget of the City of Tampa for the fiscal year beginning October 1, 2025 and ending September 30, 2026; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2026, in the City of Tampa; providing an effective date. (Original motion to approve said ordinance on first reading initiated by Miranda-Maniscalco on September 3, 2025)",
+      "fileNumber": "B2026-2",
       "background": "This ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements set forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.\n\nIt should be noted that the property tax yield of $380,255,500 represents 95% of taxable value as required under F.S. 200.065(2).",
       "supportingDocuments": [
         {
-          "title": "Fy2026 Budget Ordinance.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY2026%20BUDGET%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=143956&isSection=False&isAttachment=True",
+          "title": "FY2026 BUDGET ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2026%20BUDGET%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144771&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2026 BUDGET ORDINANCE.PDF in a new tab",
           "originalText": "FY2026 BUDGET ORDINANCE.PDF",
-          "originalTitle": "Download FY2026 BUDGET ORDINANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/fy2026-budget-ordinance.pdf"
         },
         {
-          "title": "Fy2026 Recommended Budget Supplement.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY2026%20RECOMMENDED%20BUDGET%20SUPPLEMENT.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=143957&isSection=False&isAttachment=True",
+          "title": "FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2026%20RECOMMENDED%20BUDGET%20SUPPLEMENT.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144772&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF in a new tab",
           "originalText": "FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF",
-          "originalTitle": "Download FY2026 RECOMMENDED BUDGET SUPPLEMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/fy2026-recommended-budget-supplement.pdf"
         },
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=143958&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144773&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "Fy2026 1st Public Hearing Presentation Final .PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY2026%201ST%20PUBLIC%20HEARING%20PRESENTATION%20FINAL%20.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=143959&isSection=False&isAttachment=True",
+          "title": "FY2026 1ST PUBLIC HEARING PRESENTATION FINAL .PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2026%201ST%20PUBLIC%20HEARING%20PRESENTATION%20FINAL%20.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144774&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2026 1ST PUBLIC HEARING PRESENTATION FINAL .PDF in a new tab",
           "originalText": "FY2026 1ST PUBLIC HEARING PRESENTATION FINAL .PDF",
-          "originalTitle": "Download FY2026 1ST PUBLIC HEARING PRESENTATION FINAL .PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/fy2026-1st-public-hearing-presentation-final-.pdf"
         },
         {
-          "title": "Speaker Waiver Form - Dayna Lazarus.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SPEAKER%20WAIVER%20FORM%20-%20DAYNA%20LAZARUS.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=143960&isSection=False&isAttachment=True",
+          "title": "SPEAKER WAIVER FORM - DAYNA LAZARUS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/SPEAKER%20WAIVER%20FORM%20-%20DAYNA%20LAZARUS.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144775&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of SPEAKER WAIVER FORM - DAYNA LAZARUS.PDF in a new tab",
           "originalText": "SPEAKER WAIVER FORM - DAYNA LAZARUS.PDF",
-          "originalTitle": "Download SPEAKER WAIVER FORM - DAYNA LAZARUS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/speaker-waiver-form-dayna-lazarus.pdf"
         },
         {
-          "title": "Documents Submitted by Pam Cannella.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20PAM%20CANNELLA.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=143961&isSection=False&isAttachment=True",
+          "title": "DOCUMENTS SUBMITTED BY PAM CANNELLA.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20PAM%20CANNELLA.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144776&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DOCUMENTS SUBMITTED BY PAM CANNELLA.PDF in a new tab",
           "originalText": "DOCUMENTS SUBMITTED BY PAM CANNELLA.PDF",
-          "originalTitle": "Download DOCUMENTS SUBMITTED BY PAM CANNELLA.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/documents-submitted-by-pam-cannella.pdf"
         },
         {
-          "title": "Public Comment Sign-in Sheets 09032025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PUBLIC%20COMMENT%20SIGN-IN%20SHEETS%2009032025.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=143962&isSection=False&isAttachment=True",
+          "title": "PUBLIC COMMENT SIGN-IN SHEETS 09032025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/PUBLIC%20COMMENT%20SIGN-IN%20SHEETS%2009032025.PDF.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144777&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of PUBLIC COMMENT SIGN-IN SHEETS 09032025.PDF in a new tab",
           "originalText": "PUBLIC COMMENT SIGN-IN SHEETS 09032025.PDF",
-          "originalTitle": "Download PUBLIC COMMENT SIGN-IN SHEETS 09032025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/public-comment-sign-in-sheets-09032025.pdf"
+        },
+        {
+          "title": "DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DEAR%20COUNCIL%20MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX.pdf?documentType=1&meetingId=2631&itemId=17442&publishId=144778&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX in a new tab",
+          "originalText": "DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17442/dear-council-members.2026budget.scottdefraties.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Evening\nSubmittal Date:                        8/14/2025\nRequested Meeting Date: 9/03/2025\nType of Request:                                                  Council Ordinance\nContactGiannina Carballa 813-274-8087\nSubjectAn ordinance adopting the budget of the City of Tampa for the fiscal year \nbeginning October 1, 2025 and ending September 30, 2026; Providing for the \nlevy as provided by law of a tax on all taxable property in the City of Tampa \nand fixing the millage.\nResolution / \nOrdinance \nTitle\nAn ordinance adopting the budget of the City of Tampa for the fiscal year \nbeginning October 1, 2025 and ending September 30, 2026; Providing for the \nlevy as provided by law of a tax on all taxable property in the City of Tampa \nand fixing the millage within said City; Making appropriations in accordance \nwith the provisions of said budget; Authorizing and directing the Mayor and \nCity Clerk, as the proper authorities of the City of Tampa to certify to the \nProperty Appraiser of Hillsborough County, Florida, the millage to be levied for \nall purposes for the Fiscal Year 2026, in the City of Tampa; Providing an \neffective date.\nBACKGROUND:\nThis ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements \nset forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.  \nIt should be noted that the property tax yield of $380,255,500 represents 95% of taxable \nvalue as required under F.S. 200.065(2).\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements \nset forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.  \nIt should be noted that the property tax yield of $380,255,500 represents 95% of taxable \nvalue as required under F.S. 200.065(2).\nPROJECTED COSTS: 01100 220900 311100 $380,255,500 (Revenue) General Fund – Non \nDepartmental Admin – Property Tax Current Ad Valorem\nApproverTimestampRole\nGiannina Carballa8/21/2025 11:19:12 AMSubmitter\nTy Hawthorne8/21/2025 11:41:48 AMDepartment Head\nAstonah Turner8/21/2025 11:50:38 AMAttorney Coordinator\nJustin Vaske8/21/2025 1:52:55 PMAssistant City Attorney\nCate Wells8/22/2025 9:21:01 AMCity Attorney\nAndy Waitman8/22/2025 10:21:30 AMFinance Coordinator\nGiannina Carballa8/22/2025 11:13:31 AMFinance Fiscal and Lead Analyst\n\nTy Hawthorne8/22/2025 11:24:33 AMBudget Operating Manager\nMichael Perry8/22/2025 11:51:02 AMBudget Officer\nDennis Rogero8/26/2025 9:01:13 AMChief Financial Officer\nJOHN BENNETT8/26/2025 4:04:05 PMChief of Staff\nJANE CASTOR8/26/2025 7:15:40 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This ordinance adopts the Fiscal Year 2026 annual budget in accordance with requirements set forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances. It should be noted that the property tax yield of $380,255,500 represents 95% of taxable value as required under F.S. 200.065(2).",
+        "projectedCostsRaw": "01100 220900 311100 $380,255,500 (Revenue) General Fund – Non \nDepartmental Admin – Property Tax Current Ad Valorem",
+        "rows": [
+          {
+            "accountCode": "01100.220900.311100",
+            "fund": "01100",
+            "department": "220900",
+            "object": "311100",
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$380,255,500",
+            "value": 380255500,
+            "type": "revenue",
+            "signedValue": -380255500,
+            "subjectToAppropriation": false,
+            "marker": "Revenue",
+            "description": "General Fund – Non Departmental Admin – Property Tax Current Ad Valorem"
+          }
+        ],
+        "hasProjectedCosts": true,
+        "hasParsedRows": true
+      },
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     },
     {
       "number": 10,
       "agendaItemId": "17018",
-      "fileNumber": "B2026-2",
       "title": "File No. B2026-2\nResolution adopting the City of Tampa Capital Improvement Budget and Program for FY2026 through FY2030; Providing an effective date.",
       "rawTitle": "File No. B2026-2\nResolution adopting the City of Tampa Capital Improvement Budget and Program for FY2026 through FY2030; Providing an effective date.",
+      "fileNumber": "B2026-2",
       "background": "The City's FY2026 Capital Improvement Program contains capital improvement projects totaling $422,138,440.  The City's FY2026 - FY2030 Capital Improvement Program contains capital improvement projects totaling $1,719,951,757. This resolution adopts the FY2026 through FY2030 Recommended Capital Improvement Budget and Program as required by Florida Statutes and City Charter. In addition, it adopts the FY2026 portion of the FY2026 through FY2030 Capital Improvement Projects program as part of the FY2026 Annual Budget in the amount of $422,138,440.",
       "supportingDocuments": [
         {
-          "title": "Summary Sheet- Cover Sheet",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2631&itemId=17018&publishId=143963&isSection=False&isAttachment=True",
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2631&itemId=17018&publishId=144779&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
-          "originalTitle": "Download Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17018/summary-sheet-cover-sheet.pdf"
         },
         {
-          "title": "Fy2026 Cip Resolution.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/FY2026%20CIP%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2631&itemId=17018&publishId=143964&isSection=False&isAttachment=True",
+          "title": "FY2026 CIP RESOLUTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2026%20CIP%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2631&itemId=17018&publishId=144780&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2026 CIP RESOLUTION.PDF in a new tab",
           "originalText": "FY2026 CIP RESOLUTION.PDF",
-          "originalTitle": "Download FY2026 CIP RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-09-16/meeting-2631/17018/fy2026-cip-resolution.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Revenue and Finance\nCouncil Evening\nSubmittal Date:                        8/26/2025\nRequested Meeting Date: 9/16/2025\nType of Request:                                                  Council Resolution\nContactGiannina Carballa 813-274-8087\nSubjectA Resolution adopting the City of Tampa Capital Improvement Budget and \nProgram for FY2026 through FY2030; Providing an effective date.\nResolution / \nOrdinance \nTitle\nA Resolution adopting the City of Tampa Capital Improvement Budget and \nProgram for FY2026 through FY2030; Providing an effective date.\nBACKGROUND:\nThe City's FY2026 Capital Improvement Program contains capital improvement projects \ntotaling $422,138,440.  The City's FY2026 - FY2030 Capital Improvement Program contains \ncapital improvement projects totaling $1,719,951,757. This resolution adopts the FY2026 \nthrough FY2030 Recommended Capital Improvement Budget and Program as required by \nFlorida Statutes and City Charter. In addition, it adopts the FY2026 portion of the FY2026 \nthrough FY2030 Capital Improvement Projects program as part of the FY2026 Annual Budget \nin the amount of $422,138,440.\nFISCAL IMPACT: Yes\nFISCAL IMPACT STATEMENT:\nThis resolution adopts the FY2026 through FY2030 Recommended Capital Improvement \nBudget and Program in the amount of $1,719,951,757 as required by Florida Statutes and \nCity Charter.  In addition, it adopts the FY2026 portion of the FY2026 through FY2030 Capital \nImprovement Projects program as part of the FY2026 Annual Budget in the amount of \n$422,138,440.\nPROJECTED COSTS: $422,138,440 (FY2026)\nApproverTimestampRole\nGiannina Carballa8/26/2025 10:52:24 AMSubmitter\nTy Hawthorne8/26/2025 10:58:54 AMDepartment Head\nAstonah Turner9/9/2025 4:48:40 PMAttorney Coordinator\nJustin Vaske9/9/2025 4:54:09 PMAssistant City Attorney\nCate Wells9/9/2025 5:59:14 PMCity Attorney\nJennifer Seth9/10/2025 7:13:25 AMFinance Coordinator\nGiannina Carballa9/10/2025 8:45:27 AMFinance Fiscal and Lead Analyst\nTy Hawthorne9/10/2025 8:47:53 AMBudget Operating Manager\nMichael Perry9/10/2025 10:05:32 AMBudget Officer\nDennis Rogero9/10/2025 10:16:32 AMChief Financial Officer\n\nJOHN BENNETT9/10/2025 12:05:05 PMChief of Staff\nJANE CASTOR9/10/2025 1:38:05 PMMayor",
+      "projectedCosts": {
+        "fiscalImpactStatement": "This resolution adopts the FY2026 through FY2030 Recommended Capital Improvement Budget and Program in the amount of $1,719,951,757 as required by Florida Statutes and City Charter. In addition, it adopts the FY2026 portion of the FY2026 through FY2030 Capital Improvement Projects program as part of the FY2026 Annual Budget in the amount of $422,138,440.",
+        "projectedCostsRaw": "$422,138,440 (FY2026)",
+        "rows": [],
+        "hasProjectedCosts": true,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – BUDGET PUBLIC HEARING - (ITEMS 1 THROUGH 10)"
     }
   ],
-  "totalDollarAmount": 1.25,
-  "formattedTotalDollarAmount": "$1.25"
+  "formattedDate": "2025-09-16"
 }

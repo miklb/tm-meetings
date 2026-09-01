@@ -1,0 +1,30 @@
+{
+  "meetingId": "2647",
+  "meetingDate": "2025-08-21",
+  "firstSeenAt": "2026-09-01T21:10:46.804Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:10:04.048Z",
+      "agendaTypePromoted": {
+        "to": "FINAL"
+      },
+      "itemsAdded": [
+        {
+          "agendaItemId": "16255",
+          "number": 1,
+          "fileNumber": "CRA24-2242",
+          "shortTitle": "File No. CRA24-2242\nWest Tampa CAC Chair, Joseph Robinson, to appear and prov…"
+        }
+      ],
+      "itemsRemoved": [
+        {
+          "agendaItemId": "",
+          "number": 1,
+          "fileNumber": "CRA24-2242",
+          "shortTitle": "File No. CRA24-2242\nWest Tampa CAC Chair, Joseph Robinson, to appear and prov…"
+        }
+      ]
+    }
+  ]
+}

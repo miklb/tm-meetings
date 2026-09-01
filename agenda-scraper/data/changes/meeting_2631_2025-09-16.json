@@ -1,0 +1,33 @@
+{
+  "meetingId": "2631",
+  "meetingDate": "2025-09-16",
+  "firstSeenAt": "2026-09-01T21:06:45.444Z",
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T21:06:24.595Z",
+      "agendaTypePromoted": {
+        "to": "DRAFT"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "B2026-2",
+          "filename": "DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "CM24-9090",
+          "filename": "CM VIERA MEMO 4-28-25.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "B2026-2",
+          "filename": "DEAR COUNCIL MEMBERS.2026BUDGET.SCOTTDEFRATIES.DOCX"
+        }
+      ]
+    }
+  ]
+}

@@ -1,270 +1,386 @@
 {
   "meetingId": "2642",
-  "meetingType": "Council Evening",
+  "meetingType": "evening",
+  "meetingName": "City Council Special Call Evening",
+  "agendaType": "FINAL",
+  "isAddendum": false,
   "meetingDate": "August 28, 2025",
-  "formattedDate": "2025-08-28",
-  "sourceUrl": "https://tampagov.hylandcloud.com/221agendaonline/Meetings/ViewMeeting?id=2642&doctype=1",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2642&type=agenda&doctype=1",
   "agendaItems": [
     {
       "number": 1,
       "agendaItemId": "16953",
-      "fileNumber": "TA/CPA24-04",
-      "title": "**File No. TA/CPA24-04** Workshop on the Future Land Use element of the 2045 Tampa Comprehensive Plan.",
+      "title": "File No. TA/CPA24-04\nWorkshop on the Future Land Use element of the 2045 Tampa Comprehensive Plan.",
       "rawTitle": "File No. TA/CPA24-04\nWorkshop on the Future Land Use element of the 2045 Tampa Comprehensive Plan.",
+      "fileNumber": "TA/CPA24-04",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "August 28 Transmittal Memo.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AUGUST%2028%20TRANSMITTAL%20MEMO.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=137916&isSection=False&isAttachment=True",
+          "title": "AUGUST 28 TRANSMITTAL MEMO.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AUGUST%2028%20TRANSMITTAL%20MEMO.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140305&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AUGUST 28 TRANSMITTAL MEMO.PDF in a new tab",
           "originalText": "AUGUST 28 TRANSMITTAL MEMO.PDF",
-          "originalTitle": "Download AUGUST 28 TRANSMITTAL MEMO.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/august-28-transmittal-memo.pdf"
         },
         {
-          "title": "Attachment a_Future Land Use Section Outreach Summary 2022-2025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20A_FUTURE%20LAND%20USE%20SECTION%20OUTREACH%20SUMMARY%202022-2025.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=137917&isSection=False&isAttachment=True",
+          "title": "ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20A_FUTURE%20LAND%20USE%20SECTION%20OUTREACH%20SUMMARY%202022-2025.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140306&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF in a new tab",
           "originalText": "ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
-          "originalTitle": "Download ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/attachment-a_future-land-use-section-outreach-summary-2022-2025.pdf"
         },
         {
-          "title": "Place Types.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PLACE%20TYPES.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=137918&isSection=False&isAttachment=True",
+          "title": "PLACE TYPES.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/PLACE%20TYPES.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140307&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of PLACE TYPES.PDF in a new tab",
           "originalText": "PLACE TYPES.PDF",
-          "originalTitle": "Download PLACE TYPES.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/place-types.pdf"
         },
         {
-          "title": "Single-Family Attached in R-10.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SINGLE-FAMILY%20ATTACHED%20IN%20R-10.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=137919&isSection=False&isAttachment=True",
+          "title": "SINGLE-FAMILY ATTACHED IN R-10.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/SINGLE-FAMILY%20ATTACHED%20IN%20R-10.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140308&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of SINGLE-FAMILY ATTACHED IN R-10.PDF in a new tab",
           "originalText": "SINGLE-FAMILY ATTACHED IN R-10.PDF",
-          "originalTitle": "Download SINGLE-FAMILY ATTACHED IN R-10.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/single-family-attached-in-r-10.pdf"
         },
         {
-          "title": "Transit-Ready Corridors.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TRANSIT-READY%20CORRIDORS.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=137920&isSection=False&isAttachment=True",
+          "title": "TRANSIT-READY CORRIDORS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TRANSIT-READY%20CORRIDORS.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140309&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TRANSIT-READY CORRIDORS.PDF in a new tab",
           "originalText": "TRANSIT-READY CORRIDORS.PDF",
-          "originalTitle": "Download TRANSIT-READY CORRIDORS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/transit-ready-corridors.pdf"
         },
         {
-          "title": "Attachment B_August 2025 Future Land Use Section Draft.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20B_AUGUST%202025%20FUTURE%20LAND%20USE%20SECTION%20DRAFT.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=137921&isSection=False&isAttachment=True",
+          "title": "ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20B_AUGUST%202025%20FUTURE%20LAND%20USE%20SECTION%20DRAFT.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140310&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF in a new tab",
           "originalText": "ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
-          "originalTitle": "Download ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/attachment-b_august-2025-future-land-use-section-draft.pdf"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140311&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/1-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "2-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140312&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "2-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/2-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "3-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140313&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 3-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "3-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/3-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "4-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/4-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140314&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 4-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "4-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/4-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "5-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/5-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140315&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 5-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "5-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/5-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "6-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/6-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140316&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 6-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "6-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/6-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "7-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/7-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140317&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 7-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "7-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/7-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "8-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/8-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140318&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 8-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "8-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/8-written-comments-tacpa-24-04.pdf"
+        },
+        {
+          "title": "9-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/9-WRITTEN%20COMMENTS%20TACPA%2024-04.PDF.pdf?documentType=1&meetingId=2642&itemId=16953&publishId=140319&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 9-WRITTEN COMMENTS TACPA 24-04.PDF in a new tab",
+          "originalText": "9-WRITTEN COMMENTS TACPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/16953/9-written-comments-tacpa-24-04.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – WORKSHOP - (ITEM 1)"
     },
     {
       "number": 2,
       "agendaItemId": "14936",
-      "fileNumber": "TA/CPA24-04",
-      "title": "**File No. TA/CPA24-04** Continued transmittal public hearing from May 22, 2025 on a text amendment to update and modernize the land use related language and maps which includes seven goals including language on the following topics: citizen participation in the planning process, proposed “Place Types” to support Tampa’s existing and future urban form, a revised bonus structure to plan for increased density/intensity with a public benefit, pedestrian-oriented design standards and development within the Coastal High Hazard Area.",
+      "title": "File No. TA/CPA24-04\nContinued transmittal public hearing from May 22, 2025 on a text amendment to update and modernize the land use related language and maps which includes seven goals including language on the following topics: citizen participation in the planning process, proposed “Place Types” to support Tampa’s existing and future urban form, a revised bonus structure to plan for increased density/intensity with a public benefit, pedestrian-oriented design standards and development within the Coastal High Hazard Area.",
       "rawTitle": "File No. TA/CPA24-04\nContinued transmittal public hearing from May 22, 2025 on a text amendment to update and modernize the land use related language and maps which includes seven goals including language on the following topics: citizen participation in the planning process, proposed “Place Types” to support Tampa’s existing and future urban form, a revised bonus structure to plan for increased density/intensity with a public benefit, pedestrian-oriented design standards and development within the Coastal High Hazard Area.",
+      "fileNumber": "TA/CPA24-04",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ta Cpa 24-04 Tcc Staff Packet...PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-04%20TCC%20STAFF%20PACKET...PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137922&isSection=False&isAttachment=True",
+          "title": "TA CPA 24-04 TCC STAFF PACKET...PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-04%20TCC%20STAFF%20PACKET...PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140320&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 24-04 TCC STAFF PACKET...PDF in a new tab",
           "originalText": "TA CPA 24-04 TCC STAFF PACKET...PDF",
-          "originalTitle": "Download TA CPA 24-04 TCC STAFF PACKET...PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/ta-cpa-24-04-tcc-staff-packet...pdf"
         },
         {
-          "title": "Tcc Transmittal_0522025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137923&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL_0522025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140321&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL_0522025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL_0522025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL_0522025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/tcc-transmittal_0522025.pdf"
         },
         {
-          "title": "Cpa 24-04 Pc Briefing.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137924&isSection=False&isAttachment=True",
+          "title": "CPA 24-04 PC BRIEFING.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140322&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-04 PC BRIEFING.PDF in a new tab",
           "originalText": "CPA 24-04 PC BRIEFING.PDF",
-          "originalTitle": "Download CPA 24-04 PC BRIEFING.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/cpa-24-04-pc-briefing.pdf"
         },
         {
-          "title": "Cpa 24-04 Pc Resolution.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137925&isSection=False&isAttachment=True",
+          "title": "CPA 24-04 PC RESOLUTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140323&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-04 PC RESOLUTION.PDF in a new tab",
           "originalText": "CPA 24-04 PC RESOLUTION.PDF",
-          "originalTitle": "Download CPA 24-04 PC RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/cpa-24-04-pc-resolution.pdf"
         },
         {
-          "title": "Cpa 24-04 Staff Report...PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20STAFF%20REPORT...PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137926&isSection=False&isAttachment=True",
+          "title": "CPA 24-04 STAFF REPORT...PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-04%20STAFF%20REPORT...PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140324&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-04 STAFF REPORT...PDF in a new tab",
           "originalText": "CPA 24-04 STAFF REPORT...PDF",
-          "originalTitle": "Download CPA 24-04 STAFF REPORT...PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/cpa-24-04-staff-report...pdf"
         },
         {
-          "title": "Item #1 Jake Cremer Document.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20JAKE%20CREMER%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137927&isSection=False&isAttachment=True",
+          "title": "ITEM #1 JAKE CREMER DOCUMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20JAKE%20CREMER%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140325&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ITEM #1 JAKE CREMER DOCUMENT.PDF in a new tab",
           "originalText": "ITEM #1 JAKE CREMER DOCUMENT.PDF",
-          "originalTitle": "Download ITEM #1 JAKE CREMER DOCUMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/item-1-jake-cremer-document.pdf"
         },
         {
-          "title": "Item #1 Sandra Sanchez Documents.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SANDRA%20SANCHEZ%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137928&isSection=False&isAttachment=True",
+          "title": "ITEM #1 SANDRA SANCHEZ DOCUMENTS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SANDRA%20SANCHEZ%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140326&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ITEM #1 SANDRA SANCHEZ DOCUMENTS.PDF in a new tab",
           "originalText": "ITEM #1 SANDRA SANCHEZ DOCUMENTS.PDF",
-          "originalTitle": "Download ITEM #1 SANDRA SANCHEZ DOCUMENTS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/item-1-sandra-sanchez-documents.pdf"
         },
         {
-          "title": "Item #1 Stephanie Poynor Document.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20STEPHANIE%20POYNOR%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137929&isSection=False&isAttachment=True",
+          "title": "ITEM #1 STEPHANIE POYNOR DOCUMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20STEPHANIE%20POYNOR%20DOCUMENT.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140327&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ITEM #1 STEPHANIE POYNOR DOCUMENT.PDF in a new tab",
           "originalText": "ITEM #1 STEPHANIE POYNOR DOCUMENT.PDF",
-          "originalTitle": "Download ITEM #1 STEPHANIE POYNOR DOCUMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/item-1-stephanie-poynor-document.pdf"
         },
         {
-          "title": "Item #1 Susan Swift Documents.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SUSAN%20SWIFT%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137930&isSection=False&isAttachment=True",
+          "title": "ITEM #1 SUSAN SWIFT DOCUMENTS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ITEM%20_1%20SUSAN%20SWIFT%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140328&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ITEM #1 SUSAN SWIFT DOCUMENTS.PDF in a new tab",
           "originalText": "ITEM #1 SUSAN SWIFT DOCUMENTS.PDF",
-          "originalTitle": "Download ITEM #1 SUSAN SWIFT DOCUMENTS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/item-1-susan-swift-documents.pdf"
         },
         {
-          "title": "August 28 Transmittal Memo.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/AUGUST%2028%20TRANSMITTAL%20MEMO.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137931&isSection=False&isAttachment=True",
+          "title": "AUGUST 28 TRANSMITTAL MEMO.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AUGUST%2028%20TRANSMITTAL%20MEMO.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140329&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of AUGUST 28 TRANSMITTAL MEMO.PDF in a new tab",
           "originalText": "AUGUST 28 TRANSMITTAL MEMO.PDF",
-          "originalTitle": "Download AUGUST 28 TRANSMITTAL MEMO.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/august-28-transmittal-memo.pdf"
         },
         {
-          "title": "Attachment a_Future Land Use Section Outreach Summary 2022-2025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20A_FUTURE%20LAND%20USE%20SECTION%20OUTREACH%20SUMMARY%202022-2025.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137932&isSection=False&isAttachment=True",
+          "title": "ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20A_FUTURE%20LAND%20USE%20SECTION%20OUTREACH%20SUMMARY%202022-2025.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140330&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF in a new tab",
           "originalText": "ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
-          "originalTitle": "Download ATTACHMENT A_FUTURE LAND USE SECTION OUTREACH SUMMARY 2022-2025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/attachment-a_future-land-use-section-outreach-summary-2022-2025.pdf"
         },
         {
-          "title": "Attachment B_August 2025 Future Land Use Section Draft.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20B_AUGUST%202025%20FUTURE%20LAND%20USE%20SECTION%20DRAFT.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137933&isSection=False&isAttachment=True",
+          "title": "ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ATTACHMENT%20B_AUGUST%202025%20FUTURE%20LAND%20USE%20SECTION%20DRAFT.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140331&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF in a new tab",
           "originalText": "ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
-          "originalTitle": "Download ATTACHMENT B_AUGUST 2025 FUTURE LAND USE SECTION DRAFT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/attachment-b_august-2025-future-land-use-section-draft.pdf"
         },
         {
-          "title": "Place Types.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/PLACE%20TYPES.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137934&isSection=False&isAttachment=True",
+          "title": "PLACE TYPES.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/PLACE%20TYPES.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140332&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of PLACE TYPES.PDF in a new tab",
           "originalText": "PLACE TYPES.PDF",
-          "originalTitle": "Download PLACE TYPES.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/place-types.pdf"
         },
         {
-          "title": "Single-Family Attached in R-10.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/SINGLE-FAMILY%20ATTACHED%20IN%20R-10.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137935&isSection=False&isAttachment=True",
+          "title": "SINGLE-FAMILY ATTACHED IN R-10.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/SINGLE-FAMILY%20ATTACHED%20IN%20R-10.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140333&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of SINGLE-FAMILY ATTACHED IN R-10.PDF in a new tab",
           "originalText": "SINGLE-FAMILY ATTACHED IN R-10.PDF",
-          "originalTitle": "Download SINGLE-FAMILY ATTACHED IN R-10.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/single-family-attached-in-r-10.pdf"
         },
         {
-          "title": "Transit-Ready Corridors.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TRANSIT-READY%20CORRIDORS.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=137936&isSection=False&isAttachment=True",
+          "title": "TRANSIT-READY CORRIDORS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TRANSIT-READY%20CORRIDORS.PDF.pdf?documentType=1&meetingId=2642&itemId=14936&publishId=140334&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TRANSIT-READY CORRIDORS.PDF in a new tab",
           "originalText": "TRANSIT-READY CORRIDORS.PDF",
-          "originalTitle": "Download TRANSIT-READY CORRIDORS.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14936/transit-ready-corridors.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2 THROUGH 4)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Hillsborough County City-County Planning Commission. Jurisdictional areas",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     },
     {
       "number": 3,
       "agendaItemId": "14937",
-      "fileNumber": "TA/CPA24-05",
-      "title": "**File No. TA/CPA24-05** Continued transmittal public hearing from May 22, 2025 on a text amendment to update the Housing Section with revisions through the 2045 horizon year, to update and modernize the housing-related language which includes one goal and five objectives on the following topics: housing affordability, stability, resilience and sustainability; healthy communities; supply; and access.",
+      "title": "File No. TA/CPA24-05\nContinued transmittal public hearing from May 22, 2025 on a text amendment to update the Housing Section with revisions through the 2045 horizon year, to update and modernize the housing-related language which includes one goal and five objectives on the following topics: housing affordability, stability, resilience and sustainability; healthy communities; supply; and access.",
       "rawTitle": "File No. TA/CPA24-05\nContinued transmittal public hearing from May 22, 2025 on a text amendment to update the Housing Section with revisions through the 2045 horizon year, to update and modernize the housing-related language which includes one goal and five objectives on the following topics: housing affordability, stability, resilience and sustainability; healthy communities; supply; and access.",
+      "fileNumber": "TA/CPA24-05",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ta Cpa 24-05 Tcc Staff Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-05%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=137937&isSection=False&isAttachment=True",
+          "title": "TA CPA 24-05 TCC STAFF PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-05%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=140335&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 24-05 TCC STAFF PACKET.PDF in a new tab",
           "originalText": "TA CPA 24-05 TCC STAFF PACKET.PDF",
-          "originalTitle": "Download TA CPA 24-05 TCC STAFF PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14937/ta-cpa-24-05-tcc-staff-packet.pdf"
         },
         {
-          "title": "Tcc Transmittal_0522025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=137938&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL_0522025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=140336&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL_0522025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL_0522025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL_0522025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14937/tcc-transmittal_0522025.pdf"
         },
         {
-          "title": "Cpa 24-05 Pc Briefing.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=137939&isSection=False&isAttachment=True",
+          "title": "CPA 24-05 PC BRIEFING.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=140337&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-05 PC BRIEFING.PDF in a new tab",
           "originalText": "CPA 24-05 PC BRIEFING.PDF",
-          "originalTitle": "Download CPA 24-05 PC BRIEFING.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14937/cpa-24-05-pc-briefing.pdf"
         },
         {
-          "title": "Cpa 24-05 Pc Resolution.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=137940&isSection=False&isAttachment=True",
+          "title": "CPA 24-05 PC RESOLUTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=140338&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-05 PC RESOLUTION.PDF in a new tab",
           "originalText": "CPA 24-05 PC RESOLUTION.PDF",
-          "originalTitle": "Download CPA 24-05 PC RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14937/cpa-24-05-pc-resolution.pdf"
         },
         {
-          "title": "Cpa 24-05 Staff Report.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=137941&isSection=False&isAttachment=True",
+          "title": "CPA 24-05 STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-05%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2642&itemId=14937&publishId=140339&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-05 STAFF REPORT.PDF in a new tab",
           "originalText": "CPA 24-05 STAFF REPORT.PDF",
-          "originalTitle": "Download CPA 24-05 STAFF REPORT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14937/cpa-24-05-staff-report.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2 THROUGH 4)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     },
     {
       "number": 4,
       "agendaItemId": "14938",
-      "fileNumber": "TA/CPA",
-      "title": "File No. TA/CPA 24-06 Continued transmittal public hearing from May 22, 2025 on a text amendment to update and modernize the Coastal Management Section with revisions through the 2045 horizon year, which includes three goals and five objectives on the following topics: living marine resources, beaches and shorelines, hazard mitigation, climate change and resiliency, hurricane evacuation and shelter, and coastal uses/marinas/dredge and fill.",
+      "title": "File No. TA/CPA 24-06\nContinued transmittal public hearing from May 22, 2025 on a text amendment to update and modernize the Coastal Management Section with revisions through the 2045 horizon year, which includes three goals and five objectives on the following topics: living marine resources, beaches and shorelines, hazard mitigation, climate change and resiliency, hurricane evacuation and shelter, and coastal uses/marinas/dredge and fill.",
       "rawTitle": "File No. TA/CPA 24-06\nContinued transmittal public hearing from May 22, 2025 on a text amendment to update and modernize the Coastal Management Section with revisions through the 2045 horizon year, which includes three goals and five objectives on the following topics: living marine resources, beaches and shorelines, hazard mitigation, climate change and resiliency, hurricane evacuation and shelter, and coastal uses/marinas/dredge and fill.",
+      "fileNumber": "TA/CPA",
       "background": "",
       "supportingDocuments": [
         {
-          "title": "Ta Cpa 24-06 Tcc Staff Packet.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-06%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=137942&isSection=False&isAttachment=True",
+          "title": "TA CPA 24-06 TCC STAFF PACKET.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TA%20CPA%2024-06%20TCC%20STAFF%20PACKET.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=140340&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TA CPA 24-06 TCC STAFF PACKET.PDF in a new tab",
           "originalText": "TA CPA 24-06 TCC STAFF PACKET.PDF",
-          "originalTitle": "Download TA CPA 24-06 TCC STAFF PACKET.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14938/ta-cpa-24-06-tcc-staff-packet.pdf"
         },
         {
-          "title": "Tcc Transmittal_0522025.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=137943&isSection=False&isAttachment=True",
+          "title": "TCC TRANSMITTAL_0522025.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC%20TRANSMITTAL_0522025.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=140341&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC TRANSMITTAL_0522025.PDF in a new tab",
           "originalText": "TCC TRANSMITTAL_0522025.PDF",
-          "originalTitle": "Download TCC TRANSMITTAL_0522025.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14938/tcc-transmittal_0522025.pdf"
         },
         {
-          "title": "Cpa 24-06 Pc Briefing.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=137944&isSection=False&isAttachment=True",
+          "title": "CPA 24-06 PC BRIEFING.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20BRIEFING.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=140342&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-06 PC BRIEFING.PDF in a new tab",
           "originalText": "CPA 24-06 PC BRIEFING.PDF",
-          "originalTitle": "Download CPA 24-06 PC BRIEFING.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14938/cpa-24-06-pc-briefing.pdf"
         },
         {
-          "title": "Cpa 24-06 Pc Resolution.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=137945&isSection=False&isAttachment=True",
+          "title": "CPA 24-06 PC RESOLUTION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20PC%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=140343&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-06 PC RESOLUTION.PDF in a new tab",
           "originalText": "CPA 24-06 PC RESOLUTION.PDF",
-          "originalTitle": "Download CPA 24-06 PC RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14938/cpa-24-06-pc-resolution.pdf"
         },
         {
-          "title": "Cpa 24-06 Staff Report.PDF",
-          "url": "https://tampagov.hylandcloud.com/221agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=137946&isSection=False&isAttachment=True",
+          "title": "CPA 24-06 STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CPA%2024-06%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2642&itemId=14938&publishId=140344&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of CPA 24-06 STAFF REPORT.PDF in a new tab",
           "originalText": "CPA 24-06 STAFF REPORT.PDF",
-          "originalTitle": "Download CPA 24-06 STAFF REPORT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2025-08-28/meeting-2642/14938/cpa-24-06-staff-report.pdf"
         }
       ],
-      "dollarAmounts": []
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2 THROUGH 4)",
+      "staffReport": {
+        "landUseType": "TEXT_AMENDMENT_COMP_PLAN",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": null
+      }
     }
-  ]
+  ],
+  "formattedDate": "2025-08-28"
 }
