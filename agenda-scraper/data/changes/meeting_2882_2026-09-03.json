@@ -2,5 +2,33 @@
   "meetingId": "2882",
   "meetingDate": "2026-09-03",
   "firstSeenAt": "2026-08-30T12:58:02.052Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-01",
+      "scrapedAt": "2026-09-01T23:02:03.898Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 30,
+          "itemFileNumber": "BF26-25533",
+          "filename": "ROBLES PARK BROWNFIELD DESIGNATION RESOLUTION FINAL - BF26-25533.PDF"
+        },
+        {
+          "itemNumber": 35,
+          "itemFileNumber": "F26-26422",
+          "filename": "MEMO BAIRD - 090326 REGULAR COUNCIL SESSION - FILE NO. F26-26422.PDF"
+        },
+        {
+          "itemNumber": 40,
+          "itemFileNumber": "INF26-26427",
+          "filename": "MEMO.BAIRD - 090326 REGULAR COUNCIL SESSION - FILE NO. F26-26427.PDF"
+        }
+      ]
+    }
+  ]
 }
