@@ -2,7 +2,7 @@
   "meetingId": "2929",
   "meetingType": "evening",
   "meetingName": "City Council Budget Public Hearing",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "September 8, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2929&type=agenda&doctype=1",
@@ -10,22 +10,28 @@
     {
       "number": 1,
       "agendaItemId": "26501",
-      "title": "File No. B2027-2\nFirst public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 22, 2025 at 5:01 p.m.)\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa, Florida for the fiscal year beginning October 1, 2026, and ending September 30, 2027; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2027, in the City of Tampa; Providing an effective date.",
-      "rawTitle": "File No. B2027-2\nFirst public hearing regarding the Fiscal Year 2026 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 22, 2025 at 5:01 p.m.)\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa, Florida for the fiscal year beginning October 1, 2026, and ending September 30, 2027; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2027, in the City of Tampa; Providing an effective date.",
+      "title": "File No. B2027-2\nFirst public hearing regarding the Fiscal Year 2027 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 22, 2026 at 5:01 p.m.)\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa, Florida for the fiscal year beginning October 1, 2026, and ending September 30, 2027; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2027, in the City of Tampa; Providing an effective date.",
+      "rawTitle": "File No. B2027-2\nFirst public hearing regarding the Fiscal Year 2027 Budget. (Reading of the first public hearing statement concerning the proposed millage rate.)(Second public hearing to be held on Tuesday, September 22, 2026 at 5:01 p.m.)\n(Ordinance being presented for first reading consideration) - An ordinance adopting the budget of the City of Tampa, Florida for the fiscal year beginning October 1, 2026, and ending September 30, 2027; Providing for the levy as provided by law of a tax on all taxable property in the City of Tampa and fixing the millage within said City; Making appropriations in accordance with the provisions of said budget; Authorizing and directing the Mayor and City Clerk, as the proper authorities of the City of Tampa to certify to the Property Appraiser of Hillsborough County, Florida, the millage to be levied for all purposes for the Fiscal Year 2027, in the City of Tampa; Providing an effective date.",
       "fileNumber": "B2027-2",
       "background": "This ordinance adopts the Fiscal Year 2027 annual budget in accordance with requirements set forth under Florida Statutes Chapter 200 and City of Tampa Charter Article VII. Finances.\n\nIt should be noted that the property tax yield of $396,991,026 represents 95% of taxable value as required under F.S. 200.065(2).",
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2929&itemId=26501&publishId=209505&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2929&itemId=26501&publishId=210106&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET"
         },
         {
           "title": "FY2027 BUDGET ADOPTION ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20BUDGET%20ADOPTION%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2929&itemId=26501&publishId=209506&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20BUDGET%20ADOPTION%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2929&itemId=26501&publishId=210107&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of FY2027 BUDGET ADOPTION ORDINANCE.PDF in a new tab",
           "originalText": "FY2027 BUDGET ADOPTION ORDINANCE.PDF"
+        },
+        {
+          "title": "FY2027 RECOMMENDED BUDGET SUPPLEMENT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20RECOMMENDED%20BUDGET%20SUPPLEMENT.PDF.pdf?documentType=1&meetingId=2929&itemId=26501&publishId=210108&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FY2027 RECOMMENDED BUDGET SUPPLEMENT.PDF in a new tab",
+          "originalText": "FY2027 RECOMMENDED BUDGET SUPPLEMENT.PDF"
         }
       ],
       "folioNumbers": [],

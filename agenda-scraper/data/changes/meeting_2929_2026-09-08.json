@@ -2,5 +2,23 @@
   "meetingId": "2929",
   "meetingDate": "2026-09-08",
   "firstSeenAt": "2026-09-02T23:01:11.121Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-04",
+      "scrapedAt": "2026-09-04T23:01:40.029Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "B2027-2",
+          "filename": "FY2027 RECOMMENDED BUDGET SUPPLEMENT.PDF"
+        }
+      ]
+    }
+  ]
 }
