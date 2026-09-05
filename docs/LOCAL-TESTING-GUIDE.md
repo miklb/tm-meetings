@@ -337,6 +337,6 @@ During the private beta, you can manually authorize emails in your production D1
 
 ## Reference Source Files
 
-- Webhook Handler: [notify.js](file:///Users/miklb/Sites/meetings/site/functions/api/notify.js)
-- Manual Dispatcher: [dispatch-notifications.js](file:///Users/miklb/Sites/meetings/scripts/dispatch-notifications.js)
-- Match Validation CLI: [test-matching.js](file:///Users/miklb/Sites/meetings/scripts/test-matching.js)
+- Webhook Handler: [notify.js](file:///Users/miklb/tampa-monitor/meetings/site/functions/api/notify.js)
+- Manual Dispatcher: [dispatch-notifications.js](file:///Users/miklb/tampa-monitor/meetings/scripts/dispatch-notifications.js)
+- Match Validation CLI: [test-matching.js](file:///Users/miklb/tampa-monitor/meetings/scripts/test-matching.js)

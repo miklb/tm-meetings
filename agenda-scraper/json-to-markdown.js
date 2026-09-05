@@ -19,7 +19,7 @@
  * Usage:
  *   node json-to-markdown.js --date 2026-07-23
  *   node json-to-markdown.js 2815               # meeting id(s)
- *   node json-to-markdown.js --date 2026-07-23 --dest ~/Sites/tm-static/src/posts
+ *   node json-to-markdown.js --date 2026-07-23 --dest ~/tampa-monitor/tm-static/src/posts
  *       [--slug 7-23-26-regular-meeting] [--title "7-23-26 Regular Meeting"]
  */
 

@@ -65,7 +65,7 @@ scripts/build-db.js ─▶ data/meetings.db (SQLite + FTS5) ─▶ site/ (Eleven
 
 Key coupling to know about: `process-agenda.sh` chains scraper → mirror → reconcile → Markdown generation in a fixed order (see Critical rules #1); the Eleventy build reads `data/meetings.db` directly, so DB rebuild must precede site build after data changes (`pipeline/build-site.sh` does both).
 
-This repo also serves as the reference pattern for the Tampa Monitor static rebuild (`~/Sites/tm-static`); the `site/` front end is adopting that shared design system (tokens, BEM, no `wp-*` classes).
+This repo also serves as the reference pattern for the Tampa Monitor static rebuild (`~/tampa-monitor/tm-static`); the `site/` front end is adopting that shared design system (tokens, BEM, no `wp-*` classes).
 
 ## Working conventions
 

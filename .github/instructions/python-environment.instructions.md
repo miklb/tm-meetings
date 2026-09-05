@@ -32,7 +32,7 @@ source pipeline/activate.sh && python3 scripts/build/process_video.py 2651 2026-
 **When running commands via the terminal tool**, always activate first:
 
 ```bash
-cd /Users/miklb/Sites/meetings/transcript-cleaner/processor && source venv/bin/activate && python3 <command>
+cd /Users/miklb/tampa-monitor/meetings/transcript-cleaner/processor && source venv/bin/activate && python3 <command>
 ```
 
 ### Installing packages

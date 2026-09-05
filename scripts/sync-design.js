@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* sync-design.js — one-way design-system sync: tm-static → this repo.
  *
- * tm-static (~/Sites/tm-static, the Monitor build home) is the source of truth
+ * tm-static (~/tampa-monitor/tm-static, the Monitor build home) is the source of truth
  * for the shared design system. This copies the shared CSS files over VERBATIM,
  * so run it whenever tm-static's design layer changes (or before touching the
  * site chrome here). The contract that makes that safe:

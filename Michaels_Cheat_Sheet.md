@@ -20,7 +20,7 @@ npm run agenda -- YYYY-MM-DD --skip-mirror    # skip R2 mirroring
 
 Always re-scrapes (no `--force` needed since 2026-08-20): date runs only touch meetings on that date — other meetings' JSONs and their `mirroredUrl` stamps are left alone — and the mirror step re-stamps right after.
 
-Output: mirrored PDFs on R2, `agenda-scraper/agendas/agenda_YYYY-MM-DD.md` (record copy), and the tm-static post written/updated in `~/Sites/tm-static/src/posts/<year>/` — commit + push tm-static to publish.
+Output: mirrored PDFs on R2, `agenda-scraper/agendas/agenda_YYYY-MM-DD.md` (record copy), and the tm-static post written/updated in `~/tampa-monitor/tm-static/src/posts/<year>/` — commit + push tm-static to publish.
 
 ## Tuesday — Archive the meeting
 
