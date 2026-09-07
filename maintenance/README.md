@@ -24,8 +24,8 @@ Gaps it didn't cover (addressed by the checklists here):
    Weekly green-check is the fix.
 2. **No trigger mechanism / "last done" tracking.** A policy `.md` never
    pings you. Same NotePlan integration as toolshed (below).
-3. **Un-cadenced npm surface.** Three package dirs with fast-movers
-   (`selenium-webdriver`, `yt-dlp`) need a real
+3. **Un-cadenced npm surface.** Three package dirs with a fast-mover
+   (`yt-dlp`) need a real
    monthly `npm outdated` / `npm audit` rhythm — cleared to zero findings
    July 2026, needs the cadence to stay there.
 4. **Version drift vs. toolshed.** Node was 20 (EOL) vs. 26; Python pins

@@ -8,7 +8,7 @@ A civic transparency platform for Tampa City Council meeting agendas, transcript
 
 ### Agenda Scraper (`agenda-scraper/`)
 
-Fetches structured agenda data from Hyland OnBase. Outputs JSON data files + WordPress block HTML. ~48 meetings scraped (July 2025 – March 2026).
+Fetches structured agenda data from Hyland OnBase. Outputs JSON data files + a Markdown post for tm-static (WordPress publication retired 2026-07-17). ~48 meetings scraped (July 2025 – March 2026).
 
 Capabilities: file numbers, titles, backgrounds, documents (with R2 mirroring), locations, coordinates, dollar amounts. Meeting types: Regular, Evening, CRA, Special, Workshop. Preserves `mirroredUrl` across re-scrapes via existing-JSON lookup.
 
@@ -408,7 +408,7 @@ Canonical match key: `(date, meeting_type)`. Both systems cover the same meeting
 | API                   | D1 + Workers over Datasette   | $0, serverless, no VPS ops; D1 lacks FTS5 but Pagefind covers user search |
 | Documents             | Cloudflare R2                 | Operational, custom domain `docs.meetings.tampamonitor.com`               |
 | Hosting               | Cloudflare Pages              | Free, global CDN                                                          |
-| WordPress output      | Keep until subdomain launches | Current publication method                                                |
+| WordPress output      | Retired 2026-07-17            | Markdown-to-tm-static (`json-to-markdown.js`) is now the publication method |
 | Video archiving       | Not needed                    | Tampa TV retains videos on YouTube                                        |
 | Accessibility         | WCAG 2.1 AA minimum           | Non-negotiable first priority                                             |
 

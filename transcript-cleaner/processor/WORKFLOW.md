@@ -136,7 +136,7 @@ After processing transcripts and/or video mappings, rebuild the SQLite database 
 # Or run each step directly
 node scripts/build-db.js              # Rebuild SQLite from JSON + video mappings
 cd site && npx @11ty/eleventy         # Regenerate HTML pages
-wrangler pages deploy site/_site --project-name tampa-meetings  # Deploy
+npm run deploy    # cd site && wrangler pages deploy — must run from site/ so functions/ is bundled
 ```
 
 `build-db.js` reads processed transcripts and `video_mapping_*.json` files, imports them into `data/meetings.db`, and links videos to meetings via `transcript_source_id`. The Eleventy build then reads from the database to generate meeting pages with embedded video players.
@@ -175,8 +175,7 @@ transcript-cleaner/processor/
 │   ├── capitalize_transcript.py      # ALL CAPS → sentence case with NER
 │   ├── meeting_type_detector.py      # Auto-detects CRA/Workshop/Evening/CC
 │   ├── youtube_fetcher.py            # YouTube Data API search
-│   ├── transcript_gap_detector.py    # Detects multi-part boundaries
-│   └── html_generator.py            # Generates HTML with video timestamps
+│   └── transcript_gap_detector.py    # Detects multi-part boundaries
 ├── scripts/build/
 │   ├── process_video.py              # Unified video pipeline
 │   ├── match_whisper_to_transcript.py # Whisper offset calculation

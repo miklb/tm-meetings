@@ -11,7 +11,7 @@ This document provides context and guidelines for AI assistants working on this 
 1. **Agenda Scraper** (Node.js) — Extracts structured data from Hyland OnBase meeting system
 2. **Transcript Processor** (Python) — Converts ALL CAPS transcripts to sentence case with NER
 3. **Static Site** (Eleventy) — Generates accessible HTML pages
-4. **API** (Datasette) — Serves meeting data as JSON
+4. **API** (Cloudflare D1, post-launch) — Serves meeting data as JSON via `site/functions/api/*`
 
 ---
 
@@ -22,14 +22,14 @@ This document provides context and guidelines for AI assistants working on this 
 | Component   | Technology       | Why                                |
 | ----------- | ---------------- | ---------------------------------- |
 | Static Site | Eleventy         | Simple, fast, template flexibility |
-| API         | Datasette        | Zero-code JSON API from SQLite     |
+| API         | Cloudflare D1 (post-launch) | Serverless, no VPS ops; replaced an earlier Datasette plan |
 | Hosting     | Cloudflare Pages | Free, global CDN                   |
 | Documents   | Cloudflare R2    | S3-compatible, free egress         |
-| Database    | SQLite           | Single file, portable, FTS5 search |
+| Database    | SQLite           | Single file, portable              |
 
 ### Code Patterns
 
-- **Accessibility first** — WCAG 2.1 AA is the primary constraint
+- **Accessibility first** — WCAG 2.2 AA is the primary constraint
 - **Semantic HTML** — No divitis; use proper elements
 - **Native web components** — Prefer vanilla JS over frameworks
 - **Progressive enhancement** — Core content works without JS
@@ -41,17 +41,19 @@ This document provides context and guidelines for AI assistants working on this 
 
 ```
 tampa-meetings/
-├── pipeline/           # Data processing (Node.js + Python)
-│   ├── scrapers/       # Web scraping
-│   ├── processors/     # NER, case conversion
-│   └── scripts/        # Utilities
-├── site/               # Eleventy static site
-│   ├── src/            # Templates
-│   └── public/         # Static assets
-├── data/               # Scraped data
-│   ├── agendas/        # JSON files
-│   └── meetings.db     # SQLite
-└── docs/               # Documentation
+├── agenda-scraper/          # Node.js: OnBase scrape → R2 mirror → Markdown post (lib/ has the parsers)
+├── transcript-cleaner/
+│   └── processor/           # Python: ALL-CAPS → sentence case, NER, YouTube video/offset sync (src/, scripts/)
+├── opengov/                 # Python: OpenGov CoA reconciliation → per-meeting funding manifest
+├── pipeline/                # Orchestration: discover.py, archive-meeting.sh, build-site.sh, activate.sh
+├── scripts/                 # Root Node scripts: build-db.js, dispatch-notifications.js, verify/audit tools
+├── site/                    # Eleventy static site
+│   ├── src/                 # Templates, data, styles
+│   ├── functions/api/       # Cloudflare Pages Functions (D1-backed API)
+│   └── migrations/          # D1 schema migrations
+├── data/                    # meetings.db (SQLite, gitignored — rebuild with `npm run build-db`)
+├── docs/                    # Documentation, plans/ (gitignored)
+└── archive/                 # Retired docs and one-off scripts kept for reference
 ```
 
 ---
@@ -255,7 +257,7 @@ This runs in order:
 3. `python3 -m opengov.reconcile` — reconciles PROJECTED COSTS rows against the OpenGov CoA and writes `opengov/data/reports/<meetingId>-<date>-funding-manifest.json`
 4. `json-to-markdown.js` — generates the tm-static markdown post (`docs/plans/AGENDA-MARKUP.md`) using the mirrored URLs and the funding manifest; writes `agendas/agenda_<date>.md` and updates the post in `$TM_STATIC_POSTS_DIR`
 
-**WordPress generation was retired 2026-07-17.** `json-to-wordpress.js` still exists (frozen; the migrated posts on the WP-era site were produced by it) but is no longer in the pipeline. The markdown emitter is the sole published output.
+**WordPress generation was retired 2026-07-17.** `json-to-wordpress.js` was deleted 2026-09-07. The markdown emitter (`json-to-markdown.js`) is the sole published output.
 
 **Why this matters:** Running `json-scraper.js` directly overwrites the meeting JSON and erases all `mirroredUrl` fields that `mirror-documents.js` previously stamped in. The agenda output will then link to the original OnBase URLs instead of the stable R2 mirrors. Skipping the reconciliation step makes the per-item Financial impact sections silently disappear from the output.
 
@@ -275,9 +277,12 @@ If you need to re-parse land-use staff reports only (e.g. after improving `staff
 
 ### Adding a New Meeting Type
 
-1. Update `MEETING_TYPES` constant in `pipeline/scrapers/config.js`
-2. Add parsing rules if format differs
-3. Update Eleventy filters for display
+There is no single `MEETING_TYPES` constant — detection happens at each stage:
+
+1. `agenda-scraper/lib/http-meeting-scraper.js` — infers `meetingType` (regular/evening/workshop/special/cra) from the OnBase page during scraping
+2. `scripts/build-db.js` — `VIDEO_MEETING_TYPE_MAP` maps video-mapping/OnBase type labels to the `meetings.meeting_type` slug; `inferTypeFromItems` and `inferMeetingType` cross-check against file-number prefixes and transcript/video data
+3. `transcript-cleaner/processor/src/meeting_type_detector.py` — auto-detects CRA/Workshop/Evening/City Council from transcript text for the video pipeline
+4. Update Eleventy filters/templates for display if the new type needs its own badge or label
 
 ### Debugging Scrape Failures
 
@@ -285,11 +290,10 @@ If you need to re-parse land-use staff reports only (e.g. after improving `staff
 2. Look for rate limiting (add delays)
 3. Check for JavaScript-rendered content (may need Playwright)
 
-### Updating Datasette Schema
+### Rebuilding the Database
 
-1. Modify table creation in `pipeline/scripts/build-database.py`
-2. Rebuild database: `python pipeline/scripts/build-database.py`
-3. Redeploy: `./pipeline/scripts/deploy-datasette.sh`
+1. `npm run build-db` (runs `node scripts/build-db.js`) — reads agenda JSON, processed transcripts, and video mappings; writes `data/meetings.db`
+2. Run before `cd site && npm run build` any time the DB is missing or stale (it is gitignored, not committed)
 
 ---
 
@@ -306,10 +310,9 @@ If you need to re-parse land-use staff reports only (e.g. after improving `staff
 
 ### Automated Checks
 
-```bash
-# Lint JavaScript
-npm run lint
+There is no lint script and no test suite. Verification is:
 
+```bash
 # Build site (catches template errors)
 cd site && npm run build
 
@@ -317,19 +320,22 @@ cd site && npm run build
 npx pa11y-ci ./site/_site/**/*.html
 ```
 
+plus the manual testing checklist above.
+
 ---
 
 ## Python Environment
 
-All Python code runs from a single virtualenv at `transcript-cleaner/processor/venv/`.
+There are **two separate venvs — never mix them:**
 
-**Always activate before running any Python command:**
+- **Pipeline / transcript / video work** runs from `transcript-cleaner/processor/venv/`. Activate with:
 
-```bash
-source pipeline/activate.sh
-```
+  ```bash
+  source pipeline/activate.sh
+  ```
 
-This applies to transcript processing, video pipeline, entity rebuilds, and any `pip install`. Scripts like `archive-meeting.sh` and `discover.py` auto-activate, but running Python scripts directly (e.g., `python3 src/youtube_fetcher.py` or `python3 scripts/build/process_video.py`) requires manual activation first.
+  This applies to transcript processing, video pipeline, entity rebuilds, and any `pip install` for that stack. Scripts like `archive-meeting.sh` and `discover.py` auto-activate, but running Python scripts directly (e.g., `python3 src/youtube_fetcher.py` or `python3 scripts/build/process_video.py`) requires manual activation first.
+- **OpenGov work** runs from the repo-root `.venv/`. Activate with `source .venv/bin/activate`, then run `python3 -m opengov.<module>` from the repo root. See [.github/instructions/opengov.instructions.md](instructions/opengov.instructions.md).
 
 ---
 
@@ -339,7 +345,7 @@ This applies to transcript processing, video pipeline, entity rebuilds, and any 
 | ---------------- | ------------------ | ------------------------------------------------- |
 | Cloudflare Pages | Static hosting     | Managed in CF dashboard                           |
 | Cloudflare R2    | Document storage   | `S3_*` env vars, `docs.meetings.tampamonitor.com` |
-| Vultr VPS        | Datasette hosting  | SSH key                                           |
+| Cloudflare D1    | API database (post-launch) | Managed in CF dashboard, synced via Wrangler |
 | YouTube Data API | Chapter extraction | `YOUTUBE_API_KEY` env var                         |
 
 ---
@@ -357,7 +363,8 @@ The transcript processor includes a video pipeline that matches YouTube recordin
 | `scripts/build/match_whisper_to_transcript.py` | Whisper-based offset calculation, auto-saves to mapping                          |
 | `scripts/build/transcribe_with_whisper.py`     | Standalone Whisper transcription                                                 |
 | `src/transcript_gap_detector.py`               | Detects multi-part boundaries from timestamp gaps, saves `transcript_start_time` |
-| `src/html_generator.py`                        | Generates HTML pages with video-synced timestamps                                |
+
+Transcript and video HTML is no longer generated by a standalone script (`src/html_generator.py` was deleted 2026-09-07); the Eleventy site renders transcripts and video directly from `data/meetings.db` (`site/src/_includes/transcript.njk`, `video.njk`).
 
 ### Design constraints
 
@@ -415,4 +422,4 @@ Before making significant changes, consider:
 
 ---
 
-_Last updated: March 8, 2026_
+_Last updated: September 7, 2026_

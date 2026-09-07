@@ -1,11 +1,14 @@
 ---
-applyTo: "**/*.py"
+applyTo: "transcript-cleaner/**/*.py,pipeline/**/*.py,scripts/**/*.py"
 description: "Python environment setup — venv activation, correct python binary, environment variables. USE WHEN: running any Python script, installing packages, debugging import errors, or suggesting Python commands."
 ---
 
 ## Python Virtual Environment
 
-This project uses a single Python venv at `transcript-cleaner/processor/venv/`.
+This applies to the **pipeline / transcript / video** venv at
+`transcript-cleaner/processor/venv/`. `opengov/` is a separate Python tool
+with its own venv at the repo-root `.venv/` — see
+[opengov.instructions.md](opengov.instructions.md). Never mix the two.
 
 ### Running Python commands
 

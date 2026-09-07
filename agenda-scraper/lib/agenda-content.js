@@ -2,12 +2,9 @@
  * Shared agenda content helpers — emitter-agnostic.
  *
  * These functions clean and structure scraped agenda text without committing
- * to any output dialect. Both emitters use them:
- *   - json-to-wordpress.js  (WP block HTML, legacy — retires with WordPress)
- *   - json-to-markdown.js   (Markdown + front matter for tm-static)
- *
- * Moved out of json-to-wordpress.js so the WP emitter can be deleted wholesale
- * when the migration lands.
+ * to any output dialect. Used by json-to-markdown.js (Markdown + front
+ * matter for tm-static). WordPress generation (json-to-wordpress.js) was
+ * retired 2026-07-17.
  */
 
 'use strict';

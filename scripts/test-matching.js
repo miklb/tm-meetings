@@ -245,10 +245,13 @@ if (subscribersList.length === 0) {
     console.log();
   }
 
-  // Save report file
-  const reportPath = path.join(repoRoot, 'docs/TEST-MATCHING-RESULTS.md');
+  // Save report file (docs/plans/ is gitignored — this report can contain
+  // subscriber emails and shouldn't be tracked)
+  const reportDir = path.join(repoRoot, 'docs/plans');
+  fs.mkdirSync(reportDir, { recursive: true });
+  const reportPath = path.join(reportDir, 'TEST-MATCHING-RESULTS.md');
   fs.writeFileSync(reportPath, reportMarkdown);
-  console.log(`Report successfully written to docs/TEST-MATCHING-RESULTS.md`);
+  console.log(`Report successfully written to docs/plans/TEST-MATCHING-RESULTS.md`);
 }
 d1Db.close();
 meetingsDb.close();

@@ -7,7 +7,8 @@ consecutive segment timestamps to find gaps > a configurable threshold,
 then maps each gap to a video part boundary.
 
 The detected gaps populate `transcript_start_time` in the video mapping JSON,
-which html_generator.py uses to assign segments to the correct video part.
+used to assign segments to the correct video part when rendering transcripts
+(the Eleventy site reads segments from data/meetings.db).
 """
 
 import json

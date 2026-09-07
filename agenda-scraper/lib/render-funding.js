@@ -1,11 +1,9 @@
 /**
- * Render OpenGov funding data as WordPress block markup.
+ * Render OpenGov funding data as HTML for the agenda Markdown emitter.
  *
- * Two surfaces:
- *   1. renderAgendaFundingOverview(manifest) — single block at top of agenda
- *   2. renderItemFinancialSection(fundingItem) — section nested inside each
- *      agenda item's "Item details" <details> drawer (no <details> wrapper of
- *      its own; the caller composes the drawer).
+ * renderItemFinancialSection(fundingItem) — section nested inside each
+ * agenda item's "Item details" <details> drawer (no <details> wrapper of
+ * its own; the caller composes the drawer).
  *
  * Source of truth: the funding manifest produced by `opengov/reconcile.py`
  * from the structured PROJECTED COSTS rows extracted by
@@ -95,20 +93,10 @@ function itemHasFinancialData(fundingItem) {
 // ------------------------------------------------------------------
 
 /**
- * Wrap a plain HTML section for the requested emitter dialect.
- * The WP emitter needs wp:html block comments; the markdown emitter takes
- * the section verbatim.
- */
-function wrapSection(html, { wpWrap = true } = {}) {
-    if (!wpWrap) return html;
-    return `<!-- wp:html -->\n${html}\n<!-- /wp:html -->`;
-}
-
-/**
  * Fallback render when projected costs exist but no account codes resolved
  * (e.g. "Controlled by Requisition" items with no CoA match).
  */
-function renderRawProjectedCosts(rawCosts, options = {}) {
+function renderRawProjectedCosts(rawCosts) {
     if (!rawCosts || !rawCosts.hasProjectedCosts) return '';
 
     const fisHtml = rawCosts.fiscalImpactStatement
@@ -127,15 +115,15 @@ function renderRawProjectedCosts(rawCosts, options = {}) {
 
     if (!fisHtml && !rawHtml) return '';
 
-    return wrapSection(`<section class="agenda-item-financial" aria-label="Financial impact">
+    return `<section class="agenda-item-financial" aria-label="Financial impact">
 <h4 class="agenda-item-section__heading">Financial impact</h4>
 ${fisHtml}
 ${rawHtml}
-</section>`, options);
+</section>`;
 }
 
-function renderItemFinancialSection(fundingItem, rawProjectedCosts, options = {}) {
-    if (!itemHasResolvedFunding(fundingItem)) return renderRawProjectedCosts(rawProjectedCosts, options);
+function renderItemFinancialSection(fundingItem, rawProjectedCosts) {
+    if (!itemHasResolvedFunding(fundingItem)) return renderRawProjectedCosts(rawProjectedCosts);
 
     const totals = fundingItem.totals || {};
     const committed = totals.committed || {};
@@ -322,221 +310,20 @@ function renderItemFinancialSection(fundingItem, rawProjectedCosts, options = {}
 
     const warningHtml = [coaWarningHtml, imbalanceWarningHtml].filter(Boolean).join('\n');
 
-    return wrapSection(`<section class="agenda-item-financial" aria-labelledby="financial-${escapeHtml(fundingItem.agendaItemId)}">
+    return `<section class="agenda-item-financial" aria-labelledby="financial-${escapeHtml(fundingItem.agendaItemId)}">
 <h4 id="financial-${escapeHtml(fundingItem.agendaItemId)}" class="agenda-item-section__heading">Financial impact</h4>
 ${fisHtml}
 ${totalsHtml ? `<dl class="agenda-item-financial__totals">${totalsHtml}</dl>` : ''}
 ${futureHtml}
 ${sourcesHtml}
 ${warningHtml}
-</section>`, options);
-}
-
-// ------------------------------------------------------------------
-// Top-of-agenda overview
-// ------------------------------------------------------------------
-
-/**
- * Sum the gross dollar magnitude of all rows on a funding item, regardless
- * of type. This is the "size" of an item from a layperson's perspective:
- * how many dollars does this resolution move? A grant acceptance and a
- * contract award of the same value rank equally.
- */
-function _itemGrossMagnitude(item) {
-    const rows = item.rows || [];
-    return rows.reduce((s, r) => s + Math.abs(r.value || 0), 0);
-}
-
-/**
- * Trim the resolution title to a short blurb for the biggest-items list.
- * The manifest's `title` field is the agenda body text which often starts
- * with the file-number line, plus "(Part N of M)" parenthetical, plus
- * boilerplate like "Resolution approving an agreement...". Strip all of
- * those so the snippet is purely the substantive description, then cap.
- */
-function _shortenTitle(title) {
-    if (!title) return '';
-    let s = String(title).trim();
-    // Drop leading "File No. XXX-NNNNN" line if present.
-    s = s.replace(/^File\s+No\.\s+\S+\s*/i, '');
-    // Repeatedly drop leading parenthetical lead-ins like
-    // "(Part 2 of 2)" "(See Item )" "(Placed under Staff Reports…)".
-    // City staff often chain two or three of these on budget items.
-    let prev;
-    do {
-        prev = s;
-        s = s.replace(/^\s*\([^)]*\)\s*/, '');
-    } while (s !== prev);
-    // Drop common resolution lead-in verbs.
-    s = s.replace(/^Resolution\s+(approving|authorizing|making|adopting|accepting|amending|consenting)\s+/i, '');
-    s = s.replace(/\s+/g, ' ').trim();
-    if (s.length > 140) s = s.slice(0, 137).replace(/\s+\S*$/, '') + '…';
-    return s;
-}
-
-function renderAgendaFundingOverview(manifest) {
-    if (!manifest || !manifest.summary) return '';
-    const summary = manifest.summary;
-    const totals = summary.totals || {};
-    const committed = totals.committed || {};
-    const future = totals.future || {};
-    const headlineFy = totals.headlineFiscalYear || null;
-
-    const spendingAuthorized = committed.expenditures || 0;
-    const revenueAccepted = committed.revenues || 0;
-    const spendingReduced = committed.decreases || 0;
-    const revenueReduced = committed.revenueDecreases || 0;
-
-    const hasAnyDollars =
-        spendingAuthorized || revenueAccepted || spendingReduced || revenueReduced ||
-        future.expenditures || future.decreases || future.revenues || future.revenueDecreases;
-    if (!hasAnyDollars) return '';
-
-    const itemsWithFunding = (manifest.items || []).filter(itemHasResolvedFunding).length;
-
-    let trulyUnknownItems = 0;
-    const unknownCodes = new Set();
-    for (const it of manifest.items || []) {
-        let itemHasUnknown = false;
-        for (const r of it.rows || []) {
-            const segs = r.unresolved || [];
-            if (!segs.length) continue;
-            const e = r.enriched || {};
-            if (e.fund && e.department && e.object && !e.project) continue;
-            itemHasUnknown = true;
-            for (const u of segs) unknownCodes.add(u);
-        }
-        if (itemHasUnknown) trulyUnknownItems += 1;
-    }
-
-    // Two plain-language headline numbers. No netting; revenue and
-    // expenditures are not opposites to a layperson — they are different
-    // categories of dollars Council is approving today.
-    const fyTag = headlineFy ? ` (${headlineFy})` : '';
-    const headlineRows = [];
-    if (spendingAuthorized) {
-        headlineRows.push(
-            `<div class="agenda-funding-overview__stat"><dt>Spending authorized${escapeHtml(fyTag)}</dt><dd>${escapeHtml(formatMoney(spendingAuthorized, { compact: true }))}</dd></div>`
-        );
-    }
-    if (revenueAccepted) {
-        headlineRows.push(
-            `<div class="agenda-funding-overview__stat"><dt>Grants &amp; revenue accepted${escapeHtml(fyTag)}</dt><dd>${escapeHtml(formatMoney(revenueAccepted, { compact: true }))}</dd></div>`
-        );
-    }
-    if (spendingReduced) {
-        headlineRows.push(
-            `<div class="agenda-funding-overview__stat"><dt>Spending reduced${escapeHtml(fyTag)}</dt><dd>${escapeHtml(formatMoney(spendingReduced, { compact: true }))}</dd></div>`
-        );
-    }
-    if (revenueReduced) {
-        headlineRows.push(
-            `<div class="agenda-funding-overview__stat"><dt>Revenue reduced${escapeHtml(fyTag)}</dt><dd>${escapeHtml(formatMoney(revenueReduced, { compact: true }))}</dd></div>`
-        );
-    }
-    const statsHtml = headlineRows.length
-        ? `<dl class="agenda-funding-overview__stats">${headlineRows.join('')}</dl>`
-        : '';
-
-    // Biggest items — a layperson-friendly answer to "what costs the most
-    // this week?". Ranked by gross dollar magnitude, item number first so
-    // a reader can jump straight to it.
-    const allRanked = (manifest.items || [])
-        .filter(itemHasResolvedFunding)
-        .map(it => ({ item: it, gross: _itemGrossMagnitude(it) }))
-        .filter(x => x.gross > 0)
-        .sort((a, b) => b.gross - a.gross);
-    const ranked = allRanked.slice(0, 5);
-    const smallest = allRanked.length ? allRanked[allRanked.length - 1] : null;
-    const biggest = allRanked.length ? allRanked[0] : null;
-
-    // Range sentence — copy-paste-ready prose for the meeting preview.
-    // Format mirrors how the user writes intros: "Council will be approving
-    // X items this week ranging from $A (item N, short title) to
-    // $B (item M, short title)." Only show when biggest != smallest.
-    const rangeSentence = (biggest && smallest && biggest !== smallest)
-        ? `Council will consider ${itemsWithFunding} item${itemsWithFunding === 1 ? '' : 's'} with budget detail this week, ranging from <strong>${escapeHtml(formatMoney(biggest.gross, { compact: true }))}</strong> (Item ${escapeHtml(String(biggest.item.itemNumber))} · ${escapeHtml(_shortenTitle(biggest.item.title)).slice(0, 80)}…) down to <strong>${escapeHtml(formatMoney(smallest.gross))}</strong> (Item ${escapeHtml(String(smallest.item.itemNumber))} · ${escapeHtml(_shortenTitle(smallest.item.title)).slice(0, 80)}…).`
-        : '';
-    const rangeHtml = rangeSentence
-        ? `<p class="agenda-funding-overview__range">${rangeSentence}</p>`
-        : '';
-
-    const biggestItemsHtml = ranked.length
-        ? `<h4 class="agenda-funding-overview__biggest-heading">Biggest items this meeting</h4>
-<ol class="agenda-funding-overview__biggest">
-${ranked.map(({ item, gross }) => {
-    const num = item.itemNumber != null ? `Item ${item.itemNumber}` : '';
-    const file = item.fileNumber ? `File No. ${item.fileNumber}` : '';
-    const meta = [num, file].filter(Boolean).join(' · ');
-    const linkTarget = item.agendaItemId ? `#item-${escapeHtml(item.agendaItemId)}` : '';
-    const titleHtml = linkTarget
-        ? `<a href="${linkTarget}">${escapeHtml(_shortenTitle(item.title))}</a>`
-        : escapeHtml(_shortenTitle(item.title));
-    return (
-        `<li class="agenda-funding-overview__biggest-item">` +
-            `<span class="agenda-funding-overview__biggest-amount">${escapeHtml(formatMoney(gross, { compact: true }))}</span>` +
-            `<span class="agenda-funding-overview__biggest-meta">${escapeHtml(meta)}</span>` +
-            `<span class="agenda-funding-overview__biggest-title">${titleHtml}</span>` +
-        `</li>`
-    );
-}).join('\n')}
-</ol>`
-        : '';
-
-    // Smallest item — a single-line sibling to the biggest list, calling
-    // out the floor of the range so the reader can see the spread.
-    const smallestHtml = (smallest && smallest !== biggest)
-        ? (() => {
-            const item = smallest.item;
-            const num = item.itemNumber != null ? `Item ${item.itemNumber}` : '';
-            const file = item.fileNumber ? `File No. ${item.fileNumber}` : '';
-            const meta = [num, file].filter(Boolean).join(' · ');
-            const linkTarget = item.agendaItemId ? `#item-${escapeHtml(item.agendaItemId)}` : '';
-            const titleHtml = linkTarget
-                ? `<a href="${linkTarget}">${escapeHtml(_shortenTitle(item.title))}</a>`
-                : escapeHtml(_shortenTitle(item.title));
-            return `<p class="agenda-funding-overview__smallest"><strong>Smallest item with budget detail:</strong> <span class="agenda-funding-overview__smallest-amount">${escapeHtml(formatMoney(smallest.gross))}</span> · <span class="agenda-funding-overview__smallest-meta">${escapeHtml(meta)}</span> · <span class="agenda-funding-overview__smallest-title">${titleHtml}</span></p>`;
-        })()
-        : '';
-
-    const futureGross =
-        (future.expenditures || 0) +
-        (future.decreases || 0) +
-        (future.revenues || 0) +
-        (future.revenueDecreases || 0);
-    const futureLine = futureGross
-        ? `<p class="agenda-funding-overview__future">Plus <strong>${escapeHtml(formatMoney(futureGross, { compact: true }))}</strong> in future-year amounts subject to annual Council approval.</p>`
-        : '';
-
-    const warning = trulyUnknownItems
-        ? `<p class="agenda-funding-overview__warning" role="note">${trulyUnknownItems} item${trulyUnknownItems === 1 ? '' : 's'} reference ${unknownCodes.size} account code${unknownCodes.size === 1 ? '' : 's'} not yet published in the City's public chart of accounts.</p>`
-        : '';
-
-    const itemsLine = `<p class="agenda-funding-overview__count"><small>Across ${itemsWithFunding} item${itemsWithFunding === 1 ? '' : 's'} on the agenda with budget detail.</small></p>`;
-
-    return `
-<!-- wp:group {"className":"agenda-funding-overview"} -->
-<div class="wp-block-group agenda-funding-overview">
-<!-- wp:html -->
-<h3 class="agenda-funding-overview__heading">What's being approved <span class="agenda-funding-overview__beta" title="This summary is generated automatically from agenda Summary Sheets and is still being refined.">Beta</span></h3>
-${rangeHtml}
-${statsHtml}
-${futureLine}
-${biggestItemsHtml}
-${smallestHtml}
-${itemsLine}
-${warning}
-<!-- /wp:html -->
-</div>
-<!-- /wp:group -->
-`;
+</section>`;
 }
 
 module.exports = {
     loadFundingManifest,
     buildFundingByItemId,
     renderItemFinancialSection,
-    renderAgendaFundingOverview,
     itemHasResolvedFunding,
     itemHasFinancialData,
     formatMoney,

@@ -1,17 +1,11 @@
-const { Builder, By, until } = require('selenium-webdriver');
-const cheerio = require('cheerio');
 const fs = require('fs');
 const path = require('path');
-const axios = require('axios');
-const pdfParse = require('pdf-parse');
-const { toTitleCase } = require('./format-helpers');
 const { integrateStaffReportsIntoAgendaItems } = require('./staff-report-parser');
 const { loadChangeLog, saveChangeLog, appendOrMergeEntry } = require('./lib/change-log');
 const { computeMeetingDiff, diffIsEmpty } = require('./lib/diff-meeting');
 
 // HTTP scraper module (default)
 const { createSession, fetchMeeting, fetchMeetingList } = require('./lib/http-meeting-scraper');
-const { AGENDA_BASE } = require('./lib/http-utils');
 
 /**
  * Format a date string for use in filenames (converts to YYYY-MM-DD format)
@@ -130,191 +124,6 @@ function formatBackgroundText(text) {
 }
 
 /**
- * Convert relative URL to direct PDF URL for downloading
- * @param {string} downloadFileUrl - Original download file URL
- * @returns {string} - Direct PDF URL
- */
-function convertToDirectPDFUrl(downloadFileUrl) {
-    // Convert DownloadFile to DownloadFileBytes for direct PDF access
-    if (downloadFileUrl.includes('DownloadFile') && !downloadFileUrl.includes('DownloadFileBytes')) {
-        return downloadFileUrl.replace('DownloadFile', 'DownloadFileBytes');
-    }
-    return downloadFileUrl;
-}
-
-/**
- * Extract background text from a PDF using the browser session with retry logic
- * @param {WebDriver} driver - Selenium WebDriver instance
- * @param {string} pdfRelativeUrl - Relative URL to the PDF
- * @returns {Promise<string>} - Extracted background text
- */
-async function extractBackgroundFromPDFWithBrowser(driver, pdfRelativeUrl) {
-    const maxRetries = 2;
-    let lastError;
-    
-    for (let attempt = 1; attempt <= maxRetries; attempt++) {
-        try {
-            return await extractBackgroundFromPDFAttempt(driver, pdfRelativeUrl);
-        } catch (error) {
-            lastError = error;
-            if (error.message.includes('timeout') || error.message.includes('ETIMEDOUT')) {
-                console.log(`PDF extraction attempt ${attempt}/${maxRetries} failed due to timeout (server may be slow): ${error.message}`);
-            } else {
-                console.log(`PDF extraction attempt ${attempt}/${maxRetries} failed: ${error.message}`);
-            }
-            
-            if (attempt < maxRetries) {
-                const delay = attempt * 3000; // Increased to 3s, then 6s delay for slow server days
-                console.log(`Retrying in ${delay}ms...`);
-                await new Promise(resolve => setTimeout(resolve, delay));
-            }
-        }
-    }
-    
-    // If all retries failed, throw the last error
-    throw lastError;
-}
-
-/**
- * Single attempt to extract background text from a PDF using the browser session
- * @param {WebDriver} driver - Selenium WebDriver instance
- * @param {string} pdfRelativeUrl - Relative URL to the PDF
- * @returns {Promise<string>} - Extracted background text
- */
-async function extractBackgroundFromPDFAttempt(driver, pdfRelativeUrl) {
-    try {
-        // Convert to direct PDF URL first
-        const directPdfUrl = convertToDirectPDFUrl(pdfRelativeUrl);
-        
-        // Navigate to the PDF URL to trigger download
-        const fullPdfUrl = directPdfUrl.startsWith('http') 
-            ? directPdfUrl 
-            : 'https://tampagov.hylandcloud.com' + directPdfUrl.replace(/&amp;/g, '&');
-        
-        // Get current cookies from the browser
-        const cookies = await driver.manage().getCookies();
-        
-        // Create cookie string for axios
-        const cookieString = cookies.map(cookie => `${cookie.name}=${cookie.value}`).join('; ');
-        
-        // Try to download with browser session
-        const response = await axios.get(fullPdfUrl, {
-            responseType: 'arraybuffer',
-            timeout: 90000, // Increased to 90s for slow PDF loading days
-            headers: {
-                'User-Agent': await driver.executeScript('return navigator.userAgent'),
-                'Cookie': cookieString,
-                'Referer': await driver.getCurrentUrl()
-            }
-        });
-        
-        // Check if this is actually a PDF
-        const pdfHeader = Buffer.from(response.data.slice(0, 10)).toString('ascii');
-        if (!pdfHeader.startsWith('%PDF')) {
-            return '';
-        }
-        
-        // Suppress pdf-parse warnings (TT font warnings) by temporarily redirecting stderr
-        const originalStderrWrite = process.stderr.write;
-        process.stderr.write = () => {};
-
-        // Parse the PDF
-        const pdfData = await pdfParse(response.data);
-
-        // Restore stderr
-        process.stderr.write = originalStderrWrite;
-
-        const text = pdfData.text;
-
-        // Use the shared, header-aware extractor (handles BACKGROUND /
-        // BACKGROUND INFORMATION / PROJECT BACKGROUND and stops only at
-        // uppercase section labels).
-        const { extractBackgroundSection } = require('./lib/summary-sheet-parser');
-        const raw = extractBackgroundSection(text);
-        if (raw) {
-            const cleaned = formatBackgroundText(
-                raw.replace(/[\f\r]/g, '').replace(/\s*\n\s*/g, '\n').trim()
-            );
-            if (cleaned && cleaned.length > 20) {
-                return cleaned;
-            }
-        }
-
-        return '';
-        
-    } catch (error) {
-        console.error(`Error extracting background: ${error.message}`);
-        return '';
-    }
-}
-
-/**
- * Extract meeting date from the first summary sheet PDF
- * @param {Array} supportingDocs - Array of supporting documents for all items
- * @returns {Promise<string>} - Meeting date in MM/DD/YYYY format or empty string
- */
-async function extractMeetingDateFromFirstPDF(supportingDocs) {
-    try {
-        // Find the first summary sheet PDF from any agenda item
-        for (let i = 0; i < supportingDocs.length; i++) {
-            const docs = supportingDocs[i];
-            if (docs && docs.length > 0) {
-                for (const doc of docs) {
-                    if (doc.text && doc.text.toLowerCase().includes('summary sheet') && 
-                        doc.href && doc.href.includes('.pdf')) {
-                        
-                        // Download and parse the PDF
-                        const pdfUrl = doc.href.startsWith('http') ? 
-                            doc.href : 
-                            'https://tampagov.hylandcloud.com' + doc.href.replace(/&amp;/g, '&');
-                        
-                        const response = await axios.get(pdfUrl, { responseType: 'arraybuffer' });
-                        
-                        // Suppress pdf-parse warnings (TT font warnings) by temporarily redirecting stderr
-                        const originalStderrWrite = process.stderr.write;
-                        process.stderr.write = () => {};
-
-                        const pdfData = await pdfParse(response.data);
-
-                        // Restore stderr
-                        process.stderr.write = originalStderrWrite;
-                        
-                        // console.log(`\n=== PDF Date Extraction Debug ===`);
-                        // console.log(`PDF URL: ${pdfUrl}`);
-                        // console.log(`PDF Text preview: ${pdfData.text.substring(0, 500)}...`);
-                        
-                        // Look for "Requested Meeting Date:" pattern
-                        const dateMatch = pdfData.text.match(/Requested Meeting Date:\s*(\d{1,2}\/\d{1,2}\/\d{4})/i);
-                        if (dateMatch) {
-                            // console.log(`Found "Requested Meeting Date": ${dateMatch[1]}`);
-                            return dateMatch[1];
-                        }
-                        
-                        // Alternative patterns if the main one doesn't work
-                        const altDateMatch = pdfData.text.match(/Meeting Date:\s*(\d{1,2}\/\d{1,2}\/\d{4})/i);
-                        if (altDateMatch) {
-                            // console.log(`Found "Meeting Date": ${altDateMatch[1]}`);
-                            return altDateMatch[1];
-                        }
-                        
-                        // Show all dates found for debugging
-                        const allDates = pdfData.text.match(/\d{1,2}\/\d{1,2}\/\d{4}/g);
-                        // console.log(`All dates found in PDF: ${allDates ? allDates.join(', ') : 'none'}`);
-                        // console.log(`=== End PDF Debug ===\n`);
-                    }
-                }
-            }
-        }
-        
-        return '';
-        
-    } catch (error) {
-        console.error('Error extracting meeting date from PDF:', error.message);
-        return '';
-    }
-}
-
-/**
  * Extract file number from agenda item text
  * @param {string} text - Agenda item text
  * @returns {string|null} - Extracted file number or null if not found
@@ -362,689 +171,7 @@ function extractFileNumber(text) {
 }
 
 /**
- * Main scraping function
- * @param {string} url - URL to scrape
- * @param {string} meetingId - Meeting ID
- * @returns {Promise<boolean>} - Success status
- */
-async function scrapeWithSelenium(url, meetingId, meetingType = 'regular') {
-    let driver = await new Builder().forBrowser('chrome').build();
-    try {
-        await driver.get(url);
-        
-        // Wait for the page to fully load and JavaScript to execute
-        await new Promise(res => setTimeout(res, 5000)); // Initial wait
-        
-        // Get the full page source after JavaScript execution
-        let pageSource = await driver.getPageSource();
-        
-        // Load the page source into cheerio
-        const $ = cheerio.load(pageSource);
-        
-        // Extract meeting date from the page
-        let meetingDate = '';
-        // Look for various possible date selectors
-        const dateSelectors = [
-            '#lblMeetingDate',
-            '.meeting-date',
-            '[id*="date"]',
-            '[class*="date"]'
-        ];
-        
-        for (const selector of dateSelectors) {
-            const dateElement = $(selector);
-            if (dateElement.length > 0) {
-                meetingDate = dateElement.text().trim();
-                if (meetingDate && meetingDate.length > 5) {
-                    break;
-                }
-            }
-        }
-        
-        // If no date found in selectors, try to find it in the page title or text
-        if (!meetingDate) {
-            const pageTitle = $('title').text();
-            const dateMatch = pageTitle.match(/(\d{1,2}\/\d{1,2}\/\d{4}|\d{4}-\d{2}-\d{2}|[A-Za-z]+ \d{1,2}, \d{4})/);
-            if (dateMatch) {
-                meetingDate = dateMatch[1];
-            }
-        }
-        
-        // Look for date in h1 elements (for evening agendas)
-        if (!meetingDate) {
-            $('h1').each((i, el) => {
-                const text = $(el).text().trim();
-                // Look for patterns like "Thursday, July 24, 2025"
-                const dateMatch = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})/i);
-                if (dateMatch) {
-                    meetingDate = dateMatch[1];
-                    return false; // break out of each loop
-                }
-                // Also look for MM/DD/YYYY patterns
-                const numericDateMatch = text.match(/(\d{1,2}\/\d{1,2}\/\d{4})/);
-                if (numericDateMatch) {
-                    meetingDate = numericDateMatch[1];
-                    return false;
-                }
-            });
-        }
-        
-        // Look for date in span elements as fallback
-        if (!meetingDate) {
-            $('span').each((i, el) => {
-                const text = $(el).text().trim();
-                // Look for patterns like "Thursday, July 24, 2025"
-                const dateMatch = text.match(/(?:Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),\s+([A-Za-z]+\s+\d{1,2},\s+\d{4})/i);
-                if (dateMatch) {
-                    meetingDate = dateMatch[1];
-                    return false; // break out of each loop
-                }
-            });
-        }
-        
-        // Extract agenda type (DRAFT or FINAL) from the h1 header
-        // The header contains spaced-out text like "R E G U L A R   F I N A L   A G E N D A"
-        let agendaType = 'DRAFT'; // Default to DRAFT
-        $('h1').each((i, el) => {
-            const text = $(el).text().trim();
-            // Remove all spaces to normalize the text
-            const normalizedText = text.replace(/\s+/g, '').toUpperCase();
-            // Check for FINAL or DRAFT in the normalized text
-            if (normalizedText.includes('FINAL')) {
-                agendaType = 'FINAL';
-                return false; // break out of each loop
-            } else if (normalizedText.includes('DRAFT')) {
-                agendaType = 'DRAFT';
-                return false;
-            }
-        });
-        console.log(`Detected agenda type: ${agendaType}`);
-        
-        // Enhanced table-based agenda item parsing
-        // This replaces the old link-based approach to catch both linked and unlinked items
-        let agendaItems = [];
-        
-        console.log('Using enhanced table-based agenda item parsing...');
-        
-        // Target tables with the specific indented structure for agenda items
-        $('table[style*="margin-left:30.6pt"]').each((index, table) => {
-            const $table = $(table);
-            const $firstRow = $table.find('tbody > tr').first();
-            const $cells = $firstRow.find('td');
-            
-            if ($cells.length >= 2) {
-                const $numberCell = $cells.eq(0);
-                const $contentCell = $cells.eq(1);
-                
-                // Extract item number from first cell
-                const numberText = $numberCell.text().trim();
-                const numberMatch = numberText.match(/^(\d+)\./);
-                
-                if (numberMatch) {
-                    const itemNumber = parseInt(numberMatch[1]);
-                    const contentText = $contentCell.text().trim();
-                    
-                    // Enhanced file number extraction patterns
-                    const fileNumberPatterns = [
-                        // Standard "File No. ABC123-456" (most common) - handles spaces and various suffixes
-                        /File\s+No\.\s+([A-Z]{1,5}\s*\d*\s*[-\/]?\s*\d{1,4}\s*[-\/]?\s*\d{0,6}(?:\s*[-\/]\s*[A-Z\d]*)?(?:\s+\([^)]*\))?)/i,
-                        // Missing "File No." prefix - handles patterns like "FDN 25-36-C"
-                        /^([A-Z]{2,5}\s*\d{0,3}\s*[-\/]\s*\d{1,4}\s*[-\/]\s*(?:\d{1,6}|[A-Z])(?:\s*[-\/]\s*[A-Z])?)/i,
-                        // Comprehensive plan amendments (TA/CPA format)
-                        /(?:File\s+No\.?\s+)?(TA\/CPA\d{2,4}[-\/]\d{1,6})/i,
-                        // Other special formats like B2020-10
-                        /(?:File\s+No\.?\s+)?([A-Z]{1,5}\d{2,4}[-\/]\d{1,6})/i,
-                        // REZ, CPA, PD patterns
-                        /(?:File\s+No\.?\s+)?((REZ|CPA|PD)[-\/]?\d{2,4}[-\/]\d{1,6})/i
-                    ];
-                    
-                    let fileNumber = null;
-                    let rawFileNumber = null;
-                    
-                    for (const pattern of fileNumberPatterns) {
-                        const match = contentText.match(pattern);
-                        if (match) {
-                            fileNumber = match[1].trim();
-                            rawFileNumber = contentText; // Keep full text for legacy compatibility
-                            break;
-                        }
-                    }
-                    
-                    // Handle special cases like "Administration Update"
-                    if (!fileNumber && contentText.includes('Administration Update')) {
-                        fileNumber = 'Administration Update';
-                        rawFileNumber = contentText;
-                    }
-                    
-                    if (fileNumber) {
-                        // Extract link information (for linked items)
-                        const $link = $contentCell.find('a[id^="lnkAgendaItem_"]');
-                        const isLinked = $link.length > 0;
-                        let agendaItemId = null;
-                        
-                        // Extract agenda item ID from name attribute
-                        const $nameAnchor = $contentCell.find('a[name]');
-                        if ($nameAnchor.length > 0) {
-                            const nameId = $nameAnchor.attr('name');
-                            const idMatch = nameId.match(/^I(\d+)$/);
-                            if (idMatch) {
-                                agendaItemId = idMatch[1];
-                            }
-                        }
-                        
-                        // If no agendaItemId from name, try to extract from href
-                        if (!agendaItemId && isLinked) {
-                            const href = $link.attr('href');
-                            const hrefMatch = href && href.match(/loadAgendaItem\((\d+),/);
-                            if (hrefMatch) {
-                                agendaItemId = hrefMatch[1];
-                            }
-                        }
-                        
-                        agendaItems.push({
-                            number: itemNumber,
-                            agendaItemId: agendaItemId,
-                            fileNumber: rawFileNumber || fileNumber, // Use full text for legacy compatibility
-                            id: isLinked ? $link.attr('id') : null,
-                            href: isLinked ? $link.attr('href') : null,
-                            isUnlinked: !isLinked,
-                            extractedFileNumber: fileNumber // Clean file number for processing
-                        });
-                        
-                        if (!isLinked) {
-                            // console.log(`Found unlinked agenda item ${itemNumber}: ${fileNumber}`);
-                        }
-                    }
-                }
-            }
-        });
-        
-        // Sort by item number to ensure proper order
-        agendaItems.sort((a, b) => a.number - b.number);
-        
-        console.log(`Enhanced parsing found ${agendaItems.length} agenda items`);
-        
-        // Debug: Show first few agenda items to verify parsing
-        console.log(`\n=== First 5 Agenda Items (Debug) ===`);
-        agendaItems.slice(0, 5).forEach(item => {
-            console.log(`  ${item.number}: ID=${item.agendaItemId}, FileNum="${item.extractedFileNumber}", Original="${item.fileNumber}"`);
-        });
-        
-        const unlinkedItems = agendaItems.filter(item => item.isUnlinked);
-        if (unlinkedItems.length > 0) {
-            // console.log(`Found ${unlinkedItems.length} unlinked items:`);
-            // unlinkedItems.forEach(item => {
-            //     console.log(`  Item ${item.number}: ${item.extractedFileNumber}`);
-            // });
-        }
-        
-        if (agendaItems.length === 0) {
-            console.error(`No agenda items found for meeting ${meetingId}`);
-            return false;
-        }
-
-        // Try to find item IDs by scanning the document for supporting document links that contain itemId parameters
-        const supportingDocLinks = $('a[href*="DownloadFile"]');
-        const itemIdMap = {};
-        
-        // Group supporting document links by their itemId
-        const itemIdToFileNumbers = {};
-        
-        supportingDocLinks.each((index, link) => {
-            const href = $(link).attr('href');
-            if (href) {
-                const itemIdMatch = href.match(/itemId=(\d+)/);
-                if (itemIdMatch && itemIdMatch[1]) {
-                    const itemId = itemIdMatch[1];
-                    const text = $(link).text().trim();
-                    
-                    // Collect all document texts for this itemId
-                    if (!itemIdToFileNumbers[itemId]) {
-                        itemIdToFileNumbers[itemId] = [];
-                    }
-                    itemIdToFileNumbers[itemId].push(text);
-                    
-                    // Also try to extract file number from URL patterns
-                    const fileNumberMatch = href.match(/File_([A-Za-z0-9-_]+)\.pdf/i) || 
-                                           href.match(/\/([A-Za-z0-9-_]+)_\d+_/i);
-                    
-                    if (fileNumberMatch && fileNumberMatch[1]) {
-                        let fileNumberPart = fileNumberMatch[1].replace(/_/g, '/');
-                        // Map the item ID to the file number for later matching
-                        itemIdMap[fileNumberPart.toUpperCase()] = itemId;
-                    }
-                }
-            }
-        });
-
-        // Update agenda items with the extracted item IDs (for items that don't already have them)
-        for (let item of agendaItems) {
-            if (!item.agendaItemId) {
-                // Use the extracted clean file number for matching
-                const fileNumberForMatching = item.extractedFileNumber || item.fileNumber;
-                let fileNumberPart = '';
-                
-                // Extract just the file number part for matching
-                if (fileNumberForMatching.startsWith('File No.')) {
-                    fileNumberPart = fileNumberForMatching.substring(9).trim().toUpperCase();
-                } else {
-                    fileNumberPart = fileNumberForMatching.toUpperCase();
-                }
-                
-                // Method 1: Direct matching using file number extracted from URLs
-                for (const [key, id] of Object.entries(itemIdMap)) {
-                    if (fileNumberPart.includes(key) || key.includes(fileNumberPart)) {
-                        item.agendaItemId = id;
-                        break;
-                    }
-                }
-                
-                // Method 2: If still no match, try using the collected document texts
-                if (!item.agendaItemId) {
-                    for (const [itemId, texts] of Object.entries(itemIdToFileNumbers)) {
-                        // Check if any of the texts contain the file number
-                        const matchingText = texts.find(text => {
-                            return text.toUpperCase().includes(fileNumberPart) || 
-                                  fileNumberPart.includes(text.toUpperCase());
-                        });
-                        
-                        if (matchingText) {
-                            item.agendaItemId = itemId;
-                            break;
-                        }
-                    }
-                }
-                
-                // If we're still unable to find the ID, use a more aggressive matching approach
-                if (!item.agendaItemId) {
-                    // Convert File No. AB2-25-04 to just AB2-25-04 or ab2-25-04
-                    const cleanFileNumber = fileNumberPart.replace(/[^A-Za-z0-9-]/g, '');
-                    
-                    for (const [itemId, texts] of Object.entries(itemIdToFileNumbers)) {
-                        for (const text of texts) {
-                            const cleanText = text.toUpperCase().replace(/[^A-Za-z0-9-]/g, '');
-                            if (cleanText.includes(cleanFileNumber) || cleanFileNumber.includes(cleanText)) {
-                                item.agendaItemId = itemId;
-                                break;
-                            }
-                        }
-                        if (item.agendaItemId) break;
-                    }
-                }
-            }
-        }
-        
-        // Extract agenda item IDs for debugging
-        // console.log('Extracted agenda item IDs:');
-        // for (const item of agendaItems) {
-        //     console.log(`File No. ${item.fileNumber}: Item ID = ${item.agendaItemId || 'Not found'}`);
-        // }
-        
-        // Now load each agenda item directly using IDs - much faster than clicking
-        let processedItems = [];
-        
-        for (let i = 0; i < agendaItems.length; i++) {
-            const item = agendaItems[i];
-            
-            // Simple progress indicator
-            if (i % 5 === 0 || i === agendaItems.length - 1) {
-                console.log(`Processing agenda items ${i+1}-${Math.min(i+5, agendaItems.length)} of ${agendaItems.length}...`);
-            }
-            
-            try {
-                // Skip items without agendaItemId (shouldn't happen with enhanced matching)
-                if (!item.agendaItemId) {
-                    console.log(`Warning: No agenda item ID found for item ${item.number}: ${item.fileNumber}`);
-                    
-                    // Create basic item object for items without IDs
-                    const processedItem = {
-                        number: item.number,
-                        agendaItemId: null,
-                        fileNumber: item.extractedFileNumber || extractFileNumber(item.fileNumber) || item.fileNumber,
-                        title: item.fileNumber,
-                        rawTitle: item.fileNumber,
-                        background: "",
-                        supportingDocuments: []
-                    };
-
-                    processedItems.push(processedItem);
-                    continue;
-                }
-                
-                // Load agenda item directly using ID - no clicking required!
-                await driver.executeScript(`loadAgendaItem(${item.agendaItemId}, false);`);
-                
-                // Wait for content with reasonable timeout
-                await driver.wait(until.elementLocated(By.css('#itemView')), 15000);
-                await new Promise(res => setTimeout(res, 1500));
-                
-                // Simple content validation
-                await driver.wait(async () => {
-                    const html = await driver.findElement(By.css('#itemView')).getAttribute('innerHTML');
-                    return html && html.trim().length > 100 && html.includes('item-view-title-text');
-                }, 15000);
-                
-                // Get content
-                const itemViewHtml = await driver.findElement(By.css('#itemView')).getAttribute('innerHTML');
-                const $itemView = cheerio.load(itemViewHtml);
-                
-                // Extract the full description
-                const fullDescription = $itemView('.item-view-title-text').text().trim();
-                const finalItemText = fullDescription || item.fileNumber;
-                
-                // Extract file number from content, with fallback to original fileNumber
-                let fileNo = extractFileNumber(finalItemText);
-                if (!fileNo && item.fileNumber) {
-                    fileNo = extractFileNumber(item.fileNumber) || item.fileNumber.replace('File No. ', '');
-                }
-                
-                // Extract supporting document links and update agendaItemId if needed
-                const docLinks = [];
-                let summarySheetLink = null;
-                
-                $itemView('a[href*="DownloadFile"]').each((j, docLink) => {
-                    const $docLink = $itemView(docLink);
-                    const href = $docLink.attr('href');
-                    const title = $docLink.attr('title') || '';
-                    const text = $docLink.text().trim();
-                    
-                    if (href) {
-                        // Update the agendaItemId from the document URLs if we didn't have it before
-                        if (!item.agendaItemId) {
-                            const itemIdMatch = href.match(/itemId=(\d+)/);
-                            if (itemIdMatch && itemIdMatch[1]) {
-                                item.agendaItemId = itemIdMatch[1];
-                            }
-                        }
-                        
-                        // Convert to direct download URL for PDFs
-                        const directHref = convertToDirectPDFUrl(href);
-                        // Create absolute URL
-                        const fullUrl = directHref.startsWith('http') ? 
-                            directHref : 
-                            'https://tampagov.hylandcloud.com' + directHref.replace(/&amp;/g, '&');
-                        
-                        const docInfo = { 
-                            title: toTitleCase(text || title || 'Document'),
-                            url: fullUrl,
-                            originalText: text,
-                            originalTitle: title
-                        };
-                        docLinks.push(docInfo);
-                        
-                        // Track Summary Sheet for background extraction
-                        if (text.toLowerCase().includes('summary sheet') && 
-                            text.toLowerCase().includes('cover sheet')) {
-                            summarySheetLink = docInfo;
-                        }
-                    }
-                });
-                
-                // Try to extract background from Summary Sheet PDF if available
-                let backgroundText = '';
-                if (summarySheetLink) {
-                    try {
-                        backgroundText = await extractBackgroundFromPDFWithBrowser(driver, summarySheetLink.url);
-                        if (backgroundText) {
-                            console.log(`✓ Background extracted for item ${i+1} (${backgroundText.length} chars)`);
-                        }
-                    } catch (err) {
-                        console.log(`⚠️  Background extraction failed for item ${i+1}: ${err.message.split(':')[0]}`);
-                        backgroundText = '';
-                    }
-                }
-                
-                // Note: fileNo was already extracted above in the content validation section
-                
-                // Extract item ID from supporting document URLs if not already set
-                let finalAgendaItemId = item.agendaItemId;
-                if (!finalAgendaItemId && docLinks.length > 0) {
-                    for (const doc of docLinks) {
-                        const itemIdMatch = doc.url.match(/itemId=(\d+)/);
-                        if (itemIdMatch && itemIdMatch[1]) {
-                            finalAgendaItemId = itemIdMatch[1];
-                            // console.log(`Found item ID ${finalAgendaItemId} from supporting document URL for ${fileNo}`);
-                            break;
-                        }
-                    }
-                }
-                
-                // Create a structured object for this item - store only raw text, clean during WordPress generation
-                const itemObject = {
-                    number: i + 1,
-                    agendaItemId: finalAgendaItemId,
-                    fileNumber: fileNo,
-                    title: finalItemText.trim(), // Keep title for compatibility with staff-report-parser
-                    rawTitle: finalItemText.trim(), // Store raw text - will be cleaned during WordPress generation
-                    background: backgroundText,
-                    supportingDocuments: docLinks
-                };
-
-                processedItems.push(itemObject);
-                
-            } catch (err) {
-                console.error(`Error extracting Item Details for agenda item ${i+1} (${item.fileNumber}): ${err.message}`);
-                
-                // Provide more detailed error information
-                if (err.message.includes('timeout') || err.message.includes('timed out')) {
-                    console.error(`  → This appears to be a timeout error. The webpage or PDF may be loading slowly.`);
-                } else if (err.message.includes('element not found') || err.message.includes('no such element')) {
-                    console.error(`  → This appears to be a page structure issue. The expected elements may not be present.`);
-                }
-                
-                console.log(`  → Creating basic fallback item for agenda item ${i+1}`);
-                
-                // Create a basic object with just the file number information
-                processedItems.push({
-                    number: i + 1,
-                    agendaItemId: item.agendaItemId, // Keep original ID if available
-                    fileNumber: item.fileNumber.replace('File No. ', ''),
-                    title: item.fileNumber,
-                    rawTitle: item.fileNumber,
-                    background: '',
-                    supportingDocuments: [],
-                    processingError: err.message // Track what went wrong for debugging
-                });
-            }
-        }
-        
-        // Extract meeting date - try HTML first, then fall back to PDF
-        let meetingDateStr = meetingDate; // Use the date extracted from HTML
-        console.log(`\n=== Meeting Date Extraction ===`);
-        console.log(`HTML extracted date: "${meetingDate}"`);
-        
-        // If no date found in HTML, try PDF extraction as fallback
-        if (!meetingDateStr) {
-            console.log('No date found in HTML, trying PDF extraction...');
-            // Create array of supporting docs for each item
-            const supportingDocs = processedItems.map(item => 
-                item.supportingDocuments.map(doc => ({
-                    text: doc.originalText,
-                    href: doc.url
-                }))
-            );
-            meetingDateStr = await extractMeetingDateFromFirstPDF(supportingDocs);
-            console.log(`PDF extracted date: "${meetingDateStr}"`);
-        }
-        
-        // Create structured JSON object
-        const meetingData = {
-            meetingId: meetingId,
-            meetingType: meetingType, // Use the provided meeting type from the main page
-            agendaType: agendaType, // DRAFT or FINAL
-            meetingDate: meetingDateStr,
-            formattedDate: formatDateForFilename(meetingDateStr),
-            sourceUrl: url,
-            agendaItems: processedItems
-        };
-
-        // Process staff reports and integrate into agenda items
-        await integrateStaffReportsIntoAgendaItems(meetingData);
-        
-        // Save the JSON data
-        const outputDir = path.join(__dirname, 'data');
-        if (!fs.existsSync(outputDir)) {
-            fs.mkdirSync(outputDir);
-        }
-
-        // Create filename with meeting date if available
-        let fileName = `meeting_${meetingId}`;
-        if (meetingData.formattedDate) {
-            fileName = `meeting_${meetingId}_${meetingData.formattedDate}`;
-        }
-        
-        // Processing summary
-        const successfulItems = processedItems.filter(item => !item.processingError);
-        const failedItems = processedItems.filter(item => item.processingError);
-        const itemsWithBackground = processedItems.filter(item => item.background && item.background.length > 0);
-        
-        console.log(`\n=== Processing Summary ===`);
-        console.log(`Total agenda items: ${processedItems.length}`);
-        console.log(`Successfully processed: ${successfulItems.length}`);
-        console.log(`Failed with errors: ${failedItems.length}`);
-        console.log(`Items with background extracted: ${itemsWithBackground.length}`);
-        
-        if (failedItems.length > 0) {
-            console.log(`\nFailed items:`);
-            failedItems.forEach(item => {
-                console.log(`  - Item ${item.number}: ${item.fileNumber} (${item.processingError})`);
-            });
-        }
-        
-        const outputFileName = path.join(outputDir, `${fileName}.json`);
-
-        preserveMirrorsAndLogChanges(outputFileName, meetingData);
-
-        fs.writeFileSync(outputFileName, JSON.stringify(meetingData, null, 2));
-        
-        console.log(`Successfully created JSON: ${outputFileName}`);
-        
-        return true;
-    } catch (error) {
-        console.error(`Error scraping meeting ${meetingId}:`, error);
-        return false;
-    } finally {
-        await driver.quit();
-    }
-}
-
-/**
- * Detect meeting type (regular, evening, special, etc.)
- * @param {CheerioAPI} $ - Cheerio instance loaded with page HTML
- * @returns {string} - Meeting type
- */
-function detectMeetingType($) {
-    // Find the CITY OF TAMPA h1
-    const cityTampaH1 = $('h1').filter(function() {
-        return $(this).text().trim() === 'CITY OF TAMPA';
-    });
-    
-    // Default meeting type if structure not found
-    let meetingType = 'regular';
-    
-    if (cityTampaH1.length > 0) {
-        // Get the next h1 element
-        const nextH1 = cityTampaH1.next('h1');
-        if (nextH1.length > 0) {
-            // Use the exact text content as the meeting type
-            const rawText = nextH1.text().trim();
-            if (rawText) {
-                meetingType = rawText;
-            }
-        }
-    }
-    
-    return meetingType;
-}
-
-/**
- * Scrape meeting IDs and types from the main page
- * @param {string} url - URL of the main page
- * @returns {Promise<Array<Object>>} - Array of meeting objects with ID and type
- */
-async function scrapeMeetingIds(url) {
-    // Set up the Selenium WebDriver
-    let driver = await new Builder().forBrowser('chrome').build();
-    
-    try {
-        // Load the page
-        await driver.get(url);
-        
-        // Wait for the #meetings-list-upcoming element to be loaded
-        await driver.wait(until.elementLocated(By.id('meetings-list-upcoming')), 20000);
-        
-        // Extract the page source
-        let pageSource = await driver.getPageSource();
-        
-        // Load the page source into cheerio
-        const $ = cheerio.load(pageSource);
-        
-        // Find all unique data-meeting-id attributes for <tr> where the last <td> includes an "Agenda" href (not "Summary")
-        let meetingData = [];
-        $('#meetings-list-upcoming table:first-of-type tr').each((i, tr) => {
-            let $tr = $(tr);
-            let lastTd = $tr.find('td').last();
-            let links = lastTd.find('a[href]');
-            
-            // Check if any link in this row contains "Agenda" and NOT "Summary"
-            let hasAgendaLink = false;
-            links.each((j, link) => {
-                let linkText = $(link).text().trim().toLowerCase();
-                let linkHref = $(link).attr('href') || '';
-                
-                // Include if:
-                // 1. Link text contains "agenda" but not "summary"
-                // 2. Link href contains "doctype=1" (which is agenda) but text doesn't contain "summary"
-                if ((linkText.includes('agenda') && !linkText.includes('summary')) ||
-                    (linkHref.includes('doctype=1') && !linkText.includes('summary'))) {
-                    hasAgendaLink = true;
-                }
-            });
-            
-            if (hasAgendaLink) {
-                let meetingId = $tr.attr('data-meeting-id');
-                if (meetingId) {
-                    // Explicitly exclude known summary meeting IDs
-                    if (meetingId === '2651') {
-                        // Skip summary meetings
-                    } else {
-                        // Extract the meeting type from the mtgType column
-                        let meetingType = 'regular'; // Default value
-                        
-                        // Find the cell with data-sortable-type="mtgType"
-                        const mtgTypeCell = $tr.find('td[data-sortable-type="mtgType"]');
-                        if (mtgTypeCell.length > 0) {
-                            meetingType = mtgTypeCell.text().trim();
-                        }
-                        
-                        // Add the meeting data to our collection
-                        meetingData.push({
-                            id: meetingId,
-                            type: meetingType
-                        });
-                    }
-                }
-            }
-        });
-        
-        return meetingData;
-    } finally {
-        // Quit the driver
-        await driver.quit();
-    }
-}
-
-/**
- * Scrape meeting using HTTP (default method)
- * @param {string} meetingId - Meeting ID
- * @param {string} meetingType - Meeting type
- * @param {Object} session - Axios session (optional)
- * @param {string} targetDate - YYYY-MM-DD; skip the meeting if it's on another date
- * @param {string} meetingName - Clerk's meeting name from the list page (optional)
- * @returns {Promise<void>}
- */
-/**
- * Runs in both scrape paths, right before the meeting JSON is written.
+ * Runs right before the meeting JSON is written.
  * Preserves mirroredUrl values from the existing JSON so re-scrapes don't
  * wipe out R2 links (OnBase publishId URLs change but R2 is permanent),
  * and records the meaningful diff in the public change-log.
@@ -1113,6 +240,15 @@ function preserveMirrorsAndLogChanges(outputFileName, meetingData) {
     }
 }
 
+/**
+ * Scrape meeting using HTTP (default method)
+ * @param {string} meetingId - Meeting ID
+ * @param {string} meetingType - Meeting type
+ * @param {Object} session - Axios session (optional)
+ * @param {string} targetDate - YYYY-MM-DD; skip the meeting if it's on another date
+ * @param {string} meetingName - Clerk's meeting name from the list page (optional)
+ * @returns {Promise<void>}
+ */
 async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null, targetDate = null, meetingName = null) {
     console.log(`\n[HTTP] Starting scrape for meeting ${meetingId} (${meetingType})`);
 
@@ -1146,7 +282,7 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
             await integrateStaffReportsIntoAgendaItems(meetingData);
         }
 
-        // Add formattedDate to meetingData for WordPress converter compatibility
+        // formattedDate is what json-to-markdown.js and mirror-documents.js key on
         meetingData.formattedDate = formatDateForFilename(meetingData.meetingDate);
         const dateString = meetingData.formattedDate || 'unknown-date';
 
@@ -1177,9 +313,6 @@ async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null
 async function main() {
     // Check if a specific meeting ID was provided as command line argument
     const args = process.argv.slice(2);
-    
-    // Check for --selenium flag
-    const useSelenium = args.includes('--selenium');
 
     // Check for --date <YYYY-MM-DD> flag
     const dateArgIndex = args.indexOf('--date');
@@ -1191,102 +324,72 @@ async function main() {
     const typeOverride = typeArgIndex !== -1 ? args[typeArgIndex + 1] : null;
 
     const filteredArgs = args.filter((arg, i) => {
-        if (arg === '--selenium') return false;
         if (arg === '--date' || arg === '--type') return false;
         if (i > 0 && (args[i - 1] === '--date' || args[i - 1] === '--type')) return false;
         return true;
     });
     const specificMeetingId = filteredArgs[0];
-    
+
     console.log(`\n🚀 Tampa Agenda Scraper`);
-    console.log(`Engine: ${useSelenium ? 'Selenium (legacy)' : 'HTTP (default)'}\n`);
-    
-    // URL of the page to scrape for meeting IDs
-    let url = `${AGENDA_BASE}/`;
-    
-    if (useSelenium) {
-        // Legacy Selenium path
-        if (specificMeetingId) {
-            // For specific meeting ID, we still need to get its meeting type from the main page
-            const meetingData = await scrapeMeetingIds(url);
-            const meetingInfo = meetingData.find(meeting => meeting.id === specificMeetingId);
-            const meetingType = meetingInfo ? meetingInfo.type : 'regular';
-            
-            // Process single meeting with its type
-            const meetingUrl = `${AGENDA_BASE}/Meetings/ViewMeeting?id=${specificMeetingId}&doctype=1`;
-            await scrapeWithSelenium(meetingUrl, specificMeetingId, meetingType);
-            return;
-        }
-        
-        // Get meetings with their IDs and types
-        let meetingsData = await scrapeMeetingIds(url);
-        
-        // Scrape each meeting ID sequentially
-        for (let meeting of meetingsData) {
-            // Use the correct rendered agenda URL
-            let meetingUrl = `${AGENDA_BASE}/Meetings/ViewMeeting?id=${meeting.id}&doctype=1`;
-            await scrapeWithSelenium(meetingUrl, meeting.id, meeting.type);
-        }
-    } else {
-        // HTTP path (default)
-        const session = await createSession();
-        
-        if (specificMeetingId) {
-            // For specific meeting ID, fetch its type from the meeting list
-            // (or take --type, since historical meetings aren't on the list)
-            let meetingType;
-            let meetingName = null;
-            if (typeOverride) {
-                meetingType = typeOverride;
-                console.log(`[HTTP] Using type override for ID ${specificMeetingId}: ${meetingType}`);
-            } else {
-                console.log(`[HTTP] Fetching meeting type for ID ${specificMeetingId}...`);
-                const meetings = await fetchMeetingList({ session });
-                const meetingInfo = meetings.find(m => m.id === specificMeetingId);
-                meetingType = meetingInfo ? meetingInfo.type : 'regular';
-                meetingName = meetingInfo ? meetingInfo.name : null;
-            }
+    console.log(`Engine: HTTP\n`);
 
-            // Process single meeting
-            await scrapeWithHTTP(specificMeetingId, meetingType, session, null, meetingName);
-            return;
-        }
-        
-        // Get meetings with their IDs and types
-        let meetings = await fetchMeetingList({ session });
-        console.log(`[HTTP] Found ${meetings.length} meetings to process\n`);
+    const session = await createSession();
 
-        // Filter by target date when --date is specified
-        if (targetDate) {
-            const withDates = meetings.filter(m => m.date !== null);
-            if (withDates.length > 0) {
-                const filtered = meetings.filter(m => m.date === targetDate);
-                console.log(`[HTTP] Filtering to date ${targetDate}: ${filtered.length} of ${meetings.length} meeting(s) match\n`);
-                meetings = filtered;
-            } else {
-                console.log(`[HTTP] No date info in meeting list — scraping all and filtering by date ${targetDate} after fetch\n`);
-            }
-        }
-        
-        // Scrape each meeting sequentially
-        const failed = [];
-        for (let i = 0; i < meetings.length; i++) {
-            const meeting = meetings[i];
-            console.log(`[HTTP] Processing meeting ${i + 1}/${meetings.length}: ${meeting.id} (${meeting.type})`);
-            try {
-                await scrapeWithHTTP(meeting.id, meeting.type, session, targetDate, meeting.name);
-            } catch (err) {
-                console.error(`[HTTP] ⚠️  Skipping meeting ${meeting.id} after error: ${err.message}`);
-                failed.push(meeting.id);
-            }
+    if (specificMeetingId) {
+        // For specific meeting ID, fetch its type from the meeting list
+        // (or take --type, since historical meetings aren't on the list)
+        let meetingType;
+        let meetingName = null;
+        if (typeOverride) {
+            meetingType = typeOverride;
+            console.log(`[HTTP] Using type override for ID ${specificMeetingId}: ${meetingType}`);
+        } else {
+            console.log(`[HTTP] Fetching meeting type for ID ${specificMeetingId}...`);
+            const meetings = await fetchMeetingList({ session });
+            const meetingInfo = meetings.find(m => m.id === specificMeetingId);
+            meetingType = meetingInfo ? meetingInfo.type : 'regular';
+            meetingName = meetingInfo ? meetingInfo.name : null;
         }
 
-        if (failed.length > 0) {
-            console.warn(`\n[HTTP] ⚠️  ${failed.length} meeting(s) failed: ${failed.join(', ')}`);
-            process.exitCode = 1;
-        }
-        console.log(`\n[HTTP] ✅ Finished processing ${meetings.length - failed.length}/${meetings.length} meetings`);
+        // Process single meeting
+        await scrapeWithHTTP(specificMeetingId, meetingType, session, null, meetingName);
+        return;
     }
+
+    // Get meetings with their IDs and types
+    let meetings = await fetchMeetingList({ session });
+    console.log(`[HTTP] Found ${meetings.length} meetings to process\n`);
+
+    // Filter by target date when --date is specified
+    if (targetDate) {
+        const withDates = meetings.filter(m => m.date !== null);
+        if (withDates.length > 0) {
+            const filtered = meetings.filter(m => m.date === targetDate);
+            console.log(`[HTTP] Filtering to date ${targetDate}: ${filtered.length} of ${meetings.length} meeting(s) match\n`);
+            meetings = filtered;
+        } else {
+            console.log(`[HTTP] No date info in meeting list — scraping all and filtering by date ${targetDate} after fetch\n`);
+        }
+    }
+
+    // Scrape each meeting sequentially
+    const failed = [];
+    for (let i = 0; i < meetings.length; i++) {
+        const meeting = meetings[i];
+        console.log(`[HTTP] Processing meeting ${i + 1}/${meetings.length}: ${meeting.id} (${meeting.type})`);
+        try {
+            await scrapeWithHTTP(meeting.id, meeting.type, session, targetDate, meeting.name);
+        } catch (err) {
+            console.error(`[HTTP] ⚠️  Skipping meeting ${meeting.id} after error: ${err.message}`);
+            failed.push(meeting.id);
+        }
+    }
+
+    if (failed.length > 0) {
+        console.warn(`\n[HTTP] ⚠️  ${failed.length} meeting(s) failed: ${failed.join(', ')}`);
+        process.exitCode = 1;
+    }
+    console.log(`\n[HTTP] ✅ Finished processing ${meetings.length - failed.length}/${meetings.length} meetings`);
 }
 
 // Call the main function
@@ -1296,10 +399,7 @@ if (require.main === module) {
 
 // Export functions for testing
 module.exports = {
-    scrapeMeetingIds,
-    scrapeWithSelenium,
     scrapeWithHTTP,
-    extractBackgroundFromPDFWithBrowser,
     extractFileNumber,
     formatBackgroundText
 };

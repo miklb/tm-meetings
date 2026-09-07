@@ -212,7 +212,7 @@ cd agenda-scraper && node json-scraper.js
 python pipeline/discover.py --process
 
 # 3. Deploy to Cloudflare Pages
-wrangler pages deploy site/_site --project-name tampa-meetings
+npm run deploy    # cd site && wrangler pages deploy (must run from site/ so functions/ is bundled)
 ```
 
 ### Historical backfill

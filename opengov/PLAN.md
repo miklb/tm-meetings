@@ -164,7 +164,7 @@ lookup. CLI: `python3 -m opengov.parse_account_code "<raw>"`.
 ### Phase 4 — `reconcile.py` ✅
 
 Consume agenda JSON from `agenda-scraper/data/`
-and enrich each `details[]` line with:
+and enrich each `rows[]` line with:
 
 ```json
 {
@@ -194,28 +194,22 @@ cached CoA — triggers a refresh).
 
 ### Phase 5 — Reporting
 
-1. **Per-agenda card** ✅ — `opengov/card.py` renders both standalone HTML
-   and WordPress block markup from a funding manifest. See
-   `opengov/WP_INTEGRATION.md` for how to insert cards into the
-   `json-to-wordpress.js` pipeline.
+1. **Per-agenda card** — retired 2026-09-07. `opengov/card.py` rendered
+   standalone HTML and WordPress block markup from a funding manifest for
+   insertion into the `json-to-wordpress.js` pipeline; that pipeline was
+   retired 2026-07-17 and the card renderer had no other caller, so it and
+   `opengov/WP_INTEGRATION.md` were removed.
 2. **Fiscal-year ledger** — append-only JSONL of approved
    appropriations, with a small dashboard (sortable table + sparkline).
 
 ## Environment
 
-- Python 3.10+ in `.venv` (repo convention)
+- The opengov venv is the repo-root `.venv`:
+  `python3 -m venv .venv && .venv/bin/pip install -r opengov/requirements.txt`.
+  Run `source .venv/bin/activate`, then `python3 -m opengov.<module>` from
+  the repo root.
 - `httpx` only — no JSON:API client needed for the public endpoints
 - No DB — JSON cache + JSONL ledger are sufficient
-
-## Probe scripts
-
-- `scripts/probe_reporting_api.py` — initial endpoint discovery
-- `scripts/probe_spa_endpoints.py` — second-pass after reading the SPA bundle
-- `scripts/probe_tapi.py` — transparency / transactions API probes
-- `scripts/probe_package.py` — the working package-endpoint call
-
-Run any of them with `python3 opengov/scripts/<name>.py` from the repo
-root. They are read-only and safe.
 
 ## Open questions
 

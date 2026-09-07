@@ -15,7 +15,7 @@ First tagged release. The pipeline is unified and actively processing meetings e
   - `npm run agenda  -- YYYY-MM-DD` — Friday pre-meeting workflow (scrape + R2 mirror)
   - `npm run archive -- YYYY-MM-DD` — Tuesday post-meeting workflow (transcript + video + DB + site)
 - **Document mirroring** to Cloudflare R2 with provenance tracking (`data-original-url`)
-- **SQLite + FTS5** database built from JSON by `scripts/build-db.js`; powers an Eleventy static site
+- **SQLite** database built from JSON by `scripts/build-db.js`; powers an Eleventy static site
 - **WordPress publication** via generated block markup (`agenda-scraper/agendas/*.wp.html`)
 - **Nightly GitHub Action** scrapes upcoming agendas and opens an issue on changes
 - **Accessibility-first** static site (WCAG 2.1 AA): semantic HTML, keyboard nav, ARIA landmarks, transcripts as video alternative
@@ -33,3 +33,12 @@ First tagged release. The pipeline is unified and actively processing meetings e
 - Going forward: tag `vX.Y.Z` on `main` when a release is worth marking; add a section to this file; let sub-packages drift.
 
 [1.0.0]: https://github.com/miklb/tm-meetings/releases/tag/v1.0.0
+
+## [Unreleased] - 2026-09-07
+
+### Cleanup
+
+- Removed dead WordPress-publication and Selenium-scrape code (`agenda-scraper/json-to-wordpress.js`, `enhanced-agenda-parser.js`, `analyze-documents.js`, `analyze-motion-directives.js`, `scrape-ids.js`, the Selenium engine/`--selenium` flag in `json-scraper.js`); HTTP is now the only scrape engine. Markdown-to-tm-static (`json-to-markdown.js`) is the sole published output.
+- Removed duplicate root `wrangler.toml` and root `migrations/` (the `site/` copies are authoritative); removed other unused scripts/docs (`opengov/card.py`, `opengov/scripts/probe_*.py`, `transcript-cleaner/processor/src/html_generator.py`).
+- `data/meetings.db` is now gitignored and rebuilt locally with `npm run build-db`; a fresh clone must run it before building the site.
+- Reconciled `.github/copilot-instructions.md`, `CLAUDE.md`, `README.md`, and related docs with the current code (WCAG target 2.2 AA, no Datasette/FTS5, opengov venv moved to repo-root `.venv`).

@@ -1,15 +1,14 @@
 # Tampa City Council Agenda Scraper v3.0
 
-A Node.js application that scrapes Tampa City Council agendas, stores them as structured JSON, and generates clean WordPress block markup with enhanced navigation and formatting.
+A Node.js application that scrapes Tampa City Council agendas, stores them as structured JSON, and generates Markdown posts for the tm-static site with enhanced navigation and formatting.
 
 ## 🆕 Version 3.0 Features
 
 ### **HTTP-First Architecture**
 
 - **Lightning Fast**: HTTP scraping is 3-5x faster than browser automation (~2 minutes vs ~5-10 minutes for 76 items)
-- **No Browser Required**: Eliminates ChromeDriver and Selenium overhead for improved reliability
+- **No Browser Required**: No ChromeDriver/Selenium dependency — HTTP-only scraping
 - **Parallel Processing**: Concurrent item fetching (5 at a time) for optimal performance
-- **Selenium Fallback**: Use `--selenium` flag if HTTP scraping encounters issues
 
 ### **Modular Library Architecture**
 
@@ -28,7 +27,7 @@ A Node.js application that scrapes Tampa City Council agendas, stores them as st
 ### **Two-Stage Processing Pipeline**
 
 - **JSON Scraper** (`json-scraper.js`): Extracts and stores meeting data as structured JSON files
-- **WordPress Converter** (`json-to-wordpress.js`): Transforms JSON data into WordPress block markup
+- **Markdown Converter** (`json-to-markdown.js`): Transforms JSON data into tm-static Markdown posts
 - **Flexible Workflow**: Process meetings individually or by date with command-line options
 
 ### **Optimized Data Flow**
@@ -122,29 +121,29 @@ Options:
   --date YYYY-MM-DD       Scrape all meetings for a specific date
   --start-date YYYY-MM-DD Start date for date range scraping
   --end-date YYYY-MM-DD   End date for date range scraping
-  --selenium              Use Selenium fallback (HTTP is default)
 
 Examples:
   node json-scraper.js                    # Scrape all available meetings (HTTP)
   node json-scraper.js 2608               # Scrape meeting 2608 (HTTP)
   node json-scraper.js --date 2025-10-09  # All meetings on Oct 9 (HTTP)
-  node json-scraper.js 2608 --selenium    # Scrape with Selenium fallback
 ```
 
-### WordPress Converter (`json-to-wordpress.js`)
+### Markdown Converter (`json-to-markdown.js`)
 
 ```bash
-node json-to-wordpress.js [options]
+node json-to-markdown.js [options]
 
 Options:
-  --help, -h                    Show help
-  --date YYYY-MM-DD            Convert all meetings for specific date
-  --meetings ID1,ID2,...       Convert specific meeting IDs
+  -d, --date YYYY-MM-DD   Convert all meetings for a date (addenda auto-load)
+      --dest <dir>        tm-static posts dir (default: $TM_STATIC_POSTS_DIR)
+      --slug <slug>       Override the generated post slug
+      --title <title>     Override the generated post title
+  -f, --feature <item>    Feature an item in the preamble card (repeatable)
+  -h, --help              Show help
 
 Examples:
-  node json-to-wordpress.js 2634                    # Single meeting
-  node json-to-wordpress.js --date 2025-07-31       # All meetings on date
-  node json-to-wordpress.js -m 2634,2589            # Multiple meetings
+  node json-to-markdown.js 2634                    # Single meeting
+  node json-to-markdown.js --date 2025-07-31       # All meetings on date
 ```
 
 ## NPM Scripts
@@ -152,7 +151,7 @@ Examples:
 | Script                       | Description                                          |
 | ---------------------------- | ---------------------------------------------------- |
 | `npm run scrape`             | Run JSON scraper for all available meetings          |
-| `npm run convert`            | Run WordPress converter (requires date/meeting args) |
+| `npm run convert`            | Run Markdown converter (requires date/meeting args)  |
 | `npm run process`            | Complete workflow: scrape + convert today's meetings |
 | `npm run process 2025-08-07` | Complete workflow for specific date                  |
 
@@ -160,8 +159,8 @@ Examples:
 
 ### Core Scripts
 
-- `json-scraper.js` - Extracts meeting data to JSON files (HTTP-first with Selenium fallback)
-- `json-to-wordpress.js` - Converts JSON to WordPress markup with permalink support
+- `json-scraper.js` - Extracts meeting data to JSON files (HTTP-only)
+- `json-to-markdown.js` - Converts JSON to tm-static Markdown posts with permalink support
 - `process-agenda.sh` - Automated workflow script
 
 ### Library Modules (v3.0+)
@@ -176,7 +175,7 @@ Examples:
 - `legacy/agenda-scraper.js` - Original markdown-based scraper
 - `legacy/wordpress-functions.js` - Legacy WordPress functions
 
-**Use the current JSON-based workflow instead** (`json-scraper.js` + `json-to-wordpress.js`)
+**Use the current JSON-based workflow instead** (`json-scraper.js` + `json-to-markdown.js`)
 
 ### Data Organization
 
@@ -237,7 +236,6 @@ agenda-scraper/
 
 ## Dependencies
 
-- **selenium-webdriver**: Browser automation for web scraping
 - **cheerio**: HTML parsing and content extraction
 - **axios**: HTTP requests and web data fetching
 - **pdf-parse**: PDF text extraction capabilities
@@ -251,7 +249,6 @@ agenda-scraper/
 - **HTTP-First Scraper**: Complete migration from Selenium to HTTP-based scraping with 3-5x performance improvement (2 minutes vs 5-10 minutes for 76 items)
 - **Modular Library Architecture**: New `lib/` directory with reusable `http-meeting-scraper.js` and `http-utils.js` modules
 - **Parallel Processing**: 5 concurrent item fetches for optimal performance
-- **Selenium Fallback**: Optional `--selenium` flag for edge cases requiring browser automation
 - **Permalink Support**: File No. text now functions as clickable permalink for easy agenda item link copying
 - **Enhanced User Experience**: Right-click File No. → "Copy Link Address" workflow for agenda item sharing
 
