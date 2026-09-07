@@ -47,7 +47,7 @@ If you fixed data by hand and just need to republish:
 ```bash
 npm run build-db        # rebuild SQLite (scripts/build-db.js)
 npm run build-site      # Eleventy build
-npm run deploy          # wrangler pages deploy site/_site --project-name tampa-meetings
+npm run deploy          # cd site && wrangler pages deploy --project-name tampa-meetings
 ```
 
 After any deploy that rebuilt the site, smoke-check the notifications signup form

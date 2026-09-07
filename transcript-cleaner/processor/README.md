@@ -91,7 +91,6 @@ processor/
 │   ├── OFFSET_DETECTION_IMPROVEMENTS.md
 │   ├── YOUTUBE_SETUP.md
 │   ├── MULTI_PART_VIDEOS.md
-│   ├── WORKFLOW_IMPROVEMENTS.md
 │   └── AGENDA_SCHEMA.md
 │
 ├── WORKFLOW.md                   # Step-by-step processing guide

@@ -8,13 +8,13 @@ A schedule for keeping runtime dependencies, tooling, and Node.js versions curre
 
 The `.github/` agent instruction files were shaped by older models and have drifted from the code. Verified issues, ordered by impact:
 
-- [ ] **Venv contradiction.** [.github/instructions/python-environment.instructions.md](.github/instructions/python-environment.instructions.md) and the "Python Environment" section of [.github/copilot-instructions.md](.github/copilot-instructions.md) both claim the project uses a **single** venv, but `opengov/` has its own venv at `opengov/.venv/` (per [opengov.instructions.md](.github/instructions/opengov.instructions.md)). Fix the wording in both, and consider narrowing python-environment's `applyTo: "**/*.py"` glob to exclude `opengov/**` so the two files never both apply with conflicting advice. The root `CLAUDE.md` documents the two-venv reality — keep it in sync.
-- [ ] **opengov.instructions.md "Things that have NOT been built yet" is stale.** Per-item funding insertion **is** built: the live emitter `json-to-markdown.js` (and the frozen `json-to-wordpress.js`) both import `loadFundingManifest` / `buildFundingByItemId` from `lib/render-funding` and render per-item financial sections plus an agenda-level overview. Remove that bullet and point the doc at `json-to-markdown.js` (WP generation retired 2026-07-17). The other two bullets (select-endpoint amounts, fiscal-year ledger) re-verified 2026-09-07 and still accurate.
-- [ ] **copilot-instructions.md directory tree is wrong.** `pipeline/scrapers/`, `pipeline/processors/`, `pipeline/scripts/`, and `data/agendas/` don't exist; the tree omits `agenda-scraper/`, `transcript-cleaner/`, `opengov/`, and `scripts/`. Redraw from the actual layout.
-- [ ] **copilot-instructions.md "Common Tasks" is stale.** No `MEETING_TYPES` constant exists anywhere in the repo; the Datasette task references `pipeline/scripts/build-database.py` and `deploy-datasette.sh`, which don't exist (Datasette is still "Future" per README — the real DB build is `scripts/build-db.js`).
-- [ ] **copilot-instructions.md "Automated Checks" lists `npm run lint`** — no package.json in the repo defines a lint script. Either add one or drop the claim.
-- [ ] **Decide the WCAG target.** Repo files say WCAG 2.1 AA; the Tampa Monitor shared conventions target 2.2 AA. Pick one and align copilot-instructions.md, README, and CLAUDE.md.
-- [ ] Bump the `_Last updated_` stamp in copilot-instructions.md when done.
+- [x] **Venv contradiction.** [.github/instructions/python-environment.instructions.md](.github/instructions/python-environment.instructions.md) and the "Python Environment" section of [.github/copilot-instructions.md](.github/copilot-instructions.md) both claim the project uses a **single** venv, but `opengov/` has its own venv (per [opengov.instructions.md](.github/instructions/opengov.instructions.md)). Fix the wording in both, and consider narrowing python-environment's `applyTo: "**/*.py"` glob to exclude `opengov/**` so the two files never both apply with conflicting advice. The root `CLAUDE.md` documents the two-venv reality — keep it in sync. — done 2026-09-07 (opengov venv moved to repo-root `.venv`; `applyTo` narrowed to exclude opengov)
+- [x] **opengov.instructions.md "Things that have NOT been built yet" is stale.** Per-item funding insertion **is** built: the live emitter `json-to-markdown.js` imports `loadFundingManifest` / `buildFundingByItemId` from `lib/render-funding` and renders per-item financial sections plus an agenda-level overview. Remove that bullet and point the doc at `json-to-markdown.js` (WP generation retired 2026-07-17). The other two bullets (select-endpoint amounts, fiscal-year ledger) re-verified 2026-09-07 and still accurate. — done 2026-09-07
+- [x] **copilot-instructions.md directory tree is wrong.** `pipeline/scrapers/`, `pipeline/processors/`, `pipeline/scripts/`, and `data/agendas/` don't exist; the tree omits `agenda-scraper/`, `transcript-cleaner/`, `opengov/`, and `scripts/`. Redraw from the actual layout. — done 2026-09-07
+- [x] **copilot-instructions.md "Common Tasks" is stale.** No `MEETING_TYPES` constant exists anywhere in the repo; the Datasette task references `pipeline/scripts/build-database.py` and `deploy-datasette.sh`, which don't exist (Datasette was replaced by Cloudflare D1 — the real DB build is `scripts/build-db.js`). — done 2026-09-07 (Datasette task removed; meeting-type touchpoints redirected to `scripts/build-db.js`)
+- [x] **copilot-instructions.md "Automated Checks" lists `npm run lint`** — no package.json in the repo defines a lint script. Either add one or drop the claim. — done 2026-09-07 (dropped; verification is `cd site && npm run build` + manual checklist)
+- [x] **Decide the WCAG target.** Repo files say WCAG 2.1 AA; the Tampa Monitor shared conventions target 2.2 AA. Pick one and align copilot-instructions.md, README, and CLAUDE.md. — done 2026-09-07: decided 2.2 AA everywhere
+- [x] Bump the `_Last updated_` stamp in copilot-instructions.md when done. — done 2026-09-07
 
 ---
 
@@ -30,6 +30,10 @@ Node.js uses **year-based versioning** with an 18-month Active LTS window:
 This repo is pinned to Node **26** (matching toolshed) in `.nvmrc`,
 `.github/workflows/nightly-scrape.yml`, and the README. Upgraded from EOL
 Node 20 in July 2026.
+
+Actionable checklists for the cadences below live as NotePlan templates in
+[`maintenance/noteplan/`](maintenance/noteplan/) — see
+[`maintenance/README.md`](maintenance/README.md) for setup.
 
 **Rules:**
 
@@ -64,8 +68,7 @@ Node 20 in July 2026.
 | `axios-cookiejar-support` | `agenda-scraper/`    | Cookie session support      | same                                     |
 | `cheerio`                 | `agenda-scraper/`    | HTML parsing                | same                                     |
 | `@aws-sdk/client-s3`      | `agenda-scraper/`    | R2 document mirroring       | same                                     |
-| `pdf-parse` / `pdfreader` | `agenda-scraper/`    | PDF text extraction         | same                                     |
-| `selenium-webdriver`      | `agenda-scraper/`    | Legacy Selenium scrape path | same                                     |
+| `pdf-parse` / `pdfreader` | `agenda-scraper/`    | PDF text extraction (`pdf2json` is a version override only, needed by `pdfreader` — see maintenance/README.md major-version backlog) | same |
 | `tough-cookie`            | `agenda-scraper/`    | Cookie jar                  | same                                     |
 | `dotenv`                  | `agenda-scraper/`    | Environment variables       | same                                     |
 | `@11ty/eleventy`          | `site/`              | Static site generator       | `npm outdated` in `site/`                |

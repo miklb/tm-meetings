@@ -69,7 +69,7 @@ produced by `agenda-scraper/` (the `rows[]` array from
 - `budgetAmount` for the matching fiscal year
 - `budgetVarianceAfterApproval` (running total)
 
-The enrichment flows back into `agenda-scraper/json-to-wordpress.js` as a
+The enrichment flows back into `agenda-scraper/json-to-markdown.js` as a
 post-processing step, or can be published independently as a weekly
 transparency dataset.
 

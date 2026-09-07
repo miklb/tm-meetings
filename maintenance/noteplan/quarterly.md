@@ -7,10 +7,9 @@ type: empty-note
 
 Jan / Apr / Jul / Oct. ~30 min. Runs *with* that month's monthly checklist.
 
-## Python (four venvs)
+## Python (three venvs)
 
-- [ ] `.venv/bin/python -m pip list --outdated` (root — httpx stack)
-- [ ] `opengov/.venv/bin/python -m pip list --outdated`
+- [ ] `.venv/bin/python -m pip list --outdated` (root — opengov's httpx stack)
 - [ ] `agenda-scraper/venv/bin/python -m pip list --outdated`
 - [ ] `transcript-cleaner/processor/venv/bin/python -m pip list --outdated`
       — ML deps (gliner, whisper, torch): read changelogs, upgrade only with

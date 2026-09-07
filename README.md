@@ -22,10 +22,10 @@ The pipeline is unified and actively processing 2026 meetings end-to-end — scr
 | ------------------------------- | -------- | --------------------------------------- |
 | Agenda Scraper (HTTP-first v3)  | Active   | `agenda-scraper/`                       |
 | Transcript Processor            | Active   | `transcript-cleaner/processor/`         |
-| WordPress Publication           | Active   | Agendas published via block markup      |
+| Agenda Markdown Publication     | Active   | Agendas published as Markdown posts to tm-static |
 | Nightly Scrape (GitHub Actions) | Active   | `.github/workflows/nightly-scrape.yml`  |
 | Eleventy Static Site            | Built    | `site/`                                 |
-| SQLite Database                 | Built    | 57+ meetings, FTS5 search               |
+| SQLite Database                 | Built    | 94 meetings                             |
 | R2 Document Mirroring           | Active   | Cloudflare R2 via `mirror-documents.js` |
 | Pipeline Orchestration          | Active   | `pipeline/`                             |
 | Video/Transcript Sync           | Complete | 5-step pipeline, 30+ videos integrated  |
@@ -35,7 +35,7 @@ The pipeline is unified and actively processing 2026 meetings end-to-end — scr
 | Component                   | Status      |
 | --------------------------- | ----------- |
 | Pagefind search             | Not started |
-| Datasette API               | Future      |
+| D1 + Workers API            | Future      |
 | GitHub Actions for pipeline | Planned     |
 
 ---
@@ -53,11 +53,11 @@ npm install
 # Scrape a specific meeting by ID
 node json-scraper.js 2650
 
-# Process + convert to WordPress format
+# Full pipeline: scrape → R2 mirror → OpenGov reconcile → tm-static Markdown
 ./process-agenda.sh 2650
 ```
 
-**Output:** JSON data files in `agenda-scraper/data/` + WordPress HTML in `agenda-scraper/agendas/`
+**Output:** JSON data files in `agenda-scraper/data/` + a record-copy Markdown agenda in `agenda-scraper/agendas/` (the published post goes to tm-static)
 
 **Data extracted:** File numbers, titles, backgrounds, supporting documents, locations, coordinates, dollar amounts, fiscal impact details.
 
@@ -80,13 +80,15 @@ python src/transcript_processor.py --meeting-id 2640
 ## Architecture
 
 ```
-Hyland OnBase ──▶ agenda-scraper/     ──▶ JSON data + WordPress HTML
+Hyland OnBase ──▶ agenda-scraper/     ──▶ JSON data + tm-static Markdown
                     ├── json-scraper.js      (scrape meetings)
                     ├── mirror-documents.js   (upload docs to R2)
-                    └── json-to-wordpress.js  (generate WP markup)
+                    └── json-to-markdown.js   (generate tm-static post)
 
 tampagov.net  ──▶ transcript-cleaner/ ──▶ Processed JSON + HTML
                     └── processor/           (NER, case, video sync)
+
+scripts/build-db.js ──▶ data/meetings.db   (SQLite, run via npm run build-db)
 
 pipeline/     ──▶ Orchestration       ──▶ SQLite DB + Eleventy site
                     ├── discover.py          (find new meetings)
@@ -94,7 +96,7 @@ pipeline/     ──▶ Orchestration       ──▶ SQLite DB + Eleventy site
                     └── build-site.sh        (rebuild DB + site)
 
 site/         ──▶ Eleventy            ──▶ Static HTML pages
-                    └── meetings.db          (SQLite with FTS5)
+                    (reads ../data/meetings.db directly at build time)
 ```
 
 ---
@@ -127,11 +129,15 @@ site/         ──▶ Eleventy            ──▶ Static HTML pages
 - Python 3.13 (see `.python-version`)
 - SQLite 3
 
+`data/meetings.db` is not tracked in git. On a fresh clone, run `npm run build-db`
+before `cd site && npm run build` — the Eleventy build reads the database directly
+and fails without it.
+
 ---
 
 ## Accessibility
 
-This project prioritizes accessibility (WCAG 2.1 AA minimum):
+This project prioritizes accessibility (WCAG 2.2 AA minimum):
 
 - Semantic HTML throughout
 - Full keyboard navigation
@@ -148,7 +154,6 @@ This project prioritizes accessibility (WCAG 2.1 AA minimum):
 | [IMPLEMENTATION_PLAN.md](IMPLEMENTATION_PLAN.md)                                     | Full roadmap, database schema, decisions log   |
 | [BUGS.md](BUGS.md)                                                                   | Known issues                                   |
 | [pipeline/README.md](pipeline/README.md)                                             | Pipeline scripts, data flow, typical workflows |
-| [pipeline/REPROCESS_2026.md](pipeline/REPROCESS_2026.md)                             | Runbook for full 2026 data refresh             |
 | [agenda-scraper/README.md](agenda-scraper/README.md)                                 | Scraper v3.0 usage, options, output format     |
 | [transcript-cleaner/processor/README.md](transcript-cleaner/processor/README.md)     | Transcript processor setup and usage           |
 | [transcript-cleaner/processor/WORKFLOW.md](transcript-cleaner/processor/WORKFLOW.md) | Manual processing steps and video offset guide |

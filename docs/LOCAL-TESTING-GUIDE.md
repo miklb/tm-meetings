@@ -187,7 +187,7 @@ node scripts/test-matching.js
 ```
 
 This logs matched keywords in the terminal and outputs a full Markdown summary report to:
-`docs/TEST-MATCHING-RESULTS.md`
+`docs/plans/TEST-MATCHING-RESULTS.md` (gitignored)
 
 ---
 
