@@ -1,4 +1,3 @@
-const fs = require('fs');
 const path = require('path');
 const pdfParse = require('pdf-parse');
 const axios = require('axios');
@@ -199,100 +198,6 @@ async function extractFolioNumbers(pdfUrl, fileNumber = 'Unknown') {
 }
 
 /**
- * Parse local PDF file to extract location and folio numbers (for testing)
- * @param {string} filePath - Path to local PDF file
- * @returns {Promise<{address: string, coordinates: {lat: number, lng: number}|null, folioNumbers: string[]}>}
- */
-async function extractFolioNumbersFromFile(filePath) {
-    const result = {
-        address: '',
-        coordinates: null,
-        folioNumbers: []
-    };
-
-    try {
-        console.log(`[PDF Parser] Reading local file: ${filePath}`);
-        const dataBuffer = fs.readFileSync(filePath);
-        
-        // Note: You may see "Warning: TT:" messages from the PDF library.
-        // These are harmless font rendering warnings from the native PDF parser (poppler/cairo)
-        // and can be safely ignored. To suppress them, run with: 2>/dev/null
-
-        const pdfData = await pdfParse(dataBuffer, {
-            max: 50
-        });
-
-        const text = pdfData.text;
-        console.log(`[PDF Parser] Extracted ${text.length} characters of text`);
-
-        const planAmendmentMatch = text.match(/(?:Plan Amendment Request|Request for Plan Amendment)[\s\S]{0,3000}?Location:\s*([^\n]+)[\s\S]{0,1000}?Folio Numbers?:\s*([^\n]+(?:\n(?!\n)[^\n]+)*)/i);
-        
-        if (!planAmendmentMatch) {
-            console.log(`[PDF Parser] Could not find "Plan Amendment Request" or "Request for Plan Amendment" section`);
-            return result;
-        }
-
-        // Extract neighborhood/area context from the PDF text (common Tampa neighborhoods)
-        const neighborhoods = [
-            'Davis Islands', 'Ybor City', 'Hyde Park', 'Seminole Heights',
-            'Palma Ceia', 'Westshore', 'Channelside', 'Harbour Island',
-            'Bayshore', 'South Tampa', 'West Tampa', 'East Tampa',
-            'Downtown', 'Carrollwood', 'Town \'N\' Country', 'Temple Terrace'
-        ];
-        
-        let neighborhoodContext = '';
-        for (const neighborhood of neighborhoods) {
-            // Look in first 2000 characters for neighborhood mention
-            const searchText = text.substring(0, 2000);
-            if (new RegExp(neighborhood, 'i').test(searchText)) {
-                neighborhoodContext = neighborhood;
-                console.log(`[PDF Parser] Found neighborhood context: "${neighborhoodContext}"`);
-                break;
-            }
-        }
-
-        // Extract location
-        const locationText = planAmendmentMatch[1].trim();
-        const addresses = locationText.split(/[,;]/).map(a => a.trim()).filter(a => a.length > 0);
-        if (addresses.length > 0) {
-            // If the first address contains "and" with multiple street numbers, take just the first number
-            let firstAddress = addresses[0];
-            const multipleAddressMatch = firstAddress.match(/^(\d+)\s+(?:and\s+\d+\s+)?(.+)$/i);
-            if (multipleAddressMatch) {
-                // Extract just the first address number with the street name
-                firstAddress = `${multipleAddressMatch[1]} ${multipleAddressMatch[2]}`;
-                console.log(`[PDF Parser] Normalized multiple addresses to single: "${firstAddress}"`);
-            }
-            result.address = firstAddress;
-            console.log(`[PDF Parser] Found location: "${result.address}"`);
-            result.coordinates = await geocodeAddress(result.address, neighborhoodContext);
-        }
-
-        // Extract folio numbers
-        const folioSection = planAmendmentMatch[2];
-        const folioPattern = /\b(\d{5,8}(?:\.\d{4})?)\b/g;
-        const matches = folioSection.match(folioPattern);
-
-        if (matches) {
-            result.folioNumbers = [...new Set(matches)]
-                .filter(folio => {
-                    const num = parseFloat(folio);
-                    return num >= 10000 && num < 100000000;
-                })
-                .sort();
-
-            console.log(`[PDF Parser] Extracted ${result.folioNumbers.length} folio numbers`);
-        }
-
-        return result;
-
-    } catch (error) {
-        console.error(`[PDF Parser] Error:`, error.message);
-        return result;
-    }
-}
-
-/**
  * Find TCC PACKET PDF URL in supporting documents
  * @param {Array} supportingDocuments - Array of document objects
  * @returns {string|null} - URL of TCC PACKET PDF or null if not found
@@ -312,7 +217,6 @@ function findTccPacketUrl(supportingDocuments) {
 
 module.exports = {
     extractFolioNumbers,
-    extractFolioNumbersFromFile,
     findTccPacketUrl,
     geocodeAddress
 };

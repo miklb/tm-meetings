@@ -4,10 +4,9 @@ Local-transparency tooling that reconciles the dollar amounts and account
 codes ("buckets") referenced in Tampa City Council Summary Sheets with the
 authoritative records in the City's OpenGov Budgeting & Performance system.
 
-> **Status:** Phase 0 complete. Public Tampa CoA (~2,900 nodes, 2,799
+> **Status:** Public Tampa CoA (~2,900 nodes, 2,799
 > with account codes) is reachable unauthenticated via the
-> Transparency package endpoint — see [PLAN.md](PLAN.md). No production
-> code yet; only probe scripts in [scripts/](scripts/).
+> Transparency package endpoint — see [PLAN.md](PLAN.md).
 >
 > **No API key needed for v1.** The original plan to request an OpenGov
 > Budgeting & Performance API key is on hold — the public
@@ -62,7 +61,7 @@ opengov/
 ## Boundaries with the agenda-scraper
 
 This directory **does not** re-parse PDFs. It consumes JSON output already
-produced by `agenda-scraper/` (the `details[]` array from
+produced by `agenda-scraper/` (the `rows[]` array from
 `extractDollarAmounts`) and enriches each line item with:
 
 - `accountId` (UUID) resolved from the parsed account-code string

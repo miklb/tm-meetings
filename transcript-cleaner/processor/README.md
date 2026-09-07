@@ -12,7 +12,8 @@ Part of the [Tampa Meetings](https://github.com/miklb/tampa-meetings) project.
 2. **Capitalizes** text using entity databases + GLiNER zero-shot NER
 3. **Finds** matching YouTube videos for the meeting
 4. **Calculates** video-to-transcript time offsets via Whisper
-5. **Generates** static HTML pages with clickable video timestamps
+
+Transcripts are rendered by the Eleventy site (`site/`) directly from `data/meetings.db`.
 
 ## Prerequisites
 
@@ -52,9 +53,6 @@ python scripts/build/match_whisper_to_transcript.py \
   SocxtU6vTKc \
   data/processed/processed_transcript_2645_2025-11-13.json \
   --video-mapping data/video_mapping_2645.json
-
-# 5. Generate HTML
-python src/html_generator.py
 ```
 
 ## Project Structure
@@ -65,18 +63,15 @@ processor/
 │   ├── scraper.py                # Scrapes transcripts from tampagov.net
 │   ├── capitalize_transcript.py  # ALL CAPS → sentence case (GLiNER + entity DB)
 │   ├── meeting_type_detector.py  # Auto-detects meeting type (CRA/Workshop/etc.)
-│   ├── youtube_fetcher.py        # Finds YouTube videos by date
-│   └── html_generator.py        # Static HTML generation with video sync
+│   └── youtube_fetcher.py        # Finds YouTube videos by date
 │
 ├── scripts/
 │   ├── build/                    # Build pipeline scripts
 │   │   ├── match_whisper_to_transcript.py
 │   │   ├── transcribe_with_whisper.py
-│   │   ├── calculate_offset_whisper.py
 │   │   ├── combine_entity_sources.py
 │   │   └── extract_agenda_entities.py
-│   ├── entity_sources/           # Entity database download scripts
-│   └── tests/                    # Test scripts
+│   └── entity_sources/           # Entity database download scripts
 │
 ├── data/
 │   ├── transcripts/              # Raw ALL CAPS transcripts
@@ -88,11 +83,6 @@ processor/
 │   ├── hybrid_entity_database.json  # Combined entity database
 │   ├── video_mapping_*.json      # Per-meeting video metadata
 │   └── meetings_metadata.json    # Meeting metadata cache
-│
-├── templates/                    # Jinja2 HTML templates
-│   ├── base.html
-│   ├── index.html
-│   └── transcript.html
 │
 ├── output/site/                  # Generated static HTML
 │

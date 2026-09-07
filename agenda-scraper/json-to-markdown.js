@@ -2,7 +2,7 @@
 /**
  * json-to-markdown.js — emit a tm-static markdown post from scraped meeting JSON.
  *
- * Successor to json-to-wordpress.js for the WordPress → tm-static migration.
+ * Emits tm-static posts directly; WordPress generation was retired 2026-07-17.
  * Markup contract: docs/plans/AGENDA-MARKUP.md (meetings repo) — new BEM
  * vocabulary (agenda__section / agenda-item / agenda-item__* / agenda__changes),
  * item numbers as text, items as <h3> headings under real <h2> section
@@ -48,7 +48,7 @@ const DATA_DIR = path.join(__dirname, 'data');
 const RECORD_DIR = path.join(__dirname, 'agendas');
 
 // ------------------------------------------------------------------
-// Meeting loading (same conventions as json-to-wordpress.js)
+// Meeting loading
 // ------------------------------------------------------------------
 
 function loadJSONData(filePath) {
@@ -327,7 +327,7 @@ function renderItem(item, ctx) {
     const fundingItemWithDocs = fundingItem
         ? { ...fundingItem, supportingDocuments: item.supportingDocuments || [] }
         : fundingItem;
-    const financial = renderItemFinancialSection(fundingItemWithDocs, item.projectedCosts, { wpWrap: false });
+    const financial = renderItemFinancialSection(fundingItemWithDocs, item.projectedCosts);
     if (financial) drawerParts.push(financial);
 
     if (item.background && item.background.trim()) {

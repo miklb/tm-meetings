@@ -170,17 +170,25 @@ fi
 
 if [[ -z "$PKEY" ]]; then
     echo "Looking up transcript pkey for $DATE..."
-    PKEYS=$("$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" --pkey-only --pages "$LOOKUP_PAGES" 2>/dev/null)
+    LOOKUP_ERR_FILE=$(mktemp)
+    PKEYS=$("$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" --pkey-only --pages "$LOOKUP_PAGES" 2>"$LOOKUP_ERR_FILE")
     PKEY_COUNT=$(echo "$PKEYS" | grep -c . || true)
 
     if [[ "$PKEY_COUNT" -eq 0 ]] || [[ -z "$PKEYS" ]]; then
         echo "ERROR: No transcript found for date $DATE on tampagov.net."
+        if [[ -s "$LOOKUP_ERR_FILE" ]]; then
+            echo "transcript_lookup.py stderr:"
+            sed 's/^/  /' "$LOOKUP_ERR_FILE"
+        fi
+        rm -f "$LOOKUP_ERR_FILE"
         echo "Try: python3 pipeline/transcript_lookup.py --date $DATE"
         exit 1
     elif [[ "$PKEY_COUNT" -eq 1 ]]; then
+        rm -f "$LOOKUP_ERR_FILE"
         PKEY="$PKEYS"
         echo "  Found pkey: $PKEY"
     else
+        rm -f "$LOOKUP_ERR_FILE"
         echo "Multiple transcripts found for $DATE — processing all $PKEY_COUNT"
         "$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" 2>/dev/null
         echo ""

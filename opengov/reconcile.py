@@ -20,7 +20,6 @@ Output is written to ``opengov/data/reports/<meetingId>-<date>-funding-manifest.
 from __future__ import annotations
 
 import json
-import re
 from collections import defaultdict
 from dataclasses import dataclass, field
 from datetime import datetime, timezone
@@ -31,51 +30,6 @@ from .coa import DEFAULT_CACHE_PATH, load_cache
 from .parse_account_code import parse as _parse_code
 
 DEFAULT_OUT_DIR = Path(__file__).parent / "data" / "reports"
-
-# ------------------------------------------------------------------
-# Patterns
-# ------------------------------------------------------------------
-# Matches 5-6-6 (3 segment) and 5-6-6-7 (4 segment) account codes with
-# any single separator: dot, hyphen, or space.
-_ACCOUNT_RE = re.compile(
-    r"""
-    \b(\d{5})        # fund (5 digits)
-    [\s.\-]          # separator
-    (\d{6})          # department (6 digits)
-    [\s.\-]          # separator
-    (\d{6})          # object (6 digits)
-    (?:[\s.\-](\d{7}))?   # optional project (7 digits)
-    \b
-    """,
-    re.VERBOSE,
-)
-
-# Fiscal year: FY2026, FY 2026, FY26, fy26, etc.
-_FY_RE = re.compile(r"\bFY\s*(?:20)?(\d{2})\b", re.IGNORECASE)
-
-
-# ------------------------------------------------------------------
-# Extraction helpers
-# ------------------------------------------------------------------
-def _extract_account_code(context: str) -> str | None:
-    """Return the first account code string found in ``context``, or None."""
-    m = _ACCOUNT_RE.search(context)
-    if not m:
-        return None
-    parts = [m.group(1), m.group(2), m.group(3)]
-    if m.group(4):
-        parts.append(m.group(4))
-    return ".".join(parts)
-
-
-def _extract_fiscal_year(context: str) -> int | None:
-    """Return the fiscal year as a 4-digit integer, or None."""
-    m = _FY_RE.search(context)
-    if not m:
-        return None
-    yr = int(m.group(1))
-    return yr + 2000 if yr < 100 else yr
-
 
 # ------------------------------------------------------------------
 # Core enrichment

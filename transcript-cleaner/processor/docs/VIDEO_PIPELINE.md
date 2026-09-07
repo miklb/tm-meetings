@@ -67,7 +67,7 @@ python scripts/build/match_whisper_to_transcript.py SocxtU6vTKc \
 
 **File:** `src/transcript_gap_detector.py`
 
-Scans consecutive segment timestamps in the official transcript to find time gaps > 60 minutes (lunch breaks, streaming interruptions). Populates `transcript_start_time` in the video mapping JSON, which `html_generator.py` uses to assign segments to the correct video part.
+Scans consecutive segment timestamps in the official transcript to find time gaps > 60 minutes (lunch breaks, streaming interruptions). Populates `transcript_start_time` in the video mapping JSON, used to assign segments to the correct video part when rendering transcripts (the Eleventy site reads segments from data/meetings.db).
 
 **How it works:**
 

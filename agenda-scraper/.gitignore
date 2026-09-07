@@ -12,7 +12,7 @@ node_modules/
 debug/
 *.log
 
-# Legacy files (deprecated - use json-scraper.js and json-to-wordpress.js instead)
+# Legacy files (deprecated - use json-scraper.js and json-to-markdown.js instead)
 legacy/
 
 # IDE files

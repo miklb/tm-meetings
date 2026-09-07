@@ -253,42 +253,6 @@ function cleanExtractedRun(text) {
 }
 
 /**
- * Test the staff report identification with meeting 2616
- */
-function testStaffReportIdentification() {
-    try {
-        const meetingData = JSON.parse(
-            fs.readFileSync('./data/meeting_2616_2025-08-21.json', 'utf8')
-        );
-        
-        console.log(`\n📊 Meeting ${meetingData.meetingId} - ${meetingData.meetingDate}`);
-        console.log(`Meeting Type: ${meetingData.meetingType}\n`);
-        
-        const staffReportItems = identifyStaffReports(meetingData);
-        
-        console.log(`Found ${staffReportItems.length} agenda items with staff reports:\n`);
-        
-        staffReportItems.forEach((item, index) => {
-            console.log(`${index + 1}. ${item.fileNumber} (${item.landUseType})`);
-            console.log(`   Agenda Item ID: ${item.agendaItemId}`);
-            console.log(`   Staff Reports Found: ${item.staffReports.length}`);
-            
-            item.staffReports.forEach((report, reportIndex) => {
-                console.log(`   ${reportIndex + 1}. ${report.title}`);
-                console.log(`      URL: ${report.url}`);
-            });
-            console.log('');
-        });
-        
-        return staffReportItems;
-        
-    } catch (error) {
-        console.error('Error testing staff report identification:', error.message);
-        return [];
-    }
-}
-
-/**
  * Download and parse a staff report PDF (placeholder for future implementation)
  * @param {object} staffReportItem - Item with staff report documents
  * @returns {Promise<object>} - Parsed staff report data
@@ -315,7 +279,7 @@ async function parseStaffReport(staffReportItem) {
 /**
  * Download and extract text from a staff report PDF using existing infrastructure
  * @param {string} pdfUrl - The URL to download from  
- * @param {object} driver - Selenium WebDriver instance (optional, for session cookies)
+ * @param {object} driver - Unused legacy parameter (always null; HTTP session is used)
  * @returns {Promise<string>} - Extracted text content
  */
 async function downloadAndExtractStaffReportPDF(pdfUrl, driver = null) {
@@ -667,7 +631,7 @@ function parseZoningData(textContent, fileNumber) {
 /**
  * Process a single staff report item (download and parse)
  * @param {object} staffReportItem - Item with staff report documents
- * @param {object} driver - Selenium WebDriver instance (optional)
+ * @param {object} driver - Unused legacy parameter (always null)
  * @returns {Promise<object>} - Parsed staff report data
  */
 async function processStaffReport(staffReportItem, driver = null) {
@@ -842,78 +806,6 @@ async function processAllStaffReports(meetingData) {
     return results;
 }
 
-/**
- * Test parsing with a single staff report (REZ-25-40 as example)
- */
-async function testSingleStaffReportParsing() {
-    try {
-        const meetingData = JSON.parse(
-            fs.readFileSync('./data/meeting_2616_2025-08-21.json', 'utf8')
-        );
-        
-        const staffReportItems = identifyStaffReports(meetingData);
-        
-        if (staffReportItems.length === 0) {
-            console.log('No staff reports found to test');
-            return;
-        }
-        
-        // Test with the first staff report (REZ-25-40)
-        const testItem = staffReportItems[0];
-        console.log(`\n🧪 Testing PDF parsing with ${testItem.fileNumber}...\n`);
-        
-        const result = await processStaffReport(testItem);
-        
-        console.log('\n📊 Parsing Results:');
-        console.log('='.repeat(50));
-        console.log(`File Number: ${result.fileNumber}`);
-        console.log(`Parse Status: ${result.parseStatus}`);
-        console.log(`Text Length: ${result.textLength || 'N/A'} characters`);
-        
-        if (result.extractedData) {
-            console.log(`Current Zoning: ${result.extractedData.currentZoning || 'Not found'}`);
-            console.log(`Requested Zoning: ${result.extractedData.requestedZoning || 'Not found'}`);
-            console.log(`Future Land Use: ${result.extractedData.futureLandUse || 'Not found'}`);
-            console.log(`Waivers Found: ${result.extractedData.waivers.length}`);
-            if (result.extractedData.waivers.length > 0) {
-                result.extractedData.waivers.forEach((waiver, idx) => {
-                    console.log(`  ${idx + 1}. ${waiver.substring(0, 100)}...`);
-                });
-            }
-            console.log(`Findings: ${result.extractedData.findings ? 'Found (' + result.extractedData.findings.length + ' chars)' : 'Not found'}`);
-            if (result.extractedData.findings) {
-                console.log(`  Preview: ${result.extractedData.findings.substring(0, 200)}...`);
-            }
-        }
-        
-        if (result.error) {
-            console.log(`Error: ${result.error}`);
-        }
-        
-        // Save detailed results to file
-        const detailedResults = {
-            meetingId: meetingData.meetingId,
-            meetingDate: meetingData.meetingDate,
-            testItem: {
-                fileNumber: result.fileNumber,
-                agendaItemId: result.agendaItemId,
-                landUseType: result.landUseType,
-                parseStatus: result.parseStatus,
-                extractedData: result.extractedData,
-                reportTitle: result.reportTitle,
-                textLength: result.textLength
-            }
-        };
-        
-        saveParsingResults(detailedResults, `./output/staff-report-test-${result.fileNumber}.json`);
-        
-        return result;
-        
-    } catch (error) {
-        console.error('Error in test:', error.message);
-    }
-}
-
 // Export functions for use in other modules
 module.exports = {
     identifyStaffReports,
@@ -928,30 +820,3 @@ module.exports = {
     parseNeighborhoodAssociations,
     saveParsingResults
 };
-
-// Run test if called directly
-if (require.main === module) {
-    console.log('🏛️  Tampa City Council Staff Report Analyzer\n');
-    
-    const args = process.argv.slice(2);
-    
-    if (args.includes('--test-pdf') || args.includes('-p')) {
-        console.log('Running PDF parsing test...\n');
-        testSingleStaffReportParsing();
-    } else if (args.includes('--all') || args.includes('-a')) {
-        console.log('Processing all staff reports...\n');
-        (async () => {
-            const meetingData = JSON.parse(fs.readFileSync('./data/meeting_2616_2025-08-21.json', 'utf8'));
-            const results = await processAllStaffReports(meetingData);
-            saveParsingResults({ 
-                meetingId: meetingData.meetingId, 
-                meetingDate: meetingData.meetingDate,
-                items: results 
-            }, './output/all-staff-reports-2616.json');
-        })();
-    } else {
-        testStaffReportIdentification();
-        console.log('\n💡 To test PDF parsing, run: node staff-report-parser.js --test-pdf');
-        console.log('💡 To process all staff reports, run: node staff-report-parser.js --all');
-    }
-}

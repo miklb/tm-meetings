@@ -56,8 +56,11 @@ echo "Done. Output: $SITE_DIR/_site/"
 if $DEPLOY; then
     echo ""
     echo "=== Deploy to Cloudflare Pages ==="
+    # Must deploy from site/, not the repo root — wrangler resolves _site and
+    # functions/ relative to the cwd, and deploying from root silently drops
+    # site/functions/ (see the comment in site/wrangler.toml).
     (
-        cd "$PROJECT_ROOT"
-        wrangler pages deploy site/_site --project-name tampa-meetings
+        cd "$SITE_DIR"
+        wrangler pages deploy --project-name tampa-meetings
     )
 fi

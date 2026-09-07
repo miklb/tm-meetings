@@ -1,6 +1,6 @@
 # HTTP Scraper Library
 
-Reusable HTTP-based agenda scraping modules without Selenium dependency.
+Reusable HTTP-based agenda scraping modules.
 
 ## Modules
 
@@ -106,15 +106,6 @@ const folios = await extractFolioNumbers(
   "TA/CPA25-09"
 );
 // Returns: ['189020.0000', '189021.0000', ...]
-```
-
-**`extractFolioNumbersFromFile(filePath)`**
-Parse a local PDF file (for testing).
-
-```javascript
-const folios = await extractFolioNumbersFromFile(
-  "./TA_CPA_25-09_TCC_PACKET.PDF"
-);
 ```
 
 **`findTccPacketUrl(supportingDocuments)`**

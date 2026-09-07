@@ -392,7 +392,7 @@ main().catch(console.error);
 
 ### Phase 3: Update WordPress Generator
 
-Modify `json-to-wordpress.js` to prefer mirrored URLs:
+Modify `json-to-markdown.js` to prefer mirrored URLs:
 
 ```javascript
 // In generateSingleMeetingMarkup, update the document URL logic:
@@ -492,7 +492,7 @@ node json-scraper.js 2650
 node mirror-documents.js 2650
 
 # Step 3: Generate WordPress markup
-node json-to-wordpress.js 2650
+node json-to-markdown.js 2650
 ```
 
 ### Option C: Batch Processing
