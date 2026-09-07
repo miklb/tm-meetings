@@ -9,7 +9,7 @@ A schedule for keeping runtime dependencies, tooling, and Node.js versions curre
 The `.github/` agent instruction files were shaped by older models and have drifted from the code. Verified issues, ordered by impact:
 
 - [ ] **Venv contradiction.** [.github/instructions/python-environment.instructions.md](.github/instructions/python-environment.instructions.md) and the "Python Environment" section of [.github/copilot-instructions.md](.github/copilot-instructions.md) both claim the project uses a **single** venv, but `opengov/` has its own venv at `opengov/.venv/` (per [opengov.instructions.md](.github/instructions/opengov.instructions.md)). Fix the wording in both, and consider narrowing python-environment's `applyTo: "**/*.py"` glob to exclude `opengov/**` so the two files never both apply with conflicting advice. The root `CLAUDE.md` documents the two-venv reality — keep it in sync.
-- [ ] **opengov.instructions.md "Things that have NOT been built yet" is stale.** Per-item funding insertion in `json-to-wordpress.js` **is** built now: it imports `loadFundingManifest` / `buildFundingByItemId` from `lib/render-funding` and renders per-item financial sections plus an agenda-level overview (`json-to-wordpress.js` ~lines 995–1075). Remove/update that bullet and re-verify the other two (select-endpoint amounts, fiscal-year ledger).
+- [ ] **opengov.instructions.md "Things that have NOT been built yet" is stale.** Per-item funding insertion **is** built: the live emitter `json-to-markdown.js` (and the frozen `json-to-wordpress.js`) both import `loadFundingManifest` / `buildFundingByItemId` from `lib/render-funding` and render per-item financial sections plus an agenda-level overview. Remove that bullet and point the doc at `json-to-markdown.js` (WP generation retired 2026-07-17). The other two bullets (select-endpoint amounts, fiscal-year ledger) re-verified 2026-09-07 and still accurate.
 - [ ] **copilot-instructions.md directory tree is wrong.** `pipeline/scrapers/`, `pipeline/processors/`, `pipeline/scripts/`, and `data/agendas/` don't exist; the tree omits `agenda-scraper/`, `transcript-cleaner/`, `opengov/`, and `scripts/`. Redraw from the actual layout.
 - [ ] **copilot-instructions.md "Common Tasks" is stale.** No `MEETING_TYPES` constant exists anywhere in the repo; the Datasette task references `pipeline/scripts/build-database.py` and `deploy-datasette.sh`, which don't exist (Datasette is still "Future" per README — the real DB build is `scripts/build-db.js`).
 - [ ] **copilot-instructions.md "Automated Checks" lists `npm run lint`** — no package.json in the repo defines a lint script. Either add one or drop the claim.
@@ -75,6 +75,8 @@ Node 20 in July 2026.
 
 ### Python (`transcript-cleaner/processor/venv`)
 
+Source of truth: `transcript-cleaner/processor/requirements.txt` and `opengov/requirements.txt` (`httpx` only). Utility deps (`click`, `rich`, `tqdm`, `python-dateutil`) are omitted from the table.
+
 | Package                    | Purpose                      | Check                                  |
 | -------------------------- | ---------------------------- | -------------------------------------- |
 | `gliner`                   | NER entity recognition       | `pip list --outdated` (activate first) |
@@ -84,9 +86,10 @@ Node 20 in July 2026.
 | `jinja2`                   | HTML template generation     | same                                   |
 | `google-api-python-client` | YouTube Data API             | same                                   |
 | `yt-dlp`                   | Audio extraction for Whisper | same                                   |
-| `openai-whisper`           | Whisper offset calculation   | same                                   |
+| `faster-whisper`           | Whisper offset calculation   | same                                   |
+| `google-auth`              | YouTube API auth             | same                                   |
 | `httpx`                    | opengov/ HTTP client         | `pip list --outdated` in opengov venv  |
-| `python-dotenv`            | Environment variables        | same as transcript venv                |
+| `python-dotenv`            | Environment variables        | transcript venv only (not in opengov)  |
 
 ---
 
@@ -106,9 +109,17 @@ Node 20 in July 2026.
 ### Annually (October — aligns with Node LTS activation)
 
 - [ ] Evaluate upgrading to new Node.js LTS major
-  - Update `.nvmrc`, `.github/workflows/nightly-scrape.yml` (`node-version`), `README.md`, `copilot-instructions.md`, `global.instructions.md`
+  - Update `.nvmrc`, `.github/workflows/nightly-scrape.yml` (`node-version`), `README.md` prerequisites, and the Node table in this file
 - [ ] Audit all dependencies for EOL or known CVEs
 - [ ] Review Python version compatibility
+
+---
+
+## Chore Log
+
+| Date       | Chore   | Notes |
+| ---------- | ------- | ----- |
+| 2026-09-07 | Monthly | `npm update` in `agenda-scraper/` (aws-sdk, axios, selenium in-range); `site/` and `scripts/` clean. yt-dlp 2026.8.17-dev → 2026.8.19. Majors deferred: `axios-cookiejar-support` 7, `pdf-parse` 2, `tough-cookie` 6, `better-sqlite3` 13. One-off audit above still fully open. |
 
 ---
 
@@ -118,8 +129,6 @@ Node 20 in July 2026.
 2. Update `.nvmrc` to new major
 3. Update `node-version` in `.github/workflows/nightly-scrape.yml`
 4. Update `README.md` prerequisites line
-5. Update `.github/copilot-instructions.md` Environment section
-6. Update `global.instructions.md` Environment section
-7. Update user memory `environment.md` Node.js note
-8. Run `npm ci` in `agenda-scraper/`, `site/`, `scripts/` and verify no breakage
-9. Commit: `chore: upgrade to Node <version>`
+5. Update the Node table at the top of this file
+6. Run `npm ci` in `agenda-scraper/`, `site/`, `scripts/` and verify no breakage
+7. Commit: `chore: upgrade to Node <version>`
