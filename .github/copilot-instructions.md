@@ -310,9 +310,12 @@ There is no single `MEETING_TYPES` constant — detection happens at each stage:
 
 ### Automated Checks
 
-There is no lint script and no test suite. Verification is:
+There is no lint script. `npm test` (root) runs `scripts/test/*.test.js` on Node's built-in test runner: each test builds a database from a synthetic fixture tree in a temp dir and asserts on rows and log lines — addendum folding, duplicate scrapes, transcript pairing, the offset-verification flag, `--year`, atomic output. Add a test there for any build-db behaviour you change; the fixture helpers (`meeting()`, `transcript()`, `mapping()`) cover the three input file types. Other verification is:
 
 ```bash
+# build-db suite
+npm test
+
 # Build site (catches template errors)
 cd site && npm run build
 
