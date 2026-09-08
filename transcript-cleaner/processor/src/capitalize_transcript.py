@@ -77,6 +77,10 @@ _GENERIC_PERSON_NOUNS = frozenset({
 })
 
 
+# Entity/config files live in the processor's data/ directory regardless of
+# the caller's working directory.
+_DATA_DIR = Path(__file__).resolve().parent.parent / "data"
+
 _COMMON_WORDS_PATH = "/usr/share/dict/words"
 
 
@@ -92,7 +96,7 @@ def _load_common_words() -> set:
         return set()
 
 
-def _load_config(config_file: str = "data/capitalization_config.json") -> dict:
+def _load_config(config_file: str = str(_DATA_DIR / "capitalization_config.json")) -> dict:
     """Load acronyms, neighborhoods, and street suffixes from config file."""
     config_path = Path(config_file)
     if config_path.exists():
@@ -104,10 +108,10 @@ def _load_config(config_file: str = "data/capitalization_config.json") -> dict:
 
 class TranscriptCapitalizer:
     def __init__(self, 
-                 standard_entities_file: str = "data/standard_entities.json",
-                 hybrid_entities_file: str = "data/hybrid_entity_database.json",
-                 config_file: str = "data/capitalization_config.json",
-                 roster_file: str = "data/roster_entities.json",
+                 standard_entities_file: str = str(_DATA_DIR / "standard_entities.json"),
+                 hybrid_entities_file: str = str(_DATA_DIR / "hybrid_entity_database.json"),
+                 config_file: str = str(_DATA_DIR / "capitalization_config.json"),
+                 roster_file: str = str(_DATA_DIR / "roster_entities.json"),
                  use_gliner: bool = True):
         """Initialize with entity databases and optionally GLiNER model."""
         
@@ -707,12 +711,12 @@ def main():
     parser.add_argument('output', help='Output transcript JSON (capitalized)')
     parser.add_argument(
         '--standard-entities',
-        default='data/standard_entities.json',
+        default=str(_DATA_DIR / 'standard_entities.json'),
         help='Path to standard entities database'
     )
     parser.add_argument(
         '--hybrid-entities',
-        default='data/hybrid_entity_database.json',
+        default=str(_DATA_DIR / 'hybrid_entity_database.json'),
         help='Path to hybrid agenda entities database'
     )
     

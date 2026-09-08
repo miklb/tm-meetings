@@ -33,6 +33,28 @@ logger = logging.getLogger(__name__)
 # extracting audio and how long to capture.
 AudioWindow = namedtuple('AudioWindow', ['start', 'duration'])
 
+# Paths anchored to this file so the matcher works from any working directory
+# (resync_offsets.py, process_video.py and manual runs all used to assume the
+# processor directory was the CWD).
+PROCESSOR_DIR = Path(__file__).resolve().parents[2]
+WHISPER_CACHE_DIR = PROCESSOR_DIR / 'data' / 'whisper_cache'
+TRANSCRIBE_SCRIPT = Path(__file__).resolve().with_name('transcribe_with_whisper.py')
+
+SECONDS_PER_DAY = 24 * 3600
+
+
+def whisper_cache_path(video_id, model, start=0, duration=300):
+    """Cache file for one Whisper sample window. process_video.py uses the same
+    function, so its "already downloaded?" check looks for exactly the file
+    the download would write."""
+    if start > 0:
+        label = f"skip{start}s_{duration}s"
+    elif duration != 300:
+        label = f"{duration // 60}min"
+    else:
+        label = ""
+    return WHISPER_CACHE_DIR / f"{video_id}_{model}{f'_{label}' if label else ''}.json"
+
 
 def save_offset_to_mapping(video_mapping_file: str, video_id: str, offset: float) -> bool:
     """
@@ -111,8 +133,8 @@ def parse_iso_duration(duration_str):
 
 def parse_timestamp_to_seconds(timestamp_str):
     """Convert '9:01:40AM' or '4:20:26PM' to seconds from midnight."""
-    # Handle 12-hour format with AM/PM
-    timestamp_str = timestamp_str.strip().upper()
+    # Handle 12-hour format with AM/PM; tolerate an inner space ("9:15:50 AM")
+    timestamp_str = re.sub(r'\s+', '', timestamp_str.strip().upper())
     
     # Parse with 12-hour format
     try:
@@ -127,6 +149,20 @@ def parse_timestamp_to_seconds(timestamp_str):
     seconds = dt.second
     
     return hours * 3600 + minutes * 60 + seconds
+
+
+def seconds_since(baseline_secs, secs):
+    """Seconds elapsed from *baseline_secs* to *secs* (both seconds from
+    midnight), wrapping across midnight.
+
+    Evening sessions can run past midnight (meeting 2652 ends at 3:04 AM), so
+    a wall-clock reading more than half a day *before* its baseline belongs to
+    the next morning. Small negatives (a clerk timestamp a few seconds before
+    the baseline) are returned as-is for the caller to clamp."""
+    elapsed = secs - baseline_secs
+    if elapsed < -SECONDS_PER_DAY / 2:
+        elapsed += SECONDS_PER_DAY
+    return elapsed
 
 
 def calculate_smart_duration(video_mapping_file: str, transcript_file: str, video_id: str) -> 'AudioWindow':
@@ -458,6 +494,7 @@ ANCHOR_PHRASE_WORDS = 8    # official opening words per anchor
 ANCHOR_MIN_RATIO = 0.75    # SequenceMatcher ratio to accept a position
 ANCHOR_TOLERANCE = 15      # seconds — agreeing anchors cluster within this
 ANCHOR_MIN_SUPPORT = 3     # independent anchors required for a result
+ANCHOR_TIGHT_PAIR_SPREAD = 2.0  # seconds — two anchors this close also count
 
 
 def _anchor_words(text):
@@ -488,8 +525,9 @@ def calculate_offset_by_anchors(whisper_segments, official_segments, first_secon
 
     word_list = [t for _, t in stream]
 
-    # Same ~20-minute search window as the n-gram matcher
-    cutoff_secs = first_seconds + 20 * 60
+    # Same ~20-minute search window as the n-gram matcher, measured from
+    # the baseline with midnight wrap (a Part 2+ baseline can sit at 11:58 PM)
+    window_secs = 20 * 60
     anchors = []
     skipped_ambiguous = 0
 
@@ -498,8 +536,8 @@ def calculate_offset_by_anchors(whisper_segments, official_segments, first_secon
         o_text = o_seg.get('text', '')
         if not o_ts or not o_text:
             continue
-        o_secs = parse_timestamp_to_seconds(o_ts)
-        if o_secs > cutoff_secs:
+        o_from_start = seconds_since(first_seconds, parse_timestamp_to_seconds(o_ts))
+        if o_from_start > window_secs:
             break
 
         o_words = _anchor_words(o_text)[:ANCHOR_PHRASE_WORDS]
@@ -518,7 +556,7 @@ def calculate_offset_by_anchors(whisper_segments, official_segments, first_secon
 
         # If positions above threshold imply offsets further apart than the
         # tolerance, the phrase repeats in the audio — unusable as an anchor.
-        implied = [stream[i][0] - (o_secs - first_seconds) for _, i in hits]
+        implied = [stream[i][0] - o_from_start for _, i in hits]
         if max(implied) - min(implied) > ANCHOR_TOLERANCE:
             skipped_ambiguous += 1
             continue
@@ -529,7 +567,7 @@ def calculate_offset_by_anchors(whisper_segments, official_segments, first_secon
             'timestamp': o_ts,
             'ratio': ratio,
             'whisper_time': stream[i][0],
-            'offset': stream[i][0] - (o_secs - first_seconds),
+            'offset': stream[i][0] - o_from_start,
             'phrase': ' '.join(o_words),
         })
 
@@ -562,10 +600,20 @@ def calculate_offset_by_anchors(whisper_segments, official_segments, first_secon
     if len(best) > 8:
         logger.info("    … and %d more in cluster", len(best) - 8)
 
+    offsets = sorted(a['offset'] for a in best)
+    spread = offsets[-1] - offsets[0]
+
     if len(best) < ANCHOR_MIN_SUPPORT:
-        logger.info("  Anchor matching: only %d agreeing anchor(s) (<%d) — inconclusive",
-                    len(best), ANCHOR_MIN_SUPPORT)
-        return None
+        # Two anchors that agree to within ANCHOR_TIGHT_PAIR_SPREAD are a
+        # better measurement than the n-gram fallback: on the three cached
+        # runs where this rule decides, audio checks put the anchor result
+        # within 0.2–1.7 s of the truth and the fallback 3–15 s off.
+        if len(best) == 2 and spread <= ANCHOR_TIGHT_PAIR_SPREAD:
+            logger.info("  ✓ 2 agreeing anchors within %.1fs — accepted", spread)
+        else:
+            logger.info("  Anchor matching: only %d agreeing anchor(s) (<%d) — inconclusive",
+                        len(best), ANCHOR_MIN_SUPPORT)
+            return None
 
     # Prefer a strong anchor on the baseline segment itself: its timestamp IS
     # the baseline, so its offset carries no clerk-latency differential.
@@ -577,9 +625,7 @@ def calculate_offset_by_anchors(whisper_segments, official_segments, first_secon
                     len(best), seg0['offset'], seg0['ratio'])
         return seg0['offset']
 
-    offsets = sorted(a['offset'] for a in best)
     median = offsets[len(offsets) // 2]
-    spread = offsets[-1] - offsets[0]
     logger.info("  ✓ %d agreeing anchors, median offset %.1fs (spread %.1fs)",
                 len(best), median, spread)
     return median
@@ -656,12 +702,12 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
     # fixed count of 10 is far too small.
     max_official = len(official_segments)  # default: scan all
     if first_seconds is not None and len(official_segments) > 10:
-        cutoff_secs = first_seconds + 20 * 60  # 20 minutes from start
+        window_secs = 20 * 60  # 20 minutes from the baseline, midnight-safe
         for idx, seg in enumerate(official_segments):
             ts = seg.get('timestamp')
             if ts:
-                seg_secs = parse_timestamp_to_seconds(ts)
-                if seg_secs > cutoff_secs:
+                seg_from_start = seconds_since(first_seconds, parse_timestamp_to_seconds(ts))
+                if seg_from_start > window_secs:
                     max_official = max(idx, 10)  # at least 10
                     break
     max_official = min(max_official, len(official_segments))
@@ -678,7 +724,7 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
             next_ts = official_segments[o_idx + 1].get('timestamp')
             if next_ts:
                 next_secs = parse_timestamp_to_seconds(next_ts)
-                seg_durations[o_idx] = next_secs - o_secs
+                seg_durations[o_idx] = seconds_since(o_secs, next_secs)
         if o_idx not in seg_durations:
             seg_durations[o_idx] = 30  # default assumption
 
@@ -714,7 +760,7 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
                 implied_offset = None
                 if first_seconds is not None:
                     o_seconds = parse_timestamp_to_seconds(o_timestamp)
-                    secs_from_start = o_seconds - first_seconds
+                    secs_from_start = seconds_since(first_seconds, o_seconds)
                     # Adjust for position within the segment
                     seg_dur = seg_durations.get(o_idx, 30)
                     adjusted_secs = secs_from_start + position_frac * seg_dur
@@ -790,7 +836,7 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
                 implied_offset = None
                 if first_seconds is not None:
                     o_seconds = parse_timestamp_to_seconds(o_timestamp)
-                    secs_from_start = o_seconds - first_seconds
+                    secs_from_start = seconds_since(first_seconds, o_seconds)
                     seg_dur = seg_durations.get(o_idx, 30)
                     adjusted_secs = secs_from_start + position_frac * seg_dur
                     implied_offset = w_start - adjusted_secs
@@ -869,6 +915,11 @@ def find_best_match(whisper_segments, official_segments, first_seconds=None):
                     unique_candidates(best_cluster))
 
         # --- Early-segment preference ---
+        # Kept on purpose (2026-09-08): the 9/3 review blamed this override for
+        # the ~15 s drift, but audio checks (scripts/verify-offset.py) on the
+        # seven runs where it decides showed it beats the cluster median in six
+        # (median error 4–18 s vs 0.5–9 s). The drift case (2683) was fixed by
+        # accepting a tight two-anchor result upstream instead.
         # If an early fuzzy match has an implied offset within OFFSET_TOLERANCE
         # of the winning cluster median AND matches a short segment (≤60s),
         # prefer it — the offset is computed from the segment start with
@@ -969,9 +1020,17 @@ def calculate_offset(whisper_json_file, official_transcript_file,
     # For Part 2+ videos, filter to segments at/after transcript_start_time
     if transcript_start_time:
         start_secs = parse_timestamp_to_seconds(transcript_start_time)
-        filtered = [s for s in official_segments
-                    if s.get('timestamp') and
-                    parse_timestamp_to_seconds(s['timestamp']) >= start_secs]
+        # The transcript is in file order; this video's portion starts at the
+        # first segment stamped at/after transcript_start_time. Compared with
+        # midnight wrap so an evening session's post-midnight segments (or a
+        # part that begins after midnight) resolve to the right place.
+        start_idx = next(
+            (i for i, s in enumerate(official_segments)
+             if s.get('timestamp') and
+             0 <= seconds_since(start_secs, parse_timestamp_to_seconds(s['timestamp']))
+             < SECONDS_PER_DAY / 2),
+            None)
+        filtered = official_segments[start_idx:] if start_idx is not None else []
         if not filtered:
             logger.error("❌ No segments found at or after %s", transcript_start_time)
             return None
@@ -1015,12 +1074,12 @@ def calculate_offset(whisper_json_file, official_transcript_file,
         position_frac = match.get('position_frac', 0.0)
         seg_dur = match.get('seg_duration', 0)
         official_seg_seconds = parse_timestamp_to_seconds(match['official_timestamp'])
-        seconds_from_meeting_start = official_seg_seconds - first_seconds
+        seconds_from_meeting_start = seconds_since(first_seconds, official_seg_seconds)
         position_adjustment = position_frac * seg_dur
         whisper_video_time = match['whisper_start']
     else:
         official_seg_seconds = parse_timestamp_to_seconds(match['official_timestamp'])
-        seconds_from_meeting_start = official_seg_seconds - first_seconds
+        seconds_from_meeting_start = seconds_since(first_seconds, official_seg_seconds)
         whisper_video_time = match['whisper_start']
         offset = whisper_video_time - seconds_from_meeting_start
         position_adjustment = 0
@@ -1143,14 +1202,7 @@ def main():
             audio_start = 0
             duration = 300  # Default 5 minutes
         
-        # Build cache filename — include start offset when skipping
-        if audio_start > 0:
-            cache_label = f"skip{audio_start}s_{duration}s"
-        elif duration != 300:
-            cache_label = f"{duration // 60}min"
-        else:
-            cache_label = ""
-        cache_file = f"data/whisper_cache/{video_id}_{model}{f'_{cache_label}' if cache_label else ''}.json"
+        cache_file = str(whisper_cache_path(video_id, model, audio_start, duration))
         
         # Check for cached transcription
         if use_cache and Path(cache_file).exists():
@@ -1169,11 +1221,11 @@ def main():
             print()
             
             # Create cache directory
-            Path("data/whisper_cache").mkdir(exist_ok=True)
+            WHISPER_CACHE_DIR.mkdir(parents=True, exist_ok=True)
             
             # Run transcription
             cmd = [
-                sys.executable, 'scripts/build/transcribe_with_whisper.py',
+                sys.executable, str(TRANSCRIBE_SCRIPT),
                 '--duration', str(duration),
                 '--model', model,
                 '--output', cache_file
@@ -1219,11 +1271,11 @@ def main():
         print(f"{'='*70}\n")
         
         video_id = input_arg
-        longer_cache = f"data/whisper_cache/{video_id}_{model}_10min.json"
+        longer_cache = str(whisper_cache_path(video_id, model, 0, 600))
         
         # Transcribe 10 minutes
         result = subprocess.run([
-            sys.executable, 'scripts/build/transcribe_with_whisper.py',
+            sys.executable, str(TRANSCRIBE_SCRIPT),
             '--duration', '600',
             '--model', model,
             '--output', longer_cache,
@@ -1249,14 +1301,14 @@ def main():
         for delta in RETRY_OFFSETS:
             retry_start = audio_start + delta
             retry_label = f"retry_skip{retry_start}s_{retry_duration}s"
-            retry_cache = f"data/whisper_cache/{video_id}_{model}_{retry_label}.json"
+            retry_cache = str(WHISPER_CACHE_DIR / f"{video_id}_{model}_{retry_label}.json")
 
             print(f"  ▶ Retry window: start={retry_start}s ({retry_start//60}:{retry_start%60:02d}), "
                   f"duration={retry_duration}s ({retry_duration//60}:{retry_duration%60:02d})")
 
             if not (use_cache and Path(retry_cache).exists()):
                 result = subprocess.run([
-                    sys.executable, 'scripts/build/transcribe_with_whisper.py',
+                    sys.executable, str(TRANSCRIBE_SCRIPT),
                     '--start', str(retry_start),
                     '--duration', str(retry_duration),
                     '--model', model,
@@ -1305,6 +1357,9 @@ def main():
                 print(f"  No gaps ≥ {min_gap_minutes} min — single-part meeting")
     else:
         print("\n❌ Could not calculate offset even with extended transcription")
+        # Non-zero so callers (resync_offsets.py, shell loops) see the failure
+        # instead of reading the old offset back as a success.
+        sys.exit(2)
 
 
 if __name__ == '__main__':

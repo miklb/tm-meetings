@@ -15,7 +15,7 @@ data/offset_resync_state.json. Re-running skips completed videos, so the
 sweep can be stopped (Ctrl-C) and restarted anytime, or run in chunks with
 --limit. Failures are logged but not marked done, so they retry next run.
 
-Usage (from transcript-cleaner/processor/):
+Usage (from any directory; paths resolve relative to this file):
     venv/bin/python scripts/build/resync_offsets.py --dry-run
     venv/bin/python scripts/build/resync_offsets.py --limit 10
     venv/bin/python scripts/build/resync_offsets.py --since 2025-10-01
@@ -34,8 +34,12 @@ import time
 from datetime import datetime
 from pathlib import Path
 
-STATE_FILE = Path("data/offset_resync_state.json")
-CACHE_DIR = Path("data/whisper_cache")
+# Anchored to this file so the sweep can be launched from any directory
+PROCESSOR_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = PROCESSOR_DIR / "data"
+MATCHER = Path(__file__).resolve().with_name("match_whisper_to_transcript.py")
+STATE_FILE = DATA_DIR / "offset_resync_state.json"
+CACHE_DIR = DATA_DIR / "whisper_cache"
 
 
 def load_state():
@@ -54,13 +58,13 @@ def find_meetings():
     """Yield (pkey, date, mapping_file, transcript_file) for every archived
     meeting that has both a video mapping and a processed transcript."""
     meetings = []
-    for mapping_file in sorted(glob.glob("data/video_mapping_*.json")):
+    for mapping_file in sorted(glob.glob(str(DATA_DIR / "video_mapping_*.json"))):
         m = re.match(r"video_mapping_(\d+)\.json", Path(mapping_file).name)
         if not m:
             continue
         pkey = m.group(1)
         transcripts = sorted(
-            glob.glob(f"data/processed/processed_transcript_{pkey}_*.json"))
+            glob.glob(str(DATA_DIR / "processed" / f"processed_transcript_{pkey}_*.json")))
         if not transcripts:
             print(f"  ⚠️  {Path(mapping_file).name}: no processed transcript — skipping")
             continue
@@ -150,7 +154,7 @@ def main():
 
         started = time.time()
         result = subprocess.run([
-            sys.executable, "scripts/build/match_whisper_to_transcript.py",
+            sys.executable, str(MATCHER),
             video_id, transcript_file,
             "--video-mapping", mapping_file,
             "--no-cache",

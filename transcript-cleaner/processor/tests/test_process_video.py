@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import tempfile
+from pathlib import Path
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -52,7 +53,7 @@ def test_find_transcript_processed():
             _write_json("data/processed/processed_transcript_100_2025-01-01.json", {"segments": []})
             _write_json("data/transcripts/transcript_100_2025-01-01.json", {"segments": []})
 
-            result = find_transcript(100, "2025-01-01")
+            result = find_transcript(100, "2025-01-01", data_dir=Path("data"))
             assert result is not None
             assert "processed" in str(result)
             print("  PASS: Finds processed transcript first")
@@ -70,7 +71,7 @@ def test_find_transcript_raw_fallback():
             os.makedirs("data/transcripts", exist_ok=True)
             _write_json("data/transcripts/transcript_200_2025-02-01.json", {"segments": []})
 
-            result = find_transcript(200, "2025-02-01")
+            result = find_transcript(200, "2025-02-01", data_dir=Path("data"))
             assert result is not None
             assert "transcripts" in str(result)
             print("  PASS: Falls back to raw transcript")
@@ -87,7 +88,7 @@ def test_find_transcript_none():
             os.makedirs("data/processed", exist_ok=True)
             os.makedirs("data/transcripts", exist_ok=True)
 
-            result = find_transcript(999, "2025-12-31")
+            result = find_transcript(999, "2025-12-31", data_dir=Path("data"))
             assert result is None
             print("  PASS: Returns None for missing transcript")
         finally:
@@ -105,7 +106,7 @@ def test_find_transcript_glob_fallback():
             _write_json("data/processed/processed_transcript_300_2025-03-15.json", {"segments": []})
 
             # Search with a different date — glob should still find it
-            result = find_transcript(300, "2025-03-20")
+            result = find_transcript(300, "2025-03-20", data_dir=Path("data"))
             assert result is not None
             assert "300" in str(result)
             print("  PASS: Finds transcript via glob fallback")
@@ -126,7 +127,7 @@ def test_pipeline_no_transcript():
             os.makedirs("data/processed", exist_ok=True)
             os.makedirs("data/transcripts", exist_ok=True)
             # No transcript file — should print error and return
-            run_pipeline(meeting_id=9999, meeting_date="2025-12-31", dry_run=True)
+            run_pipeline(data_dir=Path("data"), meeting_id=9999, meeting_date="2025-12-31", dry_run=True)
             print("  PASS: Pipeline handles missing transcript gracefully")
         finally:
             os.chdir(orig_dir)
@@ -153,7 +154,7 @@ def test_pipeline_existing_mapping_dry_run():
                 ]),
             )
 
-            run_pipeline(
+            run_pipeline(data_dir=Path("data"), 
                 meeting_id=500,
                 meeting_date="2025-05-01",
                 dry_run=True,
@@ -186,7 +187,7 @@ def test_pipeline_skips_done_offsets():
                 ]),
             )
 
-            run_pipeline(
+            run_pipeline(data_dir=Path("data"), 
                 meeting_id=600,
                 meeting_date="2025-06-01",
                 skip_fetch=True,
@@ -214,7 +215,7 @@ def test_pipeline_skip_fetch_no_mapping():
                 _make_transcript(700, "JULY 01, 2025"),
             )
             # No video mapping — skip-fetch should handle this
-            run_pipeline(
+            run_pipeline(data_dir=Path("data"), 
                 meeting_id=700,
                 meeting_date="2025-07-01",
                 skip_fetch=True,
@@ -244,7 +245,7 @@ def test_pipeline_single_video_skips_gap_detection():
                 ]),
             )
 
-            run_pipeline(
+            run_pipeline(data_dir=Path("data"), 
                 meeting_id=800,
                 meeting_date="2025-08-01",
                 skip_fetch=True,

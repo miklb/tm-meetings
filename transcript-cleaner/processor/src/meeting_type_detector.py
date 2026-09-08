@@ -112,13 +112,15 @@ METADATA_TYPE_MAP = {
 
 # agenda-scraper/data relative to this file (src → processor → transcript-cleaner → repo)
 DEFAULT_AGENDA_DIR = Path(__file__).resolve().parents[3] / "agenda-scraper" / "data"
+# processor/data/meetings_metadata.json, independent of the working directory
+DEFAULT_METADATA_PATH = Path(__file__).resolve().parents[1] / "data" / "meetings_metadata.json"
 
 
 def detect_meeting_type(
     transcript_path: Optional[str] = None,
     transcript_data: Optional[dict] = None,
     meeting_id: Optional[int] = None,
-    metadata_path: str = "data/meetings_metadata.json",
+    metadata_path: str = str(DEFAULT_METADATA_PATH),
     agenda_dir: Optional[Path] = None,
 ) -> MeetingType:
     """
