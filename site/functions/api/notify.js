@@ -1,67 +1,9 @@
 import { isDev, escapeHtml, isHttpUrl, secretsMatch, jsonResponse } from '../../lib/api-utils.js';
-
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-// Fuzzy street-suffix matching: lets a keyword typed as "Bayshore Blvd" match
-// agenda text that says "Bayshore Boulevard" (or "Bayshore Blvd."), and vice
-// versa, regardless of which form the subscriber typed or the source text
-// uses. Each group's bare (period-stripped) forms map to a regex alternation
-// covering every variant in that group.
-const STREET_SUFFIX_GROUPS = [
-  ['st', 'st.', 'street'],
-  ['ave', 'ave.', 'avenue'],
-  ['blvd', 'blvd.', 'boulevard'],
-  ['dr', 'dr.', 'drive'],
-  ['rd', 'rd.', 'road'],
-  ['ln', 'ln.', 'lane'],
-  ['ct', 'ct.', 'court'],
-  ['pl', 'pl.', 'place'],
-  ['cir', 'cir.', 'circle'],
-  ['pkwy', 'pkwy.', 'parkway'],
-  ['hwy', 'hwy.', 'highway'],
-  ['ter', 'ter.', 'terrace'],
-];
-
-// A trailing period can't be followed by a `\b` (a period and the space that
-// usually follows it are both non-word characters, so no boundary exists
-// between them) — only the non-abbreviated variants get a trailing boundary.
-function suffixVariantPattern(variant) {
-  const escaped = escapeRegExp(variant);
-  return variant.endsWith('.') ? `\\b${escaped}` : `\\b${escaped}\\b`;
-}
-
-const STREET_SUFFIX_LOOKUP = new Map();
-for (const group of STREET_SUFFIX_GROUPS) {
-  const pattern = `(?:${group.map(suffixVariantPattern).join('|')})`;
-  for (const variant of group) {
-    STREET_SUFFIX_LOOKUP.set(variant.replace(/\.$/, ''), pattern);
-  }
-}
-
-// Builds a regex source string for a keyword, expanding any street-suffix
-// word into an alternation matching every variant in its group; other words
-// are matched literally.
-function buildFuzzyPattern(keyword) {
-  return keyword
-    .split(/\s+/)
-    .map(word => STREET_SUFFIX_LOOKUP.get(word.replace(/\.$/, '')) || escapeRegExp(word))
-    .join('\\s+');
-}
-
-// Keywords this short are nearly always acronyms or proper nouns (MOU, CRA,
-// Ybor), and substring matching makes them fire inside unrelated words —
-// "mou" hits every "amount" on an agenda. They get whole-word matching
-// instead, with an optional plural s ("MOU" still catches "MOUs"). Longer
-// keywords keep plain substring semantics so stems still match ("zoning"
-// catches "rezoning").
-const SHORT_KEYWORD_MAX = 4;
-
-function containsPattern(keyword) {
-  const fuzzy = buildFuzzyPattern(keyword);
-  return keyword.length <= SHORT_KEYWORD_MAX ? `\\b${fuzzy}s?\\b` : fuzzy;
-}
+import {
+  buildMatchers, matchItem, searchableText, splitMatchKey, itemKey,
+  eligibilityFromRow, chunk, D1_MAX_BINDS,
+} from '../../lib/keyword-matcher.js';
+import { dispatchDigests } from '../../lib/notify-dispatch.js';
 
 function buildTitle(type, dateStr) {
   const TYPE_LABELS = {
@@ -155,49 +97,23 @@ export async function onRequestPost(context) {
   }
 
   // 4. Apply registration modes & keyword limit filters
+  // One shared rule (lib/keyword-matcher.js) with subscribe.js and manage.js.
   const regMode = env.REGISTRATION_MODE || 'SUPPORTERS_ONLY';
   const now = new Date();
   const allowedSubscribers = [];
   const subscriberByEmail = new Map();
 
   for (const row of subscribers) {
-    const hasSupporterRow = row.supporter_email !== null;
-    const isSupporter = hasSupporterRow && (
-      row.supporter_active_until === null ||
-      new Date(row.supporter_active_until) > now
-    );
-    const isBetaTester = row.is_beta_tester === 1;
-
-    let isAllowed = false;
-    let keywordLimit = 3;
-
-    if (isSupporter) {
-      isAllowed = true;
-      keywordLimit = 15;
-    }
-
-    if (!isAllowed) {
-      if (regMode === 'PUBLIC') {
-        isAllowed = true;
-        keywordLimit = 15;
-      } else if (regMode === 'BETA_AND_SUPPORTERS' || regMode === 'SUPPORTERS_ONLY') {
-        if (isBetaTester) {
-          isAllowed = true;
-          keywordLimit = 15;
-        }
-      }
-    }
-
-    if (isAllowed) {
-      const subInfo = {
-        subId: row.sub_id,
-        email: row.email.trim().toLowerCase(),
-        unsubscribeToken: row.unsubscribe_token,
-        limit: keywordLimit
-      };
-      allowedSubscribers.push(subInfo);
-      subscriberByEmail.set(subInfo.email, subInfo);
-    }
+    const { allowed, limit } = eligibilityFromRow(row, regMode, now);
+    if (!allowed) continue;
+    const subInfo = {
+      subId: row.sub_id,
+      email: row.email.trim().toLowerCase(),
+      unsubscribeToken: row.unsubscribe_token,
+      limit
+    };
+    allowedSubscribers.push(subInfo);
+    subscriberByEmail.set(subInfo.email, subInfo);
   }
 
   if (allowedSubscribers.length === 0) {
@@ -251,53 +167,33 @@ export async function onRequestPost(context) {
     return jsonResponse({ success: true, message: "No active keywords found to match." }, 200);
   }
 
-  // 6. Compile Regex Engines
-  const containsKeywords = [...new Set(
-    activeKeywords.filter(k => k.matchType === 'contains').map(k => k.keyword)
-  )];
-  const exactKeywords = [...new Set(
-    activeKeywords.filter(k => k.matchType === 'exact_phrase').map(k => k.keyword)
-  )];
-  const fileNumKeywords = [...new Set(
-    activeKeywords.filter(k => k.matchType === 'file_number').map(k => k.keyword)
-  )];
+  // 6. Compile matchers (shared with preview-dispatch.js and test-matching.js)
+  const matchers = buildMatchers(activeKeywords);
 
-  // One regex per keyword (rather than one combined alternation) so a match
-  // can be attributed straight back to the keyword that produced it — needed
-  // now that fuzzy street-suffix expansion means the matched text doesn't
-  // always equal the keyword text verbatim.
-  const containsMatchers = containsKeywords.map(kw => ({
-    keyword: kw,
-    regex: new RegExp(containsPattern(kw), 'i')
-  }));
-
-  const exactMatchers = exactKeywords.map(kw => ({
-    keyword: kw,
-    regex: new RegExp(`\\b${buildFuzzyPattern(kw)}\\b`, 'i')
-  }));
-
-  // 7. Check for duplicate notifications in notification_log
+  // 7. Already-sent (subscriber, item, keyword) triples. Items without an
+  // OnBase id are keyed by item number (itemKey). D1 caps bound parameters
+  // at 100 per statement, so the IN (...) is chunked; and a failed read is
+  // fatal — an empty dedup set would re-email everyone.
   const itemIds = [];
   for (const meeting of payload.meetings) {
     for (const item of meeting.agendaItems || []) {
-      if (item.agendaItemId) {
-        itemIds.push(item.agendaItemId);
-      }
+      itemIds.push(itemKey(item));
     }
   }
 
   const sentSet = new Set();
-  if (itemIds.length > 0) {
-    try {
-      const placeholders = itemIds.map(() => '?').join(',');
+  try {
+    for (const ids of chunk([...new Set(itemIds)], D1_MAX_BINDS)) {
+      const placeholders = ids.map(() => '?').join(',');
       const query = `SELECT subscription_id, agenda_item_id, keyword_matched FROM notification_log WHERE agenda_item_id IN (${placeholders})`;
-      const { results } = await db.prepare(query).bind(...itemIds).all();
+      const { results } = await db.prepare(query).bind(...ids).all();
       for (const log of results || []) {
         sentSet.add(`${log.subscription_id}:${log.agenda_item_id}:${log.keyword_matched}`);
       }
-    } catch (err) {
-      console.error(`Failed to read notification log: ${err.message}`);
     }
+  } catch (err) {
+    console.error(`notify: notification_log read failed: ${err.message}`);
+    return jsonResponse({ error: "Database read failed." }, 500);
   }
 
   // 8. Run matching engine
@@ -313,65 +209,19 @@ export async function onRequestPost(context) {
     const meetingWordpressUrl = isHttpUrl(meeting.wordpressUrl) ? meeting.wordpressUrl : null;
 
     for (const item of meeting.agendaItems || []) {
-      const agendaItemId = item.agendaItemId;
+      const agendaItemId = itemKey(item);
       const fileNumber = item.fileNumber || '';
       const itemTitle = item.title || '';
       const background = item.background || '';
-      const docTitles = (item.supportingDocuments || []).map(d => d.title || '');
 
-      // Extract and concatenate staff report fields for matching
-      const staffReportText = item.staffReport ? [
-        item.staffReport.currentZoning || '',
-        item.staffReport.requestedZoning || '',
-        item.staffReport.futureLandUse || '',
-        item.staffReport.overlayDistrict || '',
-        ...(item.staffReport.neighborhoodAssociations || []),
-        ...(item.staffReport.waivers || []),
-        item.staffReport.findings || ''
-      ].join(' ') : '';
-
-      const searchableText = [
-        itemTitle,
-        background,
-        fileNumber,
-        ...docTitles,
-        staffReportText
-      ].join(' ').toLowerCase();
-
-      const matchedKeys = new Set();
-
-      // A. Contains match (fuzzy street-suffix aware)
-      for (const { keyword, regex } of containsMatchers) {
-        if (regex.test(searchableText)) {
-          matchedKeys.add(`contains:${keyword}`);
-        }
-      }
-
-      // B. Exact phrase match (fuzzy street-suffix aware)
-      for (const { keyword, regex } of exactMatchers) {
-        if (regex.test(searchableText)) {
-          matchedKeys.add(`exact_phrase:${keyword}`);
-        }
-      }
-
-      // C. File number match (exact, since keywords are stored as complete file numbers)
-      if (fileNumber) {
-        const fileNumLower = fileNumber.toLowerCase();
-        for (const kw of fileNumKeywords) {
-          if (fileNumLower === kw) {
-            matchedKeys.add(`file_number:${kw}`);
-          }
-        }
-      }
+      const matchedKeys = matchItem(item, matchers, searchableText(item));
 
       if (matchedKeys.size > 0) {
         for (const matchKey of matchedKeys) {
           const subscribers = keywordToSubscribers[matchKey];
           if (!subscribers) continue;
 
-          // Split on the first colon only — keywords may themselves contain colons
-          const sepIdx = matchKey.indexOf(':');
-          const keyword = matchKey.slice(sepIdx + 1);
+          const { keyword } = splitMatchKey(matchKey);
 
           for (const email of subscribers) {
             const sub = subscriberByEmail.get(email);
@@ -506,7 +356,7 @@ export async function onRequestPost(context) {
         // Anchor by agendaItemId — both the wp.html generator and the static
         // meeting pages emit id="item-<agendaItemId>" (never the File No.)
         const itemUrl = meet.wordpressUrl
-          ? `${meet.wordpressUrl}#item-${item.agendaItemId || item.fileNumber}`
+          ? `${meet.wordpressUrl}#item-${item.agendaItemId}`
           : `${origin}/meetings/${meet.meetingId}/#item-${item.agendaItemId}`;
         const kwList = Array.from(item.matchedKeywords).join(', ');
         const itemBorder = isLast ? '' : 'border-bottom: 1px dashed #e5e7eb;';
@@ -582,82 +432,80 @@ export async function onRequestPost(context) {
     });
   }
 
-  // 10. Dispatch emails via Resend API or log them locally (dev only)
+  // 10. Dispatch (Resend, or a console mock in dev) and log per batch, so a
+  // failure part-way through never re-sends what already went out.
   const devEmails = [];
+  const logsByEmail = new Map();
+  for (const log of newNotificationLogs) {
+    const sub = allowedSubscribers.find(s => s.subId === log.subscriptionId);
+    if (sub) (logsByEmail.get(sub.email) || logsByEmail.set(sub.email, []).get(sub.email)).push(log);
+  }
 
-  if (emailsToSend.length > 0) {
-    if (resendApiKey) {
-      try {
-        const batches = [];
-        for (let i = 0; i < emailsToSend.length; i += 100) {
-          batches.push(emailsToSend.slice(i, i + 100));
-        }
+  const writeLogs = async (rows) => {
+    if (rows.length === 0) return;
+    await db.batch(rows.map(log =>
+      db.prepare(`
+        INSERT INTO notification_log (subscription_id, meeting_id, agenda_item_id, keyword_matched)
+        VALUES (?, ?, ?, ?)
+      `).bind(log.subscriptionId, log.meetingId, log.agendaItemId, log.keyword)
+    ));
+  };
 
-        for (const batch of batches) {
-          const endpoint = batch.length === 1
-            ? "https://api.resend.com/emails"
-            : "https://api.resend.com/emails/batch";
-          const body = batch.length === 1 ? batch[0] : batch;
-
-          const res = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-              "Authorization": `Bearer ${resendApiKey}`,
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(body)
-          });
-
-          if (!res.ok) {
-            const errText = await res.text();
-            throw new Error(`Resend API request failed: ${errText}`);
-          }
-        }
-      } catch (err) {
-        console.error(`notify: email dispatch failed: ${err.message}`);
-        return jsonResponse({ error: "Email dispatch failed." }, 500);
-      }
-    } else {
-      console.log(`\n=== [LOCAL DEV - NOTIFICATIONS EMAIL MOCK] ===`);
-      console.log(`No RESEND_API_KEY configured. Mocking ${emailsToSend.length} email(s):\n`);
-      for (const email of emailsToSend) {
-        console.log(`-----------------------------------------`);
-        console.log(`To: ${email.to}`);
-        console.log(`Subject: ${email.subject}`);
-        console.log(`Body (Text):\n${email.text}`);
-        console.log(`-----------------------------------------`);
-
-        devEmails.push({
-          to: email.to,
-          subject: email.subject,
-          text: email.text,
-          html: email.html
+  const sendBatch = resendApiKey
+    ? async (batch) => {
+        const endpoint = batch.length === 1
+          ? "https://api.resend.com/emails"
+          : "https://api.resend.com/emails/batch";
+        const body = batch.length === 1 ? batch[0] : batch;
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${resendApiKey}`,
+            "Content-Type": "application/json"
+          },
+          body: JSON.stringify(body)
         });
+        if (!res.ok) {
+          const errText = await res.text();
+          throw new Error(`Resend API request failed: ${errText}`);
+        }
       }
-      console.log(`=============================================\n`);
-    }
+    : async (batch) => {
+        console.log(`\n=== [LOCAL DEV - NOTIFICATIONS EMAIL MOCK] ===`);
+        console.log(`No RESEND_API_KEY configured. Mocking ${batch.length} email(s):\n`);
+        for (const email of batch) {
+          console.log(`-----------------------------------------`);
+          console.log(`To: ${email.to}`);
+          console.log(`Subject: ${email.subject}`);
+          console.log(`Body (Text):\n${email.text}`);
+          console.log(`-----------------------------------------`);
+          devEmails.push({ to: email.to, subject: email.subject, text: email.text, html: email.html });
+        }
+        console.log(`=============================================\n`);
+      };
 
-    // 11. Write to notification_log
-    if (newNotificationLogs.length > 0) {
-      try {
-        const insertStatements = newNotificationLogs.map(log =>
-          db.prepare(`
-            INSERT INTO notification_log (subscription_id, meeting_id, agenda_item_id, keyword_matched)
-            VALUES (?, ?, ?, ?)
-          `).bind(log.subscriptionId, log.meetingId, log.agendaItemId, log.keyword)
-        );
-        await db.batch(insertStatements);
-      } catch (err) {
-        console.error(`Failed to write notification logs to D1: ${err.message}`);
-        // Do not crash the response since emails have been dispatched or mocked
-      }
-    }
+  const outcome = await dispatchDigests({
+    emails: emailsToSend,
+    logsByEmail,
+    sendBatch,
+    writeLogs,
+    warn: (msg) => console.error(`notify: ${msg}`),
+  });
+
+  if (outcome.failedBatch) {
+    console.error(`notify: email dispatch failed at batch ${outcome.failedBatch.index + 1}: ${outcome.failedBatch.error}`);
+    return jsonResponse({
+      error: "Email dispatch failed.",
+      sentCount: outcome.sent,
+      matchesLogged: outcome.logged,
+      retry: "Re-run the dispatch: already-sent matches are logged and will be skipped."
+    }, 500);
   }
 
   const responsePayload = {
     success: true,
-    sentCount: emailsToSend.length,
-    matchesLogged: newNotificationLogs.length
+    sentCount: outcome.sent,
+    matchesLogged: outcome.logged
   };
 
   if (dev && !resendApiKey) {

@@ -15,13 +15,15 @@ Everything runs against local D1 with mocked emails (verify/manage links print t
 1. **Prereqs** — `npm run build-db`; apply D1 migrations `--local` from `site/`; create `site/.dev.vars` with `ENVIRONMENT="development"` + `WEBHOOK_SECRET="any-local-secret"`. → [Prerequisites](#prerequisites)
 2. **Seed a supporter** into local D1 (required — `BETA_AND_SUPPORTERS` mode only admits emails in `supporters` or `beta_testers`). → [§1](#1-seed-a-local-test-supporter)
 3. **Run the dev server** from `site/`. → [§2](#2-run-the-development-server)
-4. **Subscribe → verify** — POST `/api/subscribe`, follow the `devVerifyUrl`. → [§3](#3-test-subscription-flow-local-dev-mock)
+4. **Subscribe → verify** — POST `/api/subscribe`, open the `devVerifyUrl` (a confirmation page — GET never verifies), click **Yes, activate my alerts** (POST). → [§3](#3-test-subscription-flow-local-dev-mock)
 5. **Manage keywords** — POST `/api/manage`, follow `devManageUrl`; confirm the 15-keyword cap and 15-min link expiry. → [§4](#4-manage-keywords-dashboard)
 6. **Matching report** — `node scripts/test-matching.js` against real historical agenda data. → [§5](#5-evaluate-historical-matches-cli-report)
-7. **Dispatch + idempotency** — POST sample payload to `/api/notify`; confirm `sentCount:1`, then re-POST and confirm `sentCount:0` (dedup). → [§6](#6-trigger-webhook--verify-idempotency)
+7. **Dispatch + idempotency** — POST sample payload to `/api/notify`; confirm `sentCount:1`, then re-POST and confirm `sentCount:0` (dedup). Agendas over 90 items exercise the chunked dedup read; items without an `agendaItemId` are keyed `n<number>`. → [§6](#6-trigger-webhook--verify-idempotency)
 8. **Two-step unsubscribe** — GET must not delete, POST deletes; verify rows gone. → [§7](#7-test-two-step-unsubscribe)
 
 **Exit criteria:** verification, management, matching, dedup, and unsubscribe all behave; the mocked digest in the console looks right (item links, sponsor slot, plain-text mirror).
+
+All of Phase 1 except the management dashboard is scripted: `site/test/e2e/notifications.sh` starts `wrangler pages dev` against local D1, runs subscribe → verify (GET, then POST) → expired token → a 120-item dispatch → dedup re-dispatch → the keyword cap, and cleans up after itself (~40 s). Run it after any change under `site/functions/` or `site/lib/`.
 
 ### Phase 2 — Production wiring (one-time)
 
@@ -149,7 +151,13 @@ The response body is always the same uniform message (anti-enumeration), but in 
 
 The same link is also printed in the Wrangler console as a mock email (`[LOCAL DEV - EMAIL MOCK]`), since `RESEND_API_KEY` is not present.
 
-Copy and visit that link in your browser to verify the email and activate the keywords.
+Open that link in your browser. Since 2026-09-08 verification is two-step like unsubscribe: the GET shows a confirmation page and nothing changes until you click **Yes, activate my alerts**, which POSTs the token (mail-gateway link scanners follow GETs, so a GET that verified let anyone enrol a third party). Links older than 72 hours (from `subscriptions.updated_at`) redirect to `?status=verify_expired`; request a fresh one under Manage keywords. From curl:
+
+```bash
+curl -i -X POST http://localhost:8789/api/verify \
+  -H 'Content-Type: application/x-www-form-urlencoded' \
+  --data-urlencode "token=YOUR_VERIFY_TOKEN"     # expect 303 → /notifications/?status=verified&email=…&token=…
+```
 
 ---
 
