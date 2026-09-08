@@ -2,5 +2,33 @@
   "meetingId": "2930",
   "meetingDate": "2026-09-10",
   "firstSeenAt": "2026-09-04T23:01:37.874Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-08",
+      "scrapedAt": "2026-09-08T23:02:07.536Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "CRA26-26573",
+          "filename": "MEMO_TAMPA BAY RAYS CONTRACT CONTENT SIGNEDCMRFC-ADA.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "CRA26-26856",
+          "filename": "08.05.26 DPCAC PRESENTATION (QUARTERLY PROJECTS DIVISION UPDATES) 1.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "CRA26-26856",
+          "filename": "EAST_TAMPA_QUARTERLY_PROJECT_TRACKER.PDF"
+        }
+      ]
+    }
+  ]
 }
