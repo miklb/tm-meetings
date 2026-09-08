@@ -317,28 +317,38 @@ fi
 # Check its output before it reaches the DB: audit-video-offsets.py catches
 # overshoot / missing part boundaries; verify-offset.py transcribes a
 # mid-meeting window and measures actual drift for every video part.
-if $SKIP_VIDEO || $SKIP_VERIFY; then
+# The verdict is recorded in the mapping file (verification.status) so that
+# build-db.js skips a failed meeting's videos even if the DB is rebuilt later
+# by some other run; the matcher clears the record when it saves a new offset.
+if $SKIP_VIDEO; then
     step 3b "Verify offsets — SKIPPED"
+elif $SKIP_VERIFY; then
+    step 3b "Verify offsets — SKIPPED (--skip-verify; recorded as unverified)"
+    run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/record-offset-verification.py" --tid "$PKEY" --status skipped
 else
     step 3b "Verify offsets (audit + empirical drift check)"
     STEP_START=$(date +%s)
-    VERIFY_FAILED=false
-    if ! run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/audit-video-offsets.py" --tid "$PKEY" --strict; then
-        VERIFY_FAILED=true
-    fi
-    if ! run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/verify-offset.py" --tid "$PKEY" --strict; then
-        VERIFY_FAILED=true
-    fi
+    AUDIT_RC=0
+    VERIFY_RC=0
+    run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/audit-video-offsets.py" --tid "$PKEY" --strict || AUDIT_RC=$?
+    run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/verify-offset.py" --tid "$PKEY" --strict || VERIFY_RC=$?
     echo "Done ($(elapsed "$STEP_START"))"
-    if $VERIFY_FAILED; then
+    if [[ $AUDIT_RC -ne 0 || $VERIFY_RC -ne 0 ]]; then
+        run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/record-offset-verification.py" \
+            --tid "$PKEY" --status fail --audit-rc "$AUDIT_RC" --verify-rc "$VERIFY_RC"
         echo ""
         echo "ERROR: offset verification failed for transcript $PKEY — not rebuilding the DB/site."
+        echo "  Recorded as verification.status=fail; build-db.js will import this meeting's"
+        echo "  transcript but none of its videos until the offset is fixed and re-verified."
         echo "  Mapping:            $PROCESSOR_DIR/data/video_mapping_${PKEY}.json"
         echo "  Measure at a time:  $PROJECT_ROOT/scripts/verify-offset.py --tid $PKEY --at 11:05:00AM"
         echo "  Re-run the matcher: cd $PROCESSOR_DIR && venv/bin/python scripts/build/match_whisper_to_transcript.py <video_id> data/processed/processed_transcript_${PKEY}_*.json --video-mapping data/video_mapping_${PKEY}.json"
+        echo "  Re-verify only:     $PROJECT_ROOT/scripts/verify-offset.py --tid $PKEY --strict && $PROJECT_ROOT/scripts/record-offset-verification.py --tid $PKEY --status pass"
         echo "  Bypass (not recommended): --skip-verify"
         exit 1
     fi
+    run "$VENV_PYTHON" "$PROJECT_ROOT/scripts/record-offset-verification.py" \
+        --tid "$PKEY" --status pass --audit-rc "$AUDIT_RC" --verify-rc "$VERIFY_RC"
 fi
 
 # ── Step 4: Rebuild database ──────────────────────────────────────────────────

@@ -70,6 +70,7 @@ Chains all pipeline steps for one meeting:
 2. **Capitalize** — Convert to sentence case with NER (2-5 min, loads GLiNER)
 3. **Video** — YouTube search → Whisper offset → gap detection
 3b. **Verify offsets** — `scripts/audit-video-offsets.py --tid` (span vs. duration, part boundaries) then `scripts/verify-offset.py --tid` (transcribes a mid-meeting window per video part and measures real drift). Fails the run (no DB/site rebuild) if any part is WRONG/NO-MATCH or SUSPECT (>15s). The matcher can save a confidently wrong offset — 2026-08-26 found seven archived meetings off by 2–140 min — so this is the check that keeps bad `?t=` links off the site. `--skip-verify` to opt out.
+    The verdict is written to `video_mapping_<pkey>.json` as `verification.status` (`pass` / `fail` / `skipped`) by `scripts/record-offset-verification.py`. `build-db.js` imports the transcript but **no videos** for a `fail` mapping, so a bad offset stays off the site even if the DB is rebuilt by a later run. Re-running the matcher clears the record; re-verify with `scripts/verify-offset.py --tid <pkey> --strict` then `scripts/record-offset-verification.py --tid <pkey> --status pass`.
 4. **Database** — Rebuild SQLite from all agenda + transcript data
 5. **Site** — Regenerate Eleventy HTML
 
@@ -126,9 +127,11 @@ Quick rebuild without re-processing transcripts. Use after manual edits to agend
 ```bash
 ./pipeline/build-site.sh              # Full rebuild
 ./pipeline/build-site.sh --db-only    # Database only
-./pipeline/build-site.sh --year 2026  # Filter to year
+./pipeline/build-site.sh --year 2026  # Filter to year (agendas, transcripts and videos)
 ./pipeline/build-site.sh --deploy     # Rebuild + deploy to Cloudflare Pages
 ```
+
+`scripts/build-db.js` builds into `meetings.db.building` and renames it over `data/meetings.db` only when every step succeeds, so an interrupted build never leaves a half-empty database. `--output <path>` builds somewhere else (scratch comparisons). Addendum meetings are folded into their parent meeting's items rather than becoming meetings of their own; the build log lists each fold and any same-day meetings of the same type it kept.
 
 ### `rebuild-entities.sh` — Update entity databases
 
@@ -198,7 +201,7 @@ The project uses two separate ID systems:
 - **OnBase ID** — From Hyland agenda system (e.g., `2785`). Used for agenda JSON filenames.
 - **Transcript pkey** — From tampagov.net (e.g., `2645`). Used for transcript filenames.
 
-These are matched in `build-db.js` by `(date, meeting_type)` key. The `transcript_lookup.py` script automates this discovery.
+These are matched in `build-db.js` by `(date, meeting_type)` key, then by date alone when exactly one agenda meeting on the date is still unclaimed. When two agenda meetings and two transcripts share a date with nothing to tell them apart (the two 2025-08-11 budget workshops), the build logs the case as ambiguous and the pairing goes in `TRANSCRIPT_MEETING_OVERRIDES` in `build-db.js`. The `transcript_lookup.py` script automates this discovery.
 
 ## Typical Workflows
 

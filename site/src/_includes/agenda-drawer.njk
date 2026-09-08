@@ -38,6 +38,8 @@
           {% include "agenda-item.njk" %}
         {% endfor %}
       </ol>
+      {% set prefix = "drawer" %}
+      {% include "agenda-addendum.njk" %}
     {% else %}
       <p>No agenda items available for this meeting.</p>
     {% endif %}

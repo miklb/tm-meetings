@@ -292,7 +292,7 @@ There is no single `MEETING_TYPES` constant — detection happens at each stage:
 
 ### Rebuilding the Database
 
-1. `npm run build-db` (runs `node scripts/build-db.js`) — reads agenda JSON, processed transcripts, and video mappings; writes `data/meetings.db`
+1. `npm run build-db` (runs `node scripts/build-db.js`) — reads agenda JSON, processed transcripts, and video mappings; writes `data/meetings.db` atomically (`--year YYYY`, `--output PATH`). Addendum meetings are folded into their parent's `agenda_items` with `from_addendum = 1`; video mappings whose `verification.status` is `fail` contribute no videos
 2. Run before `cd site && npm run build` any time the DB is missing or stale (it is gitignored, not committed)
 
 ---

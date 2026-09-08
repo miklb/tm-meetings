@@ -437,6 +437,42 @@ main {
   line-height: 1.4;
 }
 
+.item-notice {
+  margin-block: 0 var(--spacing-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
+/* ---------- Addendum (items folded in from a same-day addendum meeting) ---------- */
+
+.agenda-addendum {
+  margin-block-start: var(--spacing-lg);
+  padding-block-start: var(--spacing-md);
+  border-block-start: 2px solid var(--color-border);
+}
+
+.agenda-addendum__title {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  margin-block: 0 var(--spacing-sm);
+  font-size: 1.1rem;
+}
+
+.agenda-addendum__count {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+}
+
+.agenda-addendum__section {
+  margin-block: var(--spacing-md) 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+}
+
 /* ---------- Background Details ---------- */
 
 .item-background {

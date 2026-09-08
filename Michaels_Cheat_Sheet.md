@@ -45,7 +45,7 @@ npm run archive -- YYYY-MM-DD --dry-run             # show what would run
 If you fixed data by hand and just need to republish:
 
 ```bash
-npm run build-db        # rebuild SQLite (scripts/build-db.js)
+npm run build-db        # rebuild SQLite (scripts/build-db.js); atomic, --output <path> for a scratch copy
 npm run build-site      # Eleventy build
 npm run deploy          # cd site && wrangler pages deploy --project-name tampa-meetings
 ```

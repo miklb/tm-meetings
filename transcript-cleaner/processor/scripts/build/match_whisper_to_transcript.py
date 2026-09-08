@@ -39,7 +39,9 @@ def save_offset_to_mapping(video_mapping_file: str, video_id: str, offset: float
     Write calculated offset_seconds into the video_mapping JSON file.
 
     Finds the video entry matching video_id and sets its offset_seconds.
-    Creates a backup of the original file before modifying.
+    A changed offset invalidates any recorded verification verdict
+    (mapping["verification"], written by scripts/record-offset-verification.py),
+    so that record is removed and the archive pipeline's Step 3b must run again.
 
     Args:
         video_mapping_file: Path to video_mapping_<ID>.json
@@ -65,7 +67,12 @@ def save_offset_to_mapping(video_mapping_file: str, video_id: str, offset: float
     updated = False
     for video in mapping.get('videos', []):
         if video.get('video_id') == video_id:
-            video['offset_seconds'] = int(round(offset))
+            new_offset = int(round(offset))
+            if video.get('offset_seconds') != new_offset and 'verification' in mapping:
+                logger.info("  Offset changed for %s; clearing recorded verification (%s)",
+                            video_id, mapping['verification'].get('status'))
+                del mapping['verification']
+            video['offset_seconds'] = new_offset
             updated = True
             break
 

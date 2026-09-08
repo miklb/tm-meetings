@@ -1,15 +1,22 @@
-{# Render a single agenda item #}
-<li class="agenda-item" id="item-{{ item.agenda_item_id }}">
+{# Render a single agenda item. Set idPrefix before including when the same
+   agenda_item_id can appear twice on a page (addendum items re-list parent
+   items they amend). #}
+{% set idPrefix = idPrefix or "item" %}
+<li class="agenda-item" id="{{ idPrefix }}-{{ item.agenda_item_id }}">
     <div class="item-header">
         <span class="item-number">{{ item.item_number }}.</span>
         {% if item.file_number %}
             <span class="file-number">
-                <a href="#item-{{ item.agenda_item_id }}">{{ item.file_number }}</a>
+                <a href="#{{ idPrefix }}-{{ item.agenda_item_id }}">{{ item.file_number }}</a>
             </span>
         {% endif %}
     </div>
 
     <p class="item-title">{{ item.title | cleanTitle }}</p>
+
+    {% if item.continued_to_date %}
+        <p class="item-notice">Continued to {{ item.continued_to_date }}</p>
+    {% endif %}
 
     {% if item.background | hasContent %}
         <details class="item-background">

@@ -65,6 +65,8 @@
             {% include "agenda-item.njk" %}
           {% endfor %}
         </ol>
+        {% set prefix = "fallback" %}
+        {% include "agenda-addendum.njk" %}
       {% else %}
         <p>No agenda items available for this meeting.</p>
       {% endif %}
@@ -80,6 +82,8 @@
         {% include "agenda-item.njk" %}
       {% endfor %}
     </ol>
+    {% set prefix = "agenda" %}
+    {% include "agenda-addendum.njk" %}
   {% else %}
     <p>No agenda items available for this meeting.</p>
   {% endif %}
