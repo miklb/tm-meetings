@@ -774,13 +774,21 @@ const TYPE_TITLES = {
     special: { title: 'Special Call', slug: 'special-call' },
 };
 
-// The weekly types keep the archive vocabulary; 'special' is too generic to
-// stand alone, so it takes the clerk's name ("CRA Special Call") when the
-// scraper captured one (meetingName — absent on pre-2026-08 scrapes).
+// Clerk names that are just the type label again; anything else on an
+// evening or special meeting is a real name worth keeping.
+const GENERIC_NAMES = /^(city )?council (evening|special( call)?)( session| meeting)?$/i;
+
+// The weekly types keep the archive vocabulary. 'special' is too generic to
+// stand alone, and OnBase files every 5:01 PM session as 'evening' whether or
+// not it is a land-use hearing (the 9/8/26 budget public hearing came out as
+// "Evening Land Use"), so both take the clerk's name when the scraper
+// captured a non-generic one (meetingName — absent on pre-2026-08 scrapes).
 function typeInfo(meeting) {
     const type = (meeting.meetingType || '').toLowerCase();
-    if (type === 'special' && meeting.meetingName) {
-        return { title: meeting.meetingName, slug: slugify(meeting.meetingName) };
+    const name = (meeting.meetingName || '').replace(/\s+/g, ' ').trim();
+    if ((type === 'special' || type === 'evening') && name && !GENERIC_NAMES.test(name)) {
+        const trimmed = name.replace(/^city council\s+/i, '');
+        return { title: trimmed, slug: slugify(trimmed) };
     }
     return TYPE_TITLES[type] || { title: 'Meeting', slug: 'meeting' };
 }
@@ -1097,6 +1105,7 @@ if (require.main === module) {
 
 module.exports = {
     generateMarkdownPost,
+    typeInfo,
     writePost,
     normalizeSectionTitle,
     groupItemsBySection,

@@ -4,7 +4,7 @@
   "description": "Scrape City of Tampa agendas, store as structured JSON, and generate Markdown posts for the tm-static site.",
   "main": "json-scraper.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test \"test/*.test.js\"",
     "scrape": "node json-scraper.js",
     "convert": "node json-to-markdown.js",
     "process": "./process-agenda.sh"

@@ -3,6 +3,7 @@ const path = require('path');
 const { integrateStaffReportsIntoAgendaItems } = require('./staff-report-parser');
 const { loadChangeLog, saveChangeLog, appendOrMergeEntry } = require('./lib/change-log');
 const { computeMeetingDiff, diffIsEmpty } = require('./lib/diff-meeting');
+const { mergeWithExisting } = require('./lib/scrape-guard');
 
 // HTTP scraper module (default)
 const { createSession, fetchMeeting, fetchMeetingList } = require('./lib/http-meeting-scraper');
@@ -172,38 +173,31 @@ function extractFileNumber(text) {
 
 /**
  * Runs right before the meeting JSON is written.
- * Preserves mirroredUrl values from the existing JSON so re-scrapes don't
- * wipe out R2 links (OnBase publishId URLs change but R2 is permanent),
- * and records the meaningful diff in the public change-log.
+ * Reconciles the fresh scrape with the stored file (lib/scrape-guard.js):
+ * refuses an empty or wholly failed scrape, keeps the stored version of any
+ * item whose fetch failed or lost all its documents, carries mirroredUrl
+ * stamps forward (OnBase publishId URLs change but R2 is permanent), and
+ * records the meaningful diff in the public change-log.
+ * @throws {Error} when the fresh scrape must not be written
  */
 function preserveMirrorsAndLogChanges(outputFileName, meetingData) {
     if (fs.existsSync(outputFileName)) {
+        let existing = null;
         try {
-            const existing = JSON.parse(fs.readFileSync(outputFileName, 'utf8'));
-            const mirrorMap = new Map();
-            for (const item of existing.agendaItems || []) {
-                for (const doc of item.supportingDocuments || []) {
-                    if (doc.mirroredUrl && item.agendaItemId) {
-                        const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
-                        mirrorMap.set(key, doc.mirroredUrl);
-                    }
-                }
+            existing = JSON.parse(fs.readFileSync(outputFileName, 'utf8'));
+        } catch (e) {
+            console.warn(`Warning: existing ${path.basename(outputFileName)} unreadable (${e.message}) — writing fresh scrape`);
+        }
+        if (existing) {
+            const merged = mergeWithExisting(existing, meetingData);
+            if (merged.refused) {
+                throw new Error(`Refusing to overwrite ${path.basename(outputFileName)}: ${merged.refused}`);
             }
-            if (mirrorMap.size > 0) {
-                let restored = 0;
-                for (const item of meetingData.agendaItems) {
-                    for (const doc of item.supportingDocuments || []) {
-                        const key = `${item.agendaItemId}:${(doc.title || doc.originalText || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9._-]/g, '')}`;
-                        const preserved = mirrorMap.get(key);
-                        if (preserved) {
-                            doc.mirroredUrl = preserved;
-                            restored++;
-                        }
-                    }
-                }
-                if (restored > 0) {
-                    console.log(`Preserved ${restored} mirrored document URLs from previous scrape`);
-                }
+            for (const kept of merged.keptItems) {
+                console.warn(`Kept stored version of item ${kept.number} (${kept.reason})`);
+            }
+            if (merged.restoredMirrors > 0) {
+                console.log(`Preserved ${merged.restoredMirrors} mirrored document URLs from previous scrape`);
             }
 
             // Capture meaningful diff for the public change-log
@@ -223,8 +217,6 @@ function preserveMirrorsAndLogChanges(outputFileName, meetingData) {
             } catch (changeLogErr) {
                 console.warn(`Warning: change-log update failed: ${changeLogErr.message}`);
             }
-        } catch (e) {
-            // Existing file unreadable — proceed without merge
         }
     } else {
         // First scrape — initialise the log with firstSeenAt so we have a baseline
@@ -249,6 +241,19 @@ function preserveMirrorsAndLogChanges(outputFileName, meetingData) {
  * @param {string} meetingName - Clerk's meeting name from the list page (optional)
  * @returns {Promise<void>}
  */
+/** The meeting JSON already on disk for an OnBase id, or null. */
+function findStoredMeeting(meetingId) {
+    const dataDir = path.join(__dirname, 'data');
+    if (!fs.existsSync(dataDir)) return null;
+    const file = fs.readdirSync(dataDir).find(f => f.startsWith(`meeting_${meetingId}_`) && f.endsWith('.json') && !f.includes('_old'));
+    if (!file) return null;
+    try {
+        return JSON.parse(fs.readFileSync(path.join(dataDir, file), 'utf8'));
+    } catch {
+        return null;
+    }
+}
+
 async function scrapeWithHTTP(meetingId, meetingType = 'regular', session = null, targetDate = null, meetingName = null) {
     console.log(`\n[HTTP] Starting scrape for meeting ${meetingId} (${meetingType})`);
 
@@ -347,8 +352,19 @@ async function main() {
             console.log(`[HTTP] Fetching meeting type for ID ${specificMeetingId}...`);
             const meetings = await fetchMeetingList({ session });
             const meetingInfo = meetings.find(m => m.id === specificMeetingId);
-            meetingType = meetingInfo ? meetingInfo.type : 'regular';
-            meetingName = meetingInfo ? meetingInfo.name : null;
+            const stored = findStoredMeeting(specificMeetingId);
+            if (meetingInfo) {
+                meetingType = meetingInfo.type;
+                meetingName = meetingInfo.name;
+            } else if (stored) {
+                // Historical meetings are off the current list; a re-scrape
+                // used to demote them to 'regular' and change the post slug.
+                meetingType = stored.meetingType || 'regular';
+                meetingName = stored.meetingName || null;
+                console.log(`[HTTP] ID ${specificMeetingId} not on the current list — keeping stored type '${meetingType}'`);
+            } else {
+                meetingType = 'regular';
+            }
         }
 
         // Process single meeting
