@@ -2,5 +2,19 @@
   "meetingId": "2951",
   "meetingDate": "2026-09-10",
   "firstSeenAt": "2026-09-04T23:01:27.569Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-08",
+      "scrapedAt": "2026-09-08T20:08:46.774Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-26-62",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-62.PDF"
+        }
+      ]
+    }
+  ]
 }
