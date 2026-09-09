@@ -35,6 +35,9 @@ from pathlib import Path
 PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 sys.path.insert(0, str(PROJECT_ROOT))
 
+# Data lives beside the processor, not in the caller's working directory
+DATA_DIR = PROJECT_ROOT / "data"
+
 from src.logging_config import setup_logging
 from src.meeting_type_detector import detect_meeting_type
 from src.transcript_gap_detector import detect_gaps, save_gaps_to_mapping
@@ -42,6 +45,7 @@ from scripts.build.match_whisper_to_transcript import (
     calculate_offset,
     calculate_smart_duration,
     save_offset_to_mapping,
+    whisper_cache_path,
 )
 
 # Rate-limiting delay between consecutive yt-dlp downloads (seconds)
@@ -59,7 +63,7 @@ _SUBPROCESS_ENV = {
 }
 
 
-def find_transcript(meeting_id: int, meeting_date: str) -> Path | None:
+def find_transcript(meeting_id: int, meeting_date: str, data_dir: Path = DATA_DIR) -> Path | None:
     """
     Locate the processed transcript file, falling back to the raw transcript.
 
@@ -73,10 +77,10 @@ def find_transcript(meeting_id: int, meeting_date: str) -> Path | None:
         Path to the first match, or None.
     """
     search_dirs = [
-        (Path("data/processed"), f"processed_transcript_{meeting_id}_{meeting_date}.json"),
-        (Path("data/processed"), f"processed_transcript_{meeting_id}_*.json"),
-        (Path("data/transcripts"), f"transcript_{meeting_id}_{meeting_date}.json"),
-        (Path("data/transcripts"), f"transcript_{meeting_id}_*.json"),
+        (data_dir / "processed", f"processed_transcript_{meeting_id}_{meeting_date}.json"),
+        (data_dir / "processed", f"processed_transcript_{meeting_id}_*.json"),
+        (data_dir / "transcripts", f"transcript_{meeting_id}_{meeting_date}.json"),
+        (data_dir / "transcripts", f"transcript_{meeting_id}_*.json"),
     ]
     for directory, pattern in search_dirs:
         matches = sorted(directory.glob(pattern))
@@ -154,6 +158,7 @@ def process_single_video(
     model: str,
     meeting_date: str,
     dry_run: bool = False,
+    window=None,
 ) -> dict:
     """
     Steps 3a-3c for a single video part: adaptive duration → transcribe → match → save offset.
@@ -194,20 +199,15 @@ def process_single_video(
         return result
 
     # 3a: Calculate adaptive audio window (start offset + duration)
-    window = calculate_smart_duration(str(mapping_path), str(transcript_path), video_id)
+    if window is None:
+        window = calculate_smart_duration(str(mapping_path), str(transcript_path), video_id)
     audio_start = window.start
     duration = window.duration
     result["duration_used"] = duration
 
     # 3b: Transcribe with Whisper (cached)
-    if audio_start > 0:
-        cache_label = f"skip{audio_start}s_{duration}s"
-    elif duration != 300:
-        cache_label = f"{duration // 60}min"
-    else:
-        cache_label = ""
-    cache_file = Path(f"data/whisper_cache/{video_id}_{model}{f'_{cache_label}' if cache_label else ''}.json")
-    cache_file.parent.mkdir(exist_ok=True)
+    cache_file = whisper_cache_path(video_id, model, audio_start, duration)
+    cache_file.parent.mkdir(parents=True, exist_ok=True)
 
     if cache_file.exists():
         logger.info("  ✓ Part %d: using cached Whisper output (%s)", part, cache_file.name)
@@ -273,6 +273,7 @@ def run_pipeline(
     min_gap_minutes: int = 60,
     dry_run: bool = False,
     skip_fetch: bool = False,
+    data_dir: Path = DATA_DIR,
 ) -> bool:
     """
     Run the full video processing pipeline for a single meeting.
@@ -285,11 +286,12 @@ def run_pipeline(
         min_gap_minutes: Gap threshold for transcript gap detection (default: 60)
         dry_run: If True, show what would happen without making changes
         skip_fetch: If True, skip YouTube API call (use existing mapping only)
+        data_dir: processor data directory (tests point this at a temp dir)
 
     Returns:
         True if all offsets were calculated (or dry-run), False on failure.
     """
-    mapping_path = Path(f"data/video_mapping_{meeting_id}.json")
+    mapping_path = data_dir / f"video_mapping_{meeting_id}.json"
     prefix = "[dry-run] " if dry_run else ""
 
     setup_logging(meeting_date)
@@ -301,7 +303,7 @@ def run_pipeline(
     # ── Step 1: Find transcript and detect meeting type ──────────────────
     logger.info("Step 1: Locate transcript and detect meeting type")
 
-    transcript_path = find_transcript(meeting_id, meeting_date)
+    transcript_path = find_transcript(meeting_id, meeting_date, data_dir)
     if transcript_path is None:
         logger.error("  ❌ No transcript found for meeting %d (%s)", meeting_id, meeting_date)
         logger.error("     Expected: data/processed/processed_transcript_%d_%s.json", meeting_id, meeting_date)
@@ -379,15 +381,18 @@ def run_pipeline(
 
         results = []
         for i, video in enumerate(videos):
-            if i > 0 and not dry_run:
-                # Rate-limit yt-dlp downloads
-                existing_offset = video.get("offset_seconds")
-                cache_exists = _whisper_cache_exists(video["video_id"], model)
-                if existing_offset is None and not cache_exists:
+            window = None
+            if i > 0 and not dry_run and video.get("offset_seconds") is None:
+                # Rate-limit yt-dlp downloads — unless this exact sample window
+                # is already cached. (The old check globbed any cache file for
+                # the video, so a stale cache from another window skipped it.)
+                window = calculate_smart_duration(str(mapping_path), str(transcript_path), video["video_id"])
+                if not whisper_cache_path(video["video_id"], model, window.start, window.duration).exists():
                     logger.info("  ⏳ Rate-limit delay (%ds)...", YTDLP_DELAY_SECONDS)
                     time.sleep(YTDLP_DELAY_SECONDS)
 
-            r = process_single_video(video, transcript_path, mapping_path, model, meeting_date, dry_run)
+            r = process_single_video(video, transcript_path, mapping_path, model, meeting_date, dry_run,
+                                     window=window)
             results.append(r)
 
     # ── Summary ──────────────────────────────────────────────────────────
@@ -429,12 +434,6 @@ def run_pipeline(
 
     logger.info("")
     return all_ok if videos and not dry_run else True
-
-
-def _whisper_cache_exists(video_id: str, model: str) -> bool:
-    """Check if any Whisper cache file exists for this video."""
-    cache_dir = Path("data/whisper_cache")
-    return any(cache_dir.glob(f"{video_id}_{model}*"))
 
 
 def main():

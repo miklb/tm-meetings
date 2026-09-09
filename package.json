@@ -7,6 +7,7 @@
     "agenda": "cd agenda-scraper && ./process-agenda.sh",
     "archive": "./pipeline/archive-meeting.sh",
     "build-db": "node scripts/build-db.js",
+    "test": "node --test \"scripts/test/*.test.js\" \"agenda-scraper/test/*.test.js\" \"site/test/*.test.js\"",
     "build-site": "cd site && npx @11ty/eleventy",
     "sync-design": "node scripts/sync-design.js",
     "deploy": "cd site && wrangler pages deploy --project-name tampa-meetings",
