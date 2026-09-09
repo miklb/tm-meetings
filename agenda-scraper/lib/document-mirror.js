@@ -10,6 +10,40 @@ const path = require('path');
 const crypto = require('crypto');
 const { ONBASE_PATH } = require('./http-utils');
 
+/**
+ * Plan the R2 filename for every document in an item. Two documents in one
+ * item can share a title (a revised staff report attached twice, two
+ * exhibits both called "EXHIBIT A"); keying on the sanitized title alone
+ * made them collide on one object and the second was never archived. The
+ * first keeps the plain name so existing stamps stay valid; repeats get
+ * "-2", "-3" … before the extension, in page order.
+ * @param {Array<{title?: string, originalText?: string, url?: string}>} docs
+ * @param {(name: string) => string} sanitize
+ * @param {(url: string) => string|null} extFromUrl
+ * @returns {string[]} one filename per document
+ */
+function planDocumentFilenames(docs, sanitize, extFromUrl) {
+  const seen = new Map();
+  return (docs || []).map((doc) => {
+    let filename = doc.title || doc.originalText || 'document.pdf';
+    // OnBase converts Word/Excel files to PDF at the DownloadFileBytes
+    // endpoint and signals this via the URL path extension (foo.DO.pdf).
+    const urlExt = doc.url ? extFromUrl(doc.url) : null;
+    if (urlExt) {
+      const titleExt = path.extname(filename).toLowerCase();
+      if (titleExt !== urlExt) {
+        filename = filename.slice(0, filename.length - titleExt.length) + urlExt;
+      }
+    }
+    const key = sanitize(filename);
+    const n = (seen.get(key) || 0) + 1;
+    seen.set(key, n);
+    if (n === 1) return filename;
+    const ext = path.extname(filename);
+    return `${filename.slice(0, filename.length - ext.length)}-${n}${ext}`;
+  });
+}
+
 class DocumentMirror {
   /**
    * Create a new DocumentMirror instance
@@ -295,20 +329,14 @@ class DocumentMirror {
       return results;
     }
 
-    for (const doc of item.supportingDocuments) {
-      // Start with the human-readable title (link text from OnBase)
-      let filename = doc.title || doc.originalText || 'document.pdf';
+    const filenames = planDocumentFilenames(
+      item.supportingDocuments,
+      (name) => this.sanitizeFilename(name),
+      (url) => this.getExtFromUrl(url)
+    );
 
-      // Override the extension with the one from the download URL.
-      // OnBase converts Word/Excel files to PDF at the DownloadFileBytes endpoint
-      // and signals this via the URL path extension (e.g. foo.DO.pdf for foo.DOCX).
-      const urlExt = this.getExtFromUrl(doc.url);
-      if (urlExt) {
-        const titleExt = path.extname(filename).toLowerCase();
-        if (titleExt !== urlExt) {
-          filename = filename.slice(0, filename.length - titleExt.length) + urlExt;
-        }
-      }
+    for (const [docIndex, doc] of item.supportingDocuments.entries()) {
+      const filename = filenames[docIndex];
 
       try {
         console.log(`  ⬇ Downloading: ${filename}`);
@@ -490,4 +518,4 @@ class DocumentMirror {
   }
 }
 
-module.exports = { DocumentMirror };
+module.exports = { DocumentMirror, planDocumentFilenames };

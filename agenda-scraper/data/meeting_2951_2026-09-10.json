@@ -2,6 +2,7 @@
   "meetingId": "2951",
   "meetingType": "evening",
   "meetingName": "City Council Evening",
+  "meetingTime": "17:01",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "September 10, 2026",
@@ -343,7 +344,8 @@
           "title": "1-WRITTEN COMMENTS - REZ-26-62.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-62.PDF.pdf?documentType=1&meetingId=2951&itemId=26460&publishId=210359&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of 1-WRITTEN COMMENTS - REZ-26-62.PDF in a new tab",
-          "originalText": "1-WRITTEN COMMENTS - REZ-26-62.PDF"
+          "originalText": "1-WRITTEN COMMENTS - REZ-26-62.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2951/26460/1-written-comments-rez-26-62.pdf"
         }
       ],
       "folioNumbers": [],
@@ -769,7 +771,7 @@
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BIE%2025-119.PDF.pdf?documentType=1&meetingId=2951&itemId=25638&publishId=210397&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of BIE 25-119.PDF in a new tab",
           "originalText": "BIE 25-119.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2951/25638/bie-25-119.pdf"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2951/25638/bie-25-119-2.pdf"
         },
         {
           "title": "FINAL ORDINANCE REZ 25-119.PDF",
@@ -797,7 +799,7 @@
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-25-119%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2951&itemId=25638&publishId=210401&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of REZ-25-119 SITE PLAN.PDF in a new tab",
           "originalText": "REZ-25-119 SITE PLAN.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2951/25638/rez-25-119-site-plan.pdf"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2951/25638/rez-25-119-site-plan-2.pdf"
         }
       ],
       "folioNumbers": [],
@@ -899,7 +901,8 @@
           "title": "REZ-26-23 CERTIFIED APPLICATION FINAL V2.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-23%20CERTIFIED%20APPLICATION%20FINAL%20V2.PDF.pdf?documentType=1&meetingId=2951&itemId=26219&publishId=210410&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of REZ-26-23 CERTIFIED APPLICATION FINAL V2.PDF in a new tab",
-          "originalText": "REZ-26-23 CERTIFIED APPLICATION FINAL V2.PDF"
+          "originalText": "REZ-26-23 CERTIFIED APPLICATION FINAL V2.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2951/26219/rez-26-23-certified-application-final-v2.pdf"
         }
       ],
       "folioNumbers": [],

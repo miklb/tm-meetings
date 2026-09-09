@@ -16,7 +16,7 @@ Detailed project context for AI assistants lives in `.github/`, which Claude Cod
 
 Mistakes here corrupt data, break published pages, or get IPs banned:
 
-1. **Agenda processing** — always `cd agenda-scraper && ./process-agenda.sh <date>`. It chains scraper → R2 mirror → OpenGov reconcile → Markdown generation in a fixed order, and a standalone `json-scraper.js` run on a date with an existing meeting file still risks overwriting good data: only `mirroredUrl` is carried forward on re-scrape, so an empty or partial standalone scrape can clobber a meeting's other fields. Safe partial re-runs (regenerate the markdown post only, re-mirror only, re-reconcile only) are listed in copilot-instructions.md. WordPress generation was retired 2026-07-17.
+1. **Agenda processing** — always `cd agenda-scraper && ./process-agenda.sh <date>`. It chains scraper → R2 mirror → OpenGov reconcile → Markdown generation in a fixed order; a standalone `json-scraper.js` run skips the mirror and manifest steps, so new documents stay on OnBase URLs and financial sections vanish. (Since 2026-09-08 `lib/scrape-guard.js` makes the scrape itself safe: stamps carry forward, failed items keep their stored version, an empty scrape is refused.) Safe partial re-runs (regenerate the markdown post only, re-mirror only, re-reconcile only) are listed in copilot-instructions.md. WordPress generation was retired 2026-07-17.
 2. **Two separate Python venvs — never mix them:**
    - Pipeline / transcript / video work: `source pipeline/activate.sh` (venv at `transcript-cleaner/processor/venv/`)
    - OpenGov work: `source .venv/bin/activate` (repo-root `.venv`), then `python3 -m opengov.<module>` from the repo root

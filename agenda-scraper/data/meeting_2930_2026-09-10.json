@@ -2,6 +2,7 @@
   "meetingId": "2930",
   "meetingType": "cra",
   "meetingName": "CRA Regular Session",
+  "meetingTime": "09:00",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "September 10, 2026",
@@ -222,7 +223,8 @@
           "title": "MEMO_TAMPA BAY RAYS CONTRACT CONTENT SIGNEDCMRFC-ADA.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO_TAMPA%20BAY%20RAYS%20CONTRACT%20CONTENT%20SIGNEDCMRFC-ADA.PDF.pdf?documentType=1&meetingId=2930&itemId=26573&publishId=210315&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of MEMO_TAMPA BAY RAYS CONTRACT CONTENT SIGNEDCMRFC-ADA.PDF in a new tab",
-          "originalText": "MEMO_TAMPA BAY RAYS CONTRACT CONTENT SIGNEDCMRFC-ADA.PDF"
+          "originalText": "MEMO_TAMPA BAY RAYS CONTRACT CONTENT SIGNEDCMRFC-ADA.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2930/26573/memo_tampa-bay-rays-contract-content-signedcmrfc-ada.pdf"
         }
       ],
       "folioNumbers": [],
@@ -267,13 +269,15 @@
           "title": "08.05.26 DPCAC PRESENTATION (QUARTERLY PROJECTS DIVISION UPDATES) 1.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/08.05.26%20DPCAC%20PRESENTATION%20(QUARTERLY%20PROJECTS%20DIVISION%20UPDATES)%201.PDF.pdf?documentType=1&meetingId=2930&itemId=26856&publishId=210317&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of 08.05.26 DPCAC PRESENTATION (QUARTERLY PROJECTS DIVISION UPDATES) 1.PDF in a new tab",
-          "originalText": "08.05.26 DPCAC PRESENTATION (QUARTERLY PROJECTS DIVISION UPDATES) 1.PDF"
+          "originalText": "08.05.26 DPCAC PRESENTATION (QUARTERLY PROJECTS DIVISION UPDATES) 1.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2930/26856/08.05.26-dpcac-presentation-quarterly-projects-division-updates-1.pdf"
         },
         {
           "title": "EAST_TAMPA_QUARTERLY_PROJECT_TRACKER.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/EAST_TAMPA_QUARTERLY_PROJECT_TRACKER.PDF.pdf?documentType=1&meetingId=2930&itemId=26856&publishId=210318&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of EAST_TAMPA_QUARTERLY_PROJECT_TRACKER.PDF in a new tab",
-          "originalText": "EAST_TAMPA_QUARTERLY_PROJECT_TRACKER.PDF"
+          "originalText": "EAST_TAMPA_QUARTERLY_PROJECT_TRACKER.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-10/meeting-2930/26856/east_tampa_quarterly_project_tracker.pdf"
         }
       ],
       "folioNumbers": [],

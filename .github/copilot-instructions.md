@@ -259,7 +259,7 @@ This runs in order:
 
 **WordPress generation was retired 2026-07-17.** `json-to-wordpress.js` was deleted 2026-09-07. The markdown emitter (`json-to-markdown.js`) is the sole published output.
 
-**Why this matters:** Running `json-scraper.js` directly overwrites the meeting JSON and erases all `mirroredUrl` fields that `mirror-documents.js` previously stamped in. The agenda output will then link to the original OnBase URLs instead of the stable R2 mirrors. Skipping the reconciliation step makes the per-item Financial impact sections silently disappear from the output.
+**Why this matters:** the four steps feed each other in order. Skipping the mirror step leaves new documents linking to OnBase instead of R2; skipping reconciliation makes the per-item Financial impact sections silently disappear from the output. A standalone `json-scraper.js` run no longer erases `mirroredUrl` stamps or overwrites a good file with an empty scrape (`lib/scrape-guard.js` carries stamps forward, keeps the stored version of any item whose fetch failed, and refuses a 0-item scrape), but it still does not mirror new documents or rebuild the funding manifest.
 
 If you need to regenerate the tm-static markdown post only (JSON + mirrors + manifest already done): `node json-to-markdown.js --date <YYYY-MM-DD>` (matches the existing post by slug and keeps its filename + publish date)
 
@@ -269,7 +269,7 @@ If you need to re-reconcile only (JSON already done): `python3 -m opengov.reconc
 
 If you need to re-parse land-use staff reports only (e.g. after improving `staff-report-parser.js`): `node scripts/reparse-staff-reports.js <meetingId>` — rewrites only the per-item `staffReport` fields (mirrors preserved), then regenerate the post with `node json-to-markdown.js --date <YYYY-MM-DD>`
 
-**Never run `json-scraper.js <meetingId>` standalone on a meeting that has already been mirrored.**
+**Do not run `json-scraper.js <meetingId>` standalone as a way to update a published meeting** — it skips the mirror and reconcile steps. It is safe for its own purposes (a by-id re-scrape keeps stored `mirroredUrl`, `meetingType` and `meetingName`); follow it with `process-agenda.sh <date>` before regenerating the post.
 
 ---
 

@@ -124,10 +124,30 @@ function hasMeaningfulContent(partial) {
   return false;
 }
 
+/** Identity of an item descriptor: agendaItemId, else number + file number. */
+const itemKey = (i) => String(i.agendaItemId || `${i.number}:${i.fileNumber}`);
+
+/** Union of two item-descriptor lists by identity, minus a third list. */
+function mergeItemLists(current, added, subtract) {
+  const drop = new Set((subtract || []).map(itemKey));
+  const out = new Map();
+  for (const i of [...(current || []), ...(added || [])]) {
+    const k = itemKey(i);
+    if (!drop.has(k)) out.set(k, i);
+  }
+  return [...out.values()];
+}
+
 /**
  * Merge a partial entry (from a scraper or mirror run) into the log,
- * keying on the current UTC date so multiple same-day runs combine into
- * one entry instead of producing duplicates.
+ * keying on the local date so multiple same-day runs combine into one
+ * entry instead of producing duplicates.
+ *
+ * Same-day runs MERGE: an item the 7 PM nightly logged as added stays
+ * logged after a 9 PM manual run whose own diff is empty (it diffs against
+ * the file the nightly already wrote). An item added then removed the same
+ * day nets out; a DRAFT→FINAL promotion keeps the earliest `from` and the
+ * latest `to`.
  *
  * Only appends/updates when `partial` contains at least one non-empty field.
  * Documents already logged under *any* day are skipped, so a document the
@@ -156,11 +176,23 @@ function appendOrMergeEntry(log, partial, dateKey = todayLocal()) {
     log.entries.push(entry);
   }
 
-  // Scraper fields
+  // Scraper fields — merged, never assigned (see above)
   if (partial.scrapedAt !== undefined) entry.scrapedAt = partial.scrapedAt;
-  if (partial.agendaTypePromoted !== undefined) entry.agendaTypePromoted = partial.agendaTypePromoted;
-  if (partial.itemsAdded !== undefined) entry.itemsAdded = partial.itemsAdded;
-  if (partial.itemsRemoved !== undefined) entry.itemsRemoved = partial.itemsRemoved;
+  if (partial.agendaTypePromoted) {
+    const prev = entry.agendaTypePromoted;
+    const merged = { from: prev ? prev.from : partial.agendaTypePromoted.from, to: partial.agendaTypePromoted.to };
+    entry.agendaTypePromoted = merged.from === merged.to ? null : merged;
+  }
+  if (partial.itemsAdded !== undefined || partial.itemsRemoved !== undefined) {
+    // An item removed today that today's log also shows as added simply
+    // disappears from "added" (and vice versa): the day's net change is nil.
+    const priorAdded = new Set((entry.itemsAdded || []).map(itemKey));
+    const priorRemoved = new Set((entry.itemsRemoved || []).map(itemKey));
+    const newlyAdded = (partial.itemsAdded || []).filter((i) => !priorRemoved.has(itemKey(i)));
+    const newlyRemoved = (partial.itemsRemoved || []).filter((i) => !priorAdded.has(itemKey(i)));
+    entry.itemsAdded = mergeItemLists(entry.itemsAdded, newlyAdded, partial.itemsRemoved);
+    entry.itemsRemoved = mergeItemLists(entry.itemsRemoved, newlyRemoved, partial.itemsAdded);
+  }
 
   // Mirror fields — merge doc lists so multiple mirror runs don't clobber each other
   if (partial.mirroredAt !== undefined) entry.mirroredAt = partial.mirroredAt;

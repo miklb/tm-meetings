@@ -119,8 +119,8 @@ Arguments:
 Options:
   --help, -h              Show help
   --date YYYY-MM-DD       Scrape all meetings for a specific date
-  --start-date YYYY-MM-DD Start date for date range scraping
-  --end-date YYYY-MM-DD   End date for date range scraping
+  --type T                Meeting type for a by-id scrape (regular|evening|cra|workshop|special);
+                          otherwise the current list, then the stored JSON, decide
 
 Examples:
   node json-scraper.js                    # Scrape all available meetings (HTTP)
@@ -166,7 +166,11 @@ Examples:
 ### Library Modules (v3.0+)
 
 - `lib/http-meeting-scraper.js` - HTTP-based scraping engine for meeting data
-- `lib/http-utils.js` - Shared utilities (delay, retry logic, error handling)
+- `lib/http-utils.js` - Shared parsers for the OnBase pages (date, name, time, agenda table, documents)
+- `lib/retry.js` - One-retry wrapper used for item-detail and summary-sheet fetches
+- `lib/scrape-guard.js` - Reconciles a fresh scrape with the stored file before it is written (see "Re-scrape safety")
+- `lib/document-mirror.js` - R2 mirroring; `planDocumentFilenames` keeps same-titled documents on distinct keys
+- `lib/change-log.js` / `lib/diff-meeting.js` - Public per-meeting change log; same-day entries merge
 
 ### Legacy Files (Deprecated)
 
@@ -207,6 +211,34 @@ agenda-scraper/
   `special` meetings. Absent on pre-2026-08 scrapes; backfill from the saved
   `output/http_meeting_<id>.html` pages with
   `node scripts/backfill-meeting-names.js` (safe — only adds the one field).
+  An `evening` meeting with a non-generic name (the 9/8/26 "City Council
+  Budget Public Hearing") also takes its post title and slug from it instead
+  of the "Evening Land Use" default.
+- `meetingTime` — start time as 24-hour `"HH:MM"`, read from the same page
+  `<title>` (`"… - 9/10/2026 5:01:00 PM - …"`). The date alone cannot tell two
+  same-day sessions of one type apart (two budget workshops on 2025-08-11).
+  Absent on scrapes before 2026-09-08.
+- `mirroredUrl` (per supporting document) — stamped by `mirror-documents.js`.
+  Two documents in one item can share a title; the R2 key for the second
+  and later gets `-2`, `-3` … before the extension, in page order (see
+  `planDocumentFilenames` in `lib/document-mirror.js`).
+
+## Re-scrape safety (`lib/scrape-guard.js`)
+
+Before `json-scraper.js` writes a meeting file that already exists it
+reconciles the fresh scrape with the stored one:
+
+- **Refused** (error, file untouched): the scrape has 0 items while the
+  stored file has some, or every item fetch failed.
+- **Kept per item**: an item whose detail fetch failed (after one retry) or
+  that lost every document keeps its stored version; the log says so.
+- **Carried forward**: `mirroredUrl` by document identity (title + ordinal
+  for repeats), so re-scrapes never drop R2 links.
+
+`node json-scraper.js <id>` for a meeting no longer on the OnBase list keeps
+the stored `meetingType`/`meetingName` (it used to demote to `regular`).
+Same-day change-log entries merge rather than overwrite, so a manual run
+after the nightly cannot erase the nightly's entries.
 
 ## Output Examples
 

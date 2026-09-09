@@ -123,6 +123,24 @@ function extractMeetingName(html) {
 }
 
 /**
+ * Extract the meeting start time from the meeting page <title>, which OnBase
+ * formats as "<name> - <long date> - M/D/YYYY h:mm:ss AM - OnBase Agenda Online".
+ * The agenda date alone cannot tell two same-day sessions apart (two budget
+ * workshops on 2025-08-11); the time can.
+ * @param {string} html - Meeting page HTML
+ * @returns {string} - 24-hour "HH:MM", or '' when the title carries no time
+ */
+function extractMeetingTime(html) {
+  const match = String(html || '').match(/<title>([^<]*)<\/title>/i);
+  if (!match) return '';
+  const time = match[1].match(/\b(\d{1,2}):(\d{2})(?::\d{2})?\s*([AP])\.?M\.?\b/i);
+  if (!time) return '';
+  let hours = parseInt(time[1], 10) % 12;
+  if (time[3].toUpperCase() === 'P') hours += 12;
+  return `${String(hours).padStart(2, '0')}:${time[2]}`;
+}
+
+/**
  * Parse loadAgendaItem function from JavaScript source
  * @param {string} source - JavaScript source code
  * @returns {Object|null} - Parsed configuration or null
@@ -479,6 +497,7 @@ module.exports = {
   convertToDirectPDFUrl,
   extractMeetingDate,
   extractMeetingName,
+  extractMeetingTime,
   parseLoadAgendaFromSource,
   extractLoadAgendaConfig,
   parseAgendaTable,

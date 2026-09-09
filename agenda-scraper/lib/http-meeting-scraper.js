@@ -10,6 +10,7 @@ const path = require('path');
 const { extractTextFromBuffer } = require('./pdf-text-extractor');
 const { extractBackgroundSection } = require('./summary-sheet-parser');
 const { parseFiscalSections } = require('./projected-costs-parser');
+const { withRetry } = require('./retry');
 
 const {
   BASE_URL,
@@ -18,6 +19,7 @@ const {
   blockText,
   extractMeetingDate,
   extractMeetingName,
+  extractMeetingTime,
   extractLoadAgendaConfig,
   parseAgendaTable,
   parseAgendaSections,
@@ -158,7 +160,10 @@ async function extractSummarySheetDetails(client, docs, formatBackgroundText) {
   }
 
   try {
-    const response = await client.get(summaryDoc.url, { responseType: 'arraybuffer', timeout: 90000 });
+    const response = await withRetry(
+      () => client.get(summaryDoc.url, { responseType: 'arraybuffer', timeout: 90000 }),
+      { label: `summary sheet ${summaryDoc.title || ''}`.trim() }
+    );
 
     const { text } = await extractTextFromBuffer(Buffer.from(response.data));
 
@@ -326,6 +331,11 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
   const meetingName = extractMeetingName(html) || listMeetingName || null;
   console.log(`[HTTP] Meeting name: ${meetingName || '[unknown]'}`);
 
+  // Start time from the page <title> ("… - 9/10/2026 5:01:00 PM - …"), 24h
+  // "HH:MM". Distinguishes two same-day sessions of the same type.
+  const meetingTime = extractMeetingTime(html) || null;
+  console.log(`[HTTP] Meeting time: ${meetingTime || '[unknown]'}`);
+
   // Parse agenda table
   let agendaItems = parseAgendaTable(agendaHtml, extractFileNumber);
   console.log(`[HTTP] Found ${agendaItems.length} agenda items`);
@@ -347,6 +357,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
       meetingId,
       meetingType,
       meetingName,
+      meetingTime,
       agendaType: extractAgendaType(agendaHtml),
       isAddendum,
       meetingDate,
@@ -387,9 +398,14 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     
     let detailHtml;
     try {
-      detailHtml = await fetchAgendaItemDetail(client, item.agendaItemId, meetingId, loadConfig);
+      detailHtml = await withRetry(
+        () => fetchAgendaItemDetail(client, item.agendaItemId, meetingId, loadConfig),
+        { label: `item ${item.number} detail` }
+      );
     } catch (err) {
-      console.warn(`[HTTP] Failed to fetch item ${item.number}: ${err.message}`);
+      // The item is returned with `error` set so the caller can keep the
+      // previously scraped version instead of publishing an empty one.
+      console.warn(`[HTTP] Failed to fetch item ${item.number} after retry: ${err.message}`);
       return {
         number: item.number,
         agendaItemId: item.agendaItemId,
@@ -542,6 +558,7 @@ async function fetchMeeting(meetingId, meetingType = 'regular', options = {}) {
     meetingId,
     meetingType,
     meetingName,
+    meetingTime,
     agendaType,
     isAddendum,
     meetingDate,
