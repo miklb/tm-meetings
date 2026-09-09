@@ -216,6 +216,8 @@ node scripts/preview-dispatch.js --meeting-ids=2884,2960
 
 It lists who would get which items and each subscriber's zero-match keywords. Noisy or dead keywords are information for Michael to relay — never edit a subscriber's keywords.
 
+The matcher and the eligibility rule live in one module, `site/lib/keyword-matcher.js`, used by `notify.js`, `preview-dispatch.js`, `test-matching.js`, `subscribe.js` and `manage.js` — change matching there and add a case to `site/test/keyword-matcher.test.js`. Dispatch writes `notification_log` after each successful Resend batch (`site/lib/notify-dispatch.js`); if a later batch fails the response is a 500 that reports `sentCount`, and re-running the same dispatch only sends what was never sent. A dedup read failure is fatal (500, nothing sent) rather than re-emailing everyone.
+
 ```bash
 WEBHOOK_SECRET=$(grep '^WEBHOOK_SECRET=' .env | cut -d= -f2-) \
 MEETING_IDS=2884,2960 \

@@ -6,6 +6,7 @@ import {
   verifyTurnstile,
   jsonResponse
 } from '../../lib/api-utils.js';
+import { eligibility } from '../../lib/keyword-matcher.js';
 
 // Anti-enumeration: every outcome of the request-link flow that depends on
 // whether an email is registered must return this exact response.
@@ -227,41 +228,19 @@ export async function onRequestPost(context) {
     return jsonResponse({ error: "Please verify your email address before managing keywords." }, 403);
   }
 
-  // Determine user's tier and limit
-  const supporter = await db.prepare(
-    'SELECT stripe_customer_id, active_until, tier FROM supporters WHERE email = ?'
-  ).bind(emailLower).first();
-
-  const isSupporter = supporter && (
-    supporter.active_until === null ||
-    new Date(supporter.active_until) > new Date()
-  );
-
-  let isAllowed = false;
-  let keywordLimit = 3;
-
-  if (isSupporter) {
-    isAllowed = true;
-    keywordLimit = 15;
-  }
-
+  // Eligibility: one shared rule (lib/keyword-matcher.js) for every endpoint.
   const regMode = env.REGISTRATION_MODE || 'SUPPORTERS_ONLY';
-
-  if (!isAllowed) {
-    if (regMode === 'PUBLIC') {
-      isAllowed = true;
-      keywordLimit = 15;
-    } else if (regMode === 'BETA_AND_SUPPORTERS') {
-      const betaTester = await db.prepare(
-        'SELECT 1 FROM beta_testers WHERE email = ?'
-      ).bind(emailLower).first();
-
-      if (betaTester) {
-        isAllowed = true;
-        keywordLimit = 15;
-      }
-    }
-  }
+  const supporter = await db.prepare(
+    'SELECT active_until FROM supporters WHERE email = ?'
+  ).bind(emailLower).first();
+  const betaTester = regMode === 'BETA_AND_SUPPORTERS'
+    ? await db.prepare('SELECT 1 FROM beta_testers WHERE email = ?').bind(emailLower).first()
+    : null;
+  const { allowed: isAllowed, limit: keywordLimit } = eligibility({
+    isSupporter: Boolean(supporter),
+    supporterActiveUntil: supporter ? supporter.active_until : null,
+    isBetaTester: Boolean(betaTester),
+  }, regMode);
 
   if (!isAllowed) {
     return jsonResponse({

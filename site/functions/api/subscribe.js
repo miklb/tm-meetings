@@ -7,6 +7,7 @@ import {
   verifyTurnstile,
   jsonResponse
 } from '../../lib/api-utils.js';
+import { eligibility, KEYWORD_LIMIT } from '../../lib/keyword-matcher.js';
 
 // Anti-enumeration: every outcome that depends on whether an email is
 // registered/eligible must return this exact response.
@@ -55,15 +56,8 @@ export async function onRequestPost(context) {
 
   const { email, keywords, turnstile_token } = body;
 
-  // Validate Turnstile (always in production; in dev only when configured)
-  if (turnstileSecret) {
-    const ip = request.headers.get('CF-Connecting-IP') || '';
-    const valid = await verifyTurnstile(turnstile_token || '', turnstileSecret, ip);
-    if (!valid) {
-      return jsonResponse({ error: "Bot verification failed. Please try again." }, 400);
-    }
-  }
-
+  // Validate the input before spending the Turnstile token: a typo used to
+  // consume the token, and the retry then failed "bot verification".
   if (!email || !isValidEmail(email)) {
     return jsonResponse({ error: "A valid email address is required." }, 400);
   }
@@ -83,56 +77,43 @@ export async function onRequestPost(context) {
     return jsonResponse({ error: "Keywords must be between 2 and 50 characters, and cannot contain < or >." }, 400);
   }
 
-  const emailLower = email.trim().toLowerCase();
-
-  // 1. Check supporter status
-  const supporter = await db.prepare(
-    'SELECT stripe_customer_id, active_until, tier FROM supporters WHERE email = ?'
-  ).bind(emailLower).first();
-
-  const isSupporter = supporter && (
-    supporter.active_until === null ||
-    new Date(supporter.active_until) > new Date()
-  );
-
-  let isAllowed = false;
-  let keywordLimit = 3;
-
-  if (isSupporter) {
-    isAllowed = true;
-    keywordLimit = 15;
+  // The cap is the same for everyone and is checked before eligibility, so
+  // the error cannot reveal whether an email is on the supporter/beta lists.
+  if (cleanKeywords.length > KEYWORD_LIMIT) {
+    return jsonResponse({
+      error: `A maximum of ${KEYWORD_LIMIT} keywords is allowed. You submitted ${cleanKeywords.length}.`
+    }, 400);
   }
 
-  // 2. Check Beta/Public constraints
-  const regMode = env.REGISTRATION_MODE || 'SUPPORTERS_ONLY';
-
-  if (!isAllowed) {
-    if (regMode === 'PUBLIC') {
-      isAllowed = true;
-      keywordLimit = 15;
-    } else if (regMode === 'BETA_AND_SUPPORTERS') {
-      const betaTester = await db.prepare(
-        'SELECT 1 FROM beta_testers WHERE email = ?'
-      ).bind(emailLower).first();
-
-      if (betaTester) {
-        isAllowed = true;
-        keywordLimit = 15; // Beta testers get 15 keywords for testing
-      }
+  // Validate Turnstile (always in production; in dev only when configured)
+  if (turnstileSecret) {
+    const ip = request.headers.get('CF-Connecting-IP') || '';
+    const valid = await verifyTurnstile(turnstile_token || '', turnstileSecret, ip);
+    if (!valid) {
+      return jsonResponse({ error: "Bot verification failed. Please try again." }, 400);
     }
   }
 
-  if (!isAllowed) {
+  const emailLower = email.trim().toLowerCase();
+
+  // Eligibility: one shared rule (lib/keyword-matcher.js) for every endpoint.
+  const regMode = env.REGISTRATION_MODE || 'SUPPORTERS_ONLY';
+  const supporter = await db.prepare(
+    'SELECT active_until FROM supporters WHERE email = ?'
+  ).bind(emailLower).first();
+  const betaTester = regMode === 'BETA_AND_SUPPORTERS'
+    ? await db.prepare('SELECT 1 FROM beta_testers WHERE email = ?').bind(emailLower).first()
+    : null;
+  const { allowed } = eligibility({
+    isSupporter: Boolean(supporter),
+    supporterActiveUntil: supporter ? supporter.active_until : null,
+    isBetaTester: Boolean(betaTester),
+  }, regMode);
+
+  if (!allowed) {
     // Uniform response: do not reveal whether this email is on the
     // supporter/beta lists. The page copy explains the beta restriction.
     return jsonResponse({ success: true, message: UNIFORM_MESSAGE }, 200);
-  }
-
-  // Enforce keyword limit
-  if (cleanKeywords.length > keywordLimit) {
-    return jsonResponse({
-      error: `Your account tier allows a maximum of ${keywordLimit} keywords. You submitted ${cleanKeywords.length}.`
-    }, 400);
   }
 
   // Enforce per-email verification rate limit (3 emails per 24h)

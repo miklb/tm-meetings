@@ -14,15 +14,18 @@
  *   node scripts/preview-dispatch.js --meeting-ids=2815
  *   MEETING_IDS=2815 node scripts/preview-dispatch.js
  *
- * Registration mode is read from site/wrangler.toml (the deployed config) so
- * eligibility and keyword limits mirror notify.js step 4 for whichever mode
- * is live: PUBLIC admits every verified subscriber at 15 keywords; the
- * gated modes admit supporters and beta testers only.
+ * Registration mode is read from site/wrangler.toml (the deployed config).
+ * Eligibility and matching come from site/lib/keyword-matcher.js — the same
+ * module notify.js runs — so this preview cannot drift from the dispatch.
  */
 
 const fs = require('fs');
 const path = require('path');
 const { execFileSync } = require('child_process');
+// ESM module; Node >= 22.12 can require() it.
+const {
+  buildMatchers, matchItem, searchableText, splitMatchKey, itemKey, eligibilityFromRow,
+} = require('../site/lib/keyword-matcher.js');
 
 const DB_NAME = 'tampa-meetings-notifications';
 const REPO_ROOT = path.resolve(__dirname, '..');
@@ -38,20 +41,6 @@ function registrationMode() {
   return 'SUPPORTERS_ONLY';
 }
 
-/** Mirror notify.js step 4: { allowed, limit } for one verified subscriber row. */
-function eligibility(row, regMode, now) {
-  const isSupporter = row.supporter_email !== null &&
-    (row.supporter_active_until === null || new Date(row.supporter_active_until) > now);
-  if (isSupporter) return { allowed: true, limit: 15 };
-  if (regMode === 'PUBLIC') return { allowed: true, limit: 15 };
-  if (row.is_beta_tester === 1) return { allowed: true, limit: 15 };
-  return { allowed: false, limit: 3 };
-}
-
-function escapeRegExp(s) {
-  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
 /** Run a read-only query against remote D1 and return its rows. */
 function d1(sql) {
   const out = execFileSync(
@@ -63,30 +52,6 @@ function d1(sql) {
   const start = out.indexOf('[');
   if (start === -1) throw new Error(`Unexpected wrangler output for: ${sql}`);
   return JSON.parse(out.slice(start))[0].results || [];
-}
-
-/** Rebuild the exact text notify.js matches against. */
-function searchableText(item) {
-  const sr = item.staffReport;
-  const staffReportText = sr
-    ? [
-        sr.currentZoning || '',
-        sr.requestedZoning || '',
-        sr.futureLandUse || '',
-        sr.overlayDistrict || '',
-        ...(sr.neighborhoodAssociations || []),
-        ...(sr.waivers || []),
-        sr.findings || '',
-      ].join(' ')
-    : '';
-
-  return [
-    item.title || '',
-    item.background || '',
-    item.fileNumber || '',
-    ...(item.supportingDocuments || []).map(d => d.title || ''),
-    staffReportText,
-  ].join(' ').toLowerCase();
 }
 
 function main() {
@@ -129,7 +94,7 @@ function main() {
   const now = new Date();
   const allowed = [];
   for (const r of subRows) {
-    const e = eligibility(r, regMode, now);
+    const e = eligibilityFromRow(r, regMode, now);
     if (e.allowed) allowed.push({ ...r, limit: e.limit });
     else console.log(`Not eligible in ${regMode} mode (would not send): ${r.email}`);
   }
@@ -160,40 +125,21 @@ function main() {
   let wouldEmail = 0;
 
   for (const sub of allowed) {
-    const keywords = (kwBySub[sub.sub_id] || []).slice(0, sub.limit);
-    const perKeyword = new Map(keywords.map(k => [k.keyword.trim().toLowerCase(), []]));
+    const keywords = (kwBySub[sub.sub_id] || []).slice(0, sub.limit)
+      .map(k => ({ keyword: k.keyword.trim().toLowerCase(), matchType: k.match_type }));
+    const matchers = buildMatchers(keywords);
+    const perKeyword = new Map(keywords.map(k => [k.keyword, []]));
     const fresh = [];   // would send now
     const dedup = [];   // matched, but already emailed
 
     for (const meeting of meetings) {
       for (const item of meeting.agendaItems || []) {
         const text = searchableText(item);
-        const hits = [];
-
-        for (const k of keywords) {
-          const kw = k.keyword.trim().toLowerCase();
-          let hit = false;
-          if (k.match_type === 'contains') {
-            // Mirrors notify.js: keywords of ≤4 chars (acronyms, short proper
-            // nouns) match whole words only, with optional plural s; longer
-            // keywords are a plain substring test.
-            hit = kw.length <= 4
-              ? new RegExp(`\\b${escapeRegExp(kw)}s?\\b`, 'i').test(text)
-              : text.includes(kw);
-          } else if (k.match_type === 'exact_phrase') {
-            hit = new RegExp(`\\b${escapeRegExp(kw)}\\b`, 'i').test(text);
-          } else if (k.match_type === 'file_number') {
-            hit = (item.fileNumber || '').toLowerCase() === kw;
-          }
-          if (hit) {
-            hits.push(kw);
-            perKeyword.get(kw).push(item.number);
-          }
-        }
-
+        const hits = [...matchItem(item, matchers, text)].map(key => splitMatchKey(key).keyword);
         for (const kw of hits) {
+          perKeyword.get(kw)?.push(item.number);
           const rec = { number: item.number, fileNumber: item.fileNumber, kw };
-          if (sent.has(`${sub.sub_id}:${item.agendaItemId}:${kw}`)) dedup.push(rec);
+          if (sent.has(`${sub.sub_id}:${itemKey(item)}:${kw}`)) dedup.push(rec);
           else fresh.push(rec);
         }
       }

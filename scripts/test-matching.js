@@ -1,10 +1,8 @@
 const Database = require('better-sqlite3');
 const path = require('path');
 const fs = require('fs');
-
-function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
+// The matcher notify.js runs (ESM; Node >= 22.12 can require() it).
+const { buildMatchers, matchItem, splitMatchKey } = require('../site/lib/keyword-matcher.js');
 
 // 1. Resolve database file paths relative to the script location
 const repoRoot = path.resolve(__dirname, '..');
@@ -58,35 +56,16 @@ for (const row of keywordRows) {
   keywordToSubscribers[key].add(row.email);
 }
 
-// Group unique keywords by matching types and compile expressions
-const containsKeywords = [...new Set(
-  keywordRows
-    .filter(r => r.match_type === 'contains')
-    .map(r => r.keyword.trim().toLowerCase())
-)];
-const exactKeywords = [...new Set(
-  keywordRows
-    .filter(r => r.match_type === 'exact_phrase')
-    .map(r => r.keyword.trim().toLowerCase())
-)];
-const fileNumKeywords = [...new Set(
-  keywordRows
-    .filter(r => r.match_type === 'file_number')
-    .map(r => r.keyword.trim().toLowerCase())
-)];
+// Compile the same matchers notify.js uses
+const matchers = buildMatchers(keywordRows.map(r => ({
+  keyword: r.keyword.trim().toLowerCase(),
+  matchType: r.match_type,
+})));
 
-const containsRegex = containsKeywords.length > 0
-  ? new RegExp(containsKeywords.map(escapeRegExp).join('|'), 'gi')
-  : null;
-
-const exactRegex = exactKeywords.length > 0
-  ? new RegExp(`\\b(${exactKeywords.map(escapeRegExp).join('|')})\\b`, 'gi')
-  : null;
-
-console.log(`Compiled matching engines:`);
-console.log(`- Contains pattern: ${containsRegex || '(none)'}`);
-console.log(`- Exact Phrase pattern: ${exactRegex || '(none)'}`);
-console.log(`- File Numbers: ${fileNumKeywords.join(', ') || '(none)'}\n`);
+console.log(`Compiled matching engines (site/lib/keyword-matcher.js):`);
+console.log(`- Contains keywords: ${matchers.contains.map(m => m.keyword).join(', ') || '(none)'}`);
+console.log(`- Exact phrases: ${matchers.exact.map(m => m.keyword).join(', ') || '(none)'}`);
+console.log(`- File numbers: ${[...matchers.fileNumbers].join(', ') || '(none)'}\n`);
 
 // 4. Fetch all meetings & agenda items
 console.log(`Scanning historical agenda database...`);
@@ -117,52 +96,13 @@ for (const item of agendaItems) {
   const docTitles = docsByItemId[item.item_id] || [];
   
   const staffReport = item.staff_report ? JSON.parse(item.staff_report) : null;
-  const staffReportText = staffReport ? [
-    staffReport.currentZoning || '',
-    staffReport.requestedZoning || '',
-    staffReport.futureLandUse || '',
-    staffReport.overlayDistrict || '',
-    ...(staffReport.neighborhoodAssociations || []),
-    ...(staffReport.waivers || []),
-    staffReport.findings || ''
-  ].join(' ') : '';
-
-  // Construct single searchable text string (lowercased)
-  const searchableText = [
-    item.item_title || '',
-    item.background || '',
-    item.file_number || '',
-    ...docTitles,
-    staffReportText
-  ].join(' ').toLowerCase();
-
-  const matchedKeys = new Set();
-
-  // A. Check substring match
-  if (containsRegex) {
-    const matches = searchableText.match(containsRegex) || [];
-    for (const m of matches) {
-      matchedKeys.add(`contains:${m}`);
-    }
-  }
-
-  // B. Check exact phrase match (word boundaries)
-  if (exactRegex) {
-    const matches = searchableText.match(exactRegex) || [];
-    for (const m of matches) {
-      matchedKeys.add(`exact_phrase:${m}`);
-    }
-  }
-
-  // C. Check file number match (prefix check)
-  if (item.file_number) {
-    const fileNumLower = item.file_number.toLowerCase();
-    for (const kw of fileNumKeywords) {
-      if (fileNumLower.startsWith(kw)) {
-        matchedKeys.add(`file_number:${kw}`);
-      }
-    }
-  }
+  const matchedKeys = matchItem({
+    title: item.item_title,
+    background: item.background,
+    fileNumber: item.file_number,
+    supportingDocuments: docTitles.map(title => ({ title })),
+    staffReport,
+  }, matchers);
 
   // If there are matches, link item back to matching subscribers
   if (matchedKeys.size > 0) {
@@ -170,7 +110,7 @@ for (const item of agendaItems) {
       const subscribers = keywordToSubscribers[matchKey];
       if (!subscribers) continue;
 
-      const [matchType, keyword] = matchKey.split(':');
+      const { keyword } = splitMatchKey(matchKey);
 
       for (const email of subscribers) {
         if (!subscriberDigests[email]) {

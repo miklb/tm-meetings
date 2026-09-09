@@ -53,12 +53,21 @@ export function isValidEmail(email) {
 }
 
 export async function verifyTurnstile(token, secretKey, ip) {
-  const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ secret: secretKey, response: token, remoteip: ip })
-  });
-  const data = await res.json();
+  let data;
+  try {
+    const res = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ secret: secretKey, response: token, remoteip: ip })
+    });
+    // siteverify can answer with a non-JSON body on an outage; treat any
+    // unparseable or non-2xx answer as "not verified" rather than throwing
+    // a TypeError up to the user.
+    data = res.ok ? await res.json() : { success: false, 'error-codes': [`http-${res.status}`] };
+  } catch (err) {
+    console.error(`turnstile: siteverify unreachable: ${err.message}`);
+    return false;
+  }
   if (data.success !== true) {
     // e.g. missing-input-response = empty token (widget never rendered/blocked),
     // timeout-or-duplicate = expired or reused token. Visible via

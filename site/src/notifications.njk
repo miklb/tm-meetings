@@ -480,6 +480,9 @@ description: Subscribe to receive email alerts when Tampa City Council meeting a
     } else if (status === 'verify_failed') {
       statusBanner.classList.add('error');
       statusBanner.innerText = "Email verification failed. The link may have expired or is invalid. Please request a new subscription.";
+    } else if (status === 'verify_expired') {
+      statusBanner.classList.add('error');
+      statusBanner.innerText = "That verification link is more than 3 days old. Enter your email under Manage keywords and we'll send a fresh one.";
     } else if (status === 'unsubscribe_failed') {
       statusBanner.classList.add('error');
       statusBanner.innerText = "Failed to unsubscribe. The token may be invalid or expired.";
