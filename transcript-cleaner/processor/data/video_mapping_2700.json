@@ -1,0 +1,121 @@
+{
+  "meeting_id": 2700,
+  "meeting_date": "2026-09-03",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "0_6p-Rj9kRM",
+      "title": "Tampa City Council - 09/03/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-09-04T04:59:01Z",
+      "duration": "PT3H2M11S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-15 - Police Officer of the Month Commendation",
+          "timestamp": "00:14:02",
+          "seconds": 842
+        },
+        {
+          "title": "Item 2: E2026-15 - Firefighter of the Quarter Commendation",
+          "timestamp": "00:17:27",
+          "seconds": 1047
+        },
+        {
+          "title": "Item 3: CM26-26795 - Hispanic Heritage Celebration Invitation",
+          "timestamp": "00:32:14",
+          "seconds": 1934
+        },
+        {
+          "title": "Item 4: CM26-23879 - Ferry Status Update",
+          "timestamp": "00:33:14",
+          "seconds": 1994
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:39:39",
+          "seconds": 2379
+        },
+        {
+          "title": "Item 6: BA26-26432 - Code Enforcement Board Appointment",
+          "timestamp": "02:26:18",
+          "seconds": 8778
+        },
+        {
+          "title": "Item 7: BA26-26842 - Civil Service Board Applicants",
+          "timestamp": "02:26:43",
+          "seconds": 8803
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "02:41:51",
+          "seconds": 9711
+        },
+        {
+          "title": "Item 30: BF26-25533 - 3601 North Central Avenue; 3814 North Central Avenue; 501 East Lake Avenue",
+          "timestamp": "02:45:16",
+          "seconds": 9916
+        },
+        {
+          "title": "Item 31: HN26-26534 - 4362 East Osborne Avenue",
+          "timestamp": "02:47:16",
+          "seconds": 10036
+        },
+        {
+          "title": "Item 34: INF26-26401 - Kimmins Watermain Improvements GMP-2",
+          "timestamp": "02:51:51",
+          "seconds": 10311
+        },
+        {
+          "title": "Item 45: CM26-24829 - Citywide Alleyways Assessment Scope Report",
+          "timestamp": "02:53:46",
+          "seconds": 10426
+        }
+      ],
+      "offset_seconds": 438
+    },
+    {
+      "video_id": "1H5PLsdz_PI",
+      "title": "Tampa City Council - 09/03/26 PART 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-09-04T08:56:57Z",
+      "duration": "PT3H7M56S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 44: CM26-22164 - Comprehensive Plan Amendment Restriction Report",
+          "timestamp": "00:06:16",
+          "seconds": 376
+        },
+        {
+          "title": "Item 36: INF26-26421 - South Howard Flood Relief GMP-1",
+          "timestamp": "00:28:14",
+          "seconds": 1694
+        },
+        {
+          "title": "Information Reports",
+          "timestamp": "02:54:07",
+          "seconds": 10447
+        }
+      ],
+      "transcript_start_time": "1:32:02PM",
+      "offset_seconds": 352
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-09-09T18:51:45Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}

@@ -2,6 +2,7 @@
   "meetingId": "2882",
   "meetingType": "regular",
   "meetingName": "City Council Regular",
+  "meetingTime": "09:00",
   "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "September 3, 2026",
@@ -1431,14 +1432,14 @@
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RE26-079%20RESOLUTION%20AND%20GRANT%20OF%20STORMWATER%20EASEMENT.PDF.pdf?documentType=1&meetingId=2882&itemId=26531&publishId=209388&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of RE26-079 RESOLUTION AND GRANT OF STORMWATER EASEMENT.PDF in a new tab",
           "originalText": "RE26-079 RESOLUTION AND GRANT OF STORMWATER EASEMENT.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-03/meeting-2882/26531/re26-079-resolution-and-grant-of-stormwater-easement.pdf"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-03/meeting-2882/26531/re26-079-resolution-and-grant-of-stormwater-easement-2.pdf"
         },
         {
           "title": "RE26-079 STORMWATER EASEMENT 1510 S BAY VILLA PL MAP.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/RE26-079%20STORMWATER%20EASEMENT%201510%20S%20BAY%20VILLA%20PL%20MAP.PDF.pdf?documentType=1&meetingId=2882&itemId=26531&publishId=209389&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of RE26-079 STORMWATER EASEMENT 1510 S BAY VILLA PL MAP.PDF in a new tab",
           "originalText": "RE26-079 STORMWATER EASEMENT 1510 S BAY VILLA PL MAP.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-03/meeting-2882/26531/re26-079-stormwater-easement-1510-s-bay-villa-pl-map.pdf"
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-03/meeting-2882/26531/re26-079-stormwater-easement-1510-s-bay-villa-pl-map-2.pdf"
         }
       ],
       "folioNumbers": [],

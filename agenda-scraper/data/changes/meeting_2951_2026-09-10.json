@@ -4,6 +4,29 @@
   "firstSeenAt": "2026-09-04T23:01:27.569Z",
   "entries": [
     {
+      "date": "2026-09-09",
+      "scrapedAt": "2026-09-09T18:31:30.046Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-26-62",
+          "filename": "2-WRITTEN COMMENTS - REZ-26-62.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-66",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-66.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-26-63",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-63.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-09-08",
       "scrapedAt": "2026-09-09T00:13:22.274Z",
       "itemsAdded": [],
