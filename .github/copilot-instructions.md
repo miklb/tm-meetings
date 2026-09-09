@@ -310,6 +310,21 @@ There is no single `MEETING_TYPES` constant — detection happens at each stage:
 - [ ] PDFs open correctly from R2 links
 - [ ] Mobile layout is usable
 
+Automated part: `npm test` (root) includes `site/test/built-html.test.js`, which builds the site
+and checks every page for one `<h1>`, unique ids, no inline event handlers, a hidden+inert agenda
+drawer with the agenda rendered once, real `youtu.be` hrefs on every timestamp and chapter, a
+roving tabindex on the part tabs, the notifications page's labels/noscript, the 404 page and the
+security headers. It needs `data/meetings.db` (`npm run build-db`).
+
+Site conventions that keep those checks green:
+- Interactive elements are real links or buttons with no `onclick`; scripts bind by class or
+  `data-*` attributes and only `preventDefault` when the enhancement is actually available
+  (the YouTube player must be ready before a timestamp seeks in-page).
+- JS-only chrome ships with the `hidden` attribute and is revealed by the script that uses it.
+- Anything a script hides from sighted users is also `inert` (the closed agenda drawer).
+- Text from transcripts or API responses reaches the DOM through `textContent`, never `innerHTML`.
+- Form-control borders use `--color-border-input` (3:1 on the page ground); `--line` is decorative.
+
 ### Automated Checks
 
 There is no lint script. `npm test` (root) runs `scripts/test/*.test.js` on Node's built-in test runner: each test builds a database from a synthetic fixture tree in a temp dir and asserts on rows and log lines — addendum folding, duplicate scrapes, transcript pairing, the offset-verification flag, `--year`, atomic output. Add a test there for any build-db behaviour you change; the fixture helpers (`meeting()`, `transcript()`, `mapping()`) cover the three input file types. Other verification is:

@@ -33,5 +33,6 @@
 
 /* meetings-specific polish (above components) */
 @import url("local.css");
+@import url("notifications.css");
 
 @import url("utilities.css");

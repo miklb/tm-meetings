@@ -4,30 +4,65 @@
   "description": "Augmented Tampa City Council agendas, transcripts, and synced video — an unofficial public resource from The Tampa Monitor.",
   "logo": "/assets/images/city-hall-outline.svg",
   "nav": [
-    { "label": "Meetings", "href": "/" },
-    { "label": "About", "href": "/about/" },
-    { "label": "The Monitor ↗", "href": "https://tampamonitor.com/" }
+    {
+      "label": "Meetings",
+      "href": "/"
+    },
+    {
+      "label": "About",
+      "href": "/about/"
+    },
+    {
+      "label": "Alerts",
+      "href": "/notifications/"
+    },
+    {
+      "label": "The Monitor ↗",
+      "href": "https://tampamonitor.com/"
+    }
   ],
   "footerColumns": [
     {
       "heading": "Meetings",
       "items": [
-        { "label": "Latest meetings", "href": "/" },
-        { "label": "About this archive", "href": "/about/" }
+        {
+          "label": "Latest meetings",
+          "href": "/"
+        },
+        {
+          "label": "About this archive",
+          "href": "/about/"
+        },
+        {
+          "label": "Keyword email alerts",
+          "href": "/notifications/"
+        }
       ]
     },
     {
       "heading": "The Monitor",
       "items": [
-        { "label": "tampamonitor.com", "href": "https://tampamonitor.com/" },
-        { "label": "Newsletter", "href": "https://tampamonitor.com/#newsletter" },
-        { "label": "Donate", "href": "https://tampamonitor.com/donate/" }
+        {
+          "label": "tampamonitor.com",
+          "href": "https://tampamonitor.com/"
+        },
+        {
+          "label": "Newsletter",
+          "href": "https://tampamonitor.com/#newsletter"
+        },
+        {
+          "label": "Donate",
+          "href": "https://tampamonitor.com/donate/"
+        }
       ]
     },
     {
       "heading": "Source",
       "items": [
-        { "label": "Tampa City Clerk — Hyland OnBase", "href": "https://tampagov.hylandcloud.com/251agendaonline/" }
+        {
+          "label": "Tampa City Clerk — Hyland OnBase",
+          "href": "https://tampagov.hylandcloud.com/251agendaonline/"
+        }
       ]
     }
   ],
