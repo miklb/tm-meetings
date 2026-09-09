@@ -96,7 +96,7 @@ class HybridEntityExtractor:
         
         patterns = [
             r'\b(Tampa (?:Police|Fire|Water|Parks and Recreation|Convention|Housing) Department)\b',
-            r'\b(Department of (?:Housing|Transportation|Solid Waste|Financial Services|Law|Homeland Security|Interior|Environmental Protection|Justice|Health|Veterans Affairs|Defense)(?:\s+and\s+[A-Z][a-zA-Z\s]+)?)\b',
+            r'\b(Department of (?:Housing|Transportation|Solid Waste|Financial Services|Law|Homeland Security|Interior|Environmental Protection|Justice|Health|Veterans Affairs|Defense)(?:\s+and\s+[A-Z][a-z]+(?:\s+[A-Z][a-z]+){0,3})?)\b',
             r'\b(Community Redevelopment Agency(?:\s+of\s+the\s+City\s+of\s+Tampa)?)\b',
             r'\b(City Council(?:\s+of\s+the\s+City\s+of\s+Tampa)?)\b',
             r'\b(Law Firm of [A-Z][a-z,\s&\.]+(?:P\.A\.|LLC|Inc\.)?)\b',
@@ -243,7 +243,10 @@ class HybridEntityExtractor:
             'organizations': defaultdict(lambda: {'count': 0, 'confidence_sum': 0.0, 'agendas': set()}),
         }
         
-        agenda_files = sorted(agenda_dir.glob('*.json'))
+        # Only scraped agendas: the directory also holds the minutes and the
+        # discovery list, which are not the mixed-case agenda text these
+        # patterns expect.
+        agenda_files = sorted(agenda_dir.glob('meeting_*.json'))
         print(f"Processing {len(agenda_files)} agenda files...")
         print("=" * 80)
         
@@ -252,6 +255,9 @@ class HybridEntityExtractor:
             
             with open(agenda_file) as f:
                 data = json.load(f)
+            if not isinstance(data, dict):
+                # e.g. discovered-meetings.json (a list) shares the directory
+                continue
             
             # Extract from all text fields
             texts = []

@@ -9,7 +9,7 @@ Part of the [Tampa Meetings](https://github.com/miklb/tampa-meetings) project.
 ## What It Does
 
 1. **Scrapes** official transcripts from tampagov.net (ALL CAPS format)
-2. **Capitalizes** text using entity databases + GLiNER zero-shot NER
+2. **Capitalizes** text using entity lists (speaker roster, agenda entities, streets, neighborhoods, acronyms) and rules — GLiNER NER is optional and off by default
 3. **Finds** matching YouTube videos for the meeting
 4. **Calculates** video-to-transcript time offsets via Whisper
 
@@ -61,7 +61,7 @@ python scripts/build/match_whisper_to_transcript.py \
 processor/
 ├── src/                          # Source code
 │   ├── scraper.py                # Scrapes transcripts from tampagov.net
-│   ├── capitalize_transcript.py  # ALL CAPS → sentence case (GLiNER + entity DB)
+│   ├── capitalize_transcript.py  # ALL CAPS → sentence case (entity lists + rules)
 │   ├── meeting_type_detector.py  # Auto-detects meeting type (CRA/Workshop/etc.)
 │   └── youtube_fetcher.py        # Finds YouTube videos by date
 │
@@ -109,7 +109,7 @@ processor/
 
 ## Known Issues
 
-- GLiNER model load takes ~30 seconds on first run
+- GLiNER is off by default (it title-cased ordinary words and only added one-off names); `--gliner` turns it back on and adds ~30 s model load plus ~40x the run time
 - `youtube-transcript-api` is deprecated; offset calculation uses Whisper instead
 - Some video intros are 8+ minutes of silence, complicating offset detection (see [docs/VIDEO_PIPELINE.md](docs/VIDEO_PIPELINE.md) Step 4)
 - Part 2+ transcript boundaries (`transcript_start_time`) not yet auto-populated (see [docs/VIDEO_PIPELINE.md](docs/VIDEO_PIPELINE.md) Step 3)

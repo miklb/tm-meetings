@@ -142,7 +142,11 @@ def deduplicate_people(people: dict) -> dict:
             name_quality = len(clean.split()) * 10
             if name.startswith(('Chief ', 'Councilmember ', 'Mayor ', 'Detective ', 'Fire Chief ')):
                 name_quality -= 5  # Penalize titled variants
-            if stats.get('score', 0) > best_score or name_quality > len(best_name.split()) * 10 if best_name else 0:
+            # (was: `a or b if best_name else 0`, which parsed as `(a or b) if
+            # best_name else 0` — with best_name starting None the branch
+            # never ran, so the canonical variant was never chosen.)
+            best_quality = len(best_name.split()) * 10 if best_name else 0
+            if best_name is None or stats.get('score', 0) > best_score or name_quality > best_quality:
                 if len(clean.split()) >= 2:  # Must be at least first + last
                     best_name = clean
                     best_score = stats.get('score', 0)
