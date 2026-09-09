@@ -21,6 +21,7 @@ import glob
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -43,10 +44,13 @@ CLIP_HALF_WINDOW = 90      # seconds either side of predicted position
 # for older videos that only ever had one audio track.
 FORMATS = ['234[language^=en]/234', '233[language^=en]/233',
            'bestaudio[language^=en]/140']
-# The pipeline venv pins an older yt-dlp (2026.08.17) that hangs
-# indefinitely on some current videos; use the newer Homebrew yt-dlp
-# for URL resolution instead of whatever 'yt-dlp' resolves to on PATH.
-YT_DLP_BIN = '/opt/homebrew/bin/yt-dlp' if os.path.exists('/opt/homebrew/bin/yt-dlp') else 'yt-dlp'
+# The pipeline venv's yt-dlp has lagged the current release and hung on some
+# videos, so a newer system copy is preferred: YT_DLP env var, then the
+# Homebrew binary, then whatever 'yt-dlp' resolves to on PATH.
+YT_DLP_BIN = (os.environ.get('YT_DLP')
+              or ('/opt/homebrew/bin/yt-dlp' if os.path.exists('/opt/homebrew/bin/yt-dlp') else None)
+              or shutil.which('yt-dlp')
+              or 'yt-dlp')
 
 
 def parse_iso_duration(duration_str):

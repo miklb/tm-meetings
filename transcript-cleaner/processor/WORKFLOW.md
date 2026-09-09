@@ -147,10 +147,14 @@ npm run deploy    # cd site && wrangler pages deploy — must run from site/ so 
 
 ### Smart audio sampling
 
-Rather than always downloading 10 minutes from the start, `calculate_smart_duration()` picks a targeted window:
+`calculate_smart_duration()` picks the audio window to transcribe (rules pinned in `tests/test_smart_duration.py`):
 
-- **Part 1:** Estimates when speech starts based on meeting schedule (morning meetings start later due to pre-roll/ceremonies). Skips ahead if speech likely starts after 10 minutes. Falls back to chapter data if available.
-- **Part 2+:** Skips countdown/music pre-roll entirely. Jumps to 2 minutes before the first content chapter marker and captures 5 minutes.
+- **Part 1:** always captures from the video start, so the word-anchor matcher can pin the transcript's opening lines. The length is 5 min pre-roll + (first speech − scheduled start) + 3 min, capped by chapter[1] when that comes earlier, clamped to 10–25 minutes. Meetings outside the 9 AM / 5 PM schedules get the 10-minute default.
+- **Part 2+:** centers on the first content chapter — starts 1 minute before chapter[1] and captures 6 minutes; with no usable chapter, 15 minutes from the start.
+
+### Word anchors first
+
+With word-level timestamps (faster-whisper), the matcher first tries to anchor the opening words of each official segment in the Whisper word stream. Three agreeing anchors, or two within 2 s of each other, give the offset directly; otherwise it falls back to n-gram matching below.
 
 ### Candidate filtering
 
@@ -162,7 +166,7 @@ Whisper segments pass through three filters before matching:
 
 ### Matching and cross-validation
 
-Each candidate is scored against official transcript segments using 3-gram overlap. When multiple candidates match, their implied offsets are clustered (±30s tolerance), and the cluster with the most independent supporting candidates wins.
+Each candidate is scored against official transcript segments using 3-gram overlap. When multiple candidates match, their implied offsets are clustered (±30s tolerance), and the cluster with the most independent supporting candidates wins; a Whisper candidate that matches official segment 0 directly is preferred when it agrees with the cluster (audio checks in Sept 2026 showed it beats the median).
 
 ### Part 2+ baseline adjustment
 

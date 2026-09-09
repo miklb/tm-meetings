@@ -117,8 +117,16 @@ def save_cache(cache: dict[str, Any], path: Path = DEFAULT_CACHE_PATH) -> Path:
 
 
 def load_cache(path: Path = DEFAULT_CACHE_PATH) -> dict[str, Any]:
-    with path.open() as fh:
-        return json.load(fh)
+    try:
+        with path.open() as fh:
+            return json.load(fh)
+    except FileNotFoundError:
+        # The cache is gitignored, so a fresh clone has none; without it the
+        # reconcile step warns and continues and the funding sections vanish.
+        raise FileNotFoundError(
+            f"CoA cache not found at {path}. Build it once with: "
+            f".venv/bin/python3 -m opengov.coa refresh (from the repo root)"
+        ) from None
 
 
 # ----------------------------------------------------------------------
