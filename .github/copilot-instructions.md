@@ -292,7 +292,7 @@ There is no single `MEETING_TYPES` constant — detection happens at each stage:
 
 ### Rebuilding the Database
 
-1. `npm run build-db` (runs `node scripts/build-db.js`) — reads agenda JSON, processed transcripts, and video mappings; writes `data/meetings.db`
+1. `npm run build-db` (runs `node scripts/build-db.js`) — reads agenda JSON, processed transcripts, and video mappings; writes `data/meetings.db` atomically (`--year YYYY`, `--output PATH`). Addendum meetings are folded into their parent's `agenda_items` with `from_addendum = 1`; video mappings whose `verification.status` is `fail` contribute no videos
 2. Run before `cd site && npm run build` any time the DB is missing or stale (it is gitignored, not committed)
 
 ---
@@ -310,9 +310,12 @@ There is no single `MEETING_TYPES` constant — detection happens at each stage:
 
 ### Automated Checks
 
-There is no lint script and no test suite. Verification is:
+There is no lint script. `npm test` (root) runs `scripts/test/*.test.js` on Node's built-in test runner: each test builds a database from a synthetic fixture tree in a temp dir and asserts on rows and log lines — addendum folding, duplicate scrapes, transcript pairing, the offset-verification flag, `--year`, atomic output. Add a test there for any build-db behaviour you change; the fixture helpers (`meeting()`, `transcript()`, `mapping()`) cover the three input file types. Other verification is:
 
 ```bash
+# build-db suite
+npm test
+
 # Build site (catches template errors)
 cd site && npm run build
 

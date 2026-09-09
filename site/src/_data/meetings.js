@@ -66,8 +66,21 @@ module.exports = function () {
   // Prepared statements for detail queries
   // ------------------------------------------------------------------
   const stmtItems = db.prepare(`
-    SELECT * FROM agenda_items WHERE meeting_id = ? ORDER BY item_number
+    SELECT * FROM agenda_items WHERE meeting_id = ? AND from_addendum = 0 ORDER BY item_number
   `);
+  // Items build-db.js folded in from an addendum (a second OnBase meeting on
+  // the same date). Rendered as their own block, grouped by the addendum's
+  // section, in the same order the agenda posts use.
+  const stmtAddendumItems = db.prepare(`
+    SELECT * FROM agenda_items WHERE meeting_id = ? AND from_addendum = 1
+    ORDER BY addendum_meeting_id, id
+  `);
+  const ADDENDUM_SECTIONS = [
+    ['walkons', 'Walk-on Items / New Business'],
+    ['removedFromConsent', 'Removed from Consent for Separate Vote'],
+    ['continuances', 'Continuances & Removals'],
+    ['otherChanges', 'Other Changes'],
+  ];
   const stmtDocs = db.prepare(`
     SELECT * FROM documents WHERE agenda_item_id = ? ORDER BY id
   `);
@@ -101,6 +114,22 @@ module.exports = function () {
       item.documents = stmtDocs.all(item.id);
     }
 
+    const addendumItems = stmtAddendumItems.all(m.id);
+    for (const item of addendumItems) {
+      item.documents = stmtDocs.all(item.id);
+    }
+    const addendum = addendumItems.length === 0 ? null : {
+      count: addendumItems.length,
+      sources: JSON.parse(m.addendum_ids || '[]'),
+      sections: ADDENDUM_SECTIONS
+        .map(([key, label]) => ({
+          key,
+          label,
+          items: addendumItems.filter((i) => (i.addendum_section || 'otherChanges') === key),
+        }))
+        .filter((s) => s.items.length > 0),
+    };
+
     const transcript_segments = m.has_transcript
       ? stmtSegments.all(m.id)
       : [];
@@ -117,7 +146,7 @@ module.exports = function () {
       ? (transcript_segments[0].timestamp || null)
       : null;
 
-    details[m.id] = { ...m, items, transcript_segments, videos, transcript_baseline };
+    details[m.id] = { ...m, items, addendum, transcript_segments, videos, transcript_baseline };
   }
 
   db.close();

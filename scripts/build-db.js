@@ -3,11 +3,24 @@
  * Build SQLite database from agenda JSON files.
  *
  * Usage:
- *   node scripts/build-db.js              # Import all meetings
- *   node scripts/build-db.js --year 2026  # Import only 2026 meetings
+ *   node scripts/build-db.js                       # Import all meetings
+ *   node scripts/build-db.js --year 2026           # Only 2026 agendas, transcripts and videos
+ *   node scripts/build-db.js --output /tmp/x.db    # Build somewhere else (scratch builds)
  *
  * Reads JSON from agenda-scraper/data/ and writes to data/meetings.db.
- * Idempotent — drops and recreates tables on each run.
+ * The build is atomic: it writes to <output>.building and renames over the
+ * target only when every step succeeds, so a crash or a Ctrl-C never leaves
+ * a half-populated database behind.
+ *
+ * Addenda: OnBase publishes an addendum as a second meeting on the same date
+ * with the same type. Its items are folded into the parent meeting's
+ * agenda_items with from_addendum = 1 (see classifyRecords); it never becomes a
+ * meeting row of its own. Two distinct meetings on one day (e.g. two budget
+ * workshops) are both kept.
+ *
+ * Videos: a video_mapping_<id>.json whose `verification.status` is "fail"
+ * (written by scripts/record-offset-verification.py from the archive
+ * pipeline's Step 3b) is skipped, so a known-bad offset never reaches the site.
  */
 
 const fs = require('fs');
@@ -15,10 +28,15 @@ const path = require('path');
 const Database = require('better-sqlite3');
 const glob = require('glob');
 
-const DATA_DIR = path.resolve(__dirname, '..', 'agenda-scraper', 'data');
-const DB_PATH = path.resolve(__dirname, '..', 'data', 'meetings.db');
-const TRANSCRIPT_DIR = path.resolve(__dirname, '..', 'transcript-cleaner', 'processor', 'data');
-const PROCESSED_DIR = path.join(TRANSCRIPT_DIR, 'processed');
+const DEFAULTS = {
+  dataDir: path.resolve(__dirname, '..', 'agenda-scraper', 'data'),
+  output: path.resolve(__dirname, '..', 'data', 'meetings.db'),
+  transcriptDir: path.resolve(__dirname, '..', 'transcript-cleaner', 'processor', 'data'),
+};
+
+// Replaced per build by buildDatabase(); tests pass a capturing logger.
+const defaultLog = { info: (...a) => console.log(...a), warn: (...a) => console.warn(...a) };
+let log = defaultLog;
 
 // ---------------------------------------------------------------------------
 // Schema
@@ -34,7 +52,8 @@ CREATE TABLE IF NOT EXISTS meetings (
   agenda_type TEXT,
   source_url TEXT,
   item_count INTEGER DEFAULT 0,
-  transcript_source_id TEXT
+  transcript_source_id TEXT,
+  addendum_ids TEXT
 );
 
 CREATE TABLE IF NOT EXISTS agenda_items (
@@ -47,7 +66,11 @@ CREATE TABLE IF NOT EXISTS agenda_items (
   background TEXT,
   location TEXT,
   coordinates TEXT,
-  staff_report TEXT
+  staff_report TEXT,
+  from_addendum INTEGER NOT NULL DEFAULT 0,
+  addendum_meeting_id INTEGER,
+  addendum_section TEXT,
+  continued_to_date TEXT
 );
 
 CREATE TABLE IF NOT EXISTS documents (
@@ -194,6 +217,18 @@ const TRANSCRIPT_TYPE_OVERRIDES = {
 };
 
 /**
+ * Manual transcript → agenda meeting pairings for dates where the date-only
+ * fallback in matchTranscripts is ambiguous (two agenda meetings, two
+ * transcripts, nothing on the agenda side to tell them apart). Keys are
+ * transcript meeting IDs as strings, values are OnBase meeting IDs.
+ * The build logs "ambiguous" for any new case that needs an entry here.
+ */
+const TRANSCRIPT_MEETING_OVERRIDES = {
+  '2624': 2629, // 2025-08-11 9:00 AM budget workshop (recommended FY26 budget, 4 items)
+  '2623': 2670, // 2025-08-11 5:01 PM budget workshop (stormwater budget, 1 item)
+};
+
+/**
  * Manual type overrides for agenda meetings where automatic inference fails
  * or OnBase classification is incorrect (e.g. dual meetings).
  * Keys are OnBase meeting IDs as numbers.
@@ -236,7 +271,8 @@ function inferMeetingType(transcriptData, videoMapping) {
  * agenda (historical or different ID space), inserts a stub meeting row so
  * they remain accessible.
  */
-function matchTranscripts(db) {
+function matchTranscripts(db, opts) {
+  const { yearFilter, transcriptMeetingOverrides } = opts;
   const updateTranscriptId = db.prepare(
     'UPDATE meetings SET transcript_source_id = ? WHERE id = ?'
   );
@@ -264,7 +300,7 @@ function matchTranscripts(db) {
 
   // Index video mappings by their transcript meeting ID
   const videoMappings = {};
-  for (const f of glob.sync(path.join(TRANSCRIPT_DIR, 'video_mapping_*.json'))) {
+  for (const f of glob.sync(path.join(opts.transcriptDir, 'video_mapping_*.json'))) {
     try {
       const d = JSON.parse(fs.readFileSync(f, 'utf-8'));
       videoMappings[String(d.meeting_id)] = d;
@@ -272,7 +308,7 @@ function matchTranscripts(db) {
   }
 
   const transcriptFiles = glob.sync(
-    path.join(PROCESSED_DIR, 'processed_transcript_*.json')
+    path.join(opts.processedDir, 'processed_transcript_*.json')
   );
 
   let matched = 0;
@@ -288,12 +324,13 @@ function matchTranscripts(db) {
     const m = filename.match(/processed_transcript_(\d+)_(\d{4}-\d{2}-\d{2})\.json/);
     if (!m) { skipped++; continue; }
     const [, transcriptId, transcriptDate] = m;
+    if (yearFilter && !transcriptDate.startsWith(yearFilter)) continue;
 
     let transcriptData;
     try {
       transcriptData = JSON.parse(fs.readFileSync(f, 'utf-8'));
     } catch {
-      console.warn(`  Skipping ${filename}: parse error`);
+      log.warn(`  Skipping ${filename}: parse error`);
       skipped++;
       continue;
     }
@@ -302,13 +339,26 @@ function matchTranscripts(db) {
     // must never claim a meeting — it would shadow the real one and publish
     // a blank transcript page.
     if (!Array.isArray(transcriptData.segments) || transcriptData.segments.length === 0) {
-      console.warn(`  Skipping ${filename}: 0 segments`);
+      log.warn(`  Skipping ${filename}: 0 segments`);
       skipped++;
       continue;
     }
 
     const videoMapping = videoMappings[transcriptId];
     const meetingType = inferMeetingType(transcriptData, videoMapping);
+
+    if (transcriptMeetingOverrides[transcriptId]) {
+      const overrideId = transcriptMeetingOverrides[transcriptId];
+      updateTranscriptId.run(transcriptId, overrideId);
+      // Same type refinement as the date-only fallback below: the transcript
+      // side knows a 'regular'-labelled agenda was really a workshop etc.
+      const agenda = db.prepare('SELECT meeting_type FROM meetings WHERE id = ?').get(overrideId);
+      if (agenda && agenda.meeting_type === 'regular' && meetingType !== 'regular') {
+        updateType.run(meetingType, buildTitle(meetingType, transcriptDate), overrideId);
+      }
+      matched++;
+      continue;
+    }
 
     const agendaMeeting = findMeeting.get(transcriptDate, meetingType);
     if (agendaMeeting) {
@@ -333,12 +383,19 @@ function matchTranscripts(db) {
       if (agenda.meeting_type === 'regular' && meetingType !== 'regular') {
         updateType.run(meetingType, buildTitle(meetingType, transcriptDate), agenda.id);
       }
-      console.log(
+      log.info(
         `  Date-matched transcript ${transcriptId} → meeting ${agenda.id} ` +
         `(transcript type '${meetingType}', agenda type '${agenda.meeting_type}')`
       );
       matched++;
     } else {
+      if (candidates.length > 1) {
+        log.warn(
+          `  Transcript ${transcriptId} (${transcriptDate}, '${meetingType}') is ambiguous: ` +
+          `${candidates.length} unclaimed agenda meetings on that date (${candidates.map((c) => c.id).join(', ')}). ` +
+          `Add it to TRANSCRIPT_MEETING_OVERRIDES; stub row created for now.`
+        );
+      }
       // No matching agenda — insert stub so transcript data has a home
       const stubId = 1_000_000 + parseInt(transcriptId, 10);
       insertStub.run(
@@ -352,7 +409,7 @@ function matchTranscripts(db) {
     }
   }
 
-  console.log(
+  log.info(
     `  Transcripts: ${matched} matched to agendas, ${stubbed} stub rows created, ${skipped} skipped`
   );
 }
@@ -361,7 +418,7 @@ function matchTranscripts(db) {
  * Import transcript segments from processed transcript JSON files.
  * Each segment row is linked to the meeting via transcript_source_id.
  */
-function importTranscriptSegments(db) {
+function importTranscriptSegments(db, opts) {
   const findMeeting = db.prepare(
     'SELECT id FROM meetings WHERE transcript_source_id = ? LIMIT 1'
   );
@@ -370,7 +427,7 @@ function importTranscriptSegments(db) {
   );
 
   const transcriptFiles = glob.sync(
-    path.join(PROCESSED_DIR, 'processed_transcript_*.json')
+    path.join(opts.processedDir, 'processed_transcript_*.json')
   );
 
   let totalSegments = 0;
@@ -390,7 +447,7 @@ function importTranscriptSegments(db) {
       try {
         data = JSON.parse(fs.readFileSync(f, 'utf-8'));
       } catch {
-        console.warn(`  Skipping segments for ${filename}: parse error`);
+        log.warn(`  Skipping segments for ${filename}: parse error`);
         continue;
       }
 
@@ -411,7 +468,7 @@ function importTranscriptSegments(db) {
   });
   doInsert();
 
-  console.log(
+  log.info(
     `  Segments: ${totalSegments} inserted across ${totalMeetings} meetings`
   );
 }
@@ -420,7 +477,7 @@ function importTranscriptSegments(db) {
  * Import videos and chapters from video_mapping_*.json files.
  * Videos and chapters are linked to meetings via transcript_source_id.
  */
-function importVideos(db) {
+function importVideos(db, opts) {
   const findMeeting = db.prepare(
     'SELECT id FROM meetings WHERE transcript_source_id = ? LIMIT 1'
   );
@@ -431,10 +488,11 @@ function importVideos(db) {
     'INSERT INTO video_chapters (video_db_id, chapter_index, title, timestamp, seconds) VALUES (?, ?, ?, ?, ?)'
   );
 
-  const mappingFiles = glob.sync(path.join(TRANSCRIPT_DIR, 'video_mapping_*.json'));
+  const mappingFiles = glob.sync(path.join(opts.transcriptDir, 'video_mapping_*.json'));
 
   let totalVideos = 0;
   let totalChapters = 0;
+  let failedVerification = 0;
 
   const doInsert = db.transaction(() => {
     for (const f of mappingFiles) {
@@ -442,7 +500,7 @@ function importVideos(db) {
       try {
         data = JSON.parse(fs.readFileSync(f, 'utf-8'));
       } catch {
-        console.warn(`  Skipping ${path.basename(f)}: parse error`);
+        log.warn(`  Skipping ${path.basename(f)}: parse error`);
         continue;
       }
 
@@ -451,6 +509,20 @@ function importVideos(db) {
 
       const meeting = findMeeting.get(String(data.meeting_id));
       if (!meeting) continue;
+
+      // Step 3b of archive-meeting.sh records its verdict in the mapping.
+      // A failed verdict means the offset is known to be wrong: publishing
+      // it would put bad ?t= links on the page, so the meeting gets no videos
+      // until the mapping is re-verified.
+      const verdict = data.verification && data.verification.status;
+      if (verdict === 'fail') {
+        log.warn(
+          `  Skipping videos for transcript ${data.meeting_id} (meeting ${meeting.id}): ` +
+          `offset verification failed${data.verification.checked_at ? ` on ${data.verification.checked_at}` : ''}`
+        );
+        failedVerification++;
+        continue;
+      }
 
       for (const v of data.videos) {
         const result = insertVideo.run(
@@ -483,7 +555,10 @@ function importVideos(db) {
   });
   doInsert();
 
-  console.log(`  Videos: ${totalVideos} inserted, ${totalChapters} chapters`);
+  log.info(
+    `  Videos: ${totalVideos} inserted, ${totalChapters} chapters` +
+    (failedVerification ? `, ${failedVerification} mapping(s) skipped (failed verification)` : '')
+  );
 }
 
 /**
@@ -503,213 +578,399 @@ function buildTitle(type, dateStr, clerkTitle = null) {
 }
 
 // ---------------------------------------------------------------------------
-// Main
+// Meeting import
 // ---------------------------------------------------------------------------
 
-function main() {
-  const args = process.argv.slice(2);
-  const yearFlag = args.indexOf('--year');
-  const yearFilter = yearFlag !== -1 ? args[yearFlag + 1] : null;
+/** meeting_type slug for an agenda JSON: item prefixes first, OnBase label second, overrides last. */
+function resolveMeetingType(data, items, meetingId) {
+  let meetingType = inferTypeFromItems(items);
+  // inferTypeFromItems defaults to 'regular' when item prefixes don't
+  // indicate a specialised type (CRA, evening). Fall back to the JSON's
+  // own meetingType for meetings OnBase explicitly classifies as non-regular
+  // (e.g. specially-called workshops where item prefixes are generic).
+  if (meetingType === 'regular' && data.meetingType) {
+    const mapped = VIDEO_MEETING_TYPE_MAP[data.meetingType.toLowerCase()];
+    if (mapped && mapped !== 'regular') meetingType = mapped;
+  }
+  if (MEETING_TYPE_OVERRIDES[meetingId]) meetingType = MEETING_TYPE_OVERRIDES[meetingId];
+  return meetingType;
+}
 
-  // Ensure output directory exists
-  const dbDir = path.dirname(DB_PATH);
-  if (!fs.existsSync(dbDir)) {
-    fs.mkdirSync(dbDir, { recursive: true });
+/**
+ * Parse every meeting JSON into a record. Nothing is written here, so a
+ * parse problem is reported before the DB is touched.
+ */
+function loadMeetingFiles(files, yearFilter) {
+  const records = [];
+  let skipped = 0;
+
+  for (const filePath of files) {
+    const filename = path.basename(filePath);
+    let data;
+    try {
+      data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    } catch (err) {
+      log.warn(`  Skipping ${filename}: ${err.message}`);
+      skipped++;
+      continue;
+    }
+
+    const date = resolveDate(data, filename);
+    if (!date) {
+      log.warn(`  Skipping ${filename}: could not determine date`);
+      skipped++;
+      continue;
+    }
+    if (yearFilter && !date.startsWith(yearFilter)) continue;
+
+    const meetingId = parseInt(data.meetingId, 10);
+    if (isNaN(meetingId)) {
+      log.warn(`  Skipping ${filename}: invalid meetingId`);
+      skipped++;
+      continue;
+    }
+
+    const items = data.agendaItems || [];
+    records.push({
+      meetingId,
+      date,
+      meetingType: resolveMeetingType(data, items, meetingId),
+      items,
+      itemIds: new Set(items.map((i) => i.agendaItemId).filter(Boolean)),
+      data,
+    });
   }
 
-  // Find all meeting JSON files (skip _old variants)
-  const pattern = path.join(DATA_DIR, 'meeting_*_*.json');
-  const files = glob.sync(pattern).filter((f) => !f.includes('_old'));
+  return { records, skipped };
+}
 
-  if (files.length === 0) {
-    console.error('No meeting JSON files found in', DATA_DIR);
-    process.exit(1);
+/**
+ * Split records into meetings, addenda and duplicates.
+ *
+ * An addendum is a second OnBase meeting on the same date and type that
+ * amends the main agenda. The scraper marks them (`isAddendum`) and the clerk
+ * names them ("… Addendum"); older scrapes have neither, but every addendum
+ * re-lists the parent's items under the parent's own agendaItemIds, so a
+ * strict subset of a larger same-day agenda's item ids is the same thing.
+ * An equal set is the same meeting scraped twice under a new OnBase id: it
+ * is reported and left out, never merged or silently deleted.
+ */
+function classifyRecords(records) {
+  const meetings = [];
+  const addenda = [];
+  const duplicates = [];
+
+  const byDate = {};
+  for (const rec of records) (byDate[rec.date] ||= []).push(rec);
+
+  for (const group of Object.values(byDate)) {
+    const explicit = new Set(group.filter((r) =>
+      r.data.isAddendum === true || /addendum/i.test(r.data.meetingName || '')));
+    const candidates = group.filter((r) => !explicit.has(r));
+
+    for (const rec of group) {
+      if (explicit.has(rec)) { addenda.push(rec); continue; }
+      const ids = rec.itemIds;
+      const others = candidates.filter((o) => o !== rec && o.meetingType === rec.meetingType);
+      const subsetOf = ids.size > 0 && others.find((o) =>
+        o.items.length > rec.items.length && [...ids].every((id) => o.itemIds.has(id)));
+      const sameAs = ids.size > 0 && others.find((o) =>
+        o.itemIds.size === ids.size && [...ids].every((id) => o.itemIds.has(id)));
+
+      if (subsetOf) {
+        log.info(`  Meeting ${rec.meetingId} (${rec.date}): all ${ids.size} item ids are on meeting ${subsetOf.meetingId} — treated as an addendum`);
+        addenda.push(rec);
+      } else if (sameAs && rec.meetingId > sameAs.meetingId) {
+        log.warn(`  Meeting ${rec.meetingId} (${rec.date}) has the same ${ids.size} items as meeting ${sameAs.meetingId} — duplicate scrape, not imported`);
+        duplicates.push(rec);
+      } else {
+        meetings.push(rec);
+      }
+    }
   }
 
-  // Open (or create) database
-  const db = new Database(DB_PATH);
-  db.pragma('journal_mode = WAL');
-  db.pragma('foreign_keys = ON');
+  return { meetings, addenda, duplicates };
+}
 
-  // Drop existing tables and recreate (reverse dependency order)
-  db.exec('DROP TABLE IF EXISTS video_chapters');
-  db.exec('DROP TABLE IF EXISTS videos');
-  db.exec('DROP TABLE IF EXISTS transcript_segments');
-  db.exec('DROP TABLE IF EXISTS documents');
-  db.exec('DROP TABLE IF EXISTS agenda_items');
-  db.exec('DROP TABLE IF EXISTS meetings');
-  db.exec(SCHEMA);
+/**
+ * Pick the meeting an addendum amends: the largest same-date meeting of the
+ * same type, or the only same-date meeting when types disagree (an evening
+ * addendum with no file numbers infers as 'regular'). Null when ambiguous.
+ */
+function findParent(addendum, meetingsOnDate) {
+  const sameType = meetingsOnDate.filter((m) => m.meetingType === addendum.meetingType);
+  const pool = sameType.length > 0 ? sameType : (meetingsOnDate.length === 1 ? meetingsOnDate : []);
+  if (pool.length === 0) return null;
+  return pool.reduce((best, m) => (m.items.length > best.items.length ? m : best));
+}
 
-  // Prepare insert statements
+function importMeetings(db, meetings, addenda) {
   const insertMeeting = db.prepare(`
-    INSERT OR REPLACE INTO meetings (id, date, meeting_type, title, clerk_title, agenda_type, source_url, item_count)
-    VALUES (@id, @date, @meeting_type, @title, @clerk_title, @agenda_type, @source_url, @item_count)
+    INSERT INTO meetings (id, date, meeting_type, title, clerk_title, agenda_type, source_url, item_count, addendum_ids)
+    VALUES (@id, @date, @meeting_type, @title, @clerk_title, @agenda_type, @source_url, @item_count, @addendum_ids)
   `);
-
   const insertItem = db.prepare(`
     INSERT INTO agenda_items
       (meeting_id, item_number, agenda_item_id, file_number, title, background,
-       location, coordinates, staff_report)
+       location, coordinates, staff_report,
+       from_addendum, addendum_meeting_id, addendum_section, continued_to_date)
     VALUES
       (@meeting_id, @item_number, @agenda_item_id, @file_number, @title, @background,
-       @location, @coordinates, @staff_report)
+       @location, @coordinates, @staff_report,
+       @from_addendum, @addendum_meeting_id, @addendum_section, @continued_to_date)
   `);
-
   const insertDoc = db.prepare(`
     INSERT INTO documents (agenda_item_id, title, source_url, mirrored_url, original_text)
     VALUES (@agenda_item_id, @title, @source_url, @mirrored_url, @original_text)
   `);
+  const attachAddendum = db.prepare(`
+    UPDATE meetings SET item_count = item_count + @added, addendum_ids = @addendum_ids WHERE id = @id
+  `);
 
-  // Stats
-  let meetingCount = 0;
-  let itemCount = 0;
-  let docCount = 0;
-  let skipped = 0;
+  const stats = { meetings: 0, items: 0, documents: 0, addendaFolded: 0, addendaStandalone: 0 };
 
-  const importAll = db.transaction(() => {
-    for (const filePath of files) {
-      const filename = path.basename(filePath);
-      let data;
-      try {
-        data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-      } catch (err) {
-        console.warn(`  Skipping ${filename}: ${err.message}`);
-        skipped++;
-        continue;
-      }
-
-      const date = resolveDate(data, filename);
-      if (!date) {
-        console.warn(`  Skipping ${filename}: could not determine date`);
-        skipped++;
-        continue;
-      }
-
-      // Apply year filter if specified
-      if (yearFilter && !date.startsWith(yearFilter)) {
-        continue;
-      }
-
-      const meetingId = parseInt(data.meetingId, 10);
-      if (isNaN(meetingId)) {
-        console.warn(`  Skipping ${filename}: invalid meetingId`);
-        skipped++;
-        continue;
-      }
-
-      const items = data.agendaItems || [];
-      let meetingType = inferTypeFromItems(items);
-      // inferTypeFromItems defaults to 'regular' when item prefixes don't
-      // indicate a specialised type (CRA, evening). Fall back to the JSON's
-      // own meetingType for meetings OnBase explicitly classifies as non-regular
-      // (e.g. specially-called workshops where item prefixes are generic).
-      if (meetingType === 'regular' && data.meetingType) {
-        const key = data.meetingType.toLowerCase();
-        const mapped = VIDEO_MEETING_TYPE_MAP[key];
-        if (mapped && mapped !== 'regular') meetingType = mapped;
-      }
-
-      // Apply manual meeting type overrides
-      if (MEETING_TYPE_OVERRIDES[meetingId]) {
-        meetingType = MEETING_TYPE_OVERRIDES[meetingId];
-      }
-
-      insertMeeting.run({
-        id: meetingId,
-        date,
-        meeting_type: meetingType,
-        title: buildTitle(meetingType, date, data.meetingName),
-        clerk_title: data.meetingName || null,
-        agenda_type: data.agendaType || null,
-        source_url: data.sourceUrl || null,
-        item_count: items.length,
+  function insertItems(meetingId, items, addendum = null) {
+    for (const item of items) {
+      const result = insertItem.run({
+        meeting_id: meetingId,
+        item_number: item.number || null,
+        agenda_item_id: item.agendaItemId || null,
+        file_number: item.fileNumber || null,
+        title: item.title || null,
+        background: item.background || null,
+        location: item.location || null,
+        coordinates: item.coordinates ? JSON.stringify(item.coordinates) : null,
+        staff_report: item.staffReport ? JSON.stringify(item.staffReport) : null,
+        from_addendum: addendum ? 1 : 0,
+        addendum_meeting_id: addendum ? addendum.meetingId : null,
+        addendum_section: addendum ? (item.addendumSection || 'otherChanges') : null,
+        continued_to_date: item.continuedToDate || null,
       });
-      meetingCount++;
-
-      for (const item of items) {
-        const result = insertItem.run({
-          meeting_id: meetingId,
-          item_number: item.number || null,
-          agenda_item_id: item.agendaItemId || null,
-          file_number: item.fileNumber || null,
-          title: item.title || null,
-          background: item.background || null,
-          location: item.location || null,
-          coordinates: item.coordinates ? JSON.stringify(item.coordinates) : null,
-          staff_report: item.staffReport ? JSON.stringify(item.staffReport) : null,
+      stats.items++;
+      for (const doc of item.supportingDocuments || []) {
+        insertDoc.run({
+          agenda_item_id: result.lastInsertRowid,
+          title: doc.title || doc.originalText || 'Document',
+          source_url: doc.url || null,
+          mirrored_url: doc.mirroredUrl || null,
+          original_text: doc.originalText || null,
         });
-        itemCount++;
-
-        const rowId = result.lastInsertRowid;
-
-        for (const doc of item.supportingDocuments || []) {
-          insertDoc.run({
-            agenda_item_id: rowId,
-            title: doc.title || doc.originalText || 'Document',
-            source_url: doc.url || null,
-            mirrored_url: doc.mirroredUrl || null,
-            original_text: doc.originalText || null,
-          });
-          docCount++;
-        }
-      }
-    }
-  });
-
-  importAll();
-
-  // Deduplicate meetings: when multiple IDs share the same (date, meeting_type),
-  // keep only the one with the most agenda items (FINAL > DRAFT).
-  const dupes = db.prepare(`
-    SELECT id, date, meeting_type, item_count FROM meetings
-    WHERE (date, meeting_type) IN (
-      SELECT date, meeting_type FROM meetings
-      GROUP BY date, meeting_type HAVING COUNT(*) > 1
-    )
-    ORDER BY date, meeting_type, item_count DESC
-  `).all();
-
-  if (dupes.length > 0) {
-    const seen = new Set();
-    const toDelete = [];
-    for (const row of dupes) {
-      const key = `${row.date}|${row.meeting_type}`;
-      if (seen.has(key)) {
-        toDelete.push(row);
-      } else {
-        seen.add(key);
-      }
-    }
-    if (toDelete.length > 0) {
-      const delDocs = db.prepare('DELETE FROM documents WHERE agenda_item_id IN (SELECT id FROM agenda_items WHERE meeting_id = ?)');
-      const delItems = db.prepare('DELETE FROM agenda_items WHERE meeting_id = ?');
-      const delSegments = db.prepare('DELETE FROM transcript_segments WHERE meeting_id = ?');
-      const delChapters = db.prepare('DELETE FROM video_chapters WHERE video_db_id IN (SELECT id FROM videos WHERE meeting_id = ?)');
-      const delVideos = db.prepare('DELETE FROM videos WHERE meeting_id = ?');
-      const delMeeting = db.prepare('DELETE FROM meetings WHERE id = ?');
-      for (const row of toDelete) {
-        delDocs.run(row.id);
-        delItems.run(row.id);
-        delSegments.run(row.id);
-        delChapters.run(row.id);
-        delVideos.run(row.id);
-        delMeeting.run(row.id);
-        meetingCount--;
-        console.log(`  Dedup: removed meeting ${row.id} (${row.date} ${row.meeting_type}, ${row.item_count} items) — superseded`);
+        stats.documents++;
       }
     }
   }
 
-  matchTranscripts(db);
-  importTranscriptSegments(db);
-  importVideos(db);
-  db.close();
+  function insertMeetingRecord(rec, { agendaType = rec.data.agendaType || null } = {}) {
+    insertMeeting.run({
+      id: rec.meetingId,
+      date: rec.date,
+      meeting_type: rec.meetingType,
+      title: buildTitle(rec.meetingType, rec.date, rec.data.meetingName),
+      clerk_title: rec.data.meetingName || null,
+      agenda_type: agendaType,
+      source_url: rec.data.sourceUrl || null,
+      item_count: rec.items.length,
+      addendum_ids: null,
+    });
+    stats.meetings++;
+    insertItems(rec.meetingId, rec.items);
+  }
 
-  console.log(`Database built: ${DB_PATH}`);
-  console.log(`  Meetings:  ${meetingCount}`);
-  console.log(`  Items:     ${itemCount}`);
-  console.log(`  Documents: ${docCount}`);
-  if (skipped > 0) console.log(`  Skipped:   ${skipped}`);
+  const importAll = db.transaction(() => {
+    const byDate = {};
+    for (const rec of meetings) {
+      insertMeetingRecord(rec);
+      (byDate[rec.date] ||= []).push(rec);
+    }
+
+    const foldedInto = {};
+    for (const a of [...addenda].sort((x, y) => x.meetingId - y.meetingId)) {
+      const parent = findParent(a, byDate[a.date] || []);
+      if (!parent) {
+        log.warn(
+          `  Addendum ${a.meetingId} (${a.date} ${a.meetingType}, ${a.items.length} items): ` +
+          `no parent meeting on that date — imported as its own meeting`
+        );
+        insertMeetingRecord(a, { agendaType: 'ADDENDUM' });
+        stats.addendaStandalone++;
+        continue;
+      }
+      insertItems(parent.meetingId, a.items, a);
+      (foldedInto[parent.meetingId] ||= []).push(a.meetingId);
+      attachAddendum.run({
+        id: parent.meetingId,
+        added: a.items.length,
+        addendum_ids: JSON.stringify(foldedInto[parent.meetingId]),
+      });
+      stats.addendaFolded++;
+      log.info(`  Addendum ${a.meetingId} → meeting ${parent.meetingId} (${a.date}, ${a.items.length} items)`);
+    }
+  });
+  importAll();
+
+  // Distinct meetings that share a date and type are legitimate (two budget
+  // workshops on 2025-08-11). They used to be deduped to one; now they are
+  // only reported.
+  const collisions = db.prepare(`
+    SELECT date, meeting_type, GROUP_CONCAT(id) AS ids, COUNT(*) AS n
+    FROM meetings GROUP BY date, meeting_type HAVING n > 1 ORDER BY date
+  `).all();
+  for (const c of collisions) {
+    log.info(`  Note: ${c.n} ${c.meeting_type} meetings on ${c.date} (${c.ids}) — kept all`);
+  }
+
+  return stats;
 }
 
-main();
+// ---------------------------------------------------------------------------
+// Build
+// ---------------------------------------------------------------------------
+
+function removeIfExists(p) {
+  if (fs.existsSync(p)) fs.unlinkSync(p);
+}
+
+/**
+ * Build the database.
+ *
+ * @param {object} [options]
+ * @param {string} [options.dataDir]        agenda JSON dir (default agenda-scraper/data)
+ * @param {string} [options.transcriptDir]  dir holding video_mapping_*.json and processed/
+ * @param {string} [options.output]         target .db path (default data/meetings.db)
+ * @param {string} [options.year]           'YYYY' — import only that year, all tables
+ * @param {object} [options.transcriptMeetingOverrides]  transcript id → meeting id
+ * @param {object} [options.log]            { info, warn } — defaults to console
+ * @returns {object} stats
+ */
+function buildDatabase(options = {}) {
+  const dataDir = options.dataDir || DEFAULTS.dataDir;
+  const transcriptDir = options.transcriptDir || DEFAULTS.transcriptDir;
+  const outPath = path.resolve(options.output || DEFAULTS.output);
+  const yearFilter = options.year || null;
+  log = options.log || defaultLog;
+
+  const opts = {
+    yearFilter,
+    transcriptDir,
+    processedDir: path.join(transcriptDir, 'processed'),
+    transcriptMeetingOverrides: options.transcriptMeetingOverrides || TRANSCRIPT_MEETING_OVERRIDES,
+  };
+
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+
+  // Find all meeting JSON files (skip _old variants)
+  const files = glob.sync(path.join(dataDir, 'meeting_*_*.json')).filter((f) => !f.includes('_old'));
+  if (files.length === 0) {
+    throw new Error(`No meeting JSON files found in ${dataDir}`);
+  }
+
+  // Build into a scratch file next to the target; swap in only on success.
+  const tmpPath = `${outPath}.building`;
+  for (const side of ['', '-journal', '-wal', '-shm']) removeIfExists(tmpPath + side);
+
+  const db = new Database(tmpPath);
+  // The site opens the file read-only and asks for WAL; that only works when
+  // the file was created in WAL mode, so set it here and checkpoint on close.
+  db.pragma('journal_mode = WAL');
+  db.pragma('foreign_keys = ON');
+  db.exec(SCHEMA);
+
+  let stats;
+  try {
+    const { records, skipped } = loadMeetingFiles(files, yearFilter);
+    const { meetings, addenda, duplicates } = classifyRecords(records);
+    stats = importMeetings(db, meetings, addenda);
+    stats.skipped = skipped;
+    stats.duplicates = duplicates.length;
+    matchTranscripts(db, opts);
+    importTranscriptSegments(db, opts);
+    importVideos(db, opts);
+    db.pragma('wal_checkpoint(TRUNCATE)');
+    db.close();
+  } catch (err) {
+    try { db.close(); } catch { /* already closed */ }
+    for (const side of ['', '-journal', '-wal', '-shm']) removeIfExists(tmpPath + side);
+    throw err;
+  }
+
+  // The previous database may have been opened in WAL mode by the site build;
+  // its sidecar files would be read against the new file, so clear them.
+  removeIfExists(`${outPath}-wal`);
+  removeIfExists(`${outPath}-shm`);
+  fs.renameSync(tmpPath, outPath);
+  removeIfExists(`${tmpPath}-wal`);
+  removeIfExists(`${tmpPath}-shm`);
+
+  stats.output = outPath;
+  return stats;
+}
+
+// ---------------------------------------------------------------------------
+// CLI
+// ---------------------------------------------------------------------------
+
+const USAGE = `Usage: node scripts/build-db.js [--year YYYY] [--output PATH]
+
+  --year YYYY     Import only agendas, transcripts and videos dated in YYYY
+  --output PATH   Write the database to PATH instead of data/meetings.db`;
+
+function parseArgs(argv) {
+  const opts = {};
+  for (let i = 0; i < argv.length; i++) {
+    const arg = argv[i];
+    if (arg === '--year') {
+      opts.year = argv[++i];
+      if (!/^\d{4}$/.test(opts.year || '')) {
+        console.error('--year expects a four-digit year');
+        process.exit(1);
+      }
+    } else if (arg === '--output') {
+      if (!argv[i + 1]) {
+        console.error('--output expects a path');
+        process.exit(1);
+      }
+      opts.output = argv[++i];
+    } else if (arg === '--help' || arg === '-h') {
+      console.log(USAGE);
+      process.exit(0);
+    } else {
+      console.error(`Unknown argument: ${arg}\n${USAGE}`);
+      process.exit(1);
+    }
+  }
+  return opts;
+}
+
+function main() {
+  const opts = parseArgs(process.argv.slice(2));
+  let stats;
+  try {
+    stats = buildDatabase(opts);
+  } catch (err) {
+    console.error(`Build failed, ${path.basename(opts.output || DEFAULTS.output)} left untouched: ${err.message}`);
+    process.exit(1);
+  }
+  console.log(`Database built: ${stats.output}`);
+  console.log(`  Meetings:  ${stats.meetings}`);
+  console.log(`  Items:     ${stats.items}`);
+  console.log(`  Documents: ${stats.documents}`);
+  console.log(`  Addenda:   ${stats.addendaFolded} folded into parent meetings` +
+    (stats.addendaStandalone ? `, ${stats.addendaStandalone} standalone` : ''));
+  if (stats.duplicates > 0) console.log(`  Duplicates: ${stats.duplicates} not imported`);
+  if (stats.skipped > 0) console.log(`  Skipped:   ${stats.skipped}`);
+}
+
+module.exports = {
+  buildDatabase,
+  classifyRecords,
+  inferTypeFromItems,
+  inferMeetingType,
+  resolveDate,
+  buildTitle,
+  SCHEMA,
+  DEFAULTS,
+};
+
+if (require.main === module) {
+  main();
+}

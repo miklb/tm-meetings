@@ -84,7 +84,9 @@ CREATE TABLE meetings (
   clerk_title TEXT,                -- clerk's own name, e.g. 'CRA Special Call' (NULL on pre-2026-08 scrapes)
   agenda_type TEXT,                -- 'DRAFT' or 'FINAL'
   source_url TEXT,
-  item_count INTEGER DEFAULT 0
+  item_count INTEGER DEFAULT 0,    -- own items + folded addendum items
+  transcript_source_id TEXT,       -- tampagov transcript pkey once matched
+  addendum_ids TEXT                -- JSON array of OnBase ids folded into this meeting
 );
 
 CREATE TABLE agenda_items (
@@ -97,11 +99,18 @@ CREATE TABLE agenda_items (
   background TEXT,
   location TEXT,
   coordinates TEXT,                -- JSON string
-  dollar_amounts TEXT,             -- JSON array string
-  fiscal_expenditures REAL DEFAULT 0,
-  fiscal_revenues REAL DEFAULT 0,
-  fiscal_net REAL DEFAULT 0
+  staff_report TEXT,               -- JSON string
+  from_addendum INTEGER NOT NULL DEFAULT 0,  -- 1 = came from a same-day addendum meeting
+  addendum_meeting_id INTEGER,     -- the addendum's own OnBase id
+  addendum_section TEXT,           -- walkons | removedFromConsent | continuances | otherChanges
+  continued_to_date TEXT
 );
+
+-- Addenda: OnBase publishes an addendum as a second meeting on the same date.
+-- build-db.js folds its items into the parent meeting (from_addendum = 1)
+-- instead of creating a meeting row; two genuinely distinct same-day meetings
+-- (e.g. the two 2025-08-11 budget workshops) are both kept. Changed 2026-09-08;
+-- before that a (date, meeting_type) dedupe silently dropped every addendum.
 
 CREATE TABLE documents (
   id INTEGER PRIMARY KEY AUTOINCREMENT,

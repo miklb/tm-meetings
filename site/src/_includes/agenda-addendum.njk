@@ -1,0 +1,23 @@
+{#
+  agenda-addendum.njk — items build-db.js folded in from an addendum meeting.
+  Expects: detail.addendum ({ count, sources, sections[] }) and a `prefix`
+  string that keeps ids unique when the agenda renders more than once on a page.
+#}
+{% if detail.addendum %}
+{% set prefix = prefix or "agenda" %}
+<section class="agenda-addendum" aria-labelledby="{{ prefix }}-addendum-title">
+  <h3 id="{{ prefix }}-addendum-title" class="agenda-addendum__title">
+    Addendum
+    <span class="agenda-addendum__count">{{ detail.addendum.count }} item{{ "s" if detail.addendum.count != 1 }}</span>
+  </h3>
+  {% for section in detail.addendum.sections %}
+    <h4 class="agenda-addendum__section">{{ section.label }}</h4>
+    <ol class="agenda-list agenda-list--addendum">
+      {% for item in section.items %}
+        {% set idPrefix = prefix ~ "-addendum-item" %}
+        {% include "agenda-item.njk" %}
+      {% endfor %}
+    </ol>
+  {% endfor %}
+</section>
+{% endif %}

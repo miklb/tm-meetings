@@ -45,7 +45,7 @@ cd site && npm run build    # build to site/_site
 npm run deploy              # cd site && wrangler pages deploy --project-name tampa-meetings
 ```
 
-There is no test suite; verification is building the site and manual checks (see the testing checklist in copilot-instructions.md).
+`npm test` runs the build-db suite (`scripts/test/*.test.js`, Node's built-in runner, synthetic fixtures — no real data). Site changes are verified by building the site and the manual checklist in copilot-instructions.md.
 
 ## Architecture
 
