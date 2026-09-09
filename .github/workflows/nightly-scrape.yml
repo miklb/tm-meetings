@@ -10,21 +10,27 @@ permissions:
   contents: write
   issues: write
 
+# One scrape at a time; a manual dispatch during the nightly waits instead of
+# racing it to the push.
+concurrency:
+  group: nightly-scrape
+  cancel-in-progress: false
+
 jobs:
   scrape:
     runs-on: ubuntu-latest
+    # Runs take 8–16 minutes; a hung OnBase fetch must not hold the runner.
+    timeout-minutes: 45
     defaults:
       run:
         working-directory: agenda-scraper
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+        uses: actions/checkout@v7
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v7
         with:
           node-version: '26'
           cache: 'npm'
@@ -33,8 +39,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # json-scraper.js exits non-zero when ANY meeting failed. That is worth
+      # knowing (the issue below reports it) but must not discard the meetings
+      # that succeeded: without continue-on-error the commit/push/issue steps
+      # were skipped, so one flaky OnBase fetch dropped the whole night.
       - name: Scrape meetings
         id: scrape
+        continue-on-error: true
         run: node json-scraper.js 2>&1 | tee /tmp/scrape-output.log; exit ${PIPESTATUS[0]}
 
       - name: Check for changes
@@ -50,78 +61,13 @@ jobs:
           fi
 
       - name: Analyze changes for notifications
-        if: steps.git-check.outputs.has_changes == 'true' || hashFiles('/tmp/scrape-output.log') != ''
         id: analyze
         working-directory: .
-        run: |
-          NEW_MEETINGS=""
-          MODIFIED_MEETINGS=""
-          UNAVAILABLE_MEETINGS=""
-          HAS_MEANINGFUL=false
-
-          # New meeting files
-          for file in $(git diff --staged --diff-filter=A --name-only -- 'agenda-scraper/data/meeting_*.json'); do
-            HAS_MEANINGFUL=true
-            MEETING_ID=$(echo "$file" | sed 's/.*meeting_\([0-9]*\)_.*/\1/')
-            MEETING_DATE=$(echo "$file" | sed 's/.*meeting_[0-9]*_\(.*\)\.json/\1/')
-            # Read meeting type from the new file
-            MEETING_TYPE=$(node -p "JSON.parse(require('fs').readFileSync('$file','utf-8')).meetingType || 'unknown'")
-            NEW_MEETINGS="${NEW_MEETINGS}- **Meeting ${MEETING_ID}** — ${MEETING_DATE} (${MEETING_TYPE})"$'\n'
-          done
-
-          # Modified meeting files — use diff-without-urls.js to filter URL-only changes
-          SUPPRESSED_COUNT=0
-          for file in $(git diff --staged --diff-filter=M --name-only -- 'agenda-scraper/data/meeting_*.json'); do
-            DIFF_OUTPUT=$(git show HEAD:"$file" | node agenda-scraper/diff-without-urls.js --summary - "$file" 2>/dev/null || echo "")
-            if [[ -n "$DIFF_OUTPUT" && "$DIFF_OUTPUT" != *"No meaningful changes"* ]]; then
-              HAS_MEANINGFUL=true
-              MEETING_ID=$(echo "$file" | sed 's/.*meeting_\([0-9]*\)_.*/\1/')
-              MEETING_DATE=$(echo "$file" | sed 's/.*meeting_[0-9]*_\(.*\)\.json/\1/')
-              MODIFIED_MEETINGS="${MODIFIED_MEETINGS}### Meeting ${MEETING_ID} (${MEETING_DATE})"$'\n'"${DIFF_OUTPUT}"$'\n\n'
-            elif [[ -n "$DIFF_OUTPUT" ]]; then
-              # Had changes but all were URL-only or schema-only — count for summary note
-              SUPPRESSED_COUNT=$((SUPPRESSED_COUNT + 1))
-            fi
-          done
-
-          # Meetings that returned "not available" from the server
-          while IFS= read -r line; do
-            if [[ "$line" == *"is not available on the server"* ]]; then
-              HAS_MEANINGFUL=true
-              MID=$(echo "$line" | grep -oP 'Meeting \K\d+')
-              UNAVAILABLE_MEETINGS="${UNAVAILABLE_MEETINGS}- Meeting **${MID}** returned \"Meeting not available\" from the server"$'\n'
-            fi
-          done < /tmp/scrape-output.log
-
-          if [[ "$HAS_MEANINGFUL" == "true" ]]; then
-            echo "has_meaningful=true" >> "$GITHUB_OUTPUT"
-            {
-              echo "@miklb"
-              echo ""
-              echo "## Nightly Scrape — Changes Detected"
-              echo ""
-              if [[ -n "$NEW_MEETINGS" ]]; then
-                echo "### New Meetings"
-                echo "$NEW_MEETINGS"
-              fi
-              if [[ -n "$MODIFIED_MEETINGS" ]]; then
-                echo "### Modified Meetings"
-                echo "$MODIFIED_MEETINGS"
-              fi
-              if [[ -n "$UNAVAILABLE_MEETINGS" ]]; then
-                echo "### ⚠️ Unavailable Meetings (server returned \"Meeting not available\")"
-                echo "$UNAVAILABLE_MEETINGS"
-              fi
-              if [[ "$SUPPRESSED_COUNT" -gt 0 ]]; then
-                echo ""
-                echo "_Note: ${SUPPRESSED_COUNT} meeting(s) had only URL/schema-only changes — suppressed._"
-              fi
-              echo "---"
-              echo "*Auto-generated by nightly scrape workflow*"
-            } > /tmp/issue-body.md
-          else
-            echo "has_meaningful=false" >> "$GITHUB_OUTPUT"
-          fi
+        env:
+          SCRAPE_LOG: /tmp/scrape-output.log
+          SCRAPE_OUTCOME: ${{ steps.scrape.outcome }}
+          OUT: /tmp/issue-body.md
+        run: scripts/nightly-report.sh
 
       - name: Commit and push changes
         if: steps.git-check.outputs.has_changes == 'true'
@@ -130,6 +76,9 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git commit -m "📋 Agenda data update $(date +%Y-%m-%d)"
+          # A push from Michael's machine during the run used to reject ours
+          # outright; rebase the data commit onto whatever landed meanwhile.
+          git pull --rebase origin "$GITHUB_REF_NAME"
           git push
 
       - name: Create notification issue
@@ -138,6 +87,9 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         working-directory: .
         run: |
-          gh issue create \
-            --title "📋 Agenda changes detected $(date +%Y-%m-%d)" \
-            --body-file /tmp/issue-body.md
+          if [[ "${{ steps.scrape.outcome }}" != "success" ]]; then
+            TITLE="⚠️ Nightly scrape had failures $(date +%Y-%m-%d)"
+          else
+            TITLE="📋 Agenda changes detected $(date +%Y-%m-%d)"
+          fi
+          gh issue create --title "$TITLE" --body-file /tmp/issue-body.md
