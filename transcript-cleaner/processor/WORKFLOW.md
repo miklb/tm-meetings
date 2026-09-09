@@ -32,7 +32,7 @@ Verify: `python3 -c "import dotenv, gliner; print('ok')"`
 - Python 3.12+
 - `YOUTUBE_API_KEY` environment variable (in `.env` or exported)
 - OpenAI Whisper, yt-dlp, and FFmpeg installed
-- GLiNER model (auto-downloads on first run, ~100MB)
+- GLiNER model only if you pass `--gliner` (auto-downloads on first run, ~100MB)
 
 ## Quick Start
 
@@ -75,7 +75,9 @@ python3 src/scraper.py <pkey> <date>
 
 ### 2. Capitalize Transcript
 
-Converts ALL CAPS to sentence case using entity databases and GLiNER NER model. Takes 2–5 minutes (model loading + NER on each segment).
+Converts ALL CAPS to sentence case using the entity lists in `data/` (speaker roster, agenda entities, streets, neighborhoods, acronyms) and the rule chain in `src/capitalize_transcript.py`. A few seconds per transcript. GLiNER NER is off by default; `--gliner` adds it (2–5 minutes).
+
+Check a change before publishing it: `venv/bin/python scripts/build/capitalizer_report.py` re-capitalizes every raw transcript into a temp directory and compares it with `data/processed/` (failure-class counts, an over-capitalization watch list, top word changes, a diff sample). `venv/bin/python -m pytest tests/test_capitalizer.py` pins the rules.
 
 ```bash
 python3 src/capitalize_transcript.py \

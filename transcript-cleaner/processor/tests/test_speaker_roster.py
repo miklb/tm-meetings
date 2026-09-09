@@ -42,16 +42,17 @@ tests = {
     "WE SUPPORT YOUNG FAMILIES": "We support young families",
 }
 
-passed = failed = 0
-for input_text, expected in tests.items():
-    result = cap.capitalize_text(input_text)
-    if result == expected:
-        passed += 1
-        print(f"  PASS: {result}")
-    else:
-        failed += 1
-        print(f"  FAIL: {result}")
-        print(f"    expected: {expected}")
+def test_speaker_roster_cases():
+    failures = []
+    for input_text, expected in tests.items():
+        result = cap.capitalize_text(input_text)
+        if result == expected:
+            print(f"  PASS: {result}")
+        else:
+            failures.append(f"{input_text!r}: got {result!r}, expected {expected!r}")
+    assert not failures, "\n".join(failures)
 
-print(f"\n{passed}/{passed + failed} passed")
-raise SystemExit(1 if failed else 0)
+
+if __name__ == "__main__":
+    test_speaker_roster_cases()
+    print(f"\n{len(tests)}/{len(tests)} passed")

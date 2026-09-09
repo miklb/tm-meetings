@@ -27,3 +27,6 @@ python-dotenv>=1.0,<2.0
 
 # Utilities
 python-dateutil>=2.8,<3.0
+
+# Tests (venv/bin/python -m pytest)
+pytest>=8,<10

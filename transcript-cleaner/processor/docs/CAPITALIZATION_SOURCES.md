@@ -215,3 +215,26 @@ Each source should include:
 1. Review these sources - are they acceptable?
 2. Which sources do you want to prioritize?
 3. Should I create download scripts for the government data sources?
+
+## How the lists are built now (2026-09-09)
+
+The capitalizer is deterministic: it lowercases the clerk's ALL-CAPS text and
+re-capitalizes only what one of these lists knows, plus a small rule chain
+(sentence starts, "I", acronyms, courtesy titles, ambiguous months, street
+addresses). GLiNER NER is off by default — measured on a real meeting it
+title-cased ordinary words ("They", "Business", "Running") and only added
+one-off public commenters.
+
+| List | File | Built by | Rule that keeps it honest |
+|---|---|---|---|
+| Speaker roster | `data/roster_entities.json` | `build_speaker_roster.py` from transcript speaker labels | a first/last name that is an ordinary lowercase dictionary word ("Young") only capitalizes after a title |
+| Agenda people/orgs | `data/hybrid_entity_database.json` | `extract_agenda_entities.py` + `clean_entity_database.py` from `agenda-scraper/data/meeting_*.json` | leading "The" is dropped from org names at load |
+| Acronyms | `capitalization_config.json` → `acronyms` | `extract_config.py` | a candidate must be written in capitals in the agendas ≥ 3× as often as any other way; `acronym_allowlist` overrides |
+| Streets | `capitalization_config.json` → `streets` | `extract_config.py` from house-numbered addresses in agenda items | "<name> Street" is cased only with a house number, a direction, or a listed name |
+| Neighborhoods | `capitalization_config.json` → `neighborhoods` | curated + `extract_config.py --neighborhoods-geojson <boundaries.geojson>` | single ordinary words ("downtown") are skipped |
+| Standard entities | `data/standard_entities.json` | `combine_entity_sources.py` | single entries that are ordinary words ("Mass", "Black", "Chad") are dropped at load; months and US states exempt |
+
+`scripts/build/rebuild_all.sh` regenerates the generated files.
+`scripts/build/capitalizer_report.py` shows what any change does to the
+published transcripts before you re-process them; `tests/test_capitalizer.py`
+pins the rules.

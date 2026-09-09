@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-Re-process all raw transcripts with the new three-layer capitalizer.
+Re-process all raw transcripts with the capitalizer (entity lists + rules;
+GLiNER only with --gliner).
 Input: data/transcripts/*.json (ALL CAPS)
 Output: data/processed/*.json (properly capitalized)
 
@@ -17,17 +18,23 @@ from datetime import date
 from pathlib import Path
 from src.capitalize_transcript import TranscriptCapitalizer
 
+# data/ lives beside this script, whatever the working directory
+PROCESSOR_DIR = Path(__file__).resolve().parent
+DATA_DIR = PROCESSOR_DIR / 'data'
+
 logger = logging.getLogger(__name__)
 
 def main():
     parser = argparse.ArgumentParser(description='Re-capitalise transcripts')
     parser.add_argument('--year', help='Only process transcripts for this year (e.g. 2026)')
+    parser.add_argument('--gliner', action='store_true',
+                        help='Also run GLiNER NER (slow; off by default since 2026-09-09)')
     args = parser.parse_args()
 
     # Set up logging to a reprocess-specific log file (not per-meeting)
     import logging
     from pathlib import Path
-    log_dir = Path('data/logs')
+    log_dir = DATA_DIR / 'logs'
     log_dir.mkdir(parents=True, exist_ok=True)
     timestamp = date.today().isoformat()
     log_path = log_dir / f"reprocess_{args.year or 'all'}_{timestamp}.log"
@@ -50,14 +57,14 @@ def main():
     logger.info("Log file: %s", log_path)
 
     # Initialize capitalizer
-    logger.info("Loading capitalizer (this will load GLiNER model)...")
-    capitalizer = TranscriptCapitalizer(use_gliner=True)
+    logger.info("Loading capitalizer%s...", " (with GLiNER)" if args.gliner else "")
+    capitalizer = TranscriptCapitalizer(use_gliner=args.gliner)
     logger.info("✓ Capitalizer ready")
     logger.info("")
 
     # Find all transcript files
-    transcript_dir = Path('data/transcripts')
-    output_dir = Path('data/processed')
+    transcript_dir = DATA_DIR / 'transcripts'
+    output_dir = DATA_DIR / 'processed'
     output_dir.mkdir(exist_ok=True)
 
     all_files = sorted(transcript_dir.glob('transcript_*.json'))

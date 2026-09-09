@@ -46,7 +46,9 @@ def load_common_words() -> set:
     Steady, Pope) out of the single-word capitalization map."""
     try:
         with open(DICT_PATH, 'r', encoding='utf-8', errors='ignore') as f:
-            return {w.strip().lower() for w in f if w.strip().isalpha()}
+            # Only entries the dictionary lists in lowercase are common words:
+            # "young" is, "Miranda" is not (the file also holds proper nouns).
+            return {w.strip() for w in f if w.strip().isalpha() and w.strip().islower()}
     except OSError:
         print(f"  ⚠ {DICT_PATH} not found — single-word filtering disabled")
         return set()

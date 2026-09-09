@@ -45,7 +45,7 @@ cd site && npm run build    # build to site/_site
 npm run deploy              # cd site && wrangler pages deploy --project-name tampa-meetings
 ```
 
-`npm test` runs the build-db suite (`scripts/test/*.test.js`, Node's built-in runner, synthetic fixtures — no real data). Site changes are verified by building the site and the manual checklist in copilot-instructions.md.
+`npm test` runs the Node suites (build-db, scraper, site keyword matcher and seek math; Node's built-in runner, synthetic fixtures). Python: `cd transcript-cleaner/processor && venv/bin/python -m pytest` (offset math, smart duration, video pipeline, capitalizer). Site changes are also verified by building the site and the manual checklist in copilot-instructions.md.
 
 ## Architecture
 
