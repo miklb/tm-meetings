@@ -126,7 +126,7 @@ while IFS= read -r f; do
     else
         echo "  ⚠️  Documents: $DOC_MIRRORED/$DOC_TOTAL mirrored — $DOC_MISSING still link to OnBase:"
         jq -r '.agendaItems[]? | . as $it | .supportingDocuments[]? | select(.mirroredUrl | not)
-               | "     item \($it.itemNumber // $it.id // "?") [\($it.fileNumber // "-")]: \(.title)"' "$f" | head -20
+               | "     item \($it.number // $it.agendaItemId // "?") [\($it.fileNumber // "-")]: \(.title)"' "$f" | head -20
     fi
 done <<< "$AFTER_FILES"
 

@@ -302,7 +302,7 @@ These are needed to go live at `meetings.tampamonitor.com` but are not blocking 
 - [x] Consolidate code into unified directory structure — `pipeline/` orchestration scripts
 - [x] Configure `meetings.tampamonitor.com` DNS in Cloudflare
 - [x] Set up Cloudflare Pages project and first deploy — `wrangler pages deploy site/_site --project-name tampa-meetings`
-- [ ] Keep WordPress output in parallel until subdomain replaces it
+- [x] Keep WordPress output in parallel until subdomain replaces it — retired 2026-07-17
 
 ### Pipeline (`pipeline/`)
 
@@ -337,7 +337,7 @@ Consolidated orchestration tier that bridges the three codebases (agenda-scraper
 
 ### Retire WordPress Output
 
-- [ ] Remove WordPress-specific code from agenda scraper
+- [x] Remove WordPress-specific code from agenda scraper — generation retired 2026-07-17, dead code removed 2026-09-07
 - [ ] Redirect links from WordPress to subdomain
 - [ ] Archive `miklb/agenda-scraper` repo
 
