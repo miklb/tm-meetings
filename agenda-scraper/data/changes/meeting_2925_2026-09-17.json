@@ -2,5 +2,48 @@
   "meetingId": "2925",
   "meetingDate": "2026-09-17",
   "firstSeenAt": "2026-09-11T23:02:29.929Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-15",
+      "scrapedAt": "2026-09-15T23:03:07.692Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "CM26-25892",
+          "filename": "CCDOSP TAMPA HOPE - CITY COUNCIL PRESENTATION.PPTX"
+        },
+        {
+          "itemNumber": 66,
+          "itemFileNumber": "INF26-26421",
+          "filename": "SOHO PRESENTATION TCC 9-17-26 C.PPTX"
+        },
+        {
+          "itemNumber": 67,
+          "itemFileNumber": "INF26-26416",
+          "filename": "SOHO PRESENTATION TCC 9-17-26 C.PPTX"
+        },
+        {
+          "itemNumber": 68,
+          "itemFileNumber": "INF26-26418",
+          "filename": "SOHO PRESENTATION TCC 9-17-26 C.PPTX"
+        },
+        {
+          "itemNumber": 69,
+          "itemFileNumber": "INF26-26425",
+          "filename": "SOHO PRESENTATION TCC 9-17-26 C.PPTX"
+        },
+        {
+          "itemNumber": 70,
+          "itemFileNumber": "CM26-26581",
+          "filename": "MEMOCM26-26581.PDF"
+        }
+      ]
+    }
+  ]
 }
