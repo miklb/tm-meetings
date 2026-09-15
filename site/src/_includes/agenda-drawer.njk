@@ -1,21 +1,23 @@
 {#
-  agenda-drawer.njk — Slide-out agenda panel for meetings with media
-  Expects: detail.items (array of agenda items)
-  Desktop: slides in from right edge as overlay
-  Mobile: bottom sheet sliding up
+  agenda-drawer.njk — Slide-out agenda panel for meetings with media.
+  Desktop: slides in from the right edge; mobile: bottom sheet.
+
+  Only the chrome renders here, and it starts hidden. The agenda list itself
+  is rendered once, inline (meeting.njk → .agenda-fallback); agenda-drawer.js
+  moves it into [data-agenda-target] and reveals the trigger. Without JS the
+  inline agenda simply stays where it is, so nothing is duplicated and every
+  #item-… anchor exists exactly once.
 #}
 
-{# Trigger button — fixed on the right edge of the viewport #}
-<button class="agenda-trigger" type="button" aria-expanded="false" aria-controls="agenda-drawer" aria-label="Open agenda ({{ detail.items.length }} items)">
+<button class="agenda-trigger" type="button" hidden aria-expanded="false" aria-controls="agenda-drawer">
   <span class="agenda-trigger__text">Agenda</span>
-  <span class="agenda-trigger__count">{{ detail.items.length }}</span>
+  <span class="agenda-trigger__count" aria-hidden="true">{{ detail.items.length }}</span>
+  <span class="visually-hidden">{{ detail.items.length }} item{{ "s" if detail.items.length != 1 }}</span>
 </button>
 
-{# Backdrop — overlay behind the drawer #}
-<div class="agenda-backdrop" aria-hidden="true"></div>
+<div class="agenda-backdrop" hidden></div>
 
-{# Drawer panel #}
-<aside id="agenda-drawer" class="agenda-drawer" role="dialog" aria-modal="true" aria-labelledby="agenda-drawer-title" aria-hidden="true">
+<aside id="agenda-drawer" class="agenda-drawer" role="dialog" aria-modal="true" aria-labelledby="agenda-drawer-title" hidden inert>
 
   <div class="agenda-drawer__header">
     <h2 id="agenda-drawer-title" class="agenda-drawer__title">
@@ -31,17 +33,5 @@
     </button>
   </div>
 
-  <div class="agenda-drawer__body">
-    {% if detail.items.length > 0 %}
-      <ol class="agenda-list">
-        {% for item in detail.items %}
-          {% include "agenda-item.njk" %}
-        {% endfor %}
-      </ol>
-      {% set prefix = "drawer" %}
-      {% include "agenda-addendum.njk" %}
-    {% else %}
-      <p>No agenda items available for this meeting.</p>
-    {% endif %}
-  </div>
+  <div class="agenda-drawer__body" data-agenda-target></div>
 </aside>

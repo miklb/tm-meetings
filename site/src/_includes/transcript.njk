@@ -1,7 +1,9 @@
 {#
   transcript.njk — Always-visible transcript panel with in-page search
   Expects: detail.transcript_segments, detail.videos, detail.has_video
-  Uses videoSeekData filter to compute data-seconds / data-video-part
+  Uses videoSeekData filter to compute data-seconds / data-video-part.
+  Timestamps are plain links to the video on YouTube; video-player.js
+  intercepts them to seek the in-page player when it is ready.
 #}
 {% if detail.transcript_segments and detail.transcript_segments.length > 0 %}
     <section class="transcript-panel" aria-label="Meeting transcript">
@@ -9,8 +11,9 @@
         {# ── Search bar ── #}
         <div class="search-container">
             <label for="transcript-search" class="visually-hidden">Search transcript</label>
-            <input type="search" id="transcript-search" class="search-input" placeholder="Search transcript…" autocomplete="off">
-            <div id="search-results" class="search-results" role="region" aria-live="polite"></div>
+            <input type="search" id="transcript-search" class="search-input" placeholder="Search transcript…" autocomplete="off" aria-describedby="search-status">
+            <p id="search-status" class="visually-hidden" aria-live="polite"></p>
+            <div id="search-results" class="search-results"></div>
         </div>
 
         {# ── Segment list ── #}
@@ -43,7 +46,7 @@
                 <p class="transcript-line segment" {% if seek %} data-seconds="{{ seek.seconds }}" data-video-part="{{ seek.videoPart }}" {% endif %}>
                     {% if seg.timestamp %}
                         {% if seek %}
-                            <a class="transcript-timestamp" href="https://youtu.be/{{ detail.videos[seek.videoPart - 1].video_id }}?t={{ seek.seconds | round }}" onclick="seekToTimestamp({{ seek.seconds }}, {{ seek.videoPart }}); return false;" aria-label="Seek to {{ seg.timestamp }}">{{ seg.timestamp }}</a>
+                            <a class="transcript-timestamp" href="https://youtu.be/{{ seek.videoId }}?t={{ seek.seconds | round }}">{{ seg.timestamp }}</a>
                         {% else %}
                             <span class="transcript-timestamp">{{ seg.timestamp }}</span>
                         {% endif %}

@@ -32,12 +32,9 @@
 {% set hasItems = detail and detail.items.length > 0 %}
 
 {% if hasMedia %}
-  <p class="media-hint">Transcript timestamps are synced to the video &mdash; click any timestamp to jump to that point.</p>
-{% endif %}
+  <p class="media-hint">Transcript timestamps are synced to the video &mdash; select any timestamp to jump to that point.</p>
 
-{% if hasMedia %}
   {# ── Two-panel layout: video left, transcript right ── #}
-  {# ── Agenda lives in a slide-out drawer ── #}
   <div class="meeting-layout">
 
     <div class="video-panel">
@@ -50,41 +47,42 @@
 
   </div>
 
-  {# ── Agenda drawer (overlay) — only when items exist ── #}
+  {# ── Agenda drawer chrome (hidden until JS moves the agenda into it) ── #}
   {% if hasItems %}
     {% include "agenda-drawer.njk" %}
   {% endif %}
 
-  {# ── No-JS fallback: render agenda inline below the media grid ── #}
-  <noscript>
-    <section class="agenda-fallback">
-      <h2>Agenda</h2>
-      {% if hasItems %}
-        <ol class="agenda-list">
-          {% for item in detail.items %}
-            {% include "agenda-item.njk" %}
-          {% endfor %}
-        </ol>
-        {% set prefix = "fallback" %}
-        {% include "agenda-addendum.njk" %}
-      {% else %}
-        <p>No agenda items available for this meeting.</p>
-      {% endif %}
-    </section>
-  </noscript>
+  {# ── The agenda, rendered once. With JS it moves into the drawer; without
+        JS it reads here, below the media grid. ── #}
+  <section class="agenda-fallback" id="agenda" aria-labelledby="agenda-heading" data-agenda-source>
+    <h2 id="agenda-heading">Agenda</h2>
+    {% if hasItems %}
+      <ol class="agenda-list">
+        {% for item in detail.items %}
+          {% include "agenda-item.njk" %}
+        {% endfor %}
+      </ol>
+      {% set prefix = "agenda" %}
+      {% include "agenda-addendum.njk" %}
+    {% else %}
+      <p>No agenda items available for this meeting.</p>
+    {% endif %}
+  </section>
 
 {% else %}
   {# ── Single column: agenda only (no media) ── #}
-  {% if hasItems %}
-    <h2>Agenda</h2>
-    <ol class="agenda-list">
-      {% for item in detail.items %}
-        {% include "agenda-item.njk" %}
-      {% endfor %}
-    </ol>
-    {% set prefix = "agenda" %}
-    {% include "agenda-addendum.njk" %}
-  {% else %}
-    <p>No agenda items available for this meeting.</p>
-  {% endif %}
+  <section id="agenda" aria-labelledby="agenda-heading">
+    <h2 id="agenda-heading">Agenda</h2>
+    {% if hasItems %}
+      <ol class="agenda-list">
+        {% for item in detail.items %}
+          {% include "agenda-item.njk" %}
+        {% endfor %}
+      </ol>
+      {% set prefix = "agenda" %}
+      {% include "agenda-addendum.njk" %}
+    {% else %}
+      <p>No agenda items available for this meeting.</p>
+    {% endif %}
+  </section>
 {% endif %}

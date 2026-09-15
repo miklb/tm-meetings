@@ -1,13 +1,15 @@
 {# Render a single agenda item. Set idPrefix before including when the same
    agenda_item_id can appear twice on a page (addendum items re-list parent
-   items they amend). #}
+   items they amend). Items without an OnBase id (older scrapes) fall back to
+   their item number so every id on the page stays unique. #}
 {% set idPrefix = idPrefix or "item" %}
-<li class="agenda-item" id="{{ idPrefix }}-{{ item.agenda_item_id }}">
+{% set itemKey = item.agenda_item_id or ("n" ~ (item.item_number or loop.index)) %}
+<li class="agenda-item" id="{{ idPrefix }}-{{ itemKey }}">
     <div class="item-header">
         <span class="item-number">{{ item.item_number }}.</span>
         {% if item.file_number %}
             <span class="file-number">
-                <a href="#{{ idPrefix }}-{{ item.agenda_item_id }}">{{ item.file_number }}</a>
+                <a href="#{{ idPrefix }}-{{ itemKey }}">{{ item.file_number }}</a>
             </span>
         {% endif %}
     </div>

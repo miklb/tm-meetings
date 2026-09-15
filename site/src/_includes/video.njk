@@ -3,6 +3,9 @@
   Expects: detail.videos (from meetings.details)
   Each video: { video_id, title, part, offset_seconds, transcript_start_time,
                 chapters: [{ title, timestamp, seconds }] }
+  Tabs and chapters carry data attributes; video-player.js binds them
+  (arrow keys on the tabs, in-page seeking for chapter links when the
+  player is ready — otherwise a chapter link opens YouTube at that time).
 #}
 {% if detail.videos and detail.videos.length > 0 %}
     <section class="video-player-section" aria-label="Meeting video recordings">
@@ -11,7 +14,7 @@
         {% if detail.videos.length > 1 %}
             <div class="video-tabs" role="tablist" aria-label="Video parts">
                 {% for video in detail.videos %}
-                    <button class="video-tab{% if loop.first %} active{% endif %}" role="tab" id="tab-{{ loop.index0 }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="video-{{ loop.index0 }}" onclick="switchVideo({{ loop.index0 }})">
+                    <button class="video-tab{% if loop.first %} active{% endif %}" type="button" role="tab" id="tab-{{ loop.index0 }}" aria-selected="{% if loop.first %}true{% else %}false{% endif %}" aria-controls="video-{{ loop.index0 }}" tabindex="{% if loop.first %}0{% else %}-1{% endif %}" data-index="{{ loop.index0 }}">
                         Part
                         {{ video.part }}
                         {% if video.title %}
@@ -61,10 +64,12 @@
                                     {% set chSeconds = ch.seconds %}
                                     {% set chTimestamp = ch.timestamp %}
                                 {% endif %}
-                                <button class="chapter-item" type="button" onclick="seekToChapter({{ chSeconds }}, {{ video.part }})" aria-label="Jump to chapter: {{ ch.title }}">
+                                {# A chapter stamped before the video starts (bad clerk data) seeks to 0 #}
+                                {% if chSeconds < 0 %}{% set chSeconds = 0 %}{% endif %}
+                                <a class="chapter-item" href="https://youtu.be/{{ video.video_id }}?t={{ chSeconds }}" data-seconds="{{ chSeconds }}" data-video-part="{{ video.part }}">
                                     <span class="chapter-timestamp">{{ chTimestamp }}</span>
                                     <span class="chapter-title">{{ ch.title }}</span>
-                                </button>
+                                </a>
                             {% endfor %}
                         </div>
                     {% endif %}
