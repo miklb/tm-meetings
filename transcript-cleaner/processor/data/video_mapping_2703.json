@@ -1,0 +1,74 @@
+{
+  "meeting_id": 2703,
+  "meeting_date": "2026-09-10",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "1P3TtR0T1xg",
+      "title": "Tampa City Council PM - 09/10/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-09-11T02:25:00Z",
+      "duration": "PT5H12M10S",
+      "chapters": [
+        {
+          "title": "Start of meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: REZ-26-20 - 4706-4710 West McElroy Avenue",
+          "timestamp": "00:20:11",
+          "seconds": 1211
+        },
+        {
+          "title": "Item 2: REZ-26-34 - 4400-4488 West Boy Scout Boulevard",
+          "timestamp": "00:39:15",
+          "seconds": 2355
+        },
+        {
+          "title": "Item 3: REZ-26-61 - 205 South Fremont Avenue",
+          "timestamp": "00:52:32",
+          "seconds": 3152
+        },
+        {
+          "title": "Item 4: REZ-26-62 - 5600 Mariner Street",
+          "timestamp": "01:17:31",
+          "seconds": 4651
+        },
+        {
+          "title": "Item 5: REZ-26-64 - 6200-6202 Interbay Boulevard",
+          "timestamp": "04:01:33",
+          "seconds": 14493
+        },
+        {
+          "title": "Item 6: REZ-26-66 - 2910 East Clark Street",
+          "timestamp": "04:18:40",
+          "seconds": 15520
+        },
+        {
+          "title": "Item 8: REZ-25-119 - 915 East 23rd Avenue",
+          "timestamp": "04:27:05",
+          "seconds": 16025
+        },
+        {
+          "title": "Item 9: REZ-26-23 - 104 South Tampania Avenue",
+          "timestamp": "04:41:55",
+          "seconds": 16915
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "04:56:21",
+          "seconds": 17781
+        }
+      ],
+      "offset_seconds": 699
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-09-16T00:06:22Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
