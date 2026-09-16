@@ -4,9 +4,12 @@ Meeting Type Detector
 Detects meeting type from transcript data to enable automatic YouTube video matching.
 
 The detector checks multiple signals in priority order:
-0. The clerk's own meeting name from the agenda scrape (agenda-scraper/data/
-   meeting_<id>_*.json → meetingName, e.g. "CRA Special Call") — authoritative
-   when present; absent on pre-2026-08 scrapes.
+0. The clerk's own meeting name from the agenda scrape on the transcript's
+   DATE (agenda-scraper/data/meeting_*_<YYYY-MM-DD>.json → meetingName, e.g.
+   "CRA Special Call") — authoritative when present; absent on pre-2026-08
+   scrapes. Transcript pkeys and OnBase meeting ids are different id spaces,
+   so the join is by date, and by scheduled time when a date has several
+   meetings (CRA 09:00 + Evening 17:01).
 1. meeting_title field (e.g., "TAMPA CITY COUNCIL WORKSHOPS")
 2. meeting_date_time field (e.g., contains "5:01 P.M." for evening)
 3. First 5 transcript segments text (e.g., "WELCOME TO THE CRA MEETING")
@@ -127,17 +130,19 @@ def detect_meeting_type(
     Detect meeting type from the agenda scrape and transcript data.
 
     Checks multiple signals in priority order:
-    0. Clerk's meeting name from agenda-scraper JSON (if meeting_id provided)
+    0. Clerk's meeting name from the agenda-scraper JSON on the transcript's date
     1. meeting_title field
     2. meeting_date_time field (time-of-day hints)
     3. First 5 segment texts
-    4. meetings_metadata.json lookup (if meeting_id provided)
+    4. meetings_metadata.json lookup by date
     5. Falls back to "City Council"
 
     Args:
         transcript_path: Path to transcript JSON file (raw or processed).
         transcript_data: Already-loaded transcript dict (avoids re-reading file).
-        meeting_id: Meeting ID for the agenda JSON / metadata lookups.
+        meeting_id: Transcript pkey. Accepted for callers, not used for any
+            lookup — agenda scrapes and meetings_metadata.json are keyed by
+            OnBase meeting id, a different id space; both are joined by date.
         metadata_path: Path to meetings_metadata.json.
         agenda_dir: Directory of agenda-scraper meeting_<id>_<date>.json files
             (defaults to the repo's agenda-scraper/data).
@@ -145,17 +150,6 @@ def detect_meeting_type(
     Returns:
         MeetingType with label and youtube_search_term.
     """
-    # Signal 0: the clerk's own name for the meeting, scraped from OnBase.
-    # This is what the meeting *is*; the transcript signals below are
-    # inferences from how it was transcribed.
-    if meeting_id is not None:
-        detected = _lookup_agenda_json(meeting_id, agenda_dir or DEFAULT_AGENDA_DIR)
-        if detected:
-            logger.info(
-                f"Detected meeting type '{detected.label}' from agenda scrape meetingName"
-            )
-            return detected
-
     if transcript_data is None and transcript_path is not None:
         path = Path(transcript_path)
         if path.exists():
@@ -163,6 +157,26 @@ def detect_meeting_type(
                 transcript_data = json.load(f)
         else:
             logger.warning(f"Transcript file not found: {transcript_path}")
+
+    # Signal 0: the clerk's own name for the meeting, from the agenda scrape
+    # on this transcript's date. This is what the meeting *is*; the transcript
+    # signals below are inferences from how it was transcribed.
+    # When the date's agenda scrape identifies the meeting unambiguously, the
+    # clerk's name is final: the transcript title/segments are inferences
+    # ("TAMPA CITY COUNCIL AND CRA" on a combined day says CRA; the clerk's
+    # 9:00 record says "City Council Regular"). One refinement: a generic
+    # "City Council ..." name at a 5 PM clock is the Evening session for the
+    # video tooling ("City Council Budget Public Hearing", 5:01 P.M.).
+    date, minutes = _transcript_when(transcript_data, transcript_path)
+    agenda_detected = _lookup_agenda_by_date(date, minutes, agenda_dir or DEFAULT_AGENDA_DIR)
+    if agenda_detected:
+        header = (transcript_data or {}).get("meeting_date_time") or ""
+        if agenda_detected.label == "City Council" and _evening_by_clock(header):
+            agenda_detected = _rule_type("Evening")
+        logger.info(
+            f"Detected meeting type '{agenda_detected.label}' from agenda scrape meetingName ({date})"
+        )
+        return agenda_detected
 
     if transcript_data is not None:
         title = transcript_data.get("meeting_title") or ""
@@ -208,14 +222,15 @@ def detect_meeting_type(
             logger.info(f"Detected meeting type '{title_detected.label}' from title: {title}")
             return title_detected
 
-    # Signal 4: meetings_metadata.json
-    if meeting_id is not None:
-        detected = _lookup_metadata(meeting_id, metadata_path)
-        if detected:
-            logger.info(
-                f"Detected meeting type '{detected.label}' from meetings_metadata.json"
-            )
-            return detected
+    # Signal 4: meetings_metadata.json — also keyed by OnBase meeting id, so
+    # also joined by date (pkey 2669 = 4/9/26 collided with OnBase 2669 =
+    # 9/11/25 evening).
+    detected = _lookup_metadata(date, metadata_path)
+    if detected:
+        logger.info(
+            f"Detected meeting type '{detected.label}' from meetings_metadata.json ({date})"
+        )
+        return detected
 
     # Fallback
     logger.info("Defaulting to meeting type 'City Council'")
@@ -274,18 +289,95 @@ def _type_from_record(record: dict) -> Optional[MeetingType]:
     return None
 
 
-def _lookup_agenda_json(meeting_id: int, agenda_dir: Path) -> Optional[MeetingType]:
-    """Look up meeting type from the agenda scrape (meeting_<id>_<date>.json).
+_MONTHS = {m: i for i, m in enumerate(
+    ["january", "february", "march", "april", "may", "june", "july",
+     "august", "september", "october", "november", "december"], 1)}
+_LONG_DATE = re.compile(
+    r"(january|february|march|april|may|june|july|august|september|october|"
+    r"november|december)\s+(\d{1,2}),?\s+(\d{4})", re.IGNORECASE)
+_CLOCK = re.compile(r"(\d{1,2}):(\d{2})\s*([AP])\.?\s*M\b", re.IGNORECASE)
+_DATE_IN_NAME = re.compile(r"_(\d{4}-\d{2}-\d{2})\.json$")
+# A same-day agenda whose scheduled time is further than this from the
+# transcript's is not the same meeting.
+_MAX_TIME_GAP_MINUTES = 120
+# Council evening sessions are gavelled at 5:01 PM; nothing else starts after 4.
+_EVENING_STARTS_MINUTES = 16 * 60
 
-    Only the clerk's meetingName counts here — the enum alone is what the
-    transcript signals and meetings_metadata.json already cover, and
-    pre-2026-08 scrapes carry no name.
+
+def _transcript_when(
+    transcript_data: Optional[dict], transcript_path: Optional[str]
+) -> tuple[Optional[str], Optional[int]]:
+    """(YYYY-MM-DD, minutes since midnight) for a transcript.
+
+    Both come from the clerk's header line, e.g.
+    "THURSDAY, SEPTEMBER 10, 2026, 9:00 A.M."; the date falls back to the
+    transcript file name (transcript_<pkey>_<YYYY-MM-DD>.json).
     """
+    date = None
+    minutes = None
+    header = (transcript_data or {}).get("meeting_date_time") or ""
+    m = _LONG_DATE.search(header)
+    if m:
+        date = f"{int(m.group(3)):04d}-{_MONTHS[m.group(1).lower()]:02d}-{int(m.group(2)):02d}"
+    c = _CLOCK.search(header)
+    if c:
+        hour = int(c.group(1)) % 12 + (12 if c.group(3).upper() == "P" else 0)
+        minutes = hour * 60 + int(c.group(2))
+    if date is None and transcript_path:
+        n = _DATE_IN_NAME.search(str(transcript_path))
+        if n:
+            date = n.group(1)
+    return date, minutes
+
+
+def _agenda_minutes(record: dict) -> Optional[int]:
+    """meetingTime "17:01" → 1021; None when the scrape carries no time."""
+    m = re.fullmatch(r"(\d{1,2}):(\d{2})", (record.get("meetingTime") or "").strip())
+    return int(m.group(1)) * 60 + int(m.group(2)) if m else None
+
+
+def _rule_type(label: str) -> MeetingType:
+    for rule in MEETING_TYPE_RULES:
+        if rule["label"] == label:
+            return MeetingType(label=label, youtube_search_term=rule["youtube_search_term"])
+    raise KeyError(label)
+
+
+def _evening_by_clock(date_time: str) -> bool:
+    """The Evening rule's clock test ("5:01 P.M.") on the clerk's header line."""
+    for rule in MEETING_TYPE_RULES:
+        if rule["label"] == "Evening":
+            return bool(re.search(rule["time_pattern"], date_time or "", re.IGNORECASE))
+    return False
+
+
+def _lookup_agenda_by_date(
+    date: Optional[str], minutes: Optional[int], agenda_dir: Path
+) -> Optional[MeetingType]:
+    """Meeting type from the agenda scrape(s) dated *date*.
+
+    Only the clerk's meetingName counts — the enum alone is what the transcript
+    signals and meetings_metadata.json already cover, and pre-2026-08 scrapes
+    carry no name. Transcript pkeys and OnBase meeting ids are different id
+    spaces, so the join is by date.
+
+    One file on the date: its name decides. Several files (CRA 09:00 +
+    Evening 17:01, or an addendum next to its parent): if every file is named
+    and they all say the same thing, that; otherwise the transcript's
+    scheduled time picks the nearest, and every file must carry a
+    meetingTime for that to be trusted — an unnamed or untimed sibling means
+    the named one is not necessarily this transcript's meeting (1/29/26: a
+    9 AM workshop next to an unnamed regular and a named evening). Anything
+    ambiguous returns None and the transcript signals decide.
+    """
+    if not date:
+        return None
     agenda_dir = Path(agenda_dir)
     if not agenda_dir.is_dir():
         return None
 
-    for path in sorted(agenda_dir.glob(f"meeting_{meeting_id}_*.json")):
+    records: list[tuple[Optional[int], Optional[MeetingType]]] = []
+    for path in sorted(agenda_dir.glob(f"meeting_*_{date}.json")):
         if ".bak" in path.name:
             continue
         try:
@@ -293,18 +385,67 @@ def _lookup_agenda_json(meeting_id: int, agenda_dir: Path) -> Optional[MeetingTy
                 record = json.load(f)
         except (json.JSONDecodeError, IOError):
             continue
-        if record.get("meetingName"):
-            return _type_from_record({"meetingName": record["meetingName"]})
-    return None
+        name = record.get("meetingName")
+        detected = _type_from_record({"meetingName": name}) if name else None
+        records.append((_agenda_minutes(record), detected))
+    if not records:
+        return None
+    if len(records) == 1:
+        return records[0][1]
+
+    types = [t for _, t in records]
+    if all(types) and len({t.label for t in types}) == 1:
+        return types[0]
+    if minutes is None:
+        logger.info(f"{len(records)} agenda scrapes on {date} and no clock on the transcript — skipping Signal 0")
+        return None
+    if any(t_min is None for t_min, _ in records):
+        # Pre-meetingTime scrapes: the only clock the agenda carries is the
+        # label itself — an "Evening" record is the 5 PM session, everything
+        # else is daytime (9/11/25: CRA Regular + City Council Evening, both
+        # untimed, transcript 10:15 A.M. → CRA). An unnamed record in the
+        # transcript's half of the day means it could be that one → None.
+        after_hours = minutes >= _EVENING_STARTS_MINUTES
+        half = [t for _, t in records if (t is not None and t.label == "Evening") == after_hours]
+        if not half or any(t is None for t in half) or len({t.label for t in half}) != 1:
+            logger.info(f"{len(records)} agenda scrapes on {date} cannot be told apart — skipping Signal 0")
+            return None
+        return half[0]
+    by_gap = sorted(((abs(t_min - minutes), t) for t_min, t in records), key=lambda pair: pair[0])
+    best_gap = by_gap[0][0]
+    if best_gap > _MAX_TIME_GAP_MINUTES:
+        return None
+    nearest = [t for gap, t in by_gap if gap == best_gap]
+    if any(t is None for t in nearest) or len({t.label for t in nearest}) != 1:
+        return None
+    return nearest[0]
 
 
-def _lookup_metadata(
-    meeting_id: int, metadata_path: str
-) -> Optional[MeetingType]:
-    """Look up meeting type from meetings_metadata.json."""
+def _lookup_metadata(date: Optional[str], metadata_path: str) -> Optional[MeetingType]:
+    """Look up meeting type from meetings_metadata.json by date. Several
+    entries on one date that disagree → None (the transcript can't be told
+    which one it is)."""
+    if not date:
+        return None
     path = Path(metadata_path)
     if not path.exists():
         return None
+
+    try:
+        with open(path, "r") as f:
+            metadata = json.load(f)
+    except (json.JSONDecodeError, IOError):
+        return None
+
+    found = [
+        _type_from_record(meeting)
+        for meeting in metadata.get("meetings", [])
+        if str(meeting.get("date") or meeting.get("meetingDate") or "") == date
+    ]
+    found = [t for t in found if t]
+    if not found or len({t.label for t in found}) != 1:
+        return None
+    return found[0]
 
     try:
         with open(path, "r") as f:

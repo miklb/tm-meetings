@@ -144,70 +144,212 @@ def test_metadata_lookup():
         json.dump(metadata, f)
         tmp_path = f.name
 
+    def by_date(header, **kw):
+        # meeting_id is deliberately a pkey that matches nothing / the wrong entry
+        return detect_meeting_type(transcript_data={"meeting_date_time": header, "segments": []},
+                                   meeting_id=9998, metadata_path=tmp_path, **kw)
+
     try:
-        result = detect_meeting_type(meeting_id=9999, metadata_path=tmp_path)
-        assert result.label == "CRA", f"Expected CRA, got {result.label}"
-        print("  PASS: Metadata lookup → CRA")
-
-        result = detect_meeting_type(meeting_id=9998, metadata_path=tmp_path)
-        assert result.label == "Evening", f"Expected Evening, got {result.label}"
-        print("  PASS: Metadata lookup → Evening")
-
-        result = detect_meeting_type(meeting_id=9997, metadata_path=tmp_path)
-        assert result.label == "Workshop", f"Expected Workshop, got {result.label}"
-        print("  PASS: Metadata lookup → Workshop")
+        with tempfile.TemporaryDirectory() as no_agendas:
+            assert by_date("WEDNESDAY, JANUARY 1, 2025", agenda_dir=Path(no_agendas)).label == "CRA"
+            assert by_date("THURSDAY, JANUARY 2, 2025", agenda_dir=Path(no_agendas)).label == "Evening"
+            assert by_date("FRIDAY, JANUARY 3, 2025", agenda_dir=Path(no_agendas)).label == "Workshop"
+            # A date with no entry: the pkey 9998 must not be used as a key → default
+            assert by_date("SATURDAY, JANUARY 4, 2025", agenda_dir=Path(no_agendas)).label == "City Council"
     finally:
         Path(tmp_path).unlink()
 
 
+def _agenda(agenda_dir, name, **record):
+    (agenda_dir / name).write_text(json.dumps({"agendaItems": [], **record}))
+
+
 def test_agenda_json_lookup():
-    """The clerk's meetingName in the agenda scrape beats every transcript signal."""
+    """Signal 0 joins the agenda scrape by the transcript's DATE. Transcript
+    pkeys and OnBase meeting ids are different id spaces, so meeting_id is
+    never used for this lookup."""
     with tempfile.TemporaryDirectory() as tmp_dir:
         agenda_dir = Path(tmp_dir)
+        none = str(agenda_dir / "none.json")
         # "CRA Special Call": the scraper's enum says 'special', the clerk says CRA
-        (agenda_dir / "meeting_9996_2026-08-27.json").write_text(json.dumps({
-            "meetingId": "9996", "meetingType": "special",
-            "meetingName": "CRA Special Call", "agendaItems": [],
-        }))
+        _agenda(agenda_dir, "meeting_9996_2026-08-27.json", meetingId="9996",
+                meetingType="special", meetingName="CRA Special Call", meetingTime="09:00")
         # Pre-2026-08 scrape: no meetingName → agenda JSON is not a signal
-        (agenda_dir / "meeting_9995_2025-01-01.json").write_text(json.dumps({
-            "meetingId": "9995", "meetingType": "cra", "agendaItems": [],
-        }))
+        _agenda(agenda_dir, "meeting_9995_2025-01-01.json", meetingId="9995", meetingType="cra")
 
-        # Transcript title says generic City Council; clerk name wins
-        data = {"meeting_title": "TAMPA CITY COUNCIL", "segments": []}
-        result = detect_meeting_type(
-            transcript_data=data, meeting_id=9996, agenda_dir=agenda_dir,
-            metadata_path=str(agenda_dir / "none.json"),
-        )
+        # Date from the clerk's header line; transcript title is generic
+        data = {"meeting_title": "TAMPA CITY COUNCIL", "segments": [],
+                "meeting_date_time": "THURSDAY, AUGUST 27, 2026, 9:00 A.M."}
+        result = detect_meeting_type(transcript_data=data, meeting_id=2701,
+                                     agenda_dir=agenda_dir, metadata_path=none)
         assert result.label == "CRA", f"Expected CRA, got {result.label}"
         assert result.youtube_search_term == "Community Redevelopment"
-        print("  PASS: Agenda JSON meetingName 'CRA Special Call' → CRA")
 
-        # No meetingName: falls through to the transcript signals as before
-        result = detect_meeting_type(
-            transcript_data=data, meeting_id=9995, agenda_dir=agenda_dir,
-            metadata_path=str(agenda_dir / "none.json"),
-        )
+        # Date from the file name when the header carries none
+        tpath = agenda_dir / "transcript_2701_2026-08-27.json"
+        tpath.write_text(json.dumps({"meeting_title": "TAMPA CITY COUNCIL", "segments": []}))
+        result = detect_meeting_type(transcript_path=str(tpath), agenda_dir=agenda_dir, metadata_path=none)
+        assert result.label == "CRA", f"Expected CRA from file-name date, got {result.label}"
+
+        # No meetingName on that date's scrape: falls through to transcript signals
+        data = {"meeting_title": "TAMPA CITY COUNCIL", "segments": [],
+                "meeting_date_time": "WEDNESDAY, JANUARY 1, 2025, 9:00 A.M."}
+        result = detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir, metadata_path=none)
         assert result.label == "City Council", f"Expected City Council, got {result.label}"
-        print("  PASS: Agenda JSON without meetingName is ignored")
 
-        # Unknown ID / missing dir: no crash, normal fallback
-        result = detect_meeting_type(
-            meeting_id=1, agenda_dir=agenda_dir / "missing",
-            metadata_path=str(agenda_dir / "none.json"),
-        )
+        # Missing agenda dir: no crash, normal fallback
+        result = detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir / "missing", metadata_path=none)
         assert result.label == "City Council"
-        print("  PASS: Missing agenda dir → default")
+
+
+def test_agenda_json_lookup_ignores_pkey_coincidence():
+    """9/10/26 regression: transcript pkey 2703 must not read
+    meeting_2703_2025-10-30.json (an unrelated OnBase id that happens to match)."""
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        agenda_dir = Path(tmp_dir)
+        none = str(agenda_dir / "none.json")
+        _agenda(agenda_dir, "meeting_2703_2025-10-30.json", meetingId="2703",
+                meetingType="evening", meetingName="City Council Evening", meetingTime="17:01")
+        _agenda(agenda_dir, "meeting_2930_2026-09-10.json", meetingId="2930",
+                meetingType="cra", meetingName="CRA Regular Session", meetingTime="09:00")
+
+        cra = {"meeting_title": None, "segments": [],
+               "meeting_date_time": "THURSDAY, SEPTEMBER 10, 2026, 9:00 A.M."}
+        result = detect_meeting_type(transcript_data=cra, meeting_id=2703,
+                                     agenda_dir=agenda_dir, metadata_path=none)
+        assert result.label == "CRA", f"pkey coincidence leaked: got {result.label}"
+
+        # No agenda on the transcript's date at all: the coincidental file is still ignored
+        other = {"meeting_title": None, "segments": [],
+                 "meeting_date_time": "THURSDAY, SEPTEMBER 17, 2026, 9:00 A.M."}
+        result = detect_meeting_type(transcript_data=other, meeting_id=2703,
+                                     agenda_dir=agenda_dir, metadata_path=none)
+        assert result.label == "City Council", f"Expected default, got {result.label}"
+
+
+def test_agenda_generic_name_defers_to_time():
+    """9/8/26: the clerk names it "City Council Budget Public Hearing" (generic),
+    the header says 5:01 P.M. → Evening, as the transcript title rule works.
+    A specific clerk name still wins outright."""
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        agenda_dir = Path(tmp_dir)
+        none = str(agenda_dir / "none.json")
+        _agenda(agenda_dir, "meeting_2929_2026-09-08.json", meetingId="2929",
+                meetingType="evening", meetingName="City Council Budget Public Hearing", meetingTime="17:01")
+        data = {"meeting_title": None, "segments": [],
+                "meeting_date_time": "TUESDAY, SEPTEMBER 8, 2026, 5:01 P.M."}
+        result = detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir, metadata_path=none)
+        assert result.label == "Evening", f"Expected Evening, got {result.label}"
+
+        # Same generic name at a daytime hour, nothing more specific anywhere → City Council
+        data["meeting_date_time"] = "TUESDAY, SEPTEMBER 8, 2026, 9:00 A.M."
+        result = detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir, metadata_path=none)
+        assert result.label == "City Council", f"Expected City Council, got {result.label}"
+
+        # Generic clerk name is still the clerk's record: a combined-day title
+        # ("TAMPA CITY COUNCIL AND CRA", 8/27/26) or CRA chatter in the opening
+        # segments does not override an unambiguous agenda match
+        data["meeting_title"] = "TAMPA CITY COUNCIL AND CRA"
+        data["segments"] = [{"text": "WELCOME TO THE CRA MEETING"}]
+        result = detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir, metadata_path=none)
+        assert result.label == "City Council", f"Expected clerk's City Council, got {result.label}"
+
+
+def test_agenda_unnamed_sibling_blocks_the_named_one():
+    """1/29/26: a 9 AM workshop transcript, agendas = an unnamed regular scrape and
+    a named 'City Council Evening', neither timed. The named file is not this
+    meeting; Signal 0 must stand down and the title says Workshop."""
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        agenda_dir = Path(tmp_dir)
+        none = str(agenda_dir / "none.json")
+        _agenda(agenda_dir, "meeting_2674_2026-01-29.json", meetingId="2674", meetingType="regular")
+        _agenda(agenda_dir, "meeting_2759_2026-01-29.json", meetingId="2759",
+                meetingType="regular", meetingName="City Council Evening")
+        data = {"meeting_title": "TAMPA CITY COUNCIL WORKSHOPS", "segments": [],
+                "meeting_date_time": "THURSDAY, JANUARY 29, 2026, 9:00 A.M."}
+        result = detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir, metadata_path=none)
+        assert result.label == "Workshop", f"Expected Workshop, got {result.label}"
+
+        # Give both files times and the join works again: 9:00 → the regular one,
+        # which is unnamed → still no Signal 0 → Workshop from the title
+        for name, time in (("meeting_2674_2026-01-29.json", "09:00"), ("meeting_2759_2026-01-29.json", "17:01")):
+            record = json.loads((agenda_dir / name).read_text()); record["meetingTime"] = time
+            (agenda_dir / name).write_text(json.dumps(record))
+        assert detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir, metadata_path=none).label == "Workshop"
+        data["meeting_date_time"] = "THURSDAY, JANUARY 29, 2026, 5:01 P.M."
+        data["meeting_title"] = None
+        assert detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir, metadata_path=none).label == "Evening"
+
+
+def test_agenda_json_lookup_two_meetings_one_day():
+    """CRA 09:00 and Evening 17:01 on the same date, plus an addendum file for
+    the evening: the transcript's scheduled time picks the meeting."""
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        agenda_dir = Path(tmp_dir)
+        none = str(agenda_dir / "none.json")
+        _agenda(agenda_dir, "meeting_2930_2026-09-10.json", meetingId="2930",
+                meetingType="cra", meetingName="CRA Regular Session", meetingTime="09:00")
+        _agenda(agenda_dir, "meeting_2951_2026-09-10.json", meetingId="2951",
+                meetingType="evening", meetingName="City Council Evening", meetingTime="17:01")
+        _agenda(agenda_dir, "meeting_2960_2026-09-10.json", meetingId="2960", isAddendum=True,
+                meetingType="evening", meetingName="City Council Evening", meetingTime="17:01")
+
+        def detect(header, **kw):
+            data = {"meeting_title": None, "segments": [], "meeting_date_time": header}
+            return detect_meeting_type(transcript_data=data, agenda_dir=agenda_dir,
+                                       metadata_path=none, **kw)
+
+        assert detect("THURSDAY, SEPTEMBER 10, 2026, 9:00 A.M.").label == "CRA"
+        assert detect("THURSDAY, SEPTEMBER 10, 2026, 5:01 P.M.").label == "Evening"
+        # Nearest time wins when the clerk's clock and the header disagree a little
+        assert detect("THURSDAY, SEPTEMBER 10, 2026, 5:15 P.M.").label == "Evening"
+        # A time hours from every agenda is not one of these meetings
+        assert detect("THURSDAY, SEPTEMBER 10, 2026, 1:00 P.M.").label == "City Council"
+        # No time on the transcript: ambiguous, fall through (generic title → default)
+        assert detect("THURSDAY, SEPTEMBER 10, 2026").label == "City Council"
+
+        # Agendas without meetingTime cannot be told apart by time → fall through,
+        # and the evening header's own time still yields Evening via Signal 3
+        for name in ("meeting_2930_2026-09-10.json", "meeting_2951_2026-09-10.json", "meeting_2960_2026-09-10.json"):
+            record = json.loads((agenda_dir / name).read_text())
+            record.pop("meetingTime")
+            (agenda_dir / name).write_text(json.dumps(record))
+        assert detect("THURSDAY, SEPTEMBER 10, 2026, 9:00 A.M.").label == "CRA"
+        assert detect("THURSDAY, SEPTEMBER 10, 2026, 5:01 P.M.").label == "Evening"
+        assert detect("THURSDAY, SEPTEMBER 10, 2026").label == "City Council"
+
+
+def test_agenda_untimed_siblings_split_by_evening_label():
+    """9/11/25: 'CRA Regular' + 'City Council Evening' (+ its addendum), none timed.
+    A 10:15 A.M. transcript is the daytime one → CRA. Both old code paths got
+    this wrong (pkey collisions) and it needed a manual override."""
+    with tempfile.TemporaryDirectory() as tmp_dir:
+        agenda_dir = Path(tmp_dir)
+        none = str(agenda_dir / "none.json")
+        _agenda(agenda_dir, "meeting_2637_2025-09-11.json", meetingId="2637", meetingType="cra", meetingName="CRA Regular")
+        _agenda(agenda_dir, "meeting_2669_2025-09-11.json", meetingId="2669", meetingType="evening", meetingName="City Council Evening")
+        _agenda(agenda_dir, "meeting_2693_2025-09-11.json", meetingId="2693", meetingType="evening",
+                meetingName="City Council Evening Addendum", isAddendum=True)
+
+        def detect(header):
+            return detect_meeting_type(transcript_data={"meeting_date_time": header, "segments": []},
+                                       agenda_dir=agenda_dir, metadata_path=none, meeting_id=2631)
+
+        assert detect("THURSDAY, SEPTEMBER 11, 2025, 10:15 A.M.").label == "CRA"
+        assert detect("THURSDAY, SEPTEMBER 11, 2025, 5:01 P.M.").label == "Evening"
+
+        # Two daytime meetings with different names and no times: still ambiguous
+        _agenda(agenda_dir, "meeting_2638_2025-09-11.json", meetingId="2638", meetingType="workshop", meetingName="City Council Workshop")
+        assert detect("THURSDAY, SEPTEMBER 11, 2025, 10:15 A.M.").label == "City Council"
 
 
 def test_metadata_enum_values():
     """The scraper's bare enum values ('cra', 'special') resolve via metadata."""
     metadata = {
         "meetings": [
-            {"meetingId": 9994, "meetingType": "cra"},
-            {"meetingId": 9993, "meetingType": "special"},
-            {"meetingId": 9992, "meetingType": "special", "meetingName": "CRA Special Call Session"},
+            {"meetingId": 9994, "meetingType": "cra", "date": "2025-02-01"},
+            {"meetingId": 9993, "meetingType": "special", "date": "2025-02-02"},
+            {"meetingId": 9992, "meetingType": "special", "meetingName": "CRA Special Call Session", "date": "2025-02-03"},
         ]
     }
     with tempfile.NamedTemporaryFile(mode="w", suffix=".json", delete=False) as f:
@@ -216,13 +358,16 @@ def test_metadata_enum_values():
 
     try:
         missing = Path(tmp_path).parent / "no-agenda-dir"
-        result = detect_meeting_type(meeting_id=9994, metadata_path=tmp_path, agenda_dir=missing)
+        def by_date(header):
+            return detect_meeting_type(transcript_data={"meeting_date_time": header, "segments": []},
+                                       metadata_path=tmp_path, agenda_dir=missing)
+        result = by_date("SATURDAY, FEBRUARY 1, 2025")
         assert result.label == "CRA", f"Expected CRA, got {result.label}"
-        result = detect_meeting_type(meeting_id=9993, metadata_path=tmp_path, agenda_dir=missing)
+        result = by_date("SUNDAY, FEBRUARY 2, 2025")
         assert result.label == "Special", f"Expected Special, got {result.label}"
-        result = detect_meeting_type(meeting_id=9992, metadata_path=tmp_path, agenda_dir=missing)
+        # meetingName beats the enum
+        result = by_date("MONDAY, FEBRUARY 3, 2025")
         assert result.label == "CRA", f"Expected CRA from meetingName, got {result.label}"
-        print("  PASS: Metadata enum 'cra'/'special' and meetingName resolve")
     finally:
         Path(tmp_path).unlink()
 
