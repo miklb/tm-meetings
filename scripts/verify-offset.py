@@ -212,10 +212,16 @@ def get_direct_url(video_id):
 def extract_clip(url, start, end, wav_path):
     start = max(0, start)
     end = max(start + 1, end)
-    cmd = ['ffmpeg', '-y', '-v', 'error', '-ss', str(start), '-to', str(end),
+    # -nostdin + stdin=DEVNULL: ffmpeg polls stdin for keyboard commands and
+    # will eat whatever it inherits. Under archive-meeting.sh's multi-pkey loop
+    # that was the here-string of remaining pkeys (9/10/26: 2701 silently
+    # skipped). Belt and braces: the flag for ffmpeg, DEVNULL for anything
+    # it spawns.
+    cmd = ['ffmpeg', '-nostdin', '-y', '-v', 'error', '-ss', str(start), '-to', str(end),
            '-i', url, '-vn', '-ar', '16000', '-ac', '1', wav_path]
     try:
-        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180)
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=180,
+                           stdin=subprocess.DEVNULL)
     except subprocess.TimeoutExpired:
         return False
     return r.returncode == 0 and os.path.exists(wav_path) and os.path.getsize(wav_path) > 1000
