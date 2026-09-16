@@ -206,7 +206,10 @@ if [[ -z "$PKEY" ]]; then
             [[ -n "$MEETING_TYPE" ]] && MULTI_ARGS+=("--meeting-type" "$MEETING_TYPE")
             $DRY_RUN && MULTI_ARGS+=("--dry-run")
 
-            if ! bash "$0" "${MULTI_ARGS[@]}"; then
+            # </dev/null: the child must not inherit the here-string on stdin,
+            # or a step that reads stdin swallows the remaining pkeys (bit us 9/15/26:
+            # 2701 silently skipped after 2703, exit 0).
+            if ! bash "$0" "${MULTI_ARGS[@]}" </dev/null; then
                 echo "FAILED: pkey=$MULTI_PKEY"
                 (( MULTI_FAILURES++ )) || true
             fi
