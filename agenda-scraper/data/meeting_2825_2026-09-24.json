@@ -1,0 +1,65 @@
+{
+  "meetingId": "2825",
+  "meetingType": "workshop",
+  "meetingName": "City Council Workshop Session",
+  "meetingTime": "09:00",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "September 24, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2825&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "25891",
+      "title": "File No. CM26-25891\nAbbye Feeley, Administrator of Development & Economic Opportunity, Michael Perry, Deputy Chief Financial Officer, and their respective team members to present the findings of the Raftelis Fee Study for Construction Services, Development Coordination, and Historic Preservation, including the study’s full cost recovery analysis; provide a summary of the public input received during the August 18, 2026, community meeting; and facilitate a discussion regarding a balanced, multi-year strategy for Council’s consideration to right-size the City’s fees, including identifying fees appropriate for movement toward cost recover and those that should remain below full cost recovery in recognition of their broader public benefit. (Original motion initiated by Hurtak-Miranda on July 16, 2026)",
+      "rawTitle": "File No. CM26-25891\nAbbye Feeley, Administrator of Development & Economic Opportunity, Michael Perry, Deputy Chief Financial Officer, and their respective team members to present the findings of the Raftelis Fee Study for Construction Services, Development Coordination, and Historic Preservation, including the study’s full cost recovery analysis; provide a summary of the public input received during the August 18, 2026, community meeting; and facilitate a discussion regarding a balanced, multi-year strategy for Council’s consideration to right-size the City’s fees, including identifying fees appropriate for movement toward cost recover and those that should remain below full cost recovery in recognition of their broader public benefit. (Original motion initiated by Hurtak-Miranda on July 16, 2026)",
+      "fileNumber": "CM26-25891",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
+    },
+    {
+      "number": 2,
+      "agendaItemId": "27125",
+      "title": "File No. CM26-27125\nCouncil to discuss the Charter Review Commission. (Original motion initiated by Carlson-Young on September 10, 2026)",
+      "rawTitle": "File No. CM26-27125\nCouncil to discuss the Charter Review Commission. (Original motion initiated by Carlson-Young on September 10, 2026)",
+      "fileNumber": "CM26-27125",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "TAMPA CHARTER REVIEW ADVISORY COMMISSION FINAL REPORT (1)_REMEDIATED.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TAMPA%20CHARTER%20REVIEW%20ADVISORY%20COMMISSION%20FINAL%20REPORT%20(1)_REMEDIATED.PDF.pdf?documentType=1&meetingId=2825&itemId=27125&publishId=212116&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TAMPA CHARTER REVIEW ADVISORY COMMISSION FINAL REPORT (1)_REMEDIATED.PDF in a new tab",
+          "originalText": "TAMPA CHARTER REVIEW ADVISORY COMMISSION FINAL REPORT (1)_REMEDIATED.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
+    },
+    {
+      "number": 3,
+      "agendaItemId": "22142",
+      "title": "File No. CM24-4658\nCouncil to discuss Council salary for the future election cycle beginning May 1, 2027 and what said salary should be tied to; further, that Councilmembers present their ideas during said discussion. (Original motion initiated by Henderson-Viera on April 11, 2024)(Updated motion initiated by Hurtak-Clendenin on June 27, 2024)(Continued from February 27, 2025)(Motion to reschedule from May 22, 2025 to September 25, 2025 initiated by Henderson-Hurtak on March 6, 2025)(Continued from January 29, 2026)",
+      "rawTitle": "File No. CM24-4658\nCouncil to discuss Council salary for the future election cycle beginning May 1, 2027 and what said salary should be tied to; further, that Councilmembers present their ideas during said discussion. (Original motion initiated by Henderson-Viera on April 11, 2024)(Updated motion initiated by Hurtak-Clendenin on June 27, 2024)(Continued from February 27, 2025)(Motion to reschedule from May 22, 2025 to September 25, 2025 initiated by Henderson-Hurtak on March 6, 2025)(Continued from January 29, 2026)",
+      "fileNumber": "CM24-4658",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "WORKSHOPS"
+    }
+  ],
+  "formattedDate": "2026-09-24"
+}
