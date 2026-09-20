@@ -154,6 +154,7 @@ Examples:
 | `npm run convert`            | Run Markdown converter (requires date/meeting args)  |
 | `npm run process`            | Complete workflow: scrape + convert today's meetings |
 | `npm run process 2025-08-07` | Complete workflow for specific date                  |
+| `npm run vrb`                | Collect Variance Review Board agendas and minutes    |
 
 ## File Structure
 
@@ -239,6 +240,63 @@ reconciles the fresh scrape with the stored one:
 the stored `meetingType`/`meetingName` (it used to demote to `regular`).
 Same-day change-log entries merge rather than overwrite, so a manual run
 after the nightly cannot erase the nightly's entries.
+
+## Variance Review Board collector (`vrb-scraper.js`)
+
+The VRB posts its agendas and minutes on tampa.gov, not OnBase: a listing page
+links to a document page, which links to a PDF. `vrb-scraper.js` follows both
+hops, extracts the PDF text with `lib/pdf-text-extractor.js`, and parses the
+agenda's case blocks. It is collect-only. Nothing downstream (`build-db`, the
+site, the agenda posts) reads its output yet, and it is independent of
+`process-agenda.sh`.
+
+```bash
+node vrb-scraper.js             # collect new and recently changed documents
+node vrb-scraper.js --all       # re-check every listed document page
+node vrb-scraper.js --mirror    # also copy PDFs to R2 (needs the S3_* env)
+node vrb-scraper.js --reparse   # re-run the parser over stored text, offline
+```
+
+The nightly workflow runs it with no flags. A normal run is two listing
+requests plus the document pages of any hearing less than 14 days old; older
+hearings are treated as settled unless `--all` is passed. Requests are spaced a
+second apart.
+
+```
+data/vrb/
+├── vrb_2026-09-15.json             # one file per hearing
+└── text/
+    └── vrb-agenda-sept-2026-194736.txt   # pdf-parse output, one per document
+```
+
+Each hearing file holds:
+
+- `documents` — every agenda and minutes document posted for that hearing, with
+  `pdfUrl`, `pdfSha256`, `postedDate`, `updatedTime`, `firstSeen`, and
+  `mirroredUrl` once mirrored. When staff replace the PDF on an existing
+  document page the old entry moves to that document's `previousVersions`.
+- `canonicalAgenda` — the latest posted agenda. The VRB posts "updated" agendas
+  as separate documents; earlier ones stay in `documents` as history.
+- `cases` — parsed from the canonical agenda: `itemNumber`, `caseNumber`
+  (`VRB-26-28`), `note` ("Continued from…", "Mis-notice"), `section`,
+  `owner`/`applicant`, `location`, `folio`, `zoning`, `request`, `codeSection`,
+  and `neighborhoodAssociations`, the City's list of associations notified for
+  the case (`neighborhoodAssociationsRaw` keeps it as typed).
+- `warnings` — anything the parser did not expect. Fields are stored as the
+  clerk typed them, stray commas and folio variants included.
+
+Minutes are collected as text only. They repeat each case block followed by a
+`BOARD VOTE:` line, so outcomes are parseable later from `text/`.
+
+The PDF bytes are kept only by `--mirror` (R2 key
+`boards/vrb/<hearing date>/<sha8>-<filename>`), which the nightly does not run:
+it has no R2 credentials, same as council documents. Run it by hand after a new
+agenda shows up in the nightly issue. The extracted text is in git either way.
+
+Parser rules live in `lib/vrb-parser.js` and are pinned by `test/vrb.test.js`
+against real agendas in `test/fixtures/vrb/`. `lib/tampa-gov-documents.js`
+(listing and document-page parsing) is board-agnostic and is the starting point
+for the ARC and BLC agendas, which use a different PDF template.
 
 ## Output Examples
 

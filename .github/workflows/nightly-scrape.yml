@@ -48,6 +48,14 @@ jobs:
         continue-on-error: true
         run: node json-scraper.js 2>&1 | tee /tmp/scrape-output.log; exit ${PIPESTATUS[0]}
 
+      # The Variance Review Board posts to tampa.gov, not OnBase. Collect-only
+      # (data/vrb/), a handful of requests a night; a failure here is reported
+      # in the issue and never blocks the council data commit.
+      - name: Collect VRB agendas
+        id: vrb
+        continue-on-error: true
+        run: node vrb-scraper.js 2>&1 | tee /tmp/vrb-output.log; exit ${PIPESTATUS[0]}
+
       - name: Check for changes
         id: git-check
         working-directory: .
@@ -66,6 +74,8 @@ jobs:
         env:
           SCRAPE_LOG: /tmp/scrape-output.log
           SCRAPE_OUTCOME: ${{ steps.scrape.outcome }}
+          VRB_LOG: /tmp/vrb-output.log
+          VRB_OUTCOME: ${{ steps.vrb.outcome }}
           OUT: /tmp/issue-body.md
         run: scripts/nightly-report.sh
 

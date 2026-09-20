@@ -5,6 +5,8 @@
 #
 #   SCRAPE_LOG=/tmp/scrape-output.log   scraper stdout+stderr (tee'd by the workflow)
 #   SCRAPE_OUTCOME=success|failure      the scrape step's outcome
+#   VRB_LOG=/tmp/vrb-output.log         vrb-scraper.js stdout+stderr
+#   VRB_OUTCOME=success|failure         the VRB collection step's outcome
 #   OUT=/tmp/issue-body.md              where to write the issue body
 #
 # Writes has_meaningful=true|false to $GITHUB_OUTPUT when set, else to stdout.
@@ -14,6 +16,8 @@ set -uo pipefail
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 SCRAPE_LOG="${SCRAPE_LOG:-/tmp/scrape-output.log}"
 SCRAPE_OUTCOME="${SCRAPE_OUTCOME:-success}"
+VRB_LOG="${VRB_LOG:-/tmp/vrb-output.log}"
+VRB_OUTCOME="${VRB_OUTCOME:-success}"
 OUT="${OUT:-/tmp/issue-body.md}"
 cd "$REPO_ROOT"
 
@@ -45,6 +49,19 @@ for file in $(git diff --staged --diff-filter=M --name-only -- 'agenda-scraper/d
     SUPPRESSED_COUNT=$((SUPPRESSED_COUNT + 1))
   fi
 done
+
+# Variance Review Board hearings: vrb-scraper.js only rewrites a hearing file
+# when a document was added or revised, so any staged change is meaningful.
+VRB_HEARINGS=""
+for file in $(git diff --staged --diff-filter=AM --name-only -- 'agenda-scraper/data/vrb/vrb_*.json'); do
+  HAS_MEANINGFUL=true
+  VRB_HEARINGS="${VRB_HEARINGS}- **$(jq -r '.hearingDate' "$file")** — $(jq -r '.cases | length' "$file") cases; documents: $(jq -r '[.documents[].title] | join(", ")' "$file")"$'\n'
+done
+VRB_TAIL=""
+if [[ "$VRB_OUTCOME" == "failure" ]]; then
+  HAS_MEANINGFUL=true
+  [[ -f "$VRB_LOG" ]] && VRB_TAIL=$(tail -n 10 "$VRB_LOG")
+fi
 
 # Scraper log: meetings the server said are unavailable, and meetings whose
 # scrape errored (json-scraper.js skips them and exits non-zero at the end).
@@ -105,6 +122,17 @@ if [[ "$HAS_MEANINGFUL" == "true" ]]; then
       echo "### ❌ Scrape step failed (exit non-zero) — last 20 log lines"
       echo '```'
       echo "$SCRAPE_TAIL"
+      echo '```'
+      echo ""
+    fi
+    if [[ -n "$VRB_HEARINGS" ]]; then
+      echo "### Variance Review Board — new or revised"
+      echo "$VRB_HEARINGS"
+    fi
+    if [[ -n "$VRB_TAIL" ]]; then
+      echo "### ❌ VRB collection failed — last 10 log lines"
+      echo '```'
+      echo "$VRB_TAIL"
       echo '```'
       echo ""
     fi
