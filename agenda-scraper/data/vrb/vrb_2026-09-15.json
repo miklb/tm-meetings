@@ -1,0 +1,282 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-09-15",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-sept-2026-194736",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-sept-2026-194736",
+      "nodeId": 194736,
+      "title": "VRB Agenda - Sept 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-sept-2026-194736",
+      "postedDate": "2026-09-09",
+      "updatedTime": "2026-09-09T08:36:54-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/vrb-agenda-sept-2026-revised-tables.pdf",
+      "pdfSha256": "167c37047cf76e600c66bf19dce73d59d547ab25c76eeffaa3304355d550cee5",
+      "pdfBytes": 421134,
+      "pages": 8,
+      "textFile": "text/vrb-agenda-sept-2026-194736.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-78",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Florida Community of Mindfulness Inc/Brent Hall",
+      "location": "6501 N Nebraska Ave",
+      "folio": "170412.0000",
+      "zoning": "Seminole Heights Commercial Intensive (SH-CI)",
+      "request": "Generator to be installed 4 feet from property line.",
+      "codeSection": "Sec. 27-290.6. - Air conditioning unit(s) and air conditioning stand(s), generator and generator stand, electrical meter platforms, and pool equipment.",
+      "neighborhoodAssociationsRaw": "Old Seminole Heights Neighborhood Association, Inc., Neighborhood Watch, Richmond Place, Tampa Overlook Neighborhood Association, Seminole Heights East Neighborhood Association, South Seminole Heights Civic Association, Inc.",
+      "owner": "Florida Community of Mindfulness Inc",
+      "applicant": "Brent Hall",
+      "neighborhoodAssociations": [
+        "Old Seminole Heights Neighborhood Association, Inc.",
+        "Neighborhood Watch",
+        "Richmond Place",
+        "Tampa Overlook Neighborhood Association",
+        "Seminole Heights East Neighborhood Association",
+        "South Seminole Heights Civic Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-80",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Joseph G and Loretta O’Keeffe/Zachary Pease",
+      "location": "3324 W San Miguel St. S.",
+      "folio": "118844.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce rear yard setback from 20 feet to 3 feet for a pool greater than 12 inches above grade.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Palma Ceia Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc.",
+      "owner": "Joseph G and Loretta O’Keeffe",
+      "applicant": "Zachary Pease",
+      "neighborhoodAssociations": [
+        "Palma Ceia Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Parkland Estates Civic Club, Inc."
+      ]
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-83",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Thomas and Tiffany Hernandez/Adam Smith",
+      "location": "5832 Mariner St",
+      "folio": "112603.0000",
+      "zoning": "Residential Single-Family (RS-75)",
+      "request": "Reduce side yard setback from 7' to 6.9' Reduce equipment setback from 3' to .2' for stairs to access TECO meter.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations. Sec. 27-290.6. - Air conditioning unit(s) and air conditioning stand(s), generator and generator stand, electrical meter platforms, and pool equipment.",
+      "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "owner": "Thomas and Tiffany Hernandez",
+      "applicant": "Adam Smith",
+      "neighborhoodAssociations": [
+        "Beach Park Homeowners Association, Inc.",
+        "Westshore Alliance",
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Armory Gardens Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-84",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Blair Chastain/Shalom Halfon",
+      "location": "4003 W Gray St.",
+      "folio": "114638.0000",
+      "zoning": "Residential Single-Family (RS-50)",
+      "request": "Reduce rear yard setback from 20 feet to 6 feet",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "North Bon Air Neighborhood Association, Inc., Westshore Alliance",
+      "owner": "Blair Chastain",
+      "applicant": "Shalom Halfon",
+      "neighborhoodAssociations": [
+        "North Bon Air Neighborhood Association, Inc.",
+        "Westshore Alliance"
+      ]
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-89",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Heather Eaton/Joseph Suarez",
+      "location": "3013 Bayshore Pointe Dr.",
+      "folio": "136946.0540",
+      "zoning": "Planned Development (PD)",
+      "request": "Reduce rear yard setback from 10 feet to 5 feet",
+      "codeSection": "Sec. 27-227 – PD Planned Development District",
+      "neighborhoodAssociationsRaw": "Ballast Point Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Ballast Point Neighborhood Association",
+      "owner": "Heather Eaton",
+      "applicant": "Joseph Suarez",
+      "neighborhoodAssociations": [
+        "Ballast Point Neighborhood Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood"
+      ]
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-90",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "David and Cheryl Stephenson/Joseph Suarez",
+      "location": "3042 Pointeview Dr.",
+      "folio": "136946.0550",
+      "zoning": "Planned Development (PD)",
+      "request": "Reduce rear yard setback from 10 feet to 5 feet",
+      "codeSection": "Sec. 27-227 – PD Planned Development District",
+      "neighborhoodAssociationsRaw": "Ballast Point Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Ballast Point Neighborhood Association",
+      "owner": "David and Cheryl Stephenson",
+      "applicant": "Joseph Suarez",
+      "neighborhoodAssociations": [
+        "Ballast Point Neighborhood Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood"
+      ]
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-91",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Sisters of The Holy Names Us – Ontario Province/Ricky Peterika",
+      "location": "3319 Bayshore Blvd",
+      "folio": "127164.0000",
+      "zoning": "Planned Development (PD)",
+      "request": "Remove 1 nonhazardous grand tree damaging a retaining wall",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "NA",
+      "owner": "Sisters of The Holy Names Us – Ontario Province",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "NA"
+      ]
+    },
+    {
+      "itemNumber": 8,
+      "caseNumber": "VRB-26-92",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Renee Nellenbach",
+      "location": "1708 W Bedingfield Dr.",
+      "folio": "105022.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce front accessory structure setback from 60 feet to 26 feet.",
+      "codeSection": "Sec. 27-290 - Accessory structures.",
+      "neighborhoodAssociationsRaw": "Wellswood Civic Association, Inc., Tampa Overlook Neighborhood Association, Old Seminole Heights Neighborhood Association, Inc.",
+      "owner": "Renee Nellenbach",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Wellswood Civic Association, Inc.",
+        "Tampa Overlook Neighborhood Association",
+        "Old Seminole Heights Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 9,
+      "caseNumber": "VRB-26-93",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Mario Orta/Carlos Castilla",
+      "location": "3028 W Palmetto St.",
+      "folio": "180604.0000",
+      "zoning": "Residential Single-Family (RS-50)",
+      "request": "1. Reduce rear accessory setback from 3 feet to 1 foot\n2. Reduce side accessory setback from 3 feet to 2.5 feet",
+      "codeSection": "Sec. 27-290 - Accessory structures.",
+      "neighborhoodAssociationsRaw": "MacFarlane Park Association and Neighborhood Watch, West Tampa CRA Community Advisory Committee, Informed Neighbor, Bowman Heights Neighborhood Watch, Riverbend Civic Association, Bowman Heights, Highland Pines Community Task Force, Inc., Armory Gardens Civic Association",
+      "owner": "Mario Orta",
+      "applicant": "Carlos Castilla",
+      "neighborhoodAssociations": [
+        "MacFarlane Park Association and Neighborhood Watch",
+        "West Tampa CRA Community Advisory Committee",
+        "Informed Neighbor",
+        "Bowman Heights Neighborhood Watch",
+        "Riverbend Civic Association",
+        "Bowman Heights",
+        "Highland Pines Community Task Force, Inc.",
+        "Armory Gardens Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 10,
+      "caseNumber": "VRB-26-97",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Nicholas and Vanessa Dister/Steve Smith",
+      "location": "4510 W Azeele St.",
+      "folio": "113842.0000",
+      "zoning": "Residential Single-Family (RS-75)",
+      "request": "1. Reduce rear yard setback from 20 feet to 18 feet\n2. Reduce eave to eave separation from 10 feet to 3 feet",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations. Sec. 27-290 Accessory Structures",
+      "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "owner": "Nicholas and Vanessa Dister",
+      "applicant": "Steve Smith",
+      "neighborhoodAssociations": [
+        "Beach Park Homeowners Association, Inc.",
+        "Westshore Alliance",
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Armory Gardens Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 11,
+      "caseNumber": "VRB-26-100",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Michael Spanos/Shalom Halfon",
+      "location": "3916 W San Rafael St.",
+      "folio": "119373.0000",
+      "zoning": "Residential Single-Family (RS-75)",
+      "request": "Reduce the required rear yard setback from 12 feet to 10 feet to allow for a rear addition to the existing single-family residence.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Palma Ceia West Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc.",
+      "owner": "Michael Spanos",
+      "applicant": "Shalom Halfon",
+      "neighborhoodAssociations": [
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 12,
+      "caseNumber": "VRB-26-114",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Kayla and Timothy Lehn/Chance Langford",
+      "location": "4408 W Price Ave.",
+      "folio": "132051.0000",
+      "zoning": "Residential Single-Family (RS-50)",
+      "request": "Increase building height from 15 feet to 15 feet 8 inches",
+      "codeSection": "Sec. 27-290 Accessory Structures",
+      "neighborhoodAssociationsRaw": "Gandy Civic Association, Southtown Park HOA, Belmar Gardens Neighborhood, Bayside West Neighborhood Association, Inc.",
+      "owner": "Kayla and Timothy Lehn",
+      "applicant": "Chance Langford",
+      "neighborhoodAssociations": [
+        "Gandy Civic Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Bayside West Neighborhood Association, Inc."
+      ]
+    }
+  ],
+  "warnings": []
+}

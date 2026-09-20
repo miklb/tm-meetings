@@ -1,0 +1,225 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-08-11",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-aug-2026-193466",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-aug-2026-193466",
+      "nodeId": 193466,
+      "title": "VRB Agenda - Aug 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-aug-2026-193466",
+      "postedDate": "2026-08-11",
+      "updatedTime": "2026-08-11T15:24:39-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/august-11-2026.ada_.pdf",
+      "pdfSha256": "f3572c98119feac0d44ebea13e4dc38981affc8c59075dfa8a0249e79a1fa2f6",
+      "pdfBytes": 206237,
+      "pages": 6,
+      "textFile": "text/vrb-agenda-aug-2026-193466.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-56",
+      "note": null,
+      "section": "Continued Cases",
+      "ownerApplicant": "Channelside Partners LLC/Ricky Peterika",
+      "location": "3917 N Nebraska Ave",
+      "folio": "172983.0000",
+      "zoning": "Commercial General (CG)",
+      "request": "Remove one non-hazardous grand tree Reduce tree retention from 50 percent to 15 percent",
+      "codeSection": "27-284",
+      "neighborhoodAssociationsRaw": "Southeast Seminole Heights Civic Association, Inc., VM Ybor Neighborhood Association & Crimewatch, Informed Neighbor, Business Guild of Seminole Heights, Tampa Overlook Neighborhood Association, Seminole Heights East Neighborhood Association, Ybor Heights Neighborhood Association and Watch Group, VM Ybor Neighborhood Association & Crimewatch, Ybor Heights Neighborhood Association and Watch Group",
+      "owner": "Channelside Partners LLC",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Southeast Seminole Heights Civic Association, Inc.",
+        "VM Ybor Neighborhood Association & Crimewatch",
+        "Informed Neighbor",
+        "Business Guild of Seminole Heights",
+        "Tampa Overlook Neighborhood Association",
+        "Seminole Heights East Neighborhood Association",
+        "Ybor Heights Neighborhood Association and Watch Group"
+      ]
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-72",
+      "note": null,
+      "section": "Continued Cases",
+      "ownerApplicant": "Berns Steak House/Ricky Peterika",
+      "location": "2208 W Morrison Ave",
+      "folio": "186169.0000",
+      "zoning": "Commercial General (CG), Commercial Intensive (CI)",
+      "request": "Request to remove 2 grand trees Request to reduce required parking from 78 spaces to 58 Reduce front setback from 10’ to 8’ for bay windows",
+      "codeSection": "27-289, 27-156, 27-284",
+      "neighborhoodAssociationsRaw": "Historic Hyde Park Neighborhood Association, Inc., SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc., SOHO Business Alliance, Ameryllis Garden Circle, Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., SOHO Business Alliance, Bayshore Gardens Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., New Suburb Beautiful Civic Association, Inc.,Parkland Estates Civic Club, Inc.",
+      "owner": "Berns Steak House",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Historic Hyde Park Neighborhood Association, Inc.",
+        "SOHO Business Alliance",
+        "Parkland Estates Civic Club",
+        "Bowman Heights",
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Tampa Heights Civic Association, Inc.",
+        "Ameryllis Garden Circle",
+        "Parkland Estates Civic Club, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "New Suburb Beautiful Civic Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-48",
+      "note": null,
+      "section": "New Business",
+      "ownerApplicant": "Marwan Asadi/James Bennett",
+      "location": "11107 N 51 st St.",
+      "folio": "139517.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce the rear yard setback from 20 feet to 4.9 feet. Reduce side yard setback from 7 feet to 4 feet.",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc., 345 Bayshore Condominium Assn.",
+      "owner": "Marwan Asadi",
+      "applicant": "James Bennett",
+      "neighborhoodAssociations": [
+        "Terrace Park Civic Association, Inc.",
+        "345 Bayshore Condominium Assn."
+      ]
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-61",
+      "note": null,
+      "section": "New Business",
+      "ownerApplicant": "Cameron and Brittany Brown",
+      "location": "4224 W Barcelona St.",
+      "folio": "123923.0000",
+      "zoning": "Residential Single-Family (RS-100)",
+      "request": "Request rear setback change for accessory pool from 5t to 3ft.",
+      "codeSection": "27-290",
+      "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "owner": "Cameron and Brittany Brown",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Virginia Park Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association",
+        "Belmar Gardens Neighborhood",
+        "Palma Ceia Neighborhood Association, Inc.",
+        "Bayside West Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-77",
+      "note": null,
+      "section": "New Business",
+      "ownerApplicant": "Brian and Kelly Brelje",
+      "location": "4337 S Coolidge Ave",
+      "folio": "129552.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce rear yard setback from 20 feet to 10 feet",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "FairOaks/Manhattan Manor Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc.",
+      "owner": "Brian and Kelly Brelje",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "FairOaks/Manhattan Manor Neighborhood Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Virginia Park Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-81",
+      "note": null,
+      "section": "New Business",
+      "ownerApplicant": "Lisa Morgan/Joseph Caito",
+      "location": "4005 W Cleveland St.",
+      "folio": "115243.0800",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce west side yard setback from 7 feet to 3 feet",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Swann Estates Neighborhood Association, Inc.",
+      "owner": "Lisa Morgan",
+      "applicant": "Joseph Caito",
+      "neighborhoodAssociations": [
+        "Swann Estates Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-86",
+      "note": null,
+      "section": "New Business",
+      "ownerApplicant": "Sean Daniel",
+      "location": "3924 W Palmira Ave.",
+      "folio": "123225.0000",
+      "zoning": "Residential Single-Family (RS-100)",
+      "request": "Reduce corner yard pool setback from 15 feet to 4 feet",
+      "codeSection": "27-290",
+      "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc.",
+      "owner": "Sean Daniel",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Virginia Park Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association",
+        "Belmar Gardens Neighborhood",
+        "Palma Ceia Neighborhood Association, Inc.",
+        "Bayside West Neighborhood Association, Inc.",
+        "Palma Ceia West Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 8,
+      "caseNumber": "VRB-26-87",
+      "note": null,
+      "section": "New Business",
+      "ownerApplicant": "4130 Gandy Blvd LLC/Addie Mentry",
+      "location": "4132 W Gandy Blvd",
+      "folio": "132449.0022",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Increase signage from 0 square feet to 4,118.36 square feet",
+      "codeSection": "27-289",
+      "neighborhoodAssociationsRaw": "Gandy Civic Association, Southtown Park HOA, Belmar Gardens Neighborhood, Bayside West Neighborhood Association, Inc.",
+      "owner": "4130 Gandy Blvd LLC",
+      "applicant": "Addie Mentry",
+      "neighborhoodAssociations": [
+        "Gandy Civic Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Bayside West Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 9,
+      "caseNumber": "VRB-26-88",
+      "note": null,
+      "section": "New Business",
+      "ownerApplicant": "Slapshot Management Group Llc/Thomas Signs and Awning LLC",
+      "location": "4075 Henderson Blvd.",
+      "folio": "120021.0000",
+      "zoning": "Planned Development (PD)",
+      "request": "Reduce freestanding sign setback from 5 feet to 0 feet",
+      "codeSection": "27-289",
+      "neighborhoodAssociationsRaw": "Palma Ceia West Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc.",
+      "owner": "Slapshot Management Group Llc",
+      "applicant": "Thomas Signs and Awning LLC",
+      "neighborhoodAssociations": [
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc."
+      ]
+    }
+  ],
+  "warnings": []
+}

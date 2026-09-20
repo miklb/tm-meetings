@@ -1,0 +1,251 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-02-10",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-february-2026-181011",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-february-2026-181011",
+      "nodeId": 181011,
+      "title": "VRB Agenda - February 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-february-2026-181011",
+      "postedDate": "2026-02-05",
+      "updatedTime": "2026-04-08T13:27:58-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/february-10-2026-agenda.pdf",
+      "pdfSha256": "8e1cf7711923bc8ca0a3f6176194cda7bb0329bd8d07337f02cc34b4cc980d4a",
+      "pdfBytes": 310317,
+      "pages": 5,
+      "textFile": "text/vrb-agenda-february-2026-181011.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-25-83",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Joseph L Fontana Lii/Colin Rice",
+      "location": "541 Lucerne Ave",
+      "folio": "169242.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Request to increase height: 35′ to 53′(above ground level) or 61′ (above mean sea level), reduce front yard setback from 25’ to 4.9’",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Davis Islands Civic Association, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "owner": "Joseph L Fontana Lii",
+      "applicant": "Colin Rice",
+      "neighborhoodAssociations": [
+        "Davis Islands Civic Association, Inc.",
+        "Hyde Park Spanishtown Creek Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-02",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Rockland Property Trust LLC/Giovanni Rosell",
+      "location": "405 W Humphery St",
+      "folio": "100523.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce front yard setback from 25’ to 23’",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Lowry Park Central Community Organization",
+      "owner": "Rockland Property Trust LLC",
+      "applicant": "Giovanni Rosell",
+      "neighborhoodAssociations": [
+        "Lowry Park Central Community Organization"
+      ]
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-07",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Gregory M Gutierrez",
+      "location": "1813 W Watrous Ave",
+      "folio": "185706.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce air condition equipment setback from 3’ to 2’ on east",
+      "codeSection": "27.290.6",
+      "neighborhoodAssociationsRaw": "Historic Hyde Park Neighborhood Association, Inc., OHO Business Alliance, Bayshore Gardens Neighborhood Association, Inc., Parkland Estates Civic Club, Inc.",
+      "owner": "Gregory M Gutierrez",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Historic Hyde Park Neighborhood Association, Inc.",
+        "OHO Business Alliance",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Parkland Estates Civic Club, Inc."
+      ]
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-10",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Annanora Fields",
+      "location": "10701 N 15 th St",
+      "folio": "141238.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Increase building signage from 8 sq ft to 24 sq ft",
+      "codeSection": "27-289.3",
+      "neighborhoodAssociationsRaw": "North Tampa Community Neighborhood Association, University Square Civic Association, Inc.",
+      "owner": "Annanora Fields",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "North Tampa Community Neighborhood Association",
+        "University Square Civic Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-19",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "4710 W Vasconia St LLC/Jason Kendall",
+      "location": "4710 W Vasconia St",
+      "folio": "122630.0000",
+      "zoning": "Residential Single-Family (RS-75)",
+      "request": "Grand tree removal",
+      "codeSection": "27.284.2.5",
+      "neighborhoodAssociationsRaw": "Belmar Gardens Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc., Bel Mar Shores Civic Association, Inc.",
+      "owner": "4710 W Vasconia St LLC",
+      "applicant": "Jason Kendall",
+      "neighborhoodAssociations": [
+        "Belmar Gardens Neighborhood Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Virginia Park Neighborhood Association, Inc.",
+        "Bel Mar Shores Civic Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-25",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Larry Rothfuss/J Shea",
+      "location": "3222 W Barcelona St",
+      "folio": "126032.0000",
+      "zoning": "Residential Multi-Family (RM-16)",
+      "request": "1) Reduce front yard setback from 25’ to 15’ 2) Reduce rear yard setback from 15’ to 7’",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Palma Ceia Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc.",
+      "owner": "Larry Rothfuss",
+      "applicant": "J Shea",
+      "neighborhoodAssociations": [
+        "Palma Ceia Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Parkland Estates Civic Club, Inc."
+      ]
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-27",
+      "note": "Requested Continue to June 9, 2026",
+      "section": null,
+      "ownerApplicant": "Dept of Transportation/ Jessica Icerman",
+      "location": "4500 W Cypress St",
+      "folio": "112709.0000",
+      "zoning": "Office Professional (OP-1)",
+      "request": "1) Increase the maximum free standing sign face from 50 square feet per sign face to 151 feet, an increase of 101 square feet per sign face. 2) Increase the maximum free standing sign height from twenty (20) feet to twenty-six (26) feet, an increase of six (6) feet.",
+      "codeSection": "27-238(g)(7)a.3",
+      "neighborhoodAssociationsRaw": "Carver City/Lincoln Gardens Civic Association, Inc., DSCA, Westshore Alliance, Bowman Heights, Bel Mar Shores Civic Association, Inc.",
+      "owner": "Dept of Transportation",
+      "applicant": "Jessica Icerman",
+      "neighborhoodAssociations": [
+        "Carver City/Lincoln Gardens Civic Association, Inc.",
+        "DSCA",
+        "Westshore Alliance",
+        "Bowman Heights",
+        "Bel Mar Shores Civic Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 8,
+      "caseNumber": "VRB-26-29",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Erica Marousek and David Ralph Ogram Jr",
+      "location": "3608 W San Pedro St",
+      "folio": "123669.0100",
+      "zoning": "Residential Single-Family (RS-50)",
+      "request": "Reduce pool side yard setbacks from 5’ to 3’ Reduce pool rear yard setbacks from 5’ to 3’",
+      "codeSection": "27-290.3",
+      "neighborhoodAssociationsRaw": "Palma Ceia Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc.",
+      "owner": "Erica Marousek and David Ralph Ogram Jr",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Palma Ceia Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Parkland Estates Civic Club, Inc."
+      ]
+    },
+    {
+      "itemNumber": 9,
+      "caseNumber": "VRB-26-30",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "3hr Investments LLC/John Ferrer",
+      "location": "9408 Orange Grove Dr",
+      "folio": "97200.0150",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce front yard setback from 25’ to 15.5’",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "NA",
+      "owner": "3hr Investments LLC",
+      "applicant": "John Ferrer",
+      "neighborhoodAssociations": [
+        "NA"
+      ]
+    },
+    {
+      "itemNumber": 10,
+      "caseNumber": "VRB-26-31",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Realcity Construction LLC/Ayam Rodriguez",
+      "location": "8208 N Elmer St",
+      "folio": "149629.0100",
+      "zoning": "Residential Single-Family (RS-50)",
+      "request": "Grand Tree Removal",
+      "codeSection": "27.284.2.5",
+      "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association.",
+      "owner": "Realcity Construction LLC",
+      "applicant": "Ayam Rodriguez",
+      "neighborhoodAssociations": [
+        "Sulphur Springs Action League, Inc.",
+        "Hyde Park Spanishtown Creek Civic Association."
+      ]
+    },
+    {
+      "itemNumber": 11,
+      "caseNumber": "VRB-26-32",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Ig Real Estate LLC, Maria and Ariel Concepcion",
+      "location": "8909 N Orleans Ave",
+      "folio": "98683.0010",
+      "zoning": "Residential Single-Family (RS-50)",
+      "request": "Grand Tree Removal",
+      "codeSection": "27.284.2.5",
+      "neighborhoodAssociationsRaw": "Lowry Park Central Community Organization",
+      "owner": "Ig Real Estate LLC, Maria and Ariel Concepcion",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Lowry Park Central Community Organization"
+      ]
+    }
+  ],
+  "warnings": []
+}
