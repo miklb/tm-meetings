@@ -34,6 +34,27 @@ function padFileNumber(fileNo) {
     return fileNo;
 }
 
+// The clerk usually writes a plan amendment's number closed up ("TA/CPA25-19")
+// and the scraper captures all of it. Typed with a space ("TA/CPA 26-05") the
+// scraper keeps only "TA/CPA", so every amendment on the agenda shares one id
+// and the map resolves all their pins to the first item (9/24/26 agenda).
+const BARE_PLAN_AMENDMENT_RE = /^TA\/CPA$/i;
+const PLAN_AMENDMENT_CASE_RE = /^\s*(?:File\.?\s*(?:No\.?\s*)?)?TA\/CPA\s+(\d{2}-\d{1,4})\b/i;
+
+/**
+ * The id an item carries on the map: its padded file number. A bare "TA/CPA"
+ * gets its case number back from the head of the item text, closed up the way
+ * the clerk usually writes it, so it is unique like every other record id.
+ */
+function mapRecordId(item) {
+    let fileNo = (item && item.fileNumber) || '';
+    if (BARE_PLAN_AMENDMENT_RE.test(fileNo)) {
+        const m = (item.rawTitle || item.title || '').match(PLAN_AMENDMENT_CASE_RE);
+        if (m) fileNo = `${fileNo}${m[1]}`;
+    }
+    return padFileNumber(fileNo);
+}
+
 const locationsFile = (meetingId, formattedDate) =>
     path.join(LOCATIONS_DIR, `${meetingId}-${formattedDate}-locations.json`);
 
@@ -59,7 +80,7 @@ function recordsToLocate(items, stored) {
     for (const item of items || []) {
         const fileNo = item.fileNumber || '';
         if (!MAP_FILE_RE.test(fileNo) || item.coordinates) continue;
-        const id = padFileNumber(fileNo);
+        const id = mapRecordId(item);
         if (!stored[id]) ids.add(id);
     }
     return [...ids];
@@ -103,6 +124,7 @@ function saveRecordLocations(meetingId, formattedDate, records) {
 module.exports = {
     MAP_FILE_RE,
     padFileNumber,
+    mapRecordId,
     loadRecordLocations,
     recordsToLocate,
     mergeLocations,

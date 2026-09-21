@@ -5,7 +5,7 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
-const { padFileNumber, recordsToLocate, mergeLocations } = require('../lib/record-locations');
+const { padFileNumber, mapRecordId, recordsToLocate, mergeLocations } = require('../lib/record-locations');
 const { parseRecord, inCityBounds } = require('../lib/dev-coord');
 const { collectMapData } = require('../json-to-markdown');
 
@@ -61,6 +61,29 @@ test('collectMapData: stored locations become explicit pins with popup details; 
     'REZ-26-0000045': { address: "100 O'Brien St", url: 'https://aca-prod.accela.com/TAMPA/y', permit: true },
   });
   assert.ok(!/data-record-details="[^"]*'/.test(html), 'apostrophes are escaped inside the attribute');
+});
+
+test('plan amendments typed "TA/CPA 26-05" keep a unique map id, so each pin finds its own item', () => {
+  // 9/24/26 evening agenda: the scraper kept only "TA/CPA" for all five.
+  const amendments = [
+    { number: '3', agendaItemId: 203, fileNumber: 'TA/CPA', rawTitle: 'File No. TA/CPA 26-05\nPublic Hearing on a publicly initiated request', coordinates: { lat: 27.97705, lng: -82.46752 }, folioNumbers: ['182151.5005'] },
+    { number: '4', agendaItemId: 204, fileNumber: 'TA/CPA', rawTitle: 'File No. TA/CPA 26-08\nPublic Hearing on a publicly initiated request', coordinates: { lat: 27.999438, lng: -82.404836 } },
+    { number: '5', agendaItemId: 205, fileNumber: 'TA/CPA25-19', rawTitle: 'File No. TA/CPA25-19\nContinued Public Hearing', coordinates: { lat: 27.95949, lng: -82.4504 } }, // the usual form, unchanged
+    { number: '6', agendaItemId: 206, fileNumber: 'TA/CPA', rawTitle: 'Public Hearing with no case number up front', coordinates: { lat: 27.96, lng: -82.46 } }, // nothing to recover
+  ];
+  assert.equal(mapRecordId(amendments[0]), 'TA/CPA26-0000005');
+  assert.equal(mapRecordId(amendments[2]), 'TA/CPA25-0000019');
+  assert.equal(mapRecordId(amendments[3]), 'TA/CPA');
+
+  const { html } = collectMapData(amendments);
+  const attr = (name) => html.match(new RegExp(`data-${name}="([^"]*)"`))[1];
+  assert.equal(attr('records'), 'TA/CPA26-0000005:3, TA/CPA26-0000008:4, TA/CPA25-0000019:5, TA/CPA:6');
+  assert.equal(attr('folios'), [
+    'TA/CPA26-0000005:27.97705,-82.46752:182151.5005',
+    'TA/CPA26-0000008:27.999438,-82.404836',
+    'TA/CPA25-0000019:27.95949,-82.4504',
+    'TA/CPA:27.96,-82.46',
+  ].join('|'));
 });
 
 test('collectMapData with no stored locations is unchanged from before', () => {

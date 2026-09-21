@@ -36,7 +36,7 @@ const {
     escapeHtml,
 } = require('./lib/render-funding');
 const { loadChangeLog } = require('./lib/change-log');
-const { MAP_FILE_RE, padFileNumber, loadRecordLocations } = require('./lib/record-locations');
+const { MAP_FILE_RE, mapRecordId, loadRecordLocations } = require('./lib/record-locations');
 const {
     cleanAgendaContent,
     extractTransmittalNotes,
@@ -379,7 +379,7 @@ function collectMapData(items, locations = {}) {
     for (const item of items) {
         const fileNo = item.fileNumber || '';
         if (!MAP_FILE_RE.test(fileNo)) continue;
-        const padded = padFileNumber(fileNo);
+        const padded = mapRecordId(item);
         records.push(`${padded}:${item.number}`);
         mappedItemIds.add(item.agendaItemId);
 

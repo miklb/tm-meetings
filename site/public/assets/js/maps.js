@@ -574,8 +574,9 @@
     } catch { return {}; }
   }
 
-  // Popup text and links come from page data now, not only the feed, and that
-  // data starts as text the City typed: escape it, and allow http(s) links only.
+  // Popup text and links come from page data and from the feed, and both start
+  // as text the City typed. Marker properties hold it as plain text; the popup
+  // escapes every value where it builds its HTML, and links are http(s) only.
   const escText = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
     ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const safeUrl = (url) => (/^https?:\/\//i.test(url || "") ? url : "");
@@ -611,8 +612,8 @@
               RECORDID: f.recordId,
               RECORDALIAS: recordType(f.recordId),
               FOLIOS: f.folios.join(","),
-              ADDRESS: escText(details[f.recordId]?.address || ""),
-              URL: escText(safeUrl(details[f.recordId]?.url)),
+              ADDRESS: details[f.recordId]?.address || "",
+              URL: details[f.recordId]?.url || "",
               PERMIT: details[f.recordId]?.permit === true,
             },
           })),
@@ -663,17 +664,18 @@
 
         if (marker) {
           const p = marker.properties;
-          let html = `<p class="map-popup__title">${p.RECORDID}</p>`;
-          html += `<div class="map-popup__row"><span class="map-popup__label">Type</span><span>${p.RECORDALIAS || ""}</span></div>`;
-          if (p.ADDRESS) html += `<div class="map-popup__row"><span class="map-popup__label">Address</span><span>${p.ADDRESS}</span></div>`;
+          let html = `<p class="map-popup__title">${escText(p.RECORDID)}</p>`;
+          html += `<div class="map-popup__row"><span class="map-popup__label">Type</span><span>${escText(p.RECORDALIAS)}</span></div>`;
+          if (p.ADDRESS) html += `<div class="map-popup__row"><span class="map-popup__label">Address</span><span>${escText(p.ADDRESS)}</span></div>`;
           const item = agendaItemFor(p.RECORDID);
           if (item) {
             const href = agendaItemHref(root, item);
-            const itemHtml = href ? `<a href="${href}">${item}</a>` : item;
+            const itemHtml = href ? `<a href="${escText(href)}">${escText(item)}</a>` : escText(item);
             html += `<div class="map-popup__row"><span class="map-popup__label">Agenda item</span><span>${itemHtml}</span></div>`;
           }
           html += zoningInfoHtml(map, e.point);
-          if (p.URL) html += `<p><a href="${p.URL}" target="_blank" rel="noopener">Accela record →</a></p>`;
+          const url = safeUrl(p.URL);
+          if (url) html += `<p><a href="${escText(url)}" target="_blank" rel="noopener">Accela record →</a></p>`;
           new maplibregl.Popup({ maxWidth: "320px" }).setLngLat(e.lngLat).setHTML(html).addTo(map);
 
           // highlight the record's parcels; fly closer if zoomed out.
