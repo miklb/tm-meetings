@@ -20,7 +20,7 @@
       "pages": 7,
       "textFile": "text/vrb-agenda-april-2026-187536.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-04-14/e48321a0-b49f754e-9c05-4734-9f45-9cd64c4afabe_april-14-2026-agenda_remediated.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 15,
       "textFile": "text/vrb-minutes-april-14-2026-188916.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-04-14/5a404b6d-april-14-2026-vrb-minutes-ada_remediated.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -56,12 +56,22 @@
       "request": "Increase building signs from 1 to 2 Increase building sign square footage from 25 to 48.96",
       "codeSection": "27-240(2).f.3",
       "neighborhoodAssociationsRaw": "East Tampa 1, Tampa Overlook Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Whlr Tampa Festival LLC",
       "applicant": "Mark Brenchley",
       "neighborhoodAssociations": [
         "East Tampa 1",
         "Tampa Overlook Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000021",
+        "lat": 27.996013,
+        "lng": -82.431813,
+        "address": "2525 E Hillsborough Ave",
+        "neighborhood": "East Tampa 1",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X7O&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -75,11 +85,21 @@
       "request": "Reduce rear yard setback from 20 feet to 5 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Culbreath Bayou Homeowners Association Inc.",
+      "locationWithheld": false,
       "owner": "Kevin James and Jessica Lane Bexley",
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
         "Culbreath Bayou Homeowners Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000028",
+        "lat": 27.932339,
+        "lng": -82.519597,
+        "address": "4510 S Ferncroft Cir",
+        "neighborhood": "Culbreath Bayou",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XRI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -93,12 +113,22 @@
       "request": "Reduce rear yard setback from 20 feet to 9 feet and east side setback from 7 feet to 4 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association Inc., Virginia Park Neighborhood Association, Inc",
+      "locationWithheld": false,
       "owner": "Adobe Homes Inc.",
       "applicant": "Innovative Pools",
       "neighborhoodAssociations": [
         "Sunset Park Area Homeowners Association Inc.",
         "Virginia Park Neighborhood Association, Inc"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000033",
+        "lat": 27.918887,
+        "lng": -82.529592,
+        "address": "5023 W Dante Ave",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02ZXR&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -112,12 +142,22 @@
       "request": "Reduce tree retention from 50 percent to 6 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc, 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "City of Tampa",
       "applicant": "Meredith Beyer",
       "neighborhoodAssociations": [
         "Terrace Park Civic Association, Inc",
         "345 Bayshore Condominium Assn."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000045",
+        "lat": 28.04727,
+        "lng": -82.403639,
+        "address": "4902 E Whiteway Dr",
+        "neighborhood": "Terrace Park",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=003Q4&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -131,12 +171,22 @@
       "request": "Reduce the front setback from 20' to 7', reduce rear yard setback from 20' to 7'",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "Don Rivera",
       "applicant": "Anelys Quintero",
       "neighborhoodAssociations": [
         "Sulphur Springs Action League, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000081",
+        "lat": 28.026763,
+        "lng": -82.455072,
+        "address": "8511 N Lamar Ave",
+        "neighborhood": "Sulphur Springs",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=0251S&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -150,6 +200,7 @@
       "request": "1. Request to increase the sign Letter height for two wall signs from 1' to 2.5'\n2. Request to increase allowed square footage for two wall signs from 25sf to 61.49sf",
       "codeSection": "27-240(2).f.3",
       "neighborhoodAssociationsRaw": "East Tampa 1, Tampa Overlook Neighborhood Association, Seminole Heights East Neighborhood Association,345 Bayshore Condominium Assn., Tampa Overlook Neighborhood Association, Tampa Overlook Neighborhood Association, The Legacy of Fair Oaks Community Association, Live Oaks Square Neighborhood, Association and Crime Watch",
+      "locationWithheld": false,
       "owner": "Discount Auto Parts Inc 588",
       "applicant": "Gina Penney (Atlas Signs Holding)",
       "neighborhoodAssociations": [
@@ -160,7 +211,16 @@
         "The Legacy of Fair Oaks Community Association",
         "Live Oaks Square Neighborhood",
         "Association and Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000020",
+        "lat": 27.996133,
+        "lng": -82.422303,
+        "address": "3402 E Hillsborough Ave",
+        "neighborhood": "Live Oaks Square",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02VS4&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -174,13 +234,23 @@
       "request": "1. Request to increase free standing signage from 15 square feet to 272 square feet total.\n2. Request to increase in height from 6 feet to 24 feet.",
       "codeSection": "27-240(2)c.f",
       "neighborhoodAssociationsRaw": "Armory Gardens Civic Association, Parkland Estates Civic Club, Inc., Midtown Tampa Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Heavyset Holdings LLC",
       "applicant": "Stephen Michelini",
       "neighborhoodAssociations": [
         "Armory Gardens Civic Association",
         "Parkland Estates Civic Club, Inc.",
         "Midtown Tampa Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000023",
+        "lat": 27.95208,
+        "lng": -82.491331,
+        "address": "3003 W Cypress St",
+        "neighborhood": "Midtown Tampa",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X9A&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -194,6 +264,7 @@
       "request": "Request to reduce front yard setback from 20 feet to 1.5 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Tampa Heights Civic Association, Inc., Bowman Heights, Old Seminole Heights Neighborhood Association, Inc., Tampa Heights Civic Association Land Use Committee, Residents of Adalee St, One Laurel Place, Informed Neighbor, Tampa Overlook Neighborhood Association, Bowman Heights, VM Ybor Neighborhood Association & Crimewatch, Ybor Heights Neighborhood Association and Watch Group, Riverside Heights Civic Association, Riverside Heights Civic Association",
+      "locationWithheld": false,
       "owner": "Monique Asante",
       "applicant": "Deborah Carmody",
       "neighborhoodAssociations": [
@@ -208,7 +279,16 @@
         "VM Ybor Neighborhood Association & Crimewatch",
         "Ybor Heights Neighborhood Association and Watch Group",
         "Riverside Heights Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000034",
+        "lat": 27.96933,
+        "lng": -82.46679,
+        "address": "517 W Plaza Pl",
+        "neighborhood": "Tampa Heights",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=0008A&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 9,
@@ -222,11 +302,21 @@
       "request": "1. Request to increase the maximum allowed height of a freestanding sign from 10 feet to 18 feet 6 inches.\n2. Request to increase the maximum allowable sign face from 50 square feet to 160 square feet for each side at a 5-foot setback from the right of way.",
       "codeSection": "27-289",
       "neighborhoodAssociationsRaw": "Swann Estates Neighborhood Association Inc.",
+      "locationWithheld": false,
       "owner": "Diocese of St Petersburg",
       "applicant": "Fastsigns",
       "neighborhoodAssociations": [
         "Swann Estates Neighborhood Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000038",
+        "lat": 27.935343,
+        "lng": -82.505847,
+        "address": "821 S Dale Mabry Hwy",
+        "neighborhood": "Swann Estates",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002B2&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -240,6 +330,7 @@
       "request": "Reduce screen enclosure setback from 5 feet to 4 feet.",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Ana and Garret King",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -248,7 +339,16 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000039",
+        "lat": 27.919175,
+        "lng": -82.510609,
+        "address": "4023 W Santiago St",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002GZ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -262,6 +362,7 @@
       "request": "Request to reduce rear yard setback from 20 feet to 12 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Parkland Estates Civic Club, Inc., SOHO Business Alliance, Ameryllis Garden Circle, Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West, Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc., New Suburb Beautiful Civic Association, Inc.",
+      "locationWithheld": false,
       "owner": "Diane Gilhool",
       "applicant": "Jaime Maier",
       "neighborhoodAssociations": [
@@ -276,7 +377,16 @@
         "Tampa Heights Civic Association, Inc.",
         "Historic Hyde Park Neighborhood Association, Inc.",
         "New Suburb Beautiful Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000042",
+        "lat": 27.932997,
+        "lng": -82.485488,
+        "address": "2515 W Jetton Ave",
+        "neighborhood": "New Suburb Beautiful",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002MH&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 12,
@@ -290,12 +400,22 @@
       "request": "1. Request to reduce north side yard setback from 7 feet to 5 feet.\n2. Request to reduce south side yard setback from 7 feet to 6 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Davis Islands Civic Association, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "Adam Ross and Meredith Richardson",
       "applicant": "Kormex Construction",
       "neighborhoodAssociations": [
         "Davis Islands Civic Association, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000044",
+        "lat": 27.921488,
+        "lng": -82.450411,
+        "address": "613 E Davis Blvd",
+        "neighborhood": "Davis Islands",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002S0&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 13,
@@ -309,6 +429,7 @@
       "request": "Request to remove a grand oak tree",
       "codeSection": "27-284.2.5",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Michael Rollins and Christen Pilger",
       "applicant": "Domain Homes Inc.",
       "neighborhoodAssociations": [
@@ -317,8 +438,18 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000055",
+        "lat": 27.910777,
+        "lng": -82.510315,
+        "address": "4003 W Kensington Ave",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008NM&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

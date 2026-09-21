@@ -20,7 +20,7 @@
       "pages": 4,
       "textFile": "text/vrb-agenda-january-2026-178206.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-01-13/5d59f030-variance-review-board-vrb-public-hearing-meeting-notice-adav4.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 4,
       "textFile": "text/vrb-agenda-january-2026-updated-1-12-2026-178936.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-01-13/3f4b6d00-a21a072f-b229-427e-a672-dcf769b123d9_january-13-2026-agenda-updated-1-12-26_remediated.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -56,12 +56,22 @@
       "request": "Freestanding sign setback reduction from 5 feet to 0 feet. Increase EMC signage from 16 square feet to 40 square feet. Request to reduce the EMC sign separation distance to 129 feet from 300 feet.",
       "codeSection": "27.289",
       "neighborhoodAssociationsRaw": "Palma Ceia West Neighborhood Association Inc., Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Tack Holdings LLC",
       "applicant": "Addie Mentry",
       "neighborhoodAssociations": [
         "Palma Ceia West Neighborhood Association Inc.",
         "Virginia Park Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000005",
+        "lat": 27.928926,
+        "lng": -82.51105,
+        "address": "4040 Henderson Blvd",
+        "neighborhood": "Palma Ceia West",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02MXC&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -75,6 +85,7 @@
       "request": "Reduce rear yard setback from 20' to 10'.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Tania Rodriguez and Paul Raymond Horst",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -83,7 +94,16 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000072",
+        "lat": 27.91906,
+        "lng": -82.51045,
+        "address": "4014 W Santiago St",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=01ZUG&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -97,12 +117,22 @@
       "request": "Reduce the front setback from 20' to 7', reduce rear yard setback from 20' to 7'",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "Doe Rivera Castelleon",
       "applicant": "Gerald Martinez",
       "neighborhoodAssociations": [
         "Sulphur Springs Action League, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000081",
+        "lat": 28.026763,
+        "lng": -82.455072,
+        "address": "8511 N Lamar Ave",
+        "neighborhood": "Sulphur Springs",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=0251S&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -116,6 +146,7 @@
       "request": "Reduce street side corner property setback from 15 feet to 7 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Golfview Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., Parkland Estates Civic Club, Inc., Palma Ceia Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "James Douglas Rickles and Mary Jane Harrington",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -125,7 +156,16 @@
         "Palma Ceia West Neighborhood Association, Inc.",
         "Parkland Estates Civic Club, Inc.",
         "Palma Ceia Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000012",
+        "lat": 27.92592,
+        "lng": -82.503522,
+        "address": "1042 S Sterling Ave",
+        "neighborhood": "Golfview",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SEV&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -139,12 +179,22 @@
       "request": "Busch Gardens Tampa Bay requests a variance to allow an increase in the maximum allowable square footage for two (2) freestanding ground signs (“Coaster Tree” monument features) proposed along McKinley Drive. The City of Tampa Sign Code permits freestanding monument signs at a maximum of 50 square feet. The applicant is requesting an increase of 256 square feet, resulting in a total sign area of 306 square feet per sign.",
       "codeSection": "27-289",
       "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc., 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "Seaworld Parks and Entertainment LLC",
       "applicant": "Addie Mentry",
       "neighborhoodAssociations": [
         "Terrace Park Civic Association, Inc.",
         "345 Bayshore Condominium Assn."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000013",
+        "lat": 28.033704,
+        "lng": -82.424637,
+        "address": "3000 E Busch Blvd",
+        "neighborhood": "Terrace Park",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SQJ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -158,13 +208,23 @@
       "request": "Request to remove three grand trees, reduce retention from 40% to 0%.",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Highland Pines Community Task Force, Inc., Tampa Overlook Neighborhood Association, Jackson Heights Neighborhood Associated & Crime Watch",
+      "locationWithheld": false,
       "owner": "Kenneth Steve Avalos and Anne Hermann",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
         "Highland Pines Community Task Force, Inc.",
         "Tampa Overlook Neighborhood Association",
         "Jackson Heights Neighborhood Associated & Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000014",
+        "lat": 27.972054,
+        "lng": -82.413437,
+        "address": "3215 N 40th St",
+        "neighborhood": "Highland Pines",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SSI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -178,12 +238,23 @@
       "request": "Request to remove two grand trees",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Plaza Terrace Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Jesuit High School",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
         "Plaza Terrace Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000015",
+        "lat": 27.986922,
+        "lng": -82.499458,
+        "address": "4701 N Himes Ave",
+        "neighborhood": "Plaza Terrace",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SZD&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

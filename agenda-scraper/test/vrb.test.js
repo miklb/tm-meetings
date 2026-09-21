@@ -8,9 +8,12 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
 
-const { parseVrbAgenda, parseHeader, resolveHearingDate, splitAssociations } = require('../lib/vrb-parser');
+const {
+  parseVrbAgenda, parseHeader, resolveHearingDate, splitAssociations, hasStreetAddress, redactWithheldText,
+} = require('../lib/vrb-parser');
 const { parseListing, isPaginated, parseDocumentPage } = require('../lib/tampa-gov-documents');
 const { rebuildHearing, newHearing } = require('../vrb-scraper');
+const { accelaRecordId, isLocatable, parseRecord, matchCase } = require('../lib/dev-coord');
 
 const fixture = (name) => fs.readFileSync(path.join(__dirname, 'fixtures', 'vrb', `${name}.txt`), 'utf8');
 
@@ -38,6 +41,7 @@ test('May 2026 agenda: header, every case, every field', () => {
     request: 'Reduce rear yard setback from 20 feet to 5 feet',
     codeSection: '27-156',
     neighborhoodAssociationsRaw: 'Culbreath Bayou Homeowners Association Inc.',
+    locationWithheld: false,
     owner: 'Kevin James and Jessica Lane Bexley',
     applicant: 'Mark Blanar',
     neighborhoodAssociations: ['Culbreath Bayou Homeowners Association Inc.'],
@@ -219,4 +223,136 @@ test('parseDocumentPage finds the PDF, the posted date and the updated time', ()
     updatedTime: '2026-09-09T08:36:54-04:00',
   });
   assert.equal(parseDocumentPage('<h1>Gone</h1>').pdfUrl, null);
+});
+
+// ---------------------------------------------------------------------------
+// dev-coord feed join
+// ---------------------------------------------------------------------------
+
+const FEED_ROW = {
+  RECORDID: 'VRB-26-0000013',
+  ADDRESS: '3000 E Busch Blvd',
+  NEIGHBORHOOD: 'Terrace Park',
+  COUNCILDISTRICT: '7',
+  URL: 'https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?capID3=00001',
+  geometry: '{"type": "Point", "coordinates": [-82.42411234567, 28.03298765432]}',
+};
+
+test('accelaRecordId pads the sequence to seven digits', () => {
+  assert.equal(accelaRecordId('VRB-26-28'), 'VRB-26-0000028');
+  assert.equal(accelaRecordId('vrb-26-114'), 'VRB-26-0000114');
+  assert.equal(accelaRecordId('not a case'), null);
+});
+
+test('parseRecord reads the point as lat/lng and rejects a row without one', () => {
+  assert.deepEqual(parseRecord(FEED_ROW), {
+    recordId: 'VRB-26-0000013',
+    lat: 28.032988,
+    lng: -82.424112,
+    address: '3000 E Busch Blvd',
+    neighborhood: 'Terrace Park',
+    councilDistrict: '7',
+    accelaUrl: FEED_ROW.URL,
+  });
+  assert.equal(parseRecord({ ...FEED_ROW, geometry: null }), null);
+  assert.equal(parseRecord({ ...FEED_ROW, geometry: 'not json' }), null);
+});
+
+test('matchCase: spelling differences locate, a different house number does not', () => {
+  const record = parseRecord(FEED_ROW);
+  // The agenda really does say "Bush".
+  assert.equal(matchCase({ caseNumber: 'VRB-26-13', location: '3000 E Bush Blvd' }, record).geo, record);
+
+  const wrong = matchCase({ caseNumber: 'VRB-26-13', location: '3100 E Busch Blvd' }, record);
+  assert.equal(wrong.geo, null);
+  assert.match(wrong.warning, /agenda says "3100 E Busch Blvd" but VRB-26-0000013 is "3000 E Busch Blvd"/);
+
+  assert.deepEqual(matchCase({ caseNumber: 'VRB-26-13', location: '3000 E Bush Blvd' }, undefined), { geo: null, warning: null });
+});
+
+test('a location the agenda withholds is never located, even when the feed has it', () => {
+  // VRB-26-69, July 2026: owner and location are "Confidential" on the agenda;
+  // the feed still carries the street address and point.
+  const withheld = { caseNumber: 'VRB-26-69', location: 'Confidential' };
+  assert.equal(isLocatable(withheld), false);
+  assert.deepEqual(matchCase(withheld, parseRecord(FEED_ROW)), { geo: null, warning: null });
+});
+
+test('rebuildHearing carries locations forward by case number, but not onto a withheld location', () => {
+  const text = fixture('vrb-agenda-july-2026-192481');
+  const geo = parseRecord(FEED_ROW);
+  const hearing = {
+    ...newHearing('2026-07-14'),
+    documents: [{ kind: 'agenda', slug: 'july', nodeId: 192481 }],
+    cases: [
+      { caseNumber: 'VRB-26-24', geo },
+      { caseNumber: 'VRB-26-69', geo }, // as if an earlier version had located it
+    ],
+  };
+  const rebuilt = rebuildHearing(hearing, () => text);
+
+  assert.equal(rebuilt.cases.find((c) => c.caseNumber === 'VRB-26-24').geo, geo);
+  const withheld = rebuilt.cases.find((c) => c.caseNumber === 'VRB-26-69');
+  assert.equal(withheld.location, 'Confidential');
+  assert.equal(withheld.geo, null);
+  assert.ok(rebuilt.warnings.some((w) => /VRB-26-69: agenda gives no street address/.test(w)));
+  assert.equal(rebuilt.cases.filter((c) => c.geo).length, 1);
+});
+
+// ---------------------------------------------------------------------------
+// Withheld locations
+// ---------------------------------------------------------------------------
+
+// The July 2026 fixture is stored redacted, as everything under data/vrb/text
+// is. To test redaction, put a made-up folio back where the City printed one.
+const FAKE_FOLIO = '999999.0000';
+const julyAsPublished = () => fixture('vrb-agenda-july-2026-192481').replace('Folio: [withheld]', `Folio: ${FAKE_FOLIO}`);
+
+test('hasStreetAddress: a house number, or the location counts as withheld', () => {
+  assert.equal(hasStreetAddress('4510 S Ferncroft Circle'), true);
+  assert.equal(hasStreetAddress('Confidential'), false);
+  assert.equal(hasStreetAddress('Exempt per F.S. 119.071'), false);
+  assert.equal(hasStreetAddress(null), false);
+});
+
+test('a withheld case loses its folio and is flagged, without a missing-field warning', () => {
+  const agenda = parseVrbAgenda(julyAsPublished());
+  const c = agenda.cases.find((x) => x.caseNumber === 'VRB-26-69');
+  assert.equal(c.location, 'Confidential');
+  assert.equal(c.locationWithheld, true);
+  assert.equal(c.folio, null);
+  assert.deepEqual(agenda.warnings, []);
+  assert.equal(agenda.cases.filter((x) => x.locationWithheld).length, 1);
+  assert.ok(!JSON.stringify(agenda).includes(FAKE_FOLIO));
+});
+
+test('redactWithheldText blanks only the withheld case\'s folio, and is idempotent', () => {
+  const published = julyAsPublished();
+  const redacted = redactWithheldText(published);
+  assert.ok(!redacted.includes(FAKE_FOLIO));
+  assert.equal(redacted, fixture('vrb-agenda-july-2026-192481'));
+  assert.equal(redactWithheldText(redacted), redacted);
+  // Every other folio on the agenda is still there.
+  assert.equal(redacted.match(/^Folio: \d/gm).length, 11);
+  // An agenda with nothing withheld comes back byte for byte.
+  const may = fixture('vrb-agenda-may-2026-189571');
+  assert.equal(redactWithheldText(may), may);
+});
+
+test('redactWithheldText handles a value on the line after its label, and minutes-style headers', () => {
+  const text = [
+    'VI. ITEMS TO BE REVIEWED',
+    '8.VRB-26-69',
+    'Owner/Applicant: Confidential/ASC Aluminum',
+    'Location:', '', 'Confidential',
+    'Folio:', '4', FAKE_FOLIO, // "4" is a page number between label and value
+    'Zoning: Residential Single-Family (RS-60)',
+    '9. VRB-26-73',
+    'Location: 1806 E Annona Ave',
+    'Folio: 144746.0000',
+  ].join('\n');
+  const redacted = redactWithheldText(text);
+  assert.ok(!redacted.includes(FAKE_FOLIO));
+  assert.ok(redacted.includes('Folio: 144746.0000'));
+  assert.equal(parseVrbAgenda(redacted).cases[0].folio, null);
 });

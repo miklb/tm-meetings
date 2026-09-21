@@ -1,0 +1,98 @@
+{% from "components/breadcrumb.njk" import breadcrumb %}
+{{ breadcrumb([
+  { label: "Boards", href: "/boards/" },
+  { label: hearing.boardName ~ ", " ~ (hearing.date | shortDate), current: true }
+]) }}
+
+<h1 class="board-title">{{ hearing.boardName }}</h1>
+
+<div class="meeting-meta">
+  <p>
+    <time datetime="{{ hearing.date }}">{{ hearing.date | readableDate }}</time>
+    {%- if hearing.time %}, {{ hearing.time }}{% endif %}
+    &middot; {{ hearing.cases.length }} case{{ "s" if hearing.cases.length != 1 }}
+  </p>
+  {% if hearing.location %}<p>{{ hearing.location }}</p>{% endif %}
+</div>
+
+{# ── Source documents: the City's page can move, so the archived copy is
+      always offered beside it. ── #}
+{% macro docLinks(doc) %}
+  <span class="board-sources__links">
+    <a href="{{ doc.cityPage }}" rel="noopener noreferrer">{{ doc.title }} on tampa.gov</a>
+    {%- if doc.archivedPdf %} &middot; <a href="{{ doc.archivedPdf }}" rel="noopener noreferrer">archived PDF</a>{% endif %}
+  </span>
+{% endmacro %}
+
+<section class="board-sources" aria-labelledby="sources-heading">
+  <h2 class="board-sources__heading" id="sources-heading">City documents</h2>
+  <ul class="board-sources__list" role="list">
+    {% if hearing.agenda %}<li><span class="board-sources__kind">Agenda</span> {{ docLinks(hearing.agenda) }}</li>{% endif %}
+    {% for doc in hearing.earlierAgendas %}<li><span class="board-sources__kind">Earlier version</span> {{ docLinks(doc) }}</li>{% endfor %}
+    {% for doc in hearing.minutes %}<li><span class="board-sources__kind">Minutes</span> {{ docLinks(doc) }}</li>{% endfor %}
+  </ul>
+  <p class="board-sources__note">This page lists each case by address and request. Owner and applicant names are left off; they are in the City's documents above.</p>
+</section>
+
+{# ── Map: tm-static's agenda map, verbatim (sync-design). Enhancement only;
+      every case is in the list below whether or not this boots. ── #}
+{% if hearing.map %}
+  <section class="board-map" aria-labelledby="map-heading">
+    <h2 id="map-heading">Map</h2>
+    <p class="board-map__note">Each pin is a case on this agenda; select one for its zoning and a link to the case below. Locations are the City's permit points, saved when the agenda was collected.</p>
+    <div class="mapbox-block" data-center="[-82.4572,27.9506]" data-zoom="10.5" data-records="{{ hearing.map.records }}" data-folios="{{ hearing.map.points }}" data-record-details="{{ hearing.map.details }}" data-show-legend="true" data-legend-position="bottom-left"></div>
+  </section>
+{% endif %}
+
+<section aria-labelledby="cases-heading">
+  <h2 id="cases-heading">Cases</h2>
+  {% if hearing.cases.length %}
+    <ol class="case-list" role="list">
+      {% for case in hearing.cases %}
+        <li class="case" id="item-{{ case.id }}">
+          <p class="case__header">
+            <a class="case__number agenda-item__anchor" href="#item-{{ case.id }}" aria-label="Item {{ case.itemNumber }}, {{ case.caseNumber }}">{{ case.itemNumber }}</a>
+            <span class="case__id">{{ case.caseNumber }}</span>
+            {% if case.section %}<span class="case__flag">{{ case.section }}</span>{% endif %}
+            {% if case.note %}<span class="case__flag">{{ case.note }}</span>{% endif %}
+          </p>
+
+          <h3 class="case__address">
+            {%- if case.withheld -%}
+              Address withheld by the City
+            {%- else -%}
+              {{ case.address }}
+            {%- endif -%}
+          </h3>
+
+          {% if case.requests.length > 1 %}
+            <ol class="case__requests">
+              {% for request in case.requests %}<li>{{ request }}</li>{% endfor %}
+            </ol>
+          {% else %}
+            <p class="case__request">{{ case.requests[0] }}</p>
+          {% endif %}
+
+          <dl class="case__facts">
+            {% if case.zoning %}<div><dt>Zoning</dt><dd>{{ case.zoning }}</dd></div>{% endif %}
+            {% if case.codeSection %}<div><dt>Code section</dt><dd>{{ case.codeSection }}</dd></div>{% endif %}
+            {% if case.neighborhood %}<div><dt>Neighborhood</dt><dd>{{ case.neighborhood }}{% if case.councilDistrict %}, Council District {{ case.councilDistrict }}{% endif %}</dd></div>{% endif %}
+            {% if case.associations.length %}
+              <div><dt>Associations notified</dt><dd>{{ case.associations | join("; ") }}</dd></div>
+            {% endif %}
+          </dl>
+
+          {% if case.lat or case.accelaUrl %}
+            <p class="case__links">
+              {% if case.lat %}<a href="https://www.openstreetmap.org/?mlat={{ case.lat }}&amp;mlon={{ case.lng }}#map=18/{{ case.lat }}/{{ case.lng }}" rel="noopener noreferrer">Map<span class="visually-hidden"> of {{ case.address }}</span></a>{% endif %}
+              {% if case.lat and case.accelaUrl %}&middot;{% endif %}
+              {% if case.accelaUrl %}<a href="{{ case.accelaUrl }}" rel="noopener noreferrer">City permit record<span class="visually-hidden"> for {{ case.caseNumber }}</span></a>{% endif %}
+            </p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% else %}
+    <p>No cases are listed on this agenda.</p>
+  {% endif %}
+</section>

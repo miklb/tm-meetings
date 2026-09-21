@@ -20,7 +20,7 @@
       "pages": 6,
       "textFile": "text/vrb-agenda-may-2026-189571.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-05-12/d616e1f3-may-12-2026-agenda-updated_ada_remediated-v2.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 12,
       "textFile": "text/vrb-minutes-may-12-2026-192496.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-05-12/0bc8b60a-vrb-may-12-2026-minutes-ada.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -56,11 +56,21 @@
       "request": "Reduce rear yard setback from 20 feet to 5 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Culbreath Bayou Homeowners Association Inc.",
+      "locationWithheld": false,
       "owner": "Kevin James and Jessica Lane Bexley",
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
         "Culbreath Bayou Homeowners Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000028",
+        "lat": 27.932339,
+        "lng": -82.519597,
+        "address": "4510 S Ferncroft Cir",
+        "neighborhood": "Culbreath Bayou",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XRI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -74,6 +84,7 @@
       "request": "Reduce screen enclosure setback from 5 feet to 2.5 feet",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Bayshore Beautiful Neighborhood Association, Inc., Keep Bayshore Beautiful Inc, Hawthorne Pond Condominium Association Inc., Belmar Gardens Neighborhood, 345 Bayshore Condominium Assn., Ballast Point Neighborhood Association, Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "Eric Pourmand",
       "applicant": "Suncoast Permits",
       "neighborhoodAssociations": [
@@ -84,7 +95,16 @@
         "345 Bayshore Condominium Assn.",
         "Ballast Point Neighborhood Association",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000006",
+        "lat": 27.906379,
+        "lng": -82.490071,
+        "address": "2906 W Bay Vista Ave",
+        "neighborhood": "Bayshore Beautiful",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02QFW&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -98,11 +118,21 @@
       "request": "1. Request to reduce the required setbacks for the proposed accessory structure (Gym & Storage) from required 3 feet side to 2.9 feet and 3 feet rear required to 5.5 feet.\n2. Request to reduce the required separation distance between the proposed accessory structure (Gym & Storage) and the principal structure from 5 feet to 3.8 feet.",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Riverbend Civic Association",
+      "locationWithheld": false,
       "owner": "Erik Garcia",
       "applicant": "Lameza Remodeling",
       "neighborhoodAssociations": [
         "Riverbend Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000011",
+        "lat": 28.007479,
+        "lng": -82.474789,
+        "address": "1602 W Knollwood St",
+        "neighborhood": "Riverbend",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02S5L&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -116,11 +146,21 @@
       "request": "Reduce the side setback from 7ft to 3.5ft",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "University Square Civic Association Inc.",
+      "locationWithheld": false,
       "owner": "Zibannasa Akanda",
       "applicant": "Nasif Akanda",
       "neighborhoodAssociations": [
         "University Square Civic Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000022",
+        "lat": 28.041209,
+        "lng": -82.43854,
+        "address": "1806 E Annona Ave",
+        "neighborhood": "University Square",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X83&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -134,6 +174,7 @@
       "request": "Reduce green space from 25 percent to 15 percent.",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
       "owner": "Baty Ventures LLC",
       "applicant": "Crescent Homes",
       "neighborhoodAssociations": [
@@ -142,7 +183,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000024",
+        "lat": 27.942144,
+        "lng": -82.528493,
+        "address": "5102 W Platt St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XDT&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -156,6 +206,7 @@
       "request": "Reduce the rear setback from 5 feet to 3 feet for a screen enclosure",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
       "owner": "Mark Robery Flom",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -164,7 +215,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000035",
+        "lat": 27.937821,
+        "lng": -82.521914,
+        "address": "4525 W Swann Ave",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=000VC&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -178,13 +238,23 @@
       "request": "Reduce front yard setback from 20 feet to 5 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Ballast Point Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Ballast Point Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Eric Bronson",
       "applicant": null,
       "neighborhoodAssociations": [
         "Ballast Point Neighborhood Association",
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000040",
+        "lat": 27.880685,
+        "lng": -82.488994,
+        "address": "2822 W Bay Ave",
+        "neighborhood": "Ballast Point",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002H1&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -198,11 +268,21 @@
       "request": "1. Removal of 2 grand trees\n2. Reduce tree retention from 50 percent to 7 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Jackson Heights Neighborhood Associated & Crime Watch",
+      "locationWithheld": false,
       "owner": "Broadway Holdings LLC",
       "applicant": "Kevin Bynum",
       "neighborhoodAssociations": [
         "Jackson Heights Neighborhood Associated & Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000043",
+        "lat": 27.96365,
+        "lng": -82.394326,
+        "address": "5507 E Broadway Ave",
+        "neighborhood": "East Side Commercial",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002QP&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 9,
@@ -216,13 +296,23 @@
       "request": "Increase height from 15 feet to 18 feet on an existing garage",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Live Oaks Square Neighborhood Association and Crime Watch, Tampa Overlook Neighborhood Association, Seminole Heights East Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Lucan Simeon",
       "applicant": "Sims Handy LLC",
       "neighborhoodAssociations": [
         "Live Oaks Square Neighborhood Association and Crime Watch",
         "Tampa Overlook Neighborhood Association",
         "Seminole Heights East Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000051",
+        "lat": 27.999682,
+        "lng": -82.422081,
+        "address": "3415 E Henry Ave",
+        "neighborhood": "Live Oaks Square",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008GR&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -236,6 +326,7 @@
       "request": "Reduce rear yard setback for 20 feet to 5 feet for elevated pool",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
       "owner": "Baty Ventures LLC",
       "applicant": "Youtopia Pools LLC",
       "neighborhoodAssociations": [
@@ -244,7 +335,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000052",
+        "lat": 27.942145,
+        "lng": -82.528611,
+        "address": "5108 W Platt St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008HB&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -258,6 +358,7 @@
       "request": "1. Reduce side yard setback from 7 feet to 3 feet\n2. Reduce vehicular entrance setback from 10 to 3 feet.\n3. Reduce rear yard setback from 20 feet to 3 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Bayshore Beautiful Neighborhood Association, Inc., Keep Bayshore Beautiful Inc, Hawthorne Pond Condominium Association Inc., Belmar Gardens Neighborhood, 345 Bayshore Condominium Assn., Ballast Point Neighborhood Association, Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "John Zachary and Abigail Reynolds",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -268,8 +369,18 @@
         "345 Bayshore Condominium Assn.",
         "Ballast Point Neighborhood Association",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000060",
+        "lat": 27.89852,
+        "lng": -82.498013,
+        "address": "3301 W Alline Ave",
+        "neighborhood": "Bayshore Beautiful",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00AOC&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

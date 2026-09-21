@@ -1,0 +1,27 @@
+{% from "components/section-head.njk" import sectionHead %}
+<h1 class="board-title">Land Use Boards</h1>
+
+<p class="board-intro">Setbacks, tree removals, fences, signs: the small land use decisions that shape a block are made by appointed boards, not City Council, and their agendas are posted as PDFs apart from the council record. This archive keeps them, case by case.</p>
+
+<section class="board-section" aria-labelledby="vrb-heading">
+  {{ sectionHead("Variance Review Board", id="vrb-heading") }}
+  <p>The VRB hears requests to vary from the zoning, tree and landscape, and sign codes. It meets the second Tuesday of the month at 5:30 PM in City Council Chambers.</p>
+
+  {% if boards.vrb.hearings.length %}
+    <ul class="hearing-list" role="list">
+      {% for hearing in boards.vrb.hearings %}
+        <li class="hearing-list__item">
+          <a class="hearing-list__link" href="{{ hearing.url }}">
+            <time datetime="{{ hearing.date }}">{{ hearing.date | readableDate }}</time>
+          </a>
+          <span class="hearing-list__meta">
+            {{ hearing.cases.length }} case{{ "s" if hearing.cases.length != 1 }}
+            {%- if hearing.minutes.length %} &middot; minutes posted{% endif %}
+          </span>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hearings collected yet.</p>
+  {% endif %}
+</section>

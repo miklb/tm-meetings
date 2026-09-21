@@ -20,7 +20,7 @@
       "pages": 7,
       "textFile": "text/vrb-agenda-july-2026-192481.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-07-14/fda20346-vrb-july-14-2026.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 12,
       "textFile": "text/vrb-minutes-july-14-2026-194931.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-07-14/9c08e0df-july-14-2026-vrb-minutes-ada.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -56,6 +56,7 @@
       "request": "Reduce green space from 25 percent to 15 percent.",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
       "owner": "Baty Ventures LLC",
       "applicant": "Crescent Homes",
       "neighborhoodAssociations": [
@@ -64,7 +65,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000024",
+        "lat": 27.942144,
+        "lng": -82.528493,
+        "address": "5102 W Platt St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XDT&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -78,6 +88,7 @@
       "request": "Reduce rear setback from 20’ to 7’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Bayshore Beautiful Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., Keep Bayshore Beautiful Inc, Hawthorne Pond Condominium Association Inc., Belmar Gardens Neighborhood, 345 Bayshore Condominium Assn., Ballast Point Neighborhood Association, Parkland Estates Civic Club, Inc., Palma Ceia Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Britney and Brent Burch",
       "applicant": "Jansel Irarragorry",
       "neighborhoodAssociations": [
@@ -92,7 +103,16 @@
         "345 Bayshore Condominium Assn.",
         "Ballast Point Neighborhood Association",
         "Palma Ceia Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000050",
+        "lat": 27.911444,
+        "lng": -82.497427,
+        "address": "3501 S Drexel Ave",
+        "neighborhood": "Bayshore Beautiful",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=0073K&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -106,6 +126,7 @@
       "request": "Reduce accessory structure setback from 3’ to 2.4”",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "FairOaks/Manhattan Manor Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Christopher Barrow and Andrea Caby",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -113,7 +134,16 @@
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood",
         "Virginia Park Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000053",
+        "lat": 27.89664,
+        "lng": -82.513955,
+        "address": "4613 S Lois Ave",
+        "neighborhood": "FairOaks Manhattan",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008LZ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -127,6 +157,7 @@
       "request": "1. Reduce the rear setback from 12' to 7' to accommodate pre- existing condition.\n2. Reduce the side yard setback from 15' to 10' to accommodate a 2-car carport.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
       "owner": "Kelly Wilson",
       "applicant": "Gary Trupp",
       "neighborhoodAssociations": [
@@ -135,7 +166,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000058",
+        "lat": 27.935894,
+        "lng": -82.523333,
+        "address": "4622 Woodmere Rd",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=009I6&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -149,6 +189,7 @@
       "request": "Reduce rear pool setback from 5’ to 3’",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Cameron and Brittany Brown",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -157,7 +198,16 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000061",
+        "lat": 27.921869,
+        "lng": -82.514714,
+        "address": "4224 W Barcelona St",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00BT8&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -171,6 +221,7 @@
       "request": "Increase allowable sign square footage from 19 square feet to 27 square feet.",
       "codeSection": "27-243",
       "neighborhoodAssociationsRaw": "North Hyde Park Civic Association, Inc., Westland Park HOA, SOHO Business Alliance, Ameryllis Garden Circle, Parkland Estates Civic Club, Inc., Historic Hyde Park Neighborhood Association, Inc., West Tampa CRA Community Advisory Committee, SOHO Business Alliance, North Hyde Park Civic Asso., Neighborhood Crime Watch, NORTH HYDE PARK ALLIANCE., Bowman Heights, West Riverfront Neighborhood Crimewatch Association, Inc., Armory Gardens Civic Association, Parkland Estates Civic Club, Inc., Historic Hyde Park Neighborhood Association, Inc., SoHo Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Palori Commercial Properties Et Al",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -188,7 +239,16 @@
         "West Riverfront Neighborhood Crimewatch Association, Inc.",
         "Armory Gardens Civic Association",
         "SoHo Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000066",
+        "lat": 27.94478,
+        "lng": -82.479061,
+        "address": "1917 W Kennedy Blvd",
+        "neighborhood": "North Hyde Park",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00F41&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -202,12 +262,22 @@
       "request": "Remove 3 grand tree",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Tampa Overlook Neighborhood Association, 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "St. Joseph’s Hospital Inc",
       "applicant": null,
       "neighborhoodAssociations": [
         "Tampa Overlook Neighborhood Association",
         "345 Bayshore Condominium Assn."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000067",
+        "lat": 27.9814,
+        "lng": -82.491013,
+        "address": "3001 W Dr Martin Luther King Jr Blvd",
+        "neighborhood": "Plaza Terrace",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00F52&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -216,16 +286,18 @@
       "section": "New Business",
       "ownerApplicant": "Confidential/ASC Aluminum",
       "location": "Confidential",
-      "folio": "096834.0000",
+      "folio": null,
       "zoning": "Residential Single-Family (RS-60)",
       "request": "Reduce front yard setback from 25’ to 6’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Forest Hills Neighborhood Association, Inc",
+      "locationWithheld": true,
       "owner": "Confidential",
       "applicant": "ASC Aluminum",
       "neighborhoodAssociations": [
         "Forest Hills Neighborhood Association, Inc"
-      ]
+      ],
+      "geo": null
     },
     {
       "itemNumber": 9,
@@ -239,11 +311,21 @@
       "request": "Reduce tree retention from 50 percent to 0 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Palmetto Beach Community Association, Inc.",
+      "locationWithheld": false,
       "owner": "Amalie Oil R E LLP",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
         "Palmetto Beach Community Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000073",
+        "lat": 27.923003,
+        "lng": -82.411959,
+        "address": "4001 Causeway Blvd",
+        "neighborhood": "Port of Tampa",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00LGA&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -257,11 +339,21 @@
       "request": "Reduce green space from 25 percent to 13 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Armenia Garden Estates Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Ivette Lacosta",
       "applicant": null,
       "neighborhoodAssociations": [
         "Armenia Garden Estates Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000074",
+        "lat": 28.019994,
+        "lng": -82.484467,
+        "address": "2504 W Marquette Ave",
+        "neighborhood": "Armenia Gardens Estates",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00LJ4&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -275,6 +367,7 @@
       "request": "Reduce rear yard setback from 20 feet to 14’ 1 1/16”",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Parkland Estates Civic Club, Inc., SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Peter and Laurie Lackman",
       "applicant": "Scott Geresy",
       "neighborhoodAssociations": [
@@ -285,7 +378,16 @@
         "Palma Ceia West Neighborhood Association, Inc.",
         "Tampa Heights Civic Association, Inc.",
         "Historic Hyde Park Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000075",
+        "lat": 27.936789,
+        "lng": -82.489541,
+        "address": "2804 W Fountain Blvd",
+        "neighborhood": "Parkland Estates",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00LM2&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 12,
@@ -299,13 +401,26 @@
       "request": "Reduce eave to eave separation from 5’ to 3’ 10”",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Davis Islands Civic Association, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "David and India Witte",
       "applicant": null,
       "neighborhoodAssociations": [
         "Davis Islands Civic Association, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000079",
+        "lat": 27.933357,
+        "lng": -82.458278,
+        "address": "61 Albemarle Ave",
+        "neighborhood": "Davis Islands",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00QVD&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [
+    "VRB-26-69: agenda gives no street address (\"Confidential\"); never located"
+  ],
+  "geoWarnings": []
 }

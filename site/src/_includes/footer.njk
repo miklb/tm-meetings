@@ -20,5 +20,9 @@
 <script src="/js/search.js" defer="defer"></script>
 <script src="/js/agenda-drawer.js" defer="defer"></script>
 {% endif %}
+{# Board hearing pages: defer the MapLibre stack until the map nears the viewport #}
+{% if hearing and hearing.map %}
+<script src="/assets/js/map-loader.js" defer="defer"></script>
+{% endif %}
 </body>
 </html>

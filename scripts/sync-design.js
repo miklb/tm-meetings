@@ -2,7 +2,8 @@
 /* sync-design.js — one-way design-system sync: tm-static → this repo.
  *
  * tm-static (~/tampa-monitor/tm-static, the Monitor build home) is the source of truth
- * for the shared design system. This copies the shared CSS files over VERBATIM,
+ * for the shared design system. This copies the shared CSS files (and the map
+ * stack: maps.js + map-loader.js, used by the board hearing pages) over VERBATIM,
  * so run it whenever tm-static's design layer changes (or before touching the
  * site chrome here). The contract that makes that safe:
  *
@@ -14,6 +15,8 @@
  * Usage:
  *   npm run sync-design            copy anything that drifted
  *   npm run sync-design -- --check report drift without writing (exit 1 if any)
+ *   ... --only <text>              just the files whose name contains <text>, e.g.
+ *                                  `--only map` for the map stack without the rest
  *   ... --from <path>              tm-static checkout somewhere other than ../tm-static
  */
 "use strict";
@@ -35,27 +38,39 @@ const FILES = [
   "components/section-head.css",
   "components/site-footer.css",
   "components/toolbox.css", // parked (not imported by app.css) — kept fresh for re-hook
+  "components/map.css",
   "components/topbar.css",
 ];
 
+// the MapLibre stack, same contract: pristine copies, never edited here.
+// map-loader.js loads /assets/js/maps.js, so the destination path is fixed.
+const JS_FILES = ["map-loader.js", "maps.js"];
+
 const repoRoot = path.resolve(__dirname, "..");
 const destRoot = path.join(repoRoot, "site", "public", "css");
+const jsDestRoot = path.join(repoRoot, "site", "public", "assets", "js");
 
 const args = process.argv.slice(2);
 const check = args.includes("--check");
 const fromIdx = args.indexOf("--from");
+const onlyIdx = args.indexOf("--only");
+const only = onlyIdx !== -1 ? args[onlyIdx + 1] : null;
 const srcBase = fromIdx !== -1 ? path.resolve(args[fromIdx + 1]) : path.resolve(repoRoot, "..", "tm-static");
 const srcRoot = path.join(srcBase, "src", "assets", "css");
+const jsSrcRoot = path.join(srcBase, "src", "assets", "js");
 
 if (!fs.existsSync(srcRoot)) {
   console.error(`source not found: ${srcRoot}\n(point at a tm-static checkout with --from <path>)`);
   process.exit(1);
 }
 
+const JOBS = [
+  ...FILES.map((file) => ({ file, src: path.join(srcRoot, file), dest: path.join(destRoot, file) })),
+  ...JS_FILES.map((file) => ({ file: `js/${file}`, src: path.join(jsSrcRoot, file), dest: path.join(jsDestRoot, file) })),
+].filter((job) => !only || job.file.includes(only));
+
 let drifted = 0;
-for (const file of FILES) {
-  const src = path.join(srcRoot, file);
-  const dest = path.join(destRoot, file);
+for (const { file, src, dest } of JOBS) {
   if (!fs.existsSync(src)) {
     console.error(`missing in tm-static: ${file} (removed there? update FILES)`);
     process.exitCode = 1;

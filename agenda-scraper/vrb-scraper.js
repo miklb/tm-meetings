@@ -17,6 +17,7 @@
  *   node vrb-scraper.js             collect new and recently changed documents
  *   node vrb-scraper.js --all       re-check every listed document page
  *   node vrb-scraper.js --mirror    also copy PDFs to R2 (needs the S3_* env)
+ *   node vrb-scraper.js --geo       also look up unlocated cases in old hearings
  *   node vrb-scraper.js --reparse   re-run the parser over stored text, offline
  */
 
@@ -28,8 +29,9 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const { parseVrbAgenda, resolveHearingDate } = require('./lib/vrb-parser');
+const { parseVrbAgenda, resolveHearingDate, redactWithheldText } = require('./lib/vrb-parser');
 const { extractTextFromBuffer } = require('./lib/pdf-text-extractor');
+const { accelaRecordId, isLocatable, matchCase, fetchRecords } = require('./lib/dev-coord');
 const { SITE, parseListing, isPaginated, parseDocumentPage, fetchHtml, fetchPdf } = require('./lib/tampa-gov-documents');
 
 const LISTINGS = [
@@ -48,6 +50,11 @@ const REQUEST_GAP_MS = 1000;
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 const today = () => new Date().toISOString().slice(0, 10);
 const textPath = (slug) => path.join(TEXT_DIR, `${slug}.txt`);
+
+/** @returns {string|null} null when the text was never stored or has gone missing */
+function readStoredText(slug) {
+  return fs.existsSync(textPath(slug)) ? fs.readFileSync(textPath(slug), 'utf8') : null;
+}
 
 function loadHearings() {
   const hearings = new Map();
@@ -71,7 +78,7 @@ function findDocument(hearings, slug) {
  * The latest posted agenda is canonical; earlier ones stay in `documents` as
  * history. Cases are always re-derived from the canonical agenda's stored text.
  */
-function rebuildHearing(hearing) {
+function rebuildHearing(hearing, readText = readStoredText) {
   // Order by Drupal node id, i.e. by when staff created the document page.
   // "Date Posted" is typed by hand and cannot be trusted for this: both
   // January 2026 agendas carry 2026-03-10, and the March agenda is dated
@@ -81,25 +88,67 @@ function rebuildHearing(hearing) {
 
   const canonical = hearing.documents.filter((d) => d.kind === 'agenda').pop();
   hearing.canonicalAgenda = canonical ? canonical.slug : null;
+  hearing.geoWarnings = hearing.geoWarnings || [];
 
-  if (canonical && !fs.existsSync(textPath(canonical.slug))) {
+  const text = canonical ? readText(canonical.slug) : null;
+  if (canonical && text === null) {
     // Keep the stored cases rather than lose the night's other hearings to a throw.
     hearing.warnings = [`Stored text for ${canonical.slug} is missing; cases not re-derived`];
     return hearing;
   }
 
+  // Locations come from the dev-coord feed, not the PDF, so they are carried
+  // across the re-derive by case number.
+  const located = new Map((hearing.cases || []).filter((c) => c.geo).map((c) => [c.caseNumber, c.geo]));
   hearing.cases = [];
   hearing.warnings = [];
 
   if (canonical) {
-    const parsed = parseVrbAgenda(fs.readFileSync(textPath(canonical.slug), 'utf8'));
+    const parsed = parseVrbAgenda(text);
     hearing.hearingTime = parsed.hearingTime;
     hearing.location = parsed.location;
-    hearing.cases = parsed.cases;
+    // isLocatable is enforced here as well as at lookup, so a location the
+    // agenda withholds can never ride in on a carried-forward value.
+    hearing.cases = parsed.cases.map((c) => ({
+      ...c,
+      geo: (isLocatable(c) && located.get(c.caseNumber)) || null,
+    }));
     hearing.warnings = parsed.warnings;
+    for (const c of hearing.cases.filter((c) => !isLocatable(c))) {
+      hearing.warnings.push(`${c.caseNumber}: agenda gives no street address ("${c.location}"); never located`);
+    }
     if (!parsed.cases.length) hearing.warnings.push('Agenda has no cases (cancellation notice?)');
   }
   return hearing;
+}
+
+/**
+ * Look up each unlocated case in the dev-coord feed. Recent hearings are
+ * retried nightly (a case can reach the feed after the agenda posts); settled
+ * ones only with --geo. The feed being down is not a collection failure: the
+ * cases stay unlocated and the next run tries again.
+ */
+async function locateCases(hearings, options) {
+  const cutoff = new Date(Date.now() - SETTLED_AFTER_DAYS * 86400000).toISOString().slice(0, 10);
+  for (const hearing of hearings.values()) {
+    const unlocated = hearing.cases.filter((c) => !c.geo && isLocatable(c));
+    if (!unlocated.length || !(options.geo || hearing.hearingDate >= cutoff)) continue;
+
+    try {
+      const records = await fetchRecords(unlocated.map((c) => accelaRecordId(c.caseNumber)).filter(Boolean));
+      hearing.geoWarnings = [];
+      for (const c of unlocated) {
+        const { geo, warning } = matchCase(c, records.get(accelaRecordId(c.caseNumber)));
+        c.geo = geo;
+        if (warning) hearing.geoWarnings.push(warning);
+      }
+      const located = hearing.cases.filter((c) => c.geo).length;
+      console.log(`[VRB] ${hearing.hearingDate}: ${located}/${hearing.cases.length} cases located`);
+    } catch (err) {
+      console.warn(`[VRB] ⚠️  dev-coord lookup failed for ${hearing.hearingDate}: ${err.message}`);
+    }
+    await sleep(REQUEST_GAP_MS);
+  }
 }
 
 function saveHearings(hearings) {
@@ -111,12 +160,12 @@ function saveHearings(hearings) {
       if (fs.existsSync(file)) fs.unlinkSync(file);
       continue;
     }
-    const json = `${JSON.stringify(rebuildHearing(hearing), null, 2)}\n`;
+    const json = `${JSON.stringify(hearing, null, 2)}\n`;
     if (fs.existsSync(file) && fs.readFileSync(file, 'utf8') === json) continue;
     fs.writeFileSync(file, json);
     written++;
     console.log(`[VRB] wrote ${path.relative(__dirname, file)} (${hearing.cases.length} cases, ${hearing.documents.length} documents)`);
-    const warnings = [...hearing.warnings, ...hearing.documents.flatMap((d) => d.warnings || [])];
+    const warnings = [...hearing.warnings, ...hearing.geoWarnings, ...hearing.documents.flatMap((d) => d.warnings || [])];
     for (const warning of warnings) console.warn(`[VRB]   ⚠️  ${warning}`);
   }
   return written;
@@ -130,7 +179,13 @@ function saveHearings(hearings) {
 function regroup(hearings) {
   const documents = [...hearings.values()].flatMap((hearing) => hearing.documents.splice(0));
   for (const doc of documents) {
-    const resolved = resolveHearingDate(fs.readFileSync(textPath(doc.slug), 'utf8'), doc.title);
+    const stored = fs.readFileSync(textPath(doc.slug), 'utf8');
+    const text = redactWithheldText(stored);
+    if (text !== stored) {
+      fs.writeFileSync(textPath(doc.slug), text);
+      console.log(`[VRB] redacted withheld case details in ${doc.textFile}`);
+    }
+    const resolved = resolveHearingDate(text, doc.title);
     doc.warnings = resolved.warnings;
     if (!hearings.has(resolved.hearingDate)) hearings.set(resolved.hearingDate, newHearing(resolved.hearingDate));
     hearings.get(resolved.hearingDate).documents.push(doc);
@@ -149,6 +204,7 @@ function newHearing(hearingDate) {
     documents: [],
     cases: [],
     warnings: [],
+    geoWarnings: [],
   };
 }
 
@@ -191,7 +247,10 @@ async function collectDocument(listed, kind, hearings, options) {
     hearingDate = known.hearing.hearingDate;
     Object.assign(doc, { pdfUrl: page.pdfUrl, updatedTime: page.updatedTime });
   } else {
-    const { text, pages } = await extractTextFromBuffer(buffer);
+    const extracted = await extractTextFromBuffer(buffer);
+    const { pages } = extracted;
+    // Only the redacted text is ever written or parsed.
+    const text = redactWithheldText(extracted.text);
     const title = page.title || listed.title;
     const resolved = resolveHearingDate(text, title);
     ({ hearingDate } = resolved);
@@ -244,11 +303,12 @@ async function main() {
 
   if (args.has('--reparse')) {
     const regrouped = regroup(hearings);
+    for (const hearing of regrouped.values()) rebuildHearing(hearing);
     console.log(`[VRB] re-parsed ${regrouped.size} hearings, ${saveHearings(regrouped)} changed`);
     return 0;
   }
 
-  const options = { all: args.has('--all'), mirror: null };
+  const options = { all: args.has('--all'), geo: args.has('--geo'), mirror: null };
   if (args.has('--mirror')) {
     const { DocumentMirror } = require('./lib/document-mirror');
     options.mirror = new DocumentMirror();
@@ -278,6 +338,8 @@ async function main() {
     }
   }
 
+  for (const hearing of hearings.values()) rebuildHearing(hearing);
+  await locateCases(hearings, options);
   saveHearings(hearings);
   console.log(`[VRB] done — ${Object.entries(counts).map(([k, n]) => `${n} ${k}`).join(', ')}`);
   return counts.failed ? 1 : 0;
@@ -290,4 +352,4 @@ if (require.main === module) {
   });
 }
 
-module.exports = { rebuildHearing, newHearing };
+module.exports = { rebuildHearing, newHearing, locateCases };

@@ -1,0 +1,13 @@
+{
+  "layout": "base.njk",
+  "pagination": {
+    "data": "boards.vrb.hearings",
+    "size": 1,
+    "alias": "hearing"
+  },
+  "permalink": "boards/{{ hearing.board }}/{{ hearing.date }}/",
+  "eleventyComputed": {
+    "title": "{{ hearing.boardName }}, {{ hearing.date | readableDate }} — Tampa Meetings",
+    "description": "{{ hearing.cases.length }} variance requests before Tampa's {{ hearing.boardName }} on {{ hearing.date | readableDate }}, by address."
+  }
+}

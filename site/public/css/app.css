@@ -30,9 +30,11 @@
 @import url("components/site-footer.css");
 @import url("components/section-head.css");
 @import url("components/breadcrumb.css");
+@import url("components/map.css");
 
 /* meetings-specific polish (above components) */
 @import url("local.css");
 @import url("notifications.css");
+@import url("boards.css");
 
 @import url("utilities.css");

@@ -20,7 +20,7 @@
       "pages": 3,
       "textFile": "text/vrb-agenda-march-2026-187226.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-03-10/d1bff9a1-march-10-2026-agenda-1_0.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 7,
       "textFile": "text/vrb-minutes-march-10-2026-187986.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-03-10/e7555a8a-march_10_2026_vrb_minutes-002-ada.pdf",
       "previousVersions": [],
       "warnings": [
         "PDF header says tuesday 2026-03-13, which is a friday; using 2026-03-10 from the document title"
@@ -58,12 +58,22 @@
       "request": "Increase text height from 12 inches to 31 inches Increase sign square footage from 15 square feet to 72 square feet Increase height from 6 feet to 49 feet with a setback of 12 feet on the south and 130 feet to the west.",
       "codeSection": "27-240",
       "neighborhoodAssociationsRaw": "Highland Pines Community Task Force, Inc., Jackson Heights Neighborhood Associated & Crime Watch, Jackson Heights Neighborhood Associated & Crime Watch",
+      "locationWithheld": false,
       "owner": "Giant Oil Inc",
       "applicant": "Johnson Pope",
       "neighborhoodAssociations": [
         "Highland Pines Community Task Force, Inc.",
         "Jackson Heights Neighborhood Associated & Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000008",
+        "lat": 27.969516,
+        "lng": -82.401577,
+        "address": "2901 N 50th St",
+        "neighborhood": "Florence Villa",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02RHJ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -77,6 +87,7 @@
       "request": "Reduce rear yard setback from 20 feet to 0 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Palma Ceia Pines, SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc., Palma Ceia Pines, Armory Gardens Civic Association, Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "Matt Britten",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -89,7 +100,16 @@
         "Historic Hyde Park Neighborhood Association, Inc.",
         "Armory Gardens Civic Association",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000018",
+        "lat": 27.936903,
+        "lng": -82.489106,
+        "address": "2713 W Fountain Blvd",
+        "neighborhood": "Parkland Estates",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02U79&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -103,12 +123,22 @@
       "request": "Increase building signs from 1 to 2 Increase building sign square footage from 25 to 48.96",
       "codeSection": "27-240(2).f.3",
       "neighborhoodAssociationsRaw": "East Tampa 1, Tampa Overlook Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Whlr Tampa Festival LLC",
       "applicant": "Mark Brenchley",
       "neighborhoodAssociations": [
         "East Tampa 1",
         "Tampa Overlook Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000021",
+        "lat": 27.996013,
+        "lng": -82.431813,
+        "address": "2525 E Hillsborough Ave",
+        "neighborhood": "East Tampa 1",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X7O&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -122,11 +152,21 @@
       "request": "Reduce rear yard setback from 20 feet to 5 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Culbreath Bayou Homeowners Association Inc.",
+      "locationWithheld": false,
       "owner": "Kevin James and Jessica Lane Bexley",
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
         "Culbreath Bayou Homeowners Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000028",
+        "lat": 27.932339,
+        "lng": -82.519597,
+        "address": "4510 S Ferncroft Cir",
+        "neighborhood": "Culbreath Bayou",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XRI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -140,12 +180,22 @@
       "request": "Reduce rear yard setback from 20 feet to 9 feet and east side setback from 7 to 4 on the east side. For pool deck over 12 inches above grade.",
       "codeSection": "27-290.3",
       "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association Inc., Virginia Park Neighborhood Association, Inc",
+      "locationWithheld": false,
       "owner": "Adobe Homes Inc.",
       "applicant": "Innovative Pools",
       "neighborhoodAssociations": [
         "Sunset Park Area Homeowners Association Inc.",
         "Virginia Park Neighborhood Association, Inc"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000033",
+        "lat": 27.918887,
+        "lng": -82.529592,
+        "address": "5023 W Dante Ave",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02ZXR&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -159,13 +209,24 @@
       "request": "Reduce tree retention from 50 percent to 6 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc, 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "City of Tampa",
       "applicant": "Meredith Beyer",
       "neighborhoodAssociations": [
         "Terrace Park Civic Association, Inc",
         "345 Bayshore Condominium Assn."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000045",
+        "lat": 28.04727,
+        "lng": -82.403639,
+        "address": "4902 E Whiteway Dr",
+        "neighborhood": "Terrace Park",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=003Q4&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

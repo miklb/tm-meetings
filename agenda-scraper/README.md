@@ -254,6 +254,7 @@ site, the agenda posts) reads its output yet, and it is independent of
 node vrb-scraper.js             # collect new and recently changed documents
 node vrb-scraper.js --all       # re-check every listed document page
 node vrb-scraper.js --mirror    # also copy PDFs to R2 (needs the S3_* env)
+node vrb-scraper.js --geo       # also look up unlocated cases in old hearings
 node vrb-scraper.js --reparse   # re-run the parser over stored text, offline
 ```
 
@@ -282,6 +283,25 @@ Each hearing file holds:
   `owner`/`applicant`, `location`, `folio`, `zoning`, `request`, `codeSection`,
   and `neighborhoodAssociations`, the City's list of associations notified for
   the case (`neighborhoodAssociationsRaw` keeps it as typed).
+- `cases[].geo` — `lat`, `lng`, the City's `neighborhood` label,
+  `councilDistrict`, `accelaUrl` and the feed's `address`, looked up in the
+  dev-coord Datasette by Accela record id (`VRB-26-28` → `VRB-26-0000028`) when
+  the case is collected, because the feed archives closed records. A record is
+  attached only if its house number matches the agenda's; a disagreement goes
+  to `geoWarnings` and the case stays unlocated. `null` until found; recent
+  hearings are retried nightly.
+- **Withheld locations stay withheld, and the rule errs toward privacy.** When
+  the agenda gives no street address (VRB-26-69 lists owner and location as
+  "Confidential", the City's mark for a public-records exemption), the case is
+  flagged `locationWithheld: true` and everything that could identify the
+  parcel is dropped from what this repo publishes: `folio` is `null` even
+  though the City's PDF prints it, the folio is blanked to `[withheld]` in the
+  stored `text/` files (agenda and minutes), and `geo` is never looked up even
+  though the feed has the address. Enforced in `lib/vrb-parser.js`
+  (`hasStreetAddress`, `redactWithheldText`) and `lib/dev-coord.js`
+  (`isLocatable`), at collection and again on every re-derive. Anything built
+  on this data (pages, maps, alerts, new enrichment) must respect
+  `locationWithheld`. The mirrored PDF is the City's document, unaltered.
 - `warnings` — anything the parser did not expect. Fields are stored as the
   clerk typed them, stray commas and folio variants included.
 
