@@ -1,0 +1,171 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-03-10",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-march-2026-187226",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-march-2026-187226",
+      "nodeId": 187226,
+      "title": "VRB Agenda - March 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-march-2026-187226",
+      "postedDate": "2026-03-13",
+      "updatedTime": "2026-04-08T13:25:52-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/march-10-2026-agenda-1_0.pdf",
+      "pdfSha256": "d1bff9a1bc46c103af5e23d59896a4446c7c2a2e442a205dd30b96f705216430",
+      "pdfBytes": 232161,
+      "pages": 3,
+      "textFile": "text/vrb-agenda-march-2026-187226.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    },
+    {
+      "kind": "minutes",
+      "slug": "vrb-minutes-march-10-2026-187986",
+      "nodeId": 187986,
+      "title": "VRB Minutes - March 10, 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-minutes-march-10-2026-187986",
+      "postedDate": "2026-03-31",
+      "updatedTime": "2026-03-31T10:10:55-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/march_10_2026_vrb_minutes-002-ada.pdf",
+      "pdfSha256": "e7555a8ad7c7c93fbf459fc5470e3e50d31b60d53cbee3c6dea27dff425e3899",
+      "pdfBytes": 292160,
+      "pages": 7,
+      "textFile": "text/vrb-minutes-march-10-2026-187986.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": [
+        "PDF header says tuesday 2026-03-13, which is a friday; using 2026-03-10 from the document title"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-08",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Giant Oil Inc/Johnson Pope",
+      "location": "2901 N 50th St.",
+      "folio": "159390.0000",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Increase text height from 12 inches to 31 inches Increase sign square footage from 15 square feet to 72 square feet Increase height from 6 feet to 49 feet with a setback of 12 feet on the south and 130 feet to the west.",
+      "codeSection": "27-240",
+      "neighborhoodAssociationsRaw": "Highland Pines Community Task Force, Inc., Jackson Heights Neighborhood Associated & Crime Watch, Jackson Heights Neighborhood Associated & Crime Watch",
+      "owner": "Giant Oil Inc",
+      "applicant": "Johnson Pope",
+      "neighborhoodAssociations": [
+        "Highland Pines Community Task Force, Inc.",
+        "Jackson Heights Neighborhood Associated & Crime Watch"
+      ]
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-18",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Matt Britten",
+      "location": "2713 W Fountain Blvd",
+      "folio": "117867.0050",
+      "zoning": "Residential Single-Family (RS-75)",
+      "request": "Reduce rear yard setback from 20 feet to 0 feet",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Palma Ceia Pines, SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc., Palma Ceia Pines, Armory Gardens Civic Association, Parkland Estates Civic Club, Inc.",
+      "owner": "Matt Britten",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Palma Ceia Pines",
+        "SOHO Business Alliance",
+        "Parkland Estates Civic Club",
+        "Bowman Heights",
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Tampa Heights Civic Association, Inc.",
+        "Historic Hyde Park Neighborhood Association, Inc.",
+        "Armory Gardens Civic Association",
+        "Parkland Estates Civic Club, Inc."
+      ]
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-21",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Whlr Tampa Festival LLC/Mark Brenchley",
+      "location": "2525 E Hillsborough Ave",
+      "folio": "157007.0124",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Increase building signs from 1 to 2 Increase building sign square footage from 25 to 48.96",
+      "codeSection": "27-240(2).f.3",
+      "neighborhoodAssociationsRaw": "East Tampa 1, Tampa Overlook Neighborhood Association",
+      "owner": "Whlr Tampa Festival LLC",
+      "applicant": "Mark Brenchley",
+      "neighborhoodAssociations": [
+        "East Tampa 1",
+        "Tampa Overlook Neighborhood Association"
+      ]
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-28",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Kevin James and Jessica Lane Bexley/Mark Blanar",
+      "location": "4510 S Ferncroft Cir.",
+      "folio": "120606.0000",
+      "zoning": "Residential Single Family (RS-75)",
+      "request": "Reduce rear yard setback from 20 feet to 5 feet",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Culbreath Bayou Homeowners Association Inc.",
+      "owner": "Kevin James and Jessica Lane Bexley",
+      "applicant": "Mark Blanar",
+      "neighborhoodAssociations": [
+        "Culbreath Bayou Homeowners Association Inc."
+      ]
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-33",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Adobe Homes Inc./Innovative Pools",
+      "location": "5023 W Dante Ave",
+      "folio": "122005.0000",
+      "zoning": "Residential Single Family (RS-75)",
+      "request": "Reduce rear yard setback from 20 feet to 9 feet and east side setback from 7 to 4 on the east side. For pool deck over 12 inches above grade.",
+      "codeSection": "27-290.3",
+      "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association Inc., Virginia Park Neighborhood Association, Inc",
+      "owner": "Adobe Homes Inc.",
+      "applicant": "Innovative Pools",
+      "neighborhoodAssociations": [
+        "Sunset Park Area Homeowners Association Inc.",
+        "Virginia Park Neighborhood Association, Inc"
+      ]
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-45",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "City of Tampa/Meredith Beyer",
+      "location": "4902 E Whiteway Dr.",
+      "folio": "139687.0000",
+      "zoning": "Residential Single-Family (RS-60)",
+      "request": "Reduce tree retention from 50 percent to 6 percent",
+      "codeSection": "27-284",
+      "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc, 345 Bayshore Condominium Assn.",
+      "owner": "City of Tampa",
+      "applicant": "Meredith Beyer",
+      "neighborhoodAssociations": [
+        "Terrace Park Civic Association, Inc",
+        "345 Bayshore Condominium Assn."
+      ]
+    }
+  ],
+  "warnings": []
+}

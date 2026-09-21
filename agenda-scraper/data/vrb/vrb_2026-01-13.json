@@ -1,0 +1,189 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-01-13",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-january-2026-updated-1-12-2026-178936",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-january-2026-178206",
+      "nodeId": 178206,
+      "title": "VRB Agenda - January 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-january-2026-178206",
+      "postedDate": "2026-03-10",
+      "updatedTime": "2026-04-08T13:27:36-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/variance-review-board-vrb-public-hearing-meeting-notice-adav4.pdf",
+      "pdfSha256": "5d59f030f2b46f472da4d63c9b3759bbdf061a4f346264420edf095fa54772f9",
+      "pdfBytes": 207360,
+      "pages": 4,
+      "textFile": "text/vrb-agenda-january-2026-178206.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    },
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-january-2026-updated-1-12-2026-178936",
+      "nodeId": 178936,
+      "title": "VRB Agenda - January 2026 Updated 1-12-2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-january-2026-updated-1-12-2026-178936",
+      "postedDate": "2026-03-10",
+      "updatedTime": "2026-04-08T13:26:58-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/a21a072f-b229-427e-a672-dcf769b123d9_january-13-2026-agenda-updated-1-12-26_remediated.pdf",
+      "pdfSha256": "3f4b6d00c26fd676aaef28e7fcec6ef1ccb116076b0c39dddbd8514ded8b5336",
+      "pdfBytes": 187040,
+      "pages": 4,
+      "textFile": "text/vrb-agenda-january-2026-updated-1-12-2026-178936.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-05",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Tack Holdings LLC/Addie Mentry",
+      "location": "4040 Henderson Blvd",
+      "folio": "120027.0000",
+      "zoning": "Commercial General (CG)",
+      "request": "Freestanding sign setback reduction from 5 feet to 0 feet. Increase EMC signage from 16 square feet to 40 square feet. Request to reduce the EMC sign separation distance to 129 feet from 300 feet.",
+      "codeSection": "27.289",
+      "neighborhoodAssociationsRaw": "Palma Ceia West Neighborhood Association Inc., Virginia Park Neighborhood Association, Inc.",
+      "owner": "Tack Holdings LLC",
+      "applicant": "Addie Mentry",
+      "neighborhoodAssociations": [
+        "Palma Ceia West Neighborhood Association Inc.",
+        "Virginia Park Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-25-72",
+      "note": "Mis noticed",
+      "section": null,
+      "ownerApplicant": "Tania Rodriguez and Paul Raymond Horst",
+      "location": "4014 W Santiago St.",
+      "folio": "124079.0000",
+      "zoning": "Residential Single Family (RS-60)",
+      "request": "Reduce rear yard setback from 20' to 10'.",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "owner": "Tania Rodriguez and Paul Raymond Horst",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Virginia Park Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association",
+        "Belmar Gardens Neighborhood",
+        "Palma Ceia Neighborhood Association, Inc.",
+        "Bayside West Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-25-81",
+      "note": "Mis noticed",
+      "section": null,
+      "ownerApplicant": "Doe Rivera Castelleon/Gerald Martinez",
+      "location": "8511 N Lamar Ave",
+      "folio": "099479.0000",
+      "zoning": "Residential Single Family (RS-50)",
+      "request": "Reduce the front setback from 20' to 7', reduce rear yard setback from 20' to 7'",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "owner": "Doe Rivera Castelleon",
+      "applicant": "Gerald Martinez",
+      "neighborhoodAssociations": [
+        "Sulphur Springs Action League, Inc.",
+        "Hyde Park Spanishtown Creek Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-12",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "James Douglas Rickles and Mary Jane Harrington",
+      "location": "1042 S Sterling Ave",
+      "folio": "12016.0000",
+      "zoning": "Residential Single Family (RS-75)",
+      "request": "Reduce street side corner property setback from 15 feet to 7 feet.",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Golfview Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., Parkland Estates Civic Club, Inc., Palma Ceia Neighborhood Association, Inc.",
+      "owner": "James Douglas Rickles and Mary Jane Harrington",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Golfview Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Parkland Estates Civic Club, Inc.",
+        "Palma Ceia Neighborhood Association, Inc."
+      ]
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-13",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Seaworld Parks and Entertainment LLC / Addie Mentry",
+      "location": "3000 E Bush Blvd",
+      "folio": "142973-0000",
+      "zoning": "Planned Development (PD)",
+      "request": "Busch Gardens Tampa Bay requests a variance to allow an increase in the maximum allowable square footage for two (2) freestanding ground signs (“Coaster Tree” monument features) proposed along McKinley Drive. The City of Tampa Sign Code permits freestanding monument signs at a maximum of 50 square feet. The applicant is requesting an increase of 256 square feet, resulting in a total sign area of 306 square feet per sign.",
+      "codeSection": "27-289",
+      "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc., 345 Bayshore Condominium Assn.",
+      "owner": "Seaworld Parks and Entertainment LLC",
+      "applicant": "Addie Mentry",
+      "neighborhoodAssociations": [
+        "Terrace Park Civic Association, Inc.",
+        "345 Bayshore Condominium Assn."
+      ]
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-14",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Kenneth Steve Avalos and Anne Hermann/Ricky Peterika",
+      "location": "3215 N 40 th St",
+      "folio": "158277-5000",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Request to remove three grand trees, reduce retention from 40% to 0%.",
+      "codeSection": "27-284",
+      "neighborhoodAssociationsRaw": "Highland Pines Community Task Force, Inc., Tampa Overlook Neighborhood Association, Jackson Heights Neighborhood Associated & Crime Watch",
+      "owner": "Kenneth Steve Avalos and Anne Hermann",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Highland Pines Community Task Force, Inc.",
+        "Tampa Overlook Neighborhood Association",
+        "Jackson Heights Neighborhood Associated & Crime Watch"
+      ]
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-15",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Jesuit High School/Ricky Peterika",
+      "location": "4701 N Himes Ave",
+      "folio": "106509.0000",
+      "zoning": "Planned Development (PD)",
+      "request": "Request to remove two grand trees",
+      "codeSection": "27-284",
+      "neighborhoodAssociationsRaw": "Plaza Terrace Neighborhood Association",
+      "owner": "Jesuit High School",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Plaza Terrace Neighborhood Association"
+      ]
+    }
+  ],
+  "warnings": []
+}

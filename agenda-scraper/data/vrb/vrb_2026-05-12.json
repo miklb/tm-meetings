@@ -1,0 +1,275 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-05-12",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-may-2026-189571",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-may-2026-189571",
+      "nodeId": 189571,
+      "title": "VRB Agenda - May 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-may-2026-189571",
+      "postedDate": "2026-05-01",
+      "updatedTime": "2026-04-28T13:41:38-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/may-12-2026-agenda-updated_ada_remediated-v2.pdf",
+      "pdfSha256": "d616e1f3db28dd0bf90251532c32029e233ba294268ff3e9a4aa8cca3f85e7eb",
+      "pdfBytes": 214807,
+      "pages": 6,
+      "textFile": "text/vrb-agenda-may-2026-189571.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    },
+    {
+      "kind": "minutes",
+      "slug": "vrb-minutes-may-12-2026-192496",
+      "nodeId": 192496,
+      "title": "VRB Minutes - May 12, 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-minutes-may-12-2026-192496",
+      "postedDate": "2026-07-01",
+      "updatedTime": "2026-07-02T14:12:41-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/vrb-may-12-2026-minutes-ada.pdf",
+      "pdfSha256": "0bc8b60ab78a3ddde089e436dca226097c477364e53ff9c9b76bcef387febc9d",
+      "pdfBytes": 212045,
+      "pages": 12,
+      "textFile": "text/vrb-minutes-may-12-2026-192496.txt",
+      "firstSeen": "2026-09-20",
+      "mirroredUrl": null,
+      "previousVersions": [],
+      "warnings": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-28",
+      "note": "Continued from April 14, Hearing",
+      "section": null,
+      "ownerApplicant": "Kevin James and Jessica Lane Bexley/Mark Blanar",
+      "location": "4510 S Ferncroft Circle",
+      "folio": "120606.0000",
+      "zoning": "Residential Single Family (RS-75)",
+      "request": "Reduce rear yard setback from 20 feet to 5 feet",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Culbreath Bayou Homeowners Association Inc.",
+      "owner": "Kevin James and Jessica Lane Bexley",
+      "applicant": "Mark Blanar",
+      "neighborhoodAssociations": [
+        "Culbreath Bayou Homeowners Association Inc."
+      ]
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-06",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Eric Pourmand/Suncoast Permits",
+      "location": "2906 W Bay Vista Ave",
+      "folio": "127425.0100",
+      "zoning": "Residential Single Family (RS-60)",
+      "request": "Reduce screen enclosure setback from 5 feet to 2.5 feet",
+      "codeSection": "27-290",
+      "neighborhoodAssociationsRaw": "Bayshore Beautiful Neighborhood Association, Inc., Keep Bayshore Beautiful Inc, Hawthorne Pond Condominium Association Inc., Belmar Gardens Neighborhood, 345 Bayshore Condominium Assn., Ballast Point Neighborhood Association, Parkland Estates Civic Club, Inc.",
+      "owner": "Eric Pourmand",
+      "applicant": "Suncoast Permits",
+      "neighborhoodAssociations": [
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Keep Bayshore Beautiful Inc",
+        "Hawthorne Pond Condominium Association Inc.",
+        "Belmar Gardens Neighborhood",
+        "345 Bayshore Condominium Assn.",
+        "Ballast Point Neighborhood Association",
+        "Parkland Estates Civic Club, Inc."
+      ]
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-11",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Erik Garcia/Lameza Remodeling",
+      "location": "1602 W Knollwood St",
+      "folio": "104054.0000",
+      "zoning": "Residential Single Family (RS-50)",
+      "request": "1. Request to reduce the required setbacks for the proposed accessory structure (Gym & Storage) from required 3 feet side to 2.9 feet and 3 feet rear required to 5.5 feet.\n2. Request to reduce the required separation distance between the proposed accessory structure (Gym & Storage) and the principal structure from 5 feet to 3.8 feet.",
+      "codeSection": "27-290",
+      "neighborhoodAssociationsRaw": "Riverbend Civic Association",
+      "owner": "Erik Garcia",
+      "applicant": "Lameza Remodeling",
+      "neighborhoodAssociations": [
+        "Riverbend Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-22",
+      "note": "Mis-notice",
+      "section": null,
+      "ownerApplicant": "Zibannasa Akanda/Nasif Akanda",
+      "location": "1806 E Annona Ave",
+      "folio": "144746.0000",
+      "zoning": "Residential Single Family (RS-50)",
+      "request": "Reduce the side setback from 7ft to 3.5ft",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "University Square Civic Association Inc.",
+      "owner": "Zibannasa Akanda",
+      "applicant": "Nasif Akanda",
+      "neighborhoodAssociations": [
+        "University Square Civic Association Inc."
+      ]
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-24",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Baty Ventures LLC/Crescent Homes",
+      "location": "5102 W Platt St",
+      "folio": "113358.0000",
+      "zoning": "Residential Single Family (RS-75)",
+      "request": "Reduce green space from 25 percent to 15 percent.",
+      "codeSection": "27-284",
+      "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "owner": "Baty Ventures LLC",
+      "applicant": "Crescent Homes",
+      "neighborhoodAssociations": [
+        "Beach Park Homeowners Association, Inc.",
+        "Westshore Alliance",
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Armory Gardens Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-35",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Mark Robery Flom",
+      "location": "4525 W Swann Ave",
+      "folio": "114146.0000",
+      "zoning": "Residential Single Family (RS-75)",
+      "request": "Reduce the rear setback from 5 feet to 3 feet for a screen enclosure",
+      "codeSection": "27-290",
+      "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "owner": "Mark Robery Flom",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Beach Park Homeowners Association, Inc.",
+        "Westshore Alliance",
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Armory Gardens Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-40",
+      "note": "Mis-notice",
+      "section": null,
+      "ownerApplicant": "Eric Bronson",
+      "location": "2822 W Bay Ave",
+      "folio": "134820.0000",
+      "zoning": "Residential Single Family (RS-50)",
+      "request": "Reduce front yard setback from 20 feet to 5 feet",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Ballast Point Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Ballast Point Neighborhood Association",
+      "owner": "Eric Bronson",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Ballast Point Neighborhood Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood"
+      ]
+    },
+    {
+      "itemNumber": 8,
+      "caseNumber": "VRB-26-43",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Broadway Holdings LLC/Kevin Bynum",
+      "location": "5507 E Broadway Ave",
+      "folio": "160025.0000",
+      "zoning": "Commercial Intensive (CI), Industrial General (IG)",
+      "request": "1. Removal of 2 grand trees\n2. Reduce tree retention from 50 percent to 7 percent",
+      "codeSection": "27-284",
+      "neighborhoodAssociationsRaw": "Jackson Heights Neighborhood Associated & Crime Watch",
+      "owner": "Broadway Holdings LLC",
+      "applicant": "Kevin Bynum",
+      "neighborhoodAssociations": [
+        "Jackson Heights Neighborhood Associated & Crime Watch"
+      ]
+    },
+    {
+      "itemNumber": 9,
+      "caseNumber": "VRB-26-51",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Lucan Simeon/Sims Handy LLC",
+      "location": "3415 E Henry Ave",
+      "folio": "152313.0000",
+      "zoning": "Residential Single Family (RS-50)",
+      "request": "Increase height from 15 feet to 18 feet on an existing garage",
+      "codeSection": "27-290",
+      "neighborhoodAssociationsRaw": "Live Oaks Square Neighborhood Association and Crime Watch, Tampa Overlook Neighborhood Association, Seminole Heights East Neighborhood Association",
+      "owner": "Lucan Simeon",
+      "applicant": "Sims Handy LLC",
+      "neighborhoodAssociations": [
+        "Live Oaks Square Neighborhood Association and Crime Watch",
+        "Tampa Overlook Neighborhood Association",
+        "Seminole Heights East Neighborhood Association"
+      ]
+    },
+    {
+      "itemNumber": 10,
+      "caseNumber": "VRB-26-52",
+      "note": "Mis-noticed",
+      "section": null,
+      "ownerApplicant": "Baty Ventures LLC/Youtopia Pools LLC",
+      "location": "5108 W Platt St",
+      "folio": "113355.0000",
+      "zoning": "Residential Single Family (RS-75)",
+      "request": "Reduce rear yard setback for 20 feet to 5 feet for elevated pool",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "owner": "Baty Ventures LLC",
+      "applicant": "Youtopia Pools LLC",
+      "neighborhoodAssociations": [
+        "Beach Park Homeowners Association, Inc.",
+        "Westshore Alliance",
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Armory Gardens Civic Association"
+      ]
+    },
+    {
+      "itemNumber": 11,
+      "caseNumber": "VRB-26-60",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "John Zachary and Abigail Reynolds",
+      "location": "3301 W Alline Ave",
+      "folio": "128107.0000",
+      "zoning": "Residential Single Family (RS-60)",
+      "request": "1. Reduce side yard setback from 7 feet to 3 feet\n2. Reduce vehicular entrance setback from 10 to 3 feet.\n3. Reduce rear yard setback from 20 feet to 3 feet.",
+      "codeSection": "27-156",
+      "neighborhoodAssociationsRaw": "Bayshore Beautiful Neighborhood Association, Inc., Keep Bayshore Beautiful Inc, Hawthorne Pond Condominium Association Inc., Belmar Gardens Neighborhood, 345 Bayshore Condominium Assn., Ballast Point Neighborhood Association, Parkland Estates Civic Club, Inc.",
+      "owner": "John Zachary and Abigail Reynolds",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Keep Bayshore Beautiful Inc",
+        "Hawthorne Pond Condominium Association Inc.",
+        "Belmar Gardens Neighborhood",
+        "345 Bayshore Condominium Assn.",
+        "Ballast Point Neighborhood Association",
+        "Parkland Estates Civic Club, Inc."
+      ]
+    }
+  ],
+  "warnings": []
+}
