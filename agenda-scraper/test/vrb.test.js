@@ -9,7 +9,8 @@ const fs = require('fs');
 const path = require('path');
 
 const { parseVrbAgenda, parseHeader, resolveHearingDate, splitAssociations } = require('../lib/vrb-parser');
-const { parseListing, parseDocumentPage } = require('../lib/tampa-gov-documents');
+const { parseListing, isPaginated, parseDocumentPage } = require('../lib/tampa-gov-documents');
+const { rebuildHearing, newHearing } = require('../vrb-scraper');
 
 const fixture = (name) => fs.readFileSync(path.join(__dirname, 'fixtures', 'vrb', `${name}.txt`), 'utf8');
 
@@ -94,6 +95,13 @@ test('a case with a missing field is reported, not silently accepted', () => {
   assert.deepEqual(parseVrbAgenda(text).warnings, ['VRB-26-28: missing Folio']);
 });
 
+test('a new roman-numeral heading before Adjournment ends the last case', () => {
+  const text = fixture('vrb-agenda-may-2026-189571').replace(/^VII\.\s+Adjournment/m, 'VII. OTHER BUSINESS\nVIII. Adjournment');
+  const last = parseVrbAgenda(text).cases.at(-1);
+  assert.equal(last.caseNumber, 'VRB-26-60');
+  assert.equal(last.neighborhoodAssociations.at(-1), 'Parkland Estates Civic Club, Inc.');
+});
+
 test('splitAssociations keeps ", Inc." with its name and drops exact repeats', () => {
   assert.deepEqual(
     splitAssociations('Beach Park Homeowners Association, Inc.,  Westshore Alliance, Keep Bayshore Beautiful Inc, Westshore Alliance'),
@@ -173,6 +181,28 @@ test('parseListing reads the view table only', () => {
     },
   ]);
   assert.deepEqual(parseListing('<html><body>Access denied</body></html>'), []);
+});
+
+test('isPaginated notices a Drupal pager', () => {
+  assert.equal(isPaginated(LISTING_HTML), false);
+  assert.equal(isPaginated(`${LISTING_HTML}<nav class="pager"><ul><li class="pager__item pager__item--next"><a href="?page=1">Next</a></li></ul></nav>`), true);
+});
+
+test('the latest agenda is chosen by node id, not by the hand-typed posted date', () => {
+  // January 2026 as the City published it: both agendas dated 2026-03-10. Here
+  // the original is even dated later than the update, and must still lose.
+  const hearing = {
+    ...newHearing('2026-01-13'),
+    documents: [
+      { kind: 'agenda', slug: 'updated', nodeId: 178936, postedDate: '2026-01-12' },
+      { kind: 'minutes', slug: 'minutes', nodeId: 179999, postedDate: '2026-02-01' },
+      { kind: 'agenda', slug: 'original', nodeId: 178206, postedDate: '2026-03-10' },
+    ],
+  };
+  const rebuilt = rebuildHearing(hearing); // no stored text for these slugs
+  assert.equal(rebuilt.canonicalAgenda, 'updated');
+  assert.deepEqual(rebuilt.documents.map((d) => d.slug), ['original', 'updated', 'minutes']);
+  assert.match(rebuilt.warnings[0], /Stored text for updated is missing/);
 });
 
 test('parseDocumentPage finds the PDF, the posted date and the updated time', () => {

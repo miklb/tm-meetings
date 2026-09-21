@@ -49,6 +49,15 @@ function parseListing(html) {
 }
 
 /**
+ * True when the listing view has grown a pager. No board listing had one as of
+ * 2026-09-20 (the ARC page shows 29 rows unpaged), so following pages is not
+ * built; the caller should say so loudly instead of silently missing documents.
+ */
+function isPaginated(html) {
+  return cheerio.load(html)('.pager__item, nav.pager').length > 0;
+}
+
+/**
  * @param {string} html - a /document/<slug> page
  * @returns {{title: string|null, pdfUrl: string|null, postedDate: string|null, updatedTime: string|null}}
  */
@@ -97,4 +106,4 @@ async function fetchPdf(url) {
   return buffer;
 }
 
-module.exports = { SITE, USER_AGENT, parseListing, parseDocumentPage, fetchHtml, fetchPdf };
+module.exports = { SITE, USER_AGENT, parseListing, isPaginated, parseDocumentPage, fetchHtml, fetchPdf };

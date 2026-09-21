@@ -30,7 +30,7 @@ const crypto = require('crypto');
 
 const { parseVrbAgenda, resolveHearingDate } = require('./lib/vrb-parser');
 const { extractTextFromBuffer } = require('./lib/pdf-text-extractor');
-const { SITE, parseListing, parseDocumentPage, fetchHtml, fetchPdf } = require('./lib/tampa-gov-documents');
+const { SITE, parseListing, isPaginated, parseDocumentPage, fetchHtml, fetchPdf } = require('./lib/tampa-gov-documents');
 
 const LISTINGS = [
   { kind: 'agenda', url: `${SITE}/development-coordination/vrb-agendas` },
@@ -72,11 +72,22 @@ function findDocument(hearings, slug) {
  * history. Cases are always re-derived from the canonical agenda's stored text.
  */
 function rebuildHearing(hearing) {
+  // Order by Drupal node id, i.e. by when staff created the document page.
+  // "Date Posted" is typed by hand and cannot be trusted for this: both
+  // January 2026 agendas carry 2026-03-10, and the March agenda is dated
+  // three days after its hearing.
   hearing.documents.sort((a, b) =>
-    (a.postedDate || '').localeCompare(b.postedDate || '') || (a.nodeId || 0) - (b.nodeId || 0));
+    (a.nodeId || 0) - (b.nodeId || 0) || (a.postedDate || '').localeCompare(b.postedDate || ''));
 
   const canonical = hearing.documents.filter((d) => d.kind === 'agenda').pop();
   hearing.canonicalAgenda = canonical ? canonical.slug : null;
+
+  if (canonical && !fs.existsSync(textPath(canonical.slug))) {
+    // Keep the stored cases rather than lose the night's other hearings to a throw.
+    hearing.warnings = [`Stored text for ${canonical.slug} is missing; cases not re-derived`];
+    return hearing;
+  }
+
   hearing.cases = [];
   hearing.warnings = [];
 
@@ -245,10 +256,15 @@ async function main() {
 
   const counts = { skipped: 0, unchanged: 0, new: 0, revised: 0, failed: 0 };
   for (const listing of LISTINGS) {
-    const listed = parseListing(await fetchHtml(listing.url));
+    const html = await fetchHtml(listing.url);
+    const listed = parseListing(html);
     // A listing that comes back empty is a changed page, not an empty archive.
     if (!listed.length) throw new Error(`No VRB ${listing.kind} documents found at ${listing.url}`);
     console.log(`[VRB] ${listing.kind} listing: ${listed.length} documents`);
+    if (isPaginated(html)) {
+      counts.failed++;
+      console.error(`[VRB] ❌ ${listing.kind} listing is now paginated; only its first page was read (${listing.url})`);
+    }
 
     for (const item of listed) {
       try {

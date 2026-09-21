@@ -52,7 +52,10 @@ const SECTION_LINE = /^(Continued Cases|New Business)$/i;
 // pdf-parse emits each page number as a line of its own, often mid-case.
 const PAGE_NUMBER_LINE = /^\d{1,2}$/;
 
-const END_OF_CASES = /^(?:[IVX]+\.\s*Adjourn|In accordance with the Americans)/i;
+// Cases end at the next roman-numeral heading. Today that is always
+// "VII. Adjournment", but an "Other Business" heading added ahead of it must
+// not be swallowed into the last case's association list.
+const END_OF_CASES = /^(?:[IVX]{1,4}\.\s+\S|In accordance with the Americans)/;
 
 // "Bayshore Beautiful Neighborhood Association, Inc." is one name, not two.
 const NAME_SUFFIX = /^(?:Inc|LLC|Incorporated)\.?$/i;
