@@ -20,7 +20,7 @@
       "pages": 7,
       "textFile": "text/vrb-agenda-june-2026-191051.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-06-16/272c19ff-e9662a255b4aafb4b925d92952fc8b2d784d6e76c403fc8852dfadfc02bd-remediated.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 14,
       "textFile": "text/vrb-minutes-june-16-2026-192491.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-06-16/8ca70603-vrb-june-16-2026-minutes-ada.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -62,7 +62,16 @@
         "Armory Gardens Civic Association",
         "Parkland Estates Civic Club, Inc.",
         "Midtown Tampa Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000023",
+        "lat": 27.95208,
+        "lng": -82.491331,
+        "address": "3003 W Cypress St",
+        "neighborhood": "Midtown Tampa",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X9A&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -84,7 +93,16 @@
         "Westshore Alliance",
         "Bowman Heights",
         "Bel Mar Shores Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000027",
+        "lat": 27.952201,
+        "lng": -82.520071,
+        "address": "4500 W Cypress St",
+        "neighborhood": "Tampa International Airport",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XLC&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -106,7 +124,16 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000072",
+        "lat": 27.91906,
+        "lng": -82.51045,
+        "address": "4014 W Santiago St",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=01ZUG&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -124,7 +151,16 @@
       "applicant": "Yeimy Crisotomo",
       "neighborhoodAssociations": [
         "Riverbend Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000011",
+        "lat": 28.007479,
+        "lng": -82.474789,
+        "address": "1602 W Knollwood St",
+        "neighborhood": "Riverbend",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02S5L&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -142,7 +178,16 @@
       "applicant": "Nasif Akanda",
       "neighborhoodAssociations": [
         "University Square Civic Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000022",
+        "lat": 28.041209,
+        "lng": -82.43854,
+        "address": "1806 E Annona Ave",
+        "neighborhood": "University Square",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X83&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -164,7 +209,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000052",
+        "lat": 27.942145,
+        "lng": -82.528611,
+        "address": "5108 W Platt St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008HB&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -188,7 +242,16 @@
         "Tampa Overlook Neighborhood Association",
         "Seminole Heights East Neighborhood Association",
         "Ybor Heights Neighborhood Association and Watch Group"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000056",
+        "lat": 27.980853,
+        "lng": -82.451091,
+        "address": "3917 N Nebraska Ave",
+        "neighborhood": "Ybor Heights Neighborhood Association and Watch Group",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008XE&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -209,7 +272,16 @@
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood",
         "Ballast Point Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000057",
+        "lat": 27.891756,
+        "lng": -82.49422,
+        "address": "3114 W Paul Ave",
+        "neighborhood": "Interbay - South of Gandy",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=009H9&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 9,
@@ -229,7 +301,16 @@
         "Ballast Point Neighborhood Association",
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000063",
+        "lat": 27.885838,
+        "lng": -82.491267,
+        "address": "5407 S 1st St",
+        "neighborhood": "Ballast Point",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00CGT&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -248,7 +329,16 @@
       "neighborhoodAssociations": [
         "Sunset Park Area Homeowners Association, Inc.",
         "Virginia Park Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000064",
+        "lat": 27.918294,
+        "lng": -82.527644,
+        "address": "2628 S Dundee St",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00E7A&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -270,7 +360,16 @@
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Palma Ceia West Neighborhood Association, Inc.",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000065",
+        "lat": 27.929968,
+        "lng": -82.487621,
+        "address": "1506 S Georgia Ave",
+        "neighborhood": "Palma Ceia",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00E7J&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 12,
@@ -297,8 +396,18 @@
         "Parkland Estates Civic Club, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "New Suburb Beautiful Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000072",
+        "lat": 27.933693,
+        "lng": -82.482701,
+        "address": "2208 W Morrison Ave",
+        "neighborhood": "Parkland Estates",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00LG9&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

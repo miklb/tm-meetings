@@ -20,7 +20,7 @@
       "pages": 8,
       "textFile": "text/vrb-agenda-sept-2026-194736.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-09-15/167c3704-vrb-agenda-sept-2026-revised-tables.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -47,7 +47,16 @@
         "Tampa Overlook Neighborhood Association",
         "Seminole Heights East Neighborhood Association",
         "South Seminole Heights Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000078",
+        "lat": 28.006599,
+        "lng": -82.451243,
+        "address": "6501 N Nebraska Ave",
+        "neighborhood": "Old Seminole Heights",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00P4G&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -69,7 +78,16 @@
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Palma Ceia West Neighborhood Association, Inc.",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000080",
+        "lat": 27.923865,
+        "lng": -82.499745,
+        "address": "3324 W San Miguel St S",
+        "neighborhood": "Palma Ceia",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00R8V&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -91,7 +109,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000083",
+        "lat": 27.941204,
+        "lng": -82.5416,
+        "address": "5832 Mariner St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00UFU&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -110,7 +137,16 @@
       "neighborhoodAssociations": [
         "North Bon Air Neighborhood Association, Inc.",
         "Westshore Alliance"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000084",
+        "lat": 27.94863,
+        "lng": -82.510065,
+        "address": "4003 W Gray St",
+        "neighborhood": "North Bon Air",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00VLA&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -130,7 +166,16 @@
         "Ballast Point Neighborhood Association",
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000089",
+        "lat": 27.872958,
+        "lng": -82.492114,
+        "address": "3013 Bayshore Pointe Dr",
+        "neighborhood": "Ballast Point",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00WW1&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -150,7 +195,16 @@
         "Ballast Point Neighborhood Association",
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000090",
+        "lat": 27.871907,
+        "lng": -82.492965,
+        "address": "3042 Pointeview Dr",
+        "neighborhood": "Ballast Point",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00WW9&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -168,7 +222,16 @@
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
         "NA"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000091",
+        "lat": 27.916371,
+        "lng": -82.491375,
+        "address": "3319 Bayshore Blvd",
+        "neighborhood": "Academy of the Holy Names",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00X0X&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -188,7 +251,16 @@
         "Wellswood Civic Association, Inc.",
         "Tampa Overlook Neighborhood Association",
         "Old Seminole Heights Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000092",
+        "lat": 27.992133,
+        "lng": -82.476908,
+        "address": "1708 W Bedingfield Dr",
+        "neighborhood": "Wellswood",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01SGZ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 9,
@@ -213,7 +285,16 @@
         "Bowman Heights",
         "Highland Pines Community Task Force, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000093",
+        "lat": 27.962321,
+        "lng": -82.491767,
+        "address": "3028 W Palmetto St",
+        "neighborhood": "Macfarlane Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01SW5&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -235,7 +316,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000097",
+        "lat": 27.94127,
+        "lng": -82.521152,
+        "address": "4510 W Azeele St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01U7V&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -254,7 +344,16 @@
       "neighborhoodAssociations": [
         "Palma Ceia West Neighborhood Association, Inc.",
         "Virginia Park Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000100",
+        "lat": 27.926539,
+        "lng": -82.50833,
+        "address": "3916 W San Rafael St",
+        "neighborhood": "Palma Ceia West",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01X10&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 12,
@@ -275,8 +374,18 @@
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000114",
+        "lat": 27.890567,
+        "lng": -82.518658,
+        "address": "4408 W Price Ave",
+        "neighborhood": "Gandy / Sun Bay South",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=021CA&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

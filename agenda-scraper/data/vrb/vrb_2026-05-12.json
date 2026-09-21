@@ -20,7 +20,7 @@
       "pages": 6,
       "textFile": "text/vrb-agenda-may-2026-189571.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-05-12/d616e1f3-may-12-2026-agenda-updated_ada_remediated-v2.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 12,
       "textFile": "text/vrb-minutes-may-12-2026-192496.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-05-12/0bc8b60a-vrb-may-12-2026-minutes-ada.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -60,7 +60,16 @@
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
         "Culbreath Bayou Homeowners Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000028",
+        "lat": 27.932339,
+        "lng": -82.519597,
+        "address": "4510 S Ferncroft Cir",
+        "neighborhood": "Culbreath Bayou",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XRI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -84,7 +93,16 @@
         "345 Bayshore Condominium Assn.",
         "Ballast Point Neighborhood Association",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000006",
+        "lat": 27.906379,
+        "lng": -82.490071,
+        "address": "2906 W Bay Vista Ave",
+        "neighborhood": "Bayshore Beautiful",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02QFW&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -102,7 +120,16 @@
       "applicant": "Lameza Remodeling",
       "neighborhoodAssociations": [
         "Riverbend Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000011",
+        "lat": 28.007479,
+        "lng": -82.474789,
+        "address": "1602 W Knollwood St",
+        "neighborhood": "Riverbend",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02S5L&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -120,7 +147,16 @@
       "applicant": "Nasif Akanda",
       "neighborhoodAssociations": [
         "University Square Civic Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000022",
+        "lat": 28.041209,
+        "lng": -82.43854,
+        "address": "1806 E Annona Ave",
+        "neighborhood": "University Square",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X83&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -142,7 +178,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000024",
+        "lat": 27.942144,
+        "lng": -82.528493,
+        "address": "5102 W Platt St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XDT&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -164,7 +209,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000035",
+        "lat": 27.937821,
+        "lng": -82.521914,
+        "address": "4525 W Swann Ave",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=000VC&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -184,7 +238,16 @@
         "Ballast Point Neighborhood Association",
         "Southtown Park HOA",
         "Belmar Gardens Neighborhood"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000040",
+        "lat": 27.880685,
+        "lng": -82.488994,
+        "address": "2822 W Bay Ave",
+        "neighborhood": "Ballast Point",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002H1&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -202,7 +265,16 @@
       "applicant": "Kevin Bynum",
       "neighborhoodAssociations": [
         "Jackson Heights Neighborhood Associated & Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000043",
+        "lat": 27.96365,
+        "lng": -82.394326,
+        "address": "5507 E Broadway Ave",
+        "neighborhood": "East Side Commercial",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002QP&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 9,
@@ -222,7 +294,16 @@
         "Live Oaks Square Neighborhood Association and Crime Watch",
         "Tampa Overlook Neighborhood Association",
         "Seminole Heights East Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000051",
+        "lat": 27.999682,
+        "lng": -82.422081,
+        "address": "3415 E Henry Ave",
+        "neighborhood": "Live Oaks Square",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008GR&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -244,7 +325,16 @@
         "Bayshore Beautiful Neighborhood Association, Inc.",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Armory Gardens Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000052",
+        "lat": 27.942145,
+        "lng": -82.528611,
+        "address": "5108 W Platt St",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008HB&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -268,8 +358,18 @@
         "345 Bayshore Condominium Assn.",
         "Ballast Point Neighborhood Association",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000060",
+        "lat": 27.89852,
+        "lng": -82.498013,
+        "address": "3301 W Alline Ave",
+        "neighborhood": "Bayshore Beautiful",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00AOC&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

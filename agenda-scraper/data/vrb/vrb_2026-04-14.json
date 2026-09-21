@@ -20,7 +20,7 @@
       "pages": 7,
       "textFile": "text/vrb-agenda-april-2026-187536.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-04-14/e48321a0-b49f754e-9c05-4734-9f45-9cd64c4afabe_april-14-2026-agenda_remediated.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 15,
       "textFile": "text/vrb-minutes-april-14-2026-188916.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-04-14/5a404b6d-april-14-2026-vrb-minutes-ada_remediated.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -61,7 +61,16 @@
       "neighborhoodAssociations": [
         "East Tampa 1",
         "Tampa Overlook Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000021",
+        "lat": 27.996013,
+        "lng": -82.431813,
+        "address": "2525 E Hillsborough Ave",
+        "neighborhood": "East Tampa 1",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X7O&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -79,7 +88,16 @@
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
         "Culbreath Bayou Homeowners Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000028",
+        "lat": 27.932339,
+        "lng": -82.519597,
+        "address": "4510 S Ferncroft Cir",
+        "neighborhood": "Culbreath Bayou",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XRI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -98,7 +116,16 @@
       "neighborhoodAssociations": [
         "Sunset Park Area Homeowners Association Inc.",
         "Virginia Park Neighborhood Association, Inc"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000033",
+        "lat": 27.918887,
+        "lng": -82.529592,
+        "address": "5023 W Dante Ave",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02ZXR&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -117,7 +144,16 @@
       "neighborhoodAssociations": [
         "Terrace Park Civic Association, Inc",
         "345 Bayshore Condominium Assn."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000045",
+        "lat": 28.04727,
+        "lng": -82.403639,
+        "address": "4902 E Whiteway Dr",
+        "neighborhood": "Terrace Park",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=003Q4&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -136,7 +172,16 @@
       "neighborhoodAssociations": [
         "Sulphur Springs Action League, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000081",
+        "lat": 28.026763,
+        "lng": -82.455072,
+        "address": "8511 N Lamar Ave",
+        "neighborhood": "Sulphur Springs",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=0251S&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -160,7 +205,16 @@
         "The Legacy of Fair Oaks Community Association",
         "Live Oaks Square Neighborhood",
         "Association and Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000020",
+        "lat": 27.996133,
+        "lng": -82.422303,
+        "address": "3402 E Hillsborough Ave",
+        "neighborhood": "Live Oaks Square",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02VS4&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -180,7 +234,16 @@
         "Armory Gardens Civic Association",
         "Parkland Estates Civic Club, Inc.",
         "Midtown Tampa Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000023",
+        "lat": 27.95208,
+        "lng": -82.491331,
+        "address": "3003 W Cypress St",
+        "neighborhood": "Midtown Tampa",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X9A&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -208,7 +271,16 @@
         "VM Ybor Neighborhood Association & Crimewatch",
         "Ybor Heights Neighborhood Association and Watch Group",
         "Riverside Heights Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000034",
+        "lat": 27.96933,
+        "lng": -82.46679,
+        "address": "517 W Plaza Pl",
+        "neighborhood": "Tampa Heights",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=0008A&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 9,
@@ -226,7 +298,16 @@
       "applicant": "Fastsigns",
       "neighborhoodAssociations": [
         "Swann Estates Neighborhood Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000038",
+        "lat": 27.935343,
+        "lng": -82.505847,
+        "address": "821 S Dale Mabry Hwy",
+        "neighborhood": "Swann Estates",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002B2&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -248,7 +329,16 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000039",
+        "lat": 27.919175,
+        "lng": -82.510609,
+        "address": "4023 W Santiago St",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002GZ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -276,7 +366,16 @@
         "Tampa Heights Civic Association, Inc.",
         "Historic Hyde Park Neighborhood Association, Inc.",
         "New Suburb Beautiful Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000042",
+        "lat": 27.932997,
+        "lng": -82.485488,
+        "address": "2515 W Jetton Ave",
+        "neighborhood": "New Suburb Beautiful",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002MH&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 12,
@@ -295,7 +394,16 @@
       "neighborhoodAssociations": [
         "Davis Islands Civic Association, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000044",
+        "lat": 27.921488,
+        "lng": -82.450411,
+        "address": "613 E Davis Blvd",
+        "neighborhood": "Davis Islands",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002S0&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 13,
@@ -317,8 +425,18 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000055",
+        "lat": 27.910777,
+        "lng": -82.510315,
+        "address": "4003 W Kensington Ave",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=008NM&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

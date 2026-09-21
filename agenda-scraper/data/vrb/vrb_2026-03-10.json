@@ -20,7 +20,7 @@
       "pages": 3,
       "textFile": "text/vrb-agenda-march-2026-187226.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-03-10/d1bff9a1-march-10-2026-agenda-1_0.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 7,
       "textFile": "text/vrb-minutes-march-10-2026-187986.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-03-10/e7555a8a-march_10_2026_vrb_minutes-002-ada.pdf",
       "previousVersions": [],
       "warnings": [
         "PDF header says tuesday 2026-03-13, which is a friday; using 2026-03-10 from the document title"
@@ -63,7 +63,16 @@
       "neighborhoodAssociations": [
         "Highland Pines Community Task Force, Inc.",
         "Jackson Heights Neighborhood Associated & Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000008",
+        "lat": 27.969516,
+        "lng": -82.401577,
+        "address": "2901 N 50th St",
+        "neighborhood": "Florence Villa",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02RHJ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -89,7 +98,16 @@
         "Historic Hyde Park Neighborhood Association, Inc.",
         "Armory Gardens Civic Association",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000018",
+        "lat": 27.936903,
+        "lng": -82.489106,
+        "address": "2713 W Fountain Blvd",
+        "neighborhood": "Parkland Estates",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02U79&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -108,7 +126,16 @@
       "neighborhoodAssociations": [
         "East Tampa 1",
         "Tampa Overlook Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000021",
+        "lat": 27.996013,
+        "lng": -82.431813,
+        "address": "2525 E Hillsborough Ave",
+        "neighborhood": "East Tampa 1",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02X7O&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -126,7 +153,16 @@
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
         "Culbreath Bayou Homeowners Association Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000028",
+        "lat": 27.932339,
+        "lng": -82.519597,
+        "address": "4510 S Ferncroft Cir",
+        "neighborhood": "Culbreath Bayou",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XRI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -145,7 +181,16 @@
       "neighborhoodAssociations": [
         "Sunset Park Area Homeowners Association Inc.",
         "Virginia Park Neighborhood Association, Inc"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000033",
+        "lat": 27.918887,
+        "lng": -82.529592,
+        "address": "5023 W Dante Ave",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02ZXR&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -164,8 +209,18 @@
       "neighborhoodAssociations": [
         "Terrace Park Civic Association, Inc",
         "345 Bayshore Condominium Assn."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000045",
+        "lat": 28.04727,
+        "lng": -82.403639,
+        "address": "4902 E Whiteway Dr",
+        "neighborhood": "Terrace Park",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=003Q4&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

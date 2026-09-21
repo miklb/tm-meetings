@@ -20,7 +20,7 @@
       "pages": 5,
       "textFile": "text/vrb-agenda-february-2026-181011.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-02-10/8e1cf771-february-10-2026-agenda.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -43,7 +43,16 @@
       "neighborhoodAssociations": [
         "Davis Islands Civic Association, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000083",
+        "lat": 27.911979,
+        "lng": -82.457842,
+        "address": "541 Lucerne Ave",
+        "neighborhood": "Davis Islands",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02877&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -61,7 +70,16 @@
       "applicant": "Giovanni Rosell",
       "neighborhoodAssociations": [
         "Lowry Park Central Community Organization"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000002",
+        "lat": 28.031157,
+        "lng": -82.463868,
+        "address": "405 W Humphrey St",
+        "neighborhood": "Lowry Park Central",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02KY4&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -82,7 +100,16 @@
         "OHO Business Alliance",
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000007",
+        "lat": 27.932175,
+        "lng": -82.480082,
+        "address": "1813 W Watrous Ave",
+        "neighborhood": "Historic Hyde Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02QT6&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -101,7 +128,16 @@
       "neighborhoodAssociations": [
         "North Tampa Community Neighborhood Association",
         "University Square Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000010",
+        "lat": 28.045998,
+        "lng": -82.44266,
+        "address": "10701 N 15th St",
+        "neighborhood": "University Square",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02RXB&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -123,7 +159,16 @@
         "Belmar Gardens Neighborhood",
         "Virginia Park Neighborhood Association, Inc.",
         "Bel Mar Shores Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000019",
+        "lat": 27.912249,
+        "lng": -82.525572,
+        "address": "4710 W Vasconia St",
+        "neighborhood": "Belmar Gardens",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02UCK&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -145,7 +190,16 @@
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Palma Ceia West Neighborhood Association, Inc.",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000025",
+        "lat": 27.921627,
+        "lng": -82.496876,
+        "address": "3222 W Barcelona St",
+        "neighborhood": "Palma Ceia",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XGC&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -167,7 +221,16 @@
         "Westshore Alliance",
         "Bowman Heights",
         "Bel Mar Shores Civic Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000027",
+        "lat": 27.952201,
+        "lng": -82.520071,
+        "address": "4500 W Cypress St",
+        "neighborhood": "Tampa International Airport",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XLC&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 8,
@@ -189,7 +252,16 @@
         "Bayshore Gardens Neighborhood Association, Inc.",
         "Palma Ceia West Neighborhood Association, Inc.",
         "Parkland Estates Civic Club, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000029",
+        "lat": 27.917478,
+        "lng": -82.50255,
+        "address": "3608 W San Pedro St",
+        "neighborhood": "Palma Ceia",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XUS&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 9,
@@ -207,7 +279,16 @@
       "applicant": "John Ferrer",
       "neighborhoodAssociations": [
         "NA"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000030",
+        "lat": 28.035405,
+        "lng": -82.484478,
+        "address": "9408 Orange Grove Dr",
+        "neighborhood": "Historic Forest Hills",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02YS0&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 10,
@@ -226,7 +307,16 @@
       "neighborhoodAssociations": [
         "Sulphur Springs Action League, Inc.",
         "Hyde Park Spanishtown Creek Civic Association."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000031",
+        "lat": 28.02312,
+        "lng": -82.440229,
+        "address": "8208 N Elmer St",
+        "neighborhood": "Sulphur Springs",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02Z0C&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 11,
@@ -244,8 +334,18 @@
       "applicant": null,
       "neighborhoodAssociations": [
         "Lowry Park Central Community Organization"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000032",
+        "lat": 28.030672,
+        "lng": -82.473349,
+        "address": "8909 N Orleans Ave",
+        "neighborhood": "Lowry Park Central",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02ZBA&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }

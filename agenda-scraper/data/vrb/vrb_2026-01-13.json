@@ -20,7 +20,7 @@
       "pages": 4,
       "textFile": "text/vrb-agenda-january-2026-178206.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-01-13/5d59f030-variance-review-board-vrb-public-hearing-meeting-notice-adav4.pdf",
       "previousVersions": [],
       "warnings": []
     },
@@ -38,7 +38,7 @@
       "pages": 4,
       "textFile": "text/vrb-agenda-january-2026-updated-1-12-2026-178936.txt",
       "firstSeen": "2026-09-20",
-      "mirroredUrl": null,
+      "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-01-13/3f4b6d00-a21a072f-b229-427e-a672-dcf769b123d9_january-13-2026-agenda-updated-1-12-26_remediated.pdf",
       "previousVersions": [],
       "warnings": []
     }
@@ -61,7 +61,16 @@
       "neighborhoodAssociations": [
         "Palma Ceia West Neighborhood Association Inc.",
         "Virginia Park Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000005",
+        "lat": 27.928926,
+        "lng": -82.51105,
+        "address": "4040 Henderson Blvd",
+        "neighborhood": "Palma Ceia West",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02MXC&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 2,
@@ -83,7 +92,16 @@
         "Belmar Gardens Neighborhood",
         "Palma Ceia Neighborhood Association, Inc.",
         "Bayside West Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000072",
+        "lat": 27.91906,
+        "lng": -82.51045,
+        "address": "4014 W Santiago St",
+        "neighborhood": "Virginia Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=01ZUG&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 3,
@@ -102,7 +120,16 @@
       "neighborhoodAssociations": [
         "Sulphur Springs Action League, Inc.",
         "Hyde Park Spanishtown Creek Civic Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-25-0000081",
+        "lat": 28.026763,
+        "lng": -82.455072,
+        "address": "8511 N Lamar Ave",
+        "neighborhood": "Sulphur Springs",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=0251S&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 4,
@@ -125,7 +152,16 @@
         "Palma Ceia West Neighborhood Association, Inc.",
         "Parkland Estates Civic Club, Inc.",
         "Palma Ceia Neighborhood Association, Inc."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000012",
+        "lat": 27.92592,
+        "lng": -82.503522,
+        "address": "1042 S Sterling Ave",
+        "neighborhood": "Golfview",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SEV&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 5,
@@ -144,7 +180,16 @@
       "neighborhoodAssociations": [
         "Terrace Park Civic Association, Inc.",
         "345 Bayshore Condominium Assn."
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000013",
+        "lat": 28.033704,
+        "lng": -82.424637,
+        "address": "3000 E Busch Blvd",
+        "neighborhood": "Terrace Park",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SQJ&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 6,
@@ -164,7 +209,16 @@
         "Highland Pines Community Task Force, Inc.",
         "Tampa Overlook Neighborhood Association",
         "Jackson Heights Neighborhood Associated & Crime Watch"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000014",
+        "lat": 27.972054,
+        "lng": -82.413437,
+        "address": "3215 N 40th St",
+        "neighborhood": "Highland Pines",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SSI&agencyCode=TAMPA"
+      }
     },
     {
       "itemNumber": 7,
@@ -182,8 +236,18 @@
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
         "Plaza Terrace Neighborhood Association"
-      ]
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000015",
+        "lat": 27.986922,
+        "lng": -82.499458,
+        "address": "4701 N Himes Ave",
+        "neighborhood": "Plaza Terrace",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02SZD&agencyCode=TAMPA"
+      }
     }
   ],
-  "warnings": []
+  "warnings": [],
+  "geoWarnings": []
 }
