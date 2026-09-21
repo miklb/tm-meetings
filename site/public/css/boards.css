@@ -1,0 +1,194 @@
+/* ============================================================================
+   boards.css — land use board pages (/boards/): the hearing index and the
+   per-hearing case list. Site-specific, so it lives in the `local` layer with
+   notifications.css. BEM, canonical tokens only.
+   ========================================================================== */
+@layer local {
+  .board-title {
+    margin-block-end: var(--s-xs);
+  }
+
+  .board-intro {
+    max-width: var(--measure);
+    font-size: var(--step-1);
+    color: var(--ink-muted);
+  }
+
+  .board-section {
+    max-width: var(--measure);
+    margin-block-start: var(--s-xl);
+  }
+
+  /* ---- hearing index ---- */
+  .hearing-list {
+    margin: var(--s-lg) 0 0;
+    padding: 0;
+    list-style: none;
+    border-block-start: 1px solid var(--line);
+  }
+
+  .hearing-list__item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--s-2xs) var(--s-md);
+    padding-block: var(--s-sm);
+    border-block-end: 1px solid var(--line);
+  }
+
+  .hearing-list__link {
+    font-weight: 600;
+  }
+
+  .hearing-list__meta {
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+  }
+
+  /* ---- source documents ---- */
+  .board-sources {
+    max-width: var(--measure);
+    margin-block: var(--s-lg) var(--s-xl);
+    padding: var(--s-md) var(--s-lg);
+    background: var(--surface-2);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+  }
+
+  .board-sources__heading {
+    margin: 0 0 var(--s-xs);
+    font-family: var(--font-sans);
+    font-size: var(--step-0);
+  }
+
+  .board-sources__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  /* label beside the links when there is room, above them when there is not */
+  .board-sources__list li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0 var(--s-sm);
+  }
+
+  .board-sources__list li + li {
+    margin-block-start: var(--s-xs);
+  }
+
+  .board-sources__links {
+    flex: 1 1 18em;
+  }
+
+  .board-sources__kind {
+    flex: 0 0 8.5em;
+    font-size: var(--step--1);
+    font-weight: 700;
+    color: var(--ink-muted);
+  }
+
+  .board-sources__note {
+    margin: var(--s-sm) 0 0;
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+  }
+
+  /* ---- cases ---- */
+  .case-list {
+    max-width: var(--measure);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .case {
+    padding-block: var(--s-lg);
+    border-block-start: 1px solid var(--line);
+    /* notification emails deep-link to #item-…; keep the target clear of the top edge */
+    scroll-margin-block-start: var(--s-lg);
+  }
+
+  .case:target {
+    outline: 3px solid var(--accent);
+    outline-offset: var(--s-xs);
+    border-radius: var(--radius-sm);
+  }
+
+  .case__header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--s-2xs) var(--s-sm);
+    margin: 0;
+    font-size: var(--step--1);
+  }
+
+  .case__number {
+    font-weight: 700;
+    color: var(--ink-muted);
+  }
+
+  .case__id {
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .case__id:hover,
+  .case__id:focus-visible {
+    text-decoration: underline;
+  }
+
+  .case__flag {
+    padding: 0 var(--s-xs);
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    color: var(--ink);
+  }
+
+  .case__address {
+    margin-block: var(--s-xs) var(--s-2xs);
+    font-size: var(--step-1);
+  }
+
+  .case__request,
+  .case__requests {
+    margin-block: 0 var(--s-sm);
+  }
+
+  .case__requests {
+    padding-inline-start: 1.25em;
+  }
+
+  .case__facts {
+    margin: 0;
+    font-size: var(--step--1);
+    color: var(--ink-muted);
+  }
+
+  .case__facts > div + div {
+    margin-block-start: var(--s-2xs);
+  }
+
+  .case__facts dt {
+    display: inline;
+    font-weight: 700;
+  }
+
+  .case__facts dt::after {
+    content: ": ";
+  }
+
+  .case__facts dd {
+    display: inline;
+    margin: 0;
+  }
+
+  .case__links {
+    margin: var(--s-sm) 0 0;
+    font-size: var(--step--1);
+  }
+}

@@ -118,4 +118,61 @@ if (!fs.existsSync(DB)) {
     const base = fs.readFileSync(path.join(OUT, 'css', 'base.css'), 'utf8');
     assert.match(base, /prefers-reduced-motion: reduce\)\s*\{\s*@view-transition/);
   });
+
+  // ── Land use board pages ──
+  const VRB_DATA = path.join(SITE, '..', 'agenda-scraper', 'data', 'vrb');
+  const rawHearings = fs.existsSync(VRB_DATA)
+    ? fs.readdirSync(VRB_DATA).filter((f) => /^vrb_.*\.json$/.test(f))
+      .map((f) => JSON.parse(fs.readFileSync(path.join(VRB_DATA, f), 'utf8')))
+    : [];
+  const boardPages = pages.filter((p) => p.url.startsWith('/boards/'));
+  const decode = (html) => html.replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"');
+
+  test('board pages: one per collected hearing, plus the index, linked from the nav', { skip: !rawHearings.length && 'no VRB data' }, () => {
+    for (const h of rawHearings) {
+      assert.ok(boardPages.some((p) => p.url === `/boards/vrb/${h.hearingDate}/`), `no page for ${h.hearingDate}`);
+    }
+    assert.ok(boardPages.some((p) => p.url === '/boards/'));
+    assert.match(pages.find((p) => p.url === '/').html, /<a href="\/boards\/"/);
+  });
+
+  test('board pages never print an owner or applicant name, or a folio', { skip: !rawHearings.length && 'no VRB data' }, () => {
+    const secrets = new Set();
+    for (const h of rawHearings) {
+      for (const c of h.cases) {
+        for (const name of [c.owner, c.applicant, c.ownerApplicant]) {
+          if (name && !/^confidential$/i.test(name)) secrets.add(name);
+        }
+        if (c.folio) secrets.add(c.folio);
+      }
+    }
+    // The City itself owns one January 2026 case, and "City of Tampa" is in
+    // the site chrome. Words the site prints on its non-board pages are not
+    // secrets; nothing else may be excused this way.
+    const chrome = decode(pages.find((p) => p.url === '/about/').html);
+    const excused = [...secrets].filter((secret) => chrome.includes(secret));
+    assert.deepEqual(excused, ['City of Tampa']);
+    excused.forEach((secret) => secrets.delete(secret));
+    assert.ok(secrets.size > 100, `only ${secrets.size} names/folios to check against`);
+    for (const p of boardPages) {
+      const text = decode(p.html);
+      for (const secret of secrets) assert.ok(!text.includes(secret), `${p.url} prints "${secret}"`);
+    }
+  });
+
+  test('board pages: a withheld case has no map or permit link; case anchors are unique', { skip: !rawHearings.length && 'no VRB data' }, () => {
+    let withheld = 0;
+    for (const p of boardPages.filter((x) => x.url !== '/boards/')) {
+      const ids = [...p.html.matchAll(/<li class="case" id="([^"]+)"/g)].map((m) => m[1]);
+      assert.equal(new Set(ids).size, ids.length, `${p.url}: duplicate case ids`);
+      for (const item of p.html.split('<li class="case"').slice(1)) {
+        if (!item.includes('Address withheld by the City')) continue;
+        withheld++;
+        const own = item.split('</li>')[0];
+        assert.ok(!/openstreetmap|accela/i.test(own), `${p.url}: withheld case carries a location link`);
+      }
+    }
+    const expected = rawHearings.flatMap((h) => h.cases).filter((c) => c.locationWithheld).length;
+    assert.equal(withheld, expected);
+  });
 }

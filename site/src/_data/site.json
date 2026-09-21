@@ -9,6 +9,10 @@
       "href": "/"
     },
     {
+      "label": "Boards",
+      "href": "/boards/"
+    },
+    {
       "label": "About",
       "href": "/about/"
     },
@@ -28,6 +32,10 @@
         {
           "label": "Latest meetings",
           "href": "/"
+        },
+        {
+          "label": "Land use boards",
+          "href": "/boards/"
         },
         {
           "label": "About this archive",
@@ -62,6 +70,10 @@
         {
           "label": "Tampa City Clerk — Hyland OnBase",
           "href": "https://tampagov.hylandcloud.com/251agendaonline/"
+        },
+        {
+          "label": "Variance Review Board — tampa.gov",
+          "href": "https://www.tampa.gov/development-coordination/vrb-agendas"
         }
       ]
     }
