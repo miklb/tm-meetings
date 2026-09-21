@@ -139,6 +139,16 @@ function extractFileNumber(text) {
             .replace(/\s+/g, ' ')
             .trim();
 
+    // Plan amendments. The clerk usually writes the number closed up
+    // ("TA/CPA25-19") but sometimes with a space ("TA/CPA 26-05"), and the
+    // general pattern below only allows digits straight after the FIRST run of
+    // letters, so it stopped at "TA/CPA" and all five amendments on the 9/24/26
+    // agenda shared one file number. Checked first, anchored to the head of the
+    // item so a TA/CPA mentioned later in another item's text cannot win, and
+    // stored closed up so both spellings of one case are the same file number.
+    const planAmendment = text.match(/^\s*(?:File\s+No\.?\s+)?TA\s*\/\s*CPA\s*(\d{1,4})\s*-\s*(\d{1,6})\b/i);
+    if (planAmendment) return `TA/CPA${planAmendment[1]}-${planAmendment[2]}`;
+
     const patterns = [
         // Standard "File No." prefix with flexible separators/spaces
         /File\s+No\.?\s+([A-Z]{1,5}(?:\s*\d{1,4})?(?:\s*[-\/]\s*[A-Z\d]{1,8})*)/i,
