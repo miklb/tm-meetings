@@ -3180,8 +3180,11 @@
         }
       ],
       "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
+      "location": "3043 North Florida Avenue",
+      "coordinates": {
+        "lat": 27.972356,
+        "lng": -82.459176
+      },
       "summaryText": "",
       "projectedCosts": null,
       "section": "ITEMS BEING SET FOR PUBLIC HEARINGS BY COUNCIL CONSENT - (Item 51):"
@@ -3597,7 +3600,8 @@
           "title": "1-WRITTEN COMMENT - REZ-26-48.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENT%20-%20REZ-26-48.PDF.pdf?documentType=1&meetingId=2925&itemId=27075&publishId=211561&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of 1-WRITTEN COMMENT - REZ-26-48.PDF in a new tab",
-          "originalText": "1-WRITTEN COMMENT - REZ-26-48.PDF"
+          "originalText": "1-WRITTEN COMMENT - REZ-26-48.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-17/meeting-2925/27075/1-written-comment-rez-26-48.pdf"
         }
       ],
       "folioNumbers": [],
@@ -4244,7 +4248,8 @@
           "title": "2-WRITTEN COMMENT - REZ-26-31.PDF",
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENT%20-%20REZ-26-31.PDF.pdf?documentType=1&meetingId=2925&itemId=27081&publishId=211619&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of 2-WRITTEN COMMENT - REZ-26-31.PDF in a new tab",
-          "originalText": "2-WRITTEN COMMENT - REZ-26-31.PDF"
+          "originalText": "2-WRITTEN COMMENT - REZ-26-31.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-17/meeting-2925/27081/2-written-comment-rez-26-31.pdf"
         }
       ],
       "folioNumbers": [],
