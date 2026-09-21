@@ -2,5 +2,33 @@
   "meetingId": "2931",
   "meetingDate": "2026-09-22",
   "firstSeenAt": "2026-09-17T23:01:08.830Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-21",
+      "scrapedAt": "2026-09-21T23:02:17.021Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "B2027-2",
+          "filename": "MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 2.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "B2027-2",
+          "filename": "ADDENDUM TO THE FISCAL YEAR 2027 OFFICIAL BUDGET ORDINANCE.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "B2027-2",
+          "filename": "MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 5.PDF"
+        }
+      ]
+    }
+  ]
 }
