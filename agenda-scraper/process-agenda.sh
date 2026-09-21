@@ -123,6 +123,14 @@ if [ "$EXISTING_JSON" -gt 0 ]; then
     fi
     echo ""
 
+    # Step 3b: hard-code map locations for land use items. The agenda map used
+    # to find these in the live feed at view time, so pins vanished once the
+    # City archived a record. Never fatal; unlocated records fall back to the
+    # live lookup.
+    echo "Step 3b: Locating land use records for the map..."
+    node locate-records.js --date "$DATE" || true
+    echo ""
+
     echo "Step 4: Converting to Markdown post (tm-static)..."
     # Writes agendas/agenda_<date>.md; also writes/updates the post in
     # $TM_STATIC_POSTS_DIR (from .env) when set. This is the sole published

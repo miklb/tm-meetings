@@ -241,6 +241,35 @@ the stored `meetingType`/`meetingName` (it used to demote to `regular`).
 Same-day change-log entries merge rather than overwrite, so a manual run
 after the nightly cannot erase the nightly's entries.
 
+## Map locations (`locate-records.js`)
+
+The agenda post's map used to find every land use record in the live dev-coord
+feed when a reader opened the post, so a pin vanished once the City archived
+the record. `process-agenda.sh` now runs `locate-records.js` (step 3b, between
+the OpenGov reconcile and the Markdown step). It looks up each mappable record
+the scraper did not geocode itself, in the feed's `current` view and then
+`archived`, and stores the answer in a sidecar:
+
+```
+data/locations/<meetingId>-<date>-locations.json
+```
+
+`json-to-markdown.js` emits stored locations as explicit coordinates in the
+map block's `data-folios`, with the popup's address and Accela link in
+`data-record-details`. Notes:
+
+- **A sidecar, not a field on the item**, because the nightly scrape rewrites
+  the meeting files (the funding manifest works the same way).
+- **Add-only.** A located record stays located whatever later happens in the
+  feed; nothing is ever replaced or removed.
+- **Never fatal.** If the feed is down, or a record is not in it, the record
+  stays in `data-records` and the map looks it up live, exactly as before.
+- **Points outside the city are rejected** (`inCityBounds` in
+  `lib/dev-coord.js`): the feed carries the City's own geocodes and some are
+  wrong, e.g. AB2-26-0000017 downtown plotted near Plant City.
+- Forward-only: older posts are not regenerated. Re-running
+  `process-agenda.sh <date>` for an old meeting will locate what it still can.
+
 ## Variance Review Board collector (`vrb-scraper.js`)
 
 The VRB posts its agendas and minutes on tampa.gov, not OnBase: a listing page

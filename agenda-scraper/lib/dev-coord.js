@@ -40,6 +40,16 @@ const houseNumber = (address) => (String(address || '').match(/^\s*(\d+)/) || []
  */
 const isLocatable = (agendaCase) => hasStreetAddress(agendaCase.location);
 
+// A generous box around the city limits (MacDill to New Tampa, Rocky Point to
+// the eastern annexations). The feed's points are the City's geocodes and some
+// are wrong: AB2-26-0000017, "1601 N Franklin St" downtown, sits 20 miles east
+// near Plant City. A point is stored for good once accepted, so a point
+// outside the city is treated as no point at all.
+const CITY_BOUNDS = { west: -82.66, east: -82.25, south: 27.8, north: 28.18 };
+
+const inCityBounds = (lng, lat) =>
+  lng >= CITY_BOUNDS.west && lng <= CITY_BOUNDS.east && lat >= CITY_BOUNDS.south && lat <= CITY_BOUNDS.north;
+
 /**
  * @param {object} row - one Datasette row
  * @returns {object|null} null when the row has no usable point
@@ -53,6 +63,7 @@ function parseRecord(row) {
     point = null;
   }
   if (!point || !Number.isFinite(point[0]) || !Number.isFinite(point[1])) return null;
+  if (!inCityBounds(point[0], point[1])) return null;
 
   return {
     recordId: row.RECORDID,
@@ -104,9 +115,10 @@ async function fetchRecords(recordIds) {
     for (const row of response.data) {
       const record = parseRecord(row);
       if (record && !found.has(record.recordId)) found.set(record.recordId, record);
+      if (!record) console.warn(`[dev-coord] ${row.RECORDID} ("${row.ADDRESS}") has no usable point inside the city; not located`);
     }
   }
   return found;
 }
 
-module.exports = { accelaRecordId, isLocatable, parseRecord, matchCase, fetchRecords };
+module.exports = { accelaRecordId, inCityBounds, isLocatable, parseRecord, matchCase, fetchRecords };

@@ -36,6 +36,7 @@ const {
     escapeHtml,
 } = require('./lib/render-funding');
 const { loadChangeLog } = require('./lib/change-log');
+const { MAP_FILE_RE, padFileNumber, loadRecordLocations } = require('./lib/record-locations');
 const {
     cleanAgendaContent,
     extractTransmittalNotes,
@@ -241,18 +242,6 @@ function onbaseMeetingUrl(sourceUrl) {
 // Item rendering
 // ------------------------------------------------------------------
 
-const MAP_FILE_RE = /^(DE[12]|TA\/CPA|REZ|VAC|AB[12]|SU\d?)/i;
-
-/**
- * Pad a land-use file number's numeric suffix to 7 digits so it matches
- * the Datasette feed's RECORDID (same rule as the WP emitter).
- */
-function padFileNumber(fileNo) {
-    const [prefix, num] = fileNo.split(/-(?=[^-]+$)/);
-    if (num && /^\d+$/.test(num)) return `${prefix}-${num.padStart(7, '0')}`;
-    return fileNo;
-}
-
 /**
  * Clean an item's raw text and strip the leading file number (it moves to
  * the item heading). Returns { description } — plain text, HTML-escaped.
@@ -374,10 +363,17 @@ function renderItem(item, ctx) {
  * Collect land-use map data for a meeting: which items are mappable and the
  * data-records / data-folios attribute strings tm-static's maps.js reads.
  * Same record/folio formats as the WP emitter (RECORDID:itemNumber, …).
+ *
+ * `locations` is the meeting's stored record locations (locate-records.js).
+ * A record found there is emitted as explicit coordinates, so its pin no
+ * longer depends on the record still being in the live feed; data-record-details
+ * carries what the feed row used to give the popup. A record with no stored
+ * location stays in data-records only and is looked up live, as before.
  */
-function collectMapData(items) {
+function collectMapData(items, locations = {}) {
     const records = [];
     const folios = [];
+    const details = {};
     const mappedItemIds = new Set();
 
     for (const item of items) {
@@ -392,6 +388,10 @@ function collectMapData(items) {
             folios.push(`${padded}:${item.coordinates.lat},${item.coordinates.lng}:${item.folioNumbers.join(',')}`);
         } else if (item.coordinates) {
             folios.push(`${padded}:${item.coordinates.lat},${item.coordinates.lng}`);
+        } else if (locations[padded]) {
+            const at = locations[padded];
+            folios.push(`${padded}:${at.lat},${at.lng}${hasFolios ? `:${item.folioNumbers.join(',')}` : ''}`);
+            details[padded] = { address: at.address || '', url: at.accelaUrl || '', permit: true };
         } else if (hasFolios) {
             folios.push(`${padded}:${item.folioNumbers.join(',')}`);
         }
@@ -401,7 +401,7 @@ function collectMapData(items) {
     return {
         mappedItemIds,
         firstMappedItemId: [...mappedItemIds][0],
-        html: `<div class="mapbox-block" data-center="[-82.4572,27.9506]" data-zoom="11" data-records="${records.join(', ')}"${folios.length ? ` data-folios="${folios.join('|')}"` : ''} data-show-geocoder="true" data-geocoder-position="top-right" data-show-legend="true" data-legend-position="bottom-left"></div>`,
+        html: `<div class="mapbox-block" data-center="[-82.4572,27.9506]" data-zoom="11" data-records="${records.join(', ')}"${folios.length ? ` data-folios="${folios.join('|')}"` : ''}${Object.keys(details).length ? ` data-record-details="${escapeHtml(JSON.stringify(details))}"` : ''} data-show-geocoder="true" data-geocoder-position="top-right" data-show-legend="true" data-legend-position="bottom-left"></div>`,
     };
 }
 
@@ -653,7 +653,10 @@ function renderMeeting(meeting, addenda, opts) {
     };
 
     // Sections of items (committee-report runs grouped under Consent Agenda)
-    const mapData = collectMapData(meeting.agendaItems || []);
+    const mapData = collectMapData(
+        meeting.agendaItems || [],
+        loadRecordLocations(meeting.meetingId, meeting.formattedDate)
+    );
     const groups = groupConsentSections(
         groupItemsBySection(meeting.agendaItems || [], opts.fallbackSectionTitle)
     );
