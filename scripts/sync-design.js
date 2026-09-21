@@ -15,6 +15,8 @@
  * Usage:
  *   npm run sync-design            copy anything that drifted
  *   npm run sync-design -- --check report drift without writing (exit 1 if any)
+ *   ... --only <text>              just the files whose name contains <text>, e.g.
+ *                                  `--only map` for the map stack without the rest
  *   ... --from <path>              tm-static checkout somewhere other than ../tm-static
  */
 "use strict";
@@ -51,6 +53,8 @@ const jsDestRoot = path.join(repoRoot, "site", "public", "assets", "js");
 const args = process.argv.slice(2);
 const check = args.includes("--check");
 const fromIdx = args.indexOf("--from");
+const onlyIdx = args.indexOf("--only");
+const only = onlyIdx !== -1 ? args[onlyIdx + 1] : null;
 const srcBase = fromIdx !== -1 ? path.resolve(args[fromIdx + 1]) : path.resolve(repoRoot, "..", "tm-static");
 const srcRoot = path.join(srcBase, "src", "assets", "css");
 const jsSrcRoot = path.join(srcBase, "src", "assets", "js");
@@ -63,7 +67,7 @@ if (!fs.existsSync(srcRoot)) {
 const JOBS = [
   ...FILES.map((file) => ({ file, src: path.join(srcRoot, file), dest: path.join(destRoot, file) })),
   ...JS_FILES.map((file) => ({ file: `js/${file}`, src: path.join(jsSrcRoot, file), dest: path.join(jsDestRoot, file) })),
-];
+].filter((job) => !only || job.file.includes(only));
 
 let drifted = 0;
 for (const { file, src, dest } of JOBS) {

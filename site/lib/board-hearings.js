@@ -60,7 +60,9 @@ function publicCase(hearingDate, c) {
  * off when the City archives the record. Ids are the agenda's own case numbers
  * ("VRB-26-24"), which the feed's padded RECORDIDs never equal: the map's feed
  * lookup therefore cannot add a point this function left out. A withheld case
- * is in neither string.
+ * is in none of the three. `details` is the data-record-details JSON: what the
+ * popup shows for a pin (the address already on the page, the City's permit
+ * record) and `permit: true` for the feed's marker color.
  */
 function mapAttributes(cases) {
   const located = cases.filter((c) => !c.withheld && c.lat !== null && c.lng !== null);
@@ -68,6 +70,10 @@ function mapAttributes(cases) {
   return {
     records: located.map((c) => `${c.caseNumber}:${c.itemNumber}`).join(', '),
     points: located.map((c) => `${c.caseNumber}:${c.lat},${c.lng}`).join('|'),
+    details: JSON.stringify(Object.fromEntries(located.map((c) => [
+      c.caseNumber,
+      { address: c.address, url: c.accelaUrl, permit: true },
+    ]))),
   };
 }
 

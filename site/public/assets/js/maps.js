@@ -479,6 +479,15 @@
   //   data-folios  "RECORDID:lat,lng:folio,folio|RECORDID:lat,lng|…" — explicit
   //     coords (+ optional parcel folios) for items not in the feed (SU/VAC/
   //     TA-CPA). Folio values match parcels.pmtiles FOLIO with dots stripped.
+  //   data-record-details — optional JSON, { RECORDID: { address, url, permit } },
+  //     for markers placed by data-folios. A permit point's coordinates can be
+  //     resolved when the page is generated and carried in data-folios so the
+  //     pin outlives the record's time in the feed (the City archives closed
+  //     records and they drop out of `current`); this attribute carries what
+  //     the feed row would have supplied to the popup. `permit: true` draws the
+  //     marker in the feed's blue instead of the explicit-coords purple. Used by
+  //     council agendas generated after 2026-09-21 and by the VRB hearing pages
+  //     on meetings.tampamonitor.com, which sync this file verbatim.
   //   data-geojson-endpoint — DEAD attribute from a pre-Datasette version of
   //     the WP block; deliberately ignored.
   // Points feed: Michael's Datasette (dev-coord). Fetched directly — requires
@@ -526,6 +535,7 @@
     if (/^AB/.test(id)) return "Alcoholic Beverage";
     if (/^TA|^CPA/.test(id)) return "Plan Amendment";
     if (/^DE/.test(id)) return "Design Exception";
+    if (/^VRB/.test(id)) return "Variance";
     return "Council item";
   }
 
@@ -556,9 +566,24 @@
     return html;
   }
 
+  function parseRecordDetails(raw) {
+    if (!raw) return {};
+    try {
+      const details = JSON.parse(raw);
+      return details && typeof details === "object" ? details : {};
+    } catch { return {}; }
+  }
+
+  // Popup text and links come from page data now, not only the feed, and that
+  // data starts as text the City typed: escape it, and allow http(s) links only.
+  const escText = (s) => String(s ?? "").replace(/[&<>"']/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+  const safeUrl = (url) => (/^https?:\/\//i.test(url || "") ? url : "");
+
   function bootAgenda(el) {
     const records = parseRecords(el.dataset.records);
     const folios = parseFolios(el.dataset.folios);
+    const details = parseRecordDetails(el.dataset.recordDetails);
     const folioIds = new Set(folios.map((f) => f.recordId));
     const agendaItemFor = (id) => records.find((r) => r.recordId === id)?.agendaItem || "";
     // the mount's post <article>, scope for resolving agenda-item deep links
@@ -586,13 +611,20 @@
               RECORDID: f.recordId,
               RECORDALIAS: recordType(f.recordId),
               FOLIOS: f.folios.join(","),
+              ADDRESS: escText(details[f.recordId]?.address || ""),
+              URL: escText(safeUrl(details[f.recordId]?.url)),
+              PERMIT: details[f.recordId]?.permit === true,
             },
           })),
         },
       });
       map.addLayer({
         id: "folio-markers-layer", type: "circle", source: "folio-markers",
-        paint: { "circle-radius": 10, "circle-color": "#9333EA", "circle-stroke-width": 2, "circle-stroke-color": "#fff" },
+        paint: {
+          "circle-radius": 10,
+          "circle-color": ["case", ["==", ["get", "PERMIT"], true], "#007cbf", "#9333EA"],
+          "circle-stroke-width": 2, "circle-stroke-color": "#fff",
+        },
       });
 
       // blue markers: current-dev permit points from the Datasette feed

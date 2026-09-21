@@ -96,10 +96,12 @@ test('map attributes: explicit coordinates for located cases only, keyed by the 
   assert.deepEqual(map, {
     records: 'VRB-26-24:1',
     points: 'VRB-26-24:27.942144,-82.528493',
+    details: JSON.stringify({ 'VRB-26-24': { address: '5102 W Platt St', url: GEO.accelaUrl, permit: true } }),
   });
   // The withheld case carried a location in the raw data; it is in neither string.
   assert.ok(!JSON.stringify(map).includes('VRB-26-69'));
   assert.ok(!JSON.stringify(map).includes('28.05'));
+  assert.ok(!map.details.includes('Secret St') && !map.details.includes('Example'));
   // Unpadded ids can never equal a feed RECORDID (VRB-26-0000024), so the
   // map's live-feed lookup cannot add a point that was left out here.
   assert.ok(!/VRB-\d{2}-0{3,}/.test(map.records));
