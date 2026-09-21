@@ -1,0 +1,51 @@
+{
+  "meetingId": "2932",
+  "date": "2026-09-24",
+  "records": {
+    "AB2-26-0000003": {
+      "lat": 27.920297,
+      "lng": -82.493559,
+      "address": "2832 S MacDill Ave",
+      "neighborhood": "Palma Ceia",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02QU0&agencyCode=TAMPA",
+      "locatedOn": "2026-09-21"
+    },
+    "AB2-26-0000010": {
+      "lat": 28.003455,
+      "lng": -82.459403,
+      "address": "6203 N Florida Ave",
+      "neighborhood": "Old Seminole Heights",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00CTV&agencyCode=TAMPA",
+      "locatedOn": "2026-09-21"
+    },
+    "AB2-26-0000016": {
+      "lat": 27.966846,
+      "lng": -82.389255,
+      "address": "5804 E Columbus Dr",
+      "neighborhood": "East Side Commercial",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00OAW&agencyCode=TAMPA",
+      "locatedOn": "2026-09-21"
+    },
+    "AB2-26-0000019": {
+      "lat": 27.878374,
+      "lng": -82.506563,
+      "address": "6207 S Dale Mabry Hwy",
+      "neighborhood": "Gandy / Sun Bay South",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00TKZ&agencyCode=TAMPA",
+      "locatedOn": "2026-09-21"
+    },
+    "AB2-26-0000020": {
+      "lat": 28.054713,
+      "lng": -82.457857,
+      "address": "210 E Fowler Ave",
+      "neighborhood": null,
+      "councilDistrict": "7",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00US2&agencyCode=TAMPA",
+      "locatedOn": "2026-09-21"
+    }
+  }
+}
