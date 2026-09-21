@@ -34,6 +34,16 @@
   <p class="board-sources__note">This page lists each case by address and request. Owner and applicant names are left off; they are in the City's documents above.</p>
 </section>
 
+{# ── Map: tm-static's agenda map, verbatim (sync-design). Enhancement only;
+      every case is in the list below whether or not this boots. ── #}
+{% if hearing.map %}
+  <section class="board-map" aria-labelledby="map-heading">
+    <h2 id="map-heading">Map</h2>
+    <p class="board-map__note">Each pin is a case on this agenda; select one for its zoning and a link to the case below. Locations are the City's permit points, saved when the agenda was collected.</p>
+    <div class="mapbox-block" data-center="[-82.4572,27.9506]" data-zoom="10.5" data-records="{{ hearing.map.records }}" data-folios="{{ hearing.map.points }}" data-show-legend="true" data-legend-position="bottom-left"></div>
+  </section>
+{% endif %}
+
 <section aria-labelledby="cases-heading">
   <h2 id="cases-heading">Cases</h2>
   {% if hearing.cases.length %}
@@ -41,8 +51,8 @@
       {% for case in hearing.cases %}
         <li class="case" id="item-{{ case.id }}">
           <p class="case__header">
-            <span class="case__number">{{ case.itemNumber }}.</span>
-            <a class="case__id" href="#item-{{ case.id }}">{{ case.caseNumber }}</a>
+            <a class="case__number agenda-item__anchor" href="#item-{{ case.id }}" aria-label="Item {{ case.itemNumber }}, {{ case.caseNumber }}">{{ case.itemNumber }}</a>
+            <span class="case__id">{{ case.caseNumber }}</span>
             {% if case.section %}<span class="case__flag">{{ case.section }}</span>{% endif %}
             {% if case.note %}<span class="case__flag">{{ case.note }}</span>{% endif %}
           </p>

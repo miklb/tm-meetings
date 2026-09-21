@@ -1,0 +1,184 @@
+/* ============================================================================
+   COMPONENT: map — MapLibre mount points + on-map overlay UI.
+   Mounts arrive from content as empty <div class="*-block" data-*> and
+   assets/js/maps.js boots them. Overlay panels (legend, layer toggles) are
+   generated inside the mount; tokens only, matching the panel/surface look.
+   ========================================================================== */
+@layer components {
+  /* mount sizing — destination-map pages get tall mounts, in-post maps are
+     inline figures (drew-park embeds in posts, so it stays inline-sized) */
+  .land-use-map-block,
+  .tampa-zipcodes-block,
+  .annexation-history-block,
+  .tampa-neighborhoods-block { height: min(75vh, 46rem); }
+  .mapbox-block,
+  .council-districts-block,
+  .tampa-cra-block,
+  .impact-fee-districts-block,
+  .updated-city-precincts-block,
+  .redistricting-precincts-block,
+  .drew-park-cra-block,
+  .neighborhood-quiz-block,
+  .stormwater-workorders-block,
+  .south-howard-block { height: min(60vh, 32rem); }
+
+  /* static-image fallback authored inside a mount — covers email, no-JS and
+     pre-boot; maps.js removes it once the real map boots. The eleventy-img
+     transform wraps the img in <picture>, so size that wrapper too. */
+  .map-fallback,
+  picture:has(> .map-fallback) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  img.map-fallback { object-fit: cover; }
+
+  .land-use-map-block,
+  .mapbox-block,
+  .council-districts-block,
+  .tampa-cra-block,
+  .impact-fee-districts-block,
+  .updated-city-precincts-block,
+  .redistricting-precincts-block,
+  .tampa-zipcodes-block,
+  .annexation-history-block,
+  .drew-park-cra-block,
+  .tampa-neighborhoods-block,
+  .neighborhood-quiz-block,
+  .stormwater-workorders-block,
+  .south-howard-block {
+    position: relative;
+    margin-block: var(--s-lg);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface-2);
+  }
+
+  /* graceful no-JS / pre-boot state */
+  .map-block__fallback {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    color: var(--ink-muted);
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+  }
+
+  /* ── overlay panels (legend / layer toggles) ── */
+  .map-panel {
+    position: absolute;
+    z-index: 2;
+    background: color-mix(in srgb, var(--c-paper) 92%, transparent);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 1px 4px rgba(49, 74, 89, .2);
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    padding: .5rem .75rem;
+    max-width: 14rem;
+  }
+  .map-panel--top-right { top: .75rem; right: .75rem; }
+  .map-panel--top-left { top: .75rem; left: .75rem; }
+  .map-panel--bottom-left { bottom: 2rem; left: .75rem; }
+  .map-panel--bottom-right { bottom: 2rem; right: .75rem; }
+
+  .map-panel summary {
+    cursor: pointer;
+    font-weight: 700;
+    list-style: none;
+  }
+  .map-panel summary::-webkit-details-marker { display: none; }
+  .map-panel summary::after { content: " ▾"; color: var(--ink-muted); }
+  .map-panel details[open] summary::after { content: " ▴"; }
+
+  .map-panel__body {
+    margin-top: .4rem;
+    max-height: min(38vh, 18rem);
+    overflow-y: auto;
+  }
+
+  .map-panel label { display: block; margin: .2rem 0; cursor: pointer; }
+  .map-panel input { margin-right: .35rem; }
+
+  .map-legend__row { display: flex; align-items: center; gap: .4rem; margin: .15rem 0; }
+  .map-legend__row strong { margin-top: .3rem; display: block; }
+  .map-legend__swatch {
+    width: 1rem;
+    height: .75rem;
+    flex: none;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+  }
+
+  /* numbered agenda marker */
+  .map-marker {
+    display: grid;
+    place-items: center;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 999px;
+    background: var(--c-teal);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-weight: 700;
+    font-size: .8rem;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .35);
+    cursor: pointer;
+  }
+
+  /* popup: match site type, not maplibre defaults */
+  .maplibregl-popup-content {
+    font-family: var(--font-sans);
+    font-size: var(--step--1);
+    color: var(--ink);
+    padding: .6rem .85rem;
+    border-radius: var(--radius-sm);
+  }
+  .map-popup__title { font-weight: 700; margin: 0 0 .25rem; }
+  .map-popup__row { display: flex; justify-content: space-between; gap: 1rem; }
+  .map-popup__label { color: var(--ink-muted); }
+  .map-popup__section { font-weight: 700; margin: .4rem 0 .1rem; }
+
+  /* partisan-lean pill in the precinct popups */
+  .map-popup__badge {
+    display: inline-block;
+    padding: 0 .5em;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    font-size: .85em;
+  }
+  .map-popup__badge--dem { background: #377eb8; }
+  .map-popup__badge--rep { background: #e41a1c; }
+  .map-popup__badge--comp { background: var(--c-gray); }
+
+  .map-legend__hint {
+    color: var(--ink-muted);
+    font-size: .85em;
+    margin: .3rem 0 0;
+  }
+
+  /* right-aligned muted annotation on a legend row (counts, era years) */
+  .map-legend__note {
+    color: var(--ink-muted);
+    margin-left: auto;
+    padding-left: .6rem;
+  }
+
+  /* line-style legend swatches (boundaries) */
+  .map-legend__line {
+    width: 1rem;
+    flex: none;
+    border-top: 2.5px solid #0b0b0b;
+  }
+  .map-legend__line--dashed {
+    border-top: 1.5px dashed #1a1a1a;
+  }
+
+  .map-popup__meta {
+    color: var(--ink-muted);
+    font-size: .85em;
+    margin: .2rem 0 0;
+  }
+}

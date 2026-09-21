@@ -90,3 +90,22 @@ test('caseItemId is per hearing, so a continued case is a new item at its next h
   assert.equal(caseItemId('2026-07-14', 'VRB-26-24'), 'vrb-26-24-2026-07-14');
   assert.notEqual(caseItemId('2026-06-16', 'VRB-26-24'), caseItemId('2026-07-14', 'VRB-26-24'));
 });
+
+test('map attributes: explicit coordinates for located cases only, keyed by the agenda\'s case number', () => {
+  const { map } = publicHearing(RAW);
+  assert.deepEqual(map, {
+    records: 'VRB-26-24:1',
+    points: 'VRB-26-24:27.942144,-82.528493',
+  });
+  // The withheld case carried a location in the raw data; it is in neither string.
+  assert.ok(!JSON.stringify(map).includes('VRB-26-69'));
+  assert.ok(!JSON.stringify(map).includes('28.05'));
+  // Unpadded ids can never equal a feed RECORDID (VRB-26-0000024), so the
+  // map's live-feed lookup cannot add a point that was left out here.
+  assert.ok(!/VRB-\d{2}-0{3,}/.test(map.records));
+});
+
+test('a hearing with nothing located has no map', () => {
+  const none = { ...RAW, cases: RAW.cases.map((c) => ({ ...c, geo: null })) };
+  assert.equal(publicHearing(none).map, null);
+});

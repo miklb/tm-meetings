@@ -175,4 +175,26 @@ if (!fs.existsSync(DB)) {
     const expected = rawHearings.flatMap((h) => h.cases).filter((c) => c.locationWithheld).length;
     assert.equal(withheld, expected);
   });
+
+  test('board map: one pin per located case, none for a withheld one, and every pin can link to its case', { skip: !rawHearings.length && 'no VRB data' }, () => {
+    for (const h of rawHearings) {
+      const p = boardPages.find((x) => x.url === `/boards/vrb/${h.hearingDate}/`);
+      const mount = (p.html.match(/<div class="mapbox-block"[^>]*>/) || [''])[0];
+      const located = h.cases.filter((c) => c.geo && !c.locationWithheld);
+      if (!located.length) { assert.equal(mount, ''); continue; }
+
+      assert.ok(p.html.includes('/assets/js/map-loader.js'), `${p.url}: map loader missing`);
+      const pins = mount.match(/data-folios="([^"]*)"/)[1].split('|');
+      assert.equal(pins.length, located.length, `${p.url}: pins`);
+      for (const c of h.cases.filter((x) => x.locationWithheld)) {
+        assert.ok(!mount.includes(c.caseNumber), `${p.url}: withheld ${c.caseNumber} is on the map`);
+      }
+      // maps.js resolves "RECORDID:N" to the .agenda-item__anchor whose text is N
+      for (const entry of mount.match(/data-records="([^"]*)"/)[1].split(', ')) {
+        const n = entry.split(':')[1];
+        assert.match(p.html, new RegExp(`agenda-item__anchor"[^>]*>${n}<`), `${p.url}: no anchor for item ${n}`);
+      }
+    }
+    assert.ok(fs.existsSync(path.join(OUT, 'assets', 'js', 'maps.js')));
+  });
 }
