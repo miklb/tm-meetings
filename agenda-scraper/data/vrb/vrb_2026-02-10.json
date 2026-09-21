@@ -38,6 +38,7 @@
       "request": "Request to increase height: 35′ to 53′(above ground level) or 61′ (above mean sea level), reduce front yard setback from 25’ to 4.9’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Davis Islands Civic Association, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "Joseph L Fontana Lii",
       "applicant": "Colin Rice",
       "neighborhoodAssociations": [
@@ -66,6 +67,7 @@
       "request": "Reduce front yard setback from 25’ to 23’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Lowry Park Central Community Organization",
+      "locationWithheld": false,
       "owner": "Rockland Property Trust LLC",
       "applicant": "Giovanni Rosell",
       "neighborhoodAssociations": [
@@ -93,6 +95,7 @@
       "request": "Reduce air condition equipment setback from 3’ to 2’ on east",
       "codeSection": "27.290.6",
       "neighborhoodAssociationsRaw": "Historic Hyde Park Neighborhood Association, Inc., OHO Business Alliance, Bayshore Gardens Neighborhood Association, Inc., Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "Gregory M Gutierrez",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -123,6 +126,7 @@
       "request": "Increase building signage from 8 sq ft to 24 sq ft",
       "codeSection": "27-289.3",
       "neighborhoodAssociationsRaw": "North Tampa Community Neighborhood Association, University Square Civic Association, Inc.",
+      "locationWithheld": false,
       "owner": "Annanora Fields",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -151,6 +155,7 @@
       "request": "Grand tree removal",
       "codeSection": "27.284.2.5",
       "neighborhoodAssociationsRaw": "Belmar Gardens Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc., Bel Mar Shores Civic Association, Inc.",
+      "locationWithheld": false,
       "owner": "4710 W Vasconia St LLC",
       "applicant": "Jason Kendall",
       "neighborhoodAssociations": [
@@ -182,6 +187,7 @@
       "request": "1) Reduce front yard setback from 25’ to 15’ 2) Reduce rear yard setback from 15’ to 7’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Palma Ceia Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "Larry Rothfuss",
       "applicant": "J Shea",
       "neighborhoodAssociations": [
@@ -213,6 +219,7 @@
       "request": "1) Increase the maximum free standing sign face from 50 square feet per sign face to 151 feet, an increase of 101 square feet per sign face. 2) Increase the maximum free standing sign height from twenty (20) feet to twenty-six (26) feet, an increase of six (6) feet.",
       "codeSection": "27-238(g)(7)a.3",
       "neighborhoodAssociationsRaw": "Carver City/Lincoln Gardens Civic Association, Inc., DSCA, Westshore Alliance, Bowman Heights, Bel Mar Shores Civic Association, Inc.",
+      "locationWithheld": false,
       "owner": "Dept of Transportation",
       "applicant": "Jessica Icerman",
       "neighborhoodAssociations": [
@@ -244,6 +251,7 @@
       "request": "Reduce pool side yard setbacks from 5’ to 3’ Reduce pool rear yard setbacks from 5’ to 3’",
       "codeSection": "27-290.3",
       "neighborhoodAssociationsRaw": "Palma Ceia Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "Erica Marousek and David Ralph Ogram Jr",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -275,6 +283,7 @@
       "request": "Reduce front yard setback from 25’ to 15.5’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "NA",
+      "locationWithheld": false,
       "owner": "3hr Investments LLC",
       "applicant": "John Ferrer",
       "neighborhoodAssociations": [
@@ -302,6 +311,7 @@
       "request": "Grand Tree Removal",
       "codeSection": "27.284.2.5",
       "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association.",
+      "locationWithheld": false,
       "owner": "Realcity Construction LLC",
       "applicant": "Ayam Rodriguez",
       "neighborhoodAssociations": [
@@ -330,6 +340,7 @@
       "request": "Grand Tree Removal",
       "codeSection": "27.284.2.5",
       "neighborhoodAssociationsRaw": "Lowry Park Central Community Organization",
+      "locationWithheld": false,
       "owner": "Ig Real Estate LLC, Maria and Ariel Concepcion",
       "applicant": null,
       "neighborhoodAssociations": [

@@ -56,6 +56,7 @@
       "request": "Freestanding sign setback reduction from 5 feet to 0 feet. Increase EMC signage from 16 square feet to 40 square feet. Request to reduce the EMC sign separation distance to 129 feet from 300 feet.",
       "codeSection": "27.289",
       "neighborhoodAssociationsRaw": "Palma Ceia West Neighborhood Association Inc., Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Tack Holdings LLC",
       "applicant": "Addie Mentry",
       "neighborhoodAssociations": [
@@ -84,6 +85,7 @@
       "request": "Reduce rear yard setback from 20' to 10'.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Tania Rodriguez and Paul Raymond Horst",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -115,6 +117,7 @@
       "request": "Reduce the front setback from 20' to 7', reduce rear yard setback from 20' to 7'",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "Doe Rivera Castelleon",
       "applicant": "Gerald Martinez",
       "neighborhoodAssociations": [
@@ -143,6 +146,7 @@
       "request": "Reduce street side corner property setback from 15 feet to 7 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Golfview Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., Parkland Estates Civic Club, Inc., Palma Ceia Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "James Douglas Rickles and Mary Jane Harrington",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -175,6 +179,7 @@
       "request": "Busch Gardens Tampa Bay requests a variance to allow an increase in the maximum allowable square footage for two (2) freestanding ground signs (“Coaster Tree” monument features) proposed along McKinley Drive. The City of Tampa Sign Code permits freestanding monument signs at a maximum of 50 square feet. The applicant is requesting an increase of 256 square feet, resulting in a total sign area of 306 square feet per sign.",
       "codeSection": "27-289",
       "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc., 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "Seaworld Parks and Entertainment LLC",
       "applicant": "Addie Mentry",
       "neighborhoodAssociations": [
@@ -203,6 +208,7 @@
       "request": "Request to remove three grand trees, reduce retention from 40% to 0%.",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Highland Pines Community Task Force, Inc., Tampa Overlook Neighborhood Association, Jackson Heights Neighborhood Associated & Crime Watch",
+      "locationWithheld": false,
       "owner": "Kenneth Steve Avalos and Anne Hermann",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
@@ -232,6 +238,7 @@
       "request": "Request to remove two grand trees",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Plaza Terrace Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Jesuit High School",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [

@@ -8,7 +8,9 @@ const assert = require('node:assert/strict');
 const fs = require('fs');
 const path = require('path');
 
-const { parseVrbAgenda, parseHeader, resolveHearingDate, splitAssociations } = require('../lib/vrb-parser');
+const {
+  parseVrbAgenda, parseHeader, resolveHearingDate, splitAssociations, hasStreetAddress, redactWithheldText,
+} = require('../lib/vrb-parser');
 const { parseListing, isPaginated, parseDocumentPage } = require('../lib/tampa-gov-documents');
 const { rebuildHearing, newHearing } = require('../vrb-scraper');
 const { accelaRecordId, isLocatable, parseRecord, matchCase } = require('../lib/dev-coord');
@@ -39,6 +41,7 @@ test('May 2026 agenda: header, every case, every field', () => {
     request: 'Reduce rear yard setback from 20 feet to 5 feet',
     codeSection: '27-156',
     neighborhoodAssociationsRaw: 'Culbreath Bayou Homeowners Association Inc.',
+    locationWithheld: false,
     owner: 'Kevin James and Jessica Lane Bexley',
     applicant: 'Mark Blanar',
     neighborhoodAssociations: ['Culbreath Bayou Homeowners Association Inc.'],
@@ -294,4 +297,62 @@ test('rebuildHearing carries locations forward by case number, but not onto a wi
   assert.equal(withheld.geo, null);
   assert.ok(rebuilt.warnings.some((w) => /VRB-26-69: agenda gives no street address/.test(w)));
   assert.equal(rebuilt.cases.filter((c) => c.geo).length, 1);
+});
+
+// ---------------------------------------------------------------------------
+// Withheld locations
+// ---------------------------------------------------------------------------
+
+// The July 2026 fixture is stored redacted, as everything under data/vrb/text
+// is. To test redaction, put a made-up folio back where the City printed one.
+const FAKE_FOLIO = '999999.0000';
+const julyAsPublished = () => fixture('vrb-agenda-july-2026-192481').replace('Folio: [withheld]', `Folio: ${FAKE_FOLIO}`);
+
+test('hasStreetAddress: a house number, or the location counts as withheld', () => {
+  assert.equal(hasStreetAddress('4510 S Ferncroft Circle'), true);
+  assert.equal(hasStreetAddress('Confidential'), false);
+  assert.equal(hasStreetAddress('Exempt per F.S. 119.071'), false);
+  assert.equal(hasStreetAddress(null), false);
+});
+
+test('a withheld case loses its folio and is flagged, without a missing-field warning', () => {
+  const agenda = parseVrbAgenda(julyAsPublished());
+  const c = agenda.cases.find((x) => x.caseNumber === 'VRB-26-69');
+  assert.equal(c.location, 'Confidential');
+  assert.equal(c.locationWithheld, true);
+  assert.equal(c.folio, null);
+  assert.deepEqual(agenda.warnings, []);
+  assert.equal(agenda.cases.filter((x) => x.locationWithheld).length, 1);
+  assert.ok(!JSON.stringify(agenda).includes(FAKE_FOLIO));
+});
+
+test('redactWithheldText blanks only the withheld case\'s folio, and is idempotent', () => {
+  const published = julyAsPublished();
+  const redacted = redactWithheldText(published);
+  assert.ok(!redacted.includes(FAKE_FOLIO));
+  assert.equal(redacted, fixture('vrb-agenda-july-2026-192481'));
+  assert.equal(redactWithheldText(redacted), redacted);
+  // Every other folio on the agenda is still there.
+  assert.equal(redacted.match(/^Folio: \d/gm).length, 11);
+  // An agenda with nothing withheld comes back byte for byte.
+  const may = fixture('vrb-agenda-may-2026-189571');
+  assert.equal(redactWithheldText(may), may);
+});
+
+test('redactWithheldText handles a value on the line after its label, and minutes-style headers', () => {
+  const text = [
+    'VI. ITEMS TO BE REVIEWED',
+    '8.VRB-26-69',
+    'Owner/Applicant: Confidential/ASC Aluminum',
+    'Location:', '', 'Confidential',
+    'Folio:', '4', FAKE_FOLIO, // "4" is a page number between label and value
+    'Zoning: Residential Single-Family (RS-60)',
+    '9. VRB-26-73',
+    'Location: 1806 E Annona Ave',
+    'Folio: 144746.0000',
+  ].join('\n');
+  const redacted = redactWithheldText(text);
+  assert.ok(!redacted.includes(FAKE_FOLIO));
+  assert.ok(redacted.includes('Folio: 144746.0000'));
+  assert.equal(parseVrbAgenda(redacted).cases[0].folio, null);
 });

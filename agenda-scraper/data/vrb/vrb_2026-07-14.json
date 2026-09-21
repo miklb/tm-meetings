@@ -56,6 +56,7 @@
       "request": "Reduce green space from 25 percent to 15 percent.",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
       "owner": "Baty Ventures LLC",
       "applicant": "Crescent Homes",
       "neighborhoodAssociations": [
@@ -87,6 +88,7 @@
       "request": "Reduce rear setback from 20’ to 7’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Bayshore Beautiful Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., Keep Bayshore Beautiful Inc, Hawthorne Pond Condominium Association Inc., Belmar Gardens Neighborhood, 345 Bayshore Condominium Assn., Ballast Point Neighborhood Association, Parkland Estates Civic Club, Inc., Palma Ceia Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Britney and Brent Burch",
       "applicant": "Jansel Irarragorry",
       "neighborhoodAssociations": [
@@ -124,6 +126,7 @@
       "request": "Reduce accessory structure setback from 3’ to 2.4”",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "FairOaks/Manhattan Manor Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Christopher Barrow and Andrea Caby",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -154,6 +157,7 @@
       "request": "1. Reduce the rear setback from 12' to 7' to accommodate pre- existing condition.\n2. Reduce the side yard setback from 15' to 10' to accommodate a 2-car carport.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
       "owner": "Kelly Wilson",
       "applicant": "Gary Trupp",
       "neighborhoodAssociations": [
@@ -185,6 +189,7 @@
       "request": "Reduce rear pool setback from 5’ to 3’",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Cameron and Brittany Brown",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -216,6 +221,7 @@
       "request": "Increase allowable sign square footage from 19 square feet to 27 square feet.",
       "codeSection": "27-243",
       "neighborhoodAssociationsRaw": "North Hyde Park Civic Association, Inc., Westland Park HOA, SOHO Business Alliance, Ameryllis Garden Circle, Parkland Estates Civic Club, Inc., Historic Hyde Park Neighborhood Association, Inc., West Tampa CRA Community Advisory Committee, SOHO Business Alliance, North Hyde Park Civic Asso., Neighborhood Crime Watch, NORTH HYDE PARK ALLIANCE., Bowman Heights, West Riverfront Neighborhood Crimewatch Association, Inc., Armory Gardens Civic Association, Parkland Estates Civic Club, Inc., Historic Hyde Park Neighborhood Association, Inc., SoHo Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Palori Commercial Properties Et Al",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -256,6 +262,7 @@
       "request": "Remove 3 grand tree",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Tampa Overlook Neighborhood Association, 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "St. Joseph’s Hospital Inc",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -279,11 +286,12 @@
       "section": "New Business",
       "ownerApplicant": "Confidential/ASC Aluminum",
       "location": "Confidential",
-      "folio": "096834.0000",
+      "folio": null,
       "zoning": "Residential Single-Family (RS-60)",
       "request": "Reduce front yard setback from 25’ to 6’",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Forest Hills Neighborhood Association, Inc",
+      "locationWithheld": true,
       "owner": "Confidential",
       "applicant": "ASC Aluminum",
       "neighborhoodAssociations": [
@@ -303,6 +311,7 @@
       "request": "Reduce tree retention from 50 percent to 0 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Palmetto Beach Community Association, Inc.",
+      "locationWithheld": false,
       "owner": "Amalie Oil R E LLP",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
@@ -330,6 +339,7 @@
       "request": "Reduce green space from 25 percent to 13 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Armenia Garden Estates Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Ivette Lacosta",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -357,6 +367,7 @@
       "request": "Reduce rear yard setback from 20 feet to 14’ 1 1/16”",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Parkland Estates Civic Club, Inc., SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Peter and Laurie Lackman",
       "applicant": "Scott Geresy",
       "neighborhoodAssociations": [
@@ -390,6 +401,7 @@
       "request": "Reduce eave to eave separation from 5’ to 3’ 10”",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Davis Islands Civic Association, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "David and India Witte",
       "applicant": null,
       "neighborhoodAssociations": [

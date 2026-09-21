@@ -16,6 +16,7 @@
 const axios = require('axios');
 const { withRetry } = require('./retry');
 const { USER_AGENT } = require('./tampa-gov-documents');
+const { hasStreetAddress } = require('./vrb-parser');
 
 const FEED = 'https://dev-coord.tampamonitor.com/locations';
 const VIEWS = ['current', 'archived'];
@@ -33,13 +34,11 @@ function accelaRecordId(caseNumber) {
 const houseNumber = (address) => (String(address || '').match(/^\s*(\d+)/) || [])[1] || null;
 
 /**
- * The agenda is the authority on what may be said about a case. VRB-26-69
- * (July 2026) lists owner and location as "Confidential", which is how the
- * City marks a public-records exemption for a protected person, while the feed
- * still carries that record's street address and point. A case the agenda does
- * not give a street address for is never looked up and never located.
+ * The feed still carries the street address and point of a record whose
+ * location the agenda withholds (see hasStreetAddress in lib/vrb-parser.js).
+ * Such a case is never looked up and never located.
  */
-const isLocatable = (agendaCase) => houseNumber(agendaCase.location) !== null;
+const isLocatable = (agendaCase) => hasStreetAddress(agendaCase.location);
 
 /**
  * @param {object} row - one Datasette row

@@ -290,12 +290,18 @@ Each hearing file holds:
   attached only if its house number matches the agenda's; a disagreement goes
   to `geoWarnings` and the case stays unlocated. `null` until found; recent
   hearings are retried nightly.
-- **Withheld locations stay withheld.** When the agenda gives no street address
-  (VRB-26-69 lists owner and location as "Confidential", the City's mark for a
-  public-records exemption), the case is never looked up and `geo` is always
-  `null`, even though the feed has the address. The rule lives in
-  `isLocatable` (`lib/dev-coord.js`) and is enforced at lookup and again every
-  time cases are re-derived.
+- **Withheld locations stay withheld, and the rule errs toward privacy.** When
+  the agenda gives no street address (VRB-26-69 lists owner and location as
+  "Confidential", the City's mark for a public-records exemption), the case is
+  flagged `locationWithheld: true` and everything that could identify the
+  parcel is dropped from what this repo publishes: `folio` is `null` even
+  though the City's PDF prints it, the folio is blanked to `[withheld]` in the
+  stored `text/` files (agenda and minutes), and `geo` is never looked up even
+  though the feed has the address. Enforced in `lib/vrb-parser.js`
+  (`hasStreetAddress`, `redactWithheldText`) and `lib/dev-coord.js`
+  (`isLocatable`), at collection and again on every re-derive. Anything built
+  on this data (pages, maps, alerts, new enrichment) must respect
+  `locationWithheld`. The mirrored PDF is the City's document, unaltered.
 - `warnings` — anything the parser did not expect. Fields are stored as the
   clerk typed them, stray commas and folio variants included.
 

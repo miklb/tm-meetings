@@ -58,6 +58,7 @@
       "request": "Increase text height from 12 inches to 31 inches Increase sign square footage from 15 square feet to 72 square feet Increase height from 6 feet to 49 feet with a setback of 12 feet on the south and 130 feet to the west.",
       "codeSection": "27-240",
       "neighborhoodAssociationsRaw": "Highland Pines Community Task Force, Inc., Jackson Heights Neighborhood Associated & Crime Watch, Jackson Heights Neighborhood Associated & Crime Watch",
+      "locationWithheld": false,
       "owner": "Giant Oil Inc",
       "applicant": "Johnson Pope",
       "neighborhoodAssociations": [
@@ -86,6 +87,7 @@
       "request": "Reduce rear yard setback from 20 feet to 0 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Palma Ceia Pines, SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc., Palma Ceia Pines, Armory Gardens Civic Association, Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "Matt Britten",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -121,6 +123,7 @@
       "request": "Increase building signs from 1 to 2 Increase building sign square footage from 25 to 48.96",
       "codeSection": "27-240(2).f.3",
       "neighborhoodAssociationsRaw": "East Tampa 1, Tampa Overlook Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Whlr Tampa Festival LLC",
       "applicant": "Mark Brenchley",
       "neighborhoodAssociations": [
@@ -149,6 +152,7 @@
       "request": "Reduce rear yard setback from 20 feet to 5 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Culbreath Bayou Homeowners Association Inc.",
+      "locationWithheld": false,
       "owner": "Kevin James and Jessica Lane Bexley",
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
@@ -176,6 +180,7 @@
       "request": "Reduce rear yard setback from 20 feet to 9 feet and east side setback from 7 to 4 on the east side. For pool deck over 12 inches above grade.",
       "codeSection": "27-290.3",
       "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association Inc., Virginia Park Neighborhood Association, Inc",
+      "locationWithheld": false,
       "owner": "Adobe Homes Inc.",
       "applicant": "Innovative Pools",
       "neighborhoodAssociations": [
@@ -204,6 +209,7 @@
       "request": "Reduce tree retention from 50 percent to 6 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc, 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "City of Tampa",
       "applicant": "Meredith Beyer",
       "neighborhoodAssociations": [

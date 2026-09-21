@@ -143,8 +143,24 @@ function splitAssociations(raw) {
   return [...new Set(names)];
 }
 
+/**
+ * Does the agenda give a street address for this case? VRB-26-69 (July 2026)
+ * lists owner and location as "Confidential", the City's mark for a
+ * public-records exemption for a protected person. The agenda is the authority
+ * on what may be said about a case, and the rule errs toward privacy: with no
+ * house number the location counts as withheld, and everything that could
+ * identify the parcel (folio here, coordinates in lib/dev-coord.js) is dropped.
+ */
+const hasStreetAddress = (location) => /^\s*\d+/.test(String(location || ''));
+
+const WITHHELD = '[withheld]';
+
 function finishCase(c) {
   for (const [, key] of FIELDS) c[key] = (c[key] || '').trim() || null;
+
+  c.locationWithheld = !hasStreetAddress(c.location);
+  // The City's PDF still prints the folio for a withheld case. We do not.
+  if (c.locationWithheld) c.folio = null;
 
   const slash = (c.ownerApplicant || '').indexOf('/');
   c.owner = slash === -1 ? c.ownerApplicant : c.ownerApplicant.slice(0, slash).trim();
@@ -210,7 +226,9 @@ function parseVrbAgenda(text) {
   if (current) cases.push(finishCase(current));
 
   for (const c of cases) {
-    const missing = FIELDS.filter(([, key]) => !c[key]).map(([label]) => label);
+    const missing = FIELDS
+      .filter(([, key]) => !c[key] && !(key === 'folio' && c.locationWithheld))
+      .map(([label]) => label);
     if (missing.length) warnings.push(`${c.caseNumber}: missing ${missing.join(', ')}`);
     // The clerk types folios by hand: "120606.0000", "12016.0000" and
     // "142973-0000" all occur. Stored as typed; anything else gets flagged.
@@ -228,4 +246,48 @@ function parseVrbAgenda(text) {
   return { hearingDate, hearingTime, location, cases, warnings };
 }
 
-module.exports = { parseVrbAgenda, parseHeader, resolveHearingDate, findDate, splitAssociations };
+/**
+ * The text we store and publish, with the folio blanked in any case block
+ * whose location is withheld. Works on agendas and minutes (same block shape).
+ * Idempotent. The original PDF is untouched; this only governs our copy.
+ * @param {string} text - pdf-parse output
+ * @returns {string}
+ */
+function redactWithheldText(text) {
+  const lines = String(text || '').split('\n');
+  const norm = (line) => line.replace(/\s+/g, ' ').trim();
+  const isValueLine = (line) => norm(line) && !PAGE_NUMBER_LINE.test(norm(line));
+
+  // A label's value is on its own line or, in the September 2026 template, the next one.
+  const valueIndex = (labelIndex, inlineValue, end) => {
+    if (inlineValue) return labelIndex;
+    for (let i = labelIndex + 1; i < end; i++) if (isValueLine(lines[i])) return i;
+    return -1;
+  };
+
+  const starts = lines.map((line, i) => (CASE_LINE.test(norm(line)) ? i : -1)).filter((i) => i >= 0);
+  starts.forEach((start, n) => {
+    const end = n + 1 < starts.length ? starts[n + 1] : lines.length;
+    let location = null;
+    let folio = null;
+    for (let i = start + 1; i < end; i++) {
+      const label = norm(lines[i]).match(LABEL_LINE);
+      if (!label) continue;
+      const key = FIELD_BY_LABEL.get(label[1].toLowerCase());
+      if (key === 'location' && !location) location = { i, inline: label[2] };
+      if (key === 'folio' && !folio) folio = { i, inline: label[2] };
+    }
+    if (!location || !folio) return;
+
+    const at = valueIndex(location.i, location.inline, end);
+    const value = at === location.i ? location.inline : at >= 0 ? norm(lines[at]) : '';
+    if (hasStreetAddress(value)) return;
+
+    const target = valueIndex(folio.i, folio.inline, end);
+    if (target === folio.i) lines[target] = `Folio: ${WITHHELD}`;
+    else if (target >= 0 && !norm(lines[target]).match(LABEL_LINE)) lines[target] = WITHHELD;
+  });
+  return lines.join('\n');
+}
+
+module.exports = { hasStreetAddress, redactWithheldText, parseVrbAgenda, parseHeader, resolveHearingDate, findDate, splitAssociations };

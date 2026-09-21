@@ -29,7 +29,7 @@ const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
 
-const { parseVrbAgenda, resolveHearingDate } = require('./lib/vrb-parser');
+const { parseVrbAgenda, resolveHearingDate, redactWithheldText } = require('./lib/vrb-parser');
 const { extractTextFromBuffer } = require('./lib/pdf-text-extractor');
 const { accelaRecordId, isLocatable, matchCase, fetchRecords } = require('./lib/dev-coord');
 const { SITE, parseListing, isPaginated, parseDocumentPage, fetchHtml, fetchPdf } = require('./lib/tampa-gov-documents');
@@ -179,7 +179,13 @@ function saveHearings(hearings) {
 function regroup(hearings) {
   const documents = [...hearings.values()].flatMap((hearing) => hearing.documents.splice(0));
   for (const doc of documents) {
-    const resolved = resolveHearingDate(fs.readFileSync(textPath(doc.slug), 'utf8'), doc.title);
+    const stored = fs.readFileSync(textPath(doc.slug), 'utf8');
+    const text = redactWithheldText(stored);
+    if (text !== stored) {
+      fs.writeFileSync(textPath(doc.slug), text);
+      console.log(`[VRB] redacted withheld case details in ${doc.textFile}`);
+    }
+    const resolved = resolveHearingDate(text, doc.title);
     doc.warnings = resolved.warnings;
     if (!hearings.has(resolved.hearingDate)) hearings.set(resolved.hearingDate, newHearing(resolved.hearingDate));
     hearings.get(resolved.hearingDate).documents.push(doc);
@@ -241,7 +247,10 @@ async function collectDocument(listed, kind, hearings, options) {
     hearingDate = known.hearing.hearingDate;
     Object.assign(doc, { pdfUrl: page.pdfUrl, updatedTime: page.updatedTime });
   } else {
-    const { text, pages } = await extractTextFromBuffer(buffer);
+    const extracted = await extractTextFromBuffer(buffer);
+    const { pages } = extracted;
+    // Only the redacted text is ever written or parsed.
+    const text = redactWithheldText(extracted.text);
     const title = page.title || listed.title;
     const resolved = resolveHearingDate(text, title);
     ({ hearingDate } = resolved);

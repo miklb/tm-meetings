@@ -56,6 +56,7 @@
       "request": "Increase building signs from 1 to 2 Increase building sign square footage from 25 to 48.96",
       "codeSection": "27-240(2).f.3",
       "neighborhoodAssociationsRaw": "East Tampa 1, Tampa Overlook Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Whlr Tampa Festival LLC",
       "applicant": "Mark Brenchley",
       "neighborhoodAssociations": [
@@ -84,6 +85,7 @@
       "request": "Reduce rear yard setback from 20 feet to 5 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Culbreath Bayou Homeowners Association Inc.",
+      "locationWithheld": false,
       "owner": "Kevin James and Jessica Lane Bexley",
       "applicant": "Mark Blanar",
       "neighborhoodAssociations": [
@@ -111,6 +113,7 @@
       "request": "Reduce rear yard setback from 20 feet to 9 feet and east side setback from 7 feet to 4 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association Inc., Virginia Park Neighborhood Association, Inc",
+      "locationWithheld": false,
       "owner": "Adobe Homes Inc.",
       "applicant": "Innovative Pools",
       "neighborhoodAssociations": [
@@ -139,6 +142,7 @@
       "request": "Reduce tree retention from 50 percent to 6 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc, 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "City of Tampa",
       "applicant": "Meredith Beyer",
       "neighborhoodAssociations": [
@@ -167,6 +171,7 @@
       "request": "Reduce the front setback from 20' to 7', reduce rear yard setback from 20' to 7'",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "Don Rivera",
       "applicant": "Anelys Quintero",
       "neighborhoodAssociations": [
@@ -195,6 +200,7 @@
       "request": "1. Request to increase the sign Letter height for two wall signs from 1' to 2.5'\n2. Request to increase allowed square footage for two wall signs from 25sf to 61.49sf",
       "codeSection": "27-240(2).f.3",
       "neighborhoodAssociationsRaw": "East Tampa 1, Tampa Overlook Neighborhood Association, Seminole Heights East Neighborhood Association,345 Bayshore Condominium Assn., Tampa Overlook Neighborhood Association, Tampa Overlook Neighborhood Association, The Legacy of Fair Oaks Community Association, Live Oaks Square Neighborhood, Association and Crime Watch",
+      "locationWithheld": false,
       "owner": "Discount Auto Parts Inc 588",
       "applicant": "Gina Penney (Atlas Signs Holding)",
       "neighborhoodAssociations": [
@@ -228,6 +234,7 @@
       "request": "1. Request to increase free standing signage from 15 square feet to 272 square feet total.\n2. Request to increase in height from 6 feet to 24 feet.",
       "codeSection": "27-240(2)c.f",
       "neighborhoodAssociationsRaw": "Armory Gardens Civic Association, Parkland Estates Civic Club, Inc., Midtown Tampa Neighborhood Association",
+      "locationWithheld": false,
       "owner": "Heavyset Holdings LLC",
       "applicant": "Stephen Michelini",
       "neighborhoodAssociations": [
@@ -257,6 +264,7 @@
       "request": "Request to reduce front yard setback from 20 feet to 1.5 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Tampa Heights Civic Association, Inc., Bowman Heights, Old Seminole Heights Neighborhood Association, Inc., Tampa Heights Civic Association Land Use Committee, Residents of Adalee St, One Laurel Place, Informed Neighbor, Tampa Overlook Neighborhood Association, Bowman Heights, VM Ybor Neighborhood Association & Crimewatch, Ybor Heights Neighborhood Association and Watch Group, Riverside Heights Civic Association, Riverside Heights Civic Association",
+      "locationWithheld": false,
       "owner": "Monique Asante",
       "applicant": "Deborah Carmody",
       "neighborhoodAssociations": [
@@ -294,6 +302,7 @@
       "request": "1. Request to increase the maximum allowed height of a freestanding sign from 10 feet to 18 feet 6 inches.\n2. Request to increase the maximum allowable sign face from 50 square feet to 160 square feet for each side at a 5-foot setback from the right of way.",
       "codeSection": "27-289",
       "neighborhoodAssociationsRaw": "Swann Estates Neighborhood Association Inc.",
+      "locationWithheld": false,
       "owner": "Diocese of St Petersburg",
       "applicant": "Fastsigns",
       "neighborhoodAssociations": [
@@ -321,6 +330,7 @@
       "request": "Reduce screen enclosure setback from 5 feet to 4 feet.",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Ana and Garret King",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -352,6 +362,7 @@
       "request": "Request to reduce rear yard setback from 20 feet to 12 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Parkland Estates Civic Club, Inc., SOHO Business Alliance, Ameryllis Garden Circle, Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West, Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc., New Suburb Beautiful Civic Association, Inc.",
+      "locationWithheld": false,
       "owner": "Diane Gilhool",
       "applicant": "Jaime Maier",
       "neighborhoodAssociations": [
@@ -389,6 +400,7 @@
       "request": "1. Request to reduce north side yard setback from 7 feet to 5 feet.\n2. Request to reduce south side yard setback from 7 feet to 6 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Davis Islands Civic Association, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
       "owner": "Adam Ross and Meredith Richardson",
       "applicant": "Kormex Construction",
       "neighborhoodAssociations": [
@@ -417,6 +429,7 @@
       "request": "Request to remove a grand oak tree",
       "codeSection": "27-284.2.5",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Michael Rollins and Christen Pilger",
       "applicant": "Domain Homes Inc.",
       "neighborhoodAssociations": [

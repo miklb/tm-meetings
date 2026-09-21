@@ -38,6 +38,7 @@
       "request": "Remove one non-hazardous grand tree Reduce tree retention from 50 percent to 15 percent",
       "codeSection": "27-284",
       "neighborhoodAssociationsRaw": "Southeast Seminole Heights Civic Association, Inc., VM Ybor Neighborhood Association & Crimewatch, Informed Neighbor, Business Guild of Seminole Heights, Tampa Overlook Neighborhood Association, Seminole Heights East Neighborhood Association, Ybor Heights Neighborhood Association and Watch Group, VM Ybor Neighborhood Association & Crimewatch, Ybor Heights Neighborhood Association and Watch Group",
+      "locationWithheld": false,
       "owner": "Channelside Partners LLC",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
@@ -71,6 +72,7 @@
       "request": "Request to remove 2 grand trees Request to reduce required parking from 78 spaces to 58 Reduce front setback from 10’ to 8’ for bay windows",
       "codeSection": "27-289, 27-156, 27-284",
       "neighborhoodAssociationsRaw": "Historic Hyde Park Neighborhood Association, Inc., SOHO Business Alliance, Parkland Estates Civic Club, Bowman Heights, Palma Ceia West Neighborhood Association, Inc., Tampa Heights Civic Association, Inc., Historic Hyde Park Neighborhood Association, Inc., SOHO Business Alliance, Ameryllis Garden Circle, Palma Ceia West Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., SOHO Business Alliance, Bayshore Gardens Neighborhood Association, Inc., Parkland Estates Civic Club, Inc., New Suburb Beautiful Civic Association, Inc.,Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
       "owner": "Berns Steak House",
       "applicant": "Ricky Peterika",
       "neighborhoodAssociations": [
@@ -107,6 +109,7 @@
       "request": "Reduce the rear yard setback from 20 feet to 4.9 feet. Reduce side yard setback from 7 feet to 4 feet.",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Terrace Park Civic Association, Inc., 345 Bayshore Condominium Assn.",
+      "locationWithheld": false,
       "owner": "Marwan Asadi",
       "applicant": "James Bennett",
       "neighborhoodAssociations": [
@@ -135,6 +138,7 @@
       "request": "Request rear setback change for accessory pool from 5t to 3ft.",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Cameron and Brittany Brown",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -166,6 +170,7 @@
       "request": "Reduce rear yard setback from 20 feet to 10 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "FairOaks/Manhattan Manor Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Brian and Kelly Brelje",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -196,6 +201,7 @@
       "request": "Reduce west side yard setback from 7 feet to 3 feet",
       "codeSection": "27-156",
       "neighborhoodAssociationsRaw": "Swann Estates Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Lisa Morgan",
       "applicant": "Joseph Caito",
       "neighborhoodAssociations": [
@@ -223,6 +229,7 @@
       "request": "Reduce corner yard pool setback from 15 feet to 4 feet",
       "codeSection": "27-290",
       "neighborhoodAssociationsRaw": "Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc., Palma Ceia West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Sean Daniel",
       "applicant": null,
       "neighborhoodAssociations": [
@@ -255,6 +262,7 @@
       "request": "Increase signage from 0 square feet to 4,118.36 square feet",
       "codeSection": "27-289",
       "neighborhoodAssociationsRaw": "Gandy Civic Association, Southtown Park HOA, Belmar Gardens Neighborhood, Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "4130 Gandy Blvd LLC",
       "applicant": "Addie Mentry",
       "neighborhoodAssociations": [
@@ -285,6 +293,7 @@
       "request": "Reduce freestanding sign setback from 5 feet to 0 feet",
       "codeSection": "27-289",
       "neighborhoodAssociationsRaw": "Palma Ceia West Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
       "owner": "Slapshot Management Group Llc",
       "applicant": "Thomas Signs and Awning LLC",
       "neighborhoodAssociations": [
