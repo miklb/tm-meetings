@@ -4,6 +4,108 @@
   "firstSeenAt": "2026-09-18T23:01:38.293Z",
   "entries": [
     {
+      "date": "2026-09-22",
+      "scrapedAt": "2026-09-22T23:01:39.441Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA26-05",
+          "filename": "FINAL ORDINANCE - TACPA 26-05.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA26-05",
+          "filename": "TA CPA 26-05 TCC HEARING...PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA26-08",
+          "filename": "FINAL ORDINANCE - TACPA 26-08.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "TA/CPA26-01",
+          "filename": "TA CPA 26-01 TCC HEARING.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "TA/CPA26-04",
+          "filename": "FINAL ORDINANCE - TACPA 26-04.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "TA/CPA26-06",
+          "filename": "FINAL ORDINANCE - TACPA 26-06.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "AB2-26-10",
+          "filename": "AB2-26-10 STAFF REPORT_FINAL V2.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "AB2-26-10",
+          "filename": "ORDINANCE - AB2 26-10.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "AB2-26-10",
+          "filename": "BIE AB2 26-10.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "AB2-26-16",
+          "filename": "BIE AB2 26-16.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "AB2-26-16",
+          "filename": "ORDINANCE - AB2 26-16.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "AB2-26-17",
+          "filename": "ORDINANCE - AB2 26-17.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "AB2-26-17",
+          "filename": "BIE AB2 26-17.PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "AB2-26-19",
+          "filename": "BIE AB2 26-19.PDF"
+        },
+        {
+          "itemNumber": 11,
+          "itemFileNumber": "AB2-26-19",
+          "filename": "ORDINANCE - AB2 26-19.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "AB2-26-20",
+          "filename": "BIE AB2 26-20.PDF"
+        },
+        {
+          "itemNumber": 12,
+          "itemFileNumber": "AB2-26-20",
+          "filename": "ORDINANCE - AB2 26-20.PDF"
+        },
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "AB2-26-03",
+          "filename": "BIE AB2 26-03.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-09-21",
       "scrapedAt": "2026-09-22T00:19:24.215Z",
       "itemsAdded": [],

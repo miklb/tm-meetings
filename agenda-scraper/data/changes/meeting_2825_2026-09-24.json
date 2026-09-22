@@ -4,6 +4,23 @@
   "firstSeenAt": "2026-09-18T23:01:41.103Z",
   "entries": [
     {
+      "date": "2026-09-22",
+      "scrapedAt": "2026-09-22T23:01:41.913Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-25891",
+          "filename": "ADA COMPLIANT_09242026 PPT.FEELEY - TAMPA DGM  ROW FEE STUDY ATTACHMENT 1.PPTX"
+        }
+      ]
+    },
+    {
       "date": "2026-09-21",
       "scrapedAt": "2026-09-22T00:19:26.693Z",
       "itemsAdded": [],
