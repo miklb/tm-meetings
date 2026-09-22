@@ -3,7 +3,7 @@
   "meetingType": "evening",
   "meetingName": "City Council Budget Public Hearing",
   "meetingTime": "17:01",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "September 22, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2931&type=agenda&doctype=1",
@@ -21,37 +21,53 @@
       "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 2,
       "agendaItemId": "27307",
-      "title": "File No. B2027-2\nBudget and Finance Staff to present a proposal related to the CIP, CIT and the General Fund Deferral for FY27. (Original motion initiated by Hurtak-Viera on September 8, 2026)",
-      "rawTitle": "File No. B2027-2\nBudget and Finance Staff to present a proposal related to the CIP, CIT and the General Fund Deferral for FY27. (Original motion initiated by Hurtak-Viera on September 8, 2026)",
+      "title": "File No. B2027-2\nBudget and Finance Staff to present a proposal related to the CIP, CIT and the General Fund Deferral for FY27. (Original motion initiated by Hurtak-Viera on September 8, 2026)\nMemorandum from City Administration transmitting a written response for said agenda item. (To be R/F)",
+      "rawTitle": "File No. B2027-2\nBudget and Finance Staff to present a proposal related to the CIP, CIT and the General Fund Deferral for FY27. (Original motion initiated by Hurtak-Viera on September 8, 2026)\nMemorandum from City Administration transmitting a written response for said agenda item. (To be R/F)",
       "fileNumber": "B2027-2",
       "background": "",
-      "supportingDocuments": [],
+      "supportingDocuments": [
+        {
+          "title": "MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 2.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.ADMINISTRATION%20-%20092226%20BUDGET%20SPECIAL%20CALL%20PUBLIC%20HEARING%20-%20FILE%20NO.%20202.pdf?documentType=1&meetingId=2931&itemId=27307&publishId=212260&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 2.PDF in a new tab",
+          "originalText": "MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 2.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27307/memo.administration-092226-budget-special-call-public-hearing-file-no.-2027-2-agenda-item-no.-2.pdf"
+        }
+      ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 3,
       "agendaItemId": "27308",
-      "title": "File No. B2027-2\nLegal Staff to present an addendum based on the draft resolutions submitted by Chair Clendenin to the FY27 Budget. (Original motion initiated by Clendenin-Viera on September 8, 2026)",
-      "rawTitle": "File No. B2027-2\nLegal Staff to present an addendum based on the draft resolutions submitted by Chair Clendenin to the FY27 Budget. (Original motion initiated by Clendenin-Viera on September 8, 2026)",
+      "title": "File No. B2027-2\nLegal Staff to present an budget addendum based on the draft resolutions submitted by Chair Clendenin to the FY27 Budget. (Original motion initiated by Clendenin-Viera on September 8, 2026)\nEmail from Martin Shelby, Council Attorney, transmitting the budget addendum to the FY27 budget ordinance. (To be R/F)",
+      "rawTitle": "File No. B2027-2\nLegal Staff to present an budget addendum based on the draft resolutions submitted by Chair Clendenin to the FY27 Budget. (Original motion initiated by Clendenin-Viera on September 8, 2026)\nEmail from Martin Shelby, Council Attorney, transmitting the budget addendum to the FY27 budget ordinance. (To be R/F)",
       "fileNumber": "B2027-2",
       "background": "",
-      "supportingDocuments": [],
+      "supportingDocuments": [
+        {
+          "title": "ADDENDUM TO THE FISCAL YEAR 2027 OFFICIAL BUDGET ORDINANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ADDENDUM%20TO%20THE%20FISCAL%20YEAR%202027%20OFFICIAL%20BUDGET%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2931&itemId=27308&publishId=212261&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ADDENDUM TO THE FISCAL YEAR 2027 OFFICIAL BUDGET ORDINANCE.PDF in a new tab",
+          "originalText": "ADDENDUM TO THE FISCAL YEAR 2027 OFFICIAL BUDGET ORDINANCE.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27308/addendum-to-the-fiscal-year-2027-official-budget-ordinance.pdf"
+        }
+      ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 4,
@@ -66,22 +82,30 @@
       "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 5,
       "agendaItemId": "27310",
-      "title": "File No. B2027-2\nStaff to present a proposal on the monetary amount that the City would save through the aforementioned salary increase freeze on employees earning over $150,000.00; from the start of the fiscal year until Amendment 3 is resolved. (Original motion initiated by Viera-Hurtak on September 8, 2026)",
-      "rawTitle": "File No. B2027-2\nStaff to present a proposal on the monetary amount that the City would save through the aforementioned salary increase freeze on employees earning over $150,000.00; from the start of the fiscal year until Amendment 3 is resolved. (Original motion initiated by Viera-Hurtak on September 8, 2026)",
+      "title": "File No. B2027-2\nStaff to present a proposal on the monetary amount that the City would save through the aforementioned salary increase freeze on employees earning over $150,000.00; from the start of the fiscal year until Amendment 3 is resolved. (Original motion initiated by Viera-Hurtak on September 8, 2026)\nMemorandum from the City Administration transmitting the monetary amount for said agenda item. (To be R/F)",
+      "rawTitle": "File No. B2027-2\nStaff to present a proposal on the monetary amount that the City would save through the aforementioned salary increase freeze on employees earning over $150,000.00; from the start of the fiscal year until Amendment 3 is resolved. (Original motion initiated by Viera-Hurtak on September 8, 2026)\nMemorandum from the City Administration transmitting the monetary amount for said agenda item. (To be R/F)",
       "fileNumber": "B2027-2",
       "background": "",
-      "supportingDocuments": [],
+      "supportingDocuments": [
+        {
+          "title": "MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 5.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO.ADMINISTRATION%20-%20092226%20BUDGET%20SPECIAL%20CALL%20PUBLIC%20HEARING%20-%20FILE%20NO.%20202.pdf?documentType=1&meetingId=2931&itemId=27310&publishId=212262&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 5.PDF in a new tab",
+          "originalText": "MEMO.ADMINISTRATION - 092226 BUDGET SPECIAL CALL PUBLIC HEARING - FILE NO. 2027-2 - AGENDA ITEM NO. 5.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27310/memo.administration-092226-budget-special-call-public-hearing-file-no.-2027-2-agenda-item-no.-5.pdf"
+        }
+      ],
       "folioNumbers": [],
       "location": "",
       "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 6,
@@ -96,7 +120,7 @@
       "coordinates": null,
       "summaryText": "",
       "projectedCosts": null,
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 7,
@@ -108,14 +132,14 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2931&itemId=26969&publishId=211683&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2931&itemId=26969&publishId=212263&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/26969/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "FY2027 AD VALOREM MILLAGE RESOLUTION.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20AD%20VALOREM%20MILLAGE%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2931&itemId=26969&publishId=211684&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20AD%20VALOREM%20MILLAGE%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2931&itemId=26969&publishId=212264&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of FY2027 AD VALOREM MILLAGE RESOLUTION.PDF in a new tab",
           "originalText": "FY2027 AD VALOREM MILLAGE RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/26969/fy2027-ad-valorem-millage-resolution.pdf"
@@ -148,7 +172,7 @@
         "hasProjectedCosts": true,
         "hasParsedRows": true
       },
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 8,
@@ -160,49 +184,49 @@
       "supportingDocuments": [
         {
           "title": "FY2027 BUDGET ADOPTION ORDINANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20BUDGET%20ADOPTION%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=211685&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20BUDGET%20ADOPTION%20ORDINANCE.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=212265&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of FY2027 BUDGET ADOPTION ORDINANCE.PDF in a new tab",
           "originalText": "FY2027 BUDGET ADOPTION ORDINANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27305/fy2027-budget-adoption-ordinance.pdf"
         },
         {
           "title": "FY2027 RECOMMENDED BUDGET SUPPLEMENT.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20RECOMMENDED%20BUDGET%20SUPPLEMENT.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=211686&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20RECOMMENDED%20BUDGET%20SUPPLEMENT.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=212266&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of FY2027 RECOMMENDED BUDGET SUPPLEMENT.PDF in a new tab",
           "originalText": "FY2027 RECOMMENDED BUDGET SUPPLEMENT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27305/fy2027-recommended-budget-supplement.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=211687&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=212267&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27305/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "FY2027 1ST PUBLIC HEARING PRESENTATION FINAL.PPTX",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%201ST%20PUBLIC%20HEARING%20PRESENTATION%20FINAL.PPTX.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=211688&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%201ST%20PUBLIC%20HEARING%20PRESENTATION%20FINAL.PPTX.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=212268&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of FY2027 1ST PUBLIC HEARING PRESENTATION FINAL.PPTX in a new tab",
           "originalText": "FY2027 1ST PUBLIC HEARING PRESENTATION FINAL.PPTX",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27305/fy2027-1st-public-hearing-presentation-final.pdf"
         },
         {
           "title": "DOCUMENTS SUBMITTED BY HURTAK.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20HURTAK.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=211689&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20HURTAK.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=212269&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of DOCUMENTS SUBMITTED BY HURTAK.PDF in a new tab",
           "originalText": "DOCUMENTS SUBMITTED BY HURTAK.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27305/documents-submitted-by-hurtak.pdf"
         },
         {
           "title": "DOCUMENTS SUBMITTED BY CLENDENIN.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20CLENDENIN.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=211690&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20CLENDENIN.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=212270&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of DOCUMENTS SUBMITTED BY CLENDENIN.PDF in a new tab",
           "originalText": "DOCUMENTS SUBMITTED BY CLENDENIN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27305/documents-submitted-by-clendenin.pdf"
         },
         {
           "title": "DOCUMENTS SUBMITTED BY BRANDON CAMPBELL.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20BRANDON%20CAMPBELL.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=211691&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/DOCUMENTS%20SUBMITTED%20BY%20BRANDON%20CAMPBELL.PDF.pdf?documentType=1&meetingId=2931&itemId=27305&publishId=212271&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of DOCUMENTS SUBMITTED BY BRANDON CAMPBELL.PDF in a new tab",
           "originalText": "DOCUMENTS SUBMITTED BY BRANDON CAMPBELL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/27305/documents-submitted-by-brandon-campbell.pdf"
@@ -235,7 +259,7 @@
         "hasProjectedCosts": true,
         "hasParsedRows": true
       },
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     },
     {
       "number": 9,
@@ -247,14 +271,14 @@
       "supportingDocuments": [
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2931&itemId=26970&publishId=211692&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2931&itemId=26970&publishId=212272&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/26970/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "FY2027 CIP RESOLUTION.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20CIP%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2931&itemId=26970&publishId=211693&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FY2027%20CIP%20RESOLUTION.PDF.pdf?documentType=1&meetingId=2931&itemId=26970&publishId=212273&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of FY2027 CIP RESOLUTION.PDF in a new tab",
           "originalText": "FY2027 CIP RESOLUTION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-09-22/meeting-2931/26970/fy2027-cip-resolution.pdf"
@@ -271,7 +295,7 @@
         "hasProjectedCosts": true,
         "hasParsedRows": false
       },
-      "section": "5:01 P.M. – BUDGET PUBLIC HEARINGS - (ITEMS 1 THROUGH 9)"
+      "section": "5:01 P.M. –"
     }
   ],
   "formattedDate": "2026-09-22"

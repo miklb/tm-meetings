@@ -2,5 +2,44 @@
   "meetingId": "2825",
   "meetingDate": "2026-09-24",
   "firstSeenAt": "2026-09-18T23:01:41.103Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-21",
+      "scrapedAt": "2026-09-22T00:19:26.693Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-25891",
+          "filename": "MEMO.FEELEY-BAIRD_-_071626_REGULAR_COUNCIL_SESSION_-_FILE_NO._CM26-25341 ATTACHMENT 4.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-25891",
+          "filename": "MEMO.FEELEY-BAIRD - 092426 WORKSHOP COUNCIL SESSION - FILE NO. CM26-25891.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-25891",
+          "filename": "09242026 BUILDING FEE ANALYSIS ATTACHMENT 2.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-25891",
+          "filename": "09242026 TAMPA REVENUE ENHANCEMENT MEMO ATTACHMENT 3.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-25891",
+          "filename": "09242026 PPT.FEELEY - TAMPA DGM &AMP; ROW FEE STUDY ATTACHMENT 1.PPTX"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-25891",
+          "filename": "09242026 TAMPA_DGM_ROW_REPORT-FINAL_07.07.2026 ATTACHMENT 5.PDF"
+        }
+      ]
+    }
+  ]
 }

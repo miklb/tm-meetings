@@ -2,5 +2,19 @@
   "meetingId": "2932",
   "meetingDate": "2026-09-24",
   "firstSeenAt": "2026-09-18T23:01:38.293Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-09-21",
+      "scrapedAt": "2026-09-22T00:19:24.215Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "AB2-26-10",
+          "filename": "1-WRITTEN COMMENTS - AB2-26-10.PDF"
+        }
+      ]
+    }
+  ]
 }
