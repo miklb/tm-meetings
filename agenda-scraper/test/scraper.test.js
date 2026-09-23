@@ -192,6 +192,42 @@ test('items without an agendaItemId are passed through unchanged', () => {
   assert.equal(r.data.agendaItems[0].title, 'New');
 });
 
+const GEO = { lat: 27.97705, lng: -82.46752 };
+
+test('a scrape without a geocoder keeps the stored coordinates, location and folios (the 9/22/26 nightly)', () => {
+  const stored = meeting([
+    item(3, { fileNumber: 'TA/CPA26-05', coordinates: GEO, location: '3402 E Hillsborough Ave', folioNumbers: ['182151.5005'] }),
+    item(51, { fileNumber: 'SU1-26-62-C', coordinates: { lat: 27.972356, lng: -82.459176 }, location: '3043 North Florida Avenue', folioNumbers: [] }),
+  ]);
+  const fresh = meeting([
+    item(3, { fileNumber: 'TA/CPA26-05', coordinates: null, location: '', folioNumbers: [] }),
+    item(51, { fileNumber: 'SU1-26-62-C', coordinates: null, location: '', folioNumbers: [] }),
+  ]);
+  const r = mergeWithExisting(stored, fresh);
+  assert.deepEqual(r.keptItems, []);
+  assert.deepEqual(r.data.agendaItems[0].coordinates, GEO);
+  assert.equal(r.data.agendaItems[0].location, '3402 E Hillsborough Ave');
+  assert.deepEqual(r.data.agendaItems[0].folioNumbers, ['182151.5005']);
+  assert.equal(r.data.agendaItems[1].location, '3043 North Florida Avenue');
+  assert.equal(r.restoredFields, 5); // item 51 had no folios to restore
+});
+
+test('a fresh geocode or address wins over the stored one', () => {
+  const stored = meeting([item(3, { coordinates: GEO, location: 'Old St', folioNumbers: ['1'] })]);
+  const fresh = meeting([item(3, { coordinates: { lat: 28, lng: -82.5 }, location: 'New St', folioNumbers: ['2', '3'] })]);
+  const r = mergeWithExisting(stored, fresh);
+  assert.deepEqual(r.data.agendaItems[0], fresh.agendaItems[0]);
+  assert.equal(r.restoredFields, 0);
+});
+
+test('derived fields are not invented for an item that never had them', () => {
+  const stored = meeting([item(1, { coordinates: null, location: '', folioNumbers: [] })]);
+  const fresh = meeting([item(1, { coordinates: null, location: '', folioNumbers: [] })]);
+  const r = mergeWithExisting(stored, fresh);
+  assert.equal(r.data.agendaItems[0].coordinates, null);
+  assert.equal(r.restoredFields, 0);
+});
+
 // ---------------------------------------------------------------------------
 // Change log: same-day runs merge
 // ---------------------------------------------------------------------------

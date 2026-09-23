@@ -209,6 +209,9 @@ function preserveMirrorsAndLogChanges(outputFileName, meetingData) {
             if (merged.restoredMirrors > 0) {
                 console.log(`Preserved ${merged.restoredMirrors} mirrored document URLs from previous scrape`);
             }
+            if (merged.restoredFields > 0) {
+                console.log(`Preserved ${merged.restoredFields} geocoded/folio fields from previous scrape`);
+            }
 
             // Capture meaningful diff for the public change-log
             try {

@@ -234,7 +234,10 @@ reconciles the fresh scrape with the stored one:
 - **Kept per item**: an item whose detail fetch failed (after one retry) or
   that lost every document keeps its stored version; the log says so.
 - **Carried forward**: `mirroredUrl` by document identity (title + ordinal
-  for repeats), so re-scrapes never drop R2 links.
+  for repeats), so re-scrapes never drop R2 links; and `coordinates`,
+  `location` and `folioNumbers` when the fresh scrape has them empty, so the
+  nightly (which has no `MAPBOX_API_TOKEN`) cannot blank a geocode a local
+  run made. A fresh non-empty value always wins.
 
 `node json-scraper.js <id>` for a meeting no longer on the OnBase list keeps
 the stored `meetingType`/`meetingName` (it used to demote to `regular`).
