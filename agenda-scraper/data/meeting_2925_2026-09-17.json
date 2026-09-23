@@ -3180,8 +3180,11 @@
         }
       ],
       "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
+      "location": "3043 North Florida Avenue",
+      "coordinates": {
+        "lat": 27.972356,
+        "lng": -82.459176
+      },
       "summaryText": "",
       "projectedCosts": null,
       "section": "ITEMS BEING SET FOR PUBLIC HEARINGS BY COUNCIL CONSENT - (Item 51):"
