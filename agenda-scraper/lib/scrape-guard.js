@@ -6,7 +6,10 @@
  *  - an empty or partly failed scrape (OnBase hiccup, dropped item fetch)
  *    overwrote a good file, and the nightly committed it;
  *  - mirroredUrl stamps were carried forward by document title, so two
- *    same-titled documents in one item shared one stamp.
+ *    same-titled documents in one item shared one stamp;
+ *  - the nightly (no MAPBOX_API_TOKEN in CI) re-scraped items the local run
+ *    had geocoded and wrote coordinates: null over them, so map pins came
+ *    and went with whichever run was last.
  *
  * Everything here is pure: it takes the two JSON objects and returns a
  * result. The caller decides what to write and what to log.
@@ -36,6 +39,14 @@ function documentKeys(docs) {
 const docCount = (item) => (item.supportingDocuments || []).length;
 
 /**
+ * Per-item fields the scraper derives from a geocoder or a PDF fetch, which
+ * a run without those (CI has no Mapbox token) leaves empty. An empty fresh
+ * value never overwrites a stored one; a fresh non-empty value always wins.
+ */
+const DERIVED_FIELDS = ['coordinates', 'location', 'folioNumbers'];
+const isEmpty = (v) => v == null || v === '' || (Array.isArray(v) && v.length === 0);
+
+/**
  * Decide whether a freshly scraped item should replace the stored one.
  * Returns the reason to keep the old item, or null to accept the new one.
  */
@@ -58,11 +69,12 @@ function reasonToKeepOld(oldItem, newItem) {
  *   refused: string|null,        reason the fresh scrape must NOT be written
  *   data: object,                fresh scrape with preserved fields merged in
  *   keptItems: Array<{number, agendaItemId, reason}>,
- *   restoredMirrors: number
+ *   restoredMirrors: number,
+ *   restoredFields: number   derived fields (coordinates, location, folioNumbers) carried forward
  * }}
  */
 function mergeWithExisting(existing, fresh) {
-  const result = { refused: null, data: fresh, keptItems: [], restoredMirrors: 0 };
+  const result = { refused: null, data: fresh, keptItems: [], restoredMirrors: 0, restoredFields: 0 };
   if (!existing) return result;
 
   const oldItems = existing.agendaItems || [];
@@ -98,6 +110,12 @@ function mergeWithExisting(existing, fresh) {
           result.restoredMirrors++;
         }
       });
+      for (const field of DERIVED_FIELDS) {
+        if (isEmpty(newItem[field]) && !isEmpty(oldItem[field])) {
+          newItem[field] = oldItem[field];
+          result.restoredFields++;
+        }
+      }
     }
     return newItem;
   });
@@ -105,4 +123,4 @@ function mergeWithExisting(existing, fresh) {
   return result;
 }
 
-module.exports = { documentKeys, mergeWithExisting, reasonToKeepOld };
+module.exports = { DERIVED_FIELDS, documentKeys, mergeWithExisting, reasonToKeepOld };
