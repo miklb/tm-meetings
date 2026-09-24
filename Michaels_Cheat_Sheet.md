@@ -40,6 +40,17 @@ npm run archive -- YYYY-MM-DD --meeting-type CRA    # override auto-detection
 npm run archive -- YYYY-MM-DD --dry-run             # show what would run
 ```
 
+**"No meetings found" for a date the meeting definitely happened:** the City
+filed the transcript under the wrong date (9/17/26 was listed as 9/16). Find
+the pkey under the City's date, then archive it under the real one — the date
+you pass is the one every step uses (filenames, YouTube search, agenda join):
+
+```bash
+source pipeline/activate.sh
+python pipeline/transcript_lookup.py --date 2026-09-16   # → pkey 2704
+npm run archive -- 2704 2026-09-17
+```
+
 ## Rebuild only
 
 If you fixed data by hand and just need to republish:
