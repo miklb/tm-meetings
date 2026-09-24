@@ -8,6 +8,7 @@ import os
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from src.transcript_gap_detector import (
+    select_part_boundaries, BOUNDARY_FLOOR_MINUTES,
     parse_timestamp_to_minutes,
     detect_gaps,
     save_gaps_to_mapping,
@@ -382,6 +383,101 @@ def test_real_transcript_2645():
     return (1, 1) if ok else (0, 1)
 
 
+# --- select_part_boundaries: the video lengths pick the boundary ---
+
+def _fmt(minutes):
+    """Minutes since midnight → transcript wall-clock text, e.g. 816.0 → "1:36:00PM"."""
+    total = int(round(minutes * 60))
+    h, rem = divmod(total, 3600)
+    m, sec = divmod(rem, 60)
+    ap = "AM" if h < 12 else "PM"
+    h12 = h % 12 or 12
+    return f"{h12}:{m:02d}:{sec:02d}{ap}"
+
+
+def dense(*sessions, every=5):
+    """Segments every `every` minutes within each (start, end) session, so the
+    only pauses are the ones between sessions — as in a real transcript, where
+    the clerk stamps a segment every few seconds."""
+    out = []
+    for start, end in sessions:
+        a, b = parse_timestamp_to_minutes(start), parse_timestamp_to_minutes(end)
+        t = a
+        while t < b:
+            out.append((_fmt(t), "Chair", "..."))
+            t += every
+        out.append((end, "Chair", "..."))
+    return out
+
+
+def test_short_lunch_is_the_boundary_not_the_afternoon_pause():
+    """9/17/26: a 34-min lunch (under the old 60-min threshold) split the video;
+    an 11-min pause at 3 PM did not. Part 1 was 3h30m, part 2 3h27m."""
+    path = make_transcript(dense(
+        ("9:04:41AM", "12:22:58PM"),   # morning; then a 34-minute lunch — the video boundary
+        ("12:56:36PM", "3:04:15PM"),   # afternoon; then an 11-minute pause, same video
+        ("3:15:30PM", "4:23:47PM"),
+    ))
+    try:
+        result = detect_gaps(path, BOUNDARY_FLOOR_MINUTES)
+        picked = select_part_boundaries(result, [210, 207])
+        ok = (
+            len(result.gaps) == 2                                  # both pauses are candidates
+            and [g.resume_timestamp for g in picked] == ["12:56:36PM"]
+        )
+        # the old rule found nothing at all
+        ok = ok and len(detect_gaps(path, 60).gaps) == 0
+        label = "PASS" if ok else "FAIL"
+        print(f"  {label}: 34-min lunch chosen over 11-min pause by video length → {[g.resume_timestamp for g in picked]}")
+        return (1, 1) if ok else (0, 1)
+    finally:
+        os.unlink(path)
+
+
+def test_latest_fitting_gap_wins_over_an_earlier_longer_one():
+    """A long ceremonial recess in the morning must not beat the lunch the
+    video was actually split at: the boundary is the LAST pause part 1 can hold."""
+    path = make_transcript(dense(
+        ("9:00:00AM", "9:30:00AM"),    # then a 45-min ceremonial recess, still part 1
+        ("10:15:00AM", "12:20:00PM"),  # then a 30-min lunch — the split
+        ("12:50:00PM", "3:00:00PM"),
+    ))
+    try:
+        picked = select_part_boundaries(detect_gaps(path, BOUNDARY_FLOOR_MINUTES), [205, 140])
+        ok = [g.resume_timestamp for g in picked] == ["12:50:00PM"]
+        print(f"  {'PASS' if ok else 'FAIL'}: latest fitting pause chosen → {[g.resume_timestamp for g in picked]}")
+        return (1, 1) if ok else (0, 1)
+    finally:
+        os.unlink(path)
+
+
+def test_three_parts_and_a_pause_that_fits_nothing():
+    """Two boundaries for three videos; and when no pause fits part 1's length
+    the result is short, so the caller can warn instead of guessing."""
+    path = make_transcript(dense(
+        ("9:00:00AM", "11:30:00AM"),
+        ("1:00:00PM", "3:00:00PM"),
+        ("5:01:00PM", "7:00:00PM"),
+    ))
+    try:
+        three = select_part_boundaries(detect_gaps(path, BOUNDARY_FLOOR_MINUTES), [155, 125, 120])
+        ok1 = [g.resume_timestamp for g in three] == ["1:00:00PM", "5:01:00PM"]
+        # part 1 only 60 min long: no pause fits, nothing chosen
+        none = select_part_boundaries(detect_gaps(path, BOUNDARY_FLOOR_MINUTES), [60, 300])
+        ok2 = none == []
+        single = select_part_boundaries(detect_gaps(path, BOUNDARY_FLOOR_MINUTES), [600])
+        ok3 = single == []
+        # 1/29/26: one 7.5-hour video listed twice over would hold everything —
+        # a part long enough for the rest of the transcript is never split.
+        whole = select_part_boundaries(detect_gaps(path, BOUNDARY_FLOOR_MINUTES), [700, 60])
+        ok4 = whole == []
+        ok = ok1 and ok2 and ok3 and ok4
+        print(f"  {'PASS' if ok else 'FAIL'}: three parts → {[g.resume_timestamp for g in three]}; unfit → {none}; single → {single}; holds-all → {whole}")
+        return (1, 1) if ok else (0, 1)
+    finally:
+        os.unlink(path)
+
+
 # --- detect_and_save integration test ---
 
 def test_detect_and_save():
@@ -450,6 +546,16 @@ def main():
         total_tests += t
 
     print("\n=== Integration Tests ===\n")
+    print("\nselect_part_boundaries:")
+    for test_fn in [
+        test_short_lunch_is_the_boundary_not_the_afternoon_pause,
+        test_latest_fitting_gap_wins_over_an_earlier_longer_one,
+        test_three_parts_and_a_pause_that_fits_nothing,
+    ]:
+        p, t = test_fn()
+        total_passed += p
+        total_tests += t
+
     p, t = test_detect_and_save()
     total_passed += p
     total_tests += t

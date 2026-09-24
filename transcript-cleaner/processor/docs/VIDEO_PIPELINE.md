@@ -67,12 +67,12 @@ python scripts/build/match_whisper_to_transcript.py SocxtU6vTKc \
 
 **File:** `src/transcript_gap_detector.py`
 
-Scans consecutive segment timestamps in the official transcript to find time gaps > 60 minutes (lunch breaks, streaming interruptions). Populates `transcript_start_time` in the video mapping JSON, used to assign segments to the correct video part when rendering transcripts (the Eleventy site reads segments from data/meetings.db).
+Scans consecutive segment timestamps in the official transcript for pauses ≥ 10 minutes, then picks each video part's boundary from the videos' lengths: the latest pause whose pre-gap segment still fits inside part 1's video (`select_part_boundaries`). A fixed 60-minute threshold missed the 34-minute lunch the 9/17/26 video was split at, while an 11-minute pause the same afternoon was not a split. Populates `transcript_start_time` in the video mapping JSON, used to assign segments to the correct video part when rendering transcripts (the Eleventy site reads segments from data/meetings.db).
 
 **How it works:**
 
 1. Parse each segment's wall-clock timestamp (e.g., `12:02:47PM`) to minutes since midnight
-2. Compare consecutive timestamps — gaps > threshold are video part boundaries
+2. Compare consecutive timestamps — every pause ≥ the floor (10 min) is a candidate; the video lengths decide which is a part boundary
 3. Map gaps sequentially to Part 2, Part 3, etc.
 4. Write `transcript_start_time` (the resume timestamp) into the video mapping
 
@@ -92,8 +92,8 @@ python -m src.transcript_gap_detector data/processed/processed_transcript_2645_2
 python -m src.transcript_gap_detector data/processed/processed_transcript_2645_2025-11-13.json \
   --video-mapping data/video_mapping_2645.json --dry-run
 
-# Custom threshold (default: 60 minutes)
-python -m src.transcript_gap_detector transcript.json --min-gap 45
+# Custom floor for candidate pauses (default: 10 minutes)
+python -m src.transcript_gap_detector transcript.json --min-gap 20
 ```
 
 **Integrated usage (via match_whisper_to_transcript.py):**
