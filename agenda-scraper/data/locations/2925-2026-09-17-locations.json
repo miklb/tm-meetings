@@ -1,0 +1,105 @@
+{
+  "meetingId": "2925",
+  "date": "2026-09-17",
+  "records": {
+    "REZ-26-0000008": {
+      "lat": 27.967437,
+      "lng": -82.567999,
+      "address": "7700 W Courtney Campbell Cswy",
+      "neighborhood": "Westshore",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02QOX&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000031": {
+      "lat": 27.944796,
+      "lng": -82.480988,
+      "address": "2101 W Kennedy Blvd",
+      "neighborhood": "North Hyde Park",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02YNI&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000042": {
+      "lat": 27.95658,
+      "lng": -82.429342,
+      "address": "2701 E 2nd Ave",
+      "neighborhood": "Historic East Ybor and Gary",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=007E0&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000047": {
+      "lat": 27.960484,
+      "lng": -82.459385,
+      "address": "1701 N Florida Ave",
+      "neighborhood": "Tampa Heights",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=009QD&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000048": {
+      "lat": 28.054202,
+      "lng": -82.459315,
+      "address": "11607 N Florida Ave",
+      "neighborhood": "East Forest Hills",
+      "councilDistrict": "7",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=009RH&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000055": {
+      "lat": 27.944893,
+      "lng": -82.484999,
+      "address": "107 N Armenia Ave",
+      "neighborhood": "North Hyde Park",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00ERD&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000067": {
+      "lat": 27.943763,
+      "lng": -82.436379,
+      "address": "2018 Grant St",
+      "neighborhood": "Palmetto Beach",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00LAJ&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000075": {
+      "lat": 27.963265,
+      "lng": -82.396394,
+      "address": "5250 E Broadway Ave",
+      "neighborhood": "East Side Commercial",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00MJP&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "REZ-26-0000077": {
+      "lat": 27.981592,
+      "lng": -82.473368,
+      "address": "4001 N Riverside Dr",
+      "neighborhood": "South Seminole Heights",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00MVJ&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "VAC-26-0000011": {
+      "lat": 28.034571,
+      "lng": -82.444696,
+      "address": "9401 N 14th St",
+      "neighborhood": "North Tampa Community",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00IN5&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    },
+    "VAC-26-0000015": {
+      "lat": 27.958143,
+      "lng": -82.430565,
+      "address": "2602 E 4th Ave",
+      "neighborhood": "Historic East Ybor and Gary",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00RXN&agencyCode=TAMPA",
+      "locatedOn": "2026-09-23"
+    }
+  }
+}

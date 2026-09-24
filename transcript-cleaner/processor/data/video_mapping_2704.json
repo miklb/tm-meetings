@@ -1,0 +1,36 @@
+{
+  "meeting_id": 2704,
+  "meeting_date": "2026-09-17",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "uK_OoLCdjIw",
+      "title": "Tampa City Council - 09/17/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-09-18T06:07:54Z",
+      "duration": "PT3H29M56S",
+      "chapters": [],
+      "offset_seconds": 623,
+      "transcript_start_time": null
+    },
+    {
+      "video_id": "saqbyyOcpiQ",
+      "title": "Tampa City Council - 09/17/26 - Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-09-18T13:33:45Z",
+      "duration": "PT3H26M50S",
+      "chapters": [],
+      "offset_seconds": -93,
+      "transcript_start_time": "12:56:36PM"
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-09-24T00:17:31Z",
+    "audit_rc": 0,
+    "verify_rc": 0,
+    "note": "part 2 boundary set by hand from the 34-min recess; both parts OK on audio"
+  }
+}
