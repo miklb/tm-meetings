@@ -40,10 +40,13 @@ DATA_DIR = PROJECT_ROOT / "data"
 
 from src.logging_config import setup_logging
 from src.meeting_type_detector import detect_meeting_type
-from src.transcript_gap_detector import detect_gaps, save_gaps_to_mapping
+from src.transcript_gap_detector import (
+    BOUNDARY_FLOOR_MINUTES, detect_gaps, save_gaps_to_mapping, select_part_boundaries,
+)
 from scripts.build.match_whisper_to_transcript import (
     calculate_offset,
     calculate_smart_duration,
+    parse_iso_duration,
     save_offset_to_mapping,
     whisper_cache_path,
 )
@@ -270,7 +273,7 @@ def run_pipeline(
     meeting_date: str,
     meeting_type: str | None = None,
     model: str = "small",
-    min_gap_minutes: int = 60,
+    min_gap_minutes: int = BOUNDARY_FLOOR_MINUTES,
     dry_run: bool = False,
     skip_fetch: bool = False,
     data_dir: Path = DATA_DIR,
@@ -283,7 +286,8 @@ def run_pipeline(
         meeting_date: Date string YYYY-MM-DD (e.g., "2025-11-13")
         meeting_type: Optional override (e.g., "CRA"). Auto-detected if omitted.
         model: Whisper model name (default: "small")
-        min_gap_minutes: Gap threshold for transcript gap detection (default: 60)
+        min_gap_minutes: Shortest pause that can be a video boundary (default: 10);
+            which pause is the boundary is decided by the video lengths
         dry_run: If True, show what would happen without making changes
         skip_fetch: If True, skip YouTube API call (use existing mapping only)
         data_dir: processor data directory (tests point this at a temp dir)
@@ -351,27 +355,35 @@ def run_pipeline(
         videos = []
 
     # ── Step 3: Detect transcript gaps (before offset matching) ────────
-    # For multi-part meetings, detect gaps first so transcript_start_time
-    # is available for Part 2+ offset matching.
+    # For multi-part meetings, find each part's boundary first so
+    # transcript_start_time is available for Part 2+ offset matching. Every
+    # pause ≥ the floor is a candidate; the videos' lengths decide which one
+    # is the boundary (a fixed 60-min threshold missed the 34-min lunch on
+    # 9/17/26 and the offset gate refused the meeting).
     if videos and len(videos) > 1:
         logger.info("\nStep 3: Detect transcript gaps (multi-part meeting)")
 
         if dry_run:
-            logger.info("  [dry-run] Would scan for gaps ≥ %d min", min_gap_minutes)
+            logger.info("  [dry-run] Would pick %d boundary(ies) among pauses ≥ %d min",
+                        len(videos) - 1, min_gap_minutes)
         else:
             gap_result = detect_gaps(str(transcript_path), min_gap_minutes)
-            if gap_result.gaps:
-                logger.info("  ✓ Found %d gap(s):", len(gap_result.gaps))
-                for g in gap_result.gaps:
-                    logger.info("     %s → %s (%s min)", g.end_timestamp, g.resume_timestamp, g.gap_minutes)
-                save_gaps_to_mapping(str(mapping_path), gap_result.gaps)
+            durations = [(parse_iso_duration(v.get("duration")) or 0) / 60 for v in videos]
+            boundaries = select_part_boundaries(gap_result, durations)
+            for g in gap_result.gaps:
+                mark = "boundary" if g in boundaries else "pause"
+                logger.info("     %s → %s (%s min) — %s", g.end_timestamp, g.resume_timestamp, g.gap_minutes, mark)
+            if boundaries:
+                save_gaps_to_mapping(str(mapping_path), boundaries)
                 # Reload the mapping so video dicts have transcript_start_time
                 with open(mapping_path) as f:
                     mapping = json.load(f)
                 videos = sorted(mapping.get("videos", []), key=lambda v: v.get("part", 1))
-            else:
-                logger.info("  ℹ️  No gaps ≥ %d min — transcript appears to be single-session",
-                            min_gap_minutes)
+            if len(boundaries) < len(videos) - 1:
+                logger.warning("  ⚠️  %d of %d boundaries found: no pause ≥ %d min fits the video "
+                               "lengths — Part 2+ will lack transcript_start_time and the offset "
+                               "gate will refuse this meeting. Set it by hand from the recess.",
+                               len(boundaries), len(videos) - 1, min_gap_minutes)
     elif videos and len(videos) == 1:
         logger.info("\nStep 3: Gap detection — skipped (single video)")
 
@@ -474,8 +486,9 @@ Prerequisite:
     parser.add_argument(
         "--min-gap",
         type=int,
-        default=60,
-        help="Minimum gap in minutes for transcript gap detection (default: 60)",
+        default=BOUNDARY_FLOOR_MINUTES,
+        help="Shortest pause (minutes) that can be a video boundary; the video "
+             f"lengths decide which pause is chosen (default: {BOUNDARY_FLOOR_MINUTES})",
     )
     parser.add_argument(
         "--dry-run",

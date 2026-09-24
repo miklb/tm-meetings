@@ -3,8 +3,8 @@ Transcript Gap Detector — identifies multi-part video boundaries in official t
 
 Tampa City Council meetings are sometimes split into multiple YouTube videos
 (lunch break, streaming interruption, evening session). This module scans
-consecutive segment timestamps to find gaps > a configurable threshold,
-then maps each gap to a video part boundary.
+consecutive segment timestamps for pauses, then picks the pause that is each
+video part's boundary from the parts' lengths (select_part_boundaries).
 
 The detected gaps populate `transcript_start_time` in the video mapping JSON,
 used to assign segments to the correct video part when rendering transcripts
@@ -38,6 +38,7 @@ class GapDetectionResult:
     total_segments: int
     gaps: list[TranscriptGap] = field(default_factory=list)
     first_timestamp: str = ""   # first segment timestamp (Part 1 implicit start)
+    last_timestamp: str = ""    # last segment timestamp (how far the transcript runs)
 
 
 def parse_timestamp_to_minutes(timestamp: str) -> Optional[float]:
@@ -142,8 +143,87 @@ def detect_gaps(
             ))
 
         prev_minutes = curr_minutes
+        result.last_timestamp = curr_ts
 
     return result
+
+
+# A pause shorter than this is never a video boundary. Ten minutes is well
+# under the shortest recess the City has split a video at (34 min, 9/17/26)
+# and above the pauses the clerk stamps inside a session.
+BOUNDARY_FLOOR_MINUTES = 10
+
+# A part's video may start a little AFTER its first transcript segment (a
+# negative offset: 3/5/26 part 1 was -305s), so a gap is allowed to sit this
+# far past the video's nominal end.
+BOUNDARY_SLACK_MINUTES = 5
+
+
+def _minutes_since(start: float, ts: str) -> Optional[float]:
+    """Minutes from `start` (minutes since midnight) to `ts`, wrapping at midnight."""
+    m = parse_timestamp_to_minutes(ts)
+    if m is None:
+        return None
+    return (m - start) % (24 * 60)
+
+
+def select_part_boundaries(
+    result: GapDetectionResult,
+    part_durations_minutes: list[float],
+    slack_minutes: float = BOUNDARY_SLACK_MINUTES,
+) -> list[TranscriptGap]:
+    """
+    Choose one gap per part boundary using the videos' lengths.
+
+    A fixed threshold cannot tell a lunch recess from a mid-session pause:
+    the 9/17/26 meeting split its video at a 34-minute lunch, under the old
+    60-minute threshold, and also paused 11 minutes at 3 PM. What IS known
+    before any offset has been matched is how long each video is, and part
+    k's video cannot hold more transcript than its own length. So for each
+    boundary this takes the LATEST candidate gap whose pre-gap segment still
+    fits inside part k's video, counted from that part's first segment. And a
+    boundary is only looked for when part k cannot hold the rest of the
+    transcript: a 7.5-hour evening video (1/29/26) covers everything, so its
+    pauses are pauses, not splits.
+
+    Args:
+        result: detect_gaps() output; its gaps are every pause ≥ the floor,
+            in transcript order.
+        part_durations_minutes: each video's length, parts 1..N in order.
+
+    Returns:
+        Up to N-1 gaps, one per boundary, in order. Fewer when no candidate
+        fits a part; the caller should say so, since Part 2+ will then have
+        no transcript_start_time and the offset gate refuses the meeting.
+    """
+    n = len(part_durations_minutes)
+    if n < 2 or not result.gaps:
+        return []
+    start = parse_timestamp_to_minutes(result.first_timestamp)
+    if start is None:
+        return []
+
+    chosen: list[TranscriptGap] = []
+    remaining = list(result.gaps)
+    for k in range(n - 1):
+        limit = part_durations_minutes[k] + slack_minutes
+        rest = _minutes_since(start, result.last_timestamp) if result.last_timestamp else None
+        if rest is not None and rest <= limit:
+            break  # part k's video holds the rest of the transcript: no split
+        fitting = [
+            g for g in remaining
+            if (since := _minutes_since(start, g.end_timestamp)) is not None and since <= limit
+        ]
+        if not fitting:
+            break
+        gap = fitting[-1]
+        chosen.append(gap)
+        remaining = remaining[remaining.index(gap) + 1:]
+        resume = parse_timestamp_to_minutes(gap.resume_timestamp)
+        if resume is None:
+            break
+        start = resume
+    return chosen
 
 
 def save_gaps_to_mapping(
