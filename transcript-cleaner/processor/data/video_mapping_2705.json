@@ -1,0 +1,23 @@
+{
+  "meeting_id": 2705,
+  "meeting_date": "2026-09-22",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "ZUyCi8ryImM",
+      "title": "Tampa City Council Budget Hearing - 09/22/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-09-23T12:54:57Z",
+      "duration": "PT2H41M40S",
+      "chapters": [],
+      "offset_seconds": 559
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-09-24T00:47:37Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
