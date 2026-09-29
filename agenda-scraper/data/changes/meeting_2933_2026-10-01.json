@@ -4,6 +4,38 @@
   "firstSeenAt": "2026-09-25T23:02:00.122Z",
   "entries": [
     {
+      "date": "2026-09-29",
+      "scrapedAt": "2026-09-29T23:02:34.559Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 13,
+          "itemFileNumber": "NCA26-27115",
+          "filename": "MEMO.RUGGIERO - 100126 REGULAR COUNCIL SESSION - FILE NO. NCA26-27115.PDF"
+        },
+        {
+          "itemNumber": 45,
+          "itemFileNumber": "ANX26-27316",
+          "filename": "REQUEST FOR WITHDRAWAL OF ITEM 45, FILE NO. ANX26-27316 (OCTOBER 1, 2026, REGULAR SESSION).PDF"
+        },
+        {
+          "itemNumber": 50,
+          "itemFileNumber": "E2026-8",
+          "filename": "MEMO - ITEM 50 EQUAL BUSINESS OPPORTUNITY.DOCX"
+        },
+        {
+          "itemNumber": 62,
+          "itemFileNumber": "CM26-24460",
+          "filename": "CM26-24460.DOCX"
+        }
+      ]
+    },
+    {
       "date": "2026-09-28",
       "scrapedAt": "2026-09-28T23:02:32.433Z",
       "itemsAdded": [
