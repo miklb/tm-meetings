@@ -1,0 +1,60 @@
+{
+  "meetingId": "2933",
+  "date": "2026-10-01",
+  "records": {
+    "REZ-26-0000020": {
+      "lat": 27.892314,
+      "lng": -82.525029,
+      "address": "4710 W McElroy Ave",
+      "neighborhood": "Gandy / Sun Bay South",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02VVN&agencyCode=TAMPA",
+      "locatedOn": "2026-09-26"
+    },
+    "REZ-26-0000023": {
+      "lat": 27.94472,
+      "lng": -82.485407,
+      "address": "2522 W Kennedy Blvd",
+      "neighborhood": "Palma Ceia Pines",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02XHG&agencyCode=TAMPA",
+      "locatedOn": "2026-09-26"
+    },
+    "REZ-26-0000034": {
+      "lat": 27.960985,
+      "lng": -82.51792,
+      "address": "4400 W Boy Scout Blvd",
+      "neighborhood": "Carver City Lincoln Gardens",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=000F1&agencyCode=TAMPA",
+      "locatedOn": "2026-09-26"
+    },
+    "REZ-26-0000061": {
+      "lat": 27.943197,
+      "lng": -82.478918,
+      "address": "205 S Fremont Ave",
+      "neighborhood": "South Howard",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00G5Z&agencyCode=TAMPA",
+      "locatedOn": "2026-09-26"
+    },
+    "REZ-26-0000064": {
+      "lat": 27.878983,
+      "lng": -82.495961,
+      "address": "6206 S 6th St",
+      "neighborhood": "Interbay - South of Gandy",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00KOY&agencyCode=TAMPA",
+      "locatedOn": "2026-09-26"
+    },
+    "REZ-26-0000066": {
+      "lat": 27.949422,
+      "lng": -82.4275,
+      "address": "2910 E Clark St",
+      "neighborhood": "Palmetto Beach",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00L1R&agencyCode=TAMPA",
+      "locatedOn": "2026-09-26"
+    }
+  }
+}
