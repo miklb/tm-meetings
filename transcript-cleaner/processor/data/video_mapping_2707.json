@@ -1,0 +1,84 @@
+{
+  "meeting_id": 2707,
+  "meeting_date": "2026-09-24",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "BSwIVTNakug",
+      "title": "Tampa City Council PM - 09/24/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-09-25T12:24:59Z",
+      "duration": "PT2H30M50S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: BF26-25564 - Northeast of North 46th Street and East Fletcher Avenue",
+          "timestamp": "00:14:45",
+          "seconds": 885
+        },
+        {
+          "title": "Item 2: BF26-25533 - 3601 North Central Avenue; 3814 North Central Avenue; 501 East Lake Avenue",
+          "timestamp": "00:17:04",
+          "seconds": 1024
+        },
+        {
+          "title": "Item 3: TA/CPA 26-05 - 3541 North Boulevard",
+          "timestamp": "00:18:42",
+          "seconds": 1122
+        },
+        {
+          "title": "Item 4: TA/CPA 26-08 - 4707 East Henry Avenue",
+          "timestamp": "01:34:59",
+          "seconds": 5699
+        },
+        {
+          "title": "Item 5: TA/CPA 26-01 - 1605 North Waters Court",
+          "timestamp": "01:42:46",
+          "seconds": 6166
+        },
+        {
+          "title": "Item 8: AB2-26-10 - 6203 North Florida Avenue",
+          "timestamp": "01:52:26",
+          "seconds": 6746
+        },
+        {
+          "title": "Item 9: AB2-26-16 - 5804 East Columbus Drive",
+          "timestamp": "01:59:29",
+          "seconds": 7169
+        },
+        {
+          "title": "Item 10: AB2-26-17 - 1601-1607 North Franklin Street",
+          "timestamp": "02:05:31",
+          "seconds": 7531
+        },
+        {
+          "title": "Item 11: AB2-26-19 - 6207 South Dale Mabry Highway",
+          "timestamp": "02:10:56",
+          "seconds": 7856
+        },
+        {
+          "title": "Item 12: AB2-26-20 - 210 East Fowler Avenue",
+          "timestamp": "02:18:01",
+          "seconds": 8281
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "02:22:51",
+          "seconds": 8571
+        }
+      ],
+      "offset_seconds": 598
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-09-29T16:23:09Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}

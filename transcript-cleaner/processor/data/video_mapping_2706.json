@@ -1,0 +1,39 @@
+{
+  "meeting_id": 2706,
+  "meeting_date": "2026-09-24",
+  "meeting_type": "Workshop",
+  "videos": [
+    {
+      "video_id": "CjD1C1hlAAA",
+      "title": "Tampa City Council  Workshop- 09/24/26",
+      "part": 1,
+      "session": "morning",
+      "published_at": "2026-09-24T17:08:45Z",
+      "duration": "PT4H3M41S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: CM26-25891 - Raftelis Fee Study and Cost Recovery",
+          "timestamp": "00:11:20",
+          "seconds": 680
+        },
+        {
+          "title": "Item 2: CM26-27125 - Charter Review Commission Discussion",
+          "timestamp": "01:42:13",
+          "seconds": 6133
+        }
+      ],
+      "offset_seconds": 614
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-09-29T16:31:29Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
