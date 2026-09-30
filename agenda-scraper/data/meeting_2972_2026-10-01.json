@@ -1,0 +1,61 @@
+{
+  "meetingId": "2972",
+  "meetingType": "regular",
+  "meetingName": "City Council Regular Addendum",
+  "meetingTime": "09:00",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "October 1, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2972&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 44,
+      "agendaItemId": "27315",
+      "title": "File No. ANX26-27315\nResolution setting public hearings before the City Council of the City of Tampa, Florida for November 5, 2026, at 10:30 a.m., and December 3, 2026 at 10:00 a.m., in City Council Chambers, 315 E. Kennedy Blvd., 3rd Floor, Tampa, FL 33602, for a voluntary annexation from University Holdings Ltd and Utah Investments Properties LLC, to annex approximately .63 acres of unincorporated Hillsborough County in the general vicinity of 1860 East Fowler Avenue; directing the City Clerk to publish Notice of the Annexation prior to the adoption of the annexation ordinance; providing an effective date.\n \nMemorandum from Taylor Bollt, Assistant City Attorney, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. ANX26-27315\nResolution setting public hearings before the City Council of the City of Tampa, Florida for November 5, 2026, at 10:30 a.m., and December 3, 2026 at 10:00 a.m., in City Council Chambers, 315 E. Kennedy Blvd., 3rd Floor, Tampa, FL 33602, for a voluntary annexation from University Holdings Ltd and Utah Investments Properties LLC, to annex approximately .63 acres of unincorporated Hillsborough County in the general vicinity of 1860 East Fowler Avenue; directing the City Clerk to publish Notice of the Annexation prior to the adoption of the annexation ordinance; providing an effective date.\n \nMemorandum from Taylor Bollt, Assistant City Attorney, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "ANX26-27315",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    },
+    {
+      "number": 46,
+      "agendaItemId": "27317",
+      "title": "File No. ANX26-27317\nResolution setting public hearings before the City Council of the City of Tampa, Florida for November 5, 2026, at 10:30 a.m., and December 3, 2026 at 10:00 a.m., in City Council Chambers, 315 E. Kennedy Blvd., 3rd Floor, Tampa, FL 33602, for a voluntary annexation from Vikash Singh, to annex approximately .23 acres of unincorporated Hillsborough county in the general vicinity of 11516 North Armenia Avenue; directing the City Clerk to publish Notice of the Annexation prior to the adoption of the annexation ordinance; providing an effective date.\n \nMemorandum from Taylor Bollt, Assistant City Attorney, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. ANX26-27317\nResolution setting public hearings before the City Council of the City of Tampa, Florida for November 5, 2026, at 10:30 a.m., and December 3, 2026 at 10:00 a.m., in City Council Chambers, 315 E. Kennedy Blvd., 3rd Floor, Tampa, FL 33602, for a voluntary annexation from Vikash Singh, to annex approximately .23 acres of unincorporated Hillsborough county in the general vicinity of 11516 North Armenia Avenue; directing the City Clerk to publish Notice of the Annexation prior to the adoption of the annexation ordinance; providing an effective date.\n \nMemorandum from Taylor Bollt, Assistant City Attorney, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "ANX26-27317",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    },
+    {
+      "number": 65,
+      "agendaItemId": "27436",
+      "title": "File No. CM26-27436 (Time certain of 1:30 p.m.)\nCouncil to review and approve the Charter amendments to be presented to voters, and then direct the CRC legal counsel at that time to bring back an ordinance for first reading that places the Charter questions on the March 2, 2027 ballot; further, that Kenneth Tinkler, CRC legal counsel, to appear. (Original motion initiated by Clendenin-Maniscalco on September 24, 2026)\n \nMemorandum from Scott Davis, Assistant City Attorney, transmitting additional information for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM26-27436 (Time certain of 1:30 p.m.)\nCouncil to review and approve the Charter amendments to be presented to voters, and then direct the CRC legal counsel at that time to bring back an ordinance for first reading that places the Charter questions on the March 2, 2027 ballot; further, that Kenneth Tinkler, CRC legal counsel, to appear. (Original motion initiated by Clendenin-Maniscalco on September 24, 2026)\n \nMemorandum from Scott Davis, Assistant City Attorney, transmitting additional information for said agenda item. (To be R/F)",
+      "fileNumber": "CM26-27436",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2026-10-01"
+}
