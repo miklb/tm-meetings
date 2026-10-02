@@ -1,0 +1,850 @@
+{
+  "meetingId": "2935",
+  "meetingType": "evening",
+  "meetingName": "City Council Evening",
+  "meetingTime": "17:01",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "October 8, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2935&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "27478",
+      "title": "REZ-26-60\nPublic Hearing on application of Tampa Park Apts Inc request to rezone property generally located at 1605 Waters Ct from YC-2 to YC-9 (Residential Multiple Family).",
+      "rawTitle": "REZ-26-60\nPublic Hearing on application of Tampa Park Apts Inc request to rezone property generally located at 1605 Waters Ct from YC-2 to YC-9 (Residential Multiple Family).",
+      "fileNumber": "REZ-26-60",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-60 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-60%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27478&publishId=213476&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-60 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-60 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27478&publishId=213477&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-60 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-60%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2935&itemId=27478&publishId=213478&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-60 SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-60 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-26-60 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-60%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27478&publishId=213479&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-60 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-60 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "REZ-26-0000060 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-0000060%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27478&publishId=213480&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-0000060 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-0000060 AFFIDAVIT OF COMPLIANCE.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/08/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Tampa Park Apts Inc request to rezone property generally \nlocated at 1605 Waters Ct from YC-2 to YC-9 (Residential Multiple Family).\nResolution / \nOrdinance \nTitle\nREZ-26-60\nPublic Hearing on application of Tampa Park Apts Inc request to rezone \nproperty generally located at 1605 Waters Ct from YC-2 to YC-9 (Residential \nMultiple Family).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:02:00 AMSubmitter\nLaChone Dock9/30/2026 9:02:09 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )"
+    },
+    {
+      "number": 2,
+      "agendaItemId": "27479",
+      "title": "File REZ-26-65\nPublic Hearing on application of Annie Ying Feng request to rezone property generally located at 4911 E 10th Avenue from RM-16 to CI.",
+      "rawTitle": "File REZ-26-65\nPublic Hearing on application of Annie Ying Feng request to rezone property generally located at 4911 E 10th Avenue from RM-16 to CI.",
+      "fileNumber": "REZ-26-65",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-65 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-65%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27479&publishId=213481&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-65 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-65 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27479&publishId=213482&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-65 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-65%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27479&publishId=213483&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-65 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-65 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-65 FINAL STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-65%20FINAL%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2935&itemId=27479&publishId=213484&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-65 FINAL STAFF REPORT.PDF in a new tab",
+          "originalText": "REZ-26-65 FINAL STAFF REPORT.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/08/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Annie Ying Feng request to rezone property generally located at \n4911 E 10th Avenue from RM-16 to CI.\nResolution / \nOrdinance \nTitle\nFile REZ-26-65\nPublic Hearing on application of Annie Ying Feng request to rezone property \ngenerally located at 4911 E 10th Avenue from RM-16 to CI.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:02:34 AMSubmitter\nLaChone Dock9/30/2026 9:02:40 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": "RM-24",
+        "requestedZoning": "CI",
+        "futureLandUse": "CC-35",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [
+          "Jackson Heights Neighborhood Associated & Crime Watch"
+        ],
+        "waivers": [],
+        "findings": "The Development Review and Compliance staff has reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances."
+      }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "27480",
+      "title": "File No. REZ-26-74\nPublic Hearing on application of Benny Calzon request to rezone property generally located at 2009 N Armenia Avenue from PD to CG.",
+      "rawTitle": "File No. REZ-26-74\nPublic Hearing on application of Benny Calzon request to rezone property generally located at 2009 N Armenia Avenue from PD to CG.",
+      "fileNumber": "REZ-26-74",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-74 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-74%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27480&publishId=213485&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-74 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-74 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27480&publishId=213486&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-74 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-74%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27480&publishId=213487&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-74 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-74 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-74 FINAL STAFF REPORT V2.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-74%20FINAL%20STAFF%20REPORT%20V2.PDF.pdf?documentType=1&meetingId=2935&itemId=27480&publishId=213488&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-74 FINAL STAFF REPORT V2.PDF in a new tab",
+          "originalText": "REZ-26-74 FINAL STAFF REPORT V2.PDF"
+        },
+        {
+          "title": "REZ-26-74 CERTIFIED APPLICATION FINAL V2.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-74%20CERTIFIED%20APPLICATION%20FINAL%20V2.PDF.pdf?documentType=1&meetingId=2935&itemId=27480&publishId=213489&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-74 CERTIFIED APPLICATION FINAL V2.PDF in a new tab",
+          "originalText": "REZ-26-74 CERTIFIED APPLICATION FINAL V2.PDF"
+        },
+        {
+          "title": "REZ-26-74 APP SUBMISSION CONFIRMATION.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-74%20APP%20SUBMISSION%20CONFIRMATION.PDF.pdf?documentType=1&meetingId=2935&itemId=27480&publishId=213490&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-74 APP SUBMISSION CONFIRMATION.PDF in a new tab",
+          "originalText": "REZ-26-74 APP SUBMISSION CONFIRMATION.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Benny Calzon request to rezone property generally located at \n2009 N Armenia Avenue from PD to CG.\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-74\nPublic Hearing on application of Benny Calzon request to rezone property \ngenerally located at 2009 N Armenia Avenue from PD to CG.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:14:22 AMSubmitter\nLaChone Dock9/30/2026 9:14:27 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "CC-35",
+        "overlayDistrict": "West Tampa",
+        "neighborhoodAssociations": [
+          "Old West Tampa Neighborhood Association & Crimewatch",
+          "West Tampa CRA Community Advisory Committee",
+          "Informed Neighbor",
+          "Bowman Heights Neighborhood Watch",
+          "Riverbend Civic Association",
+          "Bowman Heights",
+          "Highland Pines Community Task Force, Inc",
+          "Armory Gardens Civic Association",
+          "West Tampa CRA Community Advisory Committee",
+          "North Hyde Park Civic Asso. Neighborhood Crime Watch",
+          "MacFarlane Park Association and Neighborhood Watch"
+        ],
+        "waivers": [],
+        "findings": "The Development Review and Compliance staff has reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances"
+      }
+    },
+    {
+      "number": 4,
+      "agendaItemId": "27481",
+      "title": "File No. REZ-26-78\nPublic Hearing on application of Global Engineering request to rezone property generally located at 3209 N 22nd St from CG to PD (Pharmacy, Retail Sales, Convenience & Shopper's Goods).",
+      "rawTitle": "File No. REZ-26-78\nPublic Hearing on application of Global Engineering request to rezone property generally located at 3209 N 22nd St from CG to PD (Pharmacy, Retail Sales, Convenience & Shopper's Goods).",
+      "fileNumber": "REZ-26-78",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-0000078 CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-0000078%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27481&publishId=213491&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-0000078 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-26-0000078 CERTIFIED APP FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27481&publishId=213492&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-78 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-78%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27481&publishId=213493&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-78 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-78 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-78 FINAL STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-78%20FINAL%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2935&itemId=27481&publishId=213494&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-78 FINAL STAFF REPORT.PDF in a new tab",
+          "originalText": "REZ-26-78 FINAL STAFF REPORT.PDF"
+        },
+        {
+          "title": "REZ-26-78 SITE PLAN_07.27.2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-78%20SITE%20PLAN_07.27.2026.PDF.pdf?documentType=1&meetingId=2935&itemId=27481&publishId=213495&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-78 SITE PLAN_07.27.2026.PDF in a new tab",
+          "originalText": "REZ-26-78 SITE PLAN_07.27.2026.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Global Engineering request to rezone property generally located \nat 3209 N 22nd St from CG to PD (Pharmacy, Retail Sales, Convenience & \nShopper's Goods).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-78\nPublic Hearing on application of Global Engineering request to rezone \nproperty generally located at 3209 N 22nd St from CG to PD (Pharmacy, \nRetail Sales, Convenience & Shopper's Goods).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:14:35 AMSubmitter\nLaChone Dock9/30/2026 9:14:41 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Community Mixed Use-35",
+        "overlayDistrict": "East Tampa",
+        "neighborhoodAssociations": [
+          "College Hill-Belmont Heights Neighborhood Association & Crime Watch",
+          "Ybor City Management LLC",
+          "Ybor Heights Neighborhood Association and Watch Group",
+          "Tampa Overlook Neighborhood Association",
+          "Jackson Heights Neighborhood Associated & Crime Watch",
+          "Hyde Park Homeowner",
+          "Ybor Heights Neighborhood Association and Watch Group",
+          "VM Ybor Neighborhood Association & Crimewatch"
+        ],
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-283.7: To reduce the required parking from 9 to 1 (89% reduction). 2. Section 27-284.3.3: To reduce the use-to-use buffer along the eastern property line from 15’ with a 6’ masonry wall to 2’ with a 6’ high fence. 3. Section 27-284.3.3: To reduce the use-to-use buffer along 22nd Street to all adjacent rights of way from 8’ to 0’. 4. Section 27-240(e)(2)c.5: To reduce the front yard setback to allow a 0-foot setback instead of the 10’ – 12’ range required due to existing building. 5. Section 27-284.4: Waiver to pay into the tree trust fund for required trees not planted on site."
+        ],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. Please refer to Transportation comments for overall inconsistency finding. If City Council approves the application and waivers requested, the modifications to the site plan as shown on the submitted revision sheet must be completed between first and second reading. Revisions will not resolve Transportation’s finding of inconsistent."
+      }
+    },
+    {
+      "number": 5,
+      "agendaItemId": "27483",
+      "title": "File No. REZ-26-82\nPublic Hearing on application of Ja Rocco LLC request to rezone property generally located at 620 W Dr Martin Luther King Jr Boulevard from RS-50 to CG.",
+      "rawTitle": "File No. REZ-26-82\nPublic Hearing on application of Ja Rocco LLC request to rezone property generally located at 620 W Dr Martin Luther King Jr Boulevard from RS-50 to CG.",
+      "fileNumber": "REZ-26-82",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-82 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-82%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27483&publishId=213496&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-82 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-82 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27483&publishId=213497&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-82 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-82%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27483&publishId=213498&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-82 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-82 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-82 FINAL STAFF REPORT.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-82%20FINAL%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2935&itemId=27483&publishId=213499&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-82 FINAL STAFF REPORT.PDF in a new tab",
+          "originalText": "REZ-26-82 FINAL STAFF REPORT.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Ja Rocco LLC request to rezone property generally located at \n620 W Dr Martin Luther King Jr Boulevard from RS-50 to CG.\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-82\nPublic Hearing on application of Ja Rocco LLC request to rezone property \ngenerally located at 620 W Dr Martin Luther King Jr Boulevard from RS-50 to \nCG.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:26:17 AMSubmitter\nLaChone Dock9/30/2026 9:26:27 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": "RS-50",
+        "requestedZoning": "CG",
+        "futureLandUse": "CMU-35",
+        "overlayDistrict": "Tampa Heights",
+        "neighborhoodAssociations": [
+          "Tampa Heights Civic Association, Inc",
+          "VM Ybor Neighborhood Association & Crimewatch",
+          "Southeast Seminole Heights Civic Association, Inc",
+          "Bowman Heights",
+          "Old Seminole Heights Neighborhood Association, Inc",
+          "Tampa Heights Civic Association Land Use Committee",
+          "Residents of Adalee St",
+          "One Laurel Place",
+          "Informed Neighbor",
+          "Tampa Overlook Neighborhood Association",
+          "Ybor Heights Neighborhood Association and Watch Group",
+          "Riverside Heights Civic Association"
+        ],
+        "waivers": [],
+        "findings": "The Development Review and Compliance staff has reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances."
+      }
+    },
+    {
+      "number": 6,
+      "agendaItemId": "27484",
+      "title": "File No. REZ-26-85\nPublic Hearing on application of Neil Spara request to rezone property generally located at 5510 & 5400 S West Shore Boulevard from CI to PD (Daycare and Nursery Facility, Air Conditioned Storage & All CI Uses).",
+      "rawTitle": "File No. REZ-26-85\nPublic Hearing on application of Neil Spara request to rezone property generally located at 5510 & 5400 S West Shore Boulevard from CI to PD (Daycare and Nursery Facility, Air Conditioned Storage & All CI Uses).",
+      "fileNumber": "REZ-26-85",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-85 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-85%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27484&publishId=213500&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-85 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-85 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27484&publishId=213501&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-85 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-85%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27484&publishId=213502&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-85 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-85 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-85 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-85%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2935&itemId=27484&publishId=213503&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-85 SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-85 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-26-85 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-85%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27484&publishId=213504&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-85 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-85 STAFF REPORT FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Neil Spara request to rezone property generally located at 5510 \n& 5400 S West Shore Boulevard from CI to PD (Daycare and Nursery Facility, \nAir Conditioned Storage & All CI Uses).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-85\nPublic Hearing on application of Neil Spara request to rezone property \ngenerally located at 5510 & 5400 S West Shore Boulevard from CI to PD \n(Daycare and Nursery Facility, Air Conditioned Storage & All CI Uses).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:26:39 AMSubmitter\nLaChone Dock9/30/2026 9:26:52 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Community Commercial-35",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [
+          "Gandy Civic Association",
+          "Southtown Park HOA",
+          "Belmar Gardens Neighborhood",
+          "Bayside West Neighborhood Association, Inc"
+        ],
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-284.3.3: Request to reduce the required parking lot island width from 13’ to 9’ (face of curb to face of curb)."
+        ],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable City of Tampa Land Development Regulations. Should it be the pleasure of City Council to approve the application and waivers listed above, further modifications to the site plan must be completed by the applicant between 1st and 2nd Reading of Ordinance as stated on the revision sheet."
+      }
+    },
+    {
+      "number": 7,
+      "agendaItemId": "27485",
+      "title": "File No. REZ-26-86\nPublic Hearing on application of 2202 W Kennedy LLC request to rezone property generally located at 2202 W Kennedy Boulevard from CG to PD (Restaurant, Drive-in).",
+      "rawTitle": "File No. REZ-26-86\nPublic Hearing on application of 2202 W Kennedy LLC request to rezone property generally located at 2202 W Kennedy Boulevard from CG to PD (Restaurant, Drive-in).",
+      "fileNumber": "REZ-26-86",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-86 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-86%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27485&publishId=213505&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-86 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-86 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27485&publishId=213506&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-86 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-86%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27485&publishId=213507&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-86 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-86 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-86 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-86%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2935&itemId=27485&publishId=213508&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-86 SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-86 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-26-86 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-86%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27485&publishId=213509&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-86 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-86 STAFF REPORT FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of 2202 W Kennedy LLC request to rezone property generally \nlocated at 2202 W Kennedy Blvd from CG to PD (Restaurant, Drive-in).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-86\nPublic Hearing on application of 2202 W Kennedy LLC request to rezone \nproperty generally located at 2202 W Kennedy Boulevard from CG to PD \n(Restaurant, Drive-in).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:36:53 AMSubmitter\nLaChone Dock9/30/2026 9:36:59 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Urban Mixed Use-60",
+        "overlayDistrict": "Kennedy Boulevard Corridor",
+        "neighborhoodAssociations": [
+          "North Hyde Park Civic Association, Inc",
+          "Westland Park HOA",
+          "SOHO Business Alliance",
+          "Ameryllis Garden Circle",
+          "Parkland Estates Civic Club, Inc",
+          "Historic Hyde Park Neighborhood Association, Inc",
+          "West Tampa CRA Community Advisory Committee",
+          "North Hyde Park Civic Association Neighborhood Crime Watch",
+          "North Hyde Park Alliance",
+          "West Riverfront Neighborhood Crimewatch Association, Inc",
+          "Armory Gardens Civic Association",
+          "Soho Neighborhood Association, Inc"
+        ],
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-132(a): Request to waive requirement for direct access to an arterial or collector street. 2. Section 27-132(c): Request to reduce the required distance for a queuing lane to a residential use from 50 feet to 24 feet. 3. Section 27-284.3.3(D): Request to reduce the required 8’ vehicular use area landscape buffer to 6’ along S. Westland Avenue. 4. Section 27-284.3.3(D): Request to reduce the parking island width from 13’ to 12’. 5. Section 27-284.3.3(E): Request to eliminate the buffer along south property line where property line abuts alley right-of-way across from residentially zoned property. 6. Section 27-243(e)(4)(b)(2): To increase the allowable distance for access on the local street, S. Westland Ave., from 100 feet to 115 feet from the intersection with W. Kennedy Blvd."
+        ],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. See findings from Transportation in the report below. Should it be the pleasure of City Council to approve the application and waivers listed above, further modifications to the site plan must be completed by the applicant between 1st and 2nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation’s inconsistent finding."
+      }
+    },
+    {
+      "number": 8,
+      "agendaItemId": "27486",
+      "title": "File No. REZ-26-87\nPublic Hearing on application of Cot In Portfolio LLC request to rezone property generally located at 2101 W Hillsborough Avenue from PD to PD (Restaurant, Drive-in).",
+      "rawTitle": "File No. REZ-26-87\nPublic Hearing on application of Cot In Portfolio LLC request to rezone property generally located at 2101 W Hillsborough Avenue from PD to PD (Restaurant, Drive-in).",
+      "fileNumber": "REZ-26-87",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-87 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-87%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27486&publishId=213510&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-87 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-87 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27486&publishId=213511&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-87 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-87%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27486&publishId=213512&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-87 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-87 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-87 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-87%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27486&publishId=213513&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-87 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-87 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "REZ 26-87 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ%2026-87%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2935&itemId=27486&publishId=213514&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ 26-87 SITE PLAN.PDF in a new tab",
+          "originalText": "REZ 26-87 SITE PLAN.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Cot In Portfolio LLC request to rezone property generally \nlocated at 2101 W Hillsborough Avenue from PD to PD (Restaurant, Drive-in).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-87\nPublic Hearing on application of Cot In Portfolio LLC request to rezone \nproperty generally located at 2101 W Hillsborough Avenue from PD to PD \n(Restaurant, Drive-in).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:37:06 AMSubmitter\nLaChone Dock9/30/2026 9:37:12 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Community Commercial-35",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [
+          "Wellswood Civic Association, Inc",
+          "Tampa Overlook Neighborhood Association",
+          "Old Seminole Heights Neighborhood Association, Inc",
+          "Riverbend Civic Association"
+        ],
+        "waivers": [
+          "PREVIOUSLY APPROVED WAIVERS (Z10-17): 1. Section 27-246(j)(1)d): To allow nonresidential ingress/egress to a local street (N. Albany Avenue) which contains residentially zoned property. 2. Section 20.5-13(c)(2): To allow one (1) additional building sign (Max 80 SF) on western face of building that does not face street frontage. 3. Section 27-247(b): To reduce the required number of loading berths from 2 to 0.",
+          "WAIVER(S) REQUESTED: None."
+        ],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable City of Tampa Land Development Regulations. Should it be the pleasure of City Council to approve the application, further modifications to the site plan must be completed by the applicant between 1st and 2nd Reading of Ordinance as stated on the revision sheet."
+      }
+    },
+    {
+      "number": 9,
+      "agendaItemId": "27487",
+      "title": "File No. REZ-26-88\nPublic Hearing on application of Deborah A Christen/Trustee request to rezone property generally located at 202 S Dale Mabry Highway from CG & RS-50 to PD (Restaurant, Drive-in).",
+      "rawTitle": "File No. REZ-26-88\nPublic Hearing on application of Deborah A Christen/Trustee request to rezone property generally located at 202 S Dale Mabry Highway from CG & RS-50 to PD (Restaurant, Drive-in).",
+      "fileNumber": "REZ-26-88",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-88 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-88%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27487&publishId=213515&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-88 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-88 CERTIFIED APPLICATION FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27487&publishId=213516&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-88 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-88%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27487&publishId=213517&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-88 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-88 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-88 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-88%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2935&itemId=27487&publishId=213518&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-88 SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-88 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-26-88 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-88%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27487&publishId=213519&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-88 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-88 STAFF REPORT FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Deborah A Christen/Trustee request to rezone property \ngenerally located at 202 S Dale Mabry Highway from CG & RS-50 to PD \n(Restaurant, Drive-in).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-88\nPublic Hearing on application of Deborah A Christen/Trustee request to \nrezone property generally located at 202 S Dale Mabry Highway from CG & \nRS-50 to PD (Restaurant, Drive-in).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:37:22 AMSubmitter\nLaChone Dock9/30/2026 9:37:26 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "Residential-10",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [
+          "Swann Estates Neighborhood Association, Inc",
+          "Parkland Estates Civic Club, Inc",
+          "Ballast Point Neighborhood Association",
+          "K Bar Ranch",
+          "Bon Air Neighborhood Association"
+        ],
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-132(a): Request to waive requirement for direct access to an arterial or collector street. 2. Section 27-283.12(J): To allow access from non-residential parking lots to a local street at greater than 150 feet of the intersection with an arterial or collector roadway. The West Cleveland Street driveway is located at 200 feet. 3. Section 27-284.3.3: To reduce the 8’ wide VUA/ROW landscape area to 5’ wide with no changes to the required plantings along the west property line. 4. Section 27-284.3.3: To reduce the 8’ wide VUA /ROW landscape area to 3’ wide with no changes to the required plantings along the north property line. 5. Section 27-289.3(D): To allow a freestanding sign setback of 10 feet and an overall height of 17 feet. The code allows a maximum overall height of 15 feet. This would allow for a brand standard height for Culver’s franchising system. 6. Section 27-289.3(5)C: To allow a freestanding sign area of 57.17 SF, including the electronic message center (EMC). The code allows a maximum sign area of 50 square feet per sign face. This would allow for a brand-standard size for Culver’s franchising system. 7. A waiver to allow a mural to be designated as art and excluded from the overall square footage of the building signs, consistent with Chapter 4 – Public Art, Section 4-2, Definitions, “works of art or artworks.”"
+        ],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. See findings from Development Coordination, Transportation and Stormwater in the report below. Should it be the pleasure of City Council to approve the application and waivers listed above, further modifications to the site plan must be completed by the applicant between 1st and 2nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation’s inconsistent finding."
+      }
+    },
+    {
+      "number": 10,
+      "agendaItemId": "27488",
+      "title": "File No. REZ-26-99\nPublic Hearing on application of Ybor Park LLC request to rezone property generally located at 1728 E 2nd Avenue, 1704, 1720 & 1722 E 3rd Avenue from YC-9 & YC-6 to YC-9 (Retail Sales, Shopper's Goods and All CG Uses).",
+      "rawTitle": "File No. REZ-26-99\nPublic Hearing on application of Ybor Park LLC request to rezone property generally located at 1728 E 2nd Avenue, 1704, 1720 & 1722 E 3rd Avenue from YC-9 & YC-6 to YC-9 (Retail Sales, Shopper's Goods and All CG Uses).",
+      "fileNumber": "REZ-26-99",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-99 CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-99%20CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27488&publishId=213520&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-99 CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-26-99 CERTIFIED APP FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27488&publishId=213521&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-99 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-99%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=27488&publishId=213522&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-99 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-99 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-99 SITE PLAN.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-99%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2935&itemId=27488&publishId=213523&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-99 SITE PLAN.PDF in a new tab",
+          "originalText": "REZ-26-99 SITE PLAN.PDF"
+        },
+        {
+          "title": "REZ-26-99 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-99%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27488&publishId=213524&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-99 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-99 STAFF REPORT FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Ybor Park LLC request to rezone property generally located at \n1728 E 2nd Avenue, 1704, 1720 & 1722 E 3rd Avenue from YC-9 & YC-6 to \nYC-9 (Retail Sales, Shopper's Goods and All CG Uses).\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-99\nPublic Hearing on application of Ybor Park LLC request to rezone property \ngenerally located at 1728 E 2nd Avenue, 1704, 1720 & 1722 E 3rd Avenue \nfrom YC-9 & YC-6 to YC-9 (Retail Sales, Shopper's Goods and All CG Uses).\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock10/2/2026 7:03:13 AMSubmitter\nLaChone Dock10/2/2026 7:03:27 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": "General Mixed Use-24",
+        "overlayDistrict": null,
+        "neighborhoodAssociations": [
+          "Historic Ybor Neighborhood Civic Association, Inc",
+          "Ybor City Management LLC",
+          "David Bailey",
+          "Hyde Park Spanishtown Creek Civic Association",
+          "Bowman Heights"
+        ],
+        "waivers": [
+          "WAIVER(S) REQUESTED: 1. Section 27-178: To reduce the required number of overall parking spaces in the YC zoning district from 86 required to 46 provided (47% reduction). 2. Section 27-283.7: To reduce the required backup width for standard 90-degree parking spaces and compact 90-degree parking spaces from 7 feet and 6 feet, respectively, to 4 feet."
+        ],
+        "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request INCONSISTENT with the applicable City of Tampa Land Development Regulations. See findings from Transportation in the report below related to the requested reduction in required parking and the requested reduction in required backup width. Should it be the pleasure of City Council to approve the application and waivers listed above, further modifications to the site plan must be completed by the applicant between 1st and 2nd Reading of Ordinance as stated on the revision sheet. These revisions will not resolve the issues of Transportation’s inconsistent finding."
+      }
+    },
+    {
+      "number": 11,
+      "agendaItemId": "25511",
+      "title": "File No. REZ-26-36\nContinued Public Hearing from  June 11, 2026 on application of Accardi and Sons LLC request to rezone property generally located at 1502 and 1506 North Morgan Street; and 1501, 1505 and 1507 North Marion Avenue from RM-24 and CI to CI.\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 1502 and 1506 North Morgan Street; 1501 1505, and 1507 North Marion Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification RM-24 (Residential, Multiple-Family) and CI (Commercial Intensive) to CI (Commercial intensive); providing an effective date.\nEmail from Stephen Michelini, applicant's representative, requesting that said public hearing be continued January 2027  (To be R/F)",
+      "rawTitle": "File No. REZ-26-36\nContinued Public Hearing from  June 11, 2026 on application of Accardi and Sons LLC request to rezone property generally located at 1502 and 1506 North Morgan Street; and 1501, 1505 and 1507 North Marion Avenue from RM-24 and CI to CI.\n(Ordinance being presented for first reading consideration) - An ordinance rezoning property in the general vicinity of 1502 and 1506 North Morgan Street; 1501 1505, and 1507 North Marion Avenue, in the city of Tampa, Florida, and more particularly described in Section 1, from Zoning District Classification RM-24 (Residential, Multiple-Family) and CI (Commercial Intensive) to CI (Commercial intensive); providing an effective date.\nEmail from Stephen Michelini, applicant's representative, requesting that said public hearing be continued January 2027  (To be R/F)",
+      "fileNumber": "REZ-26-36",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "REZ-26-36_CERTIFIED APP FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-36_CERTIFIED%20APP%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213525&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-36_CERTIFIED APP FINAL.PDF in a new tab",
+          "originalText": "REZ-26-36_CERTIFIED APP FINAL.PDF"
+        },
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213526&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-36 AFFIDAVIT OF COMPLIANCE.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-36%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213527&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-36 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
+          "originalText": "REZ-26-36 AFFIDAVIT OF COMPLIANCE.PDF"
+        },
+        {
+          "title": "REZ-26-36 STAFF REPORT FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-36%20STAFF%20REPORT%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213528&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-36 STAFF REPORT FINAL.PDF in a new tab",
+          "originalText": "REZ-26-36 STAFF REPORT FINAL.PDF"
+        },
+        {
+          "title": "1-WRITTEN COMMENTS - REZ-26-36.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/1-WRITTEN%20COMMENTS%20-%20REZ-26-36.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213529&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 1-WRITTEN COMMENTS - REZ-26-36.PDF in a new tab",
+          "originalText": "1-WRITTEN COMMENTS - REZ-26-36.PDF"
+        },
+        {
+          "title": "BIE REZ 26-36.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BIE%20REZ%2026-36.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213530&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of BIE REZ 26-36.PDF in a new tab",
+          "originalText": "BIE REZ 26-36.PDF"
+        },
+        {
+          "title": "FINAL ORDINANCE REZ 26-36.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FINAL%20ORDINANCE%20REZ%2026-36.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213531&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FINAL ORDINANCE REZ 26-36.PDF in a new tab",
+          "originalText": "FINAL ORDINANCE REZ 26-36.PDF"
+        },
+        {
+          "title": "2-WRITTEN COMMENT - REZ-26-36.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/2-WRITTEN%20COMMENT%20-%20REZ-26-36.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213532&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 2-WRITTEN COMMENT - REZ-26-36.PDF in a new tab",
+          "originalText": "2-WRITTEN COMMENT - REZ-26-36.PDF"
+        },
+        {
+          "title": "3-WRITTEN COMMENT - REZ-26-53.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/3-WRITTEN%20COMMENT%20-%20REZ-26-53.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213533&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of 3-WRITTEN COMMENT - REZ-26-53.PDF in a new tab",
+          "originalText": "3-WRITTEN COMMENT - REZ-26-53.PDF"
+        },
+        {
+          "title": "LEO DOMINIC DOCUMENTS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/LEO%20DOMINIC%20DOCUMENTS.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213534&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of LEO DOMINIC DOCUMENTS.PDF in a new tab",
+          "originalText": "LEO DOMINIC DOCUMENTS.PDF"
+        },
+        {
+          "title": "FW_ 1506 MORGAN ST (REZ 26-36) .PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FW_%201506%20MORGAN%20ST%20(REZ%2026-36)%20.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213535&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of FW_ 1506 MORGAN ST (REZ 26-36) .PDF in a new tab",
+          "originalText": "FW_ 1506 MORGAN ST (REZ 26-36) .PDF"
+        },
+        {
+          "title": "STAFF REPORTS FOR THE OCTOBER 08, 2026 COUNCIL EVENING HEARING.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/STAFF%20REPORTS%20FOR%20THE%20OCTOBER%2008%2c%202026%20COUNCIL%20EVENING%20HEARING.PDF.pdf?documentType=1&meetingId=2935&itemId=25511&publishId=213536&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of STAFF REPORTS FOR THE OCTOBER 08, 2026 COUNCIL EVENING HEARING.PDF in a new tab",
+          "originalText": "STAFF REPORTS FOR THE OCTOBER 08, 2026 COUNCIL EVENING HEARING.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        5/22/2026\nRequested Meeting Date: 6/11/2026\nType of Request:                                                  Public Hearing\nContactChristopher DeManche 274-3319\nSubjectApplication of Accardi and Sons LLC request to rezone property generally \nlocated at 1502 and 1506 North Morgan Street; and 1501, 1505 and 1507 \nNorth Marion Avenue from RM-24 and CI to CI.\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-36\nPublic Hearing on application of Accardi and Sons LLC request to rezone \nproperty generally located at 1502 and 1506 North Morgan Street; and 1501, \n1505 and 1507 North Marion Avenue from RM-24 and CI to CI.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock5/22/2026 3:18:36 PMSubmitter\nLaChone Dock5/22/2026 3:18:42 PMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": "RM-24",
+        "requestedZoning": "CI",
+        "futureLandUse": "CC-35",
+        "overlayDistrict": "Tampa Heights",
+        "neighborhoodAssociations": [
+          "Tampa Heights Civic Association, Inc",
+          "Tampa Heights Civic Association land Use Committee",
+          "Residents of Adalee St",
+          "One Laurel Place",
+          "Informed Neighbor",
+          "Tampa Overlook Neighborhood Association",
+          "Bowman Heights",
+          "VM Ybor Neighorhood Association & Crimewatch",
+          "Ybor Heights Neighborhood Association and Watch Group",
+          "Riverside Heights Civic Association"
+        ],
+        "waivers": [],
+        "findings": "The Development Review and Compliance staff have reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances."
+      }
+    },
+    {
+      "number": 12,
+      "agendaItemId": "27482",
+      "title": "File No. REZ-26-79 (Will not be heard; Mis-noticed)\nPublic Hearing on application of Mendoza Sr Investments Of Tampa LLC request to rezone property generally located at 1206 Holmes Ave A-B from YC-8 to YC-2.",
+      "rawTitle": "File No. REZ-26-79 (Will not be heard; Mis-noticed)\nPublic Hearing on application of Mendoza Sr Investments Of Tampa LLC request to rezone property generally located at 1206 Holmes Ave A-B from YC-8 to YC-2.",
+      "fileNumber": "REZ-26-79",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "Summary Sheet- COVER SHEET",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2935&itemId=27482&publishId=213537&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
+          "originalText": "Summary Sheet- COVER SHEET"
+        },
+        {
+          "title": "REZ-26-79 CERTIFIED APPLICATION FINAL.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/REZ-26-79%20CERTIFIED%20APPLICATION%20FINAL.PDF.pdf?documentType=1&meetingId=2935&itemId=27482&publishId=213538&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of REZ-26-79 CERTIFIED APPLICATION FINAL.PDF in a new tab",
+          "originalText": "REZ-26-79 CERTIFIED APPLICATION FINAL.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "\n\nCity of Tampa\nAgenda Item Request\nDepartment: Development Coordination\nCouncil Evening\nSubmittal Date:                        9/30/2026\nRequested Meeting Date: 10/22/2026\nType of Request:                                                  Public Hearing\nContactLaChone Dock 274-3365\nSubjectApplication of Mendoza Sr Investments Of Tampa LLC request to rezone \nproperty generally located at 1206 Holmes Ave A-B from YC-8 to YC-2.\nResolution / \nOrdinance \nTitle\nFile No. REZ-26-79\nPublic Hearing on application of Mendoza Sr Investments Of Tampa LLC \nrequest to rezone property generally located at 1206 Holmes Ave A-B from \nYC-8 to YC-2.\nBACKGROUND:\nFISCAL IMPACT:\nFISCAL IMPACT STATEMENT:\nPROJECTED COSTS:\nApproverTimestampRole\nLaChone Dock9/30/2026 9:14:48 AMSubmitter\nLaChone Dock9/30/2026 9:14:54 AMDepartment Head",
+      "projectedCosts": {
+        "fiscalImpactStatement": "",
+        "projectedCostsRaw": "",
+        "rows": [],
+        "hasProjectedCosts": false,
+        "hasParsedRows": false
+      },
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 1 THROUGH 12 )"
+    }
+  ],
+  "formattedDate": "2026-10-08"
+}
