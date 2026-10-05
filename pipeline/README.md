@@ -73,6 +73,7 @@ Chains all pipeline steps for one meeting:
     The verdict is written to `video_mapping_<pkey>.json` as `verification.status` (`pass` / `fail` / `skipped`) by `scripts/record-offset-verification.py`. `build-db.js` imports the transcript but **no videos** for a `fail` mapping, so a bad offset stays off the site even if the DB is rebuilt by a later run. Re-running the matcher clears the record; re-verify with `scripts/verify-offset.py --tid <pkey> --strict` then `scripts/record-offset-verification.py --tid <pkey> --status pass`.
 4. **Database** — Rebuild SQLite from all agenda + transcript data
 5. **Site** — Regenerate Eleventy HTML
+6. **Git sync** — commits the run's output (Step 0 agenda files, both transcripts, one `video_mapping_<pkey>.json` per pkey) as `archive M/D/YY` and pushes. The run also fast-forwards from origin before Step 0 and refuses to start if local and origin have diverged, so a local run is never left unpushed under the nightly scrape (the 9/29/26 merge conflict). `--no-sync` skips both ends. `process-agenda.sh` does the same for agenda runs (`update M/D/YY agenda`). Shared logic and tests: `pipeline/git-sync.sh`, `scripts/test/git-sync.test.js`.
 
 ```bash
 # Full pipeline
@@ -89,6 +90,9 @@ npm run archive -- 2025-11-13 --skip-site
 
 # Override meeting type
 npm run archive -- 2025-11-13 --meeting-type CRA
+
+# Skip the git fast-forward first and the commit + push at the end
+npm run archive -- 2025-11-13 --no-sync
 
 # Preview without executing
 npm run archive -- 2025-11-13 --dry-run

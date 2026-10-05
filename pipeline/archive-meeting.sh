@@ -31,6 +31,10 @@
 #   # Dry run — show what would be done without executing
 #   npm run archive -- 2025-11-13 --dry-run
 #
+#   # Skip the git sync (fast-forward from origin first; commit "archive M/D/YY"
+#   # + push at the end — see pipeline/git-sync.sh)
+#   npm run archive -- 2025-11-13 --no-sync
+#
 # Prerequisites:
 #   - Python venv at transcript-cleaner/processor/venv/ with deps installed
 #   - Node.js with better-sqlite3 available
@@ -56,8 +60,12 @@ SKIP_SITE=false
 SKIP_VERIFY=false
 SKIP_AGENDA=false
 DRY_RUN=false
+SYNC=true
 MEETING_TYPE=""
 LOOKUP_PAGES=1
+
+# shellcheck source=git-sync.sh
+. "$SCRIPT_DIR/git-sync.sh"
 
 # ── Parse args ─────────────────────────────────────────────────────────────────
 if [[ $# -lt 1 ]]; then
@@ -73,6 +81,7 @@ if [[ $# -lt 1 ]]; then
     echo "  --pages N          Transcript index pages to search for the date (default: 1;"
     echo "                     use more for older meetings, e.g. 8 reaches back ~1 year)"
     echo "  --dry-run          Show what would be done without executing"
+    echo "  --no-sync          Skip the git fast-forward first and the commit + push at the end"
     exit 1
 fi
 
@@ -101,6 +110,7 @@ while [[ $# -gt 0 ]]; do
         --skip-site)   SKIP_SITE=true; shift ;;
         --skip-agenda) SKIP_AGENDA=true; shift ;;
         --dry-run)     DRY_RUN=true; shift ;;
+        --no-sync)     SYNC=false; shift ;;
         --meeting-type) MEETING_TYPE="$2"; shift 2 ;;
         --pages)       LOOKUP_PAGES="$2"; shift 2 ;;
         *)
@@ -146,6 +156,11 @@ if ! command -v node &>/dev/null; then
     exit 1
 fi
 
+# ── Git sync: start from origin's latest ──────────────────────────────────────
+# The run's commit must land on top of the nightly scrape, not beside it. The
+# per-pkey recursion below passes --no-sync so this runs once per invocation.
+git_sync_start
+
 # ── Resolve pkey from date if needed ───────────────────────────────────────────
 # ── Step 0: Agenda final check (date mode only — runs once per date) ──────────
 # Catches documents the clerk attached after the last weekday agenda run, so
@@ -158,9 +173,11 @@ if [[ -z "$PKEY" ]]; then
     else
         step 0 "Agenda final check (re-scrape → mirror → reconcile → markdown)"
         STEP_START=$(date +%s)
+        # SYNC=false reaches process-agenda.sh through agenda-final-check.sh's
+        # environment: the agenda files are committed with the archive at the end.
         AGENDA_ARGS=("$DATE")
         $DRY_RUN && AGENDA_ARGS+=("--dry-run")
-        if ! bash "$PROJECT_ROOT/pipeline/agenda-final-check.sh" "${AGENDA_ARGS[@]}"; then
+        if ! SYNC=false bash "$PROJECT_ROOT/pipeline/agenda-final-check.sh" "${AGENDA_ARGS[@]}"; then
             echo "WARNING: agenda final check failed — continuing with transcript archive."
             echo "         Re-run by hand: ./pipeline/agenda-final-check.sh $DATE"
         fi
@@ -193,14 +210,17 @@ if [[ -z "$PKEY" ]]; then
         "$VENV_PYTHON" "$PROJECT_ROOT/pipeline/transcript_lookup.py" --date "$DATE" 2>/dev/null
         echo ""
 
-        # Process each pkey with --skip-site, then do one rebuild at the end
+        # Process each pkey with --skip-site and --no-sync (one commit + push
+        # for the whole date at the end), then do one rebuild at the end
         MULTI_FAILURES=0
+        ALL_PKEYS=()
         while IFS= read -r MULTI_PKEY; do
             echo ""
             echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
             echo "  Processing pkey $MULTI_PKEY ($DATE)"
             echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-            MULTI_ARGS=("$MULTI_PKEY" "$DATE" "--skip-site")
+            ALL_PKEYS+=("$MULTI_PKEY")
+            MULTI_ARGS=("$MULTI_PKEY" "$DATE" "--skip-site" "--no-sync")
             $SKIP_VIDEO && MULTI_ARGS+=("--skip-video")
             $SKIP_VERIFY && MULTI_ARGS+=("--skip-verify")
             [[ -n "$MEETING_TYPE" ]] && MULTI_ARGS+=("--meeting-type" "$MEETING_TYPE")
@@ -225,8 +245,11 @@ if [[ -z "$PKEY" ]]; then
 
         if [[ "$MULTI_FAILURES" -gt 0 ]]; then
             echo "WARNING: $MULTI_FAILURES meeting(s) failed."
+            echo "         Output is left uncommitted. When fixed: git add <files> && git commit && git push"
             exit 1
         fi
+        echo ""
+        git_sync_finish_archive "$DATE" "${ALL_PKEYS[@]}"
         exit 0
     fi
 fi
@@ -400,3 +423,7 @@ if ! $SKIP_SITE; then
     echo "  Database:             $PROJECT_ROOT/data/meetings.db"
     echo "  Site output:          $SITE_DIR/_site/"
 fi
+
+# ── Git sync: commit + push what this run wrote ───────────────────────────────
+echo ""
+git_sync_finish_archive "$DATE" "$PKEY"

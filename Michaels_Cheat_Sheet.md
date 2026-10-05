@@ -13,12 +13,14 @@ Note the `--` separator: without it npm swallows the args.
 ## Friday — Agenda prep
 
 ```bash
-git pull
 npm run agenda -- YYYY-MM-DD                  # re-scrape, then convert + mirror
 npm run agenda -- YYYY-MM-DD --skip-mirror    # skip R2 mirroring
+npm run agenda -- YYYY-MM-DD --no-sync        # no git fast-forward first / commit + push after
 ```
 
 Always re-scrapes (no `--force` needed since 2026-08-20): date runs only touch meetings on that date — other meetings' JSONs and their `mirroredUrl` stamps are left alone — and the mirror step re-stamps right after.
+
+No `git pull` first: the run fast-forwards from origin itself and refuses to start if local and origin have diverged (then `git pull` to merge — never rebase — and re-run). When it finishes it commits what it wrote as `update M/D/YY agenda` and pushes, so the nightly scrape never lands on top of an unpushed local run (that was the 9/29/26 conflict). It will not commit over a dirty index. Details: `pipeline/git-sync.sh`.
 
 Output: mirrored PDFs on R2, `agenda-scraper/agendas/agenda_YYYY-MM-DD.md` (record copy), and the tm-static post written/updated in `~/tampa-monitor/tm-static/src/posts/<year>/` — commit + push tm-static to publish.
 
@@ -38,7 +40,10 @@ npm run archive -- YYYY-MM-DD --skip-site           # no DB + site rebuild
 npm run archive -- YYYY-MM-DD --skip-agenda         # no Step 0 agenda re-check
 npm run archive -- YYYY-MM-DD --meeting-type CRA    # override auto-detection
 npm run archive -- YYYY-MM-DD --dry-run             # show what would run
+npm run archive -- YYYY-MM-DD --no-sync             # no git fast-forward first / commit + push after
 ```
+
+Same git sync as the agenda run: fast-forwards first, then commits the transcripts, video mappings and Step 0 agenda files as `archive M/D/YY` and pushes. A failed run leaves its output uncommitted.
 
 **"No meetings found" for a date the meeting definitely happened:** the City
 filed the transcript under the wrong date (9/17/26 was listed as 9/16). Find

@@ -1,18 +1,30 @@
 #!/bin/bash
 
 # Tampa City Council Agenda Processing Script
-# Usage: ./process-agenda.sh [date] [--skip-mirror] [--id MEETING_ID]
+# Usage: ./process-agenda.sh [date] [--skip-mirror] [--no-sync] [--id MEETING_ID]
 # If no date provided, uses today's date
 # Always re-scrapes: date runs only write meetings matching the date (the
 # scraper skips others before fetching their items), and the mirror step
 # re-stamps mirroredUrl right after, so a re-scrape is always safe here.
+# Git: fast-forwards from origin before scraping (refuses to run if local and
+# origin have diverged) and commits + pushes what it wrote at the end, so a
+# local run is never left unpushed under the nightly scrape (pipeline/git-sync.sh).
 # --skip-mirror  Skip mirroring documents to R2
+# --no-sync  Skip the git fast-forward before and the commit + push after
 # --id N     Scrape a specific OnBase meeting ID (required for historical
 #            meetings — the scraper's date mode only sees the current list)
 # --type T   Meeting type for --id scrapes (regular|evening|cra|workshop|special);
 #            historical IDs can't be type-looked-up and default to regular
 
 SKIP_MIRROR=false
+# --no-sync sets this; archive-meeting.sh also passes SYNC=false through the
+# environment when it runs us via agenda-final-check.sh, so the agenda files
+# are committed with the archive instead of in a commit of their own.
+SYNC="${SYNC:-true}"
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+REPO_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
+# shellcheck source=../pipeline/git-sync.sh
+. "$REPO_ROOT/pipeline/git-sync.sh"
 
 # The R2 mirror step (@aws-sdk) needs Node 20+. Non-interactive shells can
 # resolve to the stale system node in /usr/local/bin, which crashes mid-run.
@@ -42,6 +54,9 @@ for arg in "$@"; do
     if [ "$arg" = "--skip-mirror" ]; then
         SKIP_MIRROR=true
     fi
+    if [ "$arg" = "--no-sync" ]; then
+        SYNC=false
+    fi
     if [ "$PREV_ARG" = "--id" ]; then
         MEETING_ID="$arg"
     fi
@@ -50,6 +65,11 @@ for arg in "$@"; do
     fi
     PREV_ARG="$arg"
 done
+
+# Start from origin's latest so this run's commit lands on top of the nightly,
+# not beside it.
+git_sync_start || exit 1
+echo ""
 
 echo "Step 1: Running JSON scraper..."
 echo "⏳ This may take several minutes for agendas with many supporting documents..."
@@ -97,7 +117,6 @@ if [ "$EXISTING_JSON" -gt 0 ]; then
     # Generates opengov/data/reports/<meetingId>-<date>-funding-manifest.json
     # which render-funding.js reads to build the per-item Financial impact
     # sections. Without this step, financial sections silently disappear.
-    REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
     # -maxdepth 1: data/changes/ stubs share the same basename and would
     # clobber the real funding manifest with an empty one; meeting_ prefix
     # keeps other per-date JSON (e.g. minutes) from doing the same
@@ -150,4 +169,22 @@ else
     echo "The scraper may not have found any meetings for this date."
     echo "Check the data/ directory to see what dates are available."
     ls -la data/*.json 2>/dev/null | tail -5
+fi
+
+# Commit + push what this run wrote so the nightly scrape never lands on top of
+# an unpushed local run. An --id scrape is dated by the meeting file the scraper
+# wrote, not by $DATE (which defaults to today for those runs).
+SYNC_DATE="$DATE"
+if [ -n "$MEETING_ID" ]; then
+    ID_FILE=$(find data -maxdepth 1 -name "meeting_${MEETING_ID}_*.json" -not -name "*.bak.*" 2>/dev/null | head -1)
+    if [ -n "$ID_FILE" ]; then
+        SYNC_DATE=$(basename "$ID_FILE" .json)
+        SYNC_DATE="${SYNC_DATE##*_}"
+    else
+        SYNC_DATE=""
+    fi
+fi
+if [ -n "$SYNC_DATE" ]; then
+    echo ""
+    git_sync_finish_agenda "$SYNC_DATE" || exit 1
 fi
