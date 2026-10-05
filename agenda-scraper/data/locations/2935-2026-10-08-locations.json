@@ -1,0 +1,114 @@
+{
+  "meetingId": "2935",
+  "date": "2026-10-08",
+  "records": {
+    "REZ-26-0000036": {
+      "lat": 27.957422,
+      "lng": -82.458122,
+      "address": "1506 N Morgan St",
+      "neighborhood": "Tampa Heights",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=002BR&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000060": {
+      "lat": 27.959162,
+      "lng": -82.450076,
+      "address": "1605 Waters Ct",
+      "neighborhood": "Historic Ybor",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00FWE&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000065": {
+      "lat": 27.963095,
+      "lng": -82.403761,
+      "address": "4911 E 10th Ave",
+      "neighborhood": "East Side Commercial",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00KWE&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000074": {
+      "lat": 27.95948,
+      "lng": -82.484894,
+      "address": "2009 N Armenia Ave",
+      "neighborhood": "Old West Tampa",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00MI4&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000078": {
+      "lat": 27.971876,
+      "lng": -82.434681,
+      "address": "3209 N 22nd St",
+      "neighborhood": "North Ybor",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00MWS&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000079": {
+      "lat": 27.970238,
+      "lng": -82.446878,
+      "address": "1206 Holmes Ave",
+      "neighborhood": "VM Ybor",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00OVC&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000082": {
+      "lat": 27.981512,
+      "lng": -82.285098,
+      "address": "620 W Dr Martin Luther King Jr Blvd",
+      "neighborhood": null,
+      "councilDistrict": null,
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00PE2&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000085": {
+      "lat": 27.886647,
+      "lng": -82.526798,
+      "address": "5400 S West Shore Blvd",
+      "neighborhood": "Gandy / Sun Bay South",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00SAC&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000086": {
+      "lat": 27.944683,
+      "lng": -82.482047,
+      "address": "2202 W Kennedy Blvd",
+      "neighborhood": "South Howard",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00SAI&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000087": {
+      "lat": 27.996115,
+      "lng": -82.480375,
+      "address": "2101 W Hillsborough Ave",
+      "neighborhood": "Armenia Terrace | Bour Lands | Al Dana Park",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00SAS&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000088": {
+      "lat": 27.942902,
+      "lng": -82.505649,
+      "address": "202 S Dale Mabry Hwy",
+      "neighborhood": "Bon Air",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00SDN&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    },
+    "REZ-26-0000099": {
+      "lat": 27.956748,
+      "lng": -82.44009,
+      "address": "1728 E 2nd Ave",
+      "neighborhood": "Historic Ybor",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01S87&agencyCode=TAMPA",
+      "locatedOn": "2026-10-03"
+    }
+  }
+}
