@@ -77,6 +77,34 @@ curl -s https://meetings.tampamonitor.com/notifications/ | grep -c data-sitekey 
 The Turnstile *site* key is committed in `site/src/_data/turnstile.js` (public by
 design); only `TURNSTILE_SECRET_KEY` is a Pages secret.
 
+## Monthly — VRB agenda (when the nightly issue lists one)
+
+The nightly already collects the hearing, parses the cases and geo-locates
+them (`agenda-scraper/data/vrb/vrb_<hearing date>.json`). Two things it cannot
+do from the runner: mirror the PDF to R2 and publish the hearing page.
+
+```bash
+git pull                                                      # the VRB collector has no git-sync; pull the nightly commit by hand
+jq '{cases: (.cases|length), located: ([.cases[]|select(.geo!=null)]|length), warnings, geoWarnings}' agenda-scraper/data/vrb/vrb_YYYY-MM-DD.json
+cd agenda-scraper && node vrb-scraper.js --mirror && cd ..    # copies the new PDF to R2 and stamps mirroredUrl; idempotent
+git add agenda-scraper/data/vrb && git commit -m "mirror VRB M/D/YY agenda" && git push
+npm run build-db && npm run build-site && npm run deploy      # publishes /boards/vrb/YYYY-MM-DD/
+curl -s https://meetings.tampamonitor.com/notifications/ | grep -c data-sitekey   # expect 2
+```
+
+Commit the mirror stamp the same day: the nightly re-checks hearings less
+than 14 days old, and an uncommitted edit to that file would make the next
+run's fast-forward refuse. `npm run agenda` leaves it alone (it commits only
+files matching its own date), so order against the council run does not matter.
+
+An unlocated case or a `warnings` entry means the parser or the dev-coord join
+needs a look; the page still builds. `node --test site/test/board-hearings.test.js`
+after the build is the names/folio scan. "Updated" agendas arrive as a second
+document; re-running `--mirror` picks them up.
+
+No VRB notifications yet: the `--vrb=<date>` dispatch adapter is still to be
+built (`docs/plans/VRB-NEXT-STEPS-2026-09-20.md`).
+
 ## Send notifications (dispatch)
 
 Dispatch is manual and has **no dry-run** — it POSTs to production and emails every
