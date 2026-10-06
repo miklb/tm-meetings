@@ -2,5 +2,23 @@
   "meetingId": "2934",
   "meetingDate": "2026-10-08",
   "firstSeenAt": "2026-10-02T23:02:01.105Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-10-06",
+      "scrapedAt": "2026-10-06T23:01:40.382Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "CRA25-12421",
+          "filename": "CRA2512421.DOCX"
+        }
+      ]
+    }
+  ]
 }

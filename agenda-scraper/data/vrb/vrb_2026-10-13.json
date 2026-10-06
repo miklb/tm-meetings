@@ -1,0 +1,278 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-10-13",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-october-2026-196146",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-october-2026-196146",
+      "nodeId": 196146,
+      "title": "VRB Agenda - October 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-october-2026-196146",
+      "postedDate": "2026-10-06",
+      "updatedTime": "2026-10-06T14:42:46-04:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/october-13-2026-agenda-ada.pdf",
+      "pdfSha256": "61d3cb9605b6ed7dbe2747158e5d71f4258008908afcaa977793795f5d85bf98",
+      "pdfBytes": 340069,
+      "pages": 5,
+      "textFile": "text/vrb-agenda-october-2026-196146.txt",
+      "firstSeen": "2026-10-06",
+      "mirroredUrl": null,
+      "warnings": [],
+      "previousVersions": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-99",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Kathleen Mcelwaney/Jerry Britt",
+      "location": "4821 West San Jose Street",
+      "folio": "121372.0000",
+      "zoning": "Residential Single-family (RS-75)",
+      "request": "Remove one nonhazardous grand tree",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association, Inc, Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Kathleen Mcelwaney",
+      "applicant": "Jerry Britt",
+      "neighborhoodAssociations": [
+        "Sunset Park Area Homeowners Association, Inc",
+        "Virginia Park Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000099",
+        "lat": 27.923106,
+        "lng": -82.525758,
+        "address": "4821 W San Jose St",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01VE7&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-87",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "4130 Gandy Blvd LLC/Addie Mentry",
+      "location": "4132 West Gandy Boulevard",
+      "folio": "132449.0022",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Increase signage from zero square feet to 4,118.36 square feet",
+      "codeSection": "Sec. 27-289.3 – Allowable signs",
+      "neighborhoodAssociationsRaw": "Gandy Civic Association, Southtown Park HOA, Belmar Gardens Neighborhood, Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "4130 Gandy Blvd LLC",
+      "applicant": "Addie Mentry",
+      "neighborhoodAssociations": [
+        "Gandy Civic Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Bayside West Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000087",
+        "lat": 27.893691,
+        "lng": -82.513239,
+        "address": "4132 W Gandy Blvd",
+        "neighborhood": "Gandy / Sun Bay South",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00WQL&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-96",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Kerry and Craig Peplinski/Zarchary Pease",
+      "location": "4631 West Longfellow Avenue",
+      "folio": "121756.0000",
+      "zoning": "Residential Single-family (RS-75)",
+      "request": "Reduce rear yard setback from 20 feet to 12 feet for the construction of a swimming pool exceeding 12 inch from ground level",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association, Inc, Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Kerry and Craig Peplinski",
+      "applicant": "Zarchary Pease",
+      "neighborhoodAssociations": [
+        "Sunset Park Area Homeowners Association, Inc",
+        "Virginia Park Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000096",
+        "lat": 27.916244,
+        "lng": -82.524103,
+        "address": "4631 W Longfellow Ave",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01U19&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-101",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Adam Nguyen and Mydung T Phan/David Nguyen",
+      "location": "4402 West Lancaster Street",
+      "folio": "138307.0000",
+      "zoning": "Commercial Neighborhood (CN)",
+      "request": "Reduce corner yard setback from 20 feet to 7 feet for new construction.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Gandy Civic Association, Southtown Park HOA, Belmar Gardens Neighborhood, Bayside West Neighborhood Association, Inc., Port Tampa City, Inc. Civic Association",
+      "locationWithheld": false,
+      "owner": "Adam Nguyen and Mydung T Phan",
+      "applicant": "David Nguyen",
+      "neighborhoodAssociations": [
+        "Gandy Civic Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Bayside West Neighborhood Association, Inc.",
+        "Port Tampa City",
+        "Inc. Civic Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000101",
+        "lat": 27.868389,
+        "lng": -82.518836,
+        "address": "4402 W Lancaster St",
+        "neighborhood": "Port Tampa City, Inc. Civic Association",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01XEC&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-102",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Dylan Candless and Sarah Lauren/Robert Foster",
+      "location": "401 South Royal Poinciana Drive",
+      "folio": "113196.0000",
+      "zoning": "Residential Single-family (RS-75)",
+      "request": "Reduce corner yard setback from 15 feet to 7 feet Reduce rear yard setback from 5 feet to 4 feet for a swimming pool.",
+      "codeSection": "Sec. 27-290.3 – Swimming Pools",
+      "neighborhoodAssociationsRaw": "Beach Park Homeowners Association, Inc., Westshore Alliance, Bayshore Beautiful Neighborhood Association, Inc., Bayshore Gardens Neighborhood Association, Inc., Armory Gardens Civic Association",
+      "locationWithheld": false,
+      "owner": "Dylan Candless and Sarah Lauren",
+      "applicant": "Robert Foster",
+      "neighborhoodAssociations": [
+        "Beach Park Homeowners Association, Inc.",
+        "Westshore Alliance",
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "Armory Gardens Civic Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000102",
+        "lat": 27.941336,
+        "lng": -82.528409,
+        "address": "401 S Royal Poinciana Dr",
+        "neighborhood": "Beach Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01XK7&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-104",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Eammp2 LLC/Braulio Grajales",
+      "location": "3639 South Manhattan Avenue",
+      "folio": "124683.0000",
+      "zoning": "Commercial General (CG)",
+      "request": "Reduce the minimum required off-street parking from 50 parking spaces to 43 parking spaces.",
+      "codeSection": "Sec. 27-283.7 – Number of off-street parking spaces",
+      "neighborhoodAssociationsRaw": "FairOaks/Manhattan Manor Neighborhood Association, Southtown Park HOA, Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc., Belmar Gardens Neighborhood, Virginia Park Neighborhood Association, Inc., Bel Mar Shores Civic Association, Inc., Virginia Park Neighborhood Association, Belmar Gardens Neighborhood, Palma Ceia Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc., Belmar Gardens Neighborhood Association, Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Eammp2 LLC",
+      "applicant": "Braulio Grajales",
+      "neighborhoodAssociations": [
+        "FairOaks/Manhattan Manor Neighborhood Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Virginia Park Neighborhood Association, Inc.",
+        "Bel Mar Shores Civic Association, Inc.",
+        "Virginia Park Neighborhood Association",
+        "Palma Ceia Neighborhood Association, Inc.",
+        "Bayside West Neighborhood Association, Inc.",
+        "Belmar Gardens Neighborhood Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000104",
+        "lat": 27.909986,
+        "lng": -82.518044,
+        "address": "3639 S Manhattan Ave",
+        "neighborhood": "Belmar Gardens",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YHU&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-105",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Tampa Bay Hunger Relief Center Inc/Addie Mentry",
+      "location": "3624 Causeway Boulevard",
+      "folio": "160962.0000",
+      "zoning": "Industrial General (IG)",
+      "request": "Additional 112.7 square feet of wall signage on the west elevation.",
+      "codeSection": "Sec. 27-289.3 – Allowable signs",
+      "neighborhoodAssociationsRaw": "Palmetto Beach Community Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Tampa Bay Hunger Relief Center Inc",
+      "applicant": "Addie Mentry",
+      "neighborhoodAssociations": [
+        "Palmetto Beach Community Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000105",
+        "lat": 27.923095,
+        "lng": -82.417521,
+        "address": "3624 Causeway Blvd",
+        "neighborhood": "Port of Tampa",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YI9&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 8,
+      "caseNumber": "VRB-26-107",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Theresa Lewis/Jarice Barbee",
+      "location": "4111 East Hanna Avenue",
+      "folio": "153031.0000",
+      "zoning": "Residential Single-family (RS-50)",
+      "request": "Reduce rear yard from 20 feet to 8.78 feet for an after the fact addition.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Northeast Community Crimewatch & Civic Association",
+      "locationWithheld": false,
+      "owner": "Theresa Lewis",
+      "applicant": "Jarice Barbee",
+      "neighborhoodAssociations": [
+        "Northeast Community Crimewatch & Civic Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000107",
+        "lat": 28.003362,
+        "lng": -82.413021,
+        "address": "4111 E Hanna Ave",
+        "neighborhood": "Northeast Community Crimewatch & Civic Association",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YT0&agencyCode=TAMPA"
+      }
+    }
+  ],
+  "warnings": [],
+  "geoWarnings": []
+}

@@ -4,6 +4,133 @@
   "firstSeenAt": "2026-10-02T23:01:53.836Z",
   "entries": [
     {
+      "date": "2026-10-06",
+      "scrapedAt": "2026-10-06T23:01:33.919Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "REZ-26-60",
+          "filename": "REZ-26-60 STAFF REPORT FINAL...PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "REZ-26-60",
+          "filename": "FINAL ORDINANCE - REZ 26-60.PDF"
+        },
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "REZ-26-60",
+          "filename": "BIE - REZ 26-60.PDF"
+        },
+        {
+          "itemNumber": 2,
+          "itemFileNumber": "REZ-26-65",
+          "filename": "BIE - REZ 26-65.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-74",
+          "filename": "FINAL ORDINANCE - REZ 26-74.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "REZ-26-74",
+          "filename": "BIE - REZ 26-74.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-26-78",
+          "filename": "FINAL ORDINANCE - REZ 26-78.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "REZ-26-78",
+          "filename": "BIE - REZ 26-78.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-26-82",
+          "filename": "FINAL ORDINANCE - REZ 26-82.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "REZ-26-82",
+          "filename": "BIE - REZ 26-82.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-85",
+          "filename": "REZ-26-85 SITE PLAN...PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-85",
+          "filename": "BIE - REZ 26-85.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-85",
+          "filename": "FINAL ORDINANCE - REZ 26-85.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-85",
+          "filename": "BONUS PROVISION AGREEMENT - REZ 26-85.PDF"
+        },
+        {
+          "itemNumber": 6,
+          "itemFileNumber": "REZ-26-85",
+          "filename": "RESO BPA - REZ 26-85.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-26-86",
+          "filename": "BIE - REZ 26-86.PDF"
+        },
+        {
+          "itemNumber": 7,
+          "itemFileNumber": "REZ-26-86",
+          "filename": "FINAL ORDINANCE - REZ 26-86.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-26-87",
+          "filename": "FINAL ORDINANCE - REZ 26-87.PDF"
+        },
+        {
+          "itemNumber": 8,
+          "itemFileNumber": "REZ-26-87",
+          "filename": "BIE - REZ 26-87.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-26-88",
+          "filename": "FINAL ORDINANCE - REZ 26-88.PDF"
+        },
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-26-88",
+          "filename": "BIE - REZ 26-88.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-26-99",
+          "filename": "FINAL ORDINANCE - REZ 26-99.PDF"
+        },
+        {
+          "itemNumber": 10,
+          "itemFileNumber": "REZ-26-99",
+          "filename": "BIE - REZ 26-99.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-10-05",
       "scrapedAt": "2026-10-05T23:01:48.743Z",
       "itemsAdded": [],
