@@ -1,0 +1,161 @@
+{
+  "meeting_id": 2708,
+  "meeting_date": "2026-10-01",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "xL9eONMQvXY",
+      "title": "Tampa City Council  - 10/01/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-10-02T04:45:40Z",
+      "duration": "PT3H11M20S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-15 - Police Officer of the Month",
+          "timestamp": "00:16:12",
+          "seconds": 972
+        },
+        {
+          "title": "Item 2: CM26-25890 - Albert Owens Commendation",
+          "timestamp": "00:28:02",
+          "seconds": 1682
+        },
+        {
+          "title": "Item 3: CM26-26794 - Les Miller Commendation",
+          "timestamp": "00:41:57",
+          "seconds": 2517
+        },
+        {
+          "title": "Item 4: CM26-25593 - Legal Services Program Update",
+          "timestamp": "01:00:32",
+          "seconds": 3632
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:07:30",
+          "seconds": 4050
+        },
+        {
+          "title": "Item 5: BA26-26873 - Lorene Hero Reappointment",
+          "timestamp": "01:22:42",
+          "seconds": 4962
+        },
+        {
+          "title": "Consent Agenda",
+          "timestamp": "01:23:29",
+          "seconds": 5009
+        },
+        {
+          "title": "Item 51: REZ-26-20 - 4706-4710 West McElroy Avenue",
+          "timestamp": "01:28:54",
+          "seconds": 5334
+        },
+        {
+          "title": "Item 49: HN26-26534 - Frank A. Reddick Activity Center",
+          "timestamp": "01:45:47",
+          "seconds": 6347
+        },
+        {
+          "title": "Item 52: REZ-26-23 - 104 South Tampania Avenue; 2522 West Kennedy Boulevard",
+          "timestamp": "01:55:57",
+          "seconds": 6957
+        },
+        {
+          "title": "Item 53: REZ-26-34 - 4400-4488 West Boy Scout Boulevard",
+          "timestamp": "01:58:33",
+          "seconds": 7113
+        },
+        {
+          "title": "Item 54: REZ-26-61 - 205 South Fremont Avenue",
+          "timestamp": "02:00:03",
+          "seconds": 7203
+        },
+        {
+          "title": "Item 55: REZ-26-64 - 6200-6202 Interbay Boulevard; 6206 South 6th Street; 6205-6207 South Martindale Avenue",
+          "timestamp": "02:02:03",
+          "seconds": 7323
+        },
+        {
+          "title": "Item 56: REZ-26-66 - 2910 East Clark Street",
+          "timestamp": "02:03:42",
+          "seconds": 7422
+        },
+        {
+          "title": "Item 57: PH26-26057 - East Twiggs Street",
+          "timestamp": "02:05:23",
+          "seconds": 7523
+        },
+        {
+          "title": "Item 51: REZ-26-20 - 4706-4710 West McElroy Avenue",
+          "timestamp": "02:07:13",
+          "seconds": 7633
+        },
+        {
+          "title": "Item 58: DA26-26530 - North Avon Avenue",
+          "timestamp": "02:16:08",
+          "seconds": 8168
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "02:18:33",
+          "seconds": 8313
+        },
+        {
+          "title": "Item 60: INF26-26855 - Citywide Watermain Improvements",
+          "timestamp": "02:45:40",
+          "seconds": 9940
+        },
+        {
+          "title": "Item 64: CM26-26581 - West Tampa Planning Study",
+          "timestamp": "02:46:05",
+          "seconds": 9965
+        }
+      ],
+      "offset_seconds": 583
+    },
+    {
+      "video_id": "7opH6oAdL7E",
+      "title": "Tampa City Council - 10/01/26 Part 2",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-10-02T07:51:56Z",
+      "duration": "PT2H17M50S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 65: CM26-27436 - Charter Amendments Review",
+          "timestamp": "00:08:40",
+          "seconds": 520
+        },
+        {
+          "title": "Item 63: CM26-26210 - District 7 Replacement Process",
+          "timestamp": "01:47:48",
+          "seconds": 6468
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "02:04:28",
+          "seconds": 7468
+        }
+      ],
+      "transcript_start_time": "1:28:57PM",
+      "offset_seconds": 500
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-10-06T20:41:28Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
