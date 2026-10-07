@@ -4,6 +4,19 @@
   "firstSeenAt": "2026-10-02T23:01:53.836Z",
   "entries": [
     {
+      "date": "2026-10-07",
+      "scrapedAt": "2026-10-07T23:01:33.387Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 9,
+          "itemFileNumber": "REZ-26-88",
+          "filename": "1-WRITTEN COMMENTS - REZ-26-88.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-10-06",
       "scrapedAt": "2026-10-06T23:01:33.919Z",
       "agendaTypePromoted": {
