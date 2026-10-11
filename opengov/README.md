@@ -55,7 +55,7 @@ opengov/
 ├── data/
 │   ├── coa-cache.json     # gitignored; refreshed weekly
 │   └── reports/           # generated transparency reports
-└── tests/
+└── tests/                 # unittest suite: npm run test:opengov
 ```
 
 ## Boundaries with the agenda-scraper

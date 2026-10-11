@@ -10,7 +10,8 @@
     "build-site": "cd site && npx @11ty/eleventy",
     "sync-design": "node scripts/sync-design.js",
     "deploy": "cd site && wrangler pages deploy --project-name tampa-meetings",
-    "test": "node --test \"scripts/test/*.test.js\" \"agenda-scraper/test/*.test.js\" \"site/test/*.test.js\""
+    "test": "node --test \"scripts/test/*.test.js\" \"agenda-scraper/test/*.test.js\" \"site/test/*.test.js\"",
+    "test:opengov": ".venv/bin/python3 -m unittest discover -s opengov/tests -t ."
   },
   "author": "Michael Bishop (https://michaelbishop.me/)",
   "license": "MIT"

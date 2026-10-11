@@ -91,7 +91,16 @@ def _compute_reallocation(
       * no row carries an explicit "…Increase" marker. The latter excludes
         contract close-outs, which pair a decrease (de-obligating remaining
         contract funds) with a plain "Expenditure" final payment — the two
-        sides are unrelated and are not meant to balance.
+        sides are unrelated and are not meant to balance, or
+      * every row sits on the same account code and the sides do not balance.
+        Moving money between lines needs two distinct lines, so an unequal
+        decrease and increase on one identical code is a close-out (de-obligate
+        the unspent balance, release retainage as the final payment) even when
+        the clerk labels the final payment "Expenditure Increase" (INF26-27468,
+        2026-10-15). Equal amounts on one code are still reported as a
+        balanced reallocation: that shape comes from a genuine transfer whose
+        rows lost their project segment in parsing (MAM26-27135, same agenda),
+        and the "Reallocated" headline is the right one for it.
     """
     decreases = committed_totals.get("decreases", 0.0)
     increases = committed_totals.get("expenditures", 0.0)
@@ -107,12 +116,16 @@ def _compute_reallocation(
     # flag revenue-funded reappropriations as false imbalances. The committed
     # net already nets all four buckets, so use it directly.
     imbalance = round(committed_totals.get("net", 0.0), 2)
+    balanced = abs(imbalance) <= 1.0
+    codes = {(r.get("accountCode") or "").strip() for r in rows}
+    if len(codes) == 1 and "" not in codes and not balanced:
+        return None
     return {
         "decreasesTotal": round(decreases, 2),
         "increasesTotal": round(increases, 2),
         "revenuesTotal": round(revenues, 2),
         "imbalance": imbalance,
-        "balanced": abs(imbalance) <= 1.0,
+        "balanced": balanced,
     }
 
 
