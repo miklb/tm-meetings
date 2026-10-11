@@ -19,11 +19,14 @@ SCRAPE_OUTCOME="${SCRAPE_OUTCOME:-success}"
 VRB_LOG="${VRB_LOG:-/tmp/vrb-output.log}"
 VRB_OUTCOME="${VRB_OUTCOME:-success}"
 OUT="${OUT:-/tmp/issue-body.md}"
+DATA_DIR="${DATA_DIR:-agenda-scraper/data}"   # stored meeting JSON (tests point this elsewhere)
+TODAY="$(date +%Y-%m-%d)"
 cd "$REPO_ROOT"
 
 NEW_MEETINGS=""
 MODIFIED_MEETINGS=""
 UNAVAILABLE_MEETINGS=""
+UNAVAILABLE_ARCHIVED=""
 FAILED_MEETINGS=""
 SUPPRESSED_COUNT=0
 HAS_MEANINGFUL=false
@@ -68,9 +71,21 @@ fi
 if [[ -f "$SCRAPE_LOG" ]]; then
   while IFS= read -r line; do
     if [[ "$line" == *"is not available on the server"* ]]; then
-      HAS_MEANINGFUL=true
       MID=$(grep -o 'Meeting [0-9]*' <<< "$line" | head -1 | awk '{print $2}')
-      UNAVAILABLE_MEETINGS="${UNAVAILABLE_MEETINGS}- Meeting **${MID}** returned \"Meeting not available\" from the server"$'\n'
+      # The scraper skips an unavailable meeting and writes nothing, so a
+      # meeting we already hold is safe. When its date has passed, the city
+      # has simply pulled an old page while leaving it on the list (2935, the
+      # 10/8/26 evening session, did this and opened an issue every night).
+      # Note it for the record without opening an issue for it alone. A
+      # meeting we never captured, or one still ahead on the calendar, is a
+      # real gap and stays meaningful.
+      STORED=$(ls "$DATA_DIR"/meeting_"${MID}"_*.json 2>/dev/null | head -1)
+      if [[ -n "$STORED" && "$(meeting_date "$STORED")" < "$TODAY" ]]; then
+        UNAVAILABLE_ARCHIVED="${UNAVAILABLE_ARCHIVED}- Meeting **${MID}** ($(meeting_date "$STORED")) — page gone from the server; stored copy and post unchanged"$'\n'
+      else
+        HAS_MEANINGFUL=true
+        UNAVAILABLE_MEETINGS="${UNAVAILABLE_MEETINGS}- Meeting **${MID}** returned \"Meeting not available\" from the server"$'\n'
+      fi
     elif [[ "$line" == *"Skipping meeting"*"after error"* ]]; then
       HAS_MEANINGFUL=true
       MID=$(grep -o 'Skipping meeting [0-9]*' <<< "$line" | awk '{print $3}')
@@ -111,6 +126,10 @@ if [[ "$HAS_MEANINGFUL" == "true" ]]; then
     if [[ -n "$UNAVAILABLE_MEETINGS" ]]; then
       echo "### ⚠️ Unavailable Meetings (server returned \"Meeting not available\")"
       echo "$UNAVAILABLE_MEETINGS"
+    fi
+    if [[ -n "$UNAVAILABLE_ARCHIVED" ]]; then
+      echo "### Unavailable on the server, already archived (informational)"
+      echo "$UNAVAILABLE_ARCHIVED"
     fi
     if [[ -n "$FAILED_MEETINGS" ]]; then
       echo "### ❌ Meetings that failed to scrape (stored files untouched; the rest of the night was committed)"
