@@ -3791,11 +3791,11 @@
         "projectedCostsRaw": "40552.244600.563001.0000.1002359.0000000 $405,097.27 \n(Expenditure)\nWater Bonds Series 2022 Capital Projects Fund. Water Department. Improvements Other \nthan Buildings. North B ST/ Himes Ave CIAC Phase 5 Project\nP: 1002359   O: WTR-Water Dept   E: CTPA Improvements Other than Buildings   T: 30   A: \n100385",
         "rows": [
           {
-            "accountCode": "40552.244600.563001",
+            "accountCode": "40552.244600.563001.1002359",
             "fund": "40552",
             "department": "244600",
             "object": "563001",
-            "project": null,
+            "project": "1002359",
             "fiscalYear": null,
             "amount": "$405,097.27",
             "value": 405097.27,

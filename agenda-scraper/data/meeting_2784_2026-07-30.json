@@ -909,11 +909,11 @@
         "projectedCostsRaw": "62600 213800 563001 0000 1002571 ($257,974) (Expenditure \nDecrease)\nYbor I CRA Fund. CRA Dept. Improvements Other than Bldgs. 7th Avenue Bricking Project\nP–1002571 O-CRA E - CTPA Improvements Other than Bldgs T– 30 A- 100103\n \n62600 213800 563001 0000 1002571 $10,000 (Expenditure)\nYbor I CRA Fund. CRA Dept. Improvements Other than Bldgs. 7th Avenue Bricking Project\nP–1002571 O-CRA E - CTPA Improvements Other than Bldgs T– 30 A- 100103",
         "rows": [
           {
-            "accountCode": "62600.213800.563001",
+            "accountCode": "62600.213800.563001.1002571",
             "fund": "62600",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002571",
             "fiscalYear": null,
             "amount": "$257,974",
             "value": 257974,
@@ -924,11 +924,11 @@
             "description": "Ybor I CRA Fund. CRA Dept. Improvements Other than Bldgs. 7th Avenue Bricking Project P–1002571 O-CRA E - CTPA Improvements Other than Bldgs T– 30 A- 100103"
           },
           {
-            "accountCode": "62600.213800.563001",
+            "accountCode": "62600.213800.563001.1002571",
             "fund": "62600",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002571",
             "fiscalYear": null,
             "amount": "$10,000",
             "value": 10000,
@@ -2736,11 +2736,11 @@
             "description": "Local Option Gas Tax Capital Projects Fund, Transportation Department, CTPA Professional Svcs. Capital, Resurfacing project"
           },
           {
-            "accountCode": "30600.243000.560005",
+            "accountCode": "30600.243000.560005.1003004",
             "fund": "30600",
             "department": "243000",
             "object": "560005",
-            "project": null,
+            "project": "1003004",
             "fiscalYear": null,
             "amount": "$2,100,000",
             "value": 2100000,

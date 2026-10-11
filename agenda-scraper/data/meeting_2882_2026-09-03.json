@@ -798,11 +798,11 @@
         "projectedCostsRaw": "31400.210700.563000.0000.1002694 $134,877.94 FY2026 \n(Expenditure)\nUtilities Services Tax Capital Projects. LAM-Facilities Dept. Infrastructure. Bartholomew North \nHVAC Replacement.",
         "rows": [
           {
-            "accountCode": "31400.210700.563000",
+            "accountCode": "31400.210700.563000.1002694",
             "fund": "31400",
             "department": "210700",
             "object": "563000",
-            "project": null,
+            "project": "1002694",
             "fiscalYear": "FY26",
             "amount": "$134,877.94",
             "value": 134877.94,
@@ -1041,11 +1041,11 @@
         "projectedCostsRaw": "31400.242700.563001.0000.1001687 $4,277.88 (Expenditure \nDecrease)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Improv Other Than \nBldgs. Citywide Backup Data Center Upgrades\n31400.242700.563005.0000.1001687 $378,800.90 (Expenditure Decrease)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Bulk Purchases. \nCitywide Backup Data Center Upgrades\n31400.242700.564004.0000.1001687 $8,435.49 (Expenditure Decrease)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Computers \nHardware/Software. Citywide Backup Data Center Upgrades\n31400.242700.560005.0000.1002395 $503,579 (Expenditure Decrease)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Professional \nServices Capital. Dimensions Time Keeping and Analytics\n\n31400.242700.560005.0000.1002563 $194,000 (Expenditure Decrease)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Professional \nServices Capital. Tampa Police Data Mart Revamp\n31400.242700.560005.0000.1002564 $2,370,000 (Expenditure Decrease)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Professional \nServices Capital. Oracle Recruiting Module\n31400.242700.560005.0000.1002565 $800,000 (Expenditure Decrease)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Professional \nServices Capital. ITSM Replacement\n31400.242700.569999.0000.1000762 $1,959,093.27 (Expenditure Increase)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Capital Outlay \nBudget Reserve. Public Safety Communications\n31400.242700.569999.0000.1002698 $2,300,000 (Expenditure Increase)\nUtilities Services Tax Capital Projects Fund. Technology Capital Project. Capital Outlay \nBudget Reserve. Citywide Infrastructure Upgrade",
         "rows": [
           {
-            "accountCode": "31400.242700.563001",
+            "accountCode": "31400.242700.563001.1001687",
             "fund": "31400",
             "department": "242700",
             "object": "563001",
-            "project": null,
+            "project": "1001687",
             "fiscalYear": null,
             "amount": "$4,277.88",
             "value": 4277.88,
@@ -1056,11 +1056,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Improv Other Than Bldgs. Citywide Backup Data Center Upgrades"
           },
           {
-            "accountCode": "31400.242700.563005",
+            "accountCode": "31400.242700.563005.1001687",
             "fund": "31400",
             "department": "242700",
             "object": "563005",
-            "project": null,
+            "project": "1001687",
             "fiscalYear": null,
             "amount": "$378,800.90",
             "value": 378800.9,
@@ -1071,11 +1071,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Bulk Purchases. Citywide Backup Data Center Upgrades"
           },
           {
-            "accountCode": "31400.242700.564004",
+            "accountCode": "31400.242700.564004.1001687",
             "fund": "31400",
             "department": "242700",
             "object": "564004",
-            "project": null,
+            "project": "1001687",
             "fiscalYear": null,
             "amount": "$8,435.49",
             "value": 8435.49,
@@ -1086,11 +1086,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Computers Hardware/Software. Citywide Backup Data Center Upgrades"
           },
           {
-            "accountCode": "31400.242700.560005",
+            "accountCode": "31400.242700.560005.1002395",
             "fund": "31400",
             "department": "242700",
             "object": "560005",
-            "project": null,
+            "project": "1002395",
             "fiscalYear": null,
             "amount": "$503,579",
             "value": 503579,
@@ -1101,11 +1101,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Professional Services Capital. Dimensions Time Keeping and Analytics"
           },
           {
-            "accountCode": "31400.242700.560005",
+            "accountCode": "31400.242700.560005.1002563",
             "fund": "31400",
             "department": "242700",
             "object": "560005",
-            "project": null,
+            "project": "1002563",
             "fiscalYear": null,
             "amount": "$194,000",
             "value": 194000,
@@ -1116,11 +1116,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Professional Services Capital. Tampa Police Data Mart Revamp"
           },
           {
-            "accountCode": "31400.242700.560005",
+            "accountCode": "31400.242700.560005.1002564",
             "fund": "31400",
             "department": "242700",
             "object": "560005",
-            "project": null,
+            "project": "1002564",
             "fiscalYear": null,
             "amount": "$2,370,000",
             "value": 2370000,
@@ -1131,11 +1131,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Professional Services Capital. Oracle Recruiting Module"
           },
           {
-            "accountCode": "31400.242700.560005",
+            "accountCode": "31400.242700.560005.1002565",
             "fund": "31400",
             "department": "242700",
             "object": "560005",
-            "project": null,
+            "project": "1002565",
             "fiscalYear": null,
             "amount": "$800,000",
             "value": 800000,
@@ -1146,11 +1146,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Professional Services Capital. ITSM Replacement"
           },
           {
-            "accountCode": "31400.242700.569999",
+            "accountCode": "31400.242700.569999.1000762",
             "fund": "31400",
             "department": "242700",
             "object": "569999",
-            "project": null,
+            "project": "1000762",
             "fiscalYear": null,
             "amount": "$1,959,093.27",
             "value": 1959093.27,
@@ -1161,11 +1161,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Technology Capital Project. Capital Outlay Budget Reserve. Public Safety Communications"
           },
           {
-            "accountCode": "31400.242700.569999",
+            "accountCode": "31400.242700.569999.1002698",
             "fund": "31400",
             "department": "242700",
             "object": "569999",
-            "project": null,
+            "project": "1002698",
             "fiscalYear": null,
             "amount": "$2,300,000",
             "value": 2300000,
@@ -2467,11 +2467,11 @@
         "projectedCostsRaw": "31700.241800.381000.0000000 $506,016 FY2026 (Revenue \nIncrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Inter-Fund Group \nTransfers in Non-Operating.\n31700.241800.563000.1002448 $3,803,633 FY2026 (Expenditure Increase)\nStormwater Improvement Assessment Fund. Stormwater Department. Infrastructure. South \nHoward Flood relief and Streetscape.\n\n31700.241800.563000.1000750 $9,073 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Infrastructure. Lower \nPeninsula Watershed Plan.\n31700.241800.560005.1001170 $8,560 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Professional Services \nCapital. Rogers Park Drainage Improvements.\n31700.241800.563000.1001420 $1,069,294 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Infrastructure. 56th \nStreet & Broadway Avenue Flooding Relief.\n31700.241800.561000.1001440 $875,006 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Land. Krental from \nKennedy to Cleveland Flooding Relief.\n31700.241800.563000.1001586 $190,078 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Infrastructure. Everina \nStreet from Carrington Avenue to Coachman Avenue Flooding Relief.\n31700.241800.560005.1001588 $98,451 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Professional Services \nCapital. Newport, Willow, Orleans, and Watrous Avenue Groundwater Diversions.\n31700.241800.563000.1001589 $81,608 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Infrastructure. Lake \nRoberta Sediment Trap Upgrade.\n31700.241800.563000.1001949 $673,994 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Infrastructure. 4801 \nNeptune Way Stormwater Improvements.\n31700.241800.563000.1002113 $291,553 FY2026 (Expenditure Decrease)\nStormwater Improvement Assessment Fund. Stormwater Department. Infrastructure. Clark \nStreet and 30th Street Pipe Relocation\n31800.241800.563000.1002448 $31,291 FY2026 (Expenditure Increase)\nStormwater Bond Series 2018 Fund. Stormwater Department. Infrastructure. South Howard \nFlood relief and Streetscape.\n31800.241800.563000.1001597 $31,291 FY2026 (Expenditure Decrease)\nStormwater Bond Series 2018 Fund. Stormwater Department. Infrastructure. Virginia Avenue \nPumping Station Improvements.\n31801.241800.369936.0000000 $1,808,176 FY2026 (Revenue Increase)\nStormwater Bond Series 2021 Fund. Stormwater Department. Unassigned Use of Fund \nBalance.\n31801.241800.563000.1002448 $5,908,778 FY2026 (Expenditure Increase)\nStormwater Bond Series 2021 Fund. Stormwater Department. Infrastructure. South Howard \nFlood relief and Streetscape.\n31801.241800.563000.1000750 $4,100,602 FY2026 (Expenditure Decrease)\nStormwater Bond Series 2021 Fund. Stormwater Department. Infrastructure. Lower Peninsula \nWatershed Plan.\n31802.241800.369936.0000000 $501,523 FY2026 (Revenue Increase)\nStormwater Bond Series 2023 Fund. Stormwater Department. Unassigned Use of Fund \nBalance.\n31802.241800.563000.1002448 $501,523 FY2026 (Expenditure Increase)\nStormwater Bond Series 2023 Fund. Stormwater Department. Infrastructure. South Howard \nFlood relief and Streetscape.\n31000.241800.369936.0000000 $506,016 FY2026 (Revenue Increase)\nStormwater Capital Projects Fund. Stormwater Department. Unassigned Use of Fund \nBalance.\n\n31000.241800.591000.0000000 $506,016 FY2026 (Expenditure Increase)\nStormwater Capital Projects Fund. Stormwater Department. Intragovernmental Transfers.\n31803.241800.384001.0000000 $25,906,845 FY2026 (Revenue Increase)\nStormwater Improvement Future Debt Fund. Stormwater Department. Bond Proceeds.\n31803.241800.563000.1002448 $25,906,845 FY2026 (Expenditure Increase)\nStormwater Improvement Future Debt Fund. Stormwater Department. Infrastructure. South \nHoward Flood relief and Streetscape.\n30900.241800.337100.0000000 $11,000,000 FY2026 (Revenue Increase)\nStormwater Grants Fund. Stormwater Department. Local Government Unit Grant - General \nGovernment.\n30900.241800.563000.1002448 $11,000,000 FY2026 (Expenditure Increase)\nStormwater Grants Fund. Stormwater Department. Infrastructure. South Howard Flood relief \nand Streetscape.\n30250.241800.369936.0000000 $387,713 FY2026 (Revenue Increase)\nCIT Series 2016 Bonds Capital Projects Fund. Stormwater Department. Unassigned Use of \nFund Balance.\n30250.241800.563000.1002448 $3,171,896 FY2026 (Expenditure Increase)\nCIT Series 2016 Bonds Capital Projects Fund. Stormwater Department. Infrastructure. South \nHoward Flood relief and Streetscape.\n30250.243000.563001.1000248 $1,638,776 FY2026 (Expenditure Decrease)\nCIT Series 2016 Bonds Capital Projects Fund. Transportation Department. Improvements \nOther Than Buildings. Brorien Street Bridge Rehab.\n30250.243000.563001.1000446 $1,145,407 FY2026 (Expenditure Decrease)\nCIT Series 2016 Bonds Capital Projects Fund. Transportation Department. Improvements \nOther Than Buildings. Cass Street Bridge.",
         "rows": [
           {
-            "accountCode": "31700.241800.381000.0000000",
+            "accountCode": "31700.241800.381000",
             "fund": "31700",
             "department": "241800",
             "object": "381000",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$506,016",
             "value": 506016,
@@ -2662,11 +2662,11 @@
             "description": "Stormwater Bond Series 2018 Fund. Stormwater Department. Infrastructure. Virginia Avenue Pumping Station Improvements."
           },
           {
-            "accountCode": "31801.241800.369936.0000000",
+            "accountCode": "31801.241800.369936",
             "fund": "31801",
             "department": "241800",
             "object": "369936",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$1,808,176",
             "value": 1808176,
@@ -2707,11 +2707,11 @@
             "description": "Stormwater Bond Series 2021 Fund. Stormwater Department. Infrastructure. Lower Peninsula Watershed Plan."
           },
           {
-            "accountCode": "31802.241800.369936.0000000",
+            "accountCode": "31802.241800.369936",
             "fund": "31802",
             "department": "241800",
             "object": "369936",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$501,523",
             "value": 501523,
@@ -2737,11 +2737,11 @@
             "description": "Stormwater Bond Series 2023 Fund. Stormwater Department. Infrastructure. South Howard Flood relief and Streetscape."
           },
           {
-            "accountCode": "31000.241800.369936.0000000",
+            "accountCode": "31000.241800.369936",
             "fund": "31000",
             "department": "241800",
             "object": "369936",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$506,016",
             "value": 506016,
@@ -2752,11 +2752,11 @@
             "description": "Stormwater Capital Projects Fund. Stormwater Department. Unassigned Use of Fund Balance."
           },
           {
-            "accountCode": "31000.241800.591000.0000000",
+            "accountCode": "31000.241800.591000",
             "fund": "31000",
             "department": "241800",
             "object": "591000",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$506,016",
             "value": 506016,
@@ -2767,11 +2767,11 @@
             "description": "Stormwater Capital Projects Fund. Stormwater Department. Intragovernmental Transfers."
           },
           {
-            "accountCode": "31803.241800.384001.0000000",
+            "accountCode": "31803.241800.384001",
             "fund": "31803",
             "department": "241800",
             "object": "384001",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$25,906,845",
             "value": 25906845,
@@ -2797,11 +2797,11 @@
             "description": "Stormwater Improvement Future Debt Fund. Stormwater Department. Infrastructure. South Howard Flood relief and Streetscape."
           },
           {
-            "accountCode": "30900.241800.337100.0000000",
+            "accountCode": "30900.241800.337100",
             "fund": "30900",
             "department": "241800",
             "object": "337100",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$11,000,000",
             "value": 11000000,
@@ -2827,11 +2827,11 @@
             "description": "Stormwater Grants Fund. Stormwater Department. Infrastructure. South Howard Flood relief and Streetscape."
           },
           {
-            "accountCode": "30250.241800.369936.0000000",
+            "accountCode": "30250.241800.369936",
             "fund": "30250",
             "department": "241800",
             "object": "369936",
-            "project": "0000000",
+            "project": null,
             "fiscalYear": "FY26",
             "amount": "$387,713",
             "value": 387713,

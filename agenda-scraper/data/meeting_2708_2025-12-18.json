@@ -548,11 +548,11 @@
         "projectedCostsRaw": "12200.220801.331901.10022930 - $12,425 (Revenue)\nHousing Grants. Equal Employment Opportunity Commission. Other Fed Grants-EEOC \nDiscrimination. NCA Equal Employment Opportunity Commission (EEOC) 24 Contract \n12200.220801.531002.1002930 - $12,425 (Expenditure)\n\nP – 1002930\nO – NCA-Neighborhood & Community Affairs\nE – CTPA Other-Professional Services\nT – 03\nA – 100679",
         "rows": [
           {
-            "accountCode": "12200.220801.331901.1002293",
+            "accountCode": "12200.220801.331901",
             "fund": "12200",
             "department": "220801",
             "object": "331901",
-            "project": "1002293",
+            "project": null,
             "fiscalYear": null,
             "amount": "$12,425",
             "value": 12425,
@@ -615,11 +615,11 @@
         "projectedCostsRaw": "12200.220801.331901.10022930 - $12,425 (Revenue)\nHousing Grants. Equal Employment Opportunity Commission. Other Fed Grants-EEOC \nDiscrimination. NCA Equal Employment Opportunity Commission (EEOC) 24 Contract \n12200.220801.531002.1002930 - $12,425 (Expenditure)\nP – 1002930\n\nO – NCA-Neighborhood & Community Affairs\nE – CTPA Other-Professional Services\nT – 03\nA – 100679",
         "rows": [
           {
-            "accountCode": "12200.220801.331901.1002293",
+            "accountCode": "12200.220801.331901",
             "fund": "12200",
             "department": "220801",
             "object": "331901",
-            "project": "1002293",
+            "project": null,
             "fiscalYear": null,
             "amount": "$12,425",
             "value": 12425,
@@ -1412,11 +1412,11 @@
         "projectedCostsRaw": "62300.213800.563001.0000.1002164 $2,399,747.00 (Expenditure)\nDrew Park CRA Fund. CRA Department. Improve. Other than Bldgs. Drew Park Streetscape \n& Gateway Improv.\nP- 1002164  O- CRA  E- CTPA Improv other than bldg T-30   A-000167",
         "rows": [
           {
-            "accountCode": "62300.213800.563001",
+            "accountCode": "62300.213800.563001.1002164",
             "fund": "62300",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002164",
             "fiscalYear": null,
             "amount": "$2,399,747.00",
             "value": 2399747,
@@ -1886,11 +1886,11 @@
         "projectedCostsRaw": "30600.243000.563001.0000.1002350 $921,409 (Estimated \nExpenditure)\nLocal Option Gas Tax Capital Projects Fund, Transportation Department, CTPA Improv Other \nThan Bldgs. Account. Resurfacing Project\nP: 1002350 O: TSS E: CTPA Improv Other Than Bldgs. T: 30 A:100044",
         "rows": [
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002350",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002350",
             "fiscalYear": null,
             "amount": "$921,409",
             "value": 921409,
@@ -1938,11 +1938,11 @@
         "projectedCostsRaw": "62600 213800 563001 0000 1002571 $663,765.85 (Expenditure)\nYbor I CRA Fund. CRA Dept. Improvements Other than Bldgs. 7th Avenue Bricking Project \nP–1002571   O-CRA   E - CTPA Improvements Other than Bldgs   T– 30   A- 100103",
         "rows": [
           {
-            "accountCode": "62600.213800.563001",
+            "accountCode": "62600.213800.563001.1002571",
             "fund": "62600",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002571",
             "fiscalYear": null,
             "amount": "$663,765.85",
             "value": 663765.85,
@@ -4591,11 +4591,11 @@
         "projectedCostsRaw": "30600.243000.563001.0000.1002890  FY2026 $4,125,000 \n(Estimated Expenditure)\nLocal Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other \nThan Bldgs. Account. Hillsborough County Traffic Signals Project\n30600.243000.563001.0000.1002449 FY2026 $1,500,000  (Estimated Expenditure)\n\nLocal Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other \nThan Bldgs. Account. Traffic Signals Project\n30600.243000.563001.0000. 1002890 FY2027 $1,550,000 (Estimated Expenditure) subject \nto annual appropriation\nLocal Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other \nThan Bldgs. Account. Hillsborough County Traffic Signals Project\n30600.243000.563001.0000.1002449 FY2027 $325,000 (Estimated Expenditure) subject to \nannual appropriation\nLocal Option Gas Tax Capital Projects Fund .Transportation Department .CTPA Improv Other \nThan Bldgs. Traffic Signals Project",
         "rows": [
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002890",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002890",
             "fiscalYear": "FY26",
             "amount": "$4,125,000",
             "value": 4125000,
@@ -4606,11 +4606,11 @@
             "description": "Local Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other Than Bldgs. Account. Hillsborough County Traffic Signals Project"
           },
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002449",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002449",
             "fiscalYear": "FY26",
             "amount": "$1,500,000",
             "value": 1500000,
@@ -4621,11 +4621,11 @@
             "description": "Local Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other Than Bldgs. Account. Traffic Signals Project"
           },
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002890",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002890",
             "fiscalYear": "FY27",
             "amount": "$1,550,000",
             "value": 1550000,
@@ -4636,11 +4636,11 @@
             "description": "Local Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other Than Bldgs. Account. Hillsborough County Traffic Signals Project"
           },
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002449",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002449",
             "fiscalYear": "FY27",
             "amount": "$325,000",
             "value": 325000,

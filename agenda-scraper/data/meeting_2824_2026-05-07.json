@@ -5496,11 +5496,11 @@
         "projectedCostsRaw": "40700.244500.563001.0000.1001388.0000000 $741,854 \n(Expenditure)\nWater Renewal and Replacement Fund. Water Department. Improvements Other than \nBuildings.  D.L. Tippin High Service Pump Station Project\nP: 1001388   O: WTR-Water Dept   E: CTPA Improvements Other than Buildings   T: 31   A: \n100453",
         "rows": [
           {
-            "accountCode": "40700.244500.563001",
+            "accountCode": "40700.244500.563001.1001388",
             "fund": "40700",
             "department": "244500",
             "object": "563001",
-            "project": null,
+            "project": "1001388",
             "fiscalYear": null,
             "amount": "$741,854",
             "value": 741854,
@@ -12847,11 +12847,11 @@
         "projectedCostsRaw": "40700.244500.563001.0000.1002517.0000000 $5,481,041 \n(Expenditure)\nWater Renewal and Replacement Fund. Water Department. Improvements Other than \nBuildings.  SCADA Master Plan Implementation Project\nP: 1002517   O: WTR-Water Dept   E: CTPA Improvements Other than Buildings   T: 30   A: \n100453",
         "rows": [
           {
-            "accountCode": "40700.244500.563001",
+            "accountCode": "40700.244500.563001.1002517",
             "fund": "40700",
             "department": "244500",
             "object": "563001",
-            "project": null,
+            "project": "1002517",
             "fiscalYear": null,
             "amount": "$5,481,041",
             "value": 5481041,

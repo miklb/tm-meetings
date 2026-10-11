@@ -1876,11 +1876,11 @@
         "projectedCostsRaw": "31400.225800.369936.0000.1003006 $200,000 (Revenue Increase)\nUtilities Services Tax Capital Projects Fund. Parks Capital Project Management. Use of fund \nbalance. Cass St. Underpass\n31400.225800.563000.0000.1003006 $200,000 (Expenditure Increase)\nUtilities Services Tax Capital Projects Fund. Parks Capital Project Management. \nInfrastructure. Cass St. Underpass\nP: 1003006 O: P&R – Parks & Recreation Dept. E: CTPA Infrastructure T: 30 A:100255",
         "rows": [
           {
-            "accountCode": "31400.225800.369936",
+            "accountCode": "31400.225800.369936.1003006",
             "fund": "31400",
             "department": "225800",
             "object": "369936",
-            "project": null,
+            "project": "1003006",
             "fiscalYear": null,
             "amount": "$200,000",
             "value": 200000,
@@ -1891,11 +1891,11 @@
             "description": "Utilities Services Tax Capital Projects Fund. Parks Capital Project Management. Use of fund balance. Cass St. Underpass"
           },
           {
-            "accountCode": "31400.225800.563000",
+            "accountCode": "31400.225800.563000.1003006",
             "fund": "31400",
             "department": "225800",
             "object": "563000",
-            "project": null,
+            "project": "1003006",
             "fiscalYear": null,
             "amount": "$200,000",
             "value": 200000,

@@ -3534,11 +3534,11 @@
         "projectedCostsRaw": "62350 213800 563001 0000 1002845 0000000 $300,000 \n(Expenditure)\nWest Tampa CRA Fund. CRA Dept. Improvements Other than Bldgs. Fremont Ave Grid Re-\nEstablishment\nP- 1002845, O- CRA Dept., E - CTPA Improvements other than Bldgs., T- 30, A - 100231",
         "rows": [
           {
-            "accountCode": "62350.213800.563001",
+            "accountCode": "62350.213800.563001.1002845",
             "fund": "62350",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002845",
             "fiscalYear": null,
             "amount": "$300,000",
             "value": 300000,

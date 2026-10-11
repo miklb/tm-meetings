@@ -4024,11 +4024,11 @@
         "projectedCostsRaw": "31400.243000.560005.0000.1000576 $130,000 (Expenditure \nDecrease)\nUtilities Services Tax Capital Projects Fund, Transportation Department, CTPA Professional \nSvcs. Capital, Red Light Camera project\n\nP: 1000576 O: TSS E: CTPA Professional Services Capital  T: 31 A: 100182\n31400.243000.560005.0000.1003027 $130,000 (Expenditure Increase)\nUtilities Services Tax Capital Projects Fund, Transportation Department, CTPA Professional \nSvcs. Capital, West Riverwalk Phase II – Multi – Modal Improvements project\nP: 1003027 O: TSS E: CTPA Professional Services Capital T: 31 A: 100182",
         "rows": [
           {
-            "accountCode": "31400.243000.560005",
+            "accountCode": "31400.243000.560005.1000576",
             "fund": "31400",
             "department": "243000",
             "object": "560005",
-            "project": null,
+            "project": "1000576",
             "fiscalYear": null,
             "amount": "$130,000",
             "value": 130000,
@@ -4039,11 +4039,11 @@
             "description": "Utilities Services Tax Capital Projects Fund, Transportation Department, CTPA Professional Svcs. Capital, Red Light Camera project P: 1000576 O: TSS E: CTPA Professional Services Capital T: 31 A: 100182"
           },
           {
-            "accountCode": "31400.243000.560005",
+            "accountCode": "31400.243000.560005.1003027",
             "fund": "31400",
             "department": "243000",
             "object": "560005",
-            "project": null,
+            "project": "1003027",
             "fiscalYear": null,
             "amount": "$130,000",
             "value": 130000,

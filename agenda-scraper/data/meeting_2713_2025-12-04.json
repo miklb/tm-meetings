@@ -3851,11 +3851,11 @@
         "projectedCostsRaw": "40700.244500.563001.0000.1001860.0000000 $36,049,497 \n(Expenditure)\nWater Renewal and Replacement Fund. Water Department. Improvements Other than \nBuildings.  D.L. Tippin Sitewide Electrical Improvements Project\nP: 1001860   O: WTR-Water Dept   E: CTPA Improvements Other than Buildings   T: 31   A: \n100453\n \n40554.244500.563001.0000.1001860.0000000 $16,885,640 (Expenditure)\nWater Future Debt Capital Projects Fund. Water Department. Improvements Other than \n\nBuildings.  D.L. Tippin Sitewide Electrical Improvements Project\nP: 1001860   O: WTR-Water Dept   E: CTPA Improvements Other than Buildings   T: 30   A: \n100638",
         "rows": [
           {
-            "accountCode": "40700.244500.563001",
+            "accountCode": "40700.244500.563001.1001860",
             "fund": "40700",
             "department": "244500",
             "object": "563001",
-            "project": null,
+            "project": "1001860",
             "fiscalYear": null,
             "amount": "$36,049,497",
             "value": 36049497,
@@ -3866,11 +3866,11 @@
             "description": "Water Renewal and Replacement Fund. Water Department. Improvements Other than Buildings. D.L. Tippin Sitewide Electrical Improvements Project P: 1001860 O: WTR-Water Dept E: CTPA Improvements Other than Buildings T: 31 A: 100453"
           },
           {
-            "accountCode": "40554.244500.563001",
+            "accountCode": "40554.244500.563001.1001860",
             "fund": "40554",
             "department": "244500",
             "object": "563001",
-            "project": null,
+            "project": "1001860",
             "fiscalYear": null,
             "amount": "$16,885,640",
             "value": 16885640,
@@ -3939,11 +3939,11 @@
         "projectedCostsRaw": "40700.244500.560005.0000.1001855.0000000 $6,915,212 \n(Expenditure)\nWater Renewal and Replacement Fund. Water Department. Professional Services Capital.  \nD.L. Tippin Facility Expansion – Suspended Ion Exchange Project\nP: 1001855   O: WTR-Water Dept   E: CTPA Professional Services Capital   T: 31   A: 100453\n40554.244500.560005.0000.1001855.0000000 $9,420,632 (Expenditure)\nWater Future Debt Capital Projects Fund. Water Department. Professional Services Capital.  \nD.L. Tippin Facility Expansion – Suspended Ion Exchange Project\nP: 1001855   O: WTR-Water Dept   E: CTPA Professional Services Capital   T: 31   A: 100638",
         "rows": [
           {
-            "accountCode": "40700.244500.560005",
+            "accountCode": "40700.244500.560005.1001855",
             "fund": "40700",
             "department": "244500",
             "object": "560005",
-            "project": null,
+            "project": "1001855",
             "fiscalYear": null,
             "amount": "$6,915,212",
             "value": 6915212,
@@ -3954,11 +3954,11 @@
             "description": "Water Renewal and Replacement Fund. Water Department. Professional Services Capital. D.L. Tippin Facility Expansion – Suspended Ion Exchange Project P: 1001855 O: WTR-Water Dept E: CTPA Professional Services Capital T: 31 A: 100453"
           },
           {
-            "accountCode": "40554.244500.560005",
+            "accountCode": "40554.244500.560005.1001855",
             "fund": "40554",
             "department": "244500",
             "object": "560005",
-            "project": null,
+            "project": "1001855",
             "fiscalYear": null,
             "amount": "$9,420,632",
             "value": 9420632,

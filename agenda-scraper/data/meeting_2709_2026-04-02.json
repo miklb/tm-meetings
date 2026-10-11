@@ -403,8 +403,8 @@
             "fiscalYear": null,
             "amount": "$4,298,138.86",
             "value": 4298138.86,
-            "type": "expenditure",
-            "signedValue": 4298138.86,
+            "type": "expenditure_decrease",
+            "signedValue": -4298138.86,
             "subjectToAppropriation": false,
             "marker": "Expenditure Decrease",
             "description": "Water Future Debt Capital Projects Fund. Infrastructure & Mobility Administration Capital Project Costs. Improvements Other than Bldgs. Comprehensive Infrastructure for Tampa’s Neighborhoods Phase I Project"

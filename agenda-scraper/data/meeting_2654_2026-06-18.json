@@ -833,11 +833,11 @@
         "projectedCostsRaw": "40553.244600.563001.0000.1000317.0000000 ($14,224.68) \n(Expenditure) \nWater Bonds Series 2024 Capital Projects Fund. Water Department. Improvement Other than \nBuildings. Citywide Meter/Hydrant/Valve Installation and Replacement Project",
         "rows": [
           {
-            "accountCode": "40553.244600.563001",
+            "accountCode": "40553.244600.563001.1000317",
             "fund": "40553",
             "department": "244600",
             "object": "563001",
-            "project": null,
+            "project": "1000317",
             "fiscalYear": null,
             "amount": "$14,224.68",
             "value": 14224.68,
@@ -892,11 +892,11 @@
         "projectedCostsRaw": "61800.213800.563001.0000.1002383.0000000  $21,250.00 \n(Expenditure)\nCentral Park CRA Fund. CRA Dept. Improvements Other than Bldgs. Wayfinding Signage\nP: 1002383 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 100304\n61900.213800.563001.0000.1002174.0000000  $3,750.00 (Expenditure)\nChannel District CRA Fund. CRA Dept. Improvements Other than Bldgs. Gateway and \nWayfinding\nP: 1002174 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 000165\n62500.213800.563001.0000.1002653.0000000  $23,858.75 (Expenditure)\nTampa Heights Riverfront CRA Fund. CRA Dept. Improvements Other than Bldgs. Gateway \nand Wayfinding\nP: 1002653 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 000164\n62200.213800.563001.0000.1002176.0000000  $182,935.00 (Expenditure)\nDowntown Non-Core CRA Fund. CRA Dept. Improvements Other than Bldgs Gateway and \nWayfinding\nP: 1002176 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 100202",
         "rows": [
           {
-            "accountCode": "61800.213800.563001",
+            "accountCode": "61800.213800.563001.1002383",
             "fund": "61800",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002383",
             "fiscalYear": null,
             "amount": "$21,250.00",
             "value": 21250,
@@ -907,11 +907,11 @@
             "description": "Central Park CRA Fund. CRA Dept. Improvements Other than Bldgs. Wayfinding Signage P: 1002383 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other Than Bldgs T: 30 A: 100304"
           },
           {
-            "accountCode": "61900.213800.563001",
+            "accountCode": "61900.213800.563001.1002174",
             "fund": "61900",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002174",
             "fiscalYear": null,
             "amount": "$3,750.00",
             "value": 3750,
@@ -922,11 +922,11 @@
             "description": "Channel District CRA Fund. CRA Dept. Improvements Other than Bldgs. Gateway and Wayfinding P: 1002174 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other Than Bldgs T: 30 A: 000165"
           },
           {
-            "accountCode": "62500.213800.563001",
+            "accountCode": "62500.213800.563001.1002653",
             "fund": "62500",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002653",
             "fiscalYear": null,
             "amount": "$23,858.75",
             "value": 23858.75,
@@ -937,11 +937,11 @@
             "description": "Tampa Heights Riverfront CRA Fund. CRA Dept. Improvements Other than Bldgs. Gateway and Wayfinding P: 1002653 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other Than Bldgs T: 30 A: 000164"
           },
           {
-            "accountCode": "62200.213800.563001",
+            "accountCode": "62200.213800.563001.1002176",
             "fund": "62200",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002176",
             "fiscalYear": null,
             "amount": "$182,935.00",
             "value": 182935,

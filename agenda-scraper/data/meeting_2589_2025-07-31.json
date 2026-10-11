@@ -1006,11 +1006,11 @@
         "projectedCostsRaw": "61900 213800 563001 0000 0000491 ($342,268.29) (Expenditure \ndecrease)\nChannel District. CRA Dept. Improvements Other than Bldg. Neighborhood Infrastructure \nProject\n61900 213800 563001 0000 0000491 $223,756.79 (Expenditure)\nChannel District. CRA Dept. Improvements Other than Bldg. Neighborhood Infrastructure \nProject\nP-0000491, O-CRA Dept., E-CTPA Improvements Other than Bldg., T–30, A-000165",
         "rows": [
           {
-            "accountCode": "61900.213800.563001",
+            "accountCode": "61900.213800.563001.0000491",
             "fund": "61900",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "0000491",
             "fiscalYear": null,
             "amount": "$342,268.29",
             "value": 342268.29,
@@ -1021,11 +1021,11 @@
             "description": "Channel District. CRA Dept. Improvements Other than Bldg. Neighborhood Infrastructure Project"
           },
           {
-            "accountCode": "61900.213800.563001",
+            "accountCode": "61900.213800.563001.0000491",
             "fund": "61900",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "0000491",
             "fiscalYear": null,
             "amount": "$223,756.79",
             "value": 223756.79,
@@ -1361,11 +1361,11 @@
         "projectedCostsRaw": "Fund String: 61800.213800.563001.0000.1002383.0000000  \n$33,000.00 (Expenditure)\nCentral Park CRA Fund. CRA Dept. Improvements Other than Bldgs. \nP: 1002383 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 100304\nFund String: 61900.213800.563001.0000.1002174.0000000  $197,787.00 (Expenditure)\nChannel District CRA Fund. CRA Dept. Improvements Other than Bldgs.\nP: 1002174 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 000165\nFund String: 62500.213800.563001.0000.1002653.0000000  $18,000.00 (Expenditure)\nTampa Heights Riverfront CRA Fund. CRA Dept. Improvements Other than Bldgs.\nP: 1002653 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 000164\nFund String: 62200.213800.563001.0000.1002176.0000000  $51,000.00 (Expenditure)\nDowntown CRA Fund. CRA Dept. Improvements Other than Bldgs.\nP: 1002176 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other \nThan Bldgs T: 30 A: 100202",
         "rows": [
           {
-            "accountCode": "61800.213800.563001",
+            "accountCode": "61800.213800.563001.1002383",
             "fund": "61800",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002383",
             "fiscalYear": null,
             "amount": "$33,000.00",
             "value": 33000,
@@ -1376,11 +1376,11 @@
             "description": "Central Park CRA Fund. CRA Dept. Improvements Other than Bldgs. P: 1002383 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other Than Bldgs T: 30 A: 100304 Fund String:"
           },
           {
-            "accountCode": "61900.213800.563001",
+            "accountCode": "61900.213800.563001.1002174",
             "fund": "61900",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002174",
             "fiscalYear": null,
             "amount": "$197,787.00",
             "value": 197787,
@@ -1391,11 +1391,11 @@
             "description": "Channel District CRA Fund. CRA Dept. Improvements Other than Bldgs. P: 1002174 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other Than Bldgs T: 30 A: 000165 Fund String:"
           },
           {
-            "accountCode": "62500.213800.563001",
+            "accountCode": "62500.213800.563001.1002653",
             "fund": "62500",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002653",
             "fiscalYear": null,
             "amount": "$18,000.00",
             "value": 18000,
@@ -1406,11 +1406,11 @@
             "description": "Tampa Heights Riverfront CRA Fund. CRA Dept. Improvements Other than Bldgs. P: 1002653 O: CRA-Community Redevelopment Agency Dept. E: CTPA Improvements Other Than Bldgs T: 30 A: 000164 Fund String:"
           },
           {
-            "accountCode": "62200.213800.563001",
+            "accountCode": "62200.213800.563001.1002176",
             "fund": "62200",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002176",
             "fiscalYear": null,
             "amount": "$51,000.00",
             "value": 51000,
@@ -1844,11 +1844,11 @@
         "projectedCostsRaw": "30600.243000.563001.0000. 1002350 $100,000 FY2025 (Estimated \nExpenditure) \n30600.243000.563001.0000. 1002350 $265,175 FY2026 (Estimated Expenditure) subject to \nannual appropriation \nP: 1002350 O: TSS E: CTPA Improv Other Than Bldgs T: 30 A: 100044 $100,000 \nP: 1002350 O: TSS E: CTPA Improv Other Than Bldgs T: 30 A: 100044 $265,175",
         "rows": [
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002350",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002350",
             "fiscalYear": "FY25",
             "amount": "$100,000",
             "value": 100000,
@@ -1859,11 +1859,11 @@
             "description": ""
           },
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002350",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002350",
             "fiscalYear": "FY26",
             "amount": "$265,175",
             "value": 265175,
@@ -4593,9 +4593,40 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution provides for professional Construction Management Services in the amount of $2,700,000 for FY2025 and $2,255,424.50 for FY2026 subject to Budget and Appropriation for a total amount of $4,955,424.50 for the Channel District Community Redevelopment Area (CRA) within the Channel District CRA Fund. (Part 1 of 2).",
         "projectedCostsRaw": "($4,955,424.50) Expenditure\n61900-213800-563001-0000-1002878-0000000 $2,700,000 (Expenditure) (FY2025)\nChannel District CRA Fund. CRA Dept. Improvements Other than Bldg. Whiting Street \nSegment D Phase 2 P-1002878, O-CRA Dept, E-CTPA Improvements Other than Bldg., T-\n30, O-000165\n61900-213800-563001-0000-1002878-0000000 $2,255,424.50 (Expenditure) (FY2026)\nChannel District CRA Fund. CRA Dept. Improvements Other than Bldg. Whiting Street \nSegment D Phase 2 P-1002878, O-CRA Dept, E-CTPA Improvements Other than Bldg., T-\n30, O-000165\nSubject to FY2026 Budget and Appropriation",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": "61900.213800.563001.1002878",
+            "fund": "61900",
+            "department": "213800",
+            "object": "563001",
+            "project": "1002878",
+            "fiscalYear": "FY25",
+            "amount": "$2,700,000",
+            "value": 2700000,
+            "type": "expenditure",
+            "signedValue": 2700000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Channel District CRA Fund. CRA Dept. Improvements Other than Bldg. Whiting Street Segment D Phase 2 P-1002878, O-CRA Dept, E-CTPA Improvements Other than Bldg., T- 30, O-000165"
+          },
+          {
+            "accountCode": "61900.213800.563001.1002878",
+            "fund": "61900",
+            "department": "213800",
+            "object": "563001",
+            "project": "1002878",
+            "fiscalYear": "FY26",
+            "amount": "$2,255,424.50",
+            "value": 2255424.5,
+            "type": "expenditure",
+            "signedValue": 2255424.5,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": ") Channel District CRA Fund. CRA Dept. Improvements Other than Bldg. Whiting Street Segment D Phase 2 P-1002878, O-CRA Dept, E-CTPA Improvements Other than Bldg., T- 30, O-000165 Subject to FY2026 Budget and Appropriation"
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 69 through 78)"
     },

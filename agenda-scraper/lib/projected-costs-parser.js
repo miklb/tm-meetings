@@ -15,10 +15,18 @@
  *   01100.215000.552003 FY27 $330,665.98 (Estimated Expenditure), subject to annual appropriation
  *
  * Account code: fund(5) + dept(6) + object(6) + project(7, optional)
- * Separators between segments may be whitespace OR period. Fiscal year
- * marker `FY26` is optional. The trailing parenthesized phrase carries the
- * type marker. "subject to annual appropriation" is a flag indicating
- * Council is NOT committing this fiscal year today.
+ * Separators between segments may be whitespace, period or hyphen. Some
+ * sheets write the full ledger string with placeholder segments that the
+ * chart of accounts has no node for; they are skipped, the project is kept:
+ *   31400.243000.560005.0000.1000576          0000 program placeholder
+ *   41100.243200.563001.0000.1001865.0000000  + trailing task placeholder
+ *   31630.214400.562001.1000986.0000          trailing placeholder only
+ *   01100-232900-534007-0000000               all-zero project = no project
+ * (shapes counted across every scraped meeting on 2026-10-11; the 4-digit
+ * placeholder was 0000 in all 36 occurrences). Fiscal year marker `FY26` is
+ * optional. The trailing parenthesized phrase carries the type marker.
+ * "subject to annual appropriation" is a flag indicating Council is NOT
+ * committing this fiscal year today.
  */
 
 const { NEXT_SECTION_RE } = require('./summary-sheet-parser');
@@ -63,11 +71,16 @@ function extractFiscalImpactStatement(text) {
   return (next ? remainder.slice(0, next.index) : remainder).trim().replace(/\s+/g, ' ');
 }
 
-// Account-code segment pattern. Period or whitespace separated; project
-// segment (4th group) is optional. Used both as the row anchor and on its
-// own to extract the canonical code from a row's text.
+// Account-code segment pattern. Period, whitespace or hyphen separated;
+// project segment (4th group) is optional. After the object segment the
+// pattern also swallows an all-zero 4-digit program placeholder before the
+// project and an all-zero 4- or 7-digit placeholder after it (see the header
+// comment). Only zeros are accepted there, and every digit run is bounded
+// by (?!\d), so the tail can never bite into the next row's fund code. Used
+// both as the row anchor and on its own to extract the canonical code from
+// a row's text.
 const ACCOUNT_CODE_RE =
-  /(\d{5})[.\s]+(\d{6})[.\s]+(\d{6})(?:[.\s]+(\d{7}))?/;
+  /(\d{5})[.\s-]+(\d{6})[.\s-]+(\d{6})(?:[.\s-]+0{4}(?!\d))?(?:[.\s-]+(\d{7})(?!\d))?(?:[.\s-]+0{4,7}(?!\d))?/;
 
 // Anchor for splitting the section into rows. Each match starts a new row;
 // the row's full text runs from one match to the next (or end of section).
@@ -217,7 +230,11 @@ function parseProjectedCostsRows(sectionText) {
     const fyStr = fyMatch ? `FY${fyMatch[1]}` : null;
     const subjectToAppropriation = Boolean(subjectMatch);
 
-    const [, fund, dept, obj, project] = codeMatch;
+    const [, fund, dept, obj, rawProject] = codeMatch;
+    // An all-zero project ("0000000") is the sheet's way of writing "no
+    // project"; the chart of accounts has no node for it (opengov/
+    // parse_account_code.py drops it the same way).
+    const project = rawProject && !/^0+$/.test(rawProject) ? rawProject : null;
     const segments = [fund, dept, obj, project].filter(Boolean);
 
     // Description = text AFTER the latest of {accountCode, amount, marker,

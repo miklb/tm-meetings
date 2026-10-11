@@ -3313,11 +3313,11 @@
         "projectedCostsRaw": "62350.213800.563001.0000.1002351 $3,517,509 (Expenditure)\nWest Tampa CRA Fund. CRA Dept. Improvements Other than Bldgs, Rey Park \nImprovements Project\nP: 1002351 O: CRA-Community Redevelopment Agency Dept E: CTPA Improvements other \nthan Bldgs T: 30  A: 100231",
         "rows": [
           {
-            "accountCode": "62350.213800.563001",
+            "accountCode": "62350.213800.563001.1002351",
             "fund": "62350",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002351",
             "fiscalYear": null,
             "amount": "$3,517,509",
             "value": 3517509,

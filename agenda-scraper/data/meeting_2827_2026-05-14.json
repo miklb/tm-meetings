@@ -809,26 +809,26 @@
         "projectedCostsRaw": "61800 213800 563001 0000 1001550 $21,250 (Expenditure \nDecrease)\nCentral Park CRA. CRA Department. Improvements other than Bldgs.\nP-1001550, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304\n61800 213800 563001 0000 1002383 $21,250 (Expenditure)\nCentral Park CRA. CRA Department. Improvements other than Bldgs.\nP-1002383, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304\n61900 213800 563001 0000 0000491 $3,750 (Expenditure Decrease)\nChannel District CRA. CRA Department. Improvements other than Bldgs.\n\nP-0000491, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-000165  \n61900 213800 563001 0000 1002174 $3,750 (Expenditure)\nChannel District CRA. CRA Department. Improvements other than Bldgs.  \nP-10002174, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-0000165\n62200 213800 563001 0000 0000489 $182,935 (Expenditure Decrease)\nDowntown Non-core CRA. CRA Department. Improvements other than Bldgs.  \nP-0000489, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202\n62200 213800 563001 0000 1002176 $182,935 (Expenditure)\nDowntown Non-core CRA. CRA Department. Improvements other than Bldgs.  \nP-10002176, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202\n62500 213800 563001 0000 0000490 $23,858.75 (Expenditure Decrease)\nTampa Heights CRA. CRA Department. Improvements other than Bldgs.\nP-0000490, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103\n 62500 213800 563001 0000 1002653 $23,858.75 (Expenditure)\nTampa Heights CRA. CRA Department. Improvements other than Bldgs.\nP-10002653, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103",
         "rows": [
           {
-            "accountCode": "61800.213800.563001",
+            "accountCode": "61800.213800.563001.1001550",
             "fund": "61800",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1001550",
             "fiscalYear": null,
             "amount": "$21,250",
             "value": 21250,
-            "type": "expenditure",
-            "signedValue": 21250,
+            "type": "expenditure_decrease",
+            "signedValue": -21250,
             "subjectToAppropriation": false,
             "marker": "Expenditure Decrease",
             "description": "Central Park CRA. CRA Department. Improvements other than Bldgs. P-1001550, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304"
           },
           {
-            "accountCode": "61800.213800.563001",
+            "accountCode": "61800.213800.563001.1002383",
             "fund": "61800",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002383",
             "fiscalYear": null,
             "amount": "$21,250",
             "value": 21250,
@@ -839,11 +839,11 @@
             "description": "Central Park CRA. CRA Department. Improvements other than Bldgs. P-1002383, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100304"
           },
           {
-            "accountCode": "61900.213800.563001",
+            "accountCode": "61900.213800.563001.0000491",
             "fund": "61900",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "0000491",
             "fiscalYear": null,
             "amount": "$3,750",
             "value": 3750,
@@ -854,11 +854,11 @@
             "description": "Channel District CRA. CRA Department. Improvements other than Bldgs. P-0000491, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-000165"
           },
           {
-            "accountCode": "61900.213800.563001",
+            "accountCode": "61900.213800.563001.1002174",
             "fund": "61900",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002174",
             "fiscalYear": null,
             "amount": "$3,750",
             "value": 3750,
@@ -869,11 +869,11 @@
             "description": "Channel District CRA. CRA Department. Improvements other than Bldgs. P-10002174, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-0000165"
           },
           {
-            "accountCode": "62200.213800.563001",
+            "accountCode": "62200.213800.563001.0000489",
             "fund": "62200",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "0000489",
             "fiscalYear": null,
             "amount": "$182,935",
             "value": 182935,
@@ -884,11 +884,11 @@
             "description": "Downtown Non-core CRA. CRA Department. Improvements other than Bldgs. P-0000489, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202"
           },
           {
-            "accountCode": "62200.213800.563001",
+            "accountCode": "62200.213800.563001.1002176",
             "fund": "62200",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002176",
             "fiscalYear": null,
             "amount": "$182,935",
             "value": 182935,
@@ -899,11 +899,11 @@
             "description": "Downtown Non-core CRA. CRA Department. Improvements other than Bldgs. P-10002176, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100202"
           },
           {
-            "accountCode": "62500.213800.563001",
+            "accountCode": "62500.213800.563001.0000490",
             "fund": "62500",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "0000490",
             "fiscalYear": null,
             "amount": "$23,858.75",
             "value": 23858.75,
@@ -914,11 +914,11 @@
             "description": "Tampa Heights CRA. CRA Department. Improvements other than Bldgs. P-0000490, O-CRA Dept., E-CTPA Improvements other than Bldgs, T-30, A-100103"
           },
           {
-            "accountCode": "62500.213800.563001",
+            "accountCode": "62500.213800.563001.1002653",
             "fund": "62500",
             "department": "213800",
             "object": "563001",
-            "project": null,
+            "project": "1002653",
             "fiscalYear": null,
             "amount": "$23,858.75",
             "value": 23858.75,

@@ -7190,11 +7190,11 @@
         "projectedCostsRaw": "62400 213800 561000 0000 0000496 $300,000 (Expenditure)\nEast Tampa CRA Fund. CRA Depart. Land\nP-0000496, O-EO Dept, E-CTPA Land, T-20, A-000166",
         "rows": [
           {
-            "accountCode": "62400.213800.561000",
+            "accountCode": "62400.213800.561000.0000496",
             "fund": "62400",
             "department": "213800",
             "object": "561000",
-            "project": null,
+            "project": "0000496",
             "fiscalYear": null,
             "amount": "$300,000",
             "value": 300000,

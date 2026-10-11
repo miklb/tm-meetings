@@ -1967,11 +1967,11 @@
         "projectedCostsRaw": "30600.243000.563001.0000.1002350 $950,000 (Expenditure \nDecrease)\nLocal Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other \nThan Bldgs. Resurfacing Project\n30600.243000.563001.0000.1002903 $950,000 (Expenditure Increase)\nLocal Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other \nThan Bldgs. MLK Resurfacing from Air Cargo to Dale Mabry Project",
         "rows": [
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002350",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002350",
             "fiscalYear": null,
             "amount": "$950,000",
             "value": 950000,
@@ -1982,11 +1982,11 @@
             "description": "Local Option Gas Tax Capital Projects Fund. Transportation Department. CTPA Improv Other Than Bldgs. Resurfacing Project"
           },
           {
-            "accountCode": "30600.243000.563001",
+            "accountCode": "30600.243000.563001.1002903",
             "fund": "30600",
             "department": "243000",
             "object": "563001",
-            "project": null,
+            "project": "1002903",
             "fiscalYear": null,
             "amount": "$950,000",
             "value": 950000,

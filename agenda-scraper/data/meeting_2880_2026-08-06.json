@@ -1156,11 +1156,11 @@
         "projectedCostsRaw": "61800.225800.563001.0000.1001419.0000000 $13,491.06 \n(Expenditure)\nCommunity Redevelopment Agency CRA Central Park. Parks Capital Project Management. \nImprov Other Than Bldgs. Citywide ADA Improvements\nP: 1001419   O: P&R - Parks & Recreation Dept   E: CTPA Improv Other Than Bldgs   T: 30\nA: 100304 \n62100.225800.563001.0000.1001419.0000000 $14,104.06 (Expenditure)\nCommunity Redevelopment Agency CRA Core. Parks Capital Project Management. Improv \nOther Than Bldgs. Citywide ADA Improvements\nP: 1001419   O: P&R - Parks & Recreation Dept   E: CTPA Improv Other Than Bldgs   T: 30\nA: 000163 \n62200.225800.563001.0000.1001419.0000000 $12,267.06 (Expenditure)\nCommunity Redevelopment Agency CRA Non Core. Parks Capital Project Management. \nImprov Other Than Bldgs. Citywide ADA Improvements\nP: 1001419   O: P&R - Parks & Recreation Dept   E: CTPA Improv Other Than Bldgs   T: 30\nA: 100202 \n62400.225800.563001.0000.1001419.0000000 $118,857.60 (Expenditure)\nCommunity Redevelopment Agency CRA East Tampa. Parks Capital Project Management. \nImprov Other Than Bldgs. Citywide ADA Improvements\nP: 1001419   O: P&R - Parks & Recreation Dept   E: CTPA Improv Other Than Bldgs   T: 30\nA: 000166 \n62350.225800.563001.0000.1001419.0000000 $7,868.06 (Expenditure)\nCommunity Redevelopment Agency CRA West Tampa. Parks Capital Project Management. \nImprov Other Than Bldgs. Citywide ADA Improvements\n\nP: 1001419   O: P&R - Parks & Recreation Dept   E: CTPA Improv Other Than Bldgs   T: 30\nA: 100231\n62700.225800.563001.0000.1001419.0000000 $9,733.06 (Expenditure)\nCommunity Redevelopment Agency CRA Ybor II. Parks Capital Project Management. Improv \nOther Than Bldgs. Citywide ADA Improvements\nP: 1001419   O: P&R - Parks & Recreation Dept   E: CTPA Improv Other Than Bldgs   T: 30\nA: 100168\n30211.225800.563001.0000.1001419.0000000 $21,792.10 (Expenditure)\nCIT Program 6 FY22 FY26 Capital Projects. Parks Capital Project Management. \nImprov Other Than Bldgs. Citywide ADA Improvements\nP: 1001419   O: P&R - Parks & Recreation Dept   E: CTPA Improv Other Than Bldgs   T: 30\nA: 100446",
         "rows": [
           {
-            "accountCode": "61800.225800.563001",
+            "accountCode": "61800.225800.563001.1001419",
             "fund": "61800",
             "department": "225800",
             "object": "563001",
-            "project": null,
+            "project": "1001419",
             "fiscalYear": null,
             "amount": "$13,491.06",
             "value": 13491.06,
@@ -1171,11 +1171,11 @@
             "description": "Community Redevelopment Agency CRA Central Park. Parks Capital Project Management. Improv Other Than Bldgs. Citywide ADA Improvements P: 1001419 O: P&R - Parks & Recreation Dept E: CTPA Improv Other Than Bldgs T: 30 A: 100304"
           },
           {
-            "accountCode": "62100.225800.563001",
+            "accountCode": "62100.225800.563001.1001419",
             "fund": "62100",
             "department": "225800",
             "object": "563001",
-            "project": null,
+            "project": "1001419",
             "fiscalYear": null,
             "amount": "$14,104.06",
             "value": 14104.06,
@@ -1186,11 +1186,11 @@
             "description": "Community Redevelopment Agency CRA Core. Parks Capital Project Management. Improv Other Than Bldgs. Citywide ADA Improvements P: 1001419 O: P&R - Parks & Recreation Dept E: CTPA Improv Other Than Bldgs T: 30 A: 000163"
           },
           {
-            "accountCode": "62200.225800.563001",
+            "accountCode": "62200.225800.563001.1001419",
             "fund": "62200",
             "department": "225800",
             "object": "563001",
-            "project": null,
+            "project": "1001419",
             "fiscalYear": null,
             "amount": "$12,267.06",
             "value": 12267.06,
@@ -1201,11 +1201,11 @@
             "description": "Community Redevelopment Agency CRA Non Core. Parks Capital Project Management. Improv Other Than Bldgs. Citywide ADA Improvements P: 1001419 O: P&R - Parks & Recreation Dept E: CTPA Improv Other Than Bldgs T: 30 A: 100202"
           },
           {
-            "accountCode": "62400.225800.563001",
+            "accountCode": "62400.225800.563001.1001419",
             "fund": "62400",
             "department": "225800",
             "object": "563001",
-            "project": null,
+            "project": "1001419",
             "fiscalYear": null,
             "amount": "$118,857.60",
             "value": 118857.6,
@@ -1216,11 +1216,11 @@
             "description": "Community Redevelopment Agency CRA East Tampa. Parks Capital Project Management. Improv Other Than Bldgs. Citywide ADA Improvements P: 1001419 O: P&R - Parks & Recreation Dept E: CTPA Improv Other Than Bldgs T: 30 A: 000166"
           },
           {
-            "accountCode": "62350.225800.563001",
+            "accountCode": "62350.225800.563001.1001419",
             "fund": "62350",
             "department": "225800",
             "object": "563001",
-            "project": null,
+            "project": "1001419",
             "fiscalYear": null,
             "amount": "$7,868.06",
             "value": 7868.06,
@@ -1231,11 +1231,11 @@
             "description": "Community Redevelopment Agency CRA West Tampa. Parks Capital Project Management. Improv Other Than Bldgs. Citywide ADA Improvements P: 1001419 O: P&R - Parks & Recreation Dept E: CTPA Improv Other Than Bldgs T: 30 A: 100231"
           },
           {
-            "accountCode": "62700.225800.563001",
+            "accountCode": "62700.225800.563001.1001419",
             "fund": "62700",
             "department": "225800",
             "object": "563001",
-            "project": null,
+            "project": "1001419",
             "fiscalYear": null,
             "amount": "$9,733.06",
             "value": 9733.06,
@@ -1246,11 +1246,11 @@
             "description": "Community Redevelopment Agency CRA Ybor II. Parks Capital Project Management. Improv Other Than Bldgs. Citywide ADA Improvements P: 1001419 O: P&R - Parks & Recreation Dept E: CTPA Improv Other Than Bldgs T: 30 A: 100168"
           },
           {
-            "accountCode": "30211.225800.563001",
+            "accountCode": "30211.225800.563001.1001419",
             "fund": "30211",
             "department": "225800",
             "object": "563001",
-            "project": null,
+            "project": "1001419",
             "fiscalYear": "FY22",
             "amount": "$21,792.10",
             "value": 21792.1,
