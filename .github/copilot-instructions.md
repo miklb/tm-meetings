@@ -221,13 +221,13 @@ The matcher and the eligibility rule live in one module, `site/lib/keyword-match
 ```bash
 WEBHOOK_SECRET=$(grep '^WEBHOOK_SECRET=' .env | cut -d= -f2-) \
 MEETING_IDS=2884,2960 \
-WORDPRESS_AGENDA_URL=https://tampamonitor.com/tampa-city-council/agendas/8-27-26-regular-meeting-cra-special-call/ \
+AGENDA_URL=https://tampamonitor.com/tampa-city-council/agendas/8-27-26-regular-meeting-cra-special-call/ \
 node scripts/dispatch-notifications.js
 ```
 
 For multiple meetings on the same agenda day (e.g., Council + CRA), pass a comma-separated list. The script does **not** load `.env` itself — pass `WEBHOOK_SECRET` inline as above.
 
-`WORDPRESS_AGENDA_URL` (name kept from the WP era) is the post the digest links to — use the tm-static permalink. It is optional (links fall back to the static site) and applies to every meeting in the batch. Re-sending for a meeting requires deleting its rows from `notification_log` (dedupe key is subscriber + item + keyword).
+`AGENDA_URL` (or `--agenda-url=`) is the agenda post the digest links to — the tm-static permalink; it travels to `/api/notify` as `agendaUrl` on each meeting. It is optional (links fall back to the meeting page on meetings.tampamonitor.com) and applies to every meeting in the batch. The pre-2026-10-12 name `WORDPRESS_AGENDA_URL` / `--wp-url` is refused with an error. Re-sending for a meeting requires deleting its rows from `notification_log` (dedupe key is subscriber + item + keyword).
 
 When the worker runs with `ENVIRONMENT="development"` and no `RESEND_API_KEY`, it logs emails instead of sending them; in production both `WEBHOOK_SECRET` and `RESEND_API_KEY` are required (the endpoint fails closed).
 

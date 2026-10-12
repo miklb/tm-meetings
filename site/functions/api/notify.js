@@ -206,7 +206,7 @@ export async function onRequestPost(context) {
     const meetingType = meeting.meetingType || 'regular';
     const meetingTitle = meeting.meetingTitle || meeting.title || buildTitle(meetingType, meetingDate);
     // Only accept http(s) URLs as link targets in emails
-    const meetingWordpressUrl = isHttpUrl(meeting.wordpressUrl) ? meeting.wordpressUrl : null;
+    const meetingAgendaUrl = isHttpUrl(meeting.agendaUrl) ? meeting.agendaUrl : null;
 
     for (const item of meeting.agendaItems || []) {
       const agendaItemId = itemKey(item);
@@ -252,7 +252,7 @@ export async function onRequestPost(context) {
                 meetingDate,
                 meetingType,
                 meetingTitle,
-                wordpressUrl: meetingWordpressUrl,
+                agendaUrl: meetingAgendaUrl,
                 items: {}
               };
             }
@@ -334,7 +334,7 @@ export async function onRequestPost(context) {
     text += `\nNew agenda items match your tracked keywords.\n`;
 
     for (const meet of Object.values(meetings)) {
-      const agendaLink = meet.wordpressUrl || `${origin}/meetings/${meet.meetingId}/`;
+      const agendaLink = meet.agendaUrl || `${origin}/meetings/${meet.meetingId}/`;
 
       html += `
   <tr>
@@ -355,8 +355,8 @@ export async function onRequestPost(context) {
         const isLast = idx === itemList.length - 1;
         // Anchor by agendaItemId — both the wp.html generator and the static
         // meeting pages emit id="item-<agendaItemId>" (never the File No.)
-        const itemUrl = meet.wordpressUrl
-          ? `${meet.wordpressUrl}#item-${item.agendaItemId}`
+        const itemUrl = meet.agendaUrl
+          ? `${meet.agendaUrl}#item-${item.agendaItemId}`
           : `${origin}/meetings/${meet.meetingId}/#item-${item.agendaItemId}`;
         const kwList = Array.from(item.matchedKeywords).join(', ');
         const itemBorder = isLast ? '' : 'border-bottom: 1px dashed #e5e7eb;';

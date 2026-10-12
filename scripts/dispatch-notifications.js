@@ -23,17 +23,22 @@ async function main() {
     process.exit(1);
   }
 
-  // Support --wp-url=<url> CLI arg or WORDPRESS_AGENDA_URL env var
-  const wpUrlArg = (args.find(a => a.startsWith('--wp-url=')) || '').split('=')[1] || '';
-  const wordpressUrl = wpUrlArg || process.env.WORDPRESS_AGENDA_URL || '';
+  // The tampamonitor.com agenda post the digest links to (item deep links are
+  // #item-<agendaItemId>). --agenda-url=<url> CLI arg or AGENDA_URL env var.
+  if (process.env.WORDPRESS_AGENDA_URL || args.some(a => a.startsWith('--wp-url='))) {
+    console.error('Error: WORDPRESS_AGENDA_URL / --wp-url was renamed to AGENDA_URL / --agenda-url when the site moved off WordPress. Re-run with the new name.');
+    process.exit(1);
+  }
+  const agendaUrlArg = (args.find(a => a.startsWith('--agenda-url=')) || '').slice('--agenda-url='.length);
+  const agendaUrl = agendaUrlArg || process.env.AGENDA_URL || '';
 
-  if (!wordpressUrl) {
-    console.warn('Warning: No WordPress agenda URL provided (WORDPRESS_AGENDA_URL or --wp-url). Email links will fall back to the static site.');
+  if (!agendaUrl) {
+    console.warn('Warning: No agenda post URL provided (AGENDA_URL or --agenda-url). Email links will fall back to the meeting page on the meetings site.');
   }
 
   console.log(`Meeting IDs: ${meetingIds.join(', ')}`);
-  if (wordpressUrl) {
-    console.log(`WordPress URL: ${wordpressUrl}`);
+  if (agendaUrl) {
+    console.log(`Agenda URL: ${agendaUrl}`);
   }
 
   const dataDir = path.resolve(process.cwd(), 'agenda-scraper/data');
@@ -87,7 +92,7 @@ async function main() {
       meetingType: data.meetingType || 'regular',
       ...(meetingTitle ? { meetingTitle } : {}),
       meetingDate: data.meetingDate,
-      wordpressUrl: wordpressUrl || null,
+      agendaUrl: agendaUrl || null,
       agendaItems: (data.agendaItems || []).map(item => ({
         number: item.number,
         agendaItemId: item.agendaItemId,

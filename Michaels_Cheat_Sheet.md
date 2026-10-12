@@ -120,19 +120,20 @@ ls agenda-scraper/data/meeting_*_2026-07-16.json   # -> meeting_2815_...
 node scripts/preview-dispatch.js --meeting-ids=2815
 
 # 3. Send. dispatch-notifications.js does NOT read .env, so pass the secret in.
-#    (WORDPRESS_AGENDA_URL is a legacy name — it's the tm-static agenda post URL.)
+#    AGENDA_URL is the tampamonitor.com agenda post the digest links to.
 WEBHOOK_SECRET="$(grep '^WEBHOOK_SECRET=' .env | cut -d= -f2-)" \
 MEETING_IDS=2892,2923 \
-WORDPRESS_AGENDA_URL="https://tampamonitor.com/tampa-city-council/agendas/<slug>/" \
+AGENDA_URL="https://tampamonitor.com/tampa-city-council/agendas/<slug>/" \
   node scripts/dispatch-notifications.js
 ```
 
 The preview's `Summary: would send N email(s)` should equal the `"sentCount":N` the
 dispatch reports back. If it doesn't, stop and find out why before re-running.
 
-Always pass `WORDPRESS_AGENDA_URL`. Without it the digest's "View full agenda" link
-silently falls back to the static site. Item deep-links use `#item-<agendaItemId>`
-(the OnBase id, **not** the File No.).
+Always pass `AGENDA_URL`. Without it the digest's "View full agenda" link silently
+falls back to the meeting page on meetings.tampamonitor.com. Item deep-links use
+`#item-<agendaItemId>` (the OnBase id, **not** the File No.). The old name
+`WORDPRESS_AGENDA_URL` / `--wp-url` is refused with an error, not silently ignored.
 
 **New subscriber mid-week, same agenda:** just re-run the same dispatch. Dedup is
 per `(subscriber, item, keyword)`, so they get the digest and everyone already
