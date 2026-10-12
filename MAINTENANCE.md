@@ -4,28 +4,18 @@ A schedule for keeping runtime dependencies, tooling, and Node.js versions curre
 
 ---
 
-## ⚠️ One-off: AI instruction-file audit (added 2026-07-03)
-
-The `.github/` agent instruction files were shaped by older models and have drifted from the code. Verified issues, ordered by impact:
-
-- [x] **Venv contradiction.** [.github/instructions/python-environment.instructions.md](.github/instructions/python-environment.instructions.md) and the "Python Environment" section of [.github/copilot-instructions.md](.github/copilot-instructions.md) both claim the project uses a **single** venv, but `opengov/` has its own venv (per [opengov.instructions.md](.github/instructions/opengov.instructions.md)). Fix the wording in both, and consider narrowing python-environment's `applyTo: "**/*.py"` glob to exclude `opengov/**` so the two files never both apply with conflicting advice. The root `CLAUDE.md` documents the two-venv reality — keep it in sync. — done 2026-09-07 (opengov venv moved to repo-root `.venv`; `applyTo` narrowed to exclude opengov)
-- [x] **opengov.instructions.md "Things that have NOT been built yet" is stale.** Per-item funding insertion **is** built: the live emitter `json-to-markdown.js` imports `loadFundingManifest` / `buildFundingByItemId` from `lib/render-funding` and renders per-item financial sections plus an agenda-level overview. Remove that bullet and point the doc at `json-to-markdown.js` (WP generation retired 2026-07-17). The other two bullets (select-endpoint amounts, fiscal-year ledger) re-verified 2026-09-07 and still accurate. — done 2026-09-07
-- [x] **copilot-instructions.md directory tree is wrong.** `pipeline/scrapers/`, `pipeline/processors/`, `pipeline/scripts/`, and `data/agendas/` don't exist; the tree omits `agenda-scraper/`, `transcript-cleaner/`, `opengov/`, and `scripts/`. Redraw from the actual layout. — done 2026-09-07
-- [x] **copilot-instructions.md "Common Tasks" is stale.** No `MEETING_TYPES` constant exists anywhere in the repo; the Datasette task references `pipeline/scripts/build-database.py` and `deploy-datasette.sh`, which don't exist (Datasette was replaced by Cloudflare D1 — the real DB build is `scripts/build-db.js`). — done 2026-09-07 (Datasette task removed; meeting-type touchpoints redirected to `scripts/build-db.js`)
-- [x] **copilot-instructions.md "Automated Checks" lists `npm run lint`** — no package.json in the repo defines a lint script. Either add one or drop the claim. — done 2026-09-07 (dropped; verification is `cd site && npm run build` + manual checklist)
-- [x] **Decide the WCAG target.** Repo files say WCAG 2.1 AA; the Tampa Monitor shared conventions target 2.2 AA. Pick one and align copilot-instructions.md, README, and CLAUDE.md. — done 2026-09-07: decided 2.2 AA everywhere
-- [x] Bump the `_Last updated_` stamp in copilot-instructions.md when done. — done 2026-09-07
+**Instruction-file audit (added 2026-07-03):** completed 2026-09-07, every item fixed. The itemized list is in this file's history before that date.
 
 ---
 
 ## Node.js
 
-Node.js uses **year-based versioning** with an 18-month Active LTS window:
+Node.js uses **year-based versioning**: 12 months of Active LTS from October, then 18 months of Maintenance LTS; end of life is 36 months after release:
 
-| Version | Released | Active LTS Starts | Active LTS Ends | Status    |
-| ------- | -------- | ----------------- | --------------- | --------- |
-| 26      | Apr 2026 | Oct 2026          | Apr 2028        | Current ✓ |
-| 28      | Apr 2027 | Oct 2027          | Apr 2029        | Future    |
+| Version | Released | Active LTS Starts | Active LTS Ends | Maintenance Ends | Status    |
+| ------- | -------- | ----------------- | --------------- | ---------------- | --------- |
+| 26      | Apr 2026 | 2026-10-28        | Oct 2027        | Apr 2029         | Current ✓ |
+| 28      | Apr 2027 | Oct 2027          | Oct 2028        | Apr 2030         | Future    |
 
 This repo is pinned to Node **26** (matching toolshed) in `.nvmrc`,
 `.github/workflows/nightly-scrape.yml`, and the README. Upgraded from EOL
@@ -76,7 +66,7 @@ Actionable checklists for the cadences below live as NotePlan templates in
 | `glob`                    | `scripts/`           | File globbing for build-db  | `npm outdated` in `scripts/`             |
 | Node.js                   | Runtime              | All JS execution            | https://nodejs.org/en/about/releases     |
 
-### Python (`transcript-cleaner/processor/venv`)
+### Python (`transcript-cleaner/processor/venv`; root `.venv` for `opengov/`)
 
 Source of truth: `transcript-cleaner/processor/requirements.txt` and `opengov/requirements.txt` (`httpx` only). Utility deps (`click`, `rich`, `tqdm`, `python-dateutil`) are omitted from the table.
 
@@ -91,7 +81,7 @@ Source of truth: `transcript-cleaner/processor/requirements.txt` and `opengov/re
 | `yt-dlp`                   | Audio extraction for Whisper | same                                   |
 | `faster-whisper`           | Whisper offset calculation   | same                                   |
 | `google-auth`              | YouTube API auth             | same                                   |
-| `httpx`                    | opengov/ HTTP client         | `pip list --outdated` in opengov venv  |
+| `httpx`                    | opengov/ HTTP client         | `pip list --outdated` in root `.venv`  |
 | `python-dotenv`            | Environment variables        | transcript venv only (not in opengov)  |
 
 ---
@@ -122,7 +112,10 @@ Source of truth: `transcript-cleaner/processor/requirements.txt` and `opengov/re
 
 | Date       | Chore   | Notes |
 | ---------- | ------- | ----- |
-| 2026-09-07 | Monthly | `npm update` in `agenda-scraper/` (aws-sdk, axios, selenium in-range); `site/` and `scripts/` clean. yt-dlp 2026.8.17-dev → 2026.8.19. Majors deferred: `axios-cookiejar-support` 7, `pdf-parse` 2, `tough-cookie` 6, `better-sqlite3` 13. One-off audit above still fully open. |
+| 2026-09-07 | Monthly | `npm update` in `agenda-scraper/` (aws-sdk, axios, selenium in-range); `site/` and `scripts/` clean. yt-dlp 2026.8.17-dev → 2026.8.19. Majors deferred: `axios-cookiejar-support` 7, `pdf-parse` 2, `tough-cookie` 6, `better-sqlite3` 13. Instruction-file audit (2026-07-03) completed the same day. |
+| 2026-10-12 | Monthly | `npm update` in `agenda-scraper/` (aws-sdk 3.1127 → 3.1149; 3.1150 declares an unpublished dependency and will not resolve). `npm audit fix` in `site/` (liquidjs 10.30, markdown-it 14.3.2, brace-expansion; Eleventy 3.1.6) and `scripts/` (brace-expansion). Audits: scraper 0, scripts 0, site 2 accepted (see maintenance/README.md → accepted residue). yt-dlp 2026.8.19 current. Nightly 10 of 10 green. 45 change-notice issues open (#42–#87), never triaged: bulk close pending. |
+| 2026-10-12 | Quarterly | Root `.venv`: anyio, certifi, idna, pip minors; reconcile manifests for 2934/2935/2936 identical apart from `generatedAt`. Transcript venv held (57 outdated incl. torch, transformers; bgutil-ytdlp-pot-provider 1.3.1 → 2.0.2 waits for a verified archive run). Node 26.1.0 local; pins are major-only. Majors shipped: `better-sqlite3` 13 (`site/` + `scripts/`), `dotenv` 18 (`agenda-scraper/`). `pdf-parse` 2 and the `axios-cookiejar-support` 7 + `tough-cookie` 6 pair stay on the backlog with a re-scrape recipe. wrangler 4.149.0, OAuth login valid. quarterly.md: phantom `agenda-scraper/venv` line removed. |
+| 2026-10-12 | Annual | Node 26 pinned everywhere; Active LTS from 2026-10-28 (table corrected: Active LTS to Oct 2027, Maintenance to Apr 2029). Python 3.13.15 everywhere, security-only since 2026-10-01, staying until the April review with toolshed. CI actions on current majors. Dependabot alerts disabled: enabling pending. `gh` scopes gist, read:org, repo. R2 token rotation pending. Pack 56.3 MiB. Secret scan: no values in tracked code; a Mapbox public `pk.` token sits in 26 retired `agenda-scraper/agendas/*.wp.html` files (WordPress output, untouched since 2026-07-15): confirm its URL restriction or remove the files. `.env`, `agenda-scraper/.env`, `data/meetings.db` confirmed ignored. |
 
 ---
 

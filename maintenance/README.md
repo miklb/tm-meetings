@@ -44,6 +44,25 @@ Logged July 2026 when the patch/minor backlog was cleared:
 - `axios-cookiejar-support` 6 → 7
 - `tough-cookie` 4 → 6
 
+Verification recipe for the three above (they touch PDF extraction and the
+OnBase cookie session, which no unit test covers): on a branch, bump, then
+`cd agenda-scraper && ./process-agenda.sh <recent date> --skip-mirror --no-sync`
+and `git diff` the meeting JSON and agenda Markdown. Identical output means
+the parser and the session still work.
+
+Shipped from the deferred list: `better-sqlite3` 13 and `dotenv` 18 (2026-10-12,
+proven by `npm run build-db && npm run build-site && npm test`).
+
+## Accepted audit residue (re-check monthly)
+
+- `site/`: `braces` (via `chokidar` 3, pinned by Eleventy 3 and its dev
+  server) and `sprintf-js` (via `gray-matter` → `js-yaml` 3 → `argparse` 1).
+  Both advisories cover every published version, so there is nothing to bump
+  to, and `npm audit fix --force` would downgrade Eleventy to 0.6.0. They are
+  build-time pattern DoS against our own config and front matter, not an
+  exposure. Clears when Eleventy moves to chokidar 4 and gray-matter to
+  js-yaml 4. Logged 2026-10-12.
+
 ## Implementation plan
 
 Phase 1 — adopt the checklists (one-time, ~10 min):
@@ -68,8 +87,10 @@ Phase 2 — shrink the manual surface:
 
 - The change-detection issues already automate the "did anything change"
   half of weekly ops; triage is the only manual part.
-- Optional: have `nightly-scrape.yml` also open an issue on scrape *failure*
-  (it currently signals content changes, not workflow health).
+- `nightly-scrape.yml` also opens an issue on scrape *failure* (title
+  "Nightly scrape had failures"; `scripts/nightly-report.sh` treats a failed
+  step as meaningful), so workflow health has a signal. A change notice older
+  than a week has done its job: close, don't accumulate.
 
 ## Template ↔ policy sync
 
