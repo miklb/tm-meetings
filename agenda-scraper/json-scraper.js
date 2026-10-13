@@ -185,7 +185,8 @@ function extractFileNumber(text) {
  * Runs right before the meeting JSON is written.
  * Reconciles the fresh scrape with the stored file (lib/scrape-guard.js):
  * refuses an empty or wholly failed scrape, keeps the stored version of any
- * item whose fetch failed or lost all its documents, carries mirroredUrl
+ * item whose fetch failed or lost all its documents (or lost some while
+ * other items came back empty), carries mirroredUrl
  * stamps forward (OnBase publishId URLs change but R2 is permanent), and
  * records the meaningful diff in the public change-log.
  * @throws {Error} when the fresh scrape must not be written
@@ -203,8 +204,10 @@ function preserveMirrorsAndLogChanges(outputFileName, meetingData) {
             if (merged.refused) {
                 throw new Error(`Refusing to overwrite ${path.basename(outputFileName)}: ${merged.refused}`);
             }
+            // scripts/nightly-report.sh greps this line by meeting id to say
+            // in the issue when the guard intervened — keep the shape.
             for (const kept of merged.keptItems) {
-                console.warn(`Kept stored version of item ${kept.number} (${kept.reason})`);
+                console.warn(`Meeting ${meetingData.meetingId}: kept stored version of item ${kept.number} (${kept.reason})`);
             }
             if (merged.restoredMirrors > 0) {
                 console.log(`Preserved ${merged.restoredMirrors} mirrored document URLs from previous scrape`);

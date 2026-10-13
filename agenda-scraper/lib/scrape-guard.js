@@ -9,7 +9,9 @@
  *    same-titled documents in one item shared one stamp;
  *  - the nightly (no MAPBOX_API_TOKEN in CI) re-scraped items the local run
  *    had geocoded and wrote coordinates: null over them, so map pins came
- *    and went with whichever run was last.
+ *    and went with whichever run was last;
+ *  - a page the city was republishing item by item came back with most
+ *    items empty (kept) and one item half-published (accepted, 10/12/26).
  *
  * Everything here is pure: it takes the two JSON objects and returns a
  * result. The caller decides what to write and what to log.
@@ -91,9 +93,32 @@ function mergeWithExisting(existing, fresh) {
 
   const oldById = new Map(oldItems.filter((i) => i.agendaItemId).map((i) => [String(i.agendaItemId), i]));
 
-  fresh.agendaItems = newItems.map((newItem) => {
+  const decisions = newItems.map((newItem) => {
     const oldItem = newItem.agendaItemId ? oldById.get(String(newItem.agendaItemId)) : null;
-    const reason = reasonToKeepOld(oldItem, newItem);
+    return { newItem, oldItem, reason: reasonToKeepOld(oldItem, newItem) };
+  });
+
+  // The city republishes a page item by item: items done so far are whole,
+  // the item the clerk is on has only the documents published so far, the
+  // rest come back empty. The empty ones are kept above; the partial one used
+  // to pass. The 10/12/26 nightly accepted REZ-26-74 (meeting 2935) with 1 of
+  // 8 documents and wiped seven mirroredUrl stamps, the summary text and the
+  // staff report. So when any item came back empty, an item that lost
+  // documents is held too. A clerk really pulling one document in the same
+  // moment is far rarer than this, and holding it is harmless.
+  const emptyItems = decisions.filter((d) =>
+    d.oldItem && !d.newItem.error && docCount(d.oldItem) > 0 && docCount(d.newItem) === 0).length;
+  if (emptyItems > 0) {
+    for (const d of decisions) {
+      if (d.reason || !d.oldItem) continue;
+      const lost = docCount(d.oldItem) - docCount(d.newItem);
+      if (lost > 0) {
+        d.reason = `${lost} of ${docCount(d.oldItem)} documents missing while ${emptyItems} other item${emptyItems === 1 ? '' : 's'} came back empty`;
+      }
+    }
+  }
+
+  fresh.agendaItems = decisions.map(({ newItem, oldItem, reason }) => {
     if (reason) {
       result.keptItems.push({ number: newItem.number, agendaItemId: newItem.agendaItemId, reason });
       return oldItem;

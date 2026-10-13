@@ -232,7 +232,10 @@ reconciles the fresh scrape with the stored one:
 - **Refused** (error, file untouched): the scrape has 0 items while the
   stored file has some, or every item fetch failed.
 - **Kept per item**: an item whose detail fetch failed (after one retry) or
-  that lost every document keeps its stored version; the log says so.
+  that lost every document keeps its stored version; the log says so. When
+  any item came back empty, an item that lost *some* documents is held too:
+  the city republishes a page item by item, and the 10/12/26 nightly caught
+  REZ-26-74 with 1 of 8 documents published.
 - **Carried forward**: `mirroredUrl` by document identity (title + ordinal
   for repeats), so re-scrapes never drop R2 links; and `coordinates`,
   `location` and `folioNumbers` when the fresh scrape has them empty, so the

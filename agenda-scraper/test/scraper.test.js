@@ -168,6 +168,44 @@ test('a genuinely removed document is not treated as a failure', () => {
   assert.equal(r.restoredMirrors, 1);
 });
 
+test('an item that lost some documents is held when other items came back empty (the 10/12/26 republish)', () => {
+  // The city republishes a page item by item: items done so far are whole,
+  // the item the clerk is on has only the documents published so far, the
+  // rest are empty. Item 2 here is REZ-26-74 (meeting 2935) with 1 of 8.
+  const stored = meeting([
+    item(1, { supportingDocuments: [doc('A.pdf', 'https://r2/a')] }),
+    item(2, { supportingDocuments: [doc('B.pdf', 'https://r2/b'), doc('C.pdf', 'https://r2/c')], summaryText: 'sheet' }),
+    item(3, { supportingDocuments: [doc('D.pdf', 'https://r2/d')] }),
+  ]);
+  const fresh = meeting([
+    item(1, { supportingDocuments: [doc('A.pdf')] }),
+    item(2, { supportingDocuments: [doc('B.pdf')], summaryText: '' }),
+    item(3, { supportingDocuments: [] }),
+  ]);
+  const r = mergeWithExisting(stored, fresh);
+  assert.deepEqual(r.keptItems.map((k) => [k.agendaItemId, k.reason]), [
+    ['2', '1 of 2 documents missing while 1 other item came back empty'],
+    ['3', 'all 1 documents missing'],
+  ]);
+  assert.equal(r.data.agendaItems[1].supportingDocuments.length, 2);
+  assert.equal(r.data.agendaItems[1].summaryText, 'sheet');
+  assert.equal(r.data.agendaItems[0].supportingDocuments[0].mirroredUrl, 'https://r2/a');
+});
+
+test('with no item empty, a lost document is still a removal; a failed fetch does not count as empty', () => {
+  const stored = meeting([
+    item(1, { supportingDocuments: [doc('A.pdf', 'https://r2/a'), doc('B.pdf', 'https://r2/b')] }),
+    item(2, { supportingDocuments: [doc('C.pdf', 'https://r2/c')] }),
+  ]);
+  const fresh = meeting([
+    item(1, { supportingDocuments: [doc('A.pdf')] }),
+    item(2, { error: 'socket hang up', supportingDocuments: [] }),
+  ]);
+  const r = mergeWithExisting(stored, fresh);
+  assert.deepEqual(r.keptItems.map((k) => k.agendaItemId), ['2']);
+  assert.equal(r.data.agendaItems[0].supportingDocuments.length, 1);
+});
+
 test('mirroredUrl carries forward per document, including same-titled documents', () => {
   const stored = meeting([item(7, { supportingDocuments: [doc('Report.pdf', 'https://r2/report.pdf'), doc('Report.pdf', 'https://r2/report-2.pdf')] })]);
   const fresh = meeting([item(7, { supportingDocuments: [doc('Report.pdf'), doc('Report.pdf'), doc('New.pdf')] })]);

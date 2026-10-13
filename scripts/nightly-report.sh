@@ -34,6 +34,14 @@ HAS_MEANINGFUL=false
 meeting_id()   { sed 's/.*meeting_\([0-9]*\)_.*/\1/' <<< "$1"; }
 meeting_date() { sed 's/.*meeting_[0-9]*_\(.*\)\.json/\1/' <<< "$1"; }
 
+# Items lib/scrape-guard.js wrote back from the stored file for one meeting.
+# json-scraper.js logs each as
+#   "Meeting 2935: kept stored version of item 4 (all 7 documents missing)".
+kept_items() {
+  [[ -f "$SCRAPE_LOG" ]] || return 0
+  grep "Meeting $1: kept stored version of item " "$SCRAPE_LOG" | sed 's/.*kept stored version of item /  - item /'
+}
+
 # New meeting files
 for file in $(git diff --staged --diff-filter=A --name-only -- 'agenda-scraper/data/meeting_*.json'); do
   HAS_MEANINGFUL=true
@@ -42,12 +50,24 @@ for file in $(git diff --staged --diff-filter=A --name-only -- 'agenda-scraper/d
   NEW_MEETINGS="${NEW_MEETINGS}- **Meeting $(meeting_id "$file")** — $(meeting_date "$file") (${MEETING_TYPE}${MEETING_NAME:+, ${MEETING_NAME}})"$'\n'
 done
 
-# Modified meeting files — diff-without-urls.js filters URL-only churn
+# Modified meeting files — diff-without-urls.js filters URL-only churn.
+# When the scrape guard wrote stored items back for a meeting, say so right
+# under its changes: "Removed documents" reads very differently once you know
+# the rest of the page came back empty (2935 on 10/12/26 — the city was
+# republishing the agenda item by item and the issue did not say so).
+GUARD_HELD_INLINE=""
 for file in $(git diff --staged --diff-filter=M --name-only -- 'agenda-scraper/data/meeting_*.json'); do
+  MID=$(meeting_id "$file")
   DIFF_OUTPUT=$(git show HEAD:"$file" | node agenda-scraper/diff-without-urls.js --summary - "$file" 2>/dev/null || echo "")
   if [[ -n "$DIFF_OUTPUT" && "$DIFF_OUTPUT" != *"No meaningful changes"* ]]; then
     HAS_MEANINGFUL=true
-    MODIFIED_MEETINGS="${MODIFIED_MEETINGS}### Meeting $(meeting_id "$file") ($(meeting_date "$file"))"$'\n'"${DIFF_OUTPUT}"$'\n\n'
+    MODIFIED_MEETINGS="${MODIFIED_MEETINGS}### Meeting ${MID} ($(meeting_date "$file"))"$'\n'"${DIFF_OUTPUT}"$'\n'
+    HELD=$(kept_items "$MID")
+    if [[ -n "$HELD" ]]; then
+      MODIFIED_MEETINGS="${MODIFIED_MEETINGS}"$'\n'"**Scrape guard kept stored items** — the fresh scrape returned these without documents, so the stored copies were written back unchanged (the city page was likely mid-republish):"$'\n'"${HELD}"$'\n'
+      GUARD_HELD_INLINE="${GUARD_HELD_INLINE} ${MID} "
+    fi
+    MODIFIED_MEETINGS="${MODIFIED_MEETINGS}"$'\n'
   elif [[ -n "$DIFF_OUTPUT" ]]; then
     SUPPRESSED_COUNT=$((SUPPRESSED_COUNT + 1))
   fi
@@ -95,6 +115,19 @@ if [[ -f "$SCRAPE_LOG" ]]; then
   done < "$SCRAPE_LOG"
 fi
 
+# Meetings the guard held items for whose file did not change meaningfully
+# (or at all): list them for the record when something else opens the issue.
+# Not meaningful on their own — the stored copy and post are untouched, the
+# same footing as an unavailable archived meeting.
+GUARD_HELD=""
+if [[ -f "$SCRAPE_LOG" ]]; then
+  for MID in $(grep -o 'Meeting [0-9]*: kept stored version' "$SCRAPE_LOG" | awk '{print $2}' | tr -d ':' | sort -u); do
+    [[ "$GUARD_HELD_INLINE" == *" ${MID} "* ]] && continue
+    STORED=$(ls "$DATA_DIR"/meeting_"${MID}"_*.json 2>/dev/null | head -1)
+    GUARD_HELD="${GUARD_HELD}- Meeting **${MID}**${STORED:+ ($(meeting_date "$STORED"))} — stored items written back because the fresh scrape returned them without documents:"$'\n'"$(kept_items "$MID")"$'\n'
+  done
+fi
+
 # The scrape step itself failed and no per-meeting line explains it (OnBase
 # unreachable, list page changed shape, …): show the end of the log.
 SCRAPE_TAIL=""
@@ -130,6 +163,10 @@ if [[ "$HAS_MEANINGFUL" == "true" ]]; then
     if [[ -n "$UNAVAILABLE_ARCHIVED" ]]; then
       echo "### Unavailable on the server, already archived (informational)"
       echo "$UNAVAILABLE_ARCHIVED"
+    fi
+    if [[ -n "$GUARD_HELD" ]]; then
+      echo "### Scrape guard kept stored items (informational)"
+      echo "$GUARD_HELD"
     fi
     if [[ -n "$FAILED_MEETINGS" ]]; then
       echo "### ❌ Meetings that failed to scrape (stored files untouched; the rest of the night was committed)"

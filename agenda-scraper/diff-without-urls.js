@@ -138,7 +138,8 @@ function formatDiff(diff) {
 
 function formatSummary(oldData, newData) {
   const lines = [];
-  let urlOnlyCount = 0;
+  let matchedDocCount = 0; // documents present in both files, matched by title
+  let urlChangedCount = 0; // ...whose OnBase URL differs (publishId rotation)
   let hasMeaningfulChange = false;
 
   // 1. agendaType change
@@ -187,7 +188,12 @@ function formatSummary(oldData, newData) {
     if (!oldById.has(id)) continue; // brand-new item — already reported above
     const oldItem = oldById.get(id);
     const oldDocs = oldItem.supportingDocuments || [];
-    const oldDocKeys = new Set(oldDocs.map(docKey).filter(k => k));
+    const oldUrlByKey = new Map(); // first occurrence wins for a repeated title
+    for (const doc of oldDocs) {
+      const key = docKey(doc);
+      if (key && !oldUrlByKey.has(key)) oldUrlByKey.set(key, doc.url);
+    }
+    const oldDocKeys = new Set(oldUrlByKey.keys());
     const newDocs = newItem.supportingDocuments || [];
     const newDocKeys = new Set(newDocs.map(docKey).filter(k => k));
     const genuinelyNew = newDocs.filter(doc => {
@@ -203,7 +209,9 @@ function formatSummary(oldData, newData) {
     });
     newDocs.forEach(doc => {
       const key = docKey(doc);
-      if (key && oldDocKeys.has(key)) urlOnlyCount++;
+      if (!key || !oldDocKeys.has(key)) return;
+      matchedDocCount++;
+      if (oldUrlByKey.get(key) !== doc.url) urlChangedCount++;
     });
     if (genuinelyNew.length > 0) {
       newDocsByItem.push({ id, item: newItem, docs: genuinelyNew });
@@ -239,8 +247,12 @@ function formatSummary(oldData, newData) {
     lines.push('');
   }
 
-  if (urlOnlyCount > 0) {
-    lines.push(`_Note: ${urlOnlyCount} document URLs changed (publishId rotation only — suppressed)_\n`);
+  // The count of title-matched documents used to be reported as "N URLs
+  // changed". True on a full republish (every publishId rotates), wrong when
+  // lib/scrape-guard.js writes stored items back unchanged (10/12/26, meeting
+  // 2935: the issue said 83 when 13 had moved).
+  if (urlChangedCount > 0) {
+    lines.push(`_Note: ${urlChangedCount} of ${matchedDocCount} document URLs changed (publishId rotation only — suppressed)_\n`);
   }
 
   if (!hasMeaningfulChange) {
