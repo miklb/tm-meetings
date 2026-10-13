@@ -2,5 +2,113 @@
   "meetingId": "2936",
   "meetingDate": "2026-10-15",
   "firstSeenAt": "2026-10-09T23:03:19.267Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-10-13",
+      "scrapedAt": "2026-10-13T23:02:57.097Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 84,
+          "itemFileNumber": "DE1-26-130-C",
+          "filename": "DE1-26-130-C_WRITTEN_SUBMISSION.PDF"
+        },
+        {
+          "itemNumber": 84,
+          "itemFileNumber": "DE1-26-130-C",
+          "filename": "DE1-26-130-C_EXHIBITS_A-H.PDF"
+        },
+        {
+          "itemNumber": 84,
+          "itemFileNumber": "DE1-26-130-C",
+          "filename": "JAMCO ENTITY PAGE.PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "1. SECTION 12.01..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "2. SECTION 2.04..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "3. SECTION 2.15..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "4. SECTION  4.01 &AMP; 4.03..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "5. SECTION 6.03..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "6. SECTION 7.07..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "7. SECTION 2.03..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "8. SECTION 2.08..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "9. SECTION 6.02..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "10. SECTION 6.05..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "11. SECTION 6.06..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "12. SECTION 7.05..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "13. SECTION 9.02..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "14. SECTION 10.06..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "15. SECTION 10.07..PDF"
+        },
+        {
+          "itemNumber": 95,
+          "itemFileNumber": "CM26-27741",
+          "filename": "16. SECTION 11.03..PDF"
+        }
+      ]
+    }
+  ]
 }
