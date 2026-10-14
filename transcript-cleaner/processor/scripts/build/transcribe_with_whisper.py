@@ -19,6 +19,24 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
+# The CTranslate2 weights come from Systran's Hugging Face repos. Unpinned,
+# WhisperModel('small') asks the hub what `main` points to on every run and
+# would pull new weights mid archive build the day Systran pushes any, so the
+# sync could shift between one meeting and the next. With a full commit hash
+# that is already in ~/.cache/huggingface, huggingface_hub returns the cached
+# snapshot without a network call. Hashes recorded 2026-10-14 from each
+# repo's refs/main. To move to newer weights: delete the pin, run once, copy
+# the new hash from refs/main back here.
+PINNED_REVISIONS = {
+    'base': 'ebe41f70d5b6dfa9166e2c581c45c9c0cfc57b66',
+    'small': '536b0662742c02347bc0e980a01041f333bce120',
+}
+
+
+def model_revision(model_name):
+    """Pinned Hugging Face commit for a model size; None (hub `main`) when unpinned."""
+    return PINNED_REVISIONS.get(model_name)
+
 
 def _find_ytdlp() -> str:
     """Resolve yt-dlp, checking the venv bin directory as a fallback."""
@@ -107,8 +125,13 @@ def transcribe_video(video_id, duration=300, model_name='base', start=0):
         logger.info("Downloading first %ds of audio from %s...", duration, video_id)
     audio_path = download_audio_sample(video_id, duration, start)
 
-    logger.info("Loading faster-whisper model '%s' (cpu/int8)...", model_name)
-    model = WhisperModel(model_name, device="cpu", compute_type="int8")
+    revision = model_revision(model_name)
+    if revision:
+        logger.info("Loading faster-whisper model '%s' (cpu/int8, pinned %s)...", model_name, revision[:8])
+    else:
+        logger.warning("Loading faster-whisper model '%s' (cpu/int8) UNPINNED: follows hub `main`, "
+                       "may download new weights", model_name)
+    model = WhisperModel(model_name, device="cpu", compute_type="int8", revision=revision)
 
     logger.info("Transcribing %s...", audio_path)
     seg_iter, _info = model.transcribe(
@@ -192,6 +215,7 @@ def main():
         'audio_start': start,
         'duration': duration,
         'model': model_name,
+        'model_revision': model_revision(model_name),
         'segments': segments
     }
 

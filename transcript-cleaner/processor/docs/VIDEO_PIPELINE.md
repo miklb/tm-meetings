@@ -179,7 +179,7 @@ python scripts/build/process_video.py 2645 2025-11-13 --skip-fetch
 
 - YouTube Data API: ~102 quota units per meeting (search + video details). Safe for ~90 meetings/day on free tier.
 - yt-dlp audio download: 7-second delay between consecutive video downloads to avoid throttling.
-- Whisper: Local CPU only, no rate limits. `small` model balances speed/accuracy.
+- Whisper: Local CPU only, no rate limits. `small` model balances speed/accuracy. The weights are pinned to a Hugging Face commit (`PINNED_REVISIONS` in `scripts/build/transcribe_with_whisper.py`), so a run never downloads new weights and, once cached, never calls the hub.
 - No `youtube-transcript-api` calls — avoids IP banning entirely.
 
 **Prerequisite:** Transcript must already be scraped and capitalized (WORKFLOW.md steps 1-2).
