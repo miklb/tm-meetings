@@ -1,0 +1,79 @@
+{
+  "meeting_id": 2710,
+  "meeting_date": "2026-10-08",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "sgbz54bzcJw",
+      "title": "Tampa City Council PM - 10/08/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-10-09T15:27:03Z",
+      "duration": "PT3H49M30S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1 REZ 26-40  1605 N. Waters Court",
+          "timestamp": "00:10:26",
+          "seconds": 626
+        },
+        {
+          "title": "Item 2: REZ-26-65 - 4911 East 10th Avenue",
+          "timestamp": "00:34:05",
+          "seconds": 2045
+        },
+        {
+          "title": "Item 3: REZ-26-74 - 2009 North Armenia Avenue",
+          "timestamp": "00:39:40",
+          "seconds": 2380
+        },
+        {
+          "title": "Item 4: REZ-26-78 - 3209 North 22nd Street",
+          "timestamp": "00:44:30",
+          "seconds": 2670
+        },
+        {
+          "title": "Item 6: REZ-26-85 - South West Shore Properties",
+          "timestamp": "00:54:50",
+          "seconds": 3290
+        },
+        {
+          "title": "Item 7: REZ-26-86 - 2202 West Kennedy Boulevard",
+          "timestamp": "01:11:00",
+          "seconds": 4260
+        },
+        {
+          "title": "Item 8: REZ-26-87 - 2101 West Hillsborough Avenue",
+          "timestamp": "01:42:00",
+          "seconds": 6120
+        },
+        {
+          "title": "Item 9: REZ-26-88 - 202 South Dale Mabry",
+          "timestamp": "02:14:30",
+          "seconds": 8070
+        },
+        {
+          "title": "Item 10: REZ-26-99 - Ybor City Properties",
+          "timestamp": "03:24:00",
+          "seconds": 12240
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "03:39:50",
+          "seconds": 13190
+        }
+      ],
+      "offset_seconds": 416
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-10-14T15:47:04Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}

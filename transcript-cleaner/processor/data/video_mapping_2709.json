@@ -1,0 +1,69 @@
+{
+  "meeting_id": 2709,
+  "meeting_date": "2026-10-08",
+  "meeting_type": "CRA",
+  "videos": [
+    {
+      "video_id": "k7JB416uBN8",
+      "title": "Community Redevelopment Agency - 10/08/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-10-09T03:06:26Z",
+      "duration": "PT1H54M",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:10:51",
+          "seconds": 651
+        },
+        {
+          "title": "Item 1: CRA24-2242 - Channel District CAC Monthly Report",
+          "timestamp": "00:46:13",
+          "seconds": 2773
+        },
+        {
+          "title": "Item 7: CRA26-26574 - Dr. Bernard Lafayette Legacy Recognition",
+          "timestamp": "01:05:22",
+          "seconds": 3922
+        },
+        {
+          "title": "Item 2: CRA24-2241 - CRA Director Monthly Report",
+          "timestamp": "01:22:34",
+          "seconds": 4954
+        },
+        {
+          "title": "Item 3: CRA25-19842 - Tampa Union Station Monthly Update",
+          "timestamp": "01:33:14",
+          "seconds": 5594
+        },
+        {
+          "title": "Item 4: CRA26-26393 - Tampa Heights Roundabout Slip Lane",
+          "timestamp": "01:34:25",
+          "seconds": 5665
+        },
+        {
+          "title": "Item 8: CRA26-27402 - East Tampa CAC Appointment",
+          "timestamp": "01:36:35",
+          "seconds": 5795
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:37:16",
+          "seconds": 5836
+        }
+      ],
+      "offset_seconds": 464
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-10-14T15:54:11Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
