@@ -4,6 +4,19 @@
   "firstSeenAt": "2026-10-09T23:03:19.267Z",
   "entries": [
     {
+      "date": "2026-10-14",
+      "scrapedAt": "2026-10-14T23:03:00.486Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 99,
+          "itemFileNumber": "CM26-26582",
+          "filename": "TOM DEGEORGE STATE OF LIVE TAMPA.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-10-13",
       "scrapedAt": "2026-10-13T23:02:57.097Z",
       "agendaTypePromoted": {

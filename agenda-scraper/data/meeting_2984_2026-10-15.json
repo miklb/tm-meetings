@@ -1,0 +1,29 @@
+{
+  "meetingId": "2984",
+  "meetingType": "regular",
+  "meetingName": "City Council Regular Addendum",
+  "meetingTime": "09:00",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "October 15, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2984&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 99,
+      "agendaItemId": "26582",
+      "title": "File No. CM26-26582\nMr. Tom DeGeorge to provide a written report on ways to assist small concert venues in or around the Ybor City area. (Original motion initiated by Viera-Maniscalco on August 20, 2026)\n \nEmail from Sebastian Leon, Legislative Aide to Councilmember Viera, transmitting the written report for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM26-26582\nMr. Tom DeGeorge to provide a written report on ways to assist small concert venues in or around the Ybor City area. (Original motion initiated by Viera-Maniscalco on August 20, 2026)\n \nEmail from Sebastian Leon, Legislative Aide to Councilmember Viera, transmitting the written report for said agenda item. (To be R/F)",
+      "fileNumber": "CM26-26582",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2026-10-15"
+}
