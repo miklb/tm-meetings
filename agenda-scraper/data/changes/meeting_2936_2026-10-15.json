@@ -4,6 +4,19 @@
   "firstSeenAt": "2026-10-09T23:03:19.267Z",
   "entries": [
     {
+      "date": "2026-10-15",
+      "scrapedAt": "2026-10-15T23:02:43.528Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 83,
+          "itemFileNumber": "DE1-26-136-C",
+          "filename": "1-WRITTEN COMMENT - DE1-26-136-C.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-10-14",
       "scrapedAt": "2026-10-14T23:03:00.486Z",
       "itemsAdded": [],
