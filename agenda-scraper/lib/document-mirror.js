@@ -4,7 +4,7 @@
  * to create permanent, stable URLs that won't break when publishId changes.
  */
 
-const { S3Client, PutObjectCommand, HeadObjectCommand } = require('@aws-sdk/client-s3');
+const { S3Client, PutObjectCommand, HeadObjectCommand, DeleteObjectCommand } = require('@aws-sdk/client-s3');
 const axios = require('axios');
 const path = require('path');
 const crypto = require('crypto');
@@ -42,6 +42,68 @@ function planDocumentFilenames(docs, sanitize, extFromUrl) {
     const ext = path.extname(filename);
     return `${filename.slice(0, filename.length - ext.length)}-${n}${ext}`;
   });
+}
+
+/**
+ * Sanitize a filename for the R2 key. Pure, so the key of any document can
+ * be recomputed without an S3 client (lib/withdrawn-documents.js does).
+ * @param {string} filename - Original filename
+ * @returns {string} Sanitized filename
+ */
+function sanitizeFilename(filename) {
+  if (!filename) return 'document.pdf';
+
+  let sanitized = filename
+    .toLowerCase()
+    .replace(/\s+/g, '-')           // Replace spaces with hyphens
+    .replace(/[()]/g, '')           // Remove parentheses
+    .replace(/[^a-z0-9._-]/g, '')   // Remove special characters
+    .replace(/\.pdf\.pdf$/i, '.pdf') // Fix double .pdf extension
+    .replace(/\.docx?\.pdf$/i, '.pdf') // Fix .doc.pdf or .docx.pdf
+    .replace(/-+/g, '-')            // Collapse multiple hyphens
+    .replace(/^-|-$/g, '')          // Remove leading/trailing hyphens
+    .substring(0, 200);             // Limit length
+
+  // If no file extension, default to .pdf (most OnBase documents are PDFs)
+  if (!path.extname(sanitized)) {
+    sanitized += '.pdf';
+  }
+
+  return sanitized;
+}
+
+/**
+ * Get the file extension from a download URL path.
+ * OnBase serves Word/Excel docs as PDF via DownloadFileBytes (e.g. foo.DO.pdf)
+ * so the URL extension is more authoritative than the link-text title.
+ * @param {string} url
+ * @returns {string|null} lowercase extension including dot, e.g. '.pdf', or null
+ */
+function getExtFromUrl(url) {
+  try {
+    const lastSegment = new URL(url).pathname.split('/').pop();
+    const ext = path.extname(decodeURIComponent(lastSegment)).toLowerCase();
+    return ext || null;
+  } catch (e) {
+    return null;
+  }
+}
+
+/**
+ * Format a meeting date to YYYY-MM-DD (the first segment of every R2 key).
+ * @param {string} dateStr - "December 11, 2025" or already YYYY-MM-DD
+ * @returns {string}
+ */
+function formatMeetingDate(dateStr) {
+  if (!dateStr) return 'unknown-date';
+  if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) return dateStr;
+  try {
+    const date = new Date(dateStr);
+    if (isNaN(date.getTime())) return 'unknown-date';
+    return date.toISOString().split('T')[0];
+  } catch {
+    return 'unknown-date';
+  }
 }
 
 class DocumentMirror {
@@ -105,25 +167,7 @@ class DocumentMirror {
    * @returns {string} Sanitized filename
    */
   sanitizeFilename(filename) {
-    if (!filename) return 'document.pdf';
-    
-    let sanitized = filename
-      .toLowerCase()
-      .replace(/\s+/g, '-')           // Replace spaces with hyphens
-      .replace(/[()]/g, '')           // Remove parentheses
-      .replace(/[^a-z0-9._-]/g, '')   // Remove special characters
-      .replace(/\.pdf\.pdf$/i, '.pdf') // Fix double .pdf extension
-      .replace(/\.docx?\.pdf$/i, '.pdf') // Fix .doc.pdf or .docx.pdf
-      .replace(/-+/g, '-')            // Collapse multiple hyphens
-      .replace(/^-|-$/g, '')          // Remove leading/trailing hyphens
-      .substring(0, 200);             // Limit length
-
-    // If no file extension, default to .pdf (most OnBase documents are PDFs)
-    if (!path.extname(sanitized)) {
-      sanitized += '.pdf';
-    }
-
-    return sanitized;
+    return sanitizeFilename(filename);
   }
 
   /**
@@ -134,13 +178,7 @@ class DocumentMirror {
    * @returns {string|null} lowercase extension including dot, e.g. '.pdf', or null
    */
   getExtFromUrl(url) {
-    try {
-      const lastSegment = new URL(url).pathname.split('/').pop();
-      const ext = path.extname(decodeURIComponent(lastSegment)).toLowerCase();
-      return ext || null;
-    } catch (e) {
-      return null;
-    }
+    return getExtFromUrl(url);
   }
 
   /**
@@ -161,6 +199,22 @@ class DocumentMirror {
       }
       throw err;
     }
+  }
+
+  /**
+   * Remove a mirrored object. Used by withdraw-document.js; the mirror step
+   * never deletes. Resolves whether or not the object existed (S3 delete is
+   * idempotent) and reports which it was.
+   * @param {string} key - S3 object key
+   * @returns {Promise<{key: string, existed: boolean}>}
+   */
+  async deleteDocument(key) {
+    const existed = await this.exists(key);
+    await this.s3.send(new DeleteObjectCommand({
+      Bucket: this.bucket,
+      Key: key,
+    }));
+    return { key, existed };
   }
 
   /**
@@ -321,6 +375,7 @@ class DocumentMirror {
       uploaded: 0,
       skipped: 0,
       failed: 0,
+      withdrawn: 0,
       documents: [],
       uploadedDocuments: [], // new: [{itemNumber, itemFileNumber, filename}]
     };
@@ -337,6 +392,15 @@ class DocumentMirror {
 
     for (const [docIndex, doc] of item.supportingDocuments.entries()) {
       const filename = filenames[docIndex];
+
+      // Stamped from data/withdrawn-documents.json by applyWithdrawals()
+      // (lib/withdrawn-documents.js): the archive no longer hosts this one.
+      if (doc.withdrawn) {
+        results.withdrawn++;
+        console.log(`  ⊘ Withdrawn, not mirrored: ${filename}`);
+        results.documents.push({ filename, status: 'withdrawn' });
+        continue;
+      }
 
       try {
         console.log(`  ⬇ Downloading: ${filename}`);
@@ -414,6 +478,7 @@ class DocumentMirror {
       uploaded: 0,
       skipped: 0,
       failed: 0,
+      withdrawn: 0,
       errors: [],
       uploadedDocuments: [], // new: [{itemNumber, itemFileNumber, filename}]
     };
@@ -445,6 +510,7 @@ class DocumentMirror {
       results.uploaded += itemResults.uploaded;
       results.skipped += itemResults.skipped;
       results.failed += itemResults.failed;
+      results.withdrawn += itemResults.withdrawn;
 
       // Accumulate newly uploaded doc metadata for the change log
       if (itemResults.uploadedDocuments && itemResults.uploadedDocuments.length > 0) {
@@ -469,6 +535,9 @@ class DocumentMirror {
     console.log(`  Uploaded: ${results.uploaded}`);
     console.log(`  Already existed: ${results.skipped}`);
     console.log(`  Failed: ${results.failed}`);
+    if (results.withdrawn > 0) {
+      console.log(`  Withdrawn (not mirrored): ${results.withdrawn}`);
+    }
 
     if (results.errors.length > 0) {
       console.log('\nErrors:');
@@ -486,22 +555,7 @@ class DocumentMirror {
    * @returns {string} Formatted date
    */
   formatDate(dateStr) {
-    if (!dateStr) return 'unknown-date';
-    
-    // If already in YYYY-MM-DD format
-    if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
-      return dateStr;
-    }
-
-    try {
-      const date = new Date(dateStr);
-      if (isNaN(date.getTime())) {
-        return 'unknown-date';
-      }
-      return date.toISOString().split('T')[0];
-    } catch {
-      return 'unknown-date';
-    }
+    return formatMeetingDate(dateStr);
   }
 
   /**
@@ -518,4 +572,4 @@ class DocumentMirror {
   }
 }
 
-module.exports = { DocumentMirror, planDocumentFilenames };
+module.exports = { DocumentMirror, planDocumentFilenames, sanitizeFilename, getExtFromUrl, formatMeetingDate };

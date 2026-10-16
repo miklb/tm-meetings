@@ -27,6 +27,7 @@ const fs = require('fs');
 const path = require('path');
 const Database = require('better-sqlite3');
 const glob = require('glob');
+const { applyWithdrawals, loadWithdrawn } = require('../agenda-scraper/lib/withdrawn-documents');
 
 const DEFAULTS = {
   dataDir: path.resolve(__dirname, '..', 'agenda-scraper', 'data'),
@@ -603,6 +604,9 @@ function resolveMeetingType(data, items, meetingId) {
 function loadMeetingFiles(files, yearFilter) {
   const records = [];
   let skipped = 0;
+  // data/withdrawn-documents.json: a withdrawn document gets mirrored_url
+  // NULL whatever the stored JSON says, so the site links the City's copy.
+  const withdrawnList = loadWithdrawn();
 
   for (const filePath of files) {
     const filename = path.basename(filePath);
@@ -614,6 +618,7 @@ function loadMeetingFiles(files, yearFilter) {
       skipped++;
       continue;
     }
+    applyWithdrawals(data, withdrawnList);
 
     const date = resolveDate(data, filename);
     if (!date) {

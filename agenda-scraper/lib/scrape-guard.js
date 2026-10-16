@@ -125,13 +125,22 @@ function mergeWithExisting(existing, fresh) {
     }
     if (oldItem) {
       // Carry mirroredUrl forward by document identity (title + ordinal).
+      // A withdrawn stamp (lib/withdrawn-documents.js) travels the same way
+      // and wins: a withdrawn document never regains a mirror link here.
       const oldKeys = documentKeys(oldItem.supportingDocuments);
       const oldByKey = new Map(oldKeys.map((k, i) => [k, oldItem.supportingDocuments[i]]));
       const newKeys = documentKeys(newItem.supportingDocuments);
       newKeys.forEach((key, i) => {
         const prev = oldByKey.get(key);
-        if (prev && prev.mirroredUrl && !newItem.supportingDocuments[i].mirroredUrl) {
-          newItem.supportingDocuments[i].mirroredUrl = prev.mirroredUrl;
+        const fresh = newItem.supportingDocuments[i];
+        if (!prev) return;
+        if (prev.withdrawn) {
+          fresh.withdrawn = prev.withdrawn;
+          delete fresh.mirroredUrl;
+          return;
+        }
+        if (prev.mirroredUrl && !fresh.mirroredUrl) {
+          fresh.mirroredUrl = prev.mirroredUrl;
           result.restoredMirrors++;
         }
       });

@@ -16,6 +16,7 @@ require('dotenv').config();
 
 const { DocumentMirror } = require('./lib/document-mirror');
 const { loadChangeLog, saveChangeLog } = require('./lib/change-log');
+const { applyWithdrawals, loadWithdrawn } = require('./lib/withdrawn-documents');
 
 /**
  * Parse command line arguments
@@ -210,7 +211,12 @@ async function main() {
     uploaded: 0,
     skipped: 0,
     failed: 0,
+    withdrawn: 0,
   };
+
+  // data/withdrawn-documents.json — a malformed list stops the run here,
+  // before anything is uploaded.
+  const withdrawnList = loadWithdrawn();
 
   // Create mirror instance
   let mirror = null;
@@ -230,6 +236,10 @@ async function main() {
       continue;
     }
 
+    // Re-stamp withdrawn documents from the list every run, so a lost stamp
+    // heals and a withdrawn document is never re-uploaded.
+    const withdrawals = applyWithdrawals(meetingData, withdrawnList);
+
     if (options.dryRun) {
       // Dry run - just count documents
       console.log(`\n[DRY RUN] Meeting ${meetingData.meetingId}`);
@@ -239,8 +249,12 @@ async function main() {
           docCount += item.supportingDocuments.length;
         }
       }
-      console.log(`  Would mirror ${docCount} documents`);
+      console.log(`  Would mirror ${docCount - withdrawals.withdrawn} documents`);
+      if (withdrawals.withdrawn > 0) {
+        console.log(`  Withdrawn (would not mirror): ${withdrawals.withdrawn}`);
+      }
       summary.totalDocuments += docCount;
+      summary.withdrawn += withdrawals.withdrawn;
       summary.meetings++;
       continue;
     }
@@ -273,9 +287,10 @@ async function main() {
     summary.uploaded += results.uploaded;
     summary.skipped += results.skipped;
     summary.failed += results.failed;
+    summary.withdrawn += results.withdrawn;
 
-    // Save updated JSON with mirrored URLs
-    if (results.uploaded > 0 || results.skipped > 0) {
+    // Save updated JSON with mirrored URLs (and any withdrawn stamp change)
+    if (results.uploaded > 0 || results.skipped > 0 || withdrawals.changed > 0) {
       saveMeetingData(filePath, meetingData);
       console.log(`\nSaved updated JSON: ${path.basename(filePath)}`);
     }
@@ -292,6 +307,9 @@ async function main() {
     console.log(`  Uploaded: ${summary.uploaded}`);
     console.log(`  Already existed: ${summary.skipped}`);
     console.log(`  Failed: ${summary.failed}`);
+    if (summary.withdrawn > 0) {
+      console.log(`  Withdrawn (not mirrored): ${summary.withdrawn}`);
+    }
 
     if (options.force && summary.uploaded > 0) {
       console.log('');

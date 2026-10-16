@@ -109,7 +109,10 @@ while IFS= read -r f; do
 
     DOC_TOTAL=$(jq '[.agendaItems[]?.supportingDocuments[]?] | length' "$f")
     DOC_MIRRORED=$(jq '[.agendaItems[]?.supportingDocuments[]? | select(.mirroredUrl)] | length' "$f")
-    DOC_MISSING=$((DOC_TOTAL - DOC_MIRRORED))
+    # Withdrawn documents (agenda-scraper/data/withdrawn-documents.json) are
+    # deliberately unmirrored; they are not "missing".
+    DOC_WITHDRAWN=$(jq '[.agendaItems[]?.supportingDocuments[]? | select(.withdrawn)] | length' "$f")
+    DOC_MISSING=$((DOC_TOTAL - DOC_MIRRORED - DOC_WITHDRAWN))
     UNMIRRORED_TOTAL=$((UNMIRRORED_TOTAL + DOC_MISSING))
     # Stamps restored/added this run (the JSON on disk can lose mirroredUrl
     # stamps — e.g. a nightly CI scrape commit — even when R2 already has the
@@ -121,11 +124,13 @@ while IFS= read -r f; do
     if [[ "$DOC_MIRRORED" -gt "$PREV_MIRRORED" ]]; then
         echo "  🔗 mirroredUrl stamps: $PREV_MIRRORED → $DOC_MIRRORED (+$((DOC_MIRRORED - PREV_MIRRORED)) this run)"
     fi
+    WITHDRAWN_NOTE=""
+    [[ "$DOC_WITHDRAWN" -gt 0 ]] && WITHDRAWN_NOTE=" ($DOC_WITHDRAWN withdrawn, links to the City)"
     if [[ "$DOC_MISSING" -eq 0 ]]; then
-        echo "  ✓ Documents: $DOC_MIRRORED/$DOC_TOTAL mirrored to R2"
+        echo "  ✓ Documents: $DOC_MIRRORED/$DOC_TOTAL mirrored to R2$WITHDRAWN_NOTE"
     else
-        echo "  ⚠️  Documents: $DOC_MIRRORED/$DOC_TOTAL mirrored — $DOC_MISSING still link to OnBase:"
-        jq -r '.agendaItems[]? | . as $it | .supportingDocuments[]? | select(.mirroredUrl | not)
+        echo "  ⚠️  Documents: $DOC_MIRRORED/$DOC_TOTAL mirrored$WITHDRAWN_NOTE — $DOC_MISSING still link to OnBase:"
+        jq -r '.agendaItems[]? | . as $it | .supportingDocuments[]? | select((.mirroredUrl | not) and (.withdrawn | not))
                | "     item \($it.number // $it.agendaItemId // "?") [\($it.fileNumber // "-")]: \(.title)"' "$f" | head -20
     fi
 done <<< "$AFTER_FILES"

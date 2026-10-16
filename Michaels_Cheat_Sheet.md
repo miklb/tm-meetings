@@ -105,6 +105,34 @@ document; re-running `--mirror` picks them up.
 No VRB notifications yet: the `--vrb=<date>` dispatch adapter is still to be
 built (`docs/plans/VRB-NEXT-STEPS-2026-09-20.md`).
 
+## Takedown request — withdraw one mirrored document
+
+Removes our R2 copy only. The item stays, the other documents stay, and the
+link falls back to the City's OnBase copy. The list
+(`agenda-scraper/data/withdrawn-documents.json`) is public with the repo:
+what was withdrawn and a one-word reason, never who asked.
+
+```bash
+cd agenda-scraper
+node withdraw-document.js "<the docs.meetings.tampamonitor.com URL>" --reason privacy-request --dry-run
+node withdraw-document.js "<the docs.meetings.tampamonitor.com URL>" --reason privacy-request
+node json-to-markdown.js --date YYYY-MM-DD        # tm-static post now links the City's copy
+cd ..
+npm run build-db && npm run build-site && npm run deploy
+git add agenda-scraper/data && git commit -m "withdraw <file> (privacy-request)" && git push
+# then commit + push tm-static (src/posts/<year>/...) to publish the post
+```
+
+**Then purge the edge cache, by hand.** Deleting the R2 object is not enough:
+Cloudflare caches GETs on `docs.meetings.tampamonitor.com` for a year, so the
+URL keeps serving until you purge it. Dashboard → tampamonitor.com zone →
+Caching → Configuration → Purge Cache → Custom purge → paste the URL. Check:
+`curl -sI "<url>" | grep -i "^HTTP\|cf-cache-status"` should say 404.
+
+Reasons: `privacy-request | city-request | legal | error`. Reply to the
+requester with the OnBase URL the command prints; that copy is the City's.
+Reversal: delete the entry from the list, `node mirror-documents.js <meetingId>`.
+
 ## Send notifications (dispatch)
 
 Dispatch is manual and has **no dry-run** — it POSTs to production and emails every

@@ -633,7 +633,10 @@
           "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AFFIDAVIT%20OF%20COMPLIANCE%20REZ26-37%2005142026.PDF.pdf?documentType=1&meetingId=2829&itemId=23310&publishId=193940&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AFFIDAVIT OF COMPLIANCE REZ26-37 05142026.PDF in a new tab",
           "originalText": "AFFIDAVIT OF COMPLIANCE REZ26-37 05142026.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-05-14/meeting-2829/23310/affidavit-of-compliance-rez26-37-05142026.pdf"
+          "withdrawn": {
+            "on": "2026-10-16",
+            "reason": "privacy-request"
+          }
         },
         {
           "title": "REZ-26-37 FINAL SITE PLAN.PDF",

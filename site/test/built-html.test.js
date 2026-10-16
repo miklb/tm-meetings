@@ -119,6 +119,23 @@ if (!fs.existsSync(DB)) {
     assert.match(base, /prefers-reduced-motion: reduce\)\s*\{\s*@view-transition/);
   });
 
+  const decode = (html) => html.replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"');
+
+  // ── Withdrawn documents ──
+  const WITHDRAWN = path.join(SITE, '..', 'agenda-scraper', 'data', 'withdrawn-documents.json');
+  const withdrawnKeys = fs.existsSync(WITHDRAWN)
+    ? JSON.parse(fs.readFileSync(WITHDRAWN, 'utf8')).documents.map((d) => d.key)
+    : [];
+
+  test('a withdrawn document is linked nowhere on the site, in any form', { skip: !withdrawnKeys.length && 'no withdrawn documents' }, () => {
+    for (const p of pages) {
+      const text = decode(p.html);
+      for (const key of withdrawnKeys) {
+        assert.ok(!text.includes(key), `${p.url} links withdrawn document ${key}`);
+      }
+    }
+  });
+
   // ── Land use board pages ──
   const VRB_DATA = path.join(SITE, '..', 'agenda-scraper', 'data', 'vrb');
   const rawHearings = fs.existsSync(VRB_DATA)
@@ -126,7 +143,6 @@ if (!fs.existsSync(DB)) {
       .map((f) => JSON.parse(fs.readFileSync(path.join(VRB_DATA, f), 'utf8')))
     : [];
   const boardPages = pages.filter((p) => p.url.startsWith('/boards/'));
-  const decode = (html) => html.replace(/&amp;/g, '&').replace(/&#39;|&apos;/g, "'").replace(/&quot;/g, '"');
 
   test('board pages: one per collected hearing, plus the index, linked from the nav', { skip: !rawHearings.length && 'no VRB data' }, () => {
     for (const h of rawHearings) {

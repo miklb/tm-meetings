@@ -44,6 +44,7 @@ const {
     formatStaffReportSection,
     formatChangeLogDate,
 } = require('./lib/agenda-content');
+const { applyWithdrawals } = require('./lib/withdrawn-documents');
 
 const DATA_DIR = path.join(__dirname, 'data');
 const RECORD_DIR = path.join(__dirname, 'agendas');
@@ -54,7 +55,12 @@ const RECORD_DIR = path.join(__dirname, 'agendas');
 
 function loadJSONData(filePath) {
     try {
-        return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        const data = JSON.parse(fs.readFileSync(filePath, 'utf8'));
+        // A withdrawn document (data/withdrawn-documents.json) loses its
+        // mirroredUrl here even if the stored stamp is stale, so docHref()
+        // falls back to the City's own copy.
+        applyWithdrawals(data);
+        return data;
     } catch (error) {
         console.error(`Error loading JSON file ${filePath}:`, error.message);
         return null;

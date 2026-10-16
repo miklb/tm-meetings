@@ -223,6 +223,11 @@ agenda-scraper/
   Two documents in one item can share a title; the R2 key for the second
   and later gets `-2`, `-3` … before the extension, in page order (see
   `planDocumentFilenames` in `lib/document-mirror.js`).
+- `withdrawn` (per supporting document) — `{on, reason}`, stamped from
+  `data/withdrawn-documents.json` by `applyWithdrawals()` in
+  `lib/withdrawn-documents.js` on every mirror, markdown and build-db run. A
+  withdrawn document has no `mirroredUrl`, is never re-uploaded, and links
+  to the City's copy everywhere. See "Withdrawing a document" below.
 
 ## Re-scrape safety (`lib/scrape-guard.js`)
 
@@ -236,11 +241,38 @@ reconciles the fresh scrape with the stored one:
   any item came back empty, an item that lost *some* documents is held too:
   the city republishes a page item by item, and the 10/12/26 nightly caught
   REZ-26-74 with 1 of 8 documents published.
-- **Carried forward**: `mirroredUrl` by document identity (title + ordinal
-  for repeats), so re-scrapes never drop R2 links; and `coordinates`,
-  `location` and `folioNumbers` when the fresh scrape has them empty, so the
-  nightly (which has no `MAPBOX_API_TOKEN`) cannot blank a geocode a local
-  run made. A fresh non-empty value always wins.
+- **Carried forward**: `mirroredUrl` and `withdrawn` by document identity
+  (title + ordinal for repeats), so re-scrapes never drop R2 links or
+  re-link a withdrawn document; and `coordinates`, `location` and
+  `folioNumbers` when the fresh scrape has them empty, so the nightly (which
+  has no `MAPBOX_API_TOKEN`) cannot blank a geocode a local run made. A
+  fresh non-empty value always wins.
+
+## Withdrawing a document (takedown requests)
+
+The archive mirrors public records; occasionally someone asks for one copy
+to come down (a noticed-parties list with home addresses, say). Withdrawing
+removes **our mirror only**: the item, its other documents and the link to
+the City's own copy stay. The City's record is not ours to change.
+
+```bash
+node withdraw-document.js <mirrored-url> --reason privacy-request --dry-run   # resolve, change nothing
+node withdraw-document.js <mirrored-url> --reason privacy-request             # list + R2 delete + JSON stamp
+```
+
+It prints the follow-up (regenerate the tm-static post for that date,
+`npm run build-db && npm run build-site && npm run deploy` from the repo
+root, commit both repos, and **purge the URL from Cloudflare's cache in the
+dashboard**: the edge caches GETs on the custom domain for a year, so the
+file keeps serving after the R2 delete until it is purged). Reasons are a
+closed vocabulary: `privacy-request | city-request | legal | error`.
+
+`data/withdrawn-documents.json` is the source of truth and is **public with
+the repo**: it records what was withdrawn (key, meeting, item, file number,
+title, date, one-word reason) and never who asked. `loadWithdrawn()` refuses
+any other field, and `test/withdrawn-documents.test.js` validates the real
+file. Reversal is deleting the entry and re-running
+`mirror-documents.js <meetingId>`.
 
 `node json-scraper.js <id>` for a meeting no longer on the OnBase list keeps
 the stored `meetingType`/`meetingName` (it used to demote to `regular`).
