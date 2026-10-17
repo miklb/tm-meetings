@@ -1,0 +1,15 @@
+{
+  "meetingId": "2937",
+  "date": "2026-10-22",
+  "records": {
+    "AB2-26-0000021": {
+      "lat": 27.953003,
+      "lng": -82.454474,
+      "address": "1018 E Cass St",
+      "neighborhood": "Tampa Downtown Partnership",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00UXZ&agencyCode=TAMPA",
+      "locatedOn": "2026-10-17"
+    }
+  }
+}
