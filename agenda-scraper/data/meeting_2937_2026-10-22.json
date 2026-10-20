@@ -3,7 +3,7 @@
   "meetingType": "evening",
   "meetingName": "City Council Evening",
   "meetingTime": "17:01",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "October 22, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2937&type=agenda&doctype=1",
@@ -18,49 +18,49 @@
       "supportingDocuments": [
         {
           "title": "AB2-26-17 CERTIFIED APPLICATION.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216856&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20CERTIFIED%20APPLICATION.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216997&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-17 CERTIFIED APPLICATION.PDF in a new tab",
           "originalText": "AB2-26-17 CERTIFIED APPLICATION.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28098/ab2-26-17-certified-application.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216857&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216998&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28098/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "AB2-26-17 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216858&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216999&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-17 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
           "originalText": "AB2-26-17 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28098/ab2-26-17-affidavit-of-compliance.pdf"
         },
         {
           "title": "AB2-26-17 - SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216859&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=217000&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-17 - SITE PLAN.PDF in a new tab",
           "originalText": "AB2-26-17 - SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28098/ab2-26-17-site-plan.pdf"
         },
         {
           "title": "AB2-26-17 STAFF REPORT_FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20STAFF%20REPORT_FINAL.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216860&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-17%20STAFF%20REPORT_FINAL.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=217001&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-17 STAFF REPORT_FINAL.PDF in a new tab",
           "originalText": "AB2-26-17 STAFF REPORT_FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28098/ab2-26-17-staff-report_final.pdf"
         },
         {
           "title": "ORDINANCE - AB2 26-17.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20AB2%2026-17.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216861&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20AB2%2026-17.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=217002&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of ORDINANCE - AB2 26-17.PDF in a new tab",
           "originalText": "ORDINANCE - AB2 26-17.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28098/ordinance-ab2-26-17.pdf"
         },
         {
           "title": "BIE AB2 26-17.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BIE%20AB2%2026-17.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=216862&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BIE%20AB2%2026-17.PDF.pdf?documentType=1&meetingId=2937&itemId=28098&publishId=217003&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of BIE AB2 26-17.PDF in a new tab",
           "originalText": "BIE AB2 26-17.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28098/bie-ab2-26-17.pdf"
@@ -102,98 +102,6 @@
     },
     {
       "number": 2,
-      "agendaItemId": "28090",
-      "title": "File No. TA/CPA 24-04\nPublic Hearing on a publicly initiated text amendment updating the Future Land Use Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Future Land Use Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "rawTitle": "File No. TA/CPA 24-04\nPublic Hearing on a publicly initiated text amendment updating the Future Land Use Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Future Land Use Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "fileNumber": "TA/CPA24-04",
-      "background": "",
-      "supportingDocuments": [
-        {
-          "title": "ORDINANCE - TA CPA 24-04.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20TA%20CPA%2024-04.PDF.pdf?documentType=1&meetingId=2937&itemId=28090&publishId=216863&isSection=False&isAttachment=True",
-          "originalTitle": "View PDF of ORDINANCE - TA CPA 24-04.PDF in a new tab",
-          "originalText": "ORDINANCE - TA CPA 24-04.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28090/ordinance-ta-cpa-24-04.pdf"
-        }
-      ],
-      "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
-      "summaryText": "",
-      "projectedCosts": null,
-      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2 THROUGH 5)"
-    },
-    {
-      "number": 3,
-      "agendaItemId": "28091",
-      "title": "File No. TA/CPA 24-05\nPublic Hearing on a publicly initiated text amendment updating the Housing Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Housing Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "rawTitle": "File No. TA/CPA 24-05\nPublic Hearing on a publicly initiated text amendment updating the Housing Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Housing Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "fileNumber": "TA/CPA24-05",
-      "background": "",
-      "supportingDocuments": [
-        {
-          "title": "ORDINANCE - TA CPA 24-05.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20TA%20CPA%2024-05.PDF.pdf?documentType=1&meetingId=2937&itemId=28091&publishId=216864&isSection=False&isAttachment=True",
-          "originalTitle": "View PDF of ORDINANCE - TA CPA 24-05.PDF in a new tab",
-          "originalText": "ORDINANCE - TA CPA 24-05.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28091/ordinance-ta-cpa-24-05.pdf"
-        }
-      ],
-      "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
-      "summaryText": "",
-      "projectedCosts": null,
-      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2 THROUGH 5)"
-    },
-    {
-      "number": 4,
-      "agendaItemId": "28092",
-      "title": "File No. TA/CPA 24-06\nPublic Hearing on a publicly initiated text amendment updating the Coastal Management Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Coastal Management Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "rawTitle": "File No. TA/CPA 24-06\nPublic Hearing on a publicly initiated text amendment updating the Coastal Management Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Coastal Management Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "fileNumber": "TA/CPA24-06",
-      "background": "",
-      "supportingDocuments": [
-        {
-          "title": "ORDINANCE - TA CPA 24-06.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20TA%20CPA%2024-06.PDF.pdf?documentType=1&meetingId=2937&itemId=28092&publishId=216865&isSection=False&isAttachment=True",
-          "originalTitle": "View PDF of ORDINANCE - TA CPA 24-06.PDF in a new tab",
-          "originalText": "ORDINANCE - TA CPA 24-06.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28092/ordinance-ta-cpa-24-06.pdf"
-        }
-      ],
-      "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
-      "summaryText": "",
-      "projectedCosts": null,
-      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2 THROUGH 5)"
-    },
-    {
-      "number": 5,
-      "agendaItemId": "28093",
-      "title": "File No. CIP-CIS FY27-FY31\nPublic Hearing on the Tampa Comprehensive Plan, Capital Improvement Section to replace fiscal year 2026 through 2030 with Capital Improvement Section Schedule of Projects for fiscal year 2027 through 2031.\n(Ordinance being presented for first reading consideration) - An Ordinance amending the Tampa Comprehensive Plan, Capital Improvement Program and Capital Improvements Section schedule of projects by replacing the fiscal year 2026 through fiscal year 2030 Capital Improvements Section schedule of projects with the fiscal year 2027 through fiscal year 2031 Capital Improvements Section schedule of projects; providing repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "rawTitle": "File No. CIP-CIS FY27-FY31\nPublic Hearing on the Tampa Comprehensive Plan, Capital Improvement Section to replace fiscal year 2026 through 2030 with Capital Improvement Section Schedule of Projects for fiscal year 2027 through 2031.\n(Ordinance being presented for first reading consideration) - An Ordinance amending the Tampa Comprehensive Plan, Capital Improvement Program and Capital Improvements Section schedule of projects by replacing the fiscal year 2026 through fiscal year 2030 Capital Improvements Section schedule of projects with the fiscal year 2027 through fiscal year 2031 Capital Improvements Section schedule of projects; providing repeal of all ordinances in conflict; providing for severability; providing an effective date.",
-      "fileNumber": "CIP-CIS",
-      "background": "",
-      "supportingDocuments": [
-        {
-          "title": "ORDINANCE - CIP-CIS FY27-FY31.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20CIP-CIS%20FY27-FY31.PDF.pdf?documentType=1&meetingId=2937&itemId=28093&publishId=216866&isSection=False&isAttachment=True",
-          "originalTitle": "View PDF of ORDINANCE - CIP-CIS FY27-FY31.PDF in a new tab",
-          "originalText": "ORDINANCE - CIP-CIS FY27-FY31.PDF",
-          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28093/ordinance-cip-cis-fy27-fy31.pdf"
-        }
-      ],
-      "folioNumbers": [],
-      "location": "",
-      "coordinates": null,
-      "summaryText": "",
-      "projectedCosts": null,
-      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 2 THROUGH 5)"
-    },
-    {
-      "number": 6,
       "agendaItemId": "27118",
       "title": "File No. AB2-26-21\nPublic hearing on application of Volo E Viaggi LLC requesting a Special Use 2 for a Small Venue; Beer, wine & liquor - Consumption on premises and package sales/off-premises consumption, generally located at 1018 East Cass Street.\n(Ordinance being presented for first reading consideration) - An ordinance approving a special use permit (SU-2) for alcoholic beverage sales – small venue; beer, wine and liquor (consumption on-premises and package sales/off-premises consumption) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 1018 East Cass Street, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance No. 2023-164; providing an effective date.",
       "rawTitle": "File No. AB2-26-21\nPublic hearing on application of Volo E Viaggi LLC requesting a Special Use 2 for a Small Venue; Beer, wine & liquor - Consumption on premises and package sales/off-premises consumption, generally located at 1018 East Cass Street.\n(Ordinance being presented for first reading consideration) - An ordinance approving a special use permit (SU-2) for alcoholic beverage sales – small venue; beer, wine and liquor (consumption on-premises and package sales/off-premises consumption) and making lawful the sale of beverages regardless of alcoholic content – beer, wine and liquor – on that certain lot, plot or tract of land located at 1018 East Cass Street, Tampa, Florida, as more particularly described in Section 3; providing that all ordinances or parts of ordinances in conflict are repealed; repealing Ordinance No. 2023-164; providing an effective date.",
@@ -202,49 +110,49 @@
       "supportingDocuments": [
         {
           "title": "CERTIFIED APPLICATION - AB2-26-21 FINAL.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CERTIFIED%20APPLICATION%20-%20AB2-26-21%20FINAL.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=216867&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/CERTIFIED%20APPLICATION%20-%20AB2-26-21%20FINAL.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=217004&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of CERTIFIED APPLICATION - AB2-26-21 FINAL.PDF in a new tab",
           "originalText": "CERTIFIED APPLICATION - AB2-26-21 FINAL.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/27118/certified-application-ab2-26-21-final.pdf"
         },
         {
           "title": "Summary Sheet- COVER SHEET",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=216868&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/Summary%20Sheet-%20COVER%20SHEET.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=217005&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of Summary Sheet- COVER SHEET in a new tab",
           "originalText": "Summary Sheet- COVER SHEET",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/27118/summary-sheet-cover-sheet.pdf"
         },
         {
           "title": "AB2-26-21 AFFIDAVIT OF COMPLIANCE.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-21%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=216869&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-21%20AFFIDAVIT%20OF%20COMPLIANCE.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=217006&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-21 AFFIDAVIT OF COMPLIANCE.PDF in a new tab",
           "originalText": "AB2-26-21 AFFIDAVIT OF COMPLIANCE.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/27118/ab2-26-21-affidavit-of-compliance.pdf"
         },
         {
           "title": "AB2-26-21 - SITE PLAN.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-21%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=216870&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-21%20-%20SITE%20PLAN.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=217007&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-21 - SITE PLAN.PDF in a new tab",
           "originalText": "AB2-26-21 - SITE PLAN.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/27118/ab2-26-21-site-plan.pdf"
         },
         {
           "title": "AB2-26-21 - STAFF REPORT.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-21%20-%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=216871&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/AB2-26-21%20-%20STAFF%20REPORT.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=217008&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of AB2-26-21 - STAFF REPORT.PDF in a new tab",
           "originalText": "AB2-26-21 - STAFF REPORT.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/27118/ab2-26-21-staff-report.pdf"
         },
         {
           "title": "BUSINESS IMPACT ESTIMATE - AB2 26-21.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BUSINESS%20IMPACT%20ESTIMATE%20-%20AB2%2026-21.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=216872&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/BUSINESS%20IMPACT%20ESTIMATE%20-%20AB2%2026-21.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=217009&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of BUSINESS IMPACT ESTIMATE - AB2 26-21.PDF in a new tab",
           "originalText": "BUSINESS IMPACT ESTIMATE - AB2 26-21.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/27118/business-impact-estimate-ab2-26-21.pdf"
         },
         {
           "title": "FINAL ORDINANCE - AB2 26-21.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FINAL%20ORDINANCE%20-%20AB2%2026-21.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=216873&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/FINAL%20ORDINANCE%20-%20AB2%2026-21.PDF.pdf?documentType=1&meetingId=2937&itemId=27118&publishId=217010&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of FINAL ORDINANCE - AB2 26-21.PDF in a new tab",
           "originalText": "FINAL ORDINANCE - AB2 26-21.PDF",
           "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/27118/final-ordinance-ab2-26-21.pdf"
@@ -261,7 +169,7 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
-      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEM 6)",
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEM 2)",
       "staffReport": {
         "landUseType": "ALCOHOL_BEVERAGE",
         "currentZoning": "Central Business District 1 (CBD-1)",
@@ -281,6 +189,116 @@
         "waivers": [],
         "findings": "The Development Review and Compliance staff has reviewed the petition and finds the request CONSISTENT with the applicable City of Tampa Land Development Regulations. Minor site plan modifications are required to be made between first and second reading should it be the pleasure of City Council to approve this application."
       }
+    },
+    {
+      "number": 3,
+      "agendaItemId": "28090",
+      "title": "File No. TA/CPA 24-04\nPublic Hearing on a publicly initiated text amendment updating the Future Land Use Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Future Land Use Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA 24-04\nPublic Hearing on a publicly initiated text amendment updating the Future Land Use Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Future Land Use Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "fileNumber": "TA/CPA24-04",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ORDINANCE - TA CPA 24-04.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20TA%20CPA%2024-04.PDF.pdf?documentType=1&meetingId=2937&itemId=28090&publishId=217011&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ORDINANCE - TA CPA 24-04.PDF in a new tab",
+          "originalText": "ORDINANCE - TA CPA 24-04.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28090/ordinance-ta-cpa-24-04.pdf"
+        },
+        {
+          "title": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF.pdf?documentType=1&meetingId=2937&itemId=28090&publishId=217012&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF in a new tab",
+          "originalText": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 3 THROUGH 6)"
+    },
+    {
+      "number": 4,
+      "agendaItemId": "28091",
+      "title": "File No. TA/CPA 24-05\nPublic Hearing on a publicly initiated text amendment updating the Housing Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Housing Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA 24-05\nPublic Hearing on a publicly initiated text amendment updating the Housing Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Housing Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "fileNumber": "TA/CPA24-05",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ORDINANCE - TA CPA 24-05.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20TA%20CPA%2024-05.PDF.pdf?documentType=1&meetingId=2937&itemId=28091&publishId=217013&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ORDINANCE - TA CPA 24-05.PDF in a new tab",
+          "originalText": "ORDINANCE - TA CPA 24-05.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28091/ordinance-ta-cpa-24-05.pdf"
+        },
+        {
+          "title": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF.pdf?documentType=1&meetingId=2937&itemId=28091&publishId=217014&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF in a new tab",
+          "originalText": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 3 THROUGH 6)"
+    },
+    {
+      "number": 5,
+      "agendaItemId": "28092",
+      "title": "File No. TA/CPA 24-06\nPublic Hearing on a publicly initiated text amendment updating the Coastal Management Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Coastal Management Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. TA/CPA 24-06\nPublic Hearing on a publicly initiated text amendment updating the Coastal Management Section of the City of Tampa Comprehensive Plan.\n(Ordinance being presented for first reading consideration) - An ordinance amending the Tampa Comprehensive Plan, updating the Coastal Management Section; providing for repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "fileNumber": "TA/CPA24-06",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ORDINANCE - TA CPA 24-06.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20TA%20CPA%2024-06.PDF.pdf?documentType=1&meetingId=2937&itemId=28092&publishId=217015&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ORDINANCE - TA CPA 24-06.PDF in a new tab",
+          "originalText": "ORDINANCE - TA CPA 24-06.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28092/ordinance-ta-cpa-24-06.pdf"
+        },
+        {
+          "title": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF.pdf?documentType=1&meetingId=2937&itemId=28092&publishId=217016&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF in a new tab",
+          "originalText": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 3 THROUGH 6)"
+    },
+    {
+      "number": 6,
+      "agendaItemId": "28093",
+      "title": "File No. CIP-CIS FY27-FY31\nPublic Hearing on the Tampa Comprehensive Plan, Capital Improvement Section to replace fiscal year 2026 through 2030 with Capital Improvement Section Schedule of Projects for fiscal year 2027 through 2031.\n(Ordinance being presented for first reading consideration) - An Ordinance amending the Tampa Comprehensive Plan, Capital Improvement Program and Capital Improvements Section schedule of projects by replacing the fiscal year 2026 through fiscal year 2030 Capital Improvements Section schedule of projects with the fiscal year 2027 through fiscal year 2031 Capital Improvements Section schedule of projects; providing repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "rawTitle": "File No. CIP-CIS FY27-FY31\nPublic Hearing on the Tampa Comprehensive Plan, Capital Improvement Section to replace fiscal year 2026 through 2030 with Capital Improvement Section Schedule of Projects for fiscal year 2027 through 2031.\n(Ordinance being presented for first reading consideration) - An Ordinance amending the Tampa Comprehensive Plan, Capital Improvement Program and Capital Improvements Section schedule of projects by replacing the fiscal year 2026 through fiscal year 2030 Capital Improvements Section schedule of projects with the fiscal year 2027 through fiscal year 2031 Capital Improvements Section schedule of projects; providing repeal of all ordinances in conflict; providing for severability; providing an effective date.",
+      "fileNumber": "CIP-CIS",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "ORDINANCE - CIP-CIS FY27-FY31.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/ORDINANCE%20-%20CIP-CIS%20FY27-FY31.PDF.pdf?documentType=1&meetingId=2937&itemId=28093&publishId=217017&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of ORDINANCE - CIP-CIS FY27-FY31.PDF in a new tab",
+          "originalText": "ORDINANCE - CIP-CIS FY27-FY31.PDF",
+          "mirroredUrl": "https://docs.meetings.tampamonitor.com/2026-10-22/meeting-2937/28093/ordinance-cip-cis-fy27-fy31.pdf"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "5:01 P.M. – PUBLIC HEARINGS - (ITEMS 3 THROUGH 6)"
     },
     {
       "number": 7,

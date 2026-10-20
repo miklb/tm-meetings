@@ -2,5 +2,16 @@
   "meetingId": "2842",
   "meetingDate": "2026-10-22",
   "firstSeenAt": "2026-10-16T23:01:20.132Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-10-20",
+      "scrapedAt": "2026-10-20T23:01:12.107Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": []
+    }
+  ]
 }

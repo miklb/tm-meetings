@@ -2,5 +2,33 @@
   "meetingId": "2937",
   "meetingDate": "2026-10-22",
   "firstSeenAt": "2026-10-16T23:01:16.717Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-10-20",
+      "scrapedAt": "2026-10-20T23:01:09.608Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF"
+        },
+        {
+          "itemNumber": 4,
+          "itemFileNumber": "TA/CPA24-05",
+          "filename": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF"
+        },
+        {
+          "itemNumber": 5,
+          "itemFileNumber": "TA/CPA24-06",
+          "filename": "TCC_MEMO_FL_COASTAL_HOUSING_ADOPTION_081726.PDF"
+        }
+      ]
+    }
+  ]
 }
