@@ -4,6 +4,24 @@
   "firstSeenAt": "2026-10-16T23:01:16.717Z",
   "entries": [
     {
+      "date": "2026-10-21",
+      "scrapedAt": "2026-10-21T23:01:19.827Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "1-WRITTEN COMMENTS - TACPA 24-04.PDF"
+        },
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "2-WRITTEN COMMENTS - TACPA 24-04.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-10-20",
       "scrapedAt": "2026-10-20T23:01:09.608Z",
       "agendaTypePromoted": {
