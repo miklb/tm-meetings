@@ -4,6 +4,19 @@
   "firstSeenAt": "2026-10-16T23:01:16.717Z",
   "entries": [
     {
+      "date": "2026-10-22",
+      "scrapedAt": "2026-10-22T23:01:07.129Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 3,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "3-WRITTEN COMMENTS - TACPA 24-04.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-10-21",
       "scrapedAt": "2026-10-21T23:01:19.827Z",
       "itemsAdded": [],
