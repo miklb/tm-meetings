@@ -4220,7 +4220,17 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
-      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 59 through 62) (Non-Quasi-Judicial proceedings)"
+      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 59 through 62) (Non-Quasi-Judicial proceedings)",
+      "staffReport": {
+        "landUseType": "VACATION",
+        "currentZoning": null,
+        "requestedZoning": null,
+        "futureLandUse": null,
+        "overlayDistrict": "East Tampa",
+        "neighborhoodAssociations": [],
+        "waivers": [],
+        "findings": "Right of way is currently improved."
+      }
     },
     {
       "number": 61,
@@ -4514,7 +4524,28 @@
         "hasProjectedCosts": false,
         "hasParsedRows": false
       },
-      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 63 through 69)"
+      "section": "10:00 A.M. - PUBLIC HEARINGS – SECOND READING ON PROPOSED ORDINANCES – (Items 63 through 69)",
+      "staffReport": {
+        "landUseType": "REZONING",
+        "currentZoning": "IG",
+        "requestedZoning": "CI",
+        "futureLandUse": "GMU-24",
+        "overlayDistrict": "West Tampa",
+        "neighborhoodAssociations": [
+          "Tampa Heights Civic Association, Inc",
+          "Tampa Heights Civic Association Land Use Committee",
+          "Residents of Adalee Street",
+          "One Laurel Place",
+          "Informed Neighbor",
+          "Tampa Overlook Neighborhood Association",
+          "Bowman Heights",
+          "VM Ybor Neighborhood Association & Crimewatch",
+          "Ybor Heights Neighborhood Association and Watch Group",
+          "Riverside Heights Civic Association"
+        ],
+        "waivers": [],
+        "findings": "The Development Review and Compliance staff has reviewed the application and found the request CONSISTENT with the City of Tampa Code of Ordinances."
+      }
     },
     {
       "number": 65,

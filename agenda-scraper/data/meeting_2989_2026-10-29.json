@@ -1,0 +1,35 @@
+{
+  "meetingId": "2989",
+  "meetingType": "special",
+  "meetingName": "City Council Special Call",
+  "meetingTime": "09:00",
+  "agendaType": "DRAFT",
+  "isAddendum": false,
+  "meetingDate": "October 29, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2989&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "28272",
+      "title": "File No. CM26-28272\nCouncil to discuss and take action on the Community Benefits Agreement with the Tampa Bay Rays.\nMemorandum from Rebecca Johns, Senior Assistant City Attorney, transmitting the proposed Community Benefits Agreement for said agenda item. (To be R/F)",
+      "rawTitle": "File No. CM26-28272\nCouncil to discuss and take action on the Community Benefits Agreement with the Tampa Bay Rays.\nMemorandum from Rebecca Johns, Senior Assistant City Attorney, transmitting the proposed Community Benefits Agreement for said agenda item. (To be R/F)",
+      "fileNumber": "CM26-28272",
+      "background": "",
+      "supportingDocuments": [
+        {
+          "title": "MEMO RE RAYS COMMUNITY BENEFITS AGREEMENT (CBA) - COUNCIL SPECIAL CALL 10-29-2026.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO%20RE%20RAYS%20COMMUNITY%20BENEFITS%20AGREEMENT%20(CBA)%20-%20COUNCIL%20SPECIAL%20CALL%2010-29-2.pdf?documentType=1&meetingId=2989&itemId=28272&publishId=217097&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of MEMO RE RAYS COMMUNITY BENEFITS AGREEMENT (CBA) - COUNCIL SPECIAL CALL 10-29-2026.PDF in a new tab",
+          "originalText": "MEMO RE RAYS COMMUNITY BENEFITS AGREEMENT (CBA) - COUNCIL SPECIAL CALL 10-29-2026.PDF"
+        }
+      ],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "section": "Roll Call"
+    }
+  ],
+  "formattedDate": "2026-10-29"
+}
