@@ -341,10 +341,10 @@ function renderItem(item, ctx) {
     // --- Supporting documents (sibling of the drawer — links stay visible) ---
     const docs = item.supportingDocuments || [];
     if (docs.length) {
-        const lis = docs.map(doc => {
+        const newFlags = newDocumentFlags(item, ctx.newDocKeys);
+        const lis = docs.map((doc, i) => {
             const title = doc.title || doc.originalText || 'Document';
-            const isNew = ctx.newDocKeys.has(`${item.number}::${norm(title)}`);
-            const cls = isNew ? ' class="is-new"' : '';
+            const cls = newFlags[i] ? ' class="is-new"' : '';
             return `<li${cls}><a href="${escapeHtml(docHref(doc))}" target="_blank" rel="noopener noreferrer">${escapeHtml(title)}</a></li>`;
         }).join('\n');
         parts.push(`<div class="agenda-item__docs">\n<p class="agenda-item__label">Supporting documents</p>\n<ul>\n${lis}\n</ul>\n</div>`);
@@ -418,16 +418,33 @@ function collectMapData(items, locations = {}) {
 /**
  * Collect "<itemNumber>::<NORMALIZED FILENAME>" keys for every document the
  * change log recorded as newly mirrored — these get the is-new chip in the
- * item's supporting-docs list.
+ * item's supporting-docs list. An entry with `copy` (2, 3 …) is a later copy
+ * under a title the item already had, and gets "#<copy>" so only that link
+ * is flagged; without it the title was new and every link under it is.
  */
 function collectNewDocKeys(changeLog) {
     const keys = new Set();
     for (const entry of (changeLog && changeLog.entries) || []) {
         for (const doc of entry.newDocuments || []) {
-            keys.add(`${doc.itemNumber}::${norm(doc.filename)}`);
+            keys.add(`${doc.itemNumber}::${norm(doc.filename)}${doc.copy > 1 ? `#${doc.copy}` : ''}`);
         }
     }
     return keys;
+}
+
+/**
+ * One boolean per supporting document of `item`: does it get the is-new chip?
+ * Same-titled documents are numbered in page order, as lib/diff-meeting.js
+ * numbers them, so "#2" lands on the second link of that name.
+ */
+function newDocumentFlags(item, newDocKeys) {
+    const seen = new Map();
+    return (item.supportingDocuments || []).map(doc => {
+        const key = `${item.number}::${norm(doc.title || doc.originalText || 'Document')}`;
+        const copy = (seen.get(key) || 0) + 1;
+        seen.set(key, copy);
+        return newDocKeys.has(key) || newDocKeys.has(`${key}#${copy}`);
+    });
 }
 
 function changeItemLi(desc, itemAnchorMap) {
@@ -1121,4 +1138,6 @@ module.exports = {
     groupConsentSections,
     renderChangesSection,
     collectMapData,
+    collectNewDocKeys,
+    newDocumentFlags,
 };

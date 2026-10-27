@@ -117,8 +117,11 @@ function runReportWithStagedChange(oldData, newData, logLines) {
   const git = (...args) => execFileSync('git', ['-c', 'commit.gpgsign=false', '-c', 'user.name=test', '-c', 'user.email=test@example.com', ...args], { cwd: dir, encoding: 'utf8' });
   fs.mkdirSync(path.join(dir, 'scripts'));
   fs.mkdirSync(path.join(dir, 'agenda-scraper', 'data'), { recursive: true });
+  fs.mkdirSync(path.join(dir, 'agenda-scraper', 'lib'));
   fs.copyFileSync(SCRIPT, path.join(dir, 'scripts', 'nightly-report.sh'));
-  fs.copyFileSync(path.join(__dirname, '..', '..', 'agenda-scraper', 'diff-without-urls.js'), path.join(dir, 'agenda-scraper', 'diff-without-urls.js'));
+  for (const rel of ['diff-without-urls.js', 'lib/diff-meeting.js']) {
+    fs.copyFileSync(path.join(__dirname, '..', '..', 'agenda-scraper', rel), path.join(dir, 'agenda-scraper', rel));
+  }
   const file = path.join(dir, 'agenda-scraper', 'data', 'meeting_2935_2026-10-08.json');
   git('init', '-q');
   fs.writeFileSync(file, JSON.stringify(oldData));

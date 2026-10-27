@@ -12,7 +12,7 @@
  *   //   agendaTypePromoted: { from: 'DRAFT', to: 'FINAL' } | null,
  *   //   itemsAdded:   [{ agendaItemId, number, fileNumber, shortTitle }],
  *   //   itemsRemoved: [{ agendaItemId, number, fileNumber, shortTitle }],
- *   //   documentsAdded: [{ itemNumber, itemFileNumber, filename }],
+ *   //   documentsAdded: [{ itemNumber, itemFileNumber, filename, copy? }],
  *   // }
  */
 
@@ -95,24 +95,81 @@ function computeMeetingDiff(oldData, newData) {
   //    at scrape time so the nightly dates them the day they appeared on
   //    OnBase, not the day someone ran the mirror. Same {itemNumber,
   //    itemFileNumber, filename} shape the mirror step used to write.
-  const docKey = (doc) => String(doc.title || doc.originalText || '').replace(/\s+/g, ' ').trim().toUpperCase();
   for (const [id, item] of newById) {
     const oldItem = oldById.get(id);
     if (!oldItem) continue; // whole item is new — covered by itemsAdded
-    const oldDocs = new Set((oldItem.supportingDocuments || []).map(docKey));
-    for (const doc of item.supportingDocuments || []) {
-      const key = docKey(doc);
-      if (key && !oldDocs.has(key)) {
-        result.documentsAdded.push({
-          itemNumber: item.number,
-          itemFileNumber: item.fileNumber || '',
-          filename: doc.title || doc.originalText || 'Document',
-        });
-      }
+    const { added } = pairDocumentsByTitle(oldItem.supportingDocuments, item.supportingDocuments);
+    const copyOf = copyNumbers(item.supportingDocuments);
+    for (const doc of added) {
+      const entry = {
+        itemNumber: item.number,
+        itemFileNumber: item.fileNumber || '',
+        filename: doc.title || doc.originalText || 'Document',
+      };
+      // A later copy under a title the item already had: the number says
+      // which of the same-named links is new (json-to-markdown.js badges
+      // only that one). No number means the title itself was new.
+      if (copyOf.get(doc) > 1) entry.copy = copyOf.get(doc);
+      result.documentsAdded.push(entry);
     }
   }
 
   return result;
+}
+
+const docKey = (doc) => String(doc.title || doc.originalText || '').replace(/\s+/g, ' ').trim().toUpperCase();
+
+/**
+ * Each document's 1-based position among the same-titled documents of its
+ * item, in page order (the "#2" of lib/scrape-guard.js documentKeys).
+ * @param {Object[]} docs
+ * @returns {Map<Object, number>}
+ */
+function copyNumbers(docs) {
+  const seen = new Map();
+  const out = new Map();
+  for (const doc of docs || []) {
+    const key = docKey(doc);
+    const n = (seen.get(key) || 0) + 1;
+    seen.set(key, n);
+    out.set(doc, n);
+  }
+  return out;
+}
+
+/**
+ * Pair one item's old and new documents by title. URLs can't be the key
+ * (publishIds rotate on every republish) and titles repeat within an item:
+ * on 10/26/26 the clerk attached the revised Rays CBA memo, Exhibit A and
+ * all, under the original's exact filename (meeting 2989). So this counts
+ * copies per title instead of testing membership. Copies pair up in page
+ * order, the order planDocumentFilenames in document-mirror.js uses to give
+ * the later copy its "-2" name, and the surplus on either side is the change.
+ * @param {Object[]} oldDocs
+ * @param {Object[]} newDocs
+ * @returns {{added: Object[], removed: Object[], matched: Array<[Object, Object]>}}
+ *   matched holds [oldDoc, newDoc] pairs; untitled documents are ignored.
+ */
+function pairDocumentsByTitle(oldDocs, newDocs) {
+  const unpaired = new Map(); // title key → old copies not yet paired
+  for (const doc of oldDocs || []) {
+    const key = docKey(doc);
+    if (!key) continue;
+    if (!unpaired.has(key)) unpaired.set(key, []);
+    unpaired.get(key).push(doc);
+  }
+  const added = [];
+  const matched = [];
+  for (const doc of newDocs || []) {
+    const key = docKey(doc);
+    if (!key) continue;
+    const copies = unpaired.get(key);
+    if (copies && copies.length > 0) matched.push([copies.shift(), doc]);
+    else added.push(doc);
+  }
+  const leftover = new Set([...unpaired.values()].flat());
+  const removed = (oldDocs || []).filter(doc => leftover.has(doc));
+  return { added, removed, matched };
 }
 
 /**
@@ -129,4 +186,4 @@ function diffIsEmpty(diff) {
   );
 }
 
-module.exports = { computeMeetingDiff, diffIsEmpty };
+module.exports = { computeMeetingDiff, diffIsEmpty, pairDocumentsByTitle, docKey };

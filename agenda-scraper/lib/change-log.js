@@ -98,8 +98,10 @@ function todayLocal() {
 /**
  * Identity key for a logged document: item number + filename with
  * whitespace/case normalised and the extension dropped (the mirror step
- * may swap ".DOCX" for ".DO.pdf" per OnBase's converted download URL).
- * @param {{itemNumber: number|string, filename: string}} doc
+ * may swap ".DOCX" for ".DO.pdf" per OnBase's converted download URL),
+ * plus "#2", "#3" … for a later copy under a repeated title (lib/diff-meeting.js
+ * sets `copy`), so a second copy isn't skipped as already logged.
+ * @param {{itemNumber: number|string, filename: string, copy?: number}} doc
  * @returns {string}
  */
 function documentKey(doc) {
@@ -108,7 +110,7 @@ function documentKey(doc) {
     .replace(/\s+/g, ' ')
     .trim()
     .toUpperCase();
-  return `${doc.itemNumber}::${name}`;
+  return `${doc.itemNumber}::${name}${doc.copy > 1 ? `#${doc.copy}` : ''}`;
 }
 
 /**

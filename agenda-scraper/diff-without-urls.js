@@ -7,6 +7,7 @@
  */
 
 const fs = require('fs');
+const { pairDocumentsByTitle, docKey } = require('./lib/diff-meeting');
 
 function deepEqual(obj1, obj2, path = '') {
   const diffs = [];
@@ -138,7 +139,7 @@ function formatDiff(diff) {
 
 function formatSummary(oldData, newData) {
   const lines = [];
-  let matchedDocCount = 0; // documents present in both files, matched by title
+  let matchedDocCount = 0; // documents present in both files, paired by title
   let urlChangedCount = 0; // ...whose OnBase URL differs (publishId rotation)
   let hasMeaningfulChange = false;
 
@@ -179,56 +180,47 @@ function formatSummary(oldData, newData) {
     lines.push(`**Items:** ${countPart}${changes ? ` (${changes})` : ''}\n`);
   }
 
-  // 3. Genuinely new/removed documents — compare by title key, not by index
-  const docKey = doc => (doc.title || doc.originalText || '').trim().toUpperCase();
+  // 3. Genuinely new/removed documents — compare by title key, not by index.
+  //    A second copy under an existing title counts (lib/diff-meeting.js).
   const newDocsByItem = [];
   const removedDocsByItem = [];
 
   for (const [id, newItem] of newById) {
     if (!oldById.has(id)) continue; // brand-new item — already reported above
-    const oldItem = oldById.get(id);
-    const oldDocs = oldItem.supportingDocuments || [];
-    const oldUrlByKey = new Map(); // first occurrence wins for a repeated title
-    for (const doc of oldDocs) {
-      const key = docKey(doc);
-      if (key && !oldUrlByKey.has(key)) oldUrlByKey.set(key, doc.url);
-    }
-    const oldDocKeys = new Set(oldUrlByKey.keys());
+    const oldDocs = oldById.get(id).supportingDocuments || [];
     const newDocs = newItem.supportingDocuments || [];
-    const newDocKeys = new Set(newDocs.map(docKey).filter(k => k));
-    const genuinelyNew = newDocs.filter(doc => {
-      const key = docKey(doc);
-      return key && !oldDocKeys.has(key);
-    });
-    // Documents the clerk pulled (e.g. a presentation removed after the
-    // meeting). These vanish from the regenerated post, so they must be
+    // removed: documents the clerk pulled (e.g. a presentation removed after
+    // the meeting). These vanish from the regenerated post, so they must be
     // reported — a mirrored copy may still exist on R2.
-    const removed = oldDocs.filter(doc => {
-      const key = docKey(doc);
-      return key && !newDocKeys.has(key);
-    });
-    newDocs.forEach(doc => {
-      const key = docKey(doc);
-      if (!key || !oldDocKeys.has(key)) return;
+    const { added, removed, matched } = pairDocumentsByTitle(oldDocs, newDocs);
+    for (const [oldDoc, newDoc] of matched) {
       matchedDocCount++;
-      if (oldUrlByKey.get(key) !== doc.url) urlChangedCount++;
-    });
-    if (genuinelyNew.length > 0) {
-      newDocsByItem.push({ id, item: newItem, docs: genuinelyNew });
+      if (oldDoc.url !== newDoc.url) urlChangedCount++;
+    }
+    // A bare title reads like the document already there; say how many
+    // copies the item has under it now.
+    const label = doc => {
+      const key = docKey(doc);
+      const before = oldDocs.filter(d => docKey(d) === key).length;
+      const after = newDocs.filter(d => docKey(d) === key).length;
+      return before > 0 && after > 0 ? `${key} (copies under this title: ${before} → ${after})` : key;
+    };
+    if (added.length > 0) {
+      newDocsByItem.push({ id, item: newItem, docs: added, label });
     }
     if (removed.length > 0) {
-      removedDocsByItem.push({ id, item: newItem, docs: removed });
+      removedDocsByItem.push({ id, item: newItem, docs: removed, label });
     }
   }
 
   if (removedDocsByItem.length > 0) {
     hasMeaningfulChange = true;
     lines.push('**Removed documents:**');
-    for (const { id, item, docs } of removedDocsByItem) {
+    for (const { id, item, docs, label: docLabel } of removedDocsByItem) {
       const label = item.fileNumber ? item.fileNumber : `agendaItemId=${id}`;
       lines.push(`  - ${label} (agendaItemId=${id}): ${docs.length} document${docs.length !== 1 ? 's' : ''} removed`);
       for (const doc of docs) {
-        lines.push(`    - ${docKey(doc)}${doc.mirroredUrl ? ` (mirrored copy: ${doc.mirroredUrl})` : ''}`);
+        lines.push(`    - ${docLabel(doc)}${doc.mirroredUrl ? ` (mirrored copy: ${doc.mirroredUrl})` : ''}`);
       }
     }
     lines.push('');
@@ -237,11 +229,11 @@ function formatSummary(oldData, newData) {
   if (newDocsByItem.length > 0) {
     hasMeaningfulChange = true;
     lines.push('**New documents:**');
-    for (const { id, item, docs } of newDocsByItem) {
+    for (const { id, item, docs, label: docLabel } of newDocsByItem) {
       const label = item.fileNumber ? item.fileNumber : `agendaItemId=${id}`;
       lines.push(`  - ${label} (agendaItemId=${id}): ${docs.length} new document${docs.length !== 1 ? 's' : ''}`);
       for (const doc of docs) {
-        lines.push(`    - ${docKey(doc)}`);
+        lines.push(`    - ${docLabel(doc)}`);
       }
     }
     lines.push('');

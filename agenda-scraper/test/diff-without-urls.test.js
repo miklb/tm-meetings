@@ -70,6 +70,33 @@ test('no note when nothing rotated', () => {
   assert.doesNotMatch(out, /document URLs changed/);
 });
 
+test('a second copy under an existing title is a new document', () => {
+  // The 10/26/26 shape (meeting 2989): the clerk republished the item with
+  // the revised memo attached under the original's exact filename. The
+  // nightly said "No meaningful changes" and opened no issue.
+  const memo = 'MEMO RE RAYS COMMUNITY BENEFITS AGREEMENT (CBA).PDF';
+  const before = meeting([item('28272', null, [doc(memo, 217097)])]);
+  const after = meeting([item('28272', null, [doc(memo, 217130), doc(memo, 217131)])]);
+  const out = summary(before, after);
+  assert.match(out, /agendaItemId=28272 \(agendaItemId=28272\): 1 new document\b/);
+  assert.match(out, /copies under this title: 1 → 2/);
+  assert.match(out, /1 of 1 document URLs changed/);
+});
+
+test('losing one of two same-titled copies is a removal', () => {
+  const before = meeting([item('10', 'REZ-26-1', [doc('A', 1), doc('A', 2)])]);
+  const after = meeting([item('10', 'REZ-26-1', [doc('A', 1)])]);
+  const out = summary(before, after);
+  assert.match(out, /REZ-26-1 \(agendaItemId=10\): 1 document removed/);
+  assert.match(out, /copies under this title: 2 → 1/);
+});
+
+test('same-titled copies that only rotated are still churn', () => {
+  const before = meeting([item('10', 'REZ-26-1', [doc('A', 1), doc('A', 2)])]);
+  const after = meeting([item('10', 'REZ-26-1', [doc('A', 101), doc('A', 102)])]);
+  assert.match(summary(before, after), /No meaningful changes/);
+});
+
 test('URL-only churn is still suppressed', () => {
   const before = meeting([item('10', 'REZ-26-1', [doc('A', 1)])]);
   const after = meeting([item('10', 'REZ-26-1', [doc('A', 101)])]);
