@@ -1,0 +1,23 @@
+{
+  "meeting_id": 2713,
+  "meeting_date": "2026-10-22",
+  "meeting_type": "Workshop",
+  "videos": [
+    {
+      "video_id": "lngXWjgjvx8",
+      "title": "Tampa City Council Workshop Session - 10/22/26",
+      "part": 1,
+      "session": "morning",
+      "published_at": "2026-10-23T03:54:52Z",
+      "duration": "PT2H27M35S",
+      "chapters": [],
+      "offset_seconds": 640
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-10-28T20:34:09Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}

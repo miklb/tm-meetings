@@ -1,0 +1,23 @@
+{
+  "meeting_id": 2712,
+  "meeting_date": "2026-10-22",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "dl9TtCs945M",
+      "title": "Tampa City Council PM - 10/22/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-10-23T11:13:02Z",
+      "duration": "PT1H54M30S",
+      "chapters": [],
+      "offset_seconds": 686
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-10-28T20:45:24Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}

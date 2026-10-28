@@ -1,0 +1,726 @@
+{
+  "meeting_id": "2713",
+  "url": "https://apps.tampagov.net/cttv_cc_webapp/Agenda.aspx?pkey=2713",
+  "meeting_title": "TAMPA CITY COUNCIL WORKSHOPS",
+  "meeting_date_time": "THURSDAY, OCTOBER 22, 2026, 9:00 A.M.",
+  "disclaimer": "THIS FILE REPRESENTS AN UNEDITED VERSION OF REALTIME CAPTIONING WHICH SHOULD NEITHER BE RELIED UPON FOR COMPLETE ACCURACY NOR USED AS A VERBATIM TRANSCRIPT. ANY PERSON WHO NEEDS A VERBATIM TRANSCRIPT OF THE PROCEEDINGS MAY NEED TO HIRE A COURT REPORTER.",
+  "segments": [
+    {
+      "timestamp": "9:06:48AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Good morning, everyone. Welcome to Tampa City Council workshop edition. We are with a skeleton crew today. Today, we're going to stand for a moment of silence, and then we'll do the pledge of allegiance. [Moment of silence] thank you so much. [Pledge of allegiance] thank you so much. Can I get a roll call, please?"
+    },
+    {
+      "timestamp": "9:07:33AM",
+      "speaker": "The clerk",
+      "text": "Miranda?"
+    },
+    {
+      "timestamp": "9:07:37AM",
+      "speaker": "Charlie Miranda",
+      "text": "Here."
+    },
+    {
+      "timestamp": "9:07:39AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Here."
+    },
+    {
+      "timestamp": "9:07:39AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Here. Viera? Carlson?"
+    },
+    {
+      "timestamp": "9:07:43AM",
+      "speaker": "Bill Carlson",
+      "text": "Here. We have a physical quorum."
+    },
+    {
+      "timestamp": "9:07:47AM",
+      "speaker": "Lynn Hurtak",
+      "text": "You can tell that we are bare bones today. Our CRA chair, Councilwoman Young, is at the fra conference, and Mr. Viera is not feeling well. I am not sure where Chair Clendenin is, but either way -- oh, he's at the conference, too. Oh, personal. Anyway, it is just the four of us. We may be taking some more breaks because we can't get off the dais. We may be doing a little bit of breaks here and there for five minutes. You'll have to bear with us today. What I would like is -- do we need to open the agenda? No. I do have some things that need to be continued. Council member Carlson."
+    },
+    {
+      "timestamp": "9:08:36AM",
+      "speaker": "Bill Carlson",
+      "text": "Yeah, I would move to continue items 1 and 2 to January 28 workshop."
+    },
+    {
+      "timestamp": "9:08:41AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I have a motion to continue items 1 and 2 and a second from council member Maniscalco. All those in favor? Aye. Okay."
+    },
+    {
+      "timestamp": "9:08:54AM",
+      "speaker": "Bill Carlson",
+      "text": "Move to continue three and four. [ laughter ]"
+    },
+    {
+      "timestamp": "9:08:59AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yeah, we only have three and four. I also wanted to have Mr. Shelby remind folks what the rules are for public comment. It's a little bit different today. Go right ahead. You don't have to read the whole spiel. Just talk to people."
+    },
+    {
+      "timestamp": "9:09:17AM",
+      "speaker": "Martin Shelby",
+      "text": "The rules per your amended and revised rules of procedure is before the end of the workshop, you will take public comment from members of the public, at least that's the last thing I remember. I'll double check that."
+    },
+    {
+      "timestamp": "9:09:31AM",
+      "speaker": "Lynn Hurtak",
+      "text": "It's not after every item?"
+    },
+    {
+      "timestamp": "9:09:34AM",
+      "speaker": "Martin Shelby",
+      "text": "Let me check."
+    },
+    {
+      "timestamp": "9:09:35AM",
+      "speaker": "Lynn Hurtak",
+      "text": "While he's checking, we'll move on. Our first item is item 3, the discussion of the creation of a bike ped advisory committee and multimodal and pedestrian safety on roads, parks, and trails. Good morning."
+    },
+    {
+      "timestamp": "9:09:47AM",
+      "speaker": "Adam Purcell",
+      "text": "Good morning. Adam Purcell, transportation services director, City of Tampa. I know this motion has been a long time coming or this discussion has been a long time coming. It's been continued. It's been revised. We appreciate the opportunity to come today and discuss it with council. There should be a presentation that was submitted."
+    },
+    {
+      "timestamp": "9:10:03AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Okay."
+    },
+    {
+      "timestamp": "9:10:04AM",
+      "speaker": "Adam Purcell",
+      "text": "Is that something that can be put on the screen? If not, I have paper copies."
+    },
+    {
+      "timestamp": "9:10:15AM",
+      "speaker": "Lynn Hurtak",
+      "text": "They don't have one? Yeah, I think we might have to go with paper."
+    },
+    {
+      "timestamp": "9:10:21AM",
+      "speaker": "Adam Purcell",
+      "text": "Moving things along ..."
+    },
+    {
+      "timestamp": "9:10:36AM",
+      "speaker": "Lynn Hurtak",
+      "text": "There you go. It is the wheel that's at the front that you turn back and forth. There you go."
+    },
+    {
+      "timestamp": "9:10:41AM",
+      "speaker": "Adam Purcell",
+      "text": "We'll figure the technology out this morning."
+    },
+    {
+      "timestamp": "9:10:43AM",
+      "speaker": "Lynn Hurtak",
+      "text": "That's okay. Everybody who comes in front, we all have to deal with the wheel."
+    },
+    {
+      "timestamp": "9:10:50AM",
+      "speaker": "Adam Purcell",
+      "text": "Okay. So, I wanted to talk really quickly about the topic. The motion talks about the establishment of a bicycle pedestrian advisory committee. It also talks about a discussion of risks that our vulnerable users of the transportation system face every month. I'm going to touch on both today. Most of the discussion will be about transportation safety. And then Councilwoman Hurtak and staff have had several meetings on the establishment of a bpac, and we talked through that. I'll close with that discussion at the end. I'll start -- we'll work through our problem statement. Work through the plans that we use to address safety. How we analyze crashes and program our safety improvements citywide, and then how we go about some of our engineering solutions for transportation safety citywide. So why are we here today before City Council discussing this topic? Well, it's because about 300 people a year are killed or seriously injured on our roadways. So, in the theme of health, safety, and welfare as a primary purpose of government, we're here to work to address and ensure the safety of the public. You can see that the trend -- I guess if there's any good news on this slide is that the trend is headed downwards. From 2020 -- my apologies with the printed copy. This is a little difficult to see -- but in 2020 the serious injuries were much larger. It's kind of trended down to 2024. So the only good news that we have on this slide is that the trend is headed in the right direction. But we typically use five-year averages because we see some fluctuation from year to year where a single incident may kind of skew the data. When we say serious injury crashes, these are where people are transported to a hospital where they receive medical attention. And a lot of those types of crashes result in life-changing injuries. So people sometimes never recover from those kinds of crashes. Their families are affected for a lifetime because of them. And then 60 plus people each year on average are losing their lives on our roadways. So that's why we're here facing that challenge today as a group. And to put that in perspective, from a bicycle -- I'm sorry -- from a pedestrian perspective, the Tampa metropolitan area is exceptionally hazardous for pedestrians. When we look at the nation, we are number 8 nationally for deaths of pedestrians per 100,000 residents. It's a sun belt issue. It's a kind of urban design city development issue that postwar in the south cities were built to service the automobile. And that results in a condition where it's hazardous for our vulnerable users. So when I say \"vulnerable users,\" those are people that are riding bicycles, that are walking on our roadways, that don't have an air bag, that don't have a seat belt, that don't have the steel cage of an automobile protecting them in a crash. These are people that are walking or riding a bicycle and are especially vulnerable to crashes. This figure shows that Florida is number five nationally as a state with the death of pedestrians per 100,000 residents, and the Tampa metro area is number 8 nationally. So this is a problem of significance here, and when we compare it to the other areas of the country, we are at the top of the list. What are we doing about it as a city? We've developed an action plan. A safety action plan. We have taken a look at the conditions on our roadways. We've met with community groups and organizations. We've brought in outside consultants to evaluate our transportation safety conditions, and we developed an action plan that lays out a series of strategies that we as a city can undertake to mitigate the crashes and the hazards that occur on our roadway networks. We completed that plan back in 2021. So there was a push with USDOT to fund safety projects nationally. And in order to qualify for that federal funding, those jurisdictions had to have a safety -- comprehensive safety action plan in place or you could not apply for the federal funds. In that aspect, that served us well. We've gotten tens of millions of dollars in federal funding for safety in the city because we had that vision zero action plan in place. That action plan came just before our citywide mobility plan. So it kind of set the basis of the discussion on safety. And then our mobility plan moved to implement many of the policies that are outlined in that safety action plan. Our safety action plan is based on the idea of a safe systems approach. I was hoping Councilman Clendenin was here today because the safe systems model comes from the federal aviation administration. It comes from the idea that any single point of failure should not result in a crash or an incident that results in serious injury or loss of life. So that's where we had this idea, this swiss cheese model is what we call it on the safety side of the risk management side, where any single point of failure, if you look at the whole, that is the opportunity for that risk of failure, but as it falls through that level, it should reach another level of redundancy where another factor limits the severity of that incident so that it doesn't result in a serious injury or fatal crash. We look at it as safe for people, safe for streets, safe for speeds, safe for vehicles and postcrash care. So we layer those defenses or those layers of mitigation so that one unsafe action, one unsafe vehicle, one unsafe roadway doesn't result in a fatal or serious injury crash, but we layer that safety approach so that the likelihood of a serious injury is limited. So, how do we begin to analyze the system? How do we target our investment? How do we identify the areas that are issues within the city? We have access to statewide database of every crash that occurs within the city. So these are based on police reports. So every reported crash is put into a database. That database is summarized. And we can map it. And we can begin to analyze the data. So you can see from the crash data presented here that you can start to see some of the corridors in the city where the crashes are more frequent, where they are more severe. And we start to as a staff look at those and analyze those corridors. We take this data -- and this is five-year -- this is five years of crashes within the City of Tampa between 2020 and 2024. So every crash -- every severe injury or fatal crash in the city is included in this map. The red areas are those areas that have the highest concentration of crashes. We take that information and we analyze it. We look at it on traffic volume. We look at it on segment characteristics of the roadway. We work to define a high injury network. So the high injury network is where most of the crashes on the system occur based on the total area of the system. We've broken it down into just the first map shows generally all crashes on the system, what it looks like. But then we can start to drill down into the data and look at like the center map where that shows bicycle and pedestrian crashes. So that's our high injury network for bicycle and pedestrian crashes. And then you can look to the right where we have high injury intersections. So this lets us begin to identify those areas of the system that we have the greatest problems on and focus our resources so we can address those areas of greatest need. We do a lot of data analysis on those crash reports. We pull statistics out of them. We're able to start to build profiles for roadway types. This is the most hazardous roadway type in the city. This is a six lane high-speed roadway. So speed limit of 40 or 50 miles an hour. And we know that speed is a direct contributor to severity of a crash. So we can see that along these roads that they are exceptionally hazardous for those vulnerable users. You would think that a lot of automobiles travel along those roads and not so many bicycle and pedestrians do, and that's true, but when the crashes occur on these facilities and they involve those vulnerable users, then there are exceptionally grave consequences for people that don't have the protection of the vehicle. 50% of all fatal crashes involving bicyclists and pedestrians occur on this type of road. This is a place where we want to focus some resources. We can also look at this, and it lets us start to understand what characteristics of that roadway are starting to contribute to those conditions. It's a little bit difficult to read here. Again, I apologize for the printed copy. But along cycle length and permissive left-turn phases, inconsistent medians, so we start to look at vehicles turning across those roadways. We start to look at points of conflict between vehicles. We start to look at points of conflict between pedestrians and vehicles. We see the dart and dash, so the police officer that reports those types of crashes will characterize the cause of the crash in the police report, so we can see that people darting and dashing across the road contribute highly to those. Just over half of the crashes along those types of corridors occur at night. We understand maybe there are lighting conditions involved in those types of crashes. We don't just do that for the six-lane roads, but we do it for all the road types that we have in the city. We can start to look at some of the smaller roads. This looks a lot like macdill. This looks a lot like columbus. Some of the other smaller roadways in the city that we have that are lower speed. One of the things we see on these roads is that the occurrence of crashes is underrepresented when you look at the length of the roadway present. We know these roadways are a little bit safer than the six lane roads and likely just because of the limitation of speed on these roads. You don't have the higher speed crashes. You don't have the force involved in them and you don't have the severe and fatal injuries in these crashes as well. But you can also see -- this is a little easier to read on this slide -- but the crash considerations. This starts to let us have an idea where the problems along these corridors exist, like driveways. If you think of some of those smaller roads, frequent driveways where there is a bicyclist or pedestrian crossing that driveway where there is a car turning from a driveway into a travel lane, those are the areas that we start to look to address problems on the system. Once we have this type of information, this type of characterization of issue, we start to look from an engineering perspective how we can begin to address it. So this comes out of that same dangerous by a design book that the pedestrian crash data came out of, and it shows, you know, the existing condition on the left. That could be just about any intersection in the City of Tampa. A lot of our intersections look at that. And then as engineers we start to look at those points of conflict. We start to look at the areas where faster moving vehicles are interacting with other vehicles or interacting with pedestrians. And that's where that second frame, that opportunity frame for change is where we see an opportunity for adjustment. You can see in the orange area, on the top right quadrant of the intersection, there is a continuous right-turn lane. That's great for the movement of cars and the speed of cars moving through an intersection. It's really bad for pedestrians. So we know that areas where we have those continuous right-turn lanes, that needs to be a point where the movement of traffic has to be prioritized or needs to be prioritized, but we really do look for circumstances where that movement of vehicles isn't the sole priority for that intersection. We look for ways that we can make it safer. We do that. We look in the bottom left quadrant of the existing condition, you can see a really extensive driveway. We also look at those as potential points of conflict. We come in and we try to designate the space for the separation of type or mode type. So we want to make clear to the motorists where they should be operating and where they should be turning. We want to make clear to the bicyclists where they should be operating and make clear to the pedestrians where they should be operating. Provide as much distinction or separation between those areas as we can to reduce the conflict. So you can see we take that intersection on the left and for a safer design, we can implement an intersection on the right. So you can see we've taken out that right-turn lane. We've reduced the driveway entrance lengths to shorter, more focused driveways, so that points of conflict crossing sidewalks entering travel lanes are smaller. But those are the kinds of things that we try to do from an engineering perspective. This is also a great example. We get a lot of questions about roundabouts. This roundabout is located at osborne and 34th. It's something we constructed. But you can see from a traffic engineering or operations perspective, at a standard intersection, those red dots are all potential conflict points for vehicles. When you look at a roundabout, the red dots are the potential conflict points for vehicles. You can see why where we have an opportunity to introduce things like roundabouts as a safety counter measure, we like to do it because it takes away a lot of those conflict points. Like I noted, this is one location where we started to implement that kind of solution. So where have we done these kinds of things around the city? Where do we plan to do them? We implement this safety plan through a series of capital improvement projects. This is an example from columbus where we're working on a project to improve columbus from 34th all the way to dale mabry. This was the first phase. This is in East Tampa. It's been really well received by the community. We've come in and taken a roadway that was previously fairly hazardous for pedestrians that didn't have that clear delineation of use -- or space for use, and we've done an update on columbus. That's rolling to the west. The West River project will be implementing a phase in West Tampa as it goes -- columbus goes across the Hillsborough River. So we'll be doing an improvement on columbus there. Again, this is to implement some of those sidewalk improvements. We'll look at the sidewalk extensions as a way to reduce the crossing distance for pedestrians to let the pedestrians become visible before they enter the roadway. You can see that the solution has rfb. Those are the flashing beacons that people can wait to show they are entering the crosswalk to bring more attention to them from drivers. We've done a project. We've started the project on columbus. We completed a phase of it. But additional phases are coming and we'll be rolling further to the west. We're also working on the green artery. This is that place where we want to work, develop a loop through the city where it's clear that pedestrians and bicyclists have safe accommodation on the roads so they can move throughout the city. We've constructed the two segments to the north, segments e and d, and we're working with our Planning and engineering department now to develop the concepts and the designs for the remaining segments of the project. Also downtown, it runs right past city hall, the cycle track that we implemented on Jackson. As we start to see the increase of e-bikes, I think we all agree that they don't -- most circumstances, they don't really fit on the sidewalks. In a lot of circumstances, they don't really fit in the travel lanes. So where can we put them? Those protected bike lanes are a great spot for e-bikes. It gives them a safe place to operate outside of the risk of being hit by a vehicle or outside of the risk of hitting a pedestrian on a sidewalk. So we're working on that. Morgan Street is a project that we're getting ready to advance downtown. That's really our north-south tie together. We're going to introduce a protected bike lane on morgan all the way from brorein up to fortune. That will tie together some of the east-west connections that we already have. Cass Street, the cycle track on cass is a great success story. There is a counter on cass near the Hillsborough River. We had 300,000 people last year use the cycle track on Cass Street. To give you an idea when -- sometimes when it's built, that it's used, and it's used safely. In addition to our capital projects, you may hear a lot of conversation about our quick-build projects. That's where we go in and we don't do a whole lot of extensive engineering work. Well, a whole lot of physical work to change the condition of the corridor. We like to implement this through paint, through delineators, to kind of restripe the space and redefine that space through lower cost elements. That can be deployed much quicker. A lot of our capital projects, those take a year to plan, a year or two to design, and then a year or two to construct. And sometimes the public wants to see something related to safety much faster than a five-year turnaround. This quick-build project program is something we can use where we can do it relatively quickly and we can have an effect on safety through the quick-build projects. One example of that when we moved quickly was after the crash in ybor. We came in. The police chase that occurred in this circumstance came on 7th avenue. 7th avenue was kind of an unimpeded wide lane roadway to the left where that vehicle easily reached higher speeds. What we've tried to do through the quick build project is come in with paint and include on-street parking. So now when 7th avenue is occupied by people, we expect that these spaces would be occupied by cars. That narrows the roadway. It puts a chicane in the roadway, so a vehicle traveling at a high rate of speed will have trouble maneuvering through this type of condition or for the standard driver, it will give them a visual cue that the road is narrowing, that it is a more active space and they need to slow down. This is an example of one of the quick-builds that we've advanced. Looking into the future, I noted that we were successful through that vision zero program and through our federal funding opportunities, we've received two grants through Federal Highway Administration for safety improvements citywide. The first is a 2022 safe streets and roads for all grant. That is a $20 million implementation grant. It includes 20 roadway segments that we're going to go out and implement transportation safety improvements. We've got through concept development. We are working to finish the environmental analysis that's required for the federal projects and plan to put this out for design-build in early of '27. We've worked through the concept phase, and we're about to begin the final design and construction on that. And then we've just finalized our grant agreement for the 2023 safe streets and roads for all. That's four corridors that we're going to come in and do those kind of quick-build solutions to improve safety. The cost of that is about 2.6 million. This is just the grant funding. There is a local match for each of these. I think the total cost for ss4a is 25 million, and for 2023, it's about 3.6 million. The value of those projects is pretty high. One of the things that the 2022 ss4a project is letting us do is advance sidewalk safety action plan or pedestrian safety action plan. Right now in the city -- and this is out of the moves plan -- the moves plan identified 1300 miles of sidewalk gaps in the city. It started to do a prioritization of those gaps. It identified 400 miles of high priority sidewalk gaps. It cost us, if you look at the $220 a linear foot that we used for the construction of sidewalks cost estimate, that's over a billion dollars in sidewalk need within the City of Tampa. So we're going to have to -- we understand that a billion dollars is not going to be made available for sidewalks. We're going to have to prioritize that investment so it best addresses the problem. We've got a $1.7 million allocation in that 2022 ss4a project to do a citywide pedestrian safety action plan. That pedestrian safety action plan is going to let us review and prioritize the sidewalk gaps identified here. It's also going to let us undertake an ADA retrofit. So many of our sidewalks and our ramps were not built in a manner that meets current americans with disabilities act standards. The city is a hundred years old. I think that bill -- or that law was introduced in the 1990s. Much of the city needs to be retrofitted so that it's accessible by all people of all abilities, and it's the federal law to do so. This plan will help facilitate that. This plan is where we hope to bring in that pedestrian -- bicycle pedestrian advisory committee. We want to create a committee with purpose, and we want to create a committee that has the authority to take action. So we hope to bring them in as part of this project. They'll work as an advisory group or a stakeholder in the development of the plan. And then as we work through this plan -- we expect this to take anywhere between 18 and 24 months for the evaluation of the condition and the finalization of the plan. We expect through that 24 month period work with that bicycle pedestrian advisory committee, and then figure out how that could become a permanent fixture within the city. See how it functions within this specified task and see how it performs and see how we want to implement it citywide and continue it. With that, I think that's my response to the motion. I'm here for discussion."
+    },
+    {
+      "timestamp": "9:35:18AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you so much. Council member Maniscalco."
+    },
+    {
+      "timestamp": "9:35:24AM",
+      "speaker": "Guido Maniscalco",
+      "text": "When I first started here, I believe we were ranked number two in the country for pedestrian fatalities. Not number one. Maybe number two. We were one of the worst. It's encouraging to see we're now at number 8, but it's not anything to be proud of. We're making progress but we still have a long ways to go. The goal is with vision zero to get off that list, of that ranking. You mentioned with the Advent of the automobile -- and that's where the problem lies -- but it goes even farther back than that. A former Tampa mayor in 1909 was killed in a traffic accident. He was in a horse and buggy, and he collided with, from what I read, he collided with a truck, which was new at the time. So we have a history going back to even leadership. In 1909. Moving forward as history progresses and with the introduction of automobiles and away from horse and buggies which move at a much slower speed, there were accidents but not like we see with the automobile, we had the streetcar, and we didn't have that usage of cars until really 1946. In that era, post-World War II it was, widening the roads, building the interstates and the highways, pushing by the automobile companies and the tire companies and great streetcar disappearance, having the independence of having your automobile. And in that, we see a rise in -- clearly, more cars on the road. Rise in fatalities. Whether somebody not wearing a seat belt, somebody crossing the street, whatever it is, but as we get into the 21st century and now, you know, we have this data. Like you showed the three intersections and how you have existing, what can be done and what they can be. You showed roundabouts. You showed road diets and complete street projects. I remember when they did Nebraska Avenue from Martin Luther King south. Went from two lanes north and south to how it is today. The more recent Columbus Drive, that segment there, it's beautiful, but you don't have that opportunity for high speed, 7th avenue with the street parking, those cars, they create a barrier. You don't have the opportunity. Once you get on 7th avenue, you go through that brick section and you really can't -- you can but you are encouraged not to. That is another thing with the cars. Through this modernization and urban renewal, not only did we push for the interstates, you know, to move people and buy cars and have that independence, we pulled up a lot of brick streets in Tampa or paved over them. Those brick streets acted as natural deterrents to higher speeds. Yes, over time, cars got faster and whatnot, but look at the hundred plus years. Going back to the mayor getting killed in 1909 to now, the data there of why we need to invest in pedestrian and bicycle safety. Very interesting number about cass with the 300,000 users on bikes. Is it people on foot or is it people on bike?"
+    },
+    {
+      "timestamp": "9:38:36AM",
+      "speaker": "Adam Purcell",
+      "text": "Total people passing the counter. I don't know if they are on bicycles or on foot."
+    },
+    {
+      "timestamp": "9:38:40AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Does it count cars?"
+    },
+    {
+      "timestamp": "9:38:42AM",
+      "speaker": "Adam Purcell",
+      "text": "It does not count cars. It is directed at the trail."
+    },
+    {
+      "timestamp": "9:38:45AM",
+      "speaker": "Guido Maniscalco",
+      "text": "I had people tell me, you build the bike lanes and I don't see bikes. Don't see people using it. 300,000 documented numbers are very interesting. Roundabouts. You have roundabouts on 40th. You showed the one on 34th. On boulevard near armature works, that roundabout wasn't there. Those create -- make people slow down. On ridge, south of columbus, there is a roundabout there. People would speed right through the light to cut through the neighborhood and there were all these signs and people complain about speeding. Roundabouts help. And then I'll close with, you know, how technology is working with self-driving and autonomous vehicles. I have an electric car and I started using the full self-driving. It's interesting to see the accuracy, how it will stop for pedestrians, kids on bikes. I'm turning onto dale mabry and three kids on bikes yesterday and it stops. It yields. Maybe the technology will help because in this last century plus of automobiles, we have plenty of human error. You showed like right-turn lanes, and that harder to read blue slide showed the opportunity of people making errors, whether it's poorly lit, whether it's no turn signal, no left turn, the right turn, people don't yield at the red light and they turn the corner and don't see somebody crossing the street. There's so much that can be done. The technology of the self-driving vehicles help. The vision zero projects, these grants that we're getting from the federal government, the safe streets, in that, it was $20 million with the $5 million local match, and there were more than 20 projects in there. Right?"
+    },
+    {
+      "timestamp": "9:40:27AM",
+      "speaker": "Adam Purcell",
+      "text": "Correct."
+    },
+    {
+      "timestamp": "9:40:29AM",
+      "speaker": "Guido Maniscalco",
+      "text": "I believe on there is habana, right, from Hillsborough south?"
+    },
+    {
+      "timestamp": "9:40:33AM",
+      "speaker": "Adam Purcell",
+      "text": "I would have to look at the specifics. Yeah, I believe that was one of the sections included in the program."
+    },
+    {
+      "timestamp": "9:40:37AM",
+      "speaker": "Guido Maniscalco",
+      "text": "I live right there. Habana is two lanes north and south with a center divider, not a concrete median, but just the stripes in the road. People race through there all the time. When do you a road diet like we would do, Nebraska and all these other streets, it will help. When people have that barrier, the concrete median, the crosswalks, the lit crosswalks, you know, it helps. Lowering the speed limit helps. There was a chart I saw when I was in the mpo, now tpo, where if someone is hit at 15 miles an hour, a pedestrian, their survivability rates are generally high. 30 miles an hour it drops. Lowering the speed limit helps. There are so many little easy things where we don't have to spend a fortune that can make a difference. Putting together this advisory committee is SMART. We have so many organizations like walk bike Tampa and other activists and people that are transportation professionals that have studied this. And getting their opinion and input and their work and their service to it will help us to make better decisions as we move forward. But it's so important. You go to other cities and they are walkable. Here, we're not. Florida is very different. California is very different, but we have to invest in this kind of technology, you know, new things, road diets, whatever it is, lowering the speed limit to keep people safe. Owning a car is expensive. We don't have mass transit. Here we have the streetcar. We have uber and lyft, other ways to get around. We have the bus, but people walk. So many people, you know, they have to get to that bus stop. I want to make sure they are safe. The goal is with vision zero, for us to get off this list. 8th is better than 2nd, but I want us to be off completely. I want us to be a model for the rest of the country how we go from the worst to the best. I think we can get there because we have the tools necessary to do so."
+    },
+    {
+      "timestamp": "9:42:35AM",
+      "speaker": "Adam Purcell",
+      "text": "Agree."
+    },
+    {
+      "timestamp": "9:42:35AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you so much. Council member Carlson."
+    },
+    {
+      "timestamp": "9:42:40AM",
+      "speaker": "Bill Carlson",
+      "text": "I want to preface this by saying when I got on council in 2019, I made a motion supported by council to create a citywide bike plan and citywide sidewalk plan and the mayor ignored it and incorporated some parts of that in Tampa moves which took four to five years to develop. It's a shame because we lost a lot of ground that we should have early on. Just one response to public transit, just three quick stories I can remember, antoni gaudi, the architect in barcelona was killed by a streetcar. In london, about one person a day killed by the tube. Most of those are self-inflicted. Brightline is called the murder train because it kills so many people. Maybe some of those are self-inflicted, too. My point is not to blame mass transit but just to say it's an integrated problem which I think is the way you presented. This should have been presented in 2019. I wish that would have happened. We could have made more progress. Could you go back to the first or second slide? What I'll do, if it's okay with you, I'll hit points that sound like questions. Then when I'm done, you can respond to whatever you want."
+    },
+    {
+      "timestamp": "9:43:54AM",
+      "speaker": "Adam Purcell",
+      "text": "The national crash safety?"
+    },
+    {
+      "timestamp": "9:43:56AM",
+      "speaker": "Bill Carlson",
+      "text": "When I look at statistics like this, and this is a kind of statistic that people like to throw around all the time. If you go to Tampa scorecard.com, you'll see for economic data I only used Tampa. I didn't use regional. Msa throws things off. I know you had some Tampa data later. I would really like to know the Tampa data and drill it down even more. What our PR department should be doing instead of just taking photo OPs of the mayor is trying to push back on some of these, if they are not exactly true. But if you have one city in the whole Tampa Bay region and six county region, one city where a bunch of accidents are happening, it would drag down our numbers. We could be the worst one in the region or we could be the best. We don't know by looking at data like this. Like I said, I'll hit a bunch of things. You can respond to whatever you want. The second slide, the next slide after that, please."
+    },
+    {
+      "timestamp": "9:44:54AM",
+      "speaker": "Adam Purcell",
+      "text": "That's where I jumped into the action plan."
+    },
+    {
+      "timestamp": "9:44:57AM",
+      "speaker": "Bill Carlson",
+      "text": "There was another slide on data. Maybe it was before this. Either before or after. Yeah, the same thing here. There was a spike in crime around 2020 and also as covid started to -- as the shutdowns from covid stopped, there was a spike in traffic, like even before what it was like on covid. The other thing is context. I wonder what the context is before 2020? What was the normal before covid? Was it higher and we have come down? Or does 2020 represent the spike and then we went down from there? I just want to look at the context of it. I'm on the board of an art museum. When you look at things from covid forward, it looks different than when you look at it before. So I think we need to look at the whole context. The other thing is that our country and our city are really divided now partly along political lines. The term vision zero I have not done a poll, but I would say that the term vision zero which was very positive ten years ago is probably majority negative now. If I were you all, I would throw out that name. You could mention it when you're in front of pedestrian enthusiasts, but I think it's better to come up with something else, like safe mobility or something like that. Because vision zero sounds -- it's been politicized. And some of the other terms around this have been politicized, too. We understand what it is, but when those terms are used, it is a lightning rod that causes concern. Another thing -- and as I said, I'm in favor of bike safety, pedestrian safety, mobility alternates, but I'm going to mention some of the things that my constituents are concerned about. They see us spending 2 million, 5 million, whatever, and they wonder why can't you fix the potholes? I live just off macdill and a lot of the roads in South Tampa have terrible potholes. Prospect, sunset, New Suburb Beautiful, one of the worst streets I've ever driven anywhere in the world. When you hit potholes, even if you are going below the speed limit, it knocks your car off in a certain direction and puts pedestrians at risk. It puts bicyclists at risks. Folks could argue, why don't you fix the potholes before you do these things. The other thing, what is the hazard created by potholes that should be looked at? The other thing is that despite the people killed, we had three deaths almost in a ROW on Bayshore a few years ago. Bayshore arguably is one of the biggest investments in our region. One of the deaths was the son of a friend of mine, hal flowers junior who was riding in the painted bike lane and somebody hit him. As a result, I won't ride on Bayshore. I don't allow my kids to ride on Bayshore. I live next to one of the best places to ride bicycles in the area, but I don't think it's safe. If you are riding bicycles on the sidewalk, the pedestrians don't like it because they don't think it is safe. Somehow we have to come up with better solutions for that. I've got some ideas but that's longer term than right now. The other thing is, another one of the deaths was a mother pushing a stroller across the median and then down across the road, and it was caused -- the court said it was caused by kids speeding and racing each other, but the -- since then, I drive on Bayshore every day. Since then, I've seen once a week, once a month, I've seen people pushing their strollers over the grassy median and into the road because even if the flashing -- we put in more flashing lights, even if they are a hundred meters away, they don't want to walk that far. They want to walk across there. This is one of the best streets in the city but we have a continued hazard where the exact same things that caused two deaths are still happening where people are still speeding on Bayshore. Sometimes they are racing on Bayshore. Still an unprotected bike lane and people are still pushing their strollers across the median. Another thing that happens is that the traffic jams we talked about, the ones around the stadium and around downtown, but people get stuck in traffic jams, especially from all the construction going on, which they think is haphazard and not coordinated. And when they get past the construction, they go really fast after that, because they are either behind or they feel like they are behind in time, and that creates a hazard. It would be interesting to figure out what kind of accidents happen because of traffic jams and maybe how to alleviate those by letting people go steady, slow pace, instead of stopping and speeding up afterwards. On my street, you talked about sidewalks. Thank you for mentioning that, three or four hundred, was it, miles of sidewalk that we need to build?"
+    },
+    {
+      "timestamp": "9:50:08AM",
+      "speaker": "Adam Purcell",
+      "text": "1300 miles of sidewalk gap, 400 miles of high priority sidewalk gap."
+    },
+    {
+      "timestamp": "9:50:15AM",
+      "speaker": "Bill Carlson",
+      "text": "My street is a good example of it. There are reasons why there aren't sidewalks there right now. I mentioned this before, there is a person in a wheelchair who is pushed by his nurse down the middle of the road and it's really, really dangerous. And there are people with kids and prams and all kinds of stuff. That is replicated throughout the city and people are racing down these kinds of roads. Sidewalks are a disability issue. We need to make sure we have the right kinds of sidewalks. Also if there are no sidewalks, then people are going down the center of the road. Macdill is another example. I see people crossing -- macdill is a pretty fast road most of the time. I see people crossing all the time. People crossing where they shouldn't on dale mabry and crossing where they shouldn't on Bayshore. That's happening all over the city. One of the things, years ago, do traffic patterns based on where people are going, not just where cars are going, because there seem to be patterns of volumes of people who just don't want to follow the patterns of the sidewalks that -- or the crosswalks that we set up. Also, a fair number of people don't like bicycles and don't like heavy pedestrian traffic, especially people over a certain age where their eyesight and reflexes are slower, not because they don't like people walking or riding bicycles, but they see them as a hazard. They don't want to hit them. Also there are folks -- I talked to christina acosta and others in the past -- folks who aren't following rules. I regularly see people cross multiple lanes of dale mabry on a bicycle, not on a sidewalk. Supposed to act like a car or supposed to be on the sidewalk and the people are not doing either. What successful cities do as public education campaigns, and I think we need a public education campaign, we see people this morning, early, I was driving to go to an event, and the -- there was a turn lane and the guy, he didn't have the white sign. He had the hand, and he still crossed not realizing, not even looking to see that people were turning and he almost got hit because there wasn't very much light out. Somehow we have to let people know, pedestrians also have to follow rules, bicyclists have to follow rules, especially when there's dim light. People could get hit. Two other things I mentioned, in terms of the committee, I wish we could call it something like a safe mobility committee instead of just bicycle and pedestrian, because one thing, the other piece that bicycle and pedestrian is missing is people driving cars. And there are a fair number of people -- look at the feedback we're getting on el prado. Part of that is the city didn't do enough communication up front. Part of it is people look at the things as hazard and inconveniences. We need to think about the overall ecosystem of what's going on and make sure we're getting feedback. I recommend if we create a committee, we should have like maybe four seats for neighborhood leaders, and they could rotate out. But we need another perspective besides just the bike and pedestrian advocates. Because if we're just going through building complete streets, vision zero all over the place, we're going to have the same kind of reaction we have on el prado. It needs to be coordinated and deep communication. We need it in east-west route for bicyclists in South Tampa, but because of the lack of public engagement before that project was built, we're seeing all kinds of headaches right now. Thank you."
+    },
+    {
+      "timestamp": "9:53:56AM",
+      "speaker": "Adam Purcell",
+      "text": "Councilman Carlson, I agree. You know, there's quite a bit of opportunity for us as a department to introduce infrastructure that can facilitate behavior. It's like the idea of urban design, front porch community, that a front porch offers an opportunity for socialization. And if there's no front porch, then the opportunity for socialization goes away. I think the same thing with the infrastructure along our roads. If it's not there, no one is going to ride in a bike lane or walk on a sidewalk because it's not available. If we put it in, then they may ride in the bike lane or walk on the sidewalk. They may walk down the middle of the road. I think from an infrastructure perspective, engineering perspective, I agree that we can facilitate the opportunity for specific behavior. And I think that when we look at the safe systems approach, getting the safe people, safe cars, safe streets, we look at 5e. Engineering, encouragement, enforcement, education, and evaluation. We look at five es. We try to come in from a wider perspective. I agree that right now we have a licensing for automobile drivers. Will there be a licensing for e-bike drivers that requires a minimum test or a minimum level of knowledge on the rules of the road to be able to operate an e-bike on the system? I think that is at the Florida Legislature level right now."
+    },
+    {
+      "timestamp": "9:55:20AM",
+      "speaker": "Bill Carlson",
+      "text": "Can I add two quick things? In public education, I don't know if anybody remembers the australian tv show, wiggles. Disney owned it a while. When my kids were little, one of the songs they had, character would walk up and say, stop at the road, look both ways, look both ways again, cross the road with a friend. My kids have that memorized because we were trying to -- and so there are fun ways to communicate with the public. My criticism about communication is mostly about the communication department which is centered around politics rather than a dialogue with the community. We see on projects like South Howard and the paving of roads and to some extent el prado, it's one directional. Here's what we're doing. Here's what we have. That's not coming from you all. It's coming from the administration that doesn't care what the public says. But we need somehow to, especially as this mayor is a lame duck, we need to start listening to the public and really working on plans that have the public in mind because the public is very, very upset, especially about el prado as an example."
+    },
+    {
+      "timestamp": "9:56:34AM",
+      "speaker": "Brandon Campbell",
+      "text": "Good morning, council. Brandon Campbell, mobility director. Thank you for your recognition of some of the challenges that we're up against. I did want to provide just a little bit of context. The first two things that you asked about, first, which was the chart that shows us as ranked at number 8 and looks at metropolitan statistical area instead of Tampa more granularly. I share the concern. This is actually a report called \"dangerous by design.\" Every time it comes out, it gets a lot of attention. So we want to speak to it and not ignore what it's saying. And the data that actually populates their report is not entirely available to us. This helps to bring some context to where we are from a higher level perspective. But totally appreciate it and understand. We do need to look directly at the things that are within our control as a department. Likewise, you asked about fatal and serious injury crashes in the context of the covid spike, and you are absolutely correct. Nationwide, those numbers went way up in 2020, 2021, and have begun to approach those pre-covid spike numbers. I always want to be cautious about claiming too much credit for declining numbers or accepting too much blame for increasing numbers. They do help us, again, with some context and looking at trends and looking at where we can actually leverage our resources to put them to best use. It's helpful really to understand the broader picture. You asked about tailoring our advisory committee and whether it's a bpac, per SE, or something more broadly speaking, something I would like to suggest that we consider as a staff, if we're looking at individual segments, let's say maybe some of those that were not addressed by that larger effort of the 2022 and 2023 safe streets for all grants projects, there is a methodology, a road safety audit methodology that generally brings in stakeholders of various perspective. And that's something that I intend to look at as like the next step beyond those sort of -- I'll call it like the shotgun approach, where we have all of our high injury network projects, we're putting some faster projects in place to try to address some of those, but then there is a more surgical approach that we might take a second look later at."
+    },
+    {
+      "timestamp": "9:59:19AM",
+      "speaker": "Bill Carlson",
+      "text": "You mentioned in slide one the data. The data is not accessible."
+    },
+    {
+      "timestamp": "9:59:24AM",
+      "speaker": "Brandon Campbell",
+      "text": "We don't get the full set of data from that dangerous by design report."
+    },
+    {
+      "timestamp": "9:59:30AM",
+      "speaker": "Bill Carlson",
+      "text": "Is it possible to buy it or possible to contact the --"
+    },
+    {
+      "timestamp": "9:59:38AM",
+      "speaker": "Adam Purcell",
+      "text": "This graph represents the number of pedestrian fatalities per hundred thousand population. The Tampa, clearwater, st. pete msa is at about 3.74 deaths per 100,000 for pedestrian related."
+    },
+    {
+      "timestamp": "9:59:55AM",
+      "speaker": "Bill Carlson",
+      "text": "Acs or the api crime statistics. Drill down and look at Tampa versus st. pete, versus clearwater."
+    },
+    {
+      "timestamp": "10:00:05AM",
+      "speaker": "Bill Carlson",
+      "text": "Same thing with miami. That's what the Tampa scorecard is, if you use msa, the economic development people use the msa, which makes Tampa look higher than it is because of st. pete's performance. In this case, we could be better or worse depending on what's happening in other cities. There might be a city where there are a whole bunch of accidents and we're getting blamed for it."
+    },
+    {
+      "timestamp": "10:00:27AM",
+      "speaker": "Brandon Campbell",
+      "text": "Yeah, certainly nuance to the data not captured by the graphic. The graphic I think is helpful in looking at, as Adam mentioned, some of the trends we see on a national level are driven by when that particular area was developed in history. You don't see our northeast cities that prioritize sidewalks from the beginning of their build-out as opposed to some of our southern cities that did not."
+    },
+    {
+      "timestamp": "10:00:55AM",
+      "speaker": "Bill Carlson",
+      "text": "It says right there that some city is number ten, the one up --"
+    },
+    {
+      "timestamp": "10:01:01AM",
+      "speaker": "Brandon Campbell",
+      "text": "I'm not sure what number 10 references. It's not listed out. Not broken out."
+    },
+    {
+      "timestamp": "10:01:07AM",
+      "speaker": "Bill Carlson",
+      "text": "And cities out west. I don't like the north-south comparison. New Mexico is number one and Arizona is number three. I think it's more accurate to say what you said in the beginning which is cities that were developed later in a suburban, with a suburban mindset might have less. But there's nothing because of north-south, it was just about the time they were built."
+    },
+    {
+      "timestamp": "10:01:35AM",
+      "speaker": "Brandon Campbell",
+      "text": "Sure. Right."
+    },
+    {
+      "timestamp": "10:01:37AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you. Councilman Miranda. Don't forget to put your light on. Put on your microphone."
+    },
+    {
+      "timestamp": "10:01:47AM",
+      "speaker": "Charlie Miranda",
+      "text": "Let me say this. First of all, thank you for your presentation and thank you for what you're trying to do and get accomplished. But we're really not comparing ourselves to ourselves. You're comparing yourselves to other cities, am I correct?"
+    },
+    {
+      "timestamp": "10:02:03AM",
+      "speaker": "Adam Purcell",
+      "text": "I think we do a bit of both, but, yeah."
+    },
+    {
+      "timestamp": "10:02:06AM",
+      "speaker": "Charlie Miranda",
+      "text": "Lifestyles. I think lifestyles create a lot of our problems. May disagree or agree. But you have different things didn't have before when I was growing up. First of all, I had a population of maybe a hundred thousand. You had very little cars and a lot more bikes. And you had a streetcar and you had a bus transit system only in the City of Tampa. Three factors have come apart. A, the streetcar, very minimal. Used to be 54 miles. Now three or four miles. You had individuals that drove cars very slowly because they didn't go fast. They were clumsy and big. Didn't have air conditioning. The windows were down. You could hear sound. You could hear voices. You could hear everything. The bikes were not e-bikes. They didn't go 40 and 50 miles an hour. You had to pedal them yourself. Most bikes now you can pedal or move by battery or electric power somehow. You have a lot of changes in the lifestyle that we're comparing from now to when it was before. You have a cross here that you have to figure out, population, how many cars on the road, how many bikes, columbia, western flyer, or home made. A lot of them are home made. All these things have to come about to say what the real facts are. When you put 400 feet, Columbus Drive, if I recall something like that, that is a total of one football field and 20 yards. That is a total of what we're talking about. All these things to me are calculated as to the period in life in which you live. An airplane would take hours and hours to go four or five hundred miles. Now it takes one hour. It's incumbent upon the people that drive cars that now air conditioned. Not hear one sound, take it to a dealer because air is leaking somewhere. They can't hear, outside can't hear them. You have a complicated problem created by technology. Human demand to get somewhere faster than before. That's what you have. You have the interstate where they are driving at whatever speed it is or higher. So when you get down, you think you are still driving on the interstate because you see cars all the way around you. Your mind, body and car not all -- I'm thinking out loud. You have a lot more things to think about than just saying, hey, we'll put a bike lane. I was told, I think council member Carlson mentioned el prado. We're going to stripe it. If it didn't work, unstripe it. The other day I was with my daughter. She said let's take a drive down Westshore Boulevard to el prado. Westshore to el prado we took it. Then I started seeing on the east-west and then the north and south where they intersect, they have a bollard, size of eight feet, about six, seven inches. The ones going east and west can only travel in one lane. Am I correct so far?"
+    },
+    {
+      "timestamp": "10:05:50AM",
+      "speaker": "Charlie Miranda",
+      "text": "I want to make sure I saw it. My hair is not all here. So when you're going that way, I looked around, I wonder how many accidents are going to happen here, one car, one automobile hits the side of that curb that is really a curb with a lot of concrete on it, what's going to happen if the car is going 35 or 40 miles an hour? That could happen. All you need is somebody who has the stereo on listening to whatever music. May even have a tv in the car watching the news. I don't know. Too much technology today creates a lot of problems when you're driving a car. But that's how life is. I understand, ranked 8. Should have maybe done much better. But all in all, with all the improvements that we have, the sidewalk next to us, put a camera there, tell me how many bikes run through there? Not too many. How many cars go through there? A lot. So the bicycle is outnumbered by a hundred to one there. That means they have a hundred chances of getting hit. So what I'm saying is, it is what it is and in life you got to protect yourself. You got to think where you're going, how you're going to get there. So leave early if you think you got to get there on time. Don't leave 15 minutes when you have 12 or 20 miles because you ain't going to make it, no matter a bicycle, car, electric car. The other day leaving here, going east -- excuse me, west on the street, Kennedy Boulevard. As I'm approaching Macdill Avenue, I looked up and couldn't believe what was in front of me. It looked like a golf CART but much longer. Driver, person, two kids facing that way and two kids facing me sitting backwards like this and the traffic was coming at them. No license plate on the inside lane. Looks around, makes a left-hand turn across the traffic lane and into the turning lane so he can go south on macdill. Now, that guy is looking for trouble. That's all I saw. You see that anywhere in the City of Tampa now. I didn't see it before. Used to see it on Davis island, that was the deal they had there. Now I see them out on city streets. So sooner or later by an act of god, somebody making a mistake, something is going to happen there. We're creating things that we cannot solve by just trying to solve them because some of these things should not be on the road, heavy traffic. I imagine those were his kids. That's all I've got to say."
+    },
+    {
+      "timestamp": "10:08:56AM",
+      "speaker": "Guido Maniscalco",
+      "text": "We're a victim of progress because a lot of things are coming back full circle. We had a streetcar system that worked that served a good chunk of the city as it was back then, and we stopped the service in 1946. We have been conditioned to accommodate the automobile, and it's been like that since basically World War II. A gentleman that I knew, a World War II veteran, he said the first italian family in Seminole Heights, and he was born at the st. joe's on 7th avenue. Used to be there. The sidewalk is there. He was born there, lived in Seminole Heights. After the war, his -- story told me -- why do you want to live here? It's old. You know, go build a house. Go somewhere else. Got married, got an apartment on Davis Islands. When he died, he lived for years in lutz. Lutz was all farm back then. Now you see how it has grown. Why do we move out there? It's not because the population of Tampa has grown. It's because we want -- you know, you can get more land and build a bigger house farther out. The move to suburbia. What I've seen lately, maybe it is my generation, maybe the generation before, want to come back to that urban core. If you look at Ybor City historically, it's a perfect example as it originally was of live, work, play. You lived upstairs, you had your business downstairs. Worked in the cigar factory, walked to your shotgun house, all this. That's what we're seeing here. We have over a century of data, because what we had before worked. We had a working streetcar. We had people that walked to work, that bike to work, that didn't have to go far. Didn't have to leave their community. But now people are coming back. And with that, those brick streets, a lot of them went away because we wanted to accommodate the automobile. Why do you want that old house, that old street? Modernize it with the pavement. And then you get speeding. Did people get killed back then? I mentioned the former mayor, another gentleman, I know Councilman Miranda knew who worked at TPD, his brother was killed in a car accident in the 1930s. I didn't know he had a brother. Yeah, crossing Nebraska at the Hillsborough River, it was an open car and I think he flew out. Things happen but not to the level that we have today. So basically, you know, we have the data. We know how -- we had a system that worked. But as people, as we're coming back full circle and talking about expanding the streetcar, talking about biking to work, talking about walking to work, people -- downtown has come back. This whole area. That's what we need to focus on. But we have neighborhoods throughout the City of Tampa where people need to walk to the bus stop, people need to walk to work. There are no sidewalks. The roundabouts, everything that I mentioned before, I'm not going to go through it, but we know what we need to do. Again, Councilman Carlson said maybe vision zero worked. The phrase ten years ago, we need to look at something newer as we look forward. I think having this advisory committee is great because I know it's going to be full of people that boots on the ground, they know what they are doing, they have the data. They are professionals. They have studied this and help us make better decisions moving forward. You can never invest too much into the safety of pedestrians. You can only keep investing until, again, we get off that list of Tampa is ranked one of the worst. We still are. We're going down the list, but we have to do better, because more and more people are moving here. The population increase has been close to 25,000 in the last eight years, something like that. The size of Temple Terrace, essentially. As more people move here, we want to make sure they are safe because we don't have mass transit. That really applies. People rely on the car, and we have to do whatever we can. That's it. Thank you."
+    },
+    {
+      "timestamp": "10:13:08AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Well, thank you for this presentation. It's been awesome. The conversation has been really good, too. So your very first slide, the very first thing you put up."
+    },
+    {
+      "timestamp": "10:13:23AM",
+      "speaker": "Adam Purcell",
+      "text": "The agenda?"
+    },
+    {
+      "timestamp": "10:13:25AM",
+      "speaker": "Lynn Hurtak",
+      "text": "No, something that showed 20, 30, 40 miles an hour. It was really the first --"
+    },
+    {
+      "timestamp": "10:13:33AM",
+      "speaker": "Adam Purcell",
+      "text": "Sorry, I discarded my file of slides as I went through them."
+    },
+    {
+      "timestamp": "10:13:40AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yeah. So I noticed this right away because I can't think of anywhere in the City of Tampa where the speed limit is 20 miles an hour. Again, that's a choice that we have. But you go to other cities who have really been working on this problem, and 20 is plenty is kind of the nonrhyming, rhyming way to talk about it. And so like even my neighborhood, it's 25 miles an hour. We have to move past 25. We've got to get those neighborhood streets back to 20. I know there is a cost involved in that in changing signs and doing all of this, but I do -- the only place we see 20 is school zones. It's really rare to see that. Maybe downtown, but even downtown not really. So that's one of the things that I want to challenge us to do is in those places that we can go from 25 to 20, to really look and see that 20 is plenty. You also talked about some of our high injury networks. One major street that I don't see on there anymore is fletcher. And that's because F.D.O.T. Took it and they added bollards, connected bollards to get people to have to use the crosswalks. It's worked beautifully. I travel fletcher because my favorite bagel place is down there. Bagels plus, if you haven't been there, great bagels. I go down there relatively often because I love a good bagel. And fletcher is just a different place now. People only cross at crosswalks and in those middle lane crossings because there's no way for them to move otherwise. So maybe that's something that -- and I know that was an F.D.O.T. Thing, but maybe that's something the county can look at for Bayshore. I mean, it's not going to be pretty, but it will work. Actually, I mean, it's not ugly. What they have done, they have done wooden bollards with rope between them. And the rope is high enough that you can't climb it, but not so high that you also really can't go under it. It works. So I think that can help the dart and dash problem that we need. All of us see it. It doesn't matter if you are in a car, walking or biking, you see the dart dash constantly. So I have a couple of things, too. I noticed that we do encourage biking on these large thoroughfares. And this is the thing that I just don't understand. That's one of the things that I hope the bpac committee can work on is, since the Ola Avenue bikeway has been finished, I see people biking along Florida all the time. I just want to stop and say, hey, did you know that there is a protected bikeway just two blocks to the west? I guarantee most of the people don't know that. Part of our problem is there's no signage. There's no communication. We haven't put it out there that, hey, this bike boulevard exists. If you are a cyclist, you should really be on these parallel streets until you get to the block, that if you are trying to get to something on Florida Avenue, like take the parallel street until you get there. We don't have that culture yet. That again goes along with the public relations stuff that council member Carlson was talking about, we need to get messages out. Hey, parallel streets really work best for cyclists. Another thing that if money were no object and time were no object, one of the things I would love to do is stop cyclists and ask, hey, where are you going and how do you get there? Not all the time, obviously some people using Florida Avenue, but other people who ride bikes, whether they be the e-bikes that you see more and more, because that's an affordable way of transportation, how are they getting there? Like, what are their routes? So a lot of the routes that they are creating, it's the new version of waiting to see where people walk through grass before you put a sidewalk. But that's easy, unfortunately. This is not so easy. But we really have to find a way to find out how are people biking? How are people getting around? Because a lot of people will use the safe route if they can. They will use a neighborhood street and we need to figure out where those neighborhood streets are and really prioritize that, help with crossings, do stuff like that. I have had a couple of people complain to me about this recently. I just wanted to bring it to your attention. When we're talking about bike crossings, one area that we haven't done a very good job is crossing the river. It's very hard to cross the river on a bike. It's due to the narrowness of bridges. I know you'll kind of work on that with the Cass Street with the West River project, but we also have to look like further north. How are people getting across the river? Sidewalks can even be narrow in some of the places that cross the river. Even if you hop on a sidewalk, if there's someone coming at you the other way, you are really kind of stuck. It's just something -- I know that is a much bigger problem to fix, but just put it on your radar. As far as the bpac goes, I think that we just had a really successful NRAC creation, and we did have neighborhood leaders on that as well. So I think that might not be a bad thing. Maybe look at the creation -- so what happened with the NRAC was we had the mayor choose the professional people, the people that needed to be like a specific skill set, and then council chose neighborhood leaders to do. Maybe we don't need like a full committee, a giant committee like that. But for the people working on this -- and I love the way that -- you are doing it in the very same manner the NRAC did. The NRAC has a specific goal first about one of the reports they are working on, and then they'll see what to do with it. I think following that pattern makes a lot of sense. I really do like it. I just want to close with one thing, and that's that everyone talks about not seeing cyclists. The thing is you don't see cars unless -- on some streets either because cars when there aren't as many cars can move through an area faster. And right now we don't have enough bicyclists to show, like, we don't have bike -- what is the word I'm looking for? We don't have bike -- oh, what is the word I'm looking for?"
+    },
+    {
+      "timestamp": "10:20:47AM",
+      "speaker": "Brandon Campbell",
+      "text": "Trying to build networks."
+    },
+    {
+      "timestamp": "10:20:48AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yes, what I'm saying, when you get a bunch of cars in a place, you can tell there are a bunch of cars there, but when the cars can go through, you don't notice them as much. I think that's happening with cyclists because we don't have a real bunch of cyclists because we don't have enough bikes yet. That's going to change and that's changing and we're starting to see it. I appreciate and thank what you have done for this. Councilman Carlson."
+    },
+    {
+      "timestamp": "10:21:13AM",
+      "speaker": "Bill Carlson",
+      "text": "Thank you. I want to follow up on one thing she said and a new idea. Guido mentioned teslas earlier. Every tesla is mapping every bicyclist, every pedestrian on the side of the road. I don't know if google is doing that or not. Is there data that we can buy? Earlier I talked about pedestrian patterns so we can see the natural flows of people and where should we be putting crosswalks like on busy roads like Bayshore? But the same thing with bicyclists. We should interview them. That's a good idea to find out where they are coming from and what their lifestyle is, et cetera. But is it possible to get data on what the flows are?"
+    },
+    {
+      "timestamp": "10:21:58AM",
+      "speaker": "Brandon Campbell",
+      "text": "It's definitely more difficult because bicyclists would more or less have to opt into that. A couple of data sources that are imperfect, incomplete but still helpful, strava is sometimes a good data source for us. There is a sort of self-selection bias, people are using strava mostly to track their exercise routine. Some people use it to track everything."
+    },
+    {
+      "timestamp": "10:22:24AM",
+      "speaker": "Bill Carlson",
+      "text": "Is it possible we could get somebody to contact tesla, waymo and --"
+    },
+    {
+      "timestamp": "10:22:34AM",
+      "speaker": "Brandon Campbell",
+      "text": "Tesla is a little less open to us when it comes to even talking about their av operation. We do have a little more open line of communication with waymo. We haven't really asked them about specifically trying to provide us with any kind of cyclist data, but we could ask."
+    },
+    {
+      "timestamp": "10:22:53AM",
+      "speaker": "Bill Carlson",
+      "text": "Cyclist and pedestrian would be great. The other thing is, we have a motion coming up I think next month to talk about specifically allocating the school zone speed camera money to school zones that I think an estimate was 14 million a year or something. I don't know if those are still going through. How much of a dent, that would only be school zones, but how much of a dent would that money, 14 million a year put into something like this?"
+    },
+    {
+      "timestamp": "10:23:26AM",
+      "speaker": "Adam Purcell",
+      "text": "That would expand our program by multiples of its current funding. Right now we have about a million dollars a year dedicated to sidewalk construction. If we're looking to bringing in 10 to 14 million, we have about 800,000 for vision zero, safety quick-build program. We have about a million for sidewalks. We need to take a look at that. Talking about implementing 10 to 14 million a year, that would give us the funding to have a robust program. We're having a discussion right now with staff in the development of that ordinance of where those funds can be spent and how they can be spent on safety. Is it the school zone, is it the school attendance zone to work safe distance to schools program like we talked about in Sulphur Springs. Primary and secondary approach corridors. We're having a little bit of discussion with legal where we think the money can be spent for that. That 10 to 15 million would be a game changing sum for our program --"
+    },
+    {
+      "timestamp": "10:24:21AM",
+      "speaker": "Bill Carlson",
+      "text": "Was it pasco county?"
+    },
+    {
+      "timestamp": "10:24:24AM",
+      "speaker": "Adam Purcell",
+      "text": "Polk county."
+    },
+    {
+      "timestamp": "10:24:25AM",
+      "speaker": "Bill Carlson",
+      "text": "It was a \"p.\" Anyway, in polk county, did you see a significant savings in lives in accidents from protecting the school areas?"
+    },
+    {
+      "timestamp": "10:24:35AM",
+      "speaker": "Adam Purcell",
+      "text": "So polk took the approach of an education program. So there's polksafety.org is a website. I helped develop that as a consultant. We actually went into the school system. The county provided the school district with an education plan. We had former teachers on our project team that helped write curriculum to teach in schools. I think that's something that when you look at the funds in the state statute, it says public safety for use for public safety, education programs may potentially fall under that umbrella. I want to make sure that legal agreed with that view or perception. But I think that we focus -- polk was first infrastructure. We looked at the high injury network there. We looked at providing sidewalks to accommodate. We looked at safe crossing opportunities. But then they decided to take funding and pair it with that education program. I think that's something that is showing results. That project I think is wrapping up in polk county. They had a safe streets and roads for all project as well, so they have been working through that. Their numbers follow a similar trend to ours with the covid spike and then the slow decrease."
+    },
+    {
+      "timestamp": "10:25:50AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Okay. Well, thank you. I appreciate that. Thank you for the conversation, because it reminded me, there is a grassroots current opt-in bike mapping app, route mapping app. Are you familiar with it?"
+    },
+    {
+      "timestamp": "10:26:04AM",
+      "speaker": "Adam Purcell",
+      "text": "I am not."
+    },
+    {
+      "timestamp": "10:26:05AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Someone in your office might be. If not, I've jotted a note to ask someone I know who is participating in it to find out who is creating that and I'll try to connect you because that will help you figure out maybe where some of these. The idea is pulling people who are not recreational cyclists but are people who use biking as a main form of transit. Like I said, I'll find out who is doing that. Someone in your office who is working with bikes may know that already. But if not, like I said, I'll find that info. Purchase for bike and ped volumes. We just purchased an urban sdk data set. It doesn't include bike-ped. It's speed and volume on all the city roads. That's costing us $45,000 this year. Likely to go up next year. So those add ons for bike ped probably in the range of 50 to 75 thousand dollars for a subscription fee to get that kind of data."
+    },
+    {
+      "timestamp": "10:27:11AM",
+      "speaker": "Lynn Hurtak",
+      "text": "That's good to know. Is there anything you need from us to move forward today?"
+    },
+    {
+      "timestamp": "10:27:17AM",
+      "speaker": "Adam Purcell",
+      "text": "I don't believe so. So what we plan to do, we're in contact with Contract Administration right now. We're working on the language for the solicitation for the pedestrian safety action plan. So we expect to have that solicitation issued before the end of the calendar year. And then a firm on board in early '27 to begin work on that program. I think that the survey absolutely a component that we can incorporate into the community engagement portion of that. And then the bpac as well or an equivalent committee of a bpac similarity. We're on the track to get the work underway, and then I guess just your support as we work through our community engagement efforts. I know we get a lot of requests from council members to come out to their districts and their neighborhoods and have conversations. We look for that continued engagement."
+    },
+    {
+      "timestamp": "10:28:13AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I appreciate that. So it sounds like the creation of the bpac or whatever it might be might be left to the next council."
+    },
+    {
+      "timestamp": "10:28:21AM",
+      "speaker": "Adam Purcell",
+      "text": "Correct, yeah. The intent is to create it, to facilitate that project. Like you noted, look at how it functions. How does it need to be adjusted and then make it a more permanent entity within the city."
+    },
+    {
+      "timestamp": "10:28:35AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Wonderful. Council member Carlson."
+    },
+    {
+      "timestamp": "10:28:36AM",
+      "speaker": "Bill Carlson",
+      "text": "We don't know who will get elected next. I think your intention is to create it now, right? What is the holdup? Can we get it started now?"
+    },
+    {
+      "timestamp": "10:28:46AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Because the goal is to -- similar to the NRAC, to have it have a purpose. And the purpose is to help with this plan."
+    },
+    {
+      "timestamp": "10:28:55AM",
+      "speaker": "Bill Carlson",
+      "text": "If we put it together now, then they can give input into the RFP and guide the consultants."
+    },
+    {
+      "timestamp": "10:29:03AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Okay."
+    },
+    {
+      "timestamp": "10:29:04AM",
+      "speaker": "Adam Purcell",
+      "text": "I think there are questions on structure. Who would staff it, who would manage it from the council perspective, who would advertise the meetings, who would conduct the meetings. I think there were some questions there that we had hope to answer as we kind of worked through the pedestrian safety action plan. But if it's something we need to take another look at, we can do that."
+    },
+    {
+      "timestamp": "10:29:26AM",
+      "speaker": "Bill Carlson",
+      "text": "Your initiative, but if it comes back."
+    },
+    {
+      "timestamp": "10:29:28AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Sure. I was going to say maybe we just get an update -- let's say January. If someone wants to make a motion for January 7."
+    },
+    {
+      "timestamp": "10:29:42AM",
+      "speaker": "Bill Carlson",
+      "text": "So moved."
+    },
+    {
+      "timestamp": "10:29:42AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Second."
+    },
+    {
+      "timestamp": "10:29:43AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I have a motion for this to come back to talk about how -- we'll continue to call it bpac for now. I do think bpac still works because we're going to encourage other people to join that focus on other things, but the point of the committee is focusing, but we can debate that later. Right now we only have three staff reports. I have a motion for bpac update to come back to us on January 7 under staff reports. I have a second from council member Maniscalco. All those in favor? Aye. Any opposed? Okay. Well, thank you so much. I appreciate it. We are going to do just a five-minute break because I need to use the restroom."
+    },
+    {
+      "timestamp": "10:30:23AM",
+      "speaker": "Bill Carlson",
+      "text": "Can I say one thing? The clerk, when we go from item to item continuing, it has original motion by, but just in case, since this is going from a workshop to a regular item, would you mind putting in there, if it's appropriate that the original motion was by Hurtak? She just happened to be chair so couldn't make the motion. Thank you."
+    },
+    {
+      "timestamp": "10:30:45AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yeah. Okay. Thank you. Five minutes. [Five-minute recess]"
+    },
+    {
+      "timestamp": "10:39:35AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Welcome back to Tampa City Council workshop edition. Roll call, please."
+    },
+    {
+      "timestamp": "10:39:42AM",
+      "speaker": "Charlie Miranda",
+      "text": "Here."
+    },
+    {
+      "timestamp": "10:39:44AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Here. Viera? Carlson?"
+    },
+    {
+      "timestamp": "10:39:46AM",
+      "speaker": "Bill Carlson",
+      "text": "Here. Hurtak?"
+    },
+    {
+      "timestamp": "10:39:50AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Here."
+    },
+    {
+      "timestamp": "10:39:52AM",
+      "speaker": "The clerk",
+      "text": "You have a physical quorum."
+    },
+    {
+      "timestamp": "10:39:53AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you so much. We are on the last item of the agenda. That is rules and procedures for city boards and committees. There he is. I was just going to page for you. Excellent. Welcome. We'll start with you. Do we need to start with you, Mr. Shelby?"
+    },
+    {
+      "timestamp": "10:40:17AM",
+      "speaker": "Martin Shelby",
+      "text": "Just so that you know, council, that my role in this process has been, frankly, in the role of coordinating and facilitating. I want you to know that the bulk of the work product that you see, I do not have my fingerprints on, although I am very supportive of the work they have done. The fact that even though I'm a part of the motion, this is primarily the work of the Legal Department in coordination with the CRA attorney, and that is a totally separate subject, the CRA itself. That being my introduction, I really have nothing further to say."
+    },
+    {
+      "timestamp": "10:40:56AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Okay. Wonderful. Thank you. Welcome."
+    },
+    {
+      "timestamp": "10:41:02AM",
+      "speaker": "Dana Crosby Collier",
+      "text": "That's a good segue. Dana Crosby Collier, city attorney's office. I'm here with Taylor Bollt this morning who has been a part of this project as well. And, additionally, we've worked quite closely with the deputy city clerk on this as well. We're going to be discussing the rules and procedures."
+    },
+    {
+      "timestamp": "10:41:18AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Actually, your presentation is up."
+    },
+    {
+      "timestamp": "10:41:24AM",
+      "speaker": "Dana Crosby Collier",
+      "text": "That's great. The motion was that the City Council attorney and the city attorney's office work with the department, CRA director, CRA attorney to create standard rules and procedures for attendance, opening, closing, timeline, et cetera. We were supposed to come back September 3rd. At that time, the item was continued to today. As Mr. Shelby Mentioned, the CRA item will come to you next month. After we looked at the motion, Taylor and I decided in consultation with the chair, of course, decided it was best to break this up into two parts. Part a is the local board appointment process including standardizing timelines and procedures. Part b is your terms, composition, and establishment of your local boards, including membership terms and rules of procedure. When we got this assignment, we picked up the phone. We called Suling and we were delighted to learn that she was well ahead of the curveball on part a of this. Because, as you know, we have about 30 boards. We have over time, among many people and liaisons and attorneys working on these boards, we have standardized rules for quasi-judicial boards but not all the boards. Just wanted to point out to you that a lot of our boards in the City of Tampa are established by an entity other than council. They are established by a special act, Planning Commission. They are established by state law, think ahac. We also have boards that we've established locally, but the rules and regulations that allow us to continue to remain a local certified governmental entity in historic preservation come to us through federal authority. That would touch our Architectural Review Commission, Barrio Latino Commission and Historic Preservation Commission. You have a number of local boards created by charter ordinance or resolution. I've listed those here. We'll talk more about these when we get to part b. Part a really focuses holistically on all your boards. Part b will focus more on our local boards. So looking at your list, our local boards locally created include your charter review advisory commission, the budget and finance committee, the cbac, Equal Business Opportunity, Human Rights Board, Natural Resources Advisory Committee, public art committee, the Variance Review Board and veteran's advisory committee. We have a couple of local boards, but they are very unique. The Ethics Commission, as you know, the members have very special qualifications, including someone who is appointed by the chief judge of our circuit. Someone appointed by the Hillsborough county bar. And then we also participate in the Hillsborough county building board of adjustment, which was created by county ordinance. Now we're going to move into part a which was our discussion about appointment process and just all of the processes that we've been looking at with regard to standardizing timelines and procedures. As I said, once we picked up the project, we called Suling. She said, you know, I've really been working on this for months because there are a lot of things that we needed to look at. We talked to her in some detail and we identified several issues, including that, generally speaking, as a city, we have difficulty finding citizens to serve on boards. We may experience delay in filling open positions for some boards. A big issue, a sub-issue of difficulty finding citizens to serve on boards is that a lot of them need to have special qualifications. As you know, the ARC, we have architects, historic preservationists, VRB is in need right now of an arborist. Those are very special qualifications. This all goes to our ability to establish quorum, like you all did today, to have your meeting. We really sometimes have to push between conflicts on the agenda and board members availability. Sometimes we really have to push to get a quorum. We also have identified -- I know you all have heard this a lot because we have heard all the public comment on this -- we have issues replacing board members who fail to show up for meetings. We've had board members appointed and they come to their orientation. They come to the first meeting and we never see them again. Talking to Suling, we looked at all these issues, and we thought, you know, she's really, really put a push with t & I to track resignations and vacancies. She's been working with the liaisons trying to really homogenize that process somewhat because it's been such a challenge over the years. You have a rule 8 in your council rules that discusses filling vacancies but really doesn't provide timelines. We also noticed -- and this is almost coming to the finish line -- that our applications don't really require applicant to provide their qualification. So if I'm an architect and I want to serve on the Barrio Latino Commission, there's no line on the application that I say I'm an architect. You kind of have to breathe it out of the application. She's been working with this. In fact, it's imminent. It's going to be included on the application very soon. Another thing we have experienced, one of our findings was that many boards require applicants to be City of Tampa residents. And then again, I'll mention -- and this will be another theme -- there's no consistent process for removing members who fail to attend meetings. Further findings discussing this with the chair and the clerk's office, our goal is to ensure predictability and standardization in the process. Again, she's been working with t & I and the board liaisons to track resignations and vacancies. And we want to have a clear-cut process if we need to remove a board member when they are not attending. The board member -- the reason that's such a theme for me and for all of us, actually the CRA attorneys as well is Taylor and Suling, is because that goes to our ability to have a quorum. If we don't have -- if we have an inactive member but still on our roster, that ups our number for a quorum. So that's very important that we have active engaged membership. So after looking at everything, talking to City Council attorney, talking to the city clerk, talking to board liaisons, we would recommend that the City Council consider amending your rules to provide a timeline for a position to be advertised before closing. Right now, your application process is open, and then there's no time frame. We talked to everyone kind of came down on about a six-week period would be a fair period of time to leave sort of like a job application. It's open for 45 days. Because sometimes it takes a little while for the word to get out. Finally, the word gets out, and you want to have enough time for people who are interested to apply. If the council were to get -- if they wanted to reach back out and reopen the process, you could do that, and we could add that to your rule 8. Again, we'll amend the application to have the qualifications specifically stated. In some cases, and this is something you all would want to think about, expanding the pool to allow certain county residents with a connection to the city to apply for some boards. As you know, Barrio Latino Commission is someone who either resides or operates a business in the Ybor City historic district. If all of our members had to actually reside in Ybor City, that would be a very, very, very slim pool. But we have people who work there, very engaged. Our chair has a business in Ybor City at the moment. So that's just something, if there was a strong connection to the city, a county resident may be eligible to serve on some of your boards. Again, we want to be sure that we're able to remove members that are not active. So that's part a. That's all of our boards. Whether it's created by the statute or created by the federal process, whatever, those were all the things that we learned in the bigger picture how we can expedite, engage more people, expedite the process, make it more standardized and more uniform. Now we're looking at part b. Part b was our terms, composition, and establishment of local boards, including membership terms and rules of procedure. And these are the matters that go to your specifically local boards. And the lists I provided again just to refresh our memory, charter review, advisory and budget committee, community benefits, Equal Business Opportunity, human rights, natural resources, public art, variance review, and veterans advisory committee. Those are our purely local boards created by ordinance or charter. A lot of them are advisory. As we looked at our local boards, and started looking, we listened to all the comments. We heard the public comment. We heard what the chair had to say about his concerns about terms and membership. So we dug into all the facts that we had before us and, again, in consultation with the city attorney and city clerk, we came to realize that a lot of cases, we do have a couple of boards where the terms of individual board members are consistent with that of the appointing person, body, or mayor. And also, a lot of them that don't. But we discussed it a lot and realized there is a value in retaining some institutional knowledge. You don't want to just have boards just evacuate at the end of a term without there being some process for a turnover that allows the city to continue to do business. Especially with your quasi-judicial boards like variance review. We know that we have difficulty filling some positions, and that is exacerbated by the limitation that they be city residents. I may have one or two people in the city that do a certain thing, and that business is what they come to you all the time about. They can't sit on a city board because they are going to have a conflict. It's just not going to work out. We do find some positions difficult to fill and limited to city residents. Again, we want to have a process to remove people who are inactive. We did find there is a value in retaining institutional knowledge on boards. We also heard from the public and from the chair that there is a preference to have individual board members' terms be consistent with those of the appointing body. One thing we would note with regard to that and this is already in the language in all of our boards, is you want to allow people to serve until their replacement is confirmed. And the reason -- there are several reasons, first, it may be hard to find somebody to take that spot. You may have someone elected who really is happy with the appointees on the boards or they don't really have any idea of anyone different. If members would serve until a replacement is confirmed but it would ensure continuity and that our boards would continue to function, especially again the quasi-judicial boards. Again, thinking about maybe allowing some non-city county residents to serve on some boards. Standardized rules among boards and committees. This is something we've done, as I mentioned early on in quasi-judicial. ARC, VRB, your Barrio Latino Commission, historic preservation, those local boards, they all have the same rules. Tweaked for that particular board, of course. Advisory boards, we could standardize those rules as well so there would be that standardization in the process that the council was looking for. That brings me to recommendations. We discussed what we might recommend to the council. We discussed it with the CRA attorney. Of course, they'll come back to you and staff, they'll come back to you next month with their thoughts because their board structure is a lot different. And we had marty in the loop on all of this throughout the process. Of course, Suling has been very active. It is possible that we could amend the ordinances and resolutions that established all your local boards that are on that list to create a membership term where the individual board member terms are consistent with those of the appointing body or official. You just did that with NRAC. We have that with another board. So it's something that is precedented and could certainly be done. We want to be sure if you do ordinance amendment that you would want language in that ordinance that would allow removal for excessive absences. They all say it, if you miss More than three meetings, you may be removed for cause, if those are unexcused. But there's no real way to do it because it doesn't really say it. We thought if we get in there, in those ordinances and start tweaking, we definitely want to tighten it up so it would be a foregone conclusion, instead of you may be removed -- you will be removed unless there's some reason why you won't be. These are unexcused absences. I want to make that clear. Because we do have members that go out for health-related reasons or they go away for several months and they come back. This would be an unexcused absence, not just -- not another type of absence. Again, we want to ensure that anything that council moves forward with, we would recommend. Members would serve until a replacement is confirmed because we don't want the boards to stop working. Again, consider allowing non-city residents to serve on boards where the person has a connection to the city. I used the barrio as an example because of the Ybor City connection. It's either by your office -- I mean, your work office, or by your residents. Those people care as much about that community, whether they live there or work there as anyone else. It's worked out very well for the barrio. This is something we came up with very late in our process in discussing this with the chair and others. Consider appointing at least two standing members to each board. Someone who is always there. We found that in the cbac, the community benefits advisory committee. They have two standing members, and then members are appointed for the project. And that gives that board that continuity as it moves forward. Always that institutional knowledge and that continuity. Again, once everything happens that needs to happen with your ordinance or resolution that established the board, then we could bring back to those newly created or newly fresh boards standardized rules of procedure that those boards would then adopt that would deal with their day-to-day actions as boards and committees. So we also have some next steps. The clerk will continue working with t and I or standardized appointment and member tracking process. This thing has been in the works for about six months. It's in very good shape right now. Again, the application, it's imminent that it will be updated to state the applicant's qualifications. So at this time, we would just look for and maybe not today since the chair is not here and others, we would look for council direction on council amending rules to establish the timeline for applications and amending the local ordinance and resolutions to establish the terms where individual board members' terms are consistent with those of the appointing official or body. Think about standing members to each board or committee, how we could strengthen language to remove board members for excessive absence, and whether or not the City Council wants non-city county residents to serve on boards where that person has a connection to the city. Again, under next steps, the standardized rules of procedure for our advisory boards will come back to those boards after we've done any necessary amendments. That's what I bring to you today."
+    },
+    {
+      "timestamp": "10:58:10AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Can you go back one slide so we can have those comments, the direction there? I want to start with Councilman Maniscalco."
+    },
+    {
+      "timestamp": "10:58:16AM",
+      "speaker": "Guido Maniscalco",
+      "text": "Exactly. I wanted to see that last slide. In regards to timeline, I think it should be open 45 or 60 days, but well advertised to make sure that the public knows there are vacancies on boards and opportunities. So a timeline so it's not just wide open, so we know we have a deadline to meet to fill the positions. Number one. Term where individual board members' terms are consistent with those of the appointing body official, a lot of people won't -- you know, there is a change here coming in the spring. So a lot of members won't be on the dais. But I don't think those that are appointed should automatically be removed. May 1st at whatever. They should stay on that board going into the next term, and then whoever fills that position, I think you mentioned the new council member can say I'll keep this person or thank you for your service, I have another preference, so we don't have a loss of a quorum and these boards don't meet. Standing members to each board or committee, you had mentioned two. You always have people there. Removal of board members for excessive absence, I think the word there is unexcused because there are legitimate reasons as to why people can't be there. When I was on the Code Enforcement board, I was an alternate, but I was there for almost every meeting, because there was always an open seat. Now, whether non-city-county residents can serve on boards where there is a connection to the city, at first I thought, well, if my wife were here, she would say, you have to live in your district. You have to live in the city where it's more expensive to live. Everybody else should follow the same rules. However, the connection to the city could be what? Someone that lives in the county but owns property in the city, meaning they are paying taxes that go to the city, not just county taxes, they are contributing in some way, so they have that city connection. You had had the barrio Latino, there are a lot of other boards. Now, what about former city employees that may live in the county that want to be on boards? To establish some kind of parameters, I know it's six years to become vested. Meaning, it can't be just anybody. Somebody that worked here for six months, lives in the county, hey, city employee for a brief period of time, I think it should be a vested individual, meaning somebody after six years or going to be collect or they do collect a pension, that is a connection to the city where you have that minimum, you know, you have to be vested have to be here six years so it opens it up. It puts stricter guidelines but opens it up to somebody who lives in the county or lives in another county. They might live in pinellas. They might live in pasco, whatever. But they have knowledge of the city for a specific board that could be very valuable, because we talked about institutional knowledge. That perfect applicant may not live in the city or they lived in the city and then when they retired they moved out somewhere else. But they are willing to serve and come in. They could provide a lot of context and their experience. Yeah, that's really it. Thank you very much. Those are just my thoughts."
+    },
+    {
+      "timestamp": "11:01:30AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Councilman Carlson."
+    },
+    {
+      "timestamp": "11:01:35AM",
+      "speaker": "Bill Carlson",
+      "text": "I'll do the same thing. I'll start with a suggestion. You can comment on whatever you want afterwards. I think I've said this many times. I think we should have a general stated rule that any new committee will have seven appointees by City Council, meaning one per council member, and then four by the mayor. And then it could say, unless mutually -- unless changed through mutual agreement by the mayor and City Council, which is easy to get. It sets up the expectation that there is a balance. I think it's important to have geographic diversity represented on these boards, and every City Council member comes from a different place and they can pick people with different backgrounds. And then for the term, there aren't that many so far that we appoint one person. It's usually from a bucket of names. I would suggest that it would be an annual -- on those, it would be an annual renewal. It gives us a chance to either renew the person or pick a new person. If someone serves a four-year term, they could put four people in conceivably, instead of two, if it is a two-year term, and if the person is not working on or contributing, then they don't have to punish them by taking them off. They can just not renew them. On attendance, I think three times is enough, but there's got to be really tight rules about what counts as an excused absence and who gives that and who would make the decision, who would inform them they are no longer allowed on? Ideally, it would be Suling. Let Suling do it. But somebody with an iron fist that can go in and say, hey, sorry, you missed it. You're done. And then here is a question, probably my colleagues won't agree, we had several people, including one of my appointees, who filed to run for office. I think that -- for me that is an inflection point where we should get a different person. Whether that's official or not, it is an idea out there, if they served already. Just so it doesn't look political, no political conflicts. And then the last thing is, for regular committees, do you allow remote access? You don't."
+    },
+    {
+      "timestamp": "11:04:20AM",
+      "speaker": "Dana Crosby Collier",
+      "text": "No. we do not. On our quasi-judicial committees, they are all in person. With regard to advisory boards, it is possible that the board can agree to allow someone to participate remotely if there's a reason -- they are home sick or out of town -- for advisory committees. But all of our quasi-judicial boards, we have an in-person quorum; we have in-person attendance."
+    },
+    {
+      "timestamp": "11:04:52AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you. I really appreciate this. But I'm going to start by saying this is why public comment after each item and before decisions are made is important in a workshop because we're about to make some decisions, and then we're going to have people come up and talk. I just don't think that's right. I'm going to voice my objection because now our new rule is people are only allowed to speak at workshops at the very end. I just don't think that's correct. I'm throwing that out there."
+    },
+    {
+      "timestamp": "11:05:26AM",
+      "speaker": "Martin Shelby",
+      "text": "Martin Shelby, City Council attorney. The purpose of a workshop is to get information. And to ultimately not take any final action on something. So if you wish to -- I'll also point out it was brought to council's attention that there are three council members absent today. So my recommendation would be to not take final action -- or not to take action today on this matter unless council insists, but then still have another opportunity for the remaining members to come in and give input because ultimately -- basically what I'm saying is the purpose of a workshop is information only. And not to make motions to give action to council, to the staff that would be perceived as a final action, because you're correct, that's correct. You don't want to do that. You want to give people the opportunity to heard. If you wish to open public comment on it now, I guess that's council's pleasure."
+    },
+    {
+      "timestamp": "11:06:28AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Again, though, what I'm saying, the bpac, the conversation about that, would have been getting information from the public. My plan today is to answer these questions on direction and then additionally ask and make sure that they speak to the council members who aren't here today and get their direction. I don't want to stop anything just because people aren't here today."
+    },
+    {
+      "timestamp": "11:06:52AM",
+      "speaker": "Martin Shelby",
+      "text": "If I can, with regard to this, we have not talked about, I as part of the motion have not talked about the final recommendations."
+    },
+    {
+      "timestamp": "11:07:02AM",
+      "speaker": "Lynn Hurtak",
+      "text": "We're not looking for final recommendations."
+    },
+    {
+      "timestamp": "11:07:05AM",
+      "speaker": "Martin Shelby",
+      "text": "Then what direction are you Planning on giving?"
+    },
+    {
+      "timestamp": "11:07:07AM",
+      "speaker": "Lynn Hurtak",
+      "text": "This is what they asked for. They asked for direction on amendment to council rules. They are basically asking our opinion. And after the opinion, we'll have a next step and we'll talk about that. But thank you."
+    },
+    {
+      "timestamp": "11:07:18AM",
+      "speaker": "Martin Shelby",
+      "text": "Okay. Well, I'm responsible for amending council's rules. I'm not prepared to take direction today."
+    },
+    {
+      "timestamp": "11:07:24AM",
+      "speaker": "Lynn Hurtak",
+      "text": "I did not say that. I said this is my comment. My comment is that public comment should happen after every one and this is why. That's all I wanted to do was make that statement. I just want my fellow council members to listen because I think we all can hear that today that we didn't get to hear from everybody about the bpac and not going to hear from everybody about this. I'm not going to open public comment for only one thing. That's not fair."
+    },
+    {
+      "timestamp": "11:07:51AM",
+      "speaker": "Martin Shelby",
+      "text": "Now I understand your point, councilwoman. I thank you for that and accept that. Council's rules are council's rules and they are subject to amendment and change."
+    },
+    {
+      "timestamp": "11:07:59AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yes, they are. I want to talk, though, about what you asked for direction on. Amending council rules to establish a timeline for application, I think we go for 45 days. I think making a decision about a number of days is important. I would just go for 45 days. As far as standing members to each board and commission, who gets to decide who is standing? So I'm thinking about my time on the VRB. The VRB has very specific roles. Are we going to say that a builder should get standing? I would disagree with that. We'd have to really be careful about who you approve for standing. Maybe it's something that rotates and that standing is two years or standing is three years. You'd have to have some parameters around that because for the VRB, there is no like open membership. The only ones are neighborhood leaders. I appreciate the neighborhood activists, but I don't necessarily think those should be people with standing either. If you have a commission where every seat has a specified seat, you may need to -- like I said, I would rotate that. As far as the term where the individual boards are consistent with those to the appointing body, I tend to agree. I think more with council member Maniscalco that -- I think we should have them consistent, but also it doesn't have to be changed. The only thing that I would counter with council member Carlson about just having a year is that there is a huge learning curve to these committees. So by the time you are in for a year, you are basically finally getting your feet under you. I might have a time where you discuss with your person, like how is it going? What do you like? Are you interested in staying on? More than just doing one year. Removal of board members for excessive absence, absolutely a yes for unexcused absences. And I think it should be at three. And I think whatever you need to do to tighten the language, I think you're getting a full thing there. I am really not in favor of noncitizens serving on boards. I think it's really important that you have -- it's really hard to even say if you own property -- well, if you own property, you're still not dealing with most of the stuff that has to do with the city on a daily basis. I really think that's very important. If we had to, my only line would be not just owning property but owning a business. I think you should have to do both. So there has to be some real -- or owning property and being a vested former employee or owning a business and being a vested -- I think you should have two. If we came up with three or four ways, you should have to have two of those. I think the connection to the city has to be incredibly strong and has to be something where you are in the city every day. I think that's just really critical. We have 400,000 people in the city. If we could get people to serve on boards and commissions when we had a hundred thousand, I think the biggest problem is we don't do a very good job in advertising. We don't push this out to civic organizations. We should be pushing it out to every possible group. We have so many people that volunteer in the city for so many different things. I really believe that people just don't know that they can serve on a board and/or they don't know that they are qualified. They feel like it is this big thing. And for half of these boards, it's not a qualification issue. So let's do a better job at getting some numbers out before we go outside of the 400,000 people who already live here. Councilman Miranda, I saw your light pop on?"
+    },
+    {
+      "timestamp": "11:12:08AM",
+      "speaker": "Charlie Miranda",
+      "text": "I agree with mostly everything you said, along with everyone that spoke, the three before me. I think they have some good things. The terms about board members, if you are not here, then they got to leave, you know, I don't think so. Let's say we appoint somebody now and some of us are not here and after March, does that mean that individual, he or she is out of the board automatically?"
+    },
+    {
+      "timestamp": "11:12:34AM",
+      "speaker": "Dana Crosby Collier",
+      "text": "In response to your question, if you appoint someone for the remainder of your term and they do the orientation and they never come back, then your question is, would they be automatically out in march? They would remove -- under the perfect-world scenario, they would continue to serve until their replacement is confirmed. So your successor then or you, whoever is sitting in the seat in March, would then appoint someone else. Because now it's a new term. A new council member term. But they wouldn't automatically just drop --"
+    },
+    {
+      "timestamp": "11:13:12AM",
+      "speaker": "Charlie Miranda",
+      "text": "We don't do it for anything else. Do we?"
+    },
+    {
+      "timestamp": "11:13:16AM",
+      "speaker": "Dana Crosby Collier",
+      "text": "No. if --"
+    },
+    {
+      "timestamp": "11:13:17AM",
+      "speaker": "Charlie Miranda",
+      "text": "I understand what you're saying. Let me put it the other way. If that rule stands, the incoming person, whoever he or she is, can still have that person?"
+    },
+    {
+      "timestamp": "11:13:28AM",
+      "speaker": "Dana Crosby Collier",
+      "text": "Yes, they would still have their seat until they are removed."
+    },
+    {
+      "timestamp": "11:13:33AM",
+      "speaker": "Charlie Miranda",
+      "text": "Unless you put it in writing."
+    },
+    {
+      "timestamp": "11:13:34AM",
+      "speaker": "Dana Crosby Collier",
+      "text": "Yes. Unless we tweak the enabling ordinance to allow them to be removed."
+    },
+    {
+      "timestamp": "11:13:39AM",
+      "speaker": "Charlie Miranda",
+      "text": "I understand."
+    },
+    {
+      "timestamp": "11:13:42AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Yeah, I would tend to agree with Councilman Miranda. Somebody needs to be in there for a little bit and then maybe get to know that person and see if there is somebody else you would want. Okay. My second request is going to be that you reach out to the three council members who are unavailable today and make sure you get their answers to this question. And then what will happen is I will ask you to reach out to the chair to set this on a subsequent meeting just because I don't know what's going to happen. I know the chair is on it, so I'm not concerned at all. This will be a moment, though, for public comment. So now that we are finished with this -- and this is why. I really do appreciate the idea of brevity but I think it kind of ruins the entire point of a workshop if we can't hear from -- I might make that motion tonight, but I might make that motion next week to reconsider these rules because I don't think they are serving the purpose they are supposed to serve. If anybody wishes to speak on public comment for items 3 and 4, please come up and we would be happy to hear from you. I see I have one person. I think the other two might be just listening. If not, they can come up as well. Ms. Poynor, I love your shirt. It's not as fun from the front until you read the back. [ laughter ] I've had it for a long time. Now you are on tv. Anyway, I had it a long time. I kept forgetting to wear it. Good morning, Stephanie poynor. Every single committee and this needs to be written into the rules, needs a babysitter. They have to have somebody who guides them through the process. They don't have a babysitter, then they are wandering aimlessly. The budget committee when I started in 2021, we had several babysitters over time. We are pretty settled in now. I would agree that the first year on a committee, I mean the first year on the budget committee, I probably didn't say boo, not much at all because it's so complicated and so complex. I'm very concerned that the only reason that we're talking about taking somebody off of a committee or a board is attendance. Because we all know that you have people who are on committees now who are not representing you as a board. They are not doing what you would do as a group consistently. That's not okay. If there's somebody who is not doing what they are supposed to be doing, what if their behavior is inappropriate? What -- there's nothing that says you can remove somebody. You guys have already been through that with the Planning Commission. You had to have legal look into if you could dismiss somebody from the Planning Commission. If you don't put anything in there, then there's no way to do it. I also have screamed bloody murder because the whole concept of shoving people in there for three or four years when the person who is putting them there is not going to be around in three or four years, that's not appropriate. And it should be -- I mean, I don't think it should happen instantaneously, but appointments to committees, everybody can renew somebody. They can keep them on. There's nothing that says that you have to fire somebody when you leave. As a matter of fact, Councilwoman Hurtak, when she came on board, I contacted her because I was councilman dingfelder's appointee. What do you want to do? She said I'm good for now. We'll leave it alone. Never had a conversation since. It was her personal decision to keep me on. I think that's the way it should be. The new person should have that opportunity to replace them with their person. There's been lots of turnover on council, so there's been lots of turnover on the budget committee. I would also like to say, if you're going to put a former employee on a committee, that that person needs to have some knowledge and some foundation for that particular committee, not just willy-nilly they worked for the city so they must know everything. What I found over time is that the people who worked for the city are very myopic about their own personal jobs, and they don't know the breadth of everything that everybody else in the city does. So don't just automatically put somebody in for this. You know, I really have an issue because I have things to say about the bike stuff."
+    },
+    {
+      "timestamp": "11:18:40AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Which is why I made the comment. It sounds like we have agreement here. Thank you. Joseph Citro, 33611 for the record. Agenda item number 3. Councilman Carlson, I live on Bayshore. I hear you loud and clear. We have a problem. Every day this city's population doubles from people coming in from pinellas, polk, pasco, hernando, sarasota, manatee. If we can alleviate some of that traffic on our roads, we can make our roads safer. We have four members of this council that belong to the mpo/tpo of Hillsborough county. Please, use your voices so we can get better public mass transportation. Councilman Carlson, all fatalities, pedestrian fatalities that have happened on Bayshore is because people were breaking the law. Speeding, driving drunk, driving under the influence of drugs. I learned from a very wise transportation planner, expert that our bike lanes are not safe until we have some sort of physical barrier, whether it be a parking lane where cars separate themselves from traffic flows to the bike lanes. Or a concrete barrier, maybe 8 inches tall. People do not ride in the bike lanes because they are scared to be there. Barriers are needed to make those bike lanes safer. But we have a growing problem. We have sidewalks that are now being infiltrated by e-vehicles. We're not using human-powered vehicles, whether it be scooters, bikes, monowheels, skateboards on sidewalks, and those are endangering pedestrians. We have e-bikes that are now going 30, 40 miles an hour on sidewalks. People are scared to walk on sidewalks now. Agenda item number 4. Three and a half years ago, I personally signed up for a board. I've been on Civil Service Board, Variance Review Board, Code Enforcement board, charter review board. And somebody whose ego was too big. There was only six positions. Six people were there, including myself, to be on that board. Somebody's ego was so big that they decided not to appoint me to that board. To the presenters, first statement, we don't have enough people to fill the boards. It would have been my pleasure to serve on that board for three years. Again, council member's ego was too big. Madam chair, board, thank you."
+    },
+    {
+      "timestamp": "11:21:46AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Thank you very much. Anyone else for public comment? I think we'll hold new business until evening, if that's okay."
+    },
+    {
+      "timestamp": "11:21:55AM",
+      "speaker": "Guido Maniscalco",
+      "text": "I want to make a comment, not new business. We know victor dimaio and the dimaio family, his mother mercy passed away. I know she worked for the city. She was involved in I don't know how many boards over the years. And victor's father, victor senior, legendary guy, always giving back to the community, run for office, served on boards, they have done it all. And I want to offer my condolences to the family. Like I told victor, your mother lived a full lifetimes ten. Because my whole life growing up, she was involved in Ybor City, West Tampa, the city, you name IT. Services are going to be tomorrow -- or there is a wake, I believe, at 4:00 at boza and roel on Armenia for those who wish to attend. She lived a good life. She gave back endlessly to this community. My condolences to the family. That's it."
+    },
+    {
+      "timestamp": "11:22:52AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Anyone else? Okay. Well, then we are adjourned until 5:01 --"
+    },
+    {
+      "timestamp": "11:22:58AM",
+      "speaker": "Lynn Hurtak",
+      "text": "Motion to receive and file by council member Maniscalco, second from Councilman Miranda. All those in favor? Aye. Any opposed? We are adjourned until 5:01 p.m. [ sounding gavel ] disclaimer: this file represents an unedited version of realtime captioning which should neither be relied upon for complete accuracy nor used as a verbatim transcript. Any person who needs a verbatim transcript of the proceedings may need to hire a court reporter. ▶ meeting video the information contained in these pages represents an unedited version of realtime captioning which should neither be relied upon for complete accuracy nor used as a verbatim transcript. Persons requiring a verbatim transcript may need to hire a court reporter. © - City of Tampa (813) 274-8211"
+    }
+  ],
+  "segment_count": 143,
+  "scraped_at": "2026-10-28T16:24:10.925159"
+}
