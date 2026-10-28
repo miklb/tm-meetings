@@ -1,0 +1,29 @@
+{
+  "meetingId": "2995",
+  "meetingType": "special",
+  "meetingName": "City Council Special Call Addendum",
+  "meetingTime": "09:00",
+  "agendaType": "DRAFT",
+  "isAddendum": true,
+  "meetingDate": "October 29, 2026",
+  "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2995&type=agenda&doctype=1",
+  "agendaItems": [
+    {
+      "number": 1,
+      "agendaItemId": "28272",
+      "title": "File No. CM26-28272\nCouncil to discuss and take action on the Community Benefits Agreement with the Tampa Bay Rays.\n \nEmail from Rebecca Johns, Senior Assistant City Attorney, transmitting the resolution for said agenda item. (To be R/F)(Title of said resolution listed below)\n \nResolution approving a Community Benefits Agreement between City of Tampa, Florida and Tampa Bay Rays Stadium Company, LLC; providing for certain community benefits to be provided to the City of Tampa as required by the development and funding agreement; providing for an exemption from Section 2-853 of the City of Tampa Code of Ordinances (community Benefit Program); authorizing the execution thereof by the Mayor of the City of Tampa and attestation by the City Clerk; providing an effective date.",
+      "rawTitle": "File No. CM26-28272\nCouncil to discuss and take action on the Community Benefits Agreement with the Tampa Bay Rays.\n \nEmail from Rebecca Johns, Senior Assistant City Attorney, transmitting the resolution for said agenda item. (To be R/F)(Title of said resolution listed below)\n \nResolution approving a Community Benefits Agreement between City of Tampa, Florida and Tampa Bay Rays Stadium Company, LLC; providing for certain community benefits to be provided to the City of Tampa as required by the development and funding agreement; providing for an exemption from Section 2-853 of the City of Tampa Code of Ordinances (community Benefit Program); authorizing the execution thereof by the Mayor of the City of Tampa and attestation by the City Clerk; providing an effective date.",
+      "fileNumber": "CM26-28272",
+      "background": "",
+      "supportingDocuments": [],
+      "folioNumbers": [],
+      "location": "",
+      "coordinates": null,
+      "summaryText": "",
+      "projectedCosts": null,
+      "addendumSection": "otherChanges",
+      "continuedToDate": null
+    }
+  ],
+  "formattedDate": "2026-10-29"
+}

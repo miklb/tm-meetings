@@ -4,6 +4,23 @@
   "firstSeenAt": "2026-10-23T23:01:22.207Z",
   "entries": [
     {
+      "date": "2026-10-28",
+      "scrapedAt": "2026-10-28T23:00:59.928Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-28272",
+          "filename": "[V2][RESO RAYS CBA].DOCX"
+        }
+      ]
+    },
+    {
       "date": "2026-10-26",
       "scrapedAt": "2026-10-26T23:09:12Z",
       "itemsAdded": [],
