@@ -14,6 +14,8 @@ type: empty-note
       maintenance/README.md major-version backlog)
 - [ ] `cd site && npm outdated` — apply patch/minor; `npm audit`
 - [ ] `cd scripts && npm outdated` — apply patch/minor; `npm audit`
+- [ ] `npm install-scripts ls` in each dir prints nothing (npm 11.20+ skips
+      unreviewed install scripts; see MAINTENANCE.md → Node.js rules)
 - [ ] If anything bumped: `cd site && npm run build` still passes
 
 ## Transcript venv
@@ -24,7 +26,8 @@ type: empty-note
 ## Repo health
 
 - [ ] `gh run list -L 30` — any pattern of intermittent scrape failures?
-- [ ] Open issues triage: `gh issue list`
+- [ ] Open issues triage: `gh issue list` (the nightly closes superseded
+      change notices itself since 2026-10-28; expect at most one open)
 
 ## Notes
 

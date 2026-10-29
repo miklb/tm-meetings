@@ -40,28 +40,27 @@ Logged July 2026 when the patch/minor backlog was cleared:
   high-severity sharp/libvips CVEs
 - `pdf-parse` 1.1 → 2.x — evaluating this could also replace `pdfreader`,
   which needs a `pdf2json: ^4` override in `agenda-scraper/package.json`
-  (v3 bundles a vulnerable `@xmldom/xmldom`; don't drop the override)
-- `axios-cookiejar-support` 6 → 7
-- `tough-cookie` 4 → 6
+  (v3 bundles a vulnerable `@xmldom/xmldom`; don't drop the override).
+  Built on `feat/pdf-parse-2` 2026-10-12 (now 29+ commits behind main); held
+  2026-10-28, Michael's call. It changes whitespace in stored
+  background/summary strings.
+- `glob` 13 → 14 (`scripts/`, build-db file globbing). Logged 2026-10-28.
 
-Verification recipe for the three above (they touch PDF extraction and the
-OnBase cookie session, which no unit test covers): on a branch, bump, then
+Verification recipe for scraper majors (PDF extraction and the OnBase
+cookie session have no unit-test coverage): on a branch, bump, then
 `cd agenda-scraper && ./process-agenda.sh <recent date> --skip-mirror --no-sync`
 and `git diff` the meeting JSON and agenda Markdown. Identical output means
 the parser and the session still work.
 
 Shipped from the deferred list: `better-sqlite3` 13 and `dotenv` 18 (2026-10-12,
-proven by `npm run build-db && npm run build-site && npm test`).
+proven by `npm run build-db && npm run build-site && npm test`);
+`axios-cookiejar-support` 7 and `tough-cookie` 6 (built 2026-10-12, merged
+2026-10-28; the re-scrape recipe passed both times).
 
 ## Accepted audit residue (re-check monthly)
 
-- `site/`: `braces` (via `chokidar` 3, pinned by Eleventy 3 and its dev
-  server) and `sprintf-js` (via `gray-matter` → `js-yaml` 3 → `argparse` 1).
-  Both advisories cover every published version, so there is nothing to bump
-  to, and `npm audit fix --force` would downgrade Eleventy to 0.6.0. They are
-  build-time pattern DoS against our own config and front matter, not an
-  exposure. Clears when Eleventy moves to chokidar 4 and gray-matter to
-  js-yaml 4. Logged 2026-10-12.
+None as of 2026-10-28. The `site/` `braces` + `sprintf-js` pair logged
+2026-10-12 cleared when Eleventy 3.1.7 moved to chokidar 4.
 
 ## Implementation plan
 

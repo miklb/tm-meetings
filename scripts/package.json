@@ -2,5 +2,8 @@
   "dependencies": {
     "better-sqlite3": "^13.0.3",
     "glob": "^13.0.6"
+  },
+  "allowScripts": {
+    "better-sqlite3": false
   }
 }
