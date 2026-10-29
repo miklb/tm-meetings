@@ -3,7 +3,6 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const { PdfReader } = require('pdfreader');
-const https = require('https');
 
 /**
  * Parse a meeting calendar PDF using pdfreader
@@ -21,8 +20,7 @@ async function parsePDF(url) {
     const response = await axios({
       method: 'GET',
       url: url,
-      responseType: 'arraybuffer',
-      httpsAgent: new https.Agent({ rejectUnauthorized: false }) // In case of SSL issues
+      responseType: 'arraybuffer'
     });
     
     console.log(`PDF downloaded (${response.data.byteLength} bytes), extracting text...`);
