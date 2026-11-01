@@ -4,6 +4,19 @@
   "firstSeenAt": "2026-10-23T23:01:22.207Z",
   "entries": [
     {
+      "date": "2026-10-29",
+      "scrapedAt": "2026-10-29T23:00:51.102Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "CM26-28272",
+          "filename": "1-WRITTEN COMMENT - CM26-28272.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-10-28",
       "scrapedAt": "2026-10-28T23:00:59.928Z",
       "agendaTypePromoted": {
