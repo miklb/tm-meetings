@@ -229,6 +229,34 @@ agenda-scraper/
   withdrawn document has no `mirroredUrl`, is never re-uploaded, and links
   to the City's copy everywhere. See "Withdrawing a document" below.
 
+## Agenda figures (`agenda-stats.js`)
+
+The counts and dollar figures for a preview's opening paragraph: items, votes,
+the range, the total, and what's left out of it. Read-only.
+
+```bash
+node agenda-stats.js --date 2026-11-05            # report with the audit trail
+node agenda-stats.js --date 2026-11-05 --json
+node agenda-stats.js --date 2026-11-05 --meeting 2938
+```
+
+The logic is in `lib/agenda-stats.js`, and its header defines each bucket:
+spending (every fiscal year), reallocations, revenue, debt, annual budgets. Linked
+parts ("(Part 1 of 2)(See Item 48)") count once. It re-parses stored
+`projectedCostsRaw` on every run, so no backfill is needed after a parser fix.
+
+Each figure is checked against the title and FISCAL IMPACT STATEMENT. Anything that
+doesn't reconcile lands under FLAGGED with what each source says, and nothing picks
+a winner: the item stays out of every total and the range. While a flag could change
+the total, the report gives no exact figure, only what it comes to at least however
+the flags settle. If a flagged figure falls past either end of the range, it says
+that end isn't settled. Across the 68 agendas with dollars, 19 have a flag. Many are
+real errors on the City's sheet (11/5/26 item 35 is $30,000 short of its own title).
+
+`test/agenda-stats-calibration.test.js` holds the code to figures published by hand
+in past previews. Scrapes from before the `projectedCosts` field (10/9/25, 11/20/25)
+have no dollars to report, and the tool says so.
+
 ## Re-scrape safety (`lib/scrape-guard.js`)
 
 Before `json-scraper.js` writes a meeting file that already exists it

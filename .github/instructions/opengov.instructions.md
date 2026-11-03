@@ -67,7 +67,9 @@ Funding manifest top-level shape (see [opengov/data/reports/2564-2026-01-08-fund
 }
 ```
 
-Each enriched `rows[]` entry adds: `accountCode`, `fiscalYear`, `enriched.{fund,department,object,project}`, `unresolved[]`. When no account code is found in any context, `accountCode` is `null` and `enriched` is `null` — the line is still kept (its `value` rolls into `totals.other`).
+Each enriched `rows[]` entry adds: `accountCode`, `fiscalYear`, `enriched.{fund,department,object,project}`, `unresolved[]`. When a row has no single account code ("Controlled by Requisition", or one amount over several codes, which are kept in `pooledCodes`), `accountCode` and `enriched` are `null` — the line still counts toward `totals`, but not `byFund` or `byDepartment`.
+
+Manifest totals are per-row sums for the per-item drawers: they include inter-fund transfers, both sides of a linked Part 1/Part 2, and any typo on the sheet. For agenda-level figures use `agenda-scraper/lib/agenda-stats.js`, which leaves transfers out, counts linked parts once, and flags a figure that doesn't reconcile instead of totaling it.
 
 ## Integration goal (per Mikl, 2026-05-02)
 

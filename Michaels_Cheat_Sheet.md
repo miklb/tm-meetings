@@ -24,6 +24,8 @@ No `git pull` first: the run fast-forwards from origin itself and refuses to sta
 
 Output: mirrored PDFs on R2, `agenda-scraper/agendas/agenda_YYYY-MM-DD.md` (record copy), and the tm-static post written/updated in `~/tampa-monitor/tm-static/src/posts/<year>/` — commit + push tm-static to publish.
 
+Numbers for the preview (items, votes, range, total, what doesn't reconcile): `cd agenda-scraper && node agenda-stats.js --date YYYY-MM-DD`. `/agenda-intro YYYY-MM-DD` from a session in `~/tampa-monitor` writes the paragraph from them.
+
 ## Tuesday — Archive the meeting
 
 ```bash
