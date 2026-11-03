@@ -620,9 +620,25 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This resolution provides for an agreement with Shepard, Smith, Hand & Brackins, P.A. in the amount of $250,000 for FY2027, subject to appropriation, for the CRA Administration within the General Fund.",
         "projectedCostsRaw": "01100.213801.531002 $250,000 FY2027 Subject to appropriation\nGeneral Fund. CRA Administration. Other Professional Services",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": "01100.213801.531002",
+            "fund": "01100",
+            "department": "213801",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$250,000",
+            "value": 250000,
+            "type": "expenditure",
+            "signedValue": 250000,
+            "subjectToAppropriation": false,
+            "marker": "",
+            "description": "Subject to appropriation General Fund. CRA Administration. Other Professional Services"
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "III. REQUIRED APPROVALS:"
     }

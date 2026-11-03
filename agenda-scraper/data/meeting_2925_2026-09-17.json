@@ -411,9 +411,40 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution approves the First Amendment to Galls Specialized Agreement between the City of Tampa and Galls, LLC for the provision of uniforms and related products and services in the estimated amount of $1,400,000, subject to annual appropriation of funding, for use by various departments and shall be controlled by requisition.",
         "projectedCostsRaw": "Controlled by Requisition FY27 $700,000 Estimated Amount\nControlled by Requisition FY28 $700,000 Estimated Amount, subject to annual appropriation",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$700,000",
+            "value": 700000,
+            "type": "expenditure",
+            "signedValue": 700000,
+            "subjectToAppropriation": false,
+            "marker": "Estimated Amount",
+            "description": ""
+          },
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$700,000",
+            "value": 700000,
+            "type": "expenditure",
+            "signedValue": 700000,
+            "subjectToAppropriation": true,
+            "marker": "Estimated Amount",
+            "description": ""
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "Public Safety Committee (Items 9 through 17)"
     },

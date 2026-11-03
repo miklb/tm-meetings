@@ -982,10 +982,10 @@
             "fiscalYear": "FY26",
             "amount": "$150,000",
             "value": 150000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure",
+            "signedValue": 150000,
             "subjectToAppropriation": false,
-            "marker": "FY2026",
+            "marker": "",
             "description": "Insurance Fund. HR Risk Management Workers Compensation. Other Professional Services"
           },
           {
@@ -997,10 +997,10 @@
             "fiscalYear": "FY27",
             "amount": "$150,000",
             "value": 150000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure",
+            "signedValue": 150000,
             "subjectToAppropriation": false,
-            "marker": "FY2027",
+            "marker": "",
             "description": "Subject to appropriation Insurance Fund. HR Risk Management Workers Compensation. Other Professional Services"
           }
         ],
@@ -1919,6 +1919,36 @@
             "department": "243100",
             "object": "534008",
             "project": null,
+            "fiscalYear": "FY26",
+            "amount": "$1,525",
+            "value": 1525,
+            "type": "expenditure",
+            "signedValue": 1525,
+            "subjectToAppropriation": false,
+            "marker": "",
+            "description": "Local Option Gas Tax Fund, Transportation Engineering Department, Temp Personnel Contractual Services Account"
+          },
+          {
+            "accountCode": "40400.244800.531002",
+            "fund": "40400",
+            "department": "244800",
+            "object": "531002",
+            "project": null,
+            "fiscalYear": "FY26",
+            "amount": "$1,525",
+            "value": 1525,
+            "type": "expenditure",
+            "signedValue": 1525,
+            "subjectToAppropriation": false,
+            "marker": "",
+            "description": "Water Operations Fund, Water Department, Other Professional Services"
+          },
+          {
+            "accountCode": "10200.243100.534008",
+            "fund": "10200",
+            "department": "243100",
+            "object": "534008",
+            "project": null,
             "fiscalYear": "FY27",
             "amount": "$7,625",
             "value": 7625,
@@ -2157,9 +2187,25 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution renews the Agreements between the City and Austin Construction Group, Inc., Caladesi Construction and Development, Inc., Commercial Interiors, Inc. dba CII Contracting, George G. Solar & Co., Inc. and Gibraltar Construction Co., Inc., in the estimated amount of $1,000,000 for each Agreement and Envision-CS, Inc., FHP Tectonics Corp. and Johnson-Laux Construction, LLC in the estimated amount of $2,000,000 for each Agreement for the provision of Job Order Contracting for Multi-Services, for an estimated total amount of $11,000,000 over a 12-month term, subject to annual appropriation, and shall be controlled by requisition.",
         "projectedCostsRaw": "$11,000,000 FY2027  (Estimated Expenditure) controlled by \nrequisition subject to annual appropriation",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$11,000,000",
+            "value": 11000000,
+            "type": "expenditure",
+            "signedValue": 11000000,
+            "subjectToAppropriation": true,
+            "marker": "Estimated Expenditure",
+            "description": ""
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 32 through 48)"
     },

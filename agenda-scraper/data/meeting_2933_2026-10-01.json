@@ -373,8 +373,8 @@
             "fiscalYear": "FY27",
             "amount": "$48,000",
             "value": 48000,
-            "type": "expenditure",
-            "signedValue": 48000,
+            "type": "expenditure_decrease",
+            "signedValue": -48000,
             "subjectToAppropriation": false,
             "marker": "Decrease Expenditure",
             "description": "Central Tampa Tree Trust Fund. Parks Forestry . Budget Reserve"
@@ -403,8 +403,8 @@
             "fiscalYear": "FY27",
             "amount": "$48,000",
             "value": 48000,
-            "type": "expenditure",
-            "signedValue": 48000,
+            "type": "expenditure_decrease",
+            "signedValue": -48000,
             "subjectToAppropriation": false,
             "marker": "Decrease Expenditure",
             "description": "Westshore Tampa Tree Trust Fund. Parks Forestry . Budget Reserve"
@@ -433,8 +433,8 @@
             "fiscalYear": "FY27",
             "amount": "$48,000",
             "value": 48000,
-            "type": "expenditure",
-            "signedValue": 48000,
+            "type": "expenditure_decrease",
+            "signedValue": -48000,
             "subjectToAppropriation": false,
             "marker": "Decrease Expenditure",
             "description": "University Tampa Tree Trust Fund. Parks Forestry . Budget Reserve"
@@ -463,8 +463,8 @@
             "fiscalYear": "FY27",
             "amount": "$48,000",
             "value": 48000,
-            "type": "expenditure",
-            "signedValue": 48000,
+            "type": "expenditure_decrease",
+            "signedValue": -48000,
             "subjectToAppropriation": false,
             "marker": "decrease expenditure",
             "description": "New Tampa Tree Trust Fund. Parks Forestry . Budget Reserve"
@@ -493,8 +493,8 @@
             "fiscalYear": "FY27",
             "amount": "$48,000",
             "value": 48000,
-            "type": "expenditure",
-            "signedValue": 48000,
+            "type": "expenditure_decrease",
+            "signedValue": -48000,
             "subjectToAppropriation": false,
             "marker": "decrease expenditure",
             "description": "South Tampa Tree Trust Fund. Parks Forestry . Budget Reserve"
@@ -789,8 +789,8 @@
             "fiscalYear": "FY27",
             "amount": "$28,556.64",
             "value": 28556.64,
-            "type": "expenditure",
-            "signedValue": 28556.64,
+            "type": "expenditure_decrease",
+            "signedValue": -28556.64,
             "subjectToAppropriation": false,
             "marker": "decrease expenditure",
             "description": "University Tampa Tree Trust Fund. Parks Forestry . Budget Reserve"
@@ -1565,11 +1565,11 @@
             "fiscalYear": "FY27",
             "amount": "$20,000",
             "value": 20000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure",
+            "signedValue": 20000,
             "subjectToAppropriation": false,
-            "marker": "FY 2027",
-            "description": "(Expenditure increase) General Fund. City Council Admin. Professional Services"
+            "marker": "Expenditure increase",
+            "description": "General Fund. City Council Admin. Professional Services"
           }
         ],
         "hasProjectedCosts": true,
@@ -2704,11 +2704,11 @@
             "fiscalYear": "FY27",
             "amount": "$950,000.00",
             "value": 950000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure",
+            "signedValue": 950000,
             "subjectToAppropriation": false,
-            "marker": "FY27",
-            "description": "(Expenditure) Housing Opportunities for Persons with AIDS HOPWA Grant.DGM-Housing and Community Development HOPWA.Other Contractual Services.HCD HOPWA Contractual 27. P – 1003022 O – DEO Housing & Community Development Dept E – CTPA Other Contractual Service T – 118 A – 100710"
+            "marker": "Expenditure",
+            "description": "Housing Opportunities for Persons with AIDS HOPWA Grant.DGM-Housing and Community Development HOPWA.Other Contractual Services.HCD HOPWA Contractual 27. P – 1003022 O – DEO Housing & Community Development Dept E – CTPA Other Contractual Service T – 118 A – 100710"
           },
           {
             "accountCode": "12220.218800.534007",
@@ -2719,11 +2719,11 @@
             "fiscalYear": "FY28",
             "amount": "$950,000.00",
             "value": 950000,
-            "type": "unknown",
-            "signedValue": 0,
-            "subjectToAppropriation": false,
-            "marker": "FY28",
-            "description": "(Expenditure) Contingent upon available funds. Housing Opportunities for Persons with AIDS HOPWA Grant.DGM-Housing and Community Development HOPWA.Other Contractual Services.HCD HOPWA Contractual 28. P – TBD O – DEO Housing & Community Development Dept E – CTPA Other Contractual Service T – 118 A – TBD"
+            "type": "expenditure",
+            "signedValue": 950000,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": ". Housing Opportunities for Persons with AIDS HOPWA Grant.DGM-Housing and Community Development HOPWA.Other Contractual Services.HCD HOPWA Contractual 28. P – TBD O – DEO Housing & Community Development Dept E – CTPA Other Contractual Service T – 118 A – TBD"
           },
           {
             "accountCode": "12220.218800.534007",
@@ -2734,11 +2734,11 @@
             "fiscalYear": "FY29",
             "amount": "$950,000.00",
             "value": 950000,
-            "type": "unknown",
-            "signedValue": 0,
-            "subjectToAppropriation": false,
-            "marker": "FY29",
-            "description": "(Expenditure) Contingent upon available funds. Housing Opportunities for Persons with AIDS HOPWA Grant.DGM-Housing and Community Development HOPWA.Other Contractual Services.HCD HOPWA Contractual 29. P – TBD O – DEO Housing & Community Development Dept E – CTPA Other Contractual Service T – 118 A – TBD"
+            "type": "expenditure",
+            "signedValue": 950000,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": ". Housing Opportunities for Persons with AIDS HOPWA Grant.DGM-Housing and Community Development HOPWA.Other Contractual Services.HCD HOPWA Contractual 29. P – TBD O – DEO Housing & Community Development Dept E – CTPA Other Contractual Service T – 118 A – TBD"
           }
         ],
         "hasProjectedCosts": true,
@@ -4137,9 +4137,29 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution authorizes an agreement between the City of Tampa and Westra Construction Corp. for design-build initial services in connection with the Citywide Water Main Replacement Project in the amount of $19,890,062.55 for use by the Water Department within the Water Future Debt Capital Projects Fund and/or Water Renewal and Replacement Fund.",
         "projectedCostsRaw": "$19,890,062.55 (Expenditure)\n40554.244600.563001.1001206\nP: 1001206  O: WTR-Water Dept  E: CTPA Improvements Other than Bldgs  T: 30   A: \n100638\n40700.244600.563001.1001206\nP: 1001206  O: WTR-Water Dept  E: CTPA Improvements Other than Bldgs  T: 30   A: \n100453",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$19,890,062.55",
+            "value": 19890062.55,
+            "type": "expenditure",
+            "signedValue": 19890062.55,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "",
+            "pooledCodes": [
+              "40554.244600.563001.1001206",
+              "40700.244600.563001.1001206"
+            ]
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 59 through 65)"
     },

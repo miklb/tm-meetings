@@ -1538,9 +1538,25 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This resolution accepts the proposals between the City of Tampa and Moreno Industrial Services, Inc. for the amount of $304,080 and Gillam Construction, LLC. for the amount of $341,685 for a total of $645,765, controlled by requisition, for use by the Mobility Department within the Local Option Gas Tax Capital Projects Fund.",
         "projectedCostsRaw": "$645,765 FY27 (Estimated Expenditures), controlled by requisition.",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$645,765",
+            "value": 645765,
+            "type": "expenditure",
+            "signedValue": 645765,
+            "subjectToAppropriation": false,
+            "marker": "Estimated Expenditures",
+            "description": "controlled by requisition."
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "Infrastructure Committee (Items 30 through 50)"
     },
@@ -2244,6 +2260,21 @@
             "subjectToAppropriation": false,
             "marker": "Revenue Increase",
             "description": "Consumer Services Capital Project Fund. Water Department. Inter Fund Group Transfers"
+          },
+          {
+            "accountCode": "50350.244600.560005.1003011",
+            "fund": "50350",
+            "department": "244600",
+            "object": "560005",
+            "project": "1003011",
+            "fiscalYear": null,
+            "amount": "$997,610",
+            "value": 997610,
+            "type": "expenditure",
+            "signedValue": 997610,
+            "subjectToAppropriation": false,
+            "marker": "",
+            "description": "(Expenditure Increase Consumer Services Capital Project Fund. Water Department. Professional Svcs Capital. Morris Bridge Call Center Project P:1003011 O:WTR-Water Dept E: CTPA Professional Svcs Capital T: 31 A: 100720"
           }
         ],
         "hasProjectedCosts": true,
@@ -2841,8 +2872,8 @@
             "fiscalYear": "FY26",
             "amount": "$160,000",
             "value": 160000,
-            "type": "expenditure",
-            "signedValue": 160000,
+            "type": "expenditure_decrease",
+            "signedValue": -160000,
             "subjectToAppropriation": false,
             "marker": "Estimated Expenditure",
             "description": "General Fund. Technology Business Applications Gov t Svcs & Utilities. Computers Repair and Maintenance"
@@ -3394,11 +3425,11 @@
             "fiscalYear": "FY27",
             "amount": "$297,000",
             "value": 297000,
-            "type": "unknown",
-            "signedValue": 0,
+            "type": "expenditure",
+            "signedValue": 297000,
             "subjectToAppropriation": false,
-            "marker": "FY27",
-            "description": "(Expenditure) Housing Opportunities for Persons with AIDS Grant.DGM-Housing and Community Development HOPWA.Other-Contractual Services. HCD HOPWA Contractual 27 P- 1003022 O- DEO-Housing & Community Development E- CTPA Other Contractual Service T- 121 A- 100710"
+            "marker": "Expenditure",
+            "description": "Housing Opportunities for Persons with AIDS Grant.DGM-Housing and Community Development HOPWA.Other-Contractual Services. HCD HOPWA Contractual 27 P- 1003022 O- DEO-Housing & Community Development E- CTPA Other Contractual Service T- 121 A- 100710"
           },
           {
             "accountCode": "12220.218800.534007",
@@ -3409,11 +3440,11 @@
             "fiscalYear": "FY28",
             "amount": "$297,000",
             "value": 297000,
-            "type": "unknown",
-            "signedValue": 0,
-            "subjectToAppropriation": false,
-            "marker": "FY28",
-            "description": "(Expenditure) Contingent upon available funds Housing Opportunities for Persons with AIDS Grant.DGM-Housing and Community Development HOPWA.Other-Contractual Services.HCD HOPWA Contractual 28 P- TBD O- DEO-Housing & Community Development E- CTPA Other Contractual Service T- 121 A- TBD"
+            "type": "expenditure",
+            "signedValue": 297000,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": "Housing Opportunities for Persons with AIDS Grant.DGM-Housing and Community Development HOPWA.Other-Contractual Services.HCD HOPWA Contractual 28 P- TBD O- DEO-Housing & Community Development E- CTPA Other Contractual Service T- 121 A- TBD"
           },
           {
             "accountCode": "12220.218800.534007",
@@ -3424,11 +3455,11 @@
             "fiscalYear": "FY29",
             "amount": "$297,000",
             "value": 297000,
-            "type": "unknown",
-            "signedValue": 0,
-            "subjectToAppropriation": false,
-            "marker": "FY29",
-            "description": "(Expenditure) Contingent upon available funds Housing Opportunities for Persons with AIDS Grant.DGM-Housing and Community Development HOPWA.Other-Contractual Services. HCD HOPWA Contractual 29 P- TBD O- DEO-Housing & Community Development E- CTPA Other Contractual Service T- 121 A- TBD"
+            "type": "expenditure",
+            "signedValue": 297000,
+            "subjectToAppropriation": true,
+            "marker": "Expenditure",
+            "description": "Housing Opportunities for Persons with AIDS Grant.DGM-Housing and Community Development HOPWA.Other-Contractual Services. HCD HOPWA Contractual 29 P- TBD O- DEO-Housing & Community Development E- CTPA Other Contractual Service T- 121 A- TBD"
           }
         ],
         "hasProjectedCosts": true,
@@ -5599,9 +5630,30 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution provides funding in the amount of $3,000,000 for use by the Water Department and Wastewater Department for the D.L. Tippin Engineering and Inspections Services Project and the Construction Engineering and Inspection Services Project from within the Water Renewal and Replacement Fund, Water Future Debt Capital Projects 2028- 2031 Fund and the Wastewater Capital/Construction Fund.",
         "projectedCostsRaw": "$3,000,000 (Expenditure)\n40700.244500.563001.1002989\nWater Renewal and Replacement Fund. Water Department. Improvements other than Bldgs. \nD.L. Tippin Engineering and Inspections Services Project\n40555.244500.563001.1002989\nWater Future Debt Capital Projects 2028-2031 Fund. Water Department. Improvements other \nthan Bldgs. D.L. Tippin Engineering and Inspections Services Project\n41100.243200.563001.1003002\nWastewater Capital Construction Fund. Wastewater Department. Improvements Other Than \nBldgs. Construction Engineering and Inspection Services Project",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$3,000,000",
+            "value": 3000000,
+            "type": "expenditure",
+            "signedValue": 3000000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Wastewater Capital Construction Fund. Wastewater Department. Improvements Other Than Bldgs. Construction Engineering and Inspection Services Project",
+            "pooledCodes": [
+              "40700.244500.563001.1002989",
+              "40555.244500.563001.1002989",
+              "41100.243200.563001.1003002"
+            ]
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 86 through 98)"
     },
@@ -5649,9 +5701,30 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution provides funding in the amount of $3,000,000 for use by the Water Department and Wastewater Department for the D.L. Tippin Engineering and Inspections Services Project and the Construction Engineering and Inspection Services Project from within the Water Renewal and Replacement Fund, Water Future Debt Capital Projects 2028- 2031 Fund and the Wastewater Capital/Construction Fund.",
         "projectedCostsRaw": "$3,000,000 (Expenditure)\n40700.244500.563001.1002989\nWater Renewal and Replacement Fund. Water Department. Improvements other than Bldgs. \nD.L. Tippin Engineering and Inspections Services Project\n40555.244500.563001.1002989\nWater Future Debt Capital Projects 2028-2031 Fund. Water Department. Improvements other \nthan Bldgs. D.L. Tippin Engineering and Inspections Services Project\n41100.243200.563001.1003002\nWastewater Capital Construction Fund. Wastewater Department. Improvements Other Than \nBldgs. Construction Engineering and Inspection Services Project",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$3,000,000",
+            "value": 3000000,
+            "type": "expenditure",
+            "signedValue": 3000000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Wastewater Capital Construction Fund. Wastewater Department. Improvements Other Than Bldgs. Construction Engineering and Inspection Services Project",
+            "pooledCodes": [
+              "40700.244500.563001.1002989",
+              "40555.244500.563001.1002989",
+              "41100.243200.563001.1003002"
+            ]
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 86 through 98)"
     },
@@ -5699,9 +5772,30 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution provides funding in the amount of $3,000,000 for use by the Water Department and Wastewater Department for the D.L. Tippin Engineering and Inspections Services Project and the Construction Engineering and Inspection Services Project from within the Water Renewal and Replacement Fund, Water Future Debt Capital Projects 2028- 2031 Fund and the Wastewater Capital/Construction Fund.",
         "projectedCostsRaw": "$3,000,000 (Expenditure)\n40700.244500.563001.1002989\nWater Renewal and Replacement Fund. Water Department. Improvements other than Bldgs. \nD.L. Tippin Engineering and Inspections Services Project\n40555.244500.563001.1002989\nWater Future Debt Capital Projects 2028-2031 Fund. Water Department. Improvements other \nthan Bldgs. D.L. Tippin Engineering and Inspections Services Project\n41100.243200.563001.1003002\nWastewater Capital Construction Fund. Wastewater Department. Improvements Other Than \nBldgs. Construction Engineering and Inspection Services Project",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": null,
+            "amount": "$3,000,000",
+            "value": 3000000,
+            "type": "expenditure",
+            "signedValue": 3000000,
+            "subjectToAppropriation": false,
+            "marker": "Expenditure",
+            "description": "Wastewater Capital Construction Fund. Wastewater Department. Improvements Other Than Bldgs. Construction Engineering and Inspection Services Project",
+            "pooledCodes": [
+              "40700.244500.563001.1002989",
+              "40555.244500.563001.1002989",
+              "41100.243200.563001.1003002"
+            ]
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 86 through 98)"
     },
@@ -5749,9 +5843,40 @@
       "projectedCosts": {
         "fiscalImpactStatement": "This Resolution will provide $7,000,000, over a 24-month term, subject to annual appropriation for the provision of Installation, Repair, and Replacement of Parks Site Furnishings, Playground Equipment and Surfacing for use by the Parks and Recreation Department, controlled by requisition.",
         "projectedCostsRaw": "$3,500,000 FY2027 (Estimated Expenditure) controlled by requisition\n$3,500,000 FY2028 (Estimated Expenditure) subject to annual appropriation, controlled by \nrequisition",
-        "rows": [],
+        "rows": [
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": "FY27",
+            "amount": "$3,500,000",
+            "value": 3500000,
+            "type": "expenditure",
+            "signedValue": 3500000,
+            "subjectToAppropriation": false,
+            "marker": "Estimated Expenditure",
+            "description": "controlled by requisition"
+          },
+          {
+            "accountCode": null,
+            "fund": null,
+            "department": null,
+            "object": null,
+            "project": null,
+            "fiscalYear": "FY28",
+            "amount": "$3,500,000",
+            "value": 3500000,
+            "type": "expenditure",
+            "signedValue": 3500000,
+            "subjectToAppropriation": true,
+            "marker": "Estimated Expenditure",
+            "description": "controlled by requisition"
+          }
+        ],
         "hasProjectedCosts": true,
-        "hasParsedRows": false
+        "hasParsedRows": true
       },
       "section": "STAFF REPORTS AND UNFINISHED BUSINESS - (Items 86 through 98)"
     },

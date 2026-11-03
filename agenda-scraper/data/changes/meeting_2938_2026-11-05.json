@@ -2,5 +2,23 @@
   "meetingId": "2938",
   "meetingDate": "2026-11-05",
   "firstSeenAt": "2026-10-31T23:03:54.184Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-11-03",
+      "scrapedAt": "2026-11-03T23:03:49.070Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 47,
+          "itemFileNumber": "INF26-28245",
+          "filename": "MEMO.ROGERO - 110526 REGULAR COUNCIL SESSION - INF26-28245.PDF"
+        }
+      ]
+    }
+  ]
 }

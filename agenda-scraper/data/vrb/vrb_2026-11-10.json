@@ -1,0 +1,340 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-11-10",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-november-2026-197441",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-november-2026-197441",
+      "nodeId": 197441,
+      "title": "VRB Agenda - November 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-november-2026-197441",
+      "postedDate": "2026-11-03",
+      "updatedTime": "2026-11-03T08:41:09-05:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/vrb-agenda-november-2026.pdf",
+      "pdfSha256": "86bb79915415f5cec614b62a1f05aad1fa6753bb930a9e9c9d9a73809ea2d36b",
+      "pdfBytes": 210251,
+      "pages": 7,
+      "textFile": "text/vrb-agenda-november-2026-197441.txt",
+      "firstSeen": "2026-11-03",
+      "mirroredUrl": null,
+      "warnings": [],
+      "previousVersions": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-82",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Ivy and Cordelia LLC/ Paula Mendoza",
+      "location": "2108 West Ivy Street",
+      "folio": "177127.0000",
+      "zoning": "Residential Single-family (RS-50)",
+      "request": "Remove one nonhazardous grand tree",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "Bowman Heights",
+      "locationWithheld": false,
+      "owner": "Ivy and Cordelia LLC",
+      "applicant": "Paula Mendoza",
+      "neighborhoodAssociations": [
+        "Bowman Heights"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000082",
+        "lat": 27.969542,
+        "lng": -82.48123,
+        "address": "2108 W Ivy St",
+        "neighborhood": "Bowman Heights",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00TW2&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-98",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Eddy G Amargo",
+      "location": "915 East Bird St",
+      "folio": "146672.0000",
+      "zoning": "Residential Single family (RS-50)",
+      "request": "Reduction of setbacks for front yard from 20 feet to 5 feet, side yard from 7 feet to 5 feet, and rear yard from 20 feet to 5 feet. Request removal of one grand tree.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations. Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc., Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
+      "owner": "Eddy G Amargo",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Sulphur Springs Action League, Inc.",
+        "Hyde Park Spanishtown Creek Civic Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000098",
+        "lat": 28.022541,
+        "lng": -82.450238,
+        "address": "915 E Bird St",
+        "neighborhood": "Sulphur Springs",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01UM1&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-120",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Price Ave Properties LLC/ Amber Ruhe",
+      "location": "4908 West Price Avenue",
+      "folio": "131927.0000",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Remove one non-hazardous grand tree",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "Gandy Civic Association, Southtown Park HOA, Belmar Gardens Neighborhood, Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Price Ave Properties LLC",
+      "applicant": "Amber Ruhe",
+      "neighborhoodAssociations": [
+        "Gandy Civic Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Bayside West Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000120",
+        "lat": 27.890673,
+        "lng": -82.52899,
+        "address": "4908 W Price Ave",
+        "neighborhood": "Gandy / Sun Bay South",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=025YX&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-92",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Renee Nellenbach",
+      "location": "1708 West Bedingfield Drive",
+      "folio": "105022.0000",
+      "zoning": "Residential Single-family (RS-60)",
+      "request": "Reduce accessory structure setback for the front from 60 feet to 26 feet.",
+      "codeSection": "Sec. 27-290 Accessory Structures",
+      "neighborhoodAssociationsRaw": "Wellswood Civic Association, Inc., Tampa Overlook Neighborhood Association, Old Seminole Heights Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Renee Nellenbach",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Wellswood Civic Association, Inc.",
+        "Tampa Overlook Neighborhood Association",
+        "Old Seminole Heights Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000092",
+        "lat": 27.992133,
+        "lng": -82.476908,
+        "address": "1708 W Bedingfield Dr",
+        "neighborhood": "Wellswood",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01SGZ&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-100",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Michael A. Spanos/Shalom Halfon",
+      "location": "3916 West San Rafael Street",
+      "folio": "119373.0000",
+      "zoning": "Residential Single-family (RS-75)",
+      "request": "Reduce required rear yard setback from 12 feet to 10 feet to allow for a rear addition to the single-family home.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Palma Ceia West Neighborhood Association, Inc., Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Michael A. Spanos",
+      "applicant": "Shalom Halfon",
+      "neighborhoodAssociations": [
+        "Palma Ceia West Neighborhood Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000100",
+        "lat": 27.926539,
+        "lng": -82.50833,
+        "address": "3916 W San Rafael St",
+        "neighborhood": "Palma Ceia West",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01X10&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-103",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "William & Adele Geyer",
+      "location": "4801 W Longfellow Avenue",
+      "folio": "121489.0050",
+      "zoning": "Residential Single-family (RS-75)",
+      "request": "Reduce rear yard setback from 5 feet to 0 feet Reduce corner yard setback from 15 feet to 11 feet for a screen enclosure",
+      "codeSection": "Sec. 27-290.5 Screen enclosures",
+      "neighborhoodAssociationsRaw": "Sunset Park Area Homeowners Association, Inc., Virginia Park Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "William & Adele Geyer",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Sunset Park Area Homeowners Association, Inc.",
+        "Virginia Park Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000103",
+        "lat": 27.916129,
+        "lng": -82.52642,
+        "address": "4801 W Longfellow Ave",
+        "neighborhood": "Sunset Park",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01Y9Z&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-106",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "J & C Motors LLC/ RU Project Management Group, LLC",
+      "location": "4311 West South Avenue",
+      "folio": "108567.0000",
+      "zoning": "Industrial General (IG)",
+      "request": "Reduce rear and east boundary setback at back of building from 10 feet to 0 feet. Reduce corner setback at the front of building from 10 feet to 7.5 feet.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Drew Park Advisory Committee, Drew Park CRA Community Advisory Committee, Bowman Heights, Grant Park Civic Association",
+      "locationWithheld": false,
+      "owner": "J & C Motors LLC",
+      "applicant": "RU Project Management Group, LLC",
+      "neighborhoodAssociations": [
+        "Drew Park Advisory Committee",
+        "Drew Park CRA Community Advisory Committee",
+        "Bowman Heights",
+        "Grant Park Civic Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000106",
+        "lat": 27.991542,
+        "lng": -82.516943,
+        "address": "4311 W South Ave",
+        "neighborhood": "Drew Park",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YNI&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 8,
+      "caseNumber": "VRB-26-112",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Cinda Huntley",
+      "location": "1810 West Sligh Avenue",
+      "folio": "103390.0000",
+      "zoning": "Residential Multi-family (RM-16) Commercial Neighborhood (CN)",
+      "request": "Reduce side yard setback from 10 feet to 6 feet for a generator due to the commercial zoning.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Armenia Garden Estates Neighborhood Association, Riverbend Civic Association",
+      "locationWithheld": false,
+      "owner": "Cinda Huntley",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Armenia Garden Estates Neighborhood Association",
+        "Riverbend Civic Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000112",
+        "lat": 28.010706,
+        "lng": -82.477695,
+        "address": "1810 W Sligh Ave",
+        "neighborhood": "Riverbend",
+        "councilDistrict": "6",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=020C7&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 9,
+      "caseNumber": "VRB-26-116",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Aleksander Kihnke",
+      "location": "2715 Bayshore Blvd",
+      "folio": "127097.0000",
+      "zoning": "Residential Single-family (RS-75)",
+      "request": "Seek to reduce front yard setback from 25'-0\" to 16'-0\" and reduce side yard setback from 7'-0\" to 5'-0\".",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Bayshore Gardens Neighborhood Association, Inc., SOHO Business Alliance, 345 Bayshore Condominium Assn., Parkland Estates Civic Club, Inc., Bayshore Beautiful Neighborhood Association, Inc., Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Aleksander Kihnke",
+      "applicant": null,
+      "neighborhoodAssociations": [
+        "Bayshore Gardens Neighborhood Association, Inc.",
+        "SOHO Business Alliance",
+        "345 Bayshore Condominium Assn.",
+        "Parkland Estates Civic Club, Inc.",
+        "Bayshore Beautiful Neighborhood Association, Inc.",
+        "Bayside West Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000116",
+        "lat": 27.92103,
+        "lng": -82.488747,
+        "address": "2715 Bayshore Blvd",
+        "neighborhood": "Bayshore Gardens",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=0233G&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 10,
+      "caseNumber": "VRB-26-121",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Cowboys And Pirates LLC/ Ken Satterlee",
+      "location": "2502 North Boulevard",
+      "folio": "183358.0000",
+      "zoning": "Planned Development (PD)",
+      "request": "Reduce the required setback for the two freestanding signs from 15’ to 0’ and increase the square footage from 80 to 96 sq ft. Increase the building sign square footage to add a 69.72 sq ft sign not facing a public street.",
+      "codeSection": "Sec. 27-289.3 Allowable signs (b)(3), Sec.27-289.3 Allowable Signs (b)(6)(2)",
+      "neighborhoodAssociationsRaw": "Ridgewood Park Crime Prevention & Civic Association, Inc., Tampa Heights Civic Association Land Use Committee, residents of Adalee St, One Laurel Place, Informed Neighbor, Tampa Overlook Neighborhood Association, Bowman Heights, VM Ybor Neighborhood Association & Crimewatch, Ybor Heights Neighborhood Association and Watch Group, Riverside Heights Civic Association, Bowman Heights, Old Seminole Heights Neighborhood Association, Inc., Tampa Heights Civic Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Cowboys And Pirates LLC",
+      "applicant": "Ken Satterlee",
+      "neighborhoodAssociations": [
+        "Ridgewood Park Crime Prevention & Civic Association, Inc.",
+        "Tampa Heights Civic Association Land Use Committee",
+        "residents of Adalee St",
+        "One Laurel Place",
+        "Informed Neighbor",
+        "Tampa Overlook Neighborhood Association",
+        "Bowman Heights",
+        "VM Ybor Neighborhood Association & Crimewatch",
+        "Ybor Heights Neighborhood Association and Watch Group",
+        "Riverside Heights Civic Association",
+        "Old Seminole Heights Neighborhood Association, Inc.",
+        "Tampa Heights Civic Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000121",
+        "lat": 27.966097,
+        "lng": -82.46774,
+        "address": "2502 N Boulevard",
+        "neighborhood": "Ridgewood Park",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=0265N&agencyCode=TAMPA"
+      }
+    }
+  ],
+  "warnings": [],
+  "geoWarnings": []
+}
