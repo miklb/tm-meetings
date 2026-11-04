@@ -1,0 +1,23 @@
+{
+  "meeting_id": 2714,
+  "meeting_date": "2026-10-29",
+  "meeting_type": "Special",
+  "videos": [
+    {
+      "video_id": "bndd4BRLBj0",
+      "title": "Tampa City Council Special Call - 10/29/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-10-29T20:16:55Z",
+      "duration": "PT4H2M31S",
+      "chapters": [],
+      "offset_seconds": 522
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-11-04T23:36:13Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
