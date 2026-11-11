@@ -11,6 +11,7 @@ scripts use the pipeline venv (`source pipeline/activate.sh`) unless marked.
 | `build-db.js` | Builds `data/meetings.db` (SQLite) from the agenda JSON in `agenda-scraper/data/`. **Pipeline-called** — `npm run build-db`, and directly from `archive-meeting.sh` / `build-site.sh`. |
 | `dispatch-notifications.js` | POSTs to the production `/api/notify` endpoint to send keyword-match notification emails for given meeting id(s). No dry-run — see `preview-dispatch.js` first. |
 | `find-speaker-mentions.js` | Scans processed transcript JSON for segments by a given speaker matching a regex; emits a Markdown report with links to the archive page and YouTube timestamp. |
+| `notify.js` | The keyword-notification run for one meeting date: `npm run notify -- <YYYY-MM-DD>`. Resolves meeting IDs and the agenda post URL, checks the live post's item anchors, runs `preview-dispatch.js`, asks before sending (`--yes` to skip), runs `dispatch-notifications.js` and checks `sentCount` against the preview. |
 | `preview-dispatch.js` | Dry-run for `dispatch-notifications.js` — mirrors the matching engine against remote D1 read-only to show who would get what before sending. |
 | `run-offset-verification.py` | Driver for `verify-offset.py` — walks a list of transcript IDs, checks every video part, and logs results to `docs/plans/`. Run in the pipeline venv. |
 | `sync-design.js` | One-way design-system sync: copies shared CSS files verbatim from `tm-static` into this repo. `npm run sync-design` (`-- --check` to report drift without writing). |

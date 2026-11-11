@@ -202,9 +202,9 @@ const FILE_NUMBER_PATTERN = /([A-Z]{2,4})(\d{2})-(\d{4})/;
 
 ## Keyword Notifications Dispatch
 
-Keyword notifications are **manually triggered from your machine** — they are not part of the nightly scrape and there is no GitHub Action. Dispatch after:
-1. The agenda post is published on tampamonitor.com (tm-static; the WordPress post it replaced)
-2. The Monday morning newsletter has gone out
+Keyword notifications are **manually triggered from your machine** — they are not part of the nightly scrape and there is no GitHub Action. Dispatch after the agenda post is published on tampamonitor.com (tm-static; the WordPress post it replaced). It does not wait on the newsletter.
+
+`npm run notify -- <YYYY-MM-DD>` is the whole run: it resolves the meeting IDs and the agenda post URL, checks the post is live with every item anchor, previews, asks before sending (`--yes` skips the prompt; without a terminal and without `--yes` it only previews), and checks the server's `sentCount` against the preview. The two scripts below are what it wraps.
 
 ### Preview first, then dispatch
 

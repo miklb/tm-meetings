@@ -1,11 +1,12 @@
 # Michael's Cheat Sheet
 
-Two top-level npm scripts drive everything. Both accept a date like `2026-04-16`.
+Three top-level npm scripts drive everything. Each accepts a date like `2026-04-16`.
 Background/history lives in [Michaels_Notes.md](Michaels_Notes.md).
 
 | Command                         | When                   | What it does                                                                        |
 | ------------------------------- | ---------------------- | ----------------------------------------------------------------------------------- |
 | `npm run agenda -- YYYY-MM-DD`  | Friday (pre-meeting)   | Scrape agenda from Hyland → mirror PDFs to R2 → reconcile OpenGov → tm-static post  |
+| `npm run notify -- YYYY-MM-DD`  | Agenda post is live    | Preview keyword matches → confirm → email subscribers → check the count             |
 | `npm run archive -- YYYY-MM-DD` | Tuesday (post-meeting) | Scrape transcript → capitalize → match YouTube video + offset → rebuild DB + site   |
 
 Note the `--` separator: without it npm swallows the args.
@@ -23,6 +24,8 @@ Always re-scrapes (no `--force` needed since 2026-08-20): date runs only touch m
 No `git pull` first: the run fast-forwards from origin itself and refuses to start if local and origin have diverged (then `git pull` to merge — never rebase — and re-run). When it finishes it commits what it wrote as `update M/D/YY agenda` and pushes, so the nightly scrape never lands on top of an unpushed local run (that was the 9/29/26 conflict). It will not commit over a dirty index. Details: `pipeline/git-sync.sh`.
 
 Output: mirrored PDFs on R2, `agenda-scraper/agendas/agenda_YYYY-MM-DD.md` (record copy), and the tm-static post written/updated in `~/tampa-monitor/tm-static/src/posts/<year>/` — commit + push tm-static to publish.
+
+Once the post is live, send the keyword notifications: `npm run notify -- YYYY-MM-DD` ("Send notifications" below).
 
 Numbers for the preview (items, votes, range, total, what doesn't reconcile): `cd agenda-scraper && node agenda-stats.js --date YYYY-MM-DD`. `/agenda-intro YYYY-MM-DD` from a session in `~/tampa-monitor` writes the paragraph from them.
 
@@ -137,9 +140,24 @@ Reversal: delete the entry from the list, `node mirror-documents.js <meetingId>`
 
 ## Send notifications (dispatch)
 
-Dispatch is manual and has **no dry-run** — it POSTs to production and emails every
-matching verified subscriber. Always preview first. Run **after** the agenda post
-is live on tampamonitor.com and the Monday newsletter has gone out.
+Run **after** the agenda post is live on tampamonitor.com. It does not wait on the
+newsletter.
+
+```bash
+npm run notify -- 2026-11-12          # preview, then asks y/N before sending
+npm run notify -- 2026-11-12 --yes    # preview, then sends
+```
+
+One command finds the meeting IDs for the date, reads the post URL from
+`agenda-scraper/agendas/agenda_<date>.md`, checks the post is live and has every
+item's anchor, previews, sends, and checks the server's `sentCount` against the
+preview. It stops without sending if any of that fails or nothing is new. If the
+post's slug was set by hand, pass `--agenda-url=<url>`.
+
+### By hand
+
+The dispatch script itself has **no dry-run** — it POSTs to production and emails
+every matching verified subscriber. Always preview first.
 
 ```bash
 # 1. Which meeting? (the ID is in the JSON filename)
