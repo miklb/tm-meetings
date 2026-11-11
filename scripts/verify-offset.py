@@ -12,8 +12,9 @@ Usage (pipeline venv):
 
 Prints one JSON line per part (human-readable summary to stderr).
 Verdicts: OK (<=15s) / SUSPECT (<=60s) / WRONG / NO-MATCH / UNCHECKED.
-Skips procedural boilerplate (roll calls, motions) when choosing anchors —
-those phrases recur all meeting and fuzzy-match the wrong occurrence.
+Skips procedural boilerplate (roll calls, motions) when choosing anchors, and
+any segment whose opening words appear elsewhere in the transcript — repeated
+phrases fuzzy-match the wrong occurrence.
 Read-only: never modifies any mapping/transcript files.
 """
 import argparse
@@ -155,6 +156,7 @@ GENERIC_RE = re.compile(
     r'good morning|good afternoon|welcome back|thank you(,)? (mr|ms|madam|council))\b',
     re.I)
 MIN_UNIQUE_RATIO = 0.6     # distinct words / total words in the anchor phrase
+RECUR_MIN_RATIO = 0.75     # another passage this close to the anchor makes it ambiguous
 
 
 def is_generic(seg):
@@ -170,10 +172,56 @@ def is_generic(seg):
     return False
 
 
-def pick_candidate(part_segs, frac, exclude=None):
+def _words(seg):
+    if '_words' not in seg:
+        seg['_words'] = normalize_words(seg['text'])
+    return seg['_words']
+
+
+def anchor_recurs(seg, segments):
+    """True when the segment's anchor phrase also appears elsewhere in the transcript.
+
+    GENERIC_RE only knows the boilerplate someone thought to list. A sentence
+    read verbatim after each of several items (the clerk's "Second hearing and
+    adoption will be held on ..." after every first reading) passes it, and
+    the audio match then lands on whichever copy it meets first: 11/5/26
+    part 2 reported a phantom -63s drift from the copy one item earlier. A
+    copy elsewhere can also make a wrong offset look right. So the anchor has
+    to be the only passage like it in the whole transcript.
+    """
+    target = _words(seg)[:ANCHOR_WORDS]
+    n = len(target)
+    if n < 5:
+        return False
+    target_set = set(target)
+    for other in segments:
+        if other is seg:
+            continue
+        words = _words(other)
+        for i in range(len(words) - n + 1):
+            window = words[i:i + n]
+            # Cheap screen: a close match shares most of its words.
+            if sum(1 for w in window if w in target_set) < n / 2:
+                continue
+            if SequenceMatcher(None, target, window).ratio() >= RECUR_MIN_RATIO:
+                return True
+    return False
+
+
+def usable(seg, segments):
+    return not is_generic(seg) and not anchor_recurs(seg, segments)
+
+
+def pick_candidate(part_segs, frac, exclude=None, segments=None):
+    """Distinctive segment nearest `frac` of the way through the part.
+
+    `segments` is the whole transcript, searched for repeats of the anchor;
+    it defaults to the part itself.
+    """
     exclude = exclude or set()
     if not part_segs:
         return None
+    segments = part_segs if segments is None else segments
     target = int(len(part_segs) * frac)
     target = min(max(target, 0), len(part_segs) - 1)
     order = sorted(range(len(part_segs)), key=lambda i: abs(i - target))
@@ -181,16 +229,17 @@ def pick_candidate(part_segs, frac, exclude=None):
         if i in exclude:
             continue
         seg = part_segs[i]
-        if not is_generic(seg):
+        if usable(seg, segments):
             return i, seg
     return None
 
 
-def pick_at(part_segs, at_secs):
-    """Nearest non-generic segment at/after a requested transcript time."""
+def pick_at(part_segs, at_secs, segments=None):
+    """Nearest distinctive segment to a requested transcript time."""
+    segments = part_segs if segments is None else segments
     order = sorted(range(len(part_segs)), key=lambda i: abs(part_segs[i]['secs'] - at_secs))
     for i in order:
-        if not is_generic(part_segs[i]):
+        if usable(part_segs[i], segments):
             return i, part_segs[i]
     return None
 
@@ -342,7 +391,8 @@ def verify_part(mapping, segments, video, keep_wav=False, at=None):
         else:
             plan = [('frac', f) for f in (0.5, 0.25, 0.7)]
         for kind, val in plan:
-            cand = pick_at(part_segs, val) if kind == 'at' else pick_candidate(part_segs, val, exclude=tried)
+            cand = (pick_at(part_segs, val, segments=segments) if kind == 'at'
+                    else pick_candidate(part_segs, val, exclude=tried, segments=segments))
             if cand is None:
                 continue
             idx, seg = cand
@@ -351,7 +401,8 @@ def verify_part(mapping, segments, video, keep_wav=False, at=None):
             if result.get('ok'):
                 break
         if result is None:
-            return fail('no non-generic candidate segment with >=25 words found')
+            return fail('no distinctive candidate segment found (>=25 words, not boilerplate, '
+                        'not repeated elsewhere in the transcript)')
     if not result.get('ok'):
         result.setdefault('verdict', 'NO-MATCH')
     return {**base, **result}
