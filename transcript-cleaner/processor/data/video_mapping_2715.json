@@ -1,0 +1,256 @@
+{
+  "meeting_id": 2715,
+  "meeting_date": "2026-11-05",
+  "meeting_type": "City Council",
+  "videos": [
+    {
+      "video_id": "O15gy1Fze_M",
+      "title": "Tampa City Council - 11/05/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-11-06T08:03:38Z",
+      "duration": "PT3H47M49S",
+      "chapters": [
+        {
+          "title": "Start of Meeting",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 1: E2026-15 - Police Officer of the Month",
+          "timestamp": "00:18:13",
+          "seconds": 1093
+        },
+        {
+          "title": "Item 2: CM26-27126 - Charter Review Commission Commendation",
+          "timestamp": "00:32:39",
+          "seconds": 1959
+        },
+        {
+          "title": "Item 3: CM26-26979 - Tampa Bay Water Annual Report",
+          "timestamp": "00:47:48",
+          "seconds": 2868
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "01:12:04",
+          "seconds": 4324
+        },
+        {
+          "title": "Item 4: BA26-28129 - Carly Puleo Committee Reappointment",
+          "timestamp": "01:57:14",
+          "seconds": 7034
+        },
+        {
+          "title": "Committee Reports",
+          "timestamp": "01:57:51",
+          "seconds": 7071
+        },
+        {
+          "title": "Item 78: VAC-26-17 - Bayshore Boulevard Area Alley Vacation",
+          "timestamp": "02:05:49",
+          "seconds": 7549
+        },
+        {
+          "title": "Item 79: E2026-8 CH 22 - Vegetation Obstructing Driver Visibility Ordinance",
+          "timestamp": "02:20:01",
+          "seconds": 8401
+        },
+        {
+          "title": "Item 80: E2026-8 CH 26.5 - Strategic Business Development Program Revisions",
+          "timestamp": "02:21:47",
+          "seconds": 8507
+        },
+        {
+          "title": "Item 81: DA26-26530 - North Avon Avenue Stormwater Franchise",
+          "timestamp": "02:22:11",
+          "seconds": 8531
+        },
+        {
+          "title": "Item 82: REZ-26-60 - 1605 N Waters Court Rezoning",
+          "timestamp": "02:23:48",
+          "seconds": 8628
+        },
+        {
+          "title": "Item 83: REZ-26-65 - 4911 E 10th Avenue Rezoning",
+          "timestamp": "02:26:03",
+          "seconds": 8763
+        },
+        {
+          "title": "Item 84: REZ-26-74 - Armenia and Walnut Avenues Rezoning",
+          "timestamp": "02:28:38",
+          "seconds": 8918
+        },
+        {
+          "title": "Item 85: REZ-26-78 - 3209 N 22nd Street Rezoning",
+          "timestamp": "02:29:55",
+          "seconds": 8995
+        },
+        {
+          "title": "Item 86: REZ-26-82 - 620 W MLK Boulevard Rezoning",
+          "timestamp": "02:31:36",
+          "seconds": 9096
+        },
+        {
+          "title": "Item 87: REZ-26-85 - 5400\u20135510 S West Shore Rezoning",
+          "timestamp": "02:33:36",
+          "seconds": 9216
+        },
+        {
+          "title": "Item 88: REZ-26-87 - 2101 W Hillsborough Avenue Rezoning",
+          "timestamp": "02:35:11",
+          "seconds": 9311
+        },
+        {
+          "title": "Item 89: REZ-26-99 - East 2nd and 3rd Avenues Rezoning",
+          "timestamp": "02:38:06",
+          "seconds": 9486
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "02:40:41",
+          "seconds": 9641
+        },
+        {
+          "title": "Item 90: VAC-26-11 - Banyan Avenue Right-of-Way Vacation",
+          "timestamp": "03:09:39",
+          "seconds": 11379
+        },
+        {
+          "title": "Item 91: ANX26-27315 - 1860 E Fowler Avenue Annexation",
+          "timestamp": "03:40:12",
+          "seconds": 13212
+        },
+        {
+          "title": "Item 92: ANX26-27317 - 11516 N Armenia Avenue Annexation",
+          "timestamp": "03:44:27",
+          "seconds": 13467
+        }
+      ],
+      "offset_seconds": 704
+    },
+    {
+      "video_id": "08kcZekWLQc",
+      "title": "Tampa City Council - Part 2 - 11/05/26",
+      "part": 2,
+      "session": null,
+      "published_at": "2026-11-06T09:04:04Z",
+      "duration": "PT2H5M20S",
+      "chapters": [
+        {
+          "title": "Start",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Item 95: E2026-8 CH 2 - Council Override of Mayoral Orders",
+          "timestamp": "00:13:29",
+          "seconds": 809
+        },
+        {
+          "title": "Item 96: E2026-8 CH 2 - Council Staffing Authority Amendment",
+          "timestamp": "00:40:14",
+          "seconds": 2414
+        },
+        {
+          "title": "Item 97: E2026-8 CH 2 - Council Member Attendance Requirements",
+          "timestamp": "00:42:22",
+          "seconds": 2542
+        },
+        {
+          "title": "Item 98: E2026-8 CH 2 - Ordinance Reading Procedures Amendment",
+          "timestamp": "00:43:45",
+          "seconds": 2625
+        },
+        {
+          "title": "Item 99: E2026-8 CH 4 - Mayoral Term Limits Amendment",
+          "timestamp": "00:44:55",
+          "seconds": 2695
+        },
+        {
+          "title": "Item 100: E2026-8 CH 6 - Elected Officials Terms Clarification",
+          "timestamp": "00:54:40",
+          "seconds": 3280
+        },
+        {
+          "title": "Item 101: E2026-8 CH 6 - City Officer Salary Adjustment Authority",
+          "timestamp": "00:56:40",
+          "seconds": 3400
+        },
+        {
+          "title": "Item 102: E2026-8 CH 6 - City Officer Oath Revision",
+          "timestamp": "01:01:01",
+          "seconds": 3661
+        },
+        {
+          "title": "Item 103: E2026-8 CH 7 - Charter State Law Compliance Amendment",
+          "timestamp": "01:02:15",
+          "seconds": 3735
+        },
+        {
+          "title": "Item 104: E2026-8 CH 7 - Council Midyear Budget Amendment Authority",
+          "timestamp": "01:03:10",
+          "seconds": 3790
+        },
+        {
+          "title": "Item 105: E2026-8 CH 9 - Zoning Adjustment Board Charter Revision",
+          "timestamp": "01:04:10",
+          "seconds": 3850
+        },
+        {
+          "title": "Item 106: E2026-8 CH 10 - Citizen Initiatives and Referendums Procedures",
+          "timestamp": "01:05:25",
+          "seconds": 3925
+        },
+        {
+          "title": "Item 107: E2026-8 CH 10 - Obsolete Charter Language Removal",
+          "timestamp": "01:06:25",
+          "seconds": 3985
+        },
+        {
+          "title": "Item 108: E2026-8 CH 11 - Obsolete Election Terms Language Removal",
+          "timestamp": "01:07:15",
+          "seconds": 4035
+        },
+        {
+          "title": "Item 109: E2026-8 CH 12 - Independent Inspector General Office Creation",
+          "timestamp": "01:08:45",
+          "seconds": 4125
+        },
+        {
+          "title": "Item 8 and 9",
+          "timestamp": "01:19:30",
+          "seconds": 4770
+        },
+        {
+          "title": "Item 111: CM26-27685 - Red Light Camera Program Report",
+          "timestamp": "01:24:18",
+          "seconds": 5058
+        },
+        {
+          "title": "Item 112: CM26-21879 - School Zone Speed Camera Funding",
+          "timestamp": "01:29:03",
+          "seconds": 5343
+        },
+        {
+          "title": "Item 114: CM26-23034 - Land Development Code Update",
+          "timestamp": "01:31:33",
+          "seconds": 5493
+        },
+        {
+          "title": "Information Reports and New Business",
+          "timestamp": "01:41:26",
+          "seconds": 6086
+        }
+      ],
+      "transcript_start_time": "1:51:17PM",
+      "offset_seconds": 675
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-11-11T15:08:22Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
