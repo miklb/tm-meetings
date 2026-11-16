@@ -2,5 +2,23 @@
   "meetingId": "2986",
   "meetingDate": "2026-11-17",
   "firstSeenAt": "2026-11-12T23:01:01.649Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-11-16",
+      "scrapedAt": "2026-11-16T23:02:31.557Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 1,
+          "itemFileNumber": "E2026-48",
+          "filename": "UPDATED MEMO - DISTRICT 7 APPLICANTS.PDF"
+        }
+      ]
+    }
+  ]
 }

@@ -3,7 +3,7 @@
   "meetingType": "special",
   "meetingName": "City Council Special Call",
   "meetingTime": "13:30",
-  "agendaType": "DRAFT",
+  "agendaType": "FINAL",
   "isAddendum": false,
   "meetingDate": "November 17, 2026",
   "sourceUrl": "https://tampagov.hylandcloud.com/251agendaonline/Documents/ViewAgenda?meetingId=2986&type=agenda&doctype=1",
@@ -11,16 +11,22 @@
     {
       "number": 1,
       "agendaItemId": "28797",
-      "title": "File No. E2026-48 (Two-minute presentations from applicants who are present during the Council meeting.)\nCity Council to appoint the District 7 representative for the remainder of the term.\nMemorandum from Shirley Foxx-Knowles, City Clerk, transmitting the applications and resumes of qualified District 7 applicants. (To be R/F)",
-      "rawTitle": "File No. E2026-48 (Two-minute presentations from applicants who are present during the Council meeting.)\nCity Council to appoint the District 7 representative for the remainder of the term.\nMemorandum from Shirley Foxx-Knowles, City Clerk, transmitting the applications and resumes of qualified District 7 applicants. (To be R/F)",
+      "title": "File No. E2026-48 (Two-minute presentations from applicants who are present during the Council meeting.)\nCity Council to appoint the District 7 representative for the remainder of the term.\nThe following qualified applicants are under consideration for appointment to the District 7 City Council vacancy:\n1. Nasrin Aldawoodi (Application withdrawn)\n2. Clifford Maurice Allen\n3. Patricia A. Alonzo\n4. Kamolika Batabyal\n5. Alan M. Cohn\n6. Candice Monique Cowen\n7. James Davison\n8. Darnell Eason\n9. Eyad John Gheith\n10. Robin Lockett\n11. Morris Lopez III\n12. Belinda Gail Quarterman Noah\n13. Jessica Park\n14. Gene Siudut\n15. Devanshu Swaly\nMemorandum from Shirley Foxx-Knowles, City Clerk, transmitting the applications and resumes of qualified District 7 applicants. (To be R/F)\nUpdated memorandum from Shirley Foxx-Knowles, City Clerk, transmitting the additional application and resume. (To be R/F)",
+      "rawTitle": "File No. E2026-48 (Two-minute presentations from applicants who are present during the Council meeting.)\nCity Council to appoint the District 7 representative for the remainder of the term.\nThe following qualified applicants are under consideration for appointment to the District 7 City Council vacancy:\n1. Nasrin Aldawoodi (Application withdrawn)\n2. Clifford Maurice Allen\n3. Patricia A. Alonzo\n4. Kamolika Batabyal\n5. Alan M. Cohn\n6. Candice Monique Cowen\n7. James Davison\n8. Darnell Eason\n9. Eyad John Gheith\n10. Robin Lockett\n11. Morris Lopez III\n12. Belinda Gail Quarterman Noah\n13. Jessica Park\n14. Gene Siudut\n15. Devanshu Swaly\nMemorandum from Shirley Foxx-Knowles, City Clerk, transmitting the applications and resumes of qualified District 7 applicants. (To be R/F)\nUpdated memorandum from Shirley Foxx-Knowles, City Clerk, transmitting the additional application and resume. (To be R/F)",
       "fileNumber": "E2026-48",
       "background": "",
       "supportingDocuments": [
         {
           "title": "MEMO (CITY CLERK) - DISTRICT 7 APPLICANTS.PDF",
-          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO%20(CITY%20CLERK)%20-%20DISTRICT%207%20APPLICANTS.PDF.pdf?documentType=1&meetingId=2986&itemId=28797&publishId=218931&isSection=False&isAttachment=True",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/MEMO%20(CITY%20CLERK)%20-%20DISTRICT%207%20APPLICANTS.PDF.pdf?documentType=1&meetingId=2986&itemId=28797&publishId=220321&isSection=False&isAttachment=True",
           "originalTitle": "View PDF of MEMO (CITY CLERK) - DISTRICT 7 APPLICANTS.PDF in a new tab",
           "originalText": "MEMO (CITY CLERK) - DISTRICT 7 APPLICANTS.PDF"
+        },
+        {
+          "title": "UPDATED MEMO - DISTRICT 7 APPLICANTS.PDF",
+          "url": "https://tampagov.hylandcloud.com/251agendaonline/Documents/DownloadFileBytes/UPDATED%20MEMO%20-%20DISTRICT%207%20APPLICANTS.PDF.pdf?documentType=1&meetingId=2986&itemId=28797&publishId=220322&isSection=False&isAttachment=True",
+          "originalTitle": "View PDF of UPDATED MEMO - DISTRICT 7 APPLICANTS.PDF in a new tab",
+          "originalText": "UPDATED MEMO - DISTRICT 7 APPLICANTS.PDF"
         }
       ],
       "folioNumbers": [],
