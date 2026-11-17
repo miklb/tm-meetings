@@ -2,5 +2,28 @@
   "meetingId": "2941",
   "meetingDate": "2026-11-19",
   "firstSeenAt": "2026-11-13T23:02:12.228Z",
-  "entries": []
+  "entries": [
+    {
+      "date": "2026-11-17",
+      "scrapedAt": "2026-11-17T23:02:39.297Z",
+      "agendaTypePromoted": {
+        "from": "DRAFT",
+        "to": "FINAL"
+      },
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 90,
+          "itemFileNumber": "PH26-27662",
+          "filename": "MEMO - DATA CENTER MORATORIUM ORDINANCE - NOV 19, 2026 - AGENDA ITEM NO. 90 - FILE NO. PH26-27662.PDF"
+        },
+        {
+          "itemNumber": 91,
+          "itemFileNumber": "CM26-26838",
+          "filename": "MEMO.RUGGIERO, 111926 REGULAR COUNCIL SESSION, FILE NO. CM26-26838.PDF"
+        }
+      ]
+    }
+  ]
 }
