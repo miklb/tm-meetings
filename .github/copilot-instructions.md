@@ -263,7 +263,7 @@ This runs in order:
 
 **Why this matters:** the four steps feed each other in order. Skipping the mirror step leaves new documents linking to OnBase instead of R2; skipping reconciliation makes the per-item Financial impact sections silently disappear from the output. A standalone `json-scraper.js` run no longer erases `mirroredUrl` stamps or overwrites a good file with an empty scrape (`lib/scrape-guard.js` carries stamps forward, keeps the stored version of any item whose fetch failed, and refuses a 0-item scrape), but it still does not mirror new documents or rebuild the funding manifest.
 
-If you need to regenerate the tm-static markdown post only (JSON + mirrors + manifest already done): `node json-to-markdown.js --date <YYYY-MM-DD>` (matches the existing post by slug and keeps its filename + publish date)
+If you need to regenerate the tm-static markdown post only (JSON + mirrors + manifest already done): `node json-to-markdown.js --date <YYYY-MM-DD>` (matches the existing post by slug and keeps its filename + publish date). Once the meeting date has passed, an existing post is left alone, so post-meeting sweeps (`archive-meeting.sh` Step 0) refresh the JSON, mirror and `agendas/` record but not the published post; add `--force` to rewrite it (a document withdrawal does)
 
 If you need to re-mirror only (JSON already done): `node mirror-documents.js <meetingId>`
 

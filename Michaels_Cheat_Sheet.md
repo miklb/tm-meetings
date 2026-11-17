@@ -121,7 +121,7 @@ what was withdrawn and a one-word reason, never who asked.
 cd agenda-scraper
 node withdraw-document.js "<the docs.meetings.tampamonitor.com URL>" --reason privacy-request --dry-run
 node withdraw-document.js "<the docs.meetings.tampamonitor.com URL>" --reason privacy-request
-node json-to-markdown.js --date YYYY-MM-DD        # tm-static post now links the City's copy
+node json-to-markdown.js --date YYYY-MM-DD --force   # tm-static post now links the City's copy (--force: past meetings' posts are otherwise left alone)
 cd ..
 npm run build-db && npm run build-site && npm run deploy
 git add agenda-scraper/data && git commit -m "withdraw <file> (privacy-request)" && git push

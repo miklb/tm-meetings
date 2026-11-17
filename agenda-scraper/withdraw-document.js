@@ -175,7 +175,7 @@ async function main() {
   const date = meetingData.formattedDate || '<YYYY-MM-DD>';
   console.log(`
 Next, from the repo root:
-  (cd agenda-scraper && node json-to-markdown.js --date ${date})   # tm-static post now links the City's copy
+  (cd agenda-scraper && node json-to-markdown.js --date ${date} --force)   # tm-static post now links the City's copy
   npm run build-db && npm run build-site && npm run deploy          # meetings site
   git add agenda-scraper/data && git commit -m "withdraw ${path.basename(key)} (${options.reason})" && git push
   cd ~/tampa-monitor/tm-static && git add src/posts && git commit -m "agenda ${date}: withdrawn document" && git push

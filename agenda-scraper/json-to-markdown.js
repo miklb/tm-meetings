@@ -973,11 +973,11 @@ function generateMarkdownPost(meetings, options = {}) {
  * set, writes/updates the tm-static post — an existing post with the same
  * slug keeps its filename and original front-matter date.
  */
-function writePost(post, destDir) {
+function writePost(post, destDir, { force = false, today = isoLocal().slice(0, 10), recordDir = RECORD_DIR } = {}) {
     const dateIso = isoLocal();
     let frontMatter = buildFrontMatter({ ...post, dateIso });
 
-    const recordPath = path.join(RECORD_DIR, `agenda_${post.meetingDate}.md`);
+    const recordPath = path.join(recordDir, `agenda_${post.meetingDate}.md`);
     fs.writeFileSync(recordPath, `${frontMatter}\n\n${post.body}\n`);
     console.log(`📝 Markdown record: ${recordPath}`);
 
@@ -996,6 +996,15 @@ function writePost(post, destDir) {
     fs.mkdirSync(yearDir, { recursive: true });
 
     let destPath = findExistingPost(destDir, post);
+    if (destPath && !force && postIsFrozen(post.meetingDate, today)) {
+        // Once the meeting has happened the published post is the record;
+        // post-meeting sweeps (archive-meeting.sh Step 0) refresh the JSON,
+        // mirror and agendas/ record for the archive, not the post. Re-runs
+        // used to rewrite it and drop hand edits to its front matter.
+        console.log(`⏸  Leaving published post alone (meeting was ${post.meetingDate}): ${destPath}`);
+        console.log('   Pass --force to rewrite it.');
+        return;
+    }
     if (destPath) {
         // Keep the original publish date and slug/permalink on re-runs — the
         // URL may already be live (and may have been set with --slug). Delete
@@ -1016,6 +1025,11 @@ function writePost(post, destDir) {
         console.log(`✨ New post: ${destPath}`);
     }
     fs.writeFileSync(destPath, `${frontMatter}\n\n${post.body}\n`);
+}
+
+/** True once the meeting date (YYYY-MM-DD) is before today: the post is frozen. */
+function postIsFrozen(meetingDate, today) {
+    return Boolean(meetingDate) && meetingDate < today;
 }
 
 /** Path of the tm-static post this meeting already has (slug-matched), or null. */
@@ -1042,7 +1056,7 @@ function readFeaturedItems(postPath) {
 
 function parseArguments() {
     const args = process.argv.slice(2);
-    const options = { meetingIds: [], date: null, dest: undefined, slug: null, title: null, featured: [], clearFeatured: false, help: false };
+    const options = { meetingIds: [], date: null, dest: undefined, slug: null, title: null, featured: [], clearFeatured: false, force: false, help: false };
     for (let i = 0; i < args.length; i++) {
         const arg = args[i];
         if (arg === '--help' || arg === '-h') options.help = true;
@@ -1050,6 +1064,7 @@ function parseArguments() {
         else if (arg === '--dest') options.dest = args[++i];
         else if (arg === '--slug') options.slug = args[++i];
         else if (arg === '--title') options.title = args[++i];
+        else if (arg === '--force') options.force = true;
         else if (arg === '--feature' || arg === '-f') {
             const val = args[++i] || '';
             if (val.toLowerCase() === 'none') options.clearFeatured = true;
@@ -1079,11 +1094,14 @@ Options:
                           comma-separated). Kept across re-runs via the
                           post's featuredItems front matter; --feature none
                           clears it.
+      --force             Rewrite the tm-static post even though the
+                          meeting date has passed
   -h, --help              Show this help
 
 Always writes agendas/agenda_<date>.md; also writes/updates the tm-static
 post when a destination is set. Existing posts (matched on slug) keep their
-filename and original front-matter date.
+filename and original front-matter date. After the meeting date, an existing
+post is left alone unless --force is passed.
 `);
 }
 
@@ -1119,7 +1137,7 @@ function main() {
             post = generateMarkdownPost(meetings, { ...options, featured: kept });
         }
     }
-    writePost(post, destDir);
+    writePost(post, destDir, { force: options.force });
 
     const itemCount = meetings.reduce((n, m) => n + (m.agendaItems?.length || 0), 0);
     console.log(`Processed ${meetings.length} meeting(s), ${itemCount} agenda items → ${post.slug}`);
@@ -1133,6 +1151,7 @@ module.exports = {
     generateMarkdownPost,
     typeInfo,
     writePost,
+    postIsFrozen,
     normalizeSectionTitle,
     groupItemsBySection,
     groupConsentSections,
