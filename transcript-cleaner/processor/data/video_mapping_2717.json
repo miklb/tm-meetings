@@ -1,0 +1,64 @@
+{
+  "meeting_id": 2717,
+  "meeting_date": "2026-11-12",
+  "meeting_type": "Evening",
+  "videos": [
+    {
+      "video_id": "V9JZLxIFW5s",
+      "title": "Tampa City Council PM - 11/12/26",
+      "part": 1,
+      "session": "evening",
+      "published_at": "2026-11-13T15:58:50Z",
+      "duration": "PT2H2M26S",
+      "chapters": [
+        {
+          "title": "Start",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "2423 East Ida Street",
+          "timestamp": "00:13:35",
+          "seconds": 815
+        },
+        {
+          "title": "6307 North Nebraska Avenue",
+          "timestamp": "00:42:24",
+          "seconds": 2544
+        },
+        {
+          "title": "3108 Empedrado Street",
+          "timestamp": "00:54:55",
+          "seconds": 3295
+        },
+        {
+          "title": "2916 West Angeles Street",
+          "timestamp": "01:11:00",
+          "seconds": 4260
+        },
+        {
+          "title": "3610 Temple Street",
+          "timestamp": "01:28:55",
+          "seconds": 5335
+        },
+        {
+          "title": "109 and 109 \u00bd West Amelia Avenue",
+          "timestamp": "01:36:05",
+          "seconds": 5765
+        },
+        {
+          "title": "New Business",
+          "timestamp": "01:57:05",
+          "seconds": 7025
+        }
+      ],
+      "offset_seconds": 518
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-11-17T20:25:29Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}

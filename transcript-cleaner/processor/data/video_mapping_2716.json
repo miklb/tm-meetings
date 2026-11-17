@@ -1,0 +1,84 @@
+{
+  "meeting_id": 2716,
+  "meeting_date": "2026-11-12",
+  "meeting_type": "CRA",
+  "videos": [
+    {
+      "video_id": "kaS6fCoXnRk",
+      "title": "Community Redevelopment Agency - 11/12/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-11-13T07:35:15Z",
+      "duration": "PT2H25M46S",
+      "chapters": [
+        {
+          "title": "Start",
+          "timestamp": "00:00:00",
+          "seconds": 0
+        },
+        {
+          "title": "Public Comments",
+          "timestamp": "00:14:11",
+          "seconds": 851
+        },
+        {
+          "title": "Item 1: CRA24-2242 - East Tampa CAC Chair Report",
+          "timestamp": "00:38:58",
+          "seconds": 2338
+        },
+        {
+          "title": "Item 2: CRA24-2241 - CRA Director's Monthly Report",
+          "timestamp": "01:24:00",
+          "seconds": 5040
+        },
+        {
+          "title": "Item 3: CRA26-28348 - East Tampa Housing Funding Reallocation",
+          "timestamp": "01:41:03",
+          "seconds": 6063
+        },
+        {
+          "title": "Item 8: CRA26-27912 - Tenant Microgrant Program Discussion",
+          "timestamp": "01:42:06",
+          "seconds": 6126
+        },
+        {
+          "title": "Item 4: CRA25-19842 - Tampa Union Station Update",
+          "timestamp": "01:56:11",
+          "seconds": 6971
+        },
+        {
+          "title": "Item 5: CRA26-27950 - Jackson House Status Update",
+          "timestamp": "01:56:46",
+          "seconds": 7006
+        },
+        {
+          "title": "Item 9: CRA26-25568 - Community Benefits Agreement Revisions",
+          "timestamp": "01:57:36",
+          "seconds": 7056
+        },
+        {
+          "title": "Item 10: CRA26-26394 - Centro Espa\u00f1ol Redevelopment Update",
+          "timestamp": "02:03:31",
+          "seconds": 7411
+        },
+        {
+          "title": "Item 14: CRA26-28347 - East Tampa Ponds Master Plan",
+          "timestamp": "02:14:37",
+          "seconds": 8077
+        },
+        {
+          "title": "New Business",
+          "timestamp": "02:16:59",
+          "seconds": 8219
+        }
+      ],
+      "offset_seconds": 576
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-11-17T20:34:08Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
