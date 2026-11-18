@@ -23,6 +23,24 @@
       "mirroredUrl": null,
       "warnings": [],
       "previousVersions": []
+    },
+    {
+      "kind": "minutes",
+      "slug": "vrb-minutes-november-10-2026-198071",
+      "nodeId": 198071,
+      "title": "VRB Minutes - November 10, 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-minutes-november-10-2026-198071",
+      "postedDate": "2026-11-18",
+      "updatedTime": "2026-11-18T08:02:45-05:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/november-10-2026-vrb-minutes.pdf",
+      "pdfSha256": "b92b9a260525058dc8ce5232a0b546cb54f42677a4799e5261bbf5e50f69e115",
+      "pdfBytes": 226744,
+      "pages": 9,
+      "textFile": "text/vrb-minutes-november-10-2026-198071.txt",
+      "firstSeen": "2026-11-18",
+      "mirroredUrl": null,
+      "warnings": [],
+      "previousVersions": []
     }
   ],
   "cases": [

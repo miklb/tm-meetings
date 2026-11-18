@@ -4,6 +4,34 @@
   "firstSeenAt": "2026-11-13T23:02:12.228Z",
   "entries": [
     {
+      "date": "2026-11-18",
+      "scrapedAt": "2026-11-18T23:02:47.537Z",
+      "itemsAdded": [],
+      "itemsRemoved": [],
+      "newDocuments": [
+        {
+          "itemNumber": 60,
+          "itemFileNumber": "TA/CPA24-04",
+          "filename": "TA_CPA_24-04_TCC_ADOPTION_PACKET_111926.PDF.PDF"
+        },
+        {
+          "itemNumber": 63,
+          "itemFileNumber": "CIP-CIS",
+          "filename": "ORDINANCE - FY27 - FY31 CIS.PDF"
+        },
+        {
+          "itemNumber": 89,
+          "itemFileNumber": "CM26-24460",
+          "filename": "MEMO.CITY ADMINISTRATION - 09192026 REGULAR COUNCIL SESSION - AGENDA ITEM NO. 89.DOCX"
+        },
+        {
+          "itemNumber": 90,
+          "itemFileNumber": "PH26-27662",
+          "filename": "RESOLUTION_ CC INTENT TO ADOPT AND ORDINANCE 11.18.26.PDF"
+        }
+      ]
+    },
+    {
       "date": "2026-11-17",
       "scrapedAt": "2026-11-17T23:02:39.297Z",
       "agendaTypePromoted": {
