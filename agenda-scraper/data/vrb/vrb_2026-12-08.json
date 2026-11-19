@@ -1,0 +1,296 @@
+{
+  "board": "vrb",
+  "boardName": "Variance Review Board",
+  "hearingDate": "2026-12-08",
+  "hearingTime": "5:30 PM",
+  "location": "Old City Hall, 315 E. Kennedy Boulevard, City Council Chambers, 3rd Floor, Tampa, FL 33602",
+  "canonicalAgenda": "vrb-agenda-december-2026-198161",
+  "documents": [
+    {
+      "kind": "agenda",
+      "slug": "vrb-agenda-december-2026-198161",
+      "nodeId": 198161,
+      "title": "VRB Agenda - December 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-agenda-december-2026-198161",
+      "postedDate": "2026-11-19",
+      "updatedTime": "2026-11-19T13:27:05-05:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/december-8-2026-agenda_ada.pdf",
+      "pdfSha256": "2d49d27b9d254a981e5201e57835a5bf59027a845ede6c75b6292df5c8c0595c",
+      "pdfBytes": 211553,
+      "pages": 6,
+      "textFile": "text/vrb-agenda-december-2026-198161.txt",
+      "firstSeen": "2026-11-19",
+      "mirroredUrl": null,
+      "warnings": [],
+      "previousVersions": []
+    }
+  ],
+  "cases": [
+    {
+      "itemNumber": 1,
+      "caseNumber": "VRB-26-108",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "City of Tampa ROW/ Ricky Peterika",
+      "location": "910 South Himes Avenue",
+      "folio": "118190.0000",
+      "zoning": "Residential Single-Family (RS-100)",
+      "request": "Remove one nonhazardous grand tree to construct the Golfview Flooding Relief Project.",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "Golfview Neighborhood Association, Inc. Parkland Estates Civic Club, Inc.",
+      "locationWithheld": false,
+      "owner": "City of Tampa ROW",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Golfview Neighborhood Association",
+        "Inc. Parkland Estates Civic Club, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000108",
+        "lat": 27.932305,
+        "lng": -82.501665,
+        "address": "910 S Himes Ave",
+        "neighborhood": "Golfview",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YU0&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 2,
+      "caseNumber": "VRB-26-109",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Juan Pimentel/ Ricky Peterika",
+      "location": "2307 West Barclay Road",
+      "folio": "97236.0000",
+      "zoning": "Residential Single-Family (RS-50)",
+      "request": "Remove one non-hazardous tree to construct a roundabout",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "N/A",
+      "locationWithheld": false,
+      "owner": "Juan Pimentel",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "N/A"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000109",
+        "lat": 28.038203,
+        "lng": -82.483002,
+        "address": "2307 W Barclay Rd",
+        "neighborhood": "Historic Forest Hills",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YV5&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 3,
+      "caseNumber": "VRB-26-110",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Housing Authority of The City of Tampa/ Ricky Peterika",
+      "location": "6661 North 24 th Street",
+      "folio": "150916.0000",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Remove 8 non-hazardous grand trees Reduce tree retention from to 20% for multifamily housing",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review. Sec. 27-284.3.1 Landscape and tree planting standards; tree preservation (retention) standards Table 284.3.1 Tree Preservation (Retention) Requirements",
+      "neighborhoodAssociationsRaw": "Seminole Heights East Neighborhood Association",
+      "locationWithheld": false,
+      "owner": "Housing Authority of The City of Tampa",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Seminole Heights East Neighborhood Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000110",
+        "lat": 28.008403,
+        "lng": -82.4326,
+        "address": "6661 N 24th St",
+        "neighborhood": "Seminole Heights East",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YV6&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 4,
+      "caseNumber": "VRB-26-122",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "JMS LLC/ Ricky Peterika",
+      "location": "5102 South Lois Avenue",
+      "folio": "132451.0000",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Remove two (2) grand laurel oaks and reduce tree retention from 50% to 40%.",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review. Sec. 27-284.3.1 Landscape and tree planting standards; tree preservation (retention) standards Table 284.3.1 Tree Preservation (Retention) Requirements",
+      "neighborhoodAssociationsRaw": "Gandy Civic Association, Southtown Park HOA, Belmar Gardens Neighborhood, Bayside West Neighborhood Association, Inc.",
+      "locationWithheld": false,
+      "owner": "JMS LLC",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Gandy Civic Association",
+        "Southtown Park HOA",
+        "Belmar Gardens Neighborhood",
+        "Bayside West Neighborhood Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000122",
+        "lat": 27.889754,
+        "lng": -82.515397,
+        "address": "5102 S Lois Ave",
+        "neighborhood": "Gandy / Sun Bay South",
+        "councilDistrict": "4",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=0267Z&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 5,
+      "caseNumber": "VRB-26-129",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "WST 400 Channelside LLC/ Ricky Peterika",
+      "location": "422 Channelside Drive",
+      "folio": "193825.0000",
+      "zoning": "Central Business District (CBD-2)",
+      "request": "Remove three (3) grand trees to construct a mixed-use development.",
+      "codeSection": "Sec. 27-284.2.5. - Permit for grand tree removal; application; required documentation; standards and criteria for decision; inspections; petition for review.",
+      "neighborhoodAssociationsRaw": "Tampa Downtown Partnership, Inc., The Slade at Channelside Condo, Inc., The Residences of Franklin Street Condominium Association, Inc. , Residents of Franklin Street, One Laurel Place, Palmetto Beach Community Association, Inc., Hyde Park Spanishtown Creek Civic Association, Bowman Heights",
+      "locationWithheld": false,
+      "owner": "WST 400 Channelside LLC",
+      "applicant": "Ricky Peterika",
+      "neighborhoodAssociations": [
+        "Tampa Downtown Partnership, Inc.",
+        "The Slade at Channelside Condo, Inc.",
+        "The Residences of Franklin Street Condominium Association, Inc.",
+        "Residents of Franklin Street",
+        "One Laurel Place",
+        "Palmetto Beach Community Association, Inc.",
+        "Hyde Park Spanishtown Creek Civic Association",
+        "Bowman Heights"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000129",
+        "lat": 27.943602,
+        "lng": -82.452662,
+        "address": "422 Channelside Dr",
+        "neighborhood": "Tampa Downtown Partnership",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=02FV7&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 6,
+      "caseNumber": "VRB-26-123",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Montanos Hauling Inc. / RU Project Management Group LLC",
+      "location": "4201 East 12 th Avenue",
+      "folio": "160784.0000",
+      "zoning": "Commercial Intensive (CI)",
+      "request": "Request for reduction in front yard setback from 10 feet to 3’4”.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Jackson Heights Neighborhood Associated & Crime Watch",
+      "locationWithheld": false,
+      "owner": "Montanos Hauling Inc.",
+      "applicant": "RU Project Management Group LLC",
+      "neighborhoodAssociations": [
+        "Jackson Heights Neighborhood Associated & Crime Watch"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000123",
+        "lat": 27.963925,
+        "lng": -82.410563,
+        "address": "4201 E 12th Ave",
+        "neighborhood": "East Side Commercial",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=027BX&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 7,
+      "caseNumber": "VRB-26-124",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Nhan Bui/ Luisa Alonso",
+      "location": "3812 Lakeshore Drive",
+      "folio": "148812.0000",
+      "zoning": "Residential Single-family (RS-60)",
+      "request": "Reduce front setback from 25 feet to 18’.4”, East side setback from 7 feet to 5’.6” and west side from 7 feet to 0.6”.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Temple Crest Civic Association, Inc.",
+      "locationWithheld": false,
+      "owner": "Nhan Bui",
+      "applicant": "Luisa Alonso",
+      "neighborhoodAssociations": [
+        "Temple Crest Civic Association, Inc."
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000124",
+        "lat": 28.01073,
+        "lng": -82.417102,
+        "address": "3812 Lakeshore Dr",
+        "neighborhood": "Temple Crest",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=02817&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 8,
+      "caseNumber": "VRB-26-125",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "Candido Lira Melo/ Christopher J. Lozano",
+      "location": "8506 North 9 th Street",
+      "folio": "146251.0000",
+      "zoning": "Residential Single-Family (RM-24)",
+      "request": "Reduce front yard setback from 25 feet to 11 feet.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "Sulphur Springs Action League, Inc. Hyde Park Spanishtown Creek Civic Association",
+      "locationWithheld": false,
+      "owner": "Candido Lira Melo",
+      "applicant": "Christopher J. Lozano",
+      "neighborhoodAssociations": [
+        "Sulphur Springs Action League",
+        "Inc. Hyde Park Spanishtown Creek Civic Association"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000125",
+        "lat": 28.026711,
+        "lng": -82.450464,
+        "address": "8506 N 9th St",
+        "neighborhood": "Sulphur Springs",
+        "councilDistrict": "5",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=02A1N&agencyCode=TAMPA"
+      }
+    },
+    {
+      "itemNumber": 9,
+      "caseNumber": "VRB-26-127",
+      "note": null,
+      "section": null,
+      "ownerApplicant": "WMG Acquisitions LLC/ Mark Brenchley",
+      "location": "6441 East County Line Road",
+      "folio": "32901.0906",
+      "zoning": "PD-A",
+      "request": "Allow a wall sign on three separate elevations not facing a public street.",
+      "codeSection": "Sec. 27-156 Table 4-2 – Schedule of Area, Height, Bulk and Placement Regulations.",
+      "neighborhoodAssociationsRaw": "N/A",
+      "locationWithheld": false,
+      "owner": "WMG Acquisitions LLC",
+      "applicant": "Mark Brenchley",
+      "neighborhoodAssociations": [
+        "N/A"
+      ],
+      "geo": {
+        "recordId": "VRB-26-0000127",
+        "lat": 28.171167,
+        "lng": -82.355704,
+        "address": "6441 E County Line Rd",
+        "neighborhood": "New Tampa",
+        "councilDistrict": "7",
+        "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=02BLH&agencyCode=TAMPA"
+      }
+    }
+  ],
+  "warnings": [],
+  "geoWarnings": []
+}
