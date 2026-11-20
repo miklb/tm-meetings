@@ -23,6 +23,24 @@
       "mirroredUrl": "https://docs.meetings.tampamonitor.com/boards/vrb/2026-08-11/f3572c98-august-11-2026.ada_.pdf",
       "previousVersions": [],
       "warnings": []
+    },
+    {
+      "kind": "minutes",
+      "slug": "vrb-minutes-august-11-2026-198211",
+      "nodeId": 198211,
+      "title": "VRB Minutes - August 11, 2026",
+      "documentUrl": "https://www.tampa.gov/document/vrb-minutes-august-11-2026-198211",
+      "postedDate": "2026-11-20",
+      "updatedTime": "2026-11-20T14:36:40-05:00",
+      "pdfUrl": "https://www.tampa.gov/sites/default/files/document/2026/august-11-2026-vrb-minutes-ada.pdf",
+      "pdfSha256": "d33ca3f6ce9b3eae3d7ed597f84aa23888c2fbf446b1222cbb2b5134aea5a924",
+      "pdfBytes": 401797,
+      "pages": 11,
+      "textFile": "text/vrb-minutes-august-11-2026-198211.txt",
+      "firstSeen": "2026-11-20",
+      "mirroredUrl": null,
+      "warnings": [],
+      "previousVersions": []
     }
   ],
   "cases": [
