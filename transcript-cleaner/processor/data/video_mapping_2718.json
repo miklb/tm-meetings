@@ -1,0 +1,23 @@
+{
+  "meeting_id": 2718,
+  "meeting_date": "2026-11-17",
+  "meeting_type": "Special",
+  "videos": [
+    {
+      "video_id": "N6ig7DVHT2o",
+      "title": "Tampa City Council Special Call - 11/17/26",
+      "part": 1,
+      "session": null,
+      "published_at": "2026-11-18T08:03:49Z",
+      "duration": "PT1H26M26S",
+      "chapters": [],
+      "offset_seconds": 347
+    }
+  ],
+  "verification": {
+    "status": "pass",
+    "checked_at": "2026-11-24T19:57:37Z",
+    "audit_rc": 0,
+    "verify_rc": 0
+  }
+}
