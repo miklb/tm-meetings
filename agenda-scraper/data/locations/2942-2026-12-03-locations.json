@@ -1,0 +1,87 @@
+{
+  "meetingId": "2942",
+  "date": "2026-12-03",
+  "records": {
+    "REZ-26-0000076": {
+      "lat": 27.966055,
+      "lng": -82.461062,
+      "address": "109 W Amelia Ave",
+      "neighborhood": "Tampa Heights",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00ML2&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000083": {
+      "lat": 27.982144,
+      "lng": -82.432249,
+      "address": "2423 E Ida St",
+      "neighborhood": "East Tampa 1",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00RG2&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000089": {
+      "lat": 28.004832,
+      "lng": -82.451248,
+      "address": "6307 N Nebraska Ave",
+      "neighborhood": "Old Seminole Heights",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00SE4&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000093": {
+      "lat": 27.920356,
+      "lng": -82.493817,
+      "address": "3108 W Empedrado St",
+      "neighborhood": "Palma Ceia",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00UO8&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000094": {
+      "lat": 27.927222,
+      "lng": -82.490963,
+      "address": "2916 W Angeles St",
+      "neighborhood": "Palma Ceia",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00USN&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000095": {
+      "lat": 27.976247,
+      "lng": -82.401061,
+      "address": "3610 Temple St",
+      "neighborhood": "Grant Park",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00VBN&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "VAC-26-0000011": {
+      "lat": 28.034571,
+      "lng": -82.444696,
+      "address": "9401 N 14th St",
+      "neighborhood": "North Tampa Community",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00IN5&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "VAC-26-0000017": {
+      "lat": 27.923956,
+      "lng": -82.487117,
+      "address": "2512 W Palm Dr",
+      "neighborhood": "Bayshore Gardens",
+      "councilDistrict": "4",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01V3C&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "VAC-26-0000018": {
+      "lat": 27.965348,
+      "lng": -82.387961,
+      "address": "5912 E Broadway Ave",
+      "neighborhood": "East Side Commercial",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01VK6&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    }
+  }
+}

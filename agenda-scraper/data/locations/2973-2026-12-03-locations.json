@@ -1,0 +1,42 @@
+{
+  "meetingId": "2973",
+  "date": "2026-12-03",
+  "records": {
+    "AB2-26-0000027": {
+      "lat": 27.9608,
+      "lng": -82.518192,
+      "address": "4410 W Boy Scout Blvd",
+      "neighborhood": "Carver City Lincoln Gardens",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=02GXG&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000030": {
+      "lat": 27.95646,
+      "lng": -82.453082,
+      "address": "1220 Scott St",
+      "neighborhood": "Encore",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=25CAP&capID2=00000&capID3=02YLT&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000079": {
+      "lat": 27.970238,
+      "lng": -82.446878,
+      "address": "1206 Holmes Ave",
+      "neighborhood": "VM Ybor",
+      "councilDistrict": "5",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=00OVC&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    },
+    "REZ-26-0000109": {
+      "lat": 27.94863,
+      "lng": -82.520296,
+      "address": "4507 W Gray St",
+      "neighborhood": "Westshore Palms",
+      "councilDistrict": "6",
+      "accelaUrl": "https://aca-prod.accela.com/TAMPA/Cap/CapDetail.aspx?Module=Planning&TabName=Planning&capID1=26CAP&capID2=00000&capID3=01YW8&agencyCode=TAMPA",
+      "locatedOn": "2026-11-27"
+    }
+  }
+}
